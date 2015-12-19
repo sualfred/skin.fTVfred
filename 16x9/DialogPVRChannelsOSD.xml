@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+	<defaultcontrol always="true">11</defaultcontrol>
+
+	<controls>
+
+	    <control type="group">
+	        <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+
+			<animation effect="slide" start="1276" end="0" delay="0" time="200">WindowOpen</animation>
+			<animation effect="slide" end="1276" start="0" delay="0" time="200">WindowClose</animation>
+			<animation effect="slide" start="1276" end="0" delay="0" time="200">Visible</animation>
+			<animation effect="slide" end="1276" start="0" delay="0" time="200">Hidden</animation>
+
+			<control type="image">
+                <posx>1276</posx>
+                <posy>-1</posy>
+                <width>644</width>
+                <height>1082</height>
+                <texture>pvr/_PVR_OSD_BG.png</texture>
+                <!--<animation effect="fade" start="100" end="94" condition="true">Conditional</animation>-->
+            </control>
+
+					<!-- "Now & Next" -->
+						<control type="label">
+							<posx>1520</posx>
+							<posy>-1000</posy>
+							<width>380</width>
+							<align>left</align>
+							<textcolor>white</textcolor>
+							<font>Med26</font>
+							<label>$LOCALIZE[19023]</label>
+						</control>
+
+					<!-- Clock -->
+						<control type="label">
+							<posx>1820</posx>
+							<posy>-1000</posy>
+							<width>380</width>
+							<align>left</align>
+							<textcolor>white</textcolor>
+							<font>Med26</font>
+							<label>$INFO[System.Time(hh:mm)]</label>
+						</control>
+
+						<control type="image">
+								<posx>1470</posx>
+								<posy>77</posy>
+								<width>350</width>
+								<height>2</height>
+								<texture>pvr/_PVR_OSD_LINE.png</texture>
+						</control>
+
+            <control type="list" id="11">
+                <posx>1291</posx>
+                <posy>84</posy>
+                <height>990</height>
+                <width>614</width>
+                <orientation>vertical</orientation>
+				<onleft>4442</onleft>
+				<onright>-</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+
+				<itemlayout height="166">
+                    <control type="image">
+                        <width>644</width>
+                        <height>154</height>
+                        <texture>pvr/_PVR_OSD_PLAYING_BG.png</texture>
+                      <!--  <aspectratio aligny="top">center</aspectratio>-->
+                        <animation effect="fade" start="100" end="5" condition="true">Conditional</animation>
+                        <visible>ListItem.IsPlaying</visible>
+                    </control>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>12</posy>
+                        <width>117</width>
+                        <height>117</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+
+                    <control type="progress">
+                        <posx>26</posx>
+                        <posy>136</posy>
+                        <width>117</width>
+						<height>6</height>
+                        <texturebg border="4">osd/progress_back.png</texturebg>
+						<lefttexture>-</lefttexture>
+						<midtexture border="4">osd/progress_bar.png</midtexture>
+						<righttexture>-</righttexture>
+						<overlaytexture>-</overlaytexture>
+                        <info>ListItem.Progress</info>
+                    </control>
+				
+				<control type="group">
+					<posy>-100</posy>
+                    <control type="label">
+                      <posx>180</posx>
+                      <posy>0</posy>
+                      <width>420</width>
+                      <align>left</align>
+                      <textcolor>white</textcolor>
+                      <selectedcolor>white</selectedcolor>
+                      <font>Med26</font>
+                      <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+						<posx>180</posx>
+						<posy>58</posy>
+						<width>420</width>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<font>Med26</font>
+						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+					</control>
+
+					<control type="label">
+						<posx>180</posx>
+						<posy>130</posy>
+						<width>420</width>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<font>Med24</font>
+						<label>$INFO[ListItem.NextTitle]</label>
+					</control>
+					<control type="label">
+						<posx>180</posx>
+						<posy>182</posy>
+						<width>420</width>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<font>Med24</font>
+						<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextEndTime]</label>
+					</control>
+
+					<control type="image">
+							<posx>180</posx>
+							<posy>260</posy>
+							<width>350</width>
+							<height>2</height>
+							<texture>pvr/_PVR_OSD_LINE.png</texture>
+					</control>
+				</control>
+                </itemlayout>
+
+                <focusedlayout height="166">
+                    <control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+                        <width>614</width>
+                        <height>154</height>
+                        <texture>pvr/_PVR_OSD_FOCUS_FTV.png</texture>
+                    </control>
+
+					<control type="image">
+							<posx>26</posx>
+							<posy>12</posy>
+							<width>117</width>
+							<height>117</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+					</control>
+
+					<control type="progress">
+							<posx>26</posx>
+							<posy>136</posy>
+							<width>117</width>
+							<height>6</height>
+							<texturebg border="4">osd/progress_back.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<info>ListItem.Progress</info>
+					</control>
+
+				<control type="group">
+					<posy>-100</posy>
+                    <control type="label">
+                      <posx>180</posx>
+                      <posy>0</posy>
+                      <width>420</width>
+                      <align>left</align>
+                      <textcolor>ffFFC24B</textcolor>
+                      <selectedcolor>ffFFC24B</selectedcolor>
+                      <font>Med26</font>
+                      <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+						<posx>180</posx>
+						<posy>58</posy>
+						<width>420</width>
+						<align>left</align>
+						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med26</font>
+						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+					</control>
+
+					<control type="label">
+						<posx>180</posx>
+						<posy>130</posy>
+						<width>420</width>
+						<align>left</align>
+						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med24</font>
+						<label>$INFO[ListItem.NextTitle]</label>
+					</control>
+					<control type="label">
+						<posx>180</posx>
+						<posy>182</posy>
+						<width>420</width>
+						<align>left</align>
+						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med24</font>
+						<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextEndTime]</label>
+					</control>
+
+					<control type="image">
+							<posx>180</posx>
+							<posy>260</posy>
+							<width>350</width>
+							<height>2</height>
+							<texture>pvr/_PVR_OSD_LINE.png</texture>
+					</control>
+				</control>
+
+					<control type="image">
+							<posx>180</posx>
+							<posy>159</posy>
+							<width>350</width>
+							<height>2</height>
+							<texture>pvr/_PVR_OSD_LINE.png</texture>
+					</control>
+
+                </focusedlayout>
+
+            </control>
+        </control>
+
+				<control type="group">
+					<visible allowhiddenfocus="true">Control.HasFocus(4442)</visible>
+
+					<posx>550</posx>
+					<posy>280</posy>
+
+				<!-- AYLA - HIDDEN BUTTON, ONLY USED FOR FOCUS -->
+					<control type="button" id="4442">
+						<!--<visible>false</visible>-->
+						<posx>-2000</posx>
+						<posy>-2000</posy>
+						<width>1</width>
+						<height>1</height>
+						<label>-</label>
+						<onright>11</onright>
+					</control>
+
+				<!-- BACKGROUND -->
+					<control type="image">
+						<animation effect="slide" end="90,-274" time="0" condition="Container(11).Position(0)">Conditional</animation>
+						<animation effect="slide" end="90,-116" time="0" condition="Container(11).Position(1)">Conditional</animation>
+						<animation effect="slide" end="90,42" time="0" condition="Container(11).Position(2)">Conditional</animation>
+						<animation effect="slide" end="90,200" time="0" condition="Container(11).Position(3)">Conditional</animation>
+						<animation effect="slide" end="90,358" time="0" condition="Container(11).Position(4)">Conditional</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>570</width>
+						<height>329</height>
+						<texture>pvr/_PVR_OSD_INFO_BG.png</texture>
+					</control>
+
+				<!-- CHANNEL ICON -->
+					<!--<control type="image">
+							<animation effect="slide" end="90,-274" time="0" condition="Container(11).Position(0)">Conditional</animation>
+							<animation effect="slide" end="90,-116" time="0" condition="Container(11).Position(1)">Conditional</animation>
+							<animation effect="slide" end="90,42" time="0" condition="Container(11).Position(2)">Conditional</animation>
+							<animation effect="slide" end="90,200" time="0" condition="Container(11).Position(3)">Conditional</animation>
+							<animation effect="slide" end="90,358" time="0" condition="Container(11).Position(4)">Conditional</animation>
+							<posx>426</posx>
+							<posy>20</posy>
+							<width>96</width>
+							<height>96</height>
+							<texture>$INFO[Container(11).ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+					</control>-->
+
+				<!-- PROGRAM TITLE -->
+					<control type="label">
+							<animation effect="slide" end="90,-274" time="0" condition="Container(11).Position(0)">Conditional</animation>
+							<animation effect="slide" end="90,-116" time="0" condition="Container(11).Position(1)">Conditional</animation>
+							<animation effect="slide" end="90,42" time="0" condition="Container(11).Position(2)">Conditional</animation>
+							<animation effect="slide" end="90,200" time="0" condition="Container(11).Position(3)">Conditional</animation>
+							<animation effect="slide" end="90,358" time="0" condition="Container(11).Position(4)">Conditional</animation>
+							<posx>26</posx>
+							<posy>0</posy>
+							<width>480</width>
+							<height>96</height>
+							<align>left</align>
+							<textcolor>Selected</textcolor>
+							<font>pvr_osd_title</font>
+							<!--<label>LABEL TEST</label>-->
+							<label>$INFO[Container(11).ListItem.Title]</label>
+					</control>
+
+				<!-- PROGRAM START AND END TIME -->
+					<control type="label">
+							<animation effect="slide" end="90,-274" time="0" condition="Container(11).Position(0)">Conditional</animation>
+							<animation effect="slide" end="90,-116" time="0" condition="Container(11).Position(1)">Conditional</animation>
+							<animation effect="slide" end="90,42" time="0" condition="Container(11).Position(2)">Conditional</animation>
+							<animation effect="slide" end="90,200" time="0" condition="Container(11).Position(3)">Conditional</animation>
+							<animation effect="slide" end="90,358" time="0" condition="Container(11).Position(4)">Conditional</animation>
+							<posx>26</posx>
+							<posy>40</posy>
+							<width>270</width>
+							<height>96</height>
+							<align>left</align>
+							<textcolor>Selected</textcolor>
+							<font>pvr_osd_plot</font>
+							<!--<label>LABEL TEST</label>-->
+							<label>$INFO[Container(11).ListItem.StartTime] - $INFO[Container(11).ListItem.EndTime]</label>
+					</control>
+
+				<!-- PROGRAM PROGRESS (BAR) -->
+					<control type="progress">
+							<animation effect="slide" end="90,-274" time="0" condition="Container(11).Position(0)">Conditional</animation>
+							<animation effect="slide" end="90,-116" time="0" condition="Container(11).Position(1)">Conditional</animation>
+							<animation effect="slide" end="90,42" time="0" condition="Container(11).Position(2)">Conditional</animation>
+							<animation effect="slide" end="90,200" time="0" condition="Container(11).Position(3)">Conditional</animation>
+							<animation effect="slide" end="90,358" time="0" condition="Container(11).Position(4)">Conditional</animation>
+							<posx>26</posx>
+							<posy>110</posy>
+							<width>135</width>
+							<height>9</height>
+							<texturebg border="4">osd/progress_back.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<info>Container(11).ListItem.Progress</info>
+							<colordiffuse>Selected</colordiffuse>
+					</control>
+
+				<!-- PROGRAM PLOT -->
+					<control type="textbox">
+							<animation effect="slide" end="90,-274" time="0" condition="Container(11).Position(0)">Conditional</animation>
+							<animation effect="slide" end="90,-116" time="0" condition="Container(11).Position(1)">Conditional</animation>
+							<animation effect="slide" end="90,42" time="0" condition="Container(11).Position(2)">Conditional</animation>
+							<animation effect="slide" end="90,200" time="0" condition="Container(11).Position(3)">Conditional</animation>
+							<animation effect="slide" end="90,358" time="0" condition="Container(11).Position(4)">Conditional</animation>
+							<posx>26</posx>
+							<posy>144</posy>
+							<width>492</width>
+							<height>154</height>
+							<align>justify</align>
+							<textcolor>Selected</textcolor>
+							<font>pvr_osd_next</font>
+							<!--<label>LABEL TEST</label>-->
+							<label>$INFO[Container(11).ListItem.Plot]</label>
+					</control>
+
+
+				</control>
+
+	</controls>
+
+</window>

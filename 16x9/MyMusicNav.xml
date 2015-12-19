@@ -280,6 +280,7 @@
 						<visible>Window.IsVisible(textviewer)</visible>
 					</control>
 				</control>
+				<!-- Time -->
 				<control type="textbox">
 					<top>105</top>
 					<width>1192</width>

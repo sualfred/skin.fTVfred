@@ -18,6 +18,17 @@
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
+			<!-- Temp -->
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>$INFO[Container.CurrentItem]</label>
+				<visible>Window.IsVisible(tvguide)</visible>
+			</control>
 			<!-- Window labels -->
 			<control type="label">
 				<width>780</width>

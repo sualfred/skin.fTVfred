@@ -3,8 +3,9 @@
 	<!-- home -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>9000</defaultcontrol>
+	<!--<onload>SetProperty(RefreshList,1,Home)</onload>-->
 	<onload>ClearProperty(BounceRight,Home)</onload>
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	
 	<controls>
 		<!-- Hidden control to load weather conditions -->
 		<control type="label">
@@ -267,6 +268,11 @@
 			<include>HiddenHomeList</include>
 			<content limit="6">$INFO[Skin.String(8-WidgetList-8)]</content>
 		</control>
+		<!--livetv hiddenlist-->
+		<control id="888" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="4">pvr://channels/tv/all channels/</content>
+		</control>
 		<!-- Main list -->
 		<control id="9000" type="list">
 			<left>84</left>
@@ -279,23 +285,35 @@
 			<ondown>ClearProperty(Movement)</ondown>
 			<onleft>noop</onleft>
 			<onright>ClearProperty(MainMenuFocus,home)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,1) + IntegerGreaterThan(Container(100).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(100)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,1) + !IntegerGreaterThan(Container(100).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(1-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,2) + IntegerGreaterThan(Container(200).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(200)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,2) + !IntegerGreaterThan(Container(200).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(2-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,3) + IntegerGreaterThan(Container(300).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(300)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,3) + !IntegerGreaterThan(Container(300).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(3-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,4) + IntegerGreaterThan(Container(400).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(400)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,4) + !IntegerGreaterThan(Container(400).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(4-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,5) + IntegerGreaterThan(Container(500).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(500)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,5) + !IntegerGreaterThan(Container(500).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(5-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,6) + IntegerGreaterThan(Container(600).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(600)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,6) + !IntegerGreaterThan(Container(600).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(6-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,7) + IntegerGreaterThan(Container(700).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(700)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,7) + !IntegerGreaterThan(Container(700).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(7-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,8) + IntegerGreaterThan(Container(800).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">SetFocus(800)</onright>
-			<onright condition="StringCompare(Container(9000).CurrentItem,8) + !IntegerGreaterThan(Container(800).NumItems,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">$INFO[Skin.String(8-WidgetAction-1)]</onright>
-			<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),settings) | StringCompare(Container(9000).ListItem.Property(defaultID),weather) | StringCompare(Container(9000).ListItem.Property(defaultID),favourites)">Select</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget1) + IntegerGreaterThan(Container(100).NumItems,1)">SetFocus(100)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget1) + !IntegerGreaterThan(Container(100).NumItems,1)">$INFO[Skin.String(1-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget2) + IntegerGreaterThan(Container(200).NumItems,1)">SetFocus(200)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget2) + !IntegerGreaterThan(Container(200).NumItems,1)">$INFO[Skin.String(2-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget3) + IntegerGreaterThan(Container(300).NumItems,1)">SetFocus(300)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget3) + !IntegerGreaterThan(Container(300).NumItems,1)">$INFO[Skin.String(3-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget4) + IntegerGreaterThan(Container(400).NumItems,1)">SetFocus(400)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget4) + !IntegerGreaterThan(Container(400).NumItems,1)">$INFO[Skin.String(4-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget5) + IntegerGreaterThan(Container(500).NumItems,1)">SetFocus(500)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget5) + !IntegerGreaterThan(Container(500).NumItems,1)">$INFO[Skin.String(5-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget6) + IntegerGreaterThan(Container(600).NumItems,1)">SetFocus(600)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget6) + !IntegerGreaterThan(Container(600).NumItems,1)">$INFO[Skin.String(6-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget7) + IntegerGreaterThan(Container(700).NumItems,1)">SetFocus(700)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget7) + !IntegerGreaterThan(Container(700).NumItems,1)">$INFO[Skin.String(7-WidgetAction-1)]</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + IntegerGreaterThan(Container(800).NumItems,1)">SetFocus(800)</onright>
+			<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + !IntegerGreaterThan(Container(800).NumItems,1)">$INFO[Skin.String(8-WidgetAction-1)]</onright>			
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),settings) | StringCompare(Container(9000).ListItem.Property(defaultID),weather) | StringCompare(Container(9000).ListItem.Property(defaultID),favourites) + !StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])">Select</onright>
+
+			<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])">SetFocus(901)</onright>
+
 			<orientation>vertical</orientation>
 			<scrolltime easing="out" tween="sine">180</scrolltime>
 			<include>WindowHomeFadeAnimation</include>
@@ -473,7 +491,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,1) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget1)</visible>
 			<animation condition="StringCompare(Container(100).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(100).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -588,7 +606,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,2) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget2)</visible>
 			<animation condition="StringCompare(Container(200).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(200).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(200).NumItems,2) + Container(200).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -703,7 +721,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,3) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget3)</visible>
 			<animation condition="StringCompare(Container(300).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(300).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(300).NumItems,2) + Container(300).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -818,7 +836,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,4) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget4)</visible>
 			<animation condition="StringCompare(Container(400).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(400).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(400).NumItems,2) + Container(400).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -933,7 +951,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,5) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget5)</visible>
 			<animation condition="StringCompare(Container(500).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(500).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(500).NumItems,2) + Container(500).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -1048,7 +1066,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,6) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget6)</visible>
 			<animation condition="StringCompare(Container(600).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(600).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(600).NumItems,2) + Container(600).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -1163,7 +1181,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,7) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget7)</visible>
 			<animation condition="StringCompare(Container(700).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(700).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(700).NumItems,2) + Container(700).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -1278,7 +1296,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>StringCompare(Container(9000).CurrentItem,8) + !StringCompare(Container(9000).ListItem.Property(defaultID),settings) + !StringCompare(Container(9000).ListItem.Property(defaultID),weather) + !StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),widget8)</visible>
 			<animation condition="StringCompare(Container(800).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container(800).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(800).NumItems,2) + Container(800).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -1494,6 +1512,116 @@
 				</control>
 			</focusedlayout>
 			<content limit="4">favourites://</content>
+		</control>
+		<!-- PVR widget -->
+		<control id="901" type="fixedlist">
+			<left>419</left>
+			<top>-367</top>
+			<width>2100</width>
+			<height>1500</height>
+			<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+			<onup>noop</onup>
+			<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+			<ondown>noop</ondown>
+			<onleft>9000</onleft>
+			<onright>ActivateWindow(tvchannels)</onright>
+			<onclick>ActivateWindow(tvguide)</onclick>
+			<onback>9000</onback>
+			<movement>1</movement>
+			<preloaditems>2</preloaditems>
+			<focusposition>2</focusposition>
+			<viewtype label="">list</viewtype>
+			<orientation>vertical</orientation>
+			<defaultcontrol>0</defaultcontrol>
+			<scrolltime easing="inout" tween="sine">300</scrolltime>
+			<include>HomeWidgetsAnimation</include>
+			<include>WindowHomeFadeAnimation</include>
+			<visible>StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])</visible>
+			<!--<animation condition="StringCompare(Container(901).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
+			<animation condition="StringCompare(Container(901).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(3)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>-->
+			<itemlayout height="370" width="2000">
+				<control type="group">
+					<left>33</left>
+					<control type="image">
+						<width>227</width>
+						<height>334</height>
+						<texture border="0,14,11,14">home/home_button_nf.png</texture>
+					</control>
+					<control type="textbox">
+						<left>14</left>
+						<top>22</top>
+						<width>191</width>
+						<height>152</height>
+						<font>Bold26</font>
+						<align>left</align>
+						<textcolor>ffdadada</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</control>
+				<include>HomeLiveTVItemlayout</include>				
+			</itemlayout>
+			<focusedlayout height="370" width="2000">
+				<control type="button">
+					<include>HiddenControl</include>
+					<onfocus condition="StringCompare(Container(901).NumItems,2) + Container(901).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
+					<onfocus condition="StringCompare(Container(901).NumItems,2) + Container(901).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
+				</control>
+				<control type="group">
+					<animation center="142,167" condition="StringCompare(Container(901).NumItems,1)" effect="zoom" end="132" start="100" time="0">Conditional</animation>
+					<animation center="142,167" condition="IntegerGreaterThan(Container(901).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+					<animation center="142,167" condition="IntegerGreaterThan(Container(901).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+					<control type="group">
+						<left>33</left>
+						<visible>IntegerGreaterThan(Container(901).NumItems,0)</visible>
+						<control type="image">
+							<width>227</width>
+							<height>334</height>
+							<texture border="0,14,11,14">home/home_button_nf.png</texture>
+						</control>
+						<control type="textbox">
+							<top>2</top>
+							<width>254</width>
+							<height>200</height>
+							<font>Bold34</font>
+							<align>left</align>
+							<textcolor>ffdadada</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+						</control>
+						<control type="image">
+							<width>227</width>
+							<height>334</height>
+							<texture border="0,14,11,14">home/home_button_fo.png</texture>
+							<visible>Control.HasFocus(901)</visible>
+							<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+							<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+						</control>
+						<control type="textbox">
+							<top>2</top>
+							<width>254</width>
+							<height>200</height>
+							<font>Bold34</font>
+							<align>left</align>
+							<textcolor>ff453a18</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(901)</visible>
+							<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+							<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+						</control>
+					</control>
+					<include>HomeLiveTVFocusedlayout</include>
+				</control>
+			</focusedlayout>
+			<include>ListItemLiveTVContent</include>
 		</control>
 		<!-- Weather widget -->
 		<control type="fixedlist">

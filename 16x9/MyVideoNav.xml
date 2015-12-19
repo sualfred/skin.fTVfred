@@ -472,7 +472,7 @@
 					<control type="textbox">
 						<top>103</top>
 						<width>1192</width>
-						<height>126</height>
+						<height>124</height>
 						<align>left</align>
 						<font>Reg30Spaced</font>
 						<pagecontrol>97</pagecontrol>
@@ -483,7 +483,7 @@
 					<control id="97" type="scrollbar">
 						<top>103</top>
 						<width>1192</width>
-						<height>126</height>
+						<height>124</height>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>

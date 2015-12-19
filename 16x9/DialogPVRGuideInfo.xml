@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- mediasource -->
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<controls>
+		<include>DialogBackgroundImage</include>
+		<!-- Main group -->
+		<control type="group">
+			<include>DialogAnimation</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1337</width>
+			<height>580</height>
+			<control type="image">
+				<width>1337</width>
+				<height>580</height>
+				<texture>dialogs/PVRGuideInfo_Back.png</texture>
+			</control>
+			<!-- Heading -->
+			<control type="label" id="0">
+				<left>40</left>
+				<top>14</top>
+				<height>30</height>
+				<width>857</width>
+				<aligny>center</aligny>
+				<font>Bold30</font>
+				<label>$INFO[ListItem.ChannelName,,: ]$INFO[ListItem.Title]</label>
+				<textcolor>ffdadada</textcolor>
+			</control>
+			<!-- Left group -->
+			<control type="list" id="10">
+				<top>60</top>
+				<width>937</width>
+				<height>336</height>
+				<onleft>noop</onleft>
+				<onright>9001</onright>
+				<onup>noop</onup>
+				<ondown>12</ondown>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout height="84" width="937">
+					<control type="image">
+						<width>937</width>
+						<height>84</height>
+						<texture border="3">settings/button_no_focus.png</texture>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>778</width>
+						<height>84</height>
+						<font>Light32</font>
+						<textcolor>ff505153</textcolor>
+						<label>$VAR[Plot]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="84" width="937">
+					<control type="image">
+						<width>937</width>
+						<height>84</height>
+						<texture border="3">settings/button_focus.png</texture>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>778</width>
+						<height>84</height>
+						<font>Light32</font>
+						<scroll>true</scroll>
+						<textcolor>ffffaf37</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(10)</visible>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>778</width>
+						<height>84</height>
+						<font>Light32</font>
+						<scroll>true</scroll>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(10)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				
+				<!-- Details -->
+				<control type="grouplist">
+					<top>60</top>
+					<width>937</width>
+					<height>336</height>
+					<itemgap>12</itemgap>
+					<orientation>vertical</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+
+					<!-- Time description -->
+					<control type="group">
+						<left>40</left>
+						<width>857</width>
+						<control type="label">
+							<width>200</width>
+							<height>36</height>
+							<align>right</align>
+							<font>Light32</font>
+							<label>142</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+						<control type="label">
+							<left>220</left>
+							<width>950</width>
+							<height>36</height>
+							<font>Light32</font>
+							<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+					</control>
+
+					<!-- Duration -->
+					<control type="group">
+						<left>40</left>
+						<width>857</width>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<control type="label">
+							<width>200</width>
+							<height>36</height>
+							<font>Light32</font>
+							<label>180</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+						<control type="label">
+							<left>220</left>
+							<width>950</width>
+							<height>36</height>
+							<font>Light32</font>
+							<label>$INFO[ListItem.Duration]</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+					</control>
+
+					<!-- Channel Name -->
+					<control type="group">
+						<left>40</left>
+						<width>857</width>
+						<visible>!IsEmpty(ListItem.ChannelName)</visible>
+						<control type="label">
+							<width>200</width>
+							<height>36</height>
+							<font>Light36</font>
+							<label>19148</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+						<control type="label">
+							<left>220</left>
+							<width>950</width>
+							<height>36</height>
+							<font>Light36</font>
+							<label>$INFO[ListItem.ChannelName]</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+					</control>
+
+					<!-- Genre -->
+					<control type="group">
+						<left>40</left>
+					<width>857</width>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<control type="label">
+							<width>200</width>
+							<height>36</height>
+							<font>Light36</font>
+							<label>135</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+						<control type="label">
+							<left>220</left>
+							<width>950</width>
+							<height>36</height>
+							<font>Light36</font>
+							<label>$INFO[ListItem.Genre]</label>
+							<textcolor>ffdadada</textcolor>
+						</control>
+					</control>
+
+				</control>
+
+				<!-- Plot -->
+				<control type="textbox" id="400">
+					<top>160</top>
+					<left>40</left>
+					<width>857</width>
+					<height>380</height>				
+					<label>$VAR[Plot]</label>
+					<font>Light32</font>
+					<align>justify</align>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ffdadada</textcolor>
+				</control>
+
+			</control>
+			<!-- Right grouplist -->
+			<control type="grouplist" id="9001">
+				<right>24</right>
+				<bottom>33</bottom>
+				<width>351</width>
+				<height>520</height>
+				<onleft>10</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onback>10</onback>
+				<itemgap>10</itemgap>
+				<align>right</align>
+				<!-- Browse -->
+				<control type="image">
+					<width>351</width>
+					<height min="10" max="250">auto</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<!-- OK -->
+				<control type="button" id="7">
+					<width>351</width>
+					<height>76</height>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>186</label>
+					<visible>Control.IsEnabled(7)</visible>
+				</control>
+				<!-- Switch -->
+				<control type="button" id="5">
+					<width>351</width>
+					<height>76</height>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>19165</label>
+					<visible>Control.IsEnabled(5)</visible>
+				</control>
+				<!-- Record -->
+				<control type="button" id="6">
+					<width>351</width>
+					<height>76</height>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>-</label>
+					<visible>Control.IsEnabled(6)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

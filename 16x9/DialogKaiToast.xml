@@ -5,6 +5,7 @@
 	<controls>
 		<!-- Main group -->
 		<control type="group">
+			<visible>!Window.IsVisible(startup)</visible>
 			<include>NotificationAnimation</include>
 			<centerleft>50%</centerleft>
 			<top>26</top>

@@ -13,7 +13,7 @@
 	<icon labelID="20045">DefaultMastermode.png</icon>
 	<icon labelID="settings">DefaultSettings.png</icon>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
-	<widgetPlaylists>True</widgetPlaylists>
+	<widgetPlaylists>False</widgetPlaylists>
 	<shortcut label="31167" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyAddedMovies.xsp,return)</shortcut>
 	<shortcut label="31168" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourMovies.xsp,return)</shortcut>
 	<shortcut label="31169" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressMovies.xsp,return)</shortcut>
@@ -38,4 +38,18 @@
 	<shortcut label="31188" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/albums/,return)</shortcut>
 	<shortcut label="31189" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/songs/,return)</shortcut>
 	<shortcut label="31190" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://songs/,return)</shortcut>
+
+	<!-- ============= -->
+	<!-- Widgets	   -->
+	<!-- ============= -->
+	<widget label="31500">widget1</widget>
+	<widget label="31501">widget2</widget>
+	<widget label="31502">widget3</widget>
+	<widget label="31503">widget4</widget>
+	<widget label="31504">widget5</widget>
+	<widget label="31505">widget6</widget>
+	<widget label="31506">widget7</widget>
+	<widget label="31507">widget8</widget>
+
+
 </overrides>

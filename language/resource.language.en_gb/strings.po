@@ -876,3 +876,43 @@ msgstr ""
 msgctxt "#31209"
 msgid "Disable Higher Levels"
 msgstr ""
+
+msgctxt "#31500"
+msgid "Widget Group 1"
+msgstr ""
+
+msgctxt "#31501"
+msgid "Widget Group 2"
+msgstr ""
+
+msgctxt "#31502"
+msgid "Widget Group 3"
+msgstr ""
+
+msgctxt "#31503"
+msgid "Widget Group 4"
+msgstr ""
+
+msgctxt "#31504"
+msgid "Widget Group 5"
+msgstr ""
+
+msgctxt "#31505"
+msgid "Widget Group 6"
+msgstr ""
+
+msgctxt "#31506"
+msgid "Widget Group 7"
+msgstr ""
+
+msgctxt "#31507"
+msgid "Widget Group 8"
+msgstr ""
+
+msgctxt "#31508"
+msgid "Edit"
+msgstr ""
+
+msgctxt "#31509"
+msgid "Set Widget"
+msgstr ""

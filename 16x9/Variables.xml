@@ -688,15 +688,16 @@
 		<value>$INFO[Control.GetLabel(6)]</value>
 	</variable>
 	<variable name="SettingsCurrentItem">
-		<value condition="StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$NUMBER[9]</value>
+		<value condition="StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$NUMBER[10]</value>
 		<value condition="Window.IsVisible(appearancesettings)">$NUMBER[1]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$NUMBER[2]</value>
 		<value condition="Window.IsVisible(videossettings)">$NUMBER[3]</value>
 		<value condition="Window.IsVisible(musicsettings)">$NUMBER[4]</value>
-		<value condition="Window.IsVisible(weathersettings)">$NUMBER[5]</value>
-		<value condition="Window.IsVisible(picturessettings)">$NUMBER[6]</value>
-		<value condition="Window.IsVisible(systemsettings)">$NUMBER[7]</value>
-		<value condition="Window.IsVisible(servicesettings)">$NUMBER[8]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$NUMBER[5]</value>
+		<value condition="Window.IsVisible(weathersettings)">$NUMBER[6]</value>
+		<value condition="Window.IsVisible(picturessettings)">$NUMBER[7]</value>
+		<value condition="Window.IsVisible(systemsettings)">$NUMBER[8]</value>
+		<value condition="Window.IsVisible(servicesettings)">$NUMBER[9]</value>
 	</variable>
 	<variable name="ContainerID">
 		<value condition="Control.IsVisible(50)">50</value>
@@ -753,7 +754,8 @@
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[480]</value>
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[3]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[13000]</value>
@@ -764,6 +766,7 @@
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[13000]</value>
@@ -774,7 +777,8 @@
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[2]</value>
-		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[19020]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[14036]</value>
@@ -783,38 +787,43 @@
 	<variable name="SettingsLabel2">
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[2]</value>
-		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[8]</value>
-		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[19020]</value>
+		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[14036]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel3">
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[2]</value>
-		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[8]</value>
-		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[1]</value>
-		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[13000]</value>
+		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[19020]</value>
+		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[14036]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel4">
+		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[19020]</value>
+		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[13000]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[14036]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[22082]</value>
+	</variable>
+	<variable name="SettingsLabel5">
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[22082]</value>
-	</variable>
-	<variable name="SettingsLabel5">
-		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[1]</value>
-		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[13000]</value>
-		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsIcon-1">
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_appearance.png</value>
 		<value condition="Window.IsVisible(videossettings)">settings/icon_addons.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_videos.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_music.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_music.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(servicesettings)">settings/icon_system.png</value>
@@ -825,6 +834,7 @@
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_addons.png</value>
 		<value condition="Window.IsVisible(videossettings)">settings/icon_videos.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_music.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_system.png</value>
@@ -835,7 +845,8 @@
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_addons.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_videos.png</value>
 		<value condition="Window.IsVisible(videossettings)">settings/icon_music.png</value>
-		<value condition="Window.IsVisible(musicsettings)">settings/icon_weather.png</value>
+		<value condition="Window.IsVisible(musicsettings)">settings/icon_tv.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_service.png</value>
@@ -844,32 +855,36 @@
 	<variable name="SettingsIcon2">
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_videos.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_music.png</value>
-		<value condition="Window.IsVisible(videossettings)">settings/icon_weather.png</value>
-		<value condition="Window.IsVisible(musicsettings)">settings/icon_pictures.png</value>
+		<value condition="Window.IsVisible(videossettings)">settings/icon_tv.png</value>
+		<value condition="Window.IsVisible(musicsettings)">settings/icon_weather.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_service.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon3">
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_music.png</value>
-		<value condition="Window.IsVisible(addonbrowser)">settings/icon_weather.png</value>
-		<value condition="Window.IsVisible(videossettings)">settings/icon_pictures.png</value>
-		<value condition="Window.IsVisible(musicsettings)">settings/icon_system.png</value>
+		<value condition="Window.IsVisible(addonbrowser)">settings/icon_tv.png</value>
+		<value condition="Window.IsVisible(videossettings)">settings/icon_weather.png</value>
+		<value condition="Window.IsVisible(musicsettings)">settings/icon_pictures.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_service.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon4">
+		<value condition="Window.IsVisible(appearancesettings)">settings/icon_tv.png</value>
+		<value condition="Window.IsVisible(addonbrowser)">settings/icon_weather.png</value>
+		<value condition="Window.IsVisible(videossettings)">settings/icon_pictures.png</value>
+		<value condition="Window.IsVisible(musicsettings)">settings/icon_system.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_service.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_more.png</value>
+	</variable>
+	<variable name="SettingsIcon5">
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(videossettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_more.png</value>
-	</variable>
-	<variable name="SettingsIcon5">
-		<value condition="Window.IsVisible(appearancesettings)">settings/icon_pictures.png</value>
-		<value condition="Window.IsVisible(addonbrowser)">settings/icon_system.png</value>
-		<value condition="Window.IsVisible(videossettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(musicsettings)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="AiredDate_Day">
 		<value condition="SubString(ListItem.Premiered,01/,left)">1</value>
@@ -956,6 +971,7 @@
 		<value condition="Container.Content(Addons) + !Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value>
 		<value condition="Container.Content(sets)">$LOCALIZE[20434]</value>
 		<value condition="Container.Content(tags)">$LOCALIZE[20459]</value>
+		<value condition="Window.IsVisible(tvguide)">$LOCALIZE[4]</value>
 		<value condition="Window.IsVisible(pvr) + Control.IsVisible(10)">$INFO[Control.GetLabel(31)]</value>
 		<value condition="Window.IsVisible(pvr) + Control.IsVisible(11)">$INFO[Container.FolderName]</value>
 		<value condition="Window.IsVisible(pvr) + Control.IsVisible(12)">$INFO[Container.FolderName]</value>
@@ -969,7 +985,7 @@
 		<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(programs)">$LOCALIZE[0]</value>
 		<value condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(skinsettings) | Window.IsVisible(systeminfo) | Window.IsVisible(addonbrowser) | Window.IsVisible(profiles) | Window.IsVisible(filemanager)]">$LOCALIZE[5]</value>
-		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>		
 	</variable>
 	<variable name="Plot">
 		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
@@ -2917,5 +2933,8 @@
 		<value condition="SubString(ListItem.Episode,s398,right)">$LOCALIZE[31146] $LOCALIZE[20359] 398</value>
 		<value condition="SubString(ListItem.Episode,s399,right)">$LOCALIZE[31146] $LOCALIZE[20359] 399</value>
 		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="PVRPath">
+		<value condition="!Window.IsVisible(3050)">pvr://channels/tv/all channels/</value>
 	</variable>
 </includes>

@@ -12,6 +12,7 @@
 	<include file="Viewtype55.xml" />
 	<include file="Viewtype56.xml" />
 	<include file="Viewtype57.xml" />
+	<include file="Viewtype59.xml" />
 	<include file="Variables.xml" />
 	<!-- Fullscreen dimensions -->
 	<include name="FullscreenDimensions">

@@ -1,0 +1,9 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="3050" type="dialog">
+	<zorder>100</zorder>
+	<onload>ClearProperty(RefreshList,Home)</onload>
+	<visible>!IsEmpty(Window(Home).Property(RefreshList))</visible>
+	<animation effect="fade" start="100" end="0" time="0" delay="10">WindowClose</animation>
+	<controls></controls>
+</window>

@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
-	<!-- startup -->
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+<window>		
+	<backgroundcolor>0xff12161b</backgroundcolor>
+	<defaultcontrol always="true">30</defaultcontrol>
+	<animation effect="fade" start="100" end="0" time="400" delay="5">WindowClose</animation>
+	<controls>
+		
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture background="true">loading.jpg</texture>
+		</control>
+
+		<control type="button" id="30">
+			<description>trigger</description>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<onfocus>SetFocus(20)</onfocus>
+		</control>
+
+		<control type="button" id="20">
+			<description>check if pvr is enabled</description>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>	
+			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,SetFocus(10),00:01,silent)</onfocus>
+			<onfocus condition="!System.GetBool(pvrmanager.enabled)">SetFocus(10)</onfocus>
+		</control>
+
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		</control>
+
+	</controls>
 </window>
