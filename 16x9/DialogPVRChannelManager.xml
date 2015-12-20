@@ -7,7 +7,7 @@
 		<!-- Main group -->
 		<control type="group">
 			<left>190</left>
-			<top>174</top>
+			<centertop>50%</centertop>
 			<width>1540</width>
 			<height>664</height>
 			<include>DialogZoomAnimation</include>
@@ -94,7 +94,8 @@
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 
 				<!-- Channel activated -->
-				<control type="radiobutton" id="7"><radiowidth>125</radiowidth>
+				<control type="radiobutton" id="7">
+					<radiowidth>125</radiowidth>
 					<radioheight>53</radioheight>
 					<radioposx>715</radioposx>
 					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
