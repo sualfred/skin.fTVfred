@@ -49,7 +49,7 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="84" width="670">
@@ -64,7 +64,7 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						<visible>!Control.HasFocus(20)</visible>
 					</control>
 					<control type="label">
@@ -73,7 +73,7 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ffffaf37</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						<visible>Control.HasFocus(20)</visible>
 					</control>
 				</focusedlayout>
