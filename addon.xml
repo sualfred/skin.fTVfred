@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred"
-	version="2.2.17"
+	version="2.2.20"
 	name="fTV (with Live TV + Mods)"
 	provider-name="Skin by Hitcher - PVR + Mods by Sualfred">
 	<requires>
@@ -21,6 +21,6 @@
 		<platform>all</platform>
 		<summary lang="en">Skin based on the Fire TV UI</summary>
 		<disclaimer lang="en">Does not support:[CR]Mouse[CR]Touch[CR]Live TV</disclaimer>
-		<description lang="en">Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).[CR][CR]Special thanks to the following people:[CR]Unfledged[CR]Mesoptier[CR]'Black[CR]marcelveldt</description>
+		<description lang="en">Mod description: Basic fTV skin (by Hitcher) with nearly full PVR functionality, plus changed the widget to behaviour to display them on main menu items of your choide.[CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).[CR][CR]Special thanks to the following people:[CR]Unfledged[CR]Mesoptier[CR]'Black[CR]marcelveldt</description>
 	</extension>
 </addon>
