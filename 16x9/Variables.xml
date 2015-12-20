@@ -755,11 +755,11 @@
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[2]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[19020]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[13000]</value>
-		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[14036]</value>
+		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[14036]</value>
 	</variable>
 	<variable name="SettingsLabel0">
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[480]</value>
@@ -767,11 +767,11 @@
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[19020]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel1">
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[24001]</value>
@@ -779,7 +779,7 @@
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[8]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[14036]</value>
 		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[22082]</value>
@@ -790,7 +790,7 @@
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[1]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[13000]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[14036]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[22082]</value>
 	</variable>
@@ -800,7 +800,7 @@
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[13000]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[14036]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[14036]</value>
 		<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel4">
@@ -809,7 +809,7 @@
 		<value condition="Window.IsVisible(videossettings)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel5">
 		<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[8]</value>
@@ -823,11 +823,11 @@
 		<value condition="Window.IsVisible(videossettings)">settings/icon_addons.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_videos.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_music.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_tv.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(servicesettings)">settings/icon_system.png</value>
-		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_service.png</value>
+		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_service.png</value>
 	</variable>
 	<variable name="SettingsIcon0">
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_appearance.png</value>
@@ -835,11 +835,11 @@
 		<value condition="Window.IsVisible(videossettings)">settings/icon_videos.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_music.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_tv.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_weather.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(servicesettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(weathersettings) + StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon1">
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_addons.png</value>
@@ -847,7 +847,7 @@
 		<value condition="Window.IsVisible(videossettings)">settings/icon_music.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_weather.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_pictures.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_service.png</value>
 		<value condition="Window.IsVisible(servicesettings)">settings/icon_more.png</value>
@@ -858,7 +858,7 @@
 		<value condition="Window.IsVisible(videossettings)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_pictures.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_system.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_service.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_more.png</value>
 	</variable>
@@ -868,7 +868,7 @@
 		<value condition="Window.IsVisible(videossettings)">settings/icon_weather.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_system.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_service.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_service.png</value>
 		<value condition="Window.IsVisible(picturessettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon4">
@@ -877,7 +877,7 @@
 		<value condition="Window.IsVisible(videossettings)">settings/icon_pictures.png</value>
 		<value condition="Window.IsVisible(musicsettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(weathersettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon5">
 		<value condition="Window.IsVisible(appearancesettings)">settings/icon_weather.png</value>

@@ -2,8 +2,6 @@
 <!-- Foundation -->
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
-	<backgroundcolor>0xff12161b</backgroundcolor>
-
 	<controls>
 
 		<control type="group">
@@ -21,7 +19,7 @@
 				<texture border="4,7,4,7">pvr/channel_osd_bg.png</texture>
 			</control>
 
-			<!-- "Now & Next" -->
+			<!-- header title -->
 			<control type="label">
 				<left>1520</left>
 				<top>-1000</top>

@@ -4,8 +4,8 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<onload>ClearProperty(SettingHeading,home)</onload>
 	<onload>ClearProperty(SettingInfo,home)</onload>
-	<onload condition="!StringCompare(Window(settings).Property(SettingsCurrentItem),9)">SetFocus(3)</onload>
-	<onload condition="StringCompare(Window(settings).Property(SettingsCurrentItem),9)">SetFocus(9001)</onload>
+	<onload condition="!StringCompare(Window(settings).Property(SettingsCurrentItem),10)">SetFocus(3)</onload>
+	<onload condition="StringCompare(Window(settings).Property(SettingsCurrentItem),10)">SetFocus(9001)</onload>
 	<controls>
 		<control id="6" type="label">
 			<font>-</font>
@@ -140,7 +140,7 @@
 			<control type="group">
 				<left>823</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -179,7 +179,7 @@
 			<control type="group">
 				<left>1123</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -218,7 +218,7 @@
 			<control type="group">
 				<left>1423</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -257,7 +257,7 @@
 			<control type="group">
 				<left>1723</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(weathersettings) + !Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(weathersettings) + !Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -352,7 +352,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<animation reversible="false" type="WindowOpen">
 					<effect delay="200" easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>
@@ -392,7 +392,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<animation condition="!Window.Previous(systeminfo) + !Window.Previous(profiles)" reversible="false" type="WindowOpen">
 					<effect delay="200" easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>
