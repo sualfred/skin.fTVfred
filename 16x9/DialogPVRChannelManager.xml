@@ -1,264 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- pvrchannelmanager -->
-	<defaultcontrol always="true">20</defaultcontrol>
-	<include>DialogAnimation</include>
-
+	<!-- pvr channel manager -->
+	<defaultcontrol always="true">9001</defaultcontrol>
 	<controls>
-
-		<!-- Background -->
-		<include>DialogBackgroundImage_old</include>
-
-		<!-- Heading -->
-		<control type="label">
-			<left>150</left>
-			<top>96</top>
-			<width>1620</width>
-			<height>72</height>
-			<font>XLarge</font>
-			<label>19199</label>
-		</control>
-
-		<!-- Left list -->			
-		<control type="list" id="20">
-			<left>150</left>
-			<top>228</top>
-			<width>800</width>
-			<height>660</height>
-			<onup>20</onup>
-			<ondown>20</ondown>
-			<onleft>noop</onleft>
-			<onright>9000</onright>
-			<scrolltime tween="sine" easing="out">240</scrolltime>
-
-			<itemlayout width="800" height="66">
-
-				<control type="group">
-					<animation effect="fade" start="100" end="50" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
+		<include>DialogBackgroundImage</include>
+		<!-- Main group -->
+		<control type="group">
+			<left>190</left>
+			<top>174</top>
+			<width>1540</width>
+			<height>664</height>
+			<include>DialogZoomAnimation</include>
+			<control type="image">
+				<width>1540</width>
+				<height>664</height>
+				<texture>dialogs/skin_shortcuts_back.png</texture>
+			</control>
+			<!-- Heading -->
+			<control type="label" id="500">
+				<left>40</left>
+				<top>14</top>
+				<height>30</height>
+				<width>1540</width>
+				<aligny>center</aligny>
+				<font>Bold30</font>
+				<label>$LOCALIZE[19199]</label>
+				<textcolor>ffdadada</textcolor>
+			</control>
+			<!-- Left list -->
+			<control type="list" id="20">
+				<top>60</top>
+				<width>670</width>
+				<height>504</height>
+				<onleft>noop</onleft>
+				<onright>9000</onright>
+				<onup>noop</onup>
+				<ondown>9001</ondown>
+				<scrolltime>0</scrolltime>
+				<itemlayout height="84" width="670">
 					<control type="image">
-						<left>3</left>
-						<top>3</top>
-						<width>60</width>
-						<height>60</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<width>670</width>
+						<height>84</height>
+						<texture border="3">settings/button_no_focus.png</texture>
 					</control>
 					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>ColorSelected</textcolor>
-						<colorselected>ColorSelected</colorselected>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>ListItem.Property(Changed)</visible>
+						<left>40</left>
+						<width>590</width>
+						<height>84</height>
+						<font>Light32</font>
+						<textcolor>ff505153</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="84" width="670">
+					<control type="image">
+						<width>670</width>
+						<height>84</height>
+						<texture border="3">settings/button_focus.png</texture>
 					</control>
 					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>ColorHeading</textcolor>
-						<colorselected>ColorHeading</colorselected>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
+						<left>40</left>
+						<width>590</width>
+						<height>84</height>
+						<font>Light32</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(20)</visible>
 					</control>
+					<control type="label">
+						<left>40</left>
+						<width>590</width>
+						<height>84</height>
+						<font>Light32</font>
+						<textcolor>ffffaf37</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(20)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Right grouplist -->
+			<control type="grouplist" id="9000">
+				<left>670</left>
+				<top>60</top>
+				<width>870</width>
+				<height>504</height>
+				<itemgap>0</itemgap>
+				<onleft>20</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>9001</ondown>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+
+				<!-- Channel activated -->
+				<control type="radiobutton" id="7"><radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>715</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19074</label>
 				</control>
 
-			</itemlayout>
-
-			<focusedlayout width="800" height="132">
-
-				<control type="group">
-					<animation effect="fade" start="100" end="50" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
-					<animation effect="fade" start="100" end="75" condition="!Control.HasFocus(20)">Conditional</animation>
-					<control type="image">
-						<left>3</left>
-						<top>3</top>
-						<width>60</width>
-						<height>60</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>ColorSelected</textcolor>
-						<colorselected>ColorSelected</colorselected>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>ColorFO</textcolor>
-						<colorselected>ColorFO</colorselected>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<top>80</top>
-						<left>20</left>
-						<width>860</width>
-						<height>27</height>
-						<font>XSmall</font>
-						<textcolor>ColorSelected</textcolor>
-						<colorselected>ColorSelected</colorselected>
-						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<top>80</top>
-						<left>20</left>
-						<width>860</width>
-						<height>27</height>
-						<font>XSmall</font>
-						<textcolor>ColorFO</textcolor>
-						<colorselected>ColorFO</colorselected>
-						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
+				<!-- Channel name -->
+				<control type="edit" id="8">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19201</label>
 				</control>
 
-			</focusedlayout>
+				<!-- Channel logo button -->
+				<control type="button" id="9">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19202</label>
+				</control>
 
+				<!-- Current channel logo -->
+				<control type="image" id="10">
+					<top>-84</top>
+					<left>710</left>
+					<height>84</height>
+					<aspectratio>keep</aspectratio>
+					<bordersize>10</bordersize>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<!-- EPG activated -->
+				<control type="radiobutton" id="12">
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>715</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<top>10</top>
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19074</label>
+				</control>
+
+				<!-- EPG source -->
+				<control type="spincontrolex" id="13">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19200</label>
+				</control>
+
+				<!-- Parental locked -->
+				<control type="radiobutton" id="14">
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>715</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19267</label>
+				</control>
+
+				<!-- Edit channel button -->
+				<control type="button" id="31">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19203</label>
+				</control>
+
+				<!-- Delete channel button -->
+				<control type="button" id="32">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19211</label>
+				</control>
+
+				<!-- New channel button -->
+				<control type="button" id="33">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>19204</label>
+				</control>
+
+			</control>
+			<!-- Button grouplist -->
+			<control type="grouplist" id="9001">
+				<left>0</left>
+				<bottom>12</bottom>
+				<width>1540</width>
+				<height>76</height>
+				<itemgap>0</itemgap>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onup>9000</onup>
+				<ondown>noop</ondown>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<!-- ok -->
+				<control type="button" id="4">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>20</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>186</label>
+				</control>
+				<!-- cancel -->
+				<control type="button" id="6">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>20</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>222</label>
+				</control>
+				<!-- apply -->
+				<control type="button" id="5">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<onup>20</onup>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>14070</label>
+				</control>
+				<!-- group manager -->
+				<control type="button" id="30">
+					<width>320</width>
+					<height>76</height>
+					<onup>20</onup>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>19205</label>
+				</control>
+			</control>
 		</control>
-
-		<control type="grouplist" id="9000">
-			<left>960</left>
-			<top>228</top>
-			<width>800</width>
-			<height>660</height>
-			<itemgap>0</itemgap>
-			<onleft>20</onleft>
-			<onright>noop</onright>
-			<onup>noop</onup>
-			<ondown>4</ondown>
-			<orientation>vertical</orientation>
-			<usecontrolcoords>true</usecontrolcoords>
-
-			<!-- Channel options header -->
-			<control type="label" id="100">
-				<width>800</width>
-				<height>66</height>
-				<label>$LOCALIZE[19029] $LOCALIZE[33063]</label>
-			</control>
-
-			<!-- Channel activated -->
-			<control type="radiobutton" id="7">
-				<width>800</width>
-				<label>19074</label>
-			</control>
-
-			<!-- Channel name -->
-			<control type="edit" id="8">
-				<width>800</width>
-				<textoffsetx>20</textoffsetx>
-				<textwidth>760</textwidth>
-				<label>19201</label>
-				<texturefocus>dialogs/DialogTextBackground.png</texturefocus>
-				<texturenofocus>dialogs/DialogTextBackground.png</texturenofocus>
-			</control>
-
-			<!-- Channel logo button -->
-			<control type="button" id="9">
-				<width>800</width>
-				<label>19202</label>
-			</control>
-
-			<!-- Current channel logo -->
-			<control type="image" id="10">
-				<top>-63</top>
-				<left>737</left>
-				<width>60</width>
-				<height>60</height>
-				<texture>$INFO[ListItem.Icon]</texture>
-			</control>
-
-			<!-- EPG activated -->
-			<control type="radiobutton" id="12">
-				<width>800</width>
-				<label>19074</label>
-			</control>
-
-			<!-- EPG source -->
-			<control type="spincontrolex" id="13">
-				<width>800</width>
-				<textwidth>760</textwidth>
-				<label>19200</label>
-			</control>
-
-			<!-- Parental locked -->
-			<control type="radiobutton" id="14">
-				<width>800</width>
-				<label>19267</label>
-			</control>
-
-			<!-- Edit channel button -->
-			<control type="button" id="31">
-				<width>800</width>
-				<label>19203</label>
-			</control>
-
-			<!-- Delete channel button -->
-			<control type="button" id="32">
-				<width>800</width>
-				<label>19211</label>
-			</control>
-
-			<!-- New channel button -->
-			<control type="button" id="33">
-				<width>800</width>
-				<label>19204</label>
-			</control>
-
-		</control>
-
-		<!-- Button grouplist -->
-		<control type="grouplist" id="9001">
-			<left>150</left>
-			<top>926</top>
-			<width>1620</width>
-			<itemgap>0</itemgap>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<onup>9000</onup>
-			<ondown>noop</ondown>
-			<defaultcontrol>4</defaultcontrol>
-			<orientation>horizontal</orientation>
-
-			<!-- OK Button -->
-			<control type="button" id="4">
-				<width>260</width>
-				<label>186</label>
-			</control>
-
-			<!-- Cancel Button -->
-			<control type="button" id="6">
-				<width>260</width>
-				<label>222</label>
-			</control>
-
-			<!-- Apply changes Button -->
-			<control type="button" id="5">
-				<width>366</width>
-				<label>14070</label>
-			</control>
-
-			<!-- TV/Radio Button -->
-			<control type="togglebutton" id="34">
-				<width>366</width>
-				<label>19024</label>
-				<altlabel>19023</altlabel>
-				<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
-			</control>
-
-			<!-- Group Manager Button -->
-			<control type="button" id="30">
-				<width>366</width>
-				<label>19205</label>
-			</control>
-
-		</control>
-
 	</controls>
-
 </window>
