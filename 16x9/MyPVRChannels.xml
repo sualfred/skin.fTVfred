@@ -4,14 +4,12 @@
 	<menucontrol>5000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">2</defaultcontrol>
+	<onload condition="Window.Previous(home)">Container.Update(pvr://channels/tv/all channels/,replace)</onload>
 	<views>59</views>
 	<controls>		
 		<control id="2" type="button">
 			<include>HiddenControl</include>
-			<onfocus condition="Window.Previous(home)">Container.Update(pvr://channels/tv/all channels/,replace)</onfocus>
 			<onfocus condition="Window.Previous(home)">Control.SetFocus(59,1)</onfocus>
-			<!--<onfocus condition="Window.Previous(home)">Control.Move(59,$INFO[Container.CurrentItem,-])</onfocus>
-			<onfocus condition="Window.Previous(home)">Control.Move(59,1)</onfocus>-->
 			<onfocus condition="!Wndow.Previous(home)">SetFocus(59)</onfocus>
 		</control>
 		<!-- Views -->

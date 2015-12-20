@@ -271,7 +271,7 @@
 		<!--livetv hiddenlist-->
 		<control id="888" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="4">pvr://channels/tv/all channels/</content>
+			<content limit="4">pvr://channels/tv/1</content>
 		</control>
 		<!-- Main list -->
 		<control id="9000" type="list">
