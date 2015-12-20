@@ -101,7 +101,7 @@
 			<control type="group">
 				<left>523</left>
 				<top>289</top>
-				<visible>!StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!StringCompare(Window(settings).Property(SettingsCurrentItem),10)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>

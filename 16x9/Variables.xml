@@ -688,7 +688,7 @@
 		<value>$INFO[Control.GetLabel(6)]</value>
 	</variable>
 	<variable name="SettingsCurrentItem">
-		<value condition="StringCompare(Window(settings).Property(SettingsCurrentItem),9)">$NUMBER[10]</value>
+		<value condition="StringCompare(Window(settings).Property(SettingsCurrentItem),10)">$NUMBER[10]</value>
 		<value condition="Window.IsVisible(appearancesettings)">$NUMBER[1]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$NUMBER[2]</value>
 		<value condition="Window.IsVisible(videossettings)">$NUMBER[3]</value>
