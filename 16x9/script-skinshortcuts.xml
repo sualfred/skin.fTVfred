@@ -23,7 +23,7 @@
 		<!-- Main group -->
 		<control type="group">
 			<left>190</left>
-			<top>174</top>
+			<centertop>50%</centertop>
 			<width>1540</width>
 			<height>664</height>
 			<include>DialogZoomAnimation</include>
