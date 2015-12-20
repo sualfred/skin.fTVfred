@@ -8,7 +8,6 @@
 
 		<control type="group">
 			<visible>!Window.IsVisible(DialogTextviewer.xml) + !Window.IsActive(DialogPVRGuideInfo.xml)</visible>
-
 			<animation effect="slide" start="1276" end="0" delay="0" time="200">WindowOpen</animation>
 			<animation effect="slide" end="1276" start="0" delay="0" time="200">WindowClose</animation>
 			<animation effect="slide" start="1276" end="0" delay="0" time="200">Visible</animation>
@@ -20,7 +19,6 @@
 				<width>644</width>
 				<height>1082</height>
 				<texture border="4,7,4,7">pvr/channel_osd_bg.png</texture>
-				<!--<animation effect="fade" start="100" end="94" condition="true">Conditional</animation>-->
 			</control>
 
 			<!-- "Now & Next" -->
