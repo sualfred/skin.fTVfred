@@ -32,7 +32,7 @@
 					<font>Med48</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
-					<label>[CAPITALIZE]$LOCALIZE[19217][/CAPITALIZE]  </label>
+					<label>[CAPITALIZE]$VAR[PVRPath][/CAPITALIZE]  </label>
 				</control>
 				<control type="label">
 					<top>15</top>
@@ -101,21 +101,60 @@
 				<include>VisibleDelayFadeAnimation</include>
 				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
 				
-				<control type="progress">
-					<left>0</left>
-					<top>30</top>
-					<width>475</width>
-					<height>6</height>
-					<texturebg border="4">osd/progress_back.png</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture border="4">osd/progress_bar.png</midtexture>
-					<righttexture>-</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<info>ListItem.Progress</info>
+				<!-- Controls -->
+				<control id="1000" type="grouplist">
+					<left>-10</left>
+					<height>100</height>
+					<itemgap>0</itemgap>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<defaultcontrol always="true">1001</defaultcontrol>
+					<!-- Dummy to always set focus to first visible button -->
+					<control id="1001" type="button">
+						<width>0</width>
+						<height>0</height>
+						<label>-</label>
+						<onfocus>Right</onfocus>
+						<include>NoTextures</include>
+						<visible>!Control.HasFocus(1002) + !Control.HasFocus(20) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005)</visible>
+					</control>
+					<control id="30" type="button">
+						<width min="104" max="204">auto</width>
+						<wrapmultiline>true</wrapmultiline>
+						<height>100</height>
+						<onup>59</onup>
+						<ondown>3000</ondown>
+						<onclick>NextChannelGroup</onclick>
+						<font>Med24</font>
+						<label>[CAPITALIZE]$LOCALIZE[19141][CR]$VAR[PVRPath][/CAPITALIZE]</label>
+						<textoffsetx>28</textoffsetx>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ff222222</focusedcolor>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<visible>!StringCompare(ListItem.Label,..) + !SubString(Container.FolderName,$LOCALIZE[20434]) + !SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+					</control>
+					<control id="1005" type="button">
+						<width min="104" max="204">auto</width>
+						<wrapmultiline>true</wrapmultiline>
+						<height>100</height>
+						<onup>59</onup>
+						<ondown>3000</ondown>
+						<onclick>SetFocus(5001)</onclick>
+						<font>Med24</font>
+						<label>$LOCALIZE[31089]</label>
+						<textoffsetx>28</textoffsetx>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ff222222</focusedcolor>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+					</control>
 				</control>
-
+				<!-- Small Details -->
 				<control type="grouplist">
-					<top>70</top>
+					<top>110</top>
 					<height>26</height>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
@@ -147,9 +186,9 @@
 				</control>
 				<!-- Details -->
 				<control type="textbox">
-					<top>103</top>
+					<top>143</top>
 					<width>1192</width>
-					<height>124</height>
+					<height>84</height>
 					<align>left</align>
 					<font>Reg30Spaced</font>
 					<pagecontrol>99</pagecontrol>

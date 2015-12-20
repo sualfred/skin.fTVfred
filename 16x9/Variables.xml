@@ -2935,6 +2935,7 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PVRPath">
-		<value condition="!Window.IsVisible(3050)">pvr://channels/tv/all channels/</value>
+		<value condition="StringCompare(Container(59).FolderPath,pvr://channels/tv/all channels/)">$LOCALIZE[19287]</value>
+		<value>$INFO[Container(59).FolderName]</value>
 	</variable>
 </includes>

@@ -11,7 +11,7 @@
 				<onback condition="Window.IsVisible(tvchannels) + !StringCompare(Container(59).CurrentItem,0)">Control.Move(59,$INFO[Container(59).CurrentItem,-])</onback>
 				<onback condition="Window.IsVisible(tvchannels) + !StringCompare(Container(59).CurrentItem,0)">Control.Move(59,1)</onback>
 				<onup>Back</onup>
-				<ondown>3000</ondown>
+				<ondown>1000</ondown>
 				<onleft condition="Window.IsVisible(tvchannels) + !StringCompare(Container(59).CurrentItem,0)">Control.Move(59,$INFO[Container(59).CurrentItem,-])</onleft>
 				<onleft condition="Window.IsVisible(tvchannels) + !StringCompare(Container(59).CurrentItem,0)">Control.Move(59,1)</onleft>
 				<onleft>Back</onleft>
@@ -131,6 +131,23 @@
 							<texture>views/equaliser.gif</texture>
 							<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
 						</control>
+
+						<!-- Progress -->
+						<control type="progress">
+							<left>3</left>
+							<top>512</top>
+							<width>474</width>
+							<height>6</height>
+							<texturebg border="4">osd/progress_back.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<info>ListItem.Progress</info>
+							<animation center="auto" condition="Control.HasFocus(59)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+							<animation center="auto" condition="Control.HasFocus(59)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+						</control>
+
 					</control>
 				</focusedlayout>
 			</control>
