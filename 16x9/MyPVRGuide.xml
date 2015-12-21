@@ -13,10 +13,6 @@
         <control type="group" id="50">
             <control type="group">
                 <visible>Control.IsVisible(10)</visible>
-                <include>Animation.Common</include>
-                <left>SidePad</left>
-                <right>SidePad</right>
-                <top>PosterPad</top>
                 <height>1080</height>
                 <!-- Title -->
                 <control type="group">

@@ -5,7 +5,7 @@
 	<controls>
 
 		<control type="group">
-			<visible>!Window.IsVisible(DialogTextviewer.xml) + !Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+			<visible>!Window.IsActive(DialogPVRInfo.xml)</visible>
 			<animation effect="slide" start="1276" end="0" delay="0" time="200">WindowOpen</animation>
 			<animation effect="slide" end="1276" start="0" delay="0" time="200">WindowClose</animation>
 			<animation effect="slide" start="1276" end="0" delay="0" time="200">Visible</animation>
@@ -21,13 +21,13 @@
 
 			<!-- header title -->
 			<control type="label">
-				<left>1520</left>
+				<left>1291</left>
 				<top>-1000</top>
-				<width>380</width>
-				<align>left</align>
+				<width>614</width>
+				<align>center</align>
 				<textcolor>white</textcolor>
 				<font>Med26</font>
-				<label>$LOCALIZE[19023]</label>
+				<label>$INFO[VideoPlayer.ChannelGroup]</label>
 			</control>
 
 			<!-- Clock -->
@@ -41,22 +41,15 @@
 				<label>$INFO[System.Time(hh:mm)]</label>
 			</control>
 
-			<control type="image">
-				<left>1470</left>
-				<top>77</top>
-				<width>350</width>
-				<height>2</height>
-				<texture>pvr/_PVR_OSD_LINE.png</texture>
-			</control>
-
 			<control type="list" id="11">
 				<left>1291</left>
 				<top>84</top>
 				<height>990</height>
 				<width>614</width>
 				<orientation>vertical</orientation>
-				<onleft>RunScript(script.toolbox,info=textviewer,header=$INFO[Container(11).ListItem.Title],text=$INFO[Container(11).ListItem.Plot])</onleft>
-				<onright>-</onright>
+				<onleft>NextChannelGroup</onleft>
+				<onright>NextChannelGroup</onright>
+
 				<onup>11</onup>
 				<ondown>11</ondown>
 
