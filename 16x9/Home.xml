@@ -1601,7 +1601,8 @@
 			<onup>noop</onup>
 			<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
 			<ondown>noop</ondown>
-			<onleft>9000</onleft>
+			<onleft>9000</onleft>			
+			<onright condition="StringCompare(Container(901).ListItem.Property(path),channels)">SetProperty(JumpToFirstChannel,1,Home)</onright>
 			<onright condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvchannels)</onright>
 			<onright condition="StringCompare(Container(901).ListItem.Property(path),recordings)">ActivateWindow(tvrecordings)</onright>
 			<onclick condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvguide)</onclick>
