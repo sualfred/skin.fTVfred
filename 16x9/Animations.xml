@@ -6,6 +6,8 @@
 		<animation effect="fade" end="100" start="100" time="0">WindowClose</animation>
 		<animation effect="fade" end="100" start="0" time="200" condition="!Window.IsActive(favourites)">Conditional</animation>
 		<animation effect="fade" end="0" start="100" time="0" condition="Window.IsActive(favourites)">Conditional</animation>
+		<animation effect="fade" end="100" start="0" time="200" condition="!Window.IsActive(shutdownmenu)">Conditional</animation>
+		<animation effect="fade" end="0" start="100" time="0" condition="Window.IsActive(shutdownmenu)">Conditional</animation>
 	</include>
 	<!-- Visible fade animation -->
 	<include name="VisibleFadeAnimation">
