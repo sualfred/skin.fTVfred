@@ -273,6 +273,11 @@
 			<include>HiddenHomeList</include>
 			<content limit="4">pvr://channels/tv/1</content>
 		</control>
+		<!--recordings hiddenlist-->
+		<control id="889" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="4">pvr://recordings/active</content>
+		</control>
 		<!-- Main list -->
 		<control id="9000" type="list">
 			<left>84</left>
@@ -1524,8 +1529,10 @@
 			<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
 			<ondown>noop</ondown>
 			<onleft>9000</onleft>
-			<onright>ActivateWindow(tvchannels)</onright>
-			<onclick>ActivateWindow(tvguide)</onclick>
+			<onright condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvchannels)</onright>
+			<onright condition="StringCompare(Container(901).ListItem.Property(path),recordings)">ActivateWindow(tvrecordings)</onright>
+			<onclick condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvguide)</onclick>
+			<onclick condition="StringCompare(Container(901).ListItem.Property(path),recordings)">ActivateWindow(tvrecordings)</onclick>
 			<onback>9000</onback>
 			<movement>1</movement>
 			<preloaditems>2</preloaditems>
@@ -1537,10 +1544,10 @@
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
 			<visible>StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])</visible>
-			<!--<animation condition="StringCompare(Container(901).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
+			<!--<animation condition="StringCompare(Container(901).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>-->
 			<animation condition="StringCompare(Container(901).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
-			<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(3)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>-->
+			<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(3)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
 			<itemlayout height="370" width="2000">
 				<control type="group">
 					<left>33</left>

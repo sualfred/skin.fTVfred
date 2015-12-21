@@ -4112,15 +4112,26 @@
 				<property name="Icon2">$INFO[Container(888).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(888).ListItemPosition(2).Icon]</property>
 				<property name="Icon4">$INFO[Container(888).ListItemPosition(3).Icon]</property>
-				<property name="Icon5">$INFO[Container(888).ListItemPosition(4).Icon]</property>
-				<property name="Icon6">$INFO[Container(888).ListItemPosition(5).Icon]</property>
 				<property name="InfoLabel1">$INFO[Container(888).ListItemPosition(0).Label]</property>
 				<property name="InfoLabel2">$INFO[Container(888).ListItemPosition(1).Label]</property>
 				<property name="InfoLabel3">$INFO[Container(888).ListItemPosition(2).Label]</property>
 				<property name="InfoLabel4">$INFO[Container(888).ListItemPosition(3).Label]</property>
-				<property name="InfoLabel5">$INFO[Container(888).ListItemPosition(4).Label]</property>
-				<property name="InfoLabel6">$INFO[Container(888).ListItemPosition(5).Label]</property>
+				<property name="Path">channels</property>
 				<onclick>ActivateWindow(tvchannels)</onclick>
+			</item>
+			<item>
+				<label>$LOCALIZE[19017]</label>
+				<visible>!IsEmpty(Container(889).ListItemPosition(0).Label)</visible>
+				<property name="Icon1">$INFO[Container(889).ListItemPosition(0).Icon]</property>
+				<property name="Icon2">$INFO[Container(889).ListItemPosition(1).Icon]</property>
+				<property name="Icon3">$INFO[Container(889).ListItemPosition(2).Icon]</property>
+				<property name="Icon4">$INFO[Container(889).ListItemPosition(3).Icon]</property>
+				<property name="InfoLabel1">$INFO[Container(889).ListItemPosition(0).Label]</property>
+				<property name="InfoLabel2">$INFO[Container(889).ListItemPosition(1).Label]</property>
+				<property name="InfoLabel3">$INFO[Container(889).ListItemPosition(2).Label]</property>
+				<property name="InfoLabel4">$INFO[Container(889).ListItemPosition(3).Label]</property>
+				<property name="Path">recordings</property>
+				<onclick>ActivateWindow(tvrecordings)</onclick>
 			</item>
 		</content>
 	</include>

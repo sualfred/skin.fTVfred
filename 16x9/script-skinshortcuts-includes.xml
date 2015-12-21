@@ -19,12 +19,32 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>Live-TV</label2>
+			<icon>DefaultTVShows.png</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<property name="translatedPath">ActivateWindow(TVChannels)</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">num-19019</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
 			<label>$LOCALIZE[342]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultMovies.png</icon>
 			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
+			<property name="widgetName">Widget Group 1</property>
+			<property name="widget">widget1</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<property name="path">ActivateWindow(Videos,MovieTitles,return)</property>
@@ -34,14 +54,16 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="3">
-			<property name="id">$NUM[3]</property>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
 			<label>$LOCALIZE[20343]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultTVShows.png</icon>
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
+			<property name="widgetName">Widget Group 2</property>
+			<property name="widget">widget2</property>
 			<visible>Library.HasContent(TVShows)</visible>
 			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 			<property name="path">ActivateWindow(Videos,TVShowTitles,return)</property>
@@ -51,8 +73,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUM[4]</property>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
 			<label>$LOCALIZE[1036]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -67,14 +89,16 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUM[5]</property>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
 			<label>$LOCALIZE[10006]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultVideo.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
 			<property name="defaultID">videos</property>
+			<property name="widgetName">Widget Group 3</property>
+			<property name="widget">widget3</property>
 			<onclick>ActivateWindow(Videos,root)</onclick>
 			<property name="path">ActivateWindow(Videos,root)</property>
 			<property name="list">root</property>
@@ -83,8 +107,26 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUM[6]</property>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>Live-TV</label2>
+			<icon>DefaultTVShows.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<property name="translatedPath">ActivateWindow(TVRecordings)</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<property name="path">ActivateWindow(TVRecordings)</property>
+			<property name="list">TVRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">num-19163</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUM[8]</property>
 			<label>$LOCALIZE[10005]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultMusicAlbums.png</icon>
@@ -99,9 +141,9 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUM[7]</property>
-			<label>Apps</label>
+		<item id="9">
+			<property name="id">$NUM[9]</property>
+			<label>$LOCALIZE[31101]</label>
 			<label2>Custom shortcut</label2>
 			<icon>DefaultProgram.png</icon>
 			<thumb />
@@ -115,28 +157,27 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="8">
-			<property name="id">$NUM[8]</property>
-			<label>$LOCALIZE[19019]</label>
-			<label2>Live-TV</label2>
-			<icon>special://skin/extras/icons/tvshows.png</icon>
+		<item id="10">
+			<property name="id">$NUM[10]</property>
+			<label>$LOCALIZE[31100]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultPicture.png</icon>
 			<thumb />
-			<property name="labelID">19019</property>
-			<property name="defaultID">19019</property>
-			<visible>PVR.HasTVChannels</visible>
-			<onclick>ActivateWindow(TVChannels)</onclick>
-			<property name="path">ActivateWindow(TVChannels)</property>
-			<property name="list">TVChannels</property>
+			<property name="labelID">31100</property>
+			<property name="defaultID">pictures</property>
+			<onclick>ActivateWindow(Pictures)</onclick>
+			<property name="path">ActivateWindow(Pictures)</property>
+			<property name="list">Pictures</property>
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-19019</property>
+			<property name="submenuVisibility">num-31100</property>
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="9">
-			<property name="id">$NUM[9]</property>
+		<item id="11">
+			<property name="id">$NUM[11]</property>
 			<label>$LOCALIZE[12600]</label>
 			<label2>Common Shortcut</label2>
-			<icon>special://skin/extras/icons/weather.png</icon>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">weather</property>
 			<property name="defaultID">weather</property>
@@ -149,8 +190,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="10">
-			<property name="id">$NUM[10]</property>
+		<item id="12">
+			<property name="id">$NUM[12]</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultSettings.png</icon>
@@ -165,8 +206,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="11">
-			<property name="id">$NUM[11]</property>
+		<item id="13">
+			<property name="id">$NUM[13]</property>
 			<label>$LOCALIZE[13012]</label>
 			<label2>Kodi Command</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -180,28 +221,26 @@
 			<property name="submenuVisibility">num-13012</property>
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="12">
-			<property name="id">$NUM[12]</property>
-			<label>$LOCALIZE[19019]</label>
-			<label2>Benutzerdefinierte Abkürzung</label2>
-			<icon>DefaultTVShows.png</icon>
-			<thumb />
-			<property name="labelID">19019--0</property>
-			<property name="defaultID">19019</property>
-			<visible>PVR.HasTVChannels</visible>
-			<onclick>ActivateWindow(tvguide)</onclick>
-			<property name="path">ActivateWindow(tvguide)</property>
-			<property name="list">tvguide</property>
-			<visible>StringCompare(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">19019-0</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 	</include>
 	<include />
 	<include name="skinshortcuts-submenu">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[1039]</label>
+			<label2>$ADDON[script.skinshortcuts 32020]</label2>
+			<icon>DefaultAddonPicture.png</icon>
+			<thumb />
+			<property name="labelID">1039</property>
+			<property name="defaultID">1039</property>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Pictures,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19019)</visible>
+			<property name="group">19019</property>
+			<property name="isSubmenu">True</property>
+		</item>
 		<item id="1">
 			<property name="id">$NUM[1]</property>
 			<label>$LOCALIZE[20386]</label>
@@ -472,8 +511,8 @@
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 			<property name="path">ActivateWindow(Pictures,Addons,return)</property>
 			<property name="list">Addons</property>
-			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19019)</visible>
-			<property name="group">19019</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-31100)</visible>
+			<property name="group">31100</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
@@ -737,8 +776,72 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include />
+	<include name="skinshortcuts-submenu-1" />
+	<include />
+	<include name="skinshortcuts-submenu-2" />
+	<include />
+	<include name="skinshortcuts-submenu-3" />
+	<include />
+	<include name="skinshortcuts-submenu-4" />
+	<include />
+	<include name="skinshortcuts-submenu-5" />
 	<include name="skinshortcuts-group-script-globalsearch" />
 	<include name="skinshortcuts-group-alt-script-globalsearch" />
+	<include name="skinshortcuts-group-script-globalsearch-1" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-1" />
+	<include name="skinshortcuts-group-script-globalsearch-2" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-2" />
+	<include name="skinshortcuts-group-script-globalsearch-3" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-3" />
+	<include name="skinshortcuts-group-script-globalsearch-4" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-4" />
+	<include name="skinshortcuts-group-script-globalsearch-5" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-5" />
+	<include name="skinshortcuts-group-19019">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[1039]</label>
+			<label2>$ADDON[script.skinshortcuts 32020]</label2>
+			<icon>DefaultAddonPicture.png</icon>
+			<thumb />
+			<property name="labelID">1039</property>
+			<property name="defaultID">1039</property>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Pictures,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">19019</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-19019">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[1039]</label>
+			<label2>$ADDON[script.skinshortcuts 32020]</label2>
+			<icon>DefaultAddonPicture.png</icon>
+			<thumb />
+			<property name="labelID">1039</property>
+			<property name="defaultID">1039</property>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Pictures,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-19019)</visible>
+			<property name="group">19019</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-19019-1" />
+	<include name="skinshortcuts-group-alt-19019-1" />
+	<include name="skinshortcuts-group-19019-2" />
+	<include name="skinshortcuts-group-alt-19019-2" />
+	<include name="skinshortcuts-group-19019-3" />
+	<include name="skinshortcuts-group-alt-19019-3" />
+	<include name="skinshortcuts-group-19019-4" />
+	<include name="skinshortcuts-group-alt-19019-4" />
+	<include name="skinshortcuts-group-19019-5" />
+	<include name="skinshortcuts-group-alt-19019-5" />
 	<include name="skinshortcuts-group-movies">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -927,6 +1030,16 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-movies-1" />
+	<include name="skinshortcuts-group-alt-movies-1" />
+	<include name="skinshortcuts-group-movies-2" />
+	<include name="skinshortcuts-group-alt-movies-2" />
+	<include name="skinshortcuts-group-movies-3" />
+	<include name="skinshortcuts-group-alt-movies-3" />
+	<include name="skinshortcuts-group-movies-4" />
+	<include name="skinshortcuts-group-alt-movies-4" />
+	<include name="skinshortcuts-group-movies-5" />
+	<include name="skinshortcuts-group-alt-movies-5" />
 	<include name="skinshortcuts-group-tvshows">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1083,8 +1196,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-tvshows-1" />
+	<include name="skinshortcuts-group-alt-tvshows-1" />
+	<include name="skinshortcuts-group-tvshows-2" />
+	<include name="skinshortcuts-group-alt-tvshows-2" />
+	<include name="skinshortcuts-group-tvshows-3" />
+	<include name="skinshortcuts-group-alt-tvshows-3" />
+	<include name="skinshortcuts-group-tvshows-4" />
+	<include name="skinshortcuts-group-alt-tvshows-4" />
+	<include name="skinshortcuts-group-tvshows-5" />
+	<include name="skinshortcuts-group-alt-tvshows-5" />
 	<include name="skinshortcuts-group-1036" />
 	<include name="skinshortcuts-group-alt-1036" />
+	<include name="skinshortcuts-group-1036-1" />
+	<include name="skinshortcuts-group-alt-1036-1" />
+	<include name="skinshortcuts-group-1036-2" />
+	<include name="skinshortcuts-group-alt-1036-2" />
+	<include name="skinshortcuts-group-1036-3" />
+	<include name="skinshortcuts-group-alt-1036-3" />
+	<include name="skinshortcuts-group-1036-4" />
+	<include name="skinshortcuts-group-alt-1036-4" />
+	<include name="skinshortcuts-group-1036-5" />
+	<include name="skinshortcuts-group-alt-1036-5" />
 	<include name="skinshortcuts-group-videos">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1179,6 +1312,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-videos-1" />
+	<include name="skinshortcuts-group-alt-videos-1" />
+	<include name="skinshortcuts-group-videos-2" />
+	<include name="skinshortcuts-group-alt-videos-2" />
+	<include name="skinshortcuts-group-videos-3" />
+	<include name="skinshortcuts-group-alt-videos-3" />
+	<include name="skinshortcuts-group-videos-4" />
+	<include name="skinshortcuts-group-alt-videos-4" />
+	<include name="skinshortcuts-group-videos-5" />
+	<include name="skinshortcuts-group-alt-videos-5" />
+	<include name="skinshortcuts-group-19163" />
+	<include name="skinshortcuts-group-alt-19163" />
+	<include name="skinshortcuts-group-19163-1" />
+	<include name="skinshortcuts-group-alt-19163-1" />
+	<include name="skinshortcuts-group-19163-2" />
+	<include name="skinshortcuts-group-alt-19163-2" />
+	<include name="skinshortcuts-group-19163-3" />
+	<include name="skinshortcuts-group-alt-19163-3" />
+	<include name="skinshortcuts-group-19163-4" />
+	<include name="skinshortcuts-group-alt-19163-4" />
+	<include name="skinshortcuts-group-19163-5" />
+	<include name="skinshortcuts-group-alt-19163-5" />
 	<include name="skinshortcuts-group-music">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1275,9 +1430,29 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-music-1" />
+	<include name="skinshortcuts-group-alt-music-1" />
+	<include name="skinshortcuts-group-music-2" />
+	<include name="skinshortcuts-group-alt-music-2" />
+	<include name="skinshortcuts-group-music-3" />
+	<include name="skinshortcuts-group-alt-music-3" />
+	<include name="skinshortcuts-group-music-4" />
+	<include name="skinshortcuts-group-alt-music-4" />
+	<include name="skinshortcuts-group-music-5" />
+	<include name="skinshortcuts-group-alt-music-5" />
 	<include name="skinshortcuts-group-31101" />
 	<include name="skinshortcuts-group-alt-31101" />
-	<include name="skinshortcuts-group-19019">
+	<include name="skinshortcuts-group-31101-1" />
+	<include name="skinshortcuts-group-alt-31101-1" />
+	<include name="skinshortcuts-group-31101-2" />
+	<include name="skinshortcuts-group-alt-31101-2" />
+	<include name="skinshortcuts-group-31101-3" />
+	<include name="skinshortcuts-group-alt-31101-3" />
+	<include name="skinshortcuts-group-31101-4" />
+	<include name="skinshortcuts-group-alt-31101-4" />
+	<include name="skinshortcuts-group-31101-5" />
+	<include name="skinshortcuts-group-alt-31101-5" />
+	<include name="skinshortcuts-group-31100">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
 			<label>$LOCALIZE[1039]</label>
@@ -1290,11 +1465,11 @@
 			<property name="path">ActivateWindow(Pictures,Addons,return)</property>
 			<property name="list">Addons</property>
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
-			<property name="group">19019</property>
+			<property name="group">31100</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-19019">
+	<include name="skinshortcuts-group-alt-31100">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
 			<label>$LOCALIZE[1039]</label>
@@ -1306,13 +1481,33 @@
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 			<property name="path">ActivateWindow(Pictures,Addons,return)</property>
 			<property name="list">Addons</property>
-			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-19019)</visible>
-			<property name="group">19019</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-31100)</visible>
+			<property name="group">31100</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-31100-1" />
+	<include name="skinshortcuts-group-alt-31100-1" />
+	<include name="skinshortcuts-group-31100-2" />
+	<include name="skinshortcuts-group-alt-31100-2" />
+	<include name="skinshortcuts-group-31100-3" />
+	<include name="skinshortcuts-group-alt-31100-3" />
+	<include name="skinshortcuts-group-31100-4" />
+	<include name="skinshortcuts-group-alt-31100-4" />
+	<include name="skinshortcuts-group-31100-5" />
+	<include name="skinshortcuts-group-alt-31100-5" />
 	<include name="skinshortcuts-group-weather" />
 	<include name="skinshortcuts-group-alt-weather" />
+	<include name="skinshortcuts-group-weather-1" />
+	<include name="skinshortcuts-group-alt-weather-1" />
+	<include name="skinshortcuts-group-weather-2" />
+	<include name="skinshortcuts-group-alt-weather-2" />
+	<include name="skinshortcuts-group-weather-3" />
+	<include name="skinshortcuts-group-alt-weather-3" />
+	<include name="skinshortcuts-group-weather-4" />
+	<include name="skinshortcuts-group-alt-weather-4" />
+	<include name="skinshortcuts-group-weather-5" />
+	<include name="skinshortcuts-group-alt-weather-5" />
 	<include name="skinshortcuts-group-settings">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1439,10 +1634,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-settings-1" />
+	<include name="skinshortcuts-group-alt-settings-1" />
+	<include name="skinshortcuts-group-settings-2" />
+	<include name="skinshortcuts-group-alt-settings-2" />
+	<include name="skinshortcuts-group-settings-3" />
+	<include name="skinshortcuts-group-alt-settings-3" />
+	<include name="skinshortcuts-group-settings-4" />
+	<include name="skinshortcuts-group-alt-settings-4" />
+	<include name="skinshortcuts-group-settings-5" />
+	<include name="skinshortcuts-group-alt-settings-5" />
 	<include name="skinshortcuts-group-13012" />
 	<include name="skinshortcuts-group-alt-13012" />
-	<include name="skinshortcuts-group-19019-0" />
-	<include name="skinshortcuts-group-alt-19019-0" />
+	<include name="skinshortcuts-group-13012-1" />
+	<include name="skinshortcuts-group-alt-13012-1" />
+	<include name="skinshortcuts-group-13012-2" />
+	<include name="skinshortcuts-group-alt-13012-2" />
+	<include name="skinshortcuts-group-13012-3" />
+	<include name="skinshortcuts-group-alt-13012-3" />
+	<include name="skinshortcuts-group-13012-4" />
+	<include name="skinshortcuts-group-alt-13012-4" />
+	<include name="skinshortcuts-group-13012-5" />
+	<include name="skinshortcuts-group-alt-13012-5" />
 	<include name="skinshortcuts-group-shutdown">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1845,4 +2058,14 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-shutdown-1" />
+	<include name="skinshortcuts-group-alt-shutdown-1" />
+	<include name="skinshortcuts-group-shutdown-2" />
+	<include name="skinshortcuts-group-alt-shutdown-2" />
+	<include name="skinshortcuts-group-shutdown-3" />
+	<include name="skinshortcuts-group-alt-shutdown-3" />
+	<include name="skinshortcuts-group-shutdown-4" />
+	<include name="skinshortcuts-group-alt-shutdown-4" />
+	<include name="skinshortcuts-group-shutdown-5" />
+	<include name="skinshortcuts-group-alt-shutdown-5" />
 </includes>

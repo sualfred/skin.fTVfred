@@ -41,7 +41,7 @@
                             <font>Med32</font>
                             <aligny>bottom</aligny>
                             <textcolor>ffdadada</textcolor>
-                            <label>$LOCALIZE[19029] $INFO[Container.Position]</label>
+                            <label>$INFO[Container.Position]</label>
                             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
                         </control>
                         <control type="label">
