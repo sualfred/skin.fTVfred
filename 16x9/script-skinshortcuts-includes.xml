@@ -25,8 +25,8 @@
 			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
-			<property name="widgetName">Widget Group 1</property>
-			<property name="widget">widget1</property>
+			<property name="widgetName">Widget Group 7</property>
+			<property name="widget">widget7</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<property name="path">ActivateWindow(Videos,MovieTitles,return)</property>
@@ -44,8 +44,8 @@
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
-			<property name="widgetName">Widget Group 2</property>
-			<property name="widget">widget2</property>
+			<property name="widgetName">Widget Group 1</property>
+			<property name="widget">widget1</property>
 			<onclick>ActivateWindow(10025,library://video/movies/titles.xml/,return)</onclick>
 			<property name="path">ActivateWindow(10025,library://video/movies/titles.xml/,return)</property>
 			<property name="list">library://video/movies/titles.xml/</property>
@@ -74,6 +74,25 @@
 		</item>
 		<item id="5">
 			<property name="id">$NUM[5]</property>
+			<label>TuneIn Radio</label>
+			<label2>Musik Add-On</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>image://C%3a%5cUsers%5csualfred%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.tuneinradio%5cicon.png/</thumb>
+			<property name="labelID">plugin.audio.tuneinradio</property>
+			<property name="defaultID">plugin.audio.tuneinradio</property>
+			<property name="translatedPath">ActivateWindow(10502,"plugin://plugin.audio.tuneinradio",return)</property>
+			<property name="widgetName">Widget Group 7</property>
+			<property name="widget">widget7</property>
+			<onclick>ActivateWindow(10502,"plugin://plugin.audio.tuneinradio",return)</onclick>
+			<property name="path">ActivateWindow(10502,"plugin://plugin.audio.tuneinradio",return)</property>
+			<property name="list">plugin://plugin.audio.tuneinradio</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-audio-tuneinradio</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
 			<label>$LOCALIZE[1036]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -88,8 +107,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUM[6]</property>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
 			<label>$LOCALIZE[10006]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultVideo.png</icon>
@@ -106,14 +125,16 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUM[7]</property>
+		<item id="8">
+			<property name="id">$NUM[8]</property>
 			<label>$LOCALIZE[10005]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultMusicAlbums.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
 			<property name="defaultID">music</property>
+			<property name="widgetName">Widget Group 8</property>
+			<property name="widget">widget8</property>
 			<onclick>ActivateWindow(Music,root)</onclick>
 			<property name="path">ActivateWindow(Music,root)</property>
 			<property name="list">root</property>
@@ -122,8 +143,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="8">
-			<property name="id">$NUM[8]</property>
+		<item id="9">
+			<property name="id">$NUM[9]</property>
 			<label>Apps</label>
 			<label2>Custom shortcut</label2>
 			<icon>DefaultProgram.png</icon>
@@ -138,8 +159,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="9">
-			<property name="id">$NUM[9]</property>
+		<item id="10">
+			<property name="id">$NUM[10]</property>
 			<label>Bilder</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultPicture.png</icon>
@@ -154,8 +175,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="10">
-			<property name="id">$NUM[10]</property>
+		<item id="11">
+			<property name="id">$NUM[11]</property>
 			<label>$LOCALIZE[12600]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -171,8 +192,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="11">
-			<property name="id">$NUM[11]</property>
+		<item id="12">
+			<property name="id">$NUM[12]</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Common Shortcut</label2>
 			<icon>DefaultSettings.png</icon>
@@ -187,8 +208,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="12">
-			<property name="id">$NUM[12]</property>
+		<item id="13">
+			<property name="id">$NUM[13]</property>
 			<label>$LOCALIZE[13012]</label>
 			<label2>Kodi Command</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -1701,6 +1722,8 @@
 	</include>
 	<include name="skinshortcuts-group-19019" />
 	<include name="skinshortcuts-group-alt-19019" />
+	<include name="skinshortcuts-group-plugin-audio-tuneinradio" />
+	<include name="skinshortcuts-group-alt-plugin-audio-tuneinradio" />
 	<include name="skinshortcuts-group-1036" />
 	<include name="skinshortcuts-group-alt-1036" />
 	<include name="skinshortcuts-group-videos">

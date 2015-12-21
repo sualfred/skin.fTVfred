@@ -14,7 +14,7 @@
 		</control>
 		<control type="button" id="90000">
 			<include>HiddenControl</include>
-			<onfocus condition="StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(9000,0)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(9000,1)</onfocus>
 			<onfocus condition="!StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(9000,0)</onfocus>
 		</control>
 		<control id="101" type="list">
