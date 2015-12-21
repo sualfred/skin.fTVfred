@@ -104,6 +104,7 @@
                 <include>VisibleDelayFadeAnimation</include>
                 <!-- Controls -->
                 <control id="1000" type="grouplist">
+                    <left>-10</left>
                     <height>100</height>
                     <itemgap>10</itemgap>
                     <onleft>SetFocus(50)</onleft>
@@ -121,14 +122,15 @@
                         <visible>!Control.HasFocus(1002)</visible>
                     </control>
                     <control id="1002" type="button">
-                        <width>151</width>
+                        <width min="104" max="204">auto</width>
+                        <wrapmultiline>true</wrapmultiline>
                         <height>100</height>
                         <onup>50</onup>
                         <ondown>3000</ondown>
                         <onclick>SetFocus(5001)</onclick>
                         <font>Med24</font>
                         <label>$LOCALIZE[31089]</label>
-                        <textoffsetx>20</textoffsetx>
+                        <textoffsetx>28</textoffsetx>
                         <textcolor>ffdadada</textcolor>
                         <focusedcolor>ff222222</focusedcolor>
                         <texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>

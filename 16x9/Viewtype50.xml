@@ -33,9 +33,16 @@
 				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
 				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
 				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
-				<itemlayout condition="!Window.IsVisible(tvchannels)" height="576" width="436">
+				<itemlayout height="576" width="436">
 					<control type="group">
 						<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">common/default_empty.png</texture>
+						</control>
 						<control type="image">
 							<top>48</top>
 							<width>480</width>
@@ -97,7 +104,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="!Window.IsVisible(tvchannels)" height="576" width="436">
+				<focusedlayout height="576" width="436">
 					<control type="button">
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
@@ -114,6 +121,13 @@
 							<width>480</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">common/default_empty.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="image">
@@ -172,158 +186,6 @@
 							<shadowcolor>88000000</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<texture>views/OverlayNF.png</texture>
-							<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-							<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-						</control>
-					</control>
-				</focusedlayout>
-				<itemlayout  condition="Window.IsVisible(tvchannels)" height="576" width="436">
-					<control type="group">
-						<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<texture border="2">common/default_empty.png</texture>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<aspectratio align="center">keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="image">
-							<left>-48</left>
-							<centertop>288</centertop>
-							<width>576</width>
-							<height>576</height>
-							<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<texture border="2">views/season_overlay.png</texture>
-						</control>
-						<control type="image">
-							<left>17</left>
-							<top>419</top>
-							<width>62</width>
-							<height>62</height>
-							<texture>views/equaliser.gif</texture>
-							<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-						</control>
-						<control type="label">
-							<left>98</left>
-							<top>447</top>
-							<width>366</width>
-							<height>42</height>
-							<font>Bold44</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>88000000</shadowcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-						</control>
-						<control type="label">
-							<left>18</left>
-							<top>447</top>
-							<width>446</width>
-							<height>42</height>
-							<font>Bold44</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>88000000</shadowcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<texture>views/OverlayNF.png</texture>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout  condition="Window.IsVisible(tvchannels)" height="576" width="436">
-					<control type="group">
-						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-						<animation center="250,288" condition="Container(50).OnNext | Container(50).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<texture border="2">common/default_empty.png</texture>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<aspectratio align="center">keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="image">
-							<left>-48</left>
-							<centertop>288</centertop>
-							<width>576</width>
-							<height>576</height>
-							<texture border="51">views/shadow_fo.png</texture>
-							<animation center="auto" condition="Control.HasFocus(50) | Container(50).OnNext | Container(50).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-							<animation center="auto" condition="Container(50).OnNext | Container(50).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-						</control>
-						<control type="image">
-							<left>-48</left>
-							<centertop>288</centertop>
-							<width>576</width>
-							<height>576</height>
-							<texture border="66,66,51,51">views/shadow_nf.png</texture>
-							<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-							<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>480</width>
-							<height>480</height>
-							<texture border="2">views/season_overlay.png</texture>
-						</control>
-						<control type="image">
-							<left>17</left>
-							<top>419</top>
-							<width>62</width>
-							<height>62</height>
-							<texture>views/equaliser.gif</texture>
-							<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-						</control>
-						<control type="label">
-							<left>98</left>
-							<top>447</top>
-							<width>366</width>
-							<height>42</height>
-							<font>Bold44</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>88000000</shadowcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-						</control>
-						<control type="label">
-							<left>18</left>
-							<top>447</top>
-							<width>446</width>
-							<height>42</height>
-							<font>Bold44</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>88000000</shadowcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
 						</control>
 						<control type="image">
 							<top>48</top>

@@ -675,6 +675,14 @@
 				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
 				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
 			</control>
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture>views/OverlayNF.png</texture>
+				<visible>!Control.HasFocus(9000) + IsEmpty(ListItem.Property(Icon1))</visible>
+				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			</control>
 		</control>
 		<control type="group">
 			<left>604</left>
@@ -783,6 +791,15 @@
 				<height>308</height>
 				<texture>views/OverlayNF.png</texture>
 				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture>views/OverlayNF.png</texture>
+				<visible>!Control.HasFocus(9000) + IsEmpty(ListItem.Property(Icon1))</visible>
 				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
 				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
 			</control>
@@ -4121,7 +4138,7 @@
 			</item>
 			<item>
 				<label>$LOCALIZE[19017]</label>
-				<visible>!IsEmpty(Container(889).ListItemPosition(0).Label)</visible>
+				<!--<visible>!IsEmpty(Container(889).ListItemPosition(0).Label)</visible>-->
 				<property name="Icon1">$INFO[Container(889).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(889).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(889).ListItemPosition(2).Icon]</property>

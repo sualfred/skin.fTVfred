@@ -317,6 +317,7 @@
 
 			<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),settings) | StringCompare(Container(9000).ListItem.Property(defaultID),weather) | StringCompare(Container(9000).ListItem.Property(defaultID),favourites) + !StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])">Select</onright>
 
+			<onfocus condition="StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onfocus>
 			<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])">SetFocus(901)</onright>
 
 			<orientation>vertical</orientation>
