@@ -69,6 +69,14 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="576" width="436">		
+					<control type="button">
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onfocus>SetProperty(chan1,$INFO[ListItem.Icon],Home)</onfocus>
+						<onfocus>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onfocus>
+						<onfocus>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onfocus>
+						<onfocus>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onfocus>
+					</control>
 					<control type="group">
 						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Conditional</animation>
 						<animation center="250,288" condition="Container(59).OnNext | Container(59).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>

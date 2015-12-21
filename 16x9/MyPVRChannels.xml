@@ -3,17 +3,9 @@
 	<!-- videolibrary -->
 	<menucontrol>5000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">2</defaultcontrol>
-	<onload condition="Window.Previous(home)">Container.Update(pvr://channels/tv/all channels/,replace)</onload>
-	<onunload>ClearProperty(JumpToFirstChannel,home)</onunload>
+	<defaultcontrol always="true">59</defaultcontrol>
 	<views>59</views>
-	<controls>
-		
-		<control id="2" type="button">
-			<include>HiddenControl</include>
-			<onfocus condition="Window.Previous(home)">Control.SetFocus(59,1)</onfocus>
-			<onfocus condition="!Wndow.Previous(home)">SetFocus(59)</onfocus>
-		</control>
+	<controls>		
 		<!-- Views -->
 		<include>Viewtype59</include>
 		
