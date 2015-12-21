@@ -71,12 +71,51 @@
                     </control>
 
 
+                    <!-- Controls -->
+                    <control id="1000" type="grouplist">
+                        <left>186</left>
+                        <top>807</top>
+                        <height>100</height>
+                        <itemgap>0</itemgap>
+                        <onup>10</onup>
+                        <onleft>10</onleft>
+                        <onright>10</onright>
+                        <orientation>horizontal</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <defaultcontrol always="true">1001</defaultcontrol>
+                        <!-- Dummy to always set focus to first visible button -->
+                        <control id="1001" type="button">
+                            <width>0</width>
+                            <height>0</height>
+                            <label>-</label>
+                            <onfocus>Right</onfocus>
+                            <include>NoTextures</include>
+                            <visible>!Control.HasFocus(1002) + !Control.HasFocus(20) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005)</visible>
+                        </control>
+                        <control id="30" type="button">
+                            <width min="104" max="204">auto</width>
+                            <wrapmultiline>true</wrapmultiline>
+                            <height>100</height>
+                            <onup>10</onup>
+                            <ondown>3000</ondown>
+                            <onclick>NextChannelGroup</onclick>
+                            <font>Med24</font>
+                            <label>[CAPITALIZE]$LOCALIZE[19141][CR]$VAR[PVRPath][/CAPITALIZE]</label>
+                            <textoffsetx>28</textoffsetx>
+                            <textcolor>ffdadada</textcolor>
+                            <focusedcolor>ff222222</focusedcolor>
+                            <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+                            <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+                            <visible>!StringCompare(ListItem.Label,..) + !SubString(Container.FolderName,$LOCALIZE[20434]) + !SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+                        </control>
+                    </control>
+
                     <!-- title plot section -->
                     <control type="group">                    
                         <left>196</left>
                         <top>807</top>
                         <control type="grouplist">
-                            <top>70</top>
+                            <top>110</top>
                             <height>26</height>
                             <itemgap>10</itemgap>
                             <orientation>horizontal</orientation>
@@ -109,9 +148,9 @@
 
                         <!-- Details -->
                         <control type="textbox">
-                            <top>103</top>
+                            <top>143</top>
                             <width>1192</width>
-                            <height>124</height>
+                            <height>84e</height>
                             <align>left</align>
                             <font>Reg30Spaced</font>
                             <pagecontrol>99</pagecontrol>
@@ -143,8 +182,8 @@
                     <left>198</left>
                     <top>280</top>
                     <width>1850</width>
-                    <height>560</height>
-                    <onback>28</onback>
+                    <height>490</height>
+                    <onback>1001</onback>
                     <viewtype label="19069">list</viewtype>
                     <progresstexture border="5" colordiffuse="33FFFFFF">pvr/_PVR_progressline.png</progresstexture>
                     <scrolltime tween="quadratic">300</scrolltime>
