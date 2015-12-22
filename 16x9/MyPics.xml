@@ -128,7 +128,7 @@
 						<visible>!Control.HasFocus(6) + !Control.HasFocus(7) + !Control.HasFocus(9) + !Control.HasFocus(1002) + !Control.HasFocus(1003)</visible>
 					</control>
 					<control id="6" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>57</onup>
