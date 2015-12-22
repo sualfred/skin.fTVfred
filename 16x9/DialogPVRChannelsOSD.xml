@@ -1,239 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Channel OSD -->
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<controls>
 
-		<control type="group">
-			<visible>!Window.IsActive(DialogPVRInfo.xml)</visible>
-			<animation effect="slide" start="1276" end="0" delay="0" time="200">WindowOpen</animation>
-			<animation effect="slide" end="1276" start="0" delay="0" time="200">WindowClose</animation>
-			<animation effect="slide" start="1276" end="0" delay="0" time="200">Visible</animation>
-			<animation effect="slide" end="1276" start="0" delay="0" time="200">Hidden</animation>
+		<control type="group">	
+			<width>644</width>
+			<animation easing="inout" effect="slide" end="0,0" start="-111,0" time="120" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="slide" end="-111,0" start="0,0" time="120" tween="sine">WindowClose</animation>
+			<animation easing="inout" effect="slide" end="0,0" start="-111,0" time="120" tween="sine">Visible</animation>
+			<animation easing="inout" effect="slide" end="-111,0" start="0,0" time="120" tween="sine">Hidden</animation>
 
+			<!-- background -->
 			<control type="image">
-				<left>1276</left>
+				<left>0</left>
 				<top>-1</top>
-				<width>644</width>
+				<width>630</width>
 				<height>1082</height>
 				<texture border="4,7,4,7">pvr/channel_osd_bg.png</texture>
 			</control>
 
-			<!-- header title -->
-			<control type="label">
-				<left>1291</left>
-				<top>-1000</top>
-				<width>614</width>
-				<align>center</align>
-				<textcolor>white</textcolor>
-				<font>Med26</font>
-				<label>$INFO[VideoPlayer.ChannelGroup]</label>
+			<!-- list -->
+			<control type="group">
+				<animation condition="Container(11).Row(0)" effect="slide" end="0,0" time="200">Conditional</animation>
+				<animation condition="Container(11).Row(1)" effect="slide" end="0,-66" time="200">Conditional</animation>
+				<animation condition="Container(11).Row(2)" effect="slide" end="0,-110" time="200">Conditional</animation>
+				<animation condition="Container(11).Row(3)" effect="slide" end="0,-154" time="200">Conditional</animation>
+				<animation condition="Container(11).Row(4)" effect="slide" end="0,-198" time="200">Conditional</animation>
+				<animation condition="Container(11).Row(5)" effect="slide" end="0,-242" time="200">Conditional</animation>
+
+				<control type="list" id="11">
+					<left>0</left>
+					<top>200</top>
+					<height>1000</height>
+					<width>614</width>
+					<orientation>vertical</orientation>
+					<onleft>NextChannelGroup</onleft>
+					<onright>NextChannelGroup</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<scrolltime easing="out" tween="sine">180</scrolltime>
+					<itemlayout height="166">
+
+						<control type="image">
+							<left>21</left>
+							<top>160</top>
+							<width>591</width>
+							<height>2</height>
+							<texture>pvr/_PVR_OSD_LINE.png</texture>
+						</control>	
+
+						<control type="image">
+							<left>20</left>
+							<top>0</top>
+							<width>590</width>
+							<height>154</height>
+							<texture border="5">pvr/epg_button_nf.png</texture>
+							<visible>false</visible>
+						</control>
+
+						<control type="image">
+							<left>40</left>
+							<top>12</top>
+							<width>117</width>
+							<height>117</height>
+							<texture fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+
+						<control type="progress">
+							<left>40</left>
+							<top>136</top>
+							<width>117</width>
+							<height>6</height>
+							<texturebg border="4">osd/progress_back.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<info>ListItem.Progress</info>
+						</control>
+
+						<control type="group">
+							<top>-100</top>
+							<control type="label">
+								<left>180</left>
+								<top>0</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<font>Med26</font>
+								<label fallback="195">$INFO[ListItem.Title]</label>
+							</control>
+							<control type="label">
+								<left>180</left>
+								<top>58</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<font>Med26</font>
+								<label fallback="195">$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+								<visible>!IsEmpty(ListItem.Title)</visible>
+							</control>
+							<control type="label">
+								<left>180</left>
+								<top>130</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<font>Light24</font>
+								<label>$INFO[ListItem.NextTitle]</label>
+								<visible>!IsEmpty(ListItem.NextTitle)</visible>
+							</control>
+							<control type="label">
+								<left>180</left>
+								<top>182</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<font>Light24</font>
+								<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextEndTime]</label>
+								<visible>!IsEmpty(ListItem.NextTitle)</visible>
+							</control>					
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout height="166">
+
+						<control type="image">
+							<left>21</left>
+							<top>160</top>
+							<width>591</width>
+							<height>2</height>
+							<texture>pvr/_PVR_OSD_LINE.png</texture>
+						</control>	
+						<control type="image">
+							<left>20</left>
+							<top>0</top>
+							<width>594</width>
+							<height>154</height>
+							<texture border="5">pvr/epg_button_nf.png</texture>
+						</control>
+						<control type="image">
+							<left>40</left>
+							<top>12</top>
+							<width>117</width>
+							<height>117</height>
+							<texture fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+
+						<control type="progress">
+							<left>40</left>
+							<top>136</top>
+							<width>117</width>
+							<height>6</height>
+							<texturebg border="4">osd/progress_back.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<info>ListItem.Progress</info>
+						</control>
+
+						<control type="group">
+							<top>-100</top>
+							<control type="label">
+								<left>180</left>
+								<top>0</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>ffFFC24B</textcolor>
+								<selectedcolor>ffFFC24B</selectedcolor>
+								<font>Med26</font>
+								<label fallback="195">$INFO[ListItem.Title]</label>
+							</control>
+							<control type="label">
+								<left>180</left>
+								<top>58</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>ffFFC24B</textcolor>
+								<selectedcolor>ffFFC24B</selectedcolor>
+								<font>Med26</font>
+								<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+								<visible>!IsEmpty(ListItem.Title)</visible>
+							</control>
+
+							<control type="label">
+								<left>180</left>
+								<top>130</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<font>Light24</font>
+								<label>$INFO[ListItem.NextTitle]</label>
+								<visible>!IsEmpty(ListItem.NextTitle)</visible>
+							</control>
+							<control type="label">
+								<left>180</left>
+								<top>182</top>
+								<width>400</width>
+								<align>left</align>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<font>Light24</font>
+								<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextEndTime]</label>
+								<visible>!IsEmpty(ListItem.NextTitle)</visible>
+							</control>
+						</control>
+
+					</focusedlayout>
+				</control>
+
 			</control>
 
-			<!-- Clock -->
-			<control type="label">
-				<left>1820</left>
-				<top>-1000</top>
-				<width>380</width>
+			<!-- heading background -->
+			<control type="image">
+				<left>0</left>
+				<top>-1</top>
+				<width>630</width>			
+				<height>90</height>
+				<texture border="4,7,4,7">pvr/channel_osd_bg.png</texture>
+			</control>
+
+			<!-- Heading -->
+			<control type="grouplist">
+				<top>20</top>
+				<width>630</width>
 				<align>left</align>
-				<textcolor>white</textcolor>
-				<font>Med26</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
+				<left>25</left>
+				<height>80</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<include>VisibleDelayFadeAnimation</include>
+				<control type="label">
+					<width>auto</width>
+					<height>60</height>
+					<font>Med48</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>[CAPITALIZE]$INFO[VideoPlayer.ChannelGroup][/CAPITALIZE]  </label>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Med32</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>$INFO[Container(11).CurrentItem]</label>
+					<visible>IntegerGreaterThan(Container(11).NumItems,0)</visible>
+				</control>
+				<control type="label">
+					<top>14</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Light36</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff505050</textcolor>
+					<label>|</label>
+					<visible>IntegerGreaterThan(Container(11).NumItems,0)</visible>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff505050</textcolor>
+					<label>$INFO[Container(11).NumItems]</label>
+					<visible>IntegerGreaterThan(Container(11).NumItems,0)</visible>
+				</control>
 			</control>
 
-			<control type="list" id="11">
-				<left>1291</left>
+			<!-- list next and previous masks -->
+			<control type="image">
 				<top>84</top>
-				<height>990</height>
-				<width>614</width>
-				<orientation>vertical</orientation>
-				<onleft>NextChannelGroup</onleft>
-				<onright>NextChannelGroup</onright>
-
-				<onup>11</onup>
-				<ondown>11</ondown>
-
-				<itemlayout height="166">
-					<control type="image">
-						<width>644</width>
-						<height>154</height>
-						<texture>pvr/_PVR_OSD_PLAYING_BG.png</texture>
-						<animation effect="fade" start="100" end="5" condition="true">Conditional</animation>
-						<visible>ListItem.IsPlaying</visible>
-					</control>
-					<control type="image">
-						<left>26</left>
-						<top>12</top>
-						<width>117</width>
-						<height>117</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-
-					<control type="progress">
-						<left>26</left>
-						<top>136</top>
-						<width>117</width>
-						<height>6</height>
-						<texturebg border="4">osd/progress_back.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="4">osd/progress_bar.png</midtexture>
-						<righttexture>-</righttexture>
-						<overlaytexture>-</overlaytexture>
-						<info>ListItem.Progress</info>
-					</control>
-
-					<control type="group">
-						<top>-100</top>
-						<control type="label">
-							<left>180</left>
-							<top>0</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
-							<font>Med26</font>
-							<label>$INFO[ListItem.Title]</label>
-						</control>
-						<control type="label">
-							<left>180</left>
-							<top>58</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
-							<font>Med26</font>
-							<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
-						</control>
-
-						<control type="label">
-							<left>180</left>
-							<top>130</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
-							<font>Light24</font>
-							<label>$INFO[ListItem.NextTitle]</label>
-						</control>
-						<control type="label">
-							<left>180</left>
-							<top>182</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
-							<font>Light24</font>
-							<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextEndTime]</label>
-						</control>
-
-						<control type="image">
-							<left>180</left>
-							<top>260</top>
-							<width>350</width>
-							<height>2</height>
-							<texture>pvr/_PVR_OSD_LINE.png</texture>
-						</control>
-					</control>
-				</itemlayout>
-
-				<focusedlayout height="166">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>614</width>
-						<height>154</height>
-						<texture>pvr/_PVR_OSD_FOCUS_FTV.png</texture>
-					</control>
-
-					<control type="image">
-						<left>26</left>
-						<top>12</top>
-						<width>117</width>
-						<height>117</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-
-					<control type="progress">
-						<left>26</left>
-						<top>136</top>
-						<width>117</width>
-						<height>6</height>
-						<texturebg border="4">osd/progress_back.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="4">osd/progress_bar.png</midtexture>
-						<righttexture>-</righttexture>
-						<overlaytexture>-</overlaytexture>
-						<info>ListItem.Progress</info>
-					</control>
-
-					<control type="group">
-						<top>-100</top>
-						<control type="label">
-							<left>180</left>
-							<top>0</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>ffFFC24B</textcolor>
-							<selectedcolor>ffFFC24B</selectedcolor>
-							<font>Med26</font>
-							<label>$INFO[ListItem.Title]</label>
-						</control>
-						<control type="label">
-							<left>180</left>
-							<top>58</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>ffFFC24B</textcolor>
-							<selectedcolor>ffFFC24B</selectedcolor>
-							<font>Med26</font>
-							<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
-						</control>
-
-						<control type="label">
-							<left>180</left>
-							<top>130</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
-							<font>Light24</font>
-							<label>$INFO[ListItem.NextTitle]</label>
-						</control>
-						<control type="label">
-							<left>180</left>
-							<top>182</top>
-							<width>420</width>
-							<align>left</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
-							<font>Light24</font>
-							<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextEndTime]</label>
-						</control>
-
-						<control type="image">
-							<left>180</left>
-							<top>260</top>
-							<width>350</width>
-							<height>2</height>
-							<texture>pvr/_PVR_OSD_LINE.png</texture>
-						</control>
-					</control>
-
-					<control type="image">
-						<left>180</left>
-						<top>159</top>
-						<width>350</width>
-						<height>2</height>
-						<texture>pvr/_PVR_OSD_LINE.png</texture>
-					</control>
-
-				</focusedlayout>
-
+				<width>614</width>			
+				<height>168</height>
+				<visible>!Container(11).Row(0)</visible>
+				<texture border="2" flipy="true">pvr/mask.png</texture>
 			</control>
-		</control>
+			<control type="image">
+				<top>912</top>
+				<width>614</width>
+				<height>168</height>
+				<visible>!Container(11).Row(5)</visible>
+				<texture border="2">pvr/mask.png</texture>
+			</control>
+			<control type="group">
+				<width>614</width>
+				<left>289</left>
+				<height>1080</height>
+				<!-- Arrow up -->		
+				<control type="image">
+					<top>100</top>
+					<width>36</width>
+					<height>20</height>
+					<texture>views/arrow_up.png</texture>
+					<visible>IntegerGreaterThan(Container(11).NumItems,5) + !StringCompare(Container(11).CurrentItem,1)</visible>
+					<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
+					<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
+				</control>
+				<!-- Arrow down -->
+				<control type="image">
+					<top>1022</top>
+					<width>36</width>
+					<height>20</height>
+					<texture>views/arrow_down.png</texture>
+					<visible>IntegerGreaterThan(Container(11).NumItems,5) + !StringCompare(Container(11).CurrentItem,Container(11).NumItems)</visible>
+					<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
+					<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
+				</control>
+			</control>
 
+		</control>
 	</controls>
 
 </window>

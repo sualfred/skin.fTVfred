@@ -19,25 +19,35 @@
 				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
+				<!--  LiveTV title -->
+				<control id="99" type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffeaeaea</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</label>
+					<visible>VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				</control>
 				<!--  Movie title -->
-				<control type="label">
+				<control id="99" type="label">
 					<width>auto</width>
 					<height>50</height>
 					<font>Med40</font>
 					<textcolor>ffeaeaea</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>IsEmpty(VideoPlayer.TVShowTitle)</visible>
+					<visible>!VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
 				<!--  TV Show title -->
-				<control type="label">
+				<control id="99" type="label">
 					<width>auto</width>
 					<height>50</height>
 					<font>Med40</font>
 					<textcolor>ffeaeaea</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[VideoPlayer.TVShowTitle]</label>
-					<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+					<visible>!VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
 				<!-- Season/Episode number -->
 				<control type="label">

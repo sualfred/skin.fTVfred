@@ -741,8 +741,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include />
+	<include name="skinshortcuts-submenu-1" />
+	<include />
+	<include name="skinshortcuts-submenu-2" />
+	<include />
+	<include name="skinshortcuts-submenu-3" />
+	<include />
+	<include name="skinshortcuts-submenu-4" />
+	<include />
+	<include name="skinshortcuts-submenu-5" />
 	<include name="skinshortcuts-group-script-globalsearch" />
 	<include name="skinshortcuts-group-alt-script-globalsearch" />
+	<include name="skinshortcuts-group-script-globalsearch-1" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-1" />
+	<include name="skinshortcuts-group-script-globalsearch-2" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-2" />
+	<include name="skinshortcuts-group-script-globalsearch-3" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-3" />
+	<include name="skinshortcuts-group-script-globalsearch-4" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-4" />
+	<include name="skinshortcuts-group-script-globalsearch-5" />
+	<include name="skinshortcuts-group-alt-script-globalsearch-5" />
 	<include name="skinshortcuts-group-movies">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -931,6 +951,16 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-movies-1" />
+	<include name="skinshortcuts-group-alt-movies-1" />
+	<include name="skinshortcuts-group-movies-2" />
+	<include name="skinshortcuts-group-alt-movies-2" />
+	<include name="skinshortcuts-group-movies-3" />
+	<include name="skinshortcuts-group-alt-movies-3" />
+	<include name="skinshortcuts-group-movies-4" />
+	<include name="skinshortcuts-group-alt-movies-4" />
+	<include name="skinshortcuts-group-movies-5" />
+	<include name="skinshortcuts-group-alt-movies-5" />
 	<include name="skinshortcuts-group-tvshows">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1087,8 +1117,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-tvshows-1" />
+	<include name="skinshortcuts-group-alt-tvshows-1" />
+	<include name="skinshortcuts-group-tvshows-2" />
+	<include name="skinshortcuts-group-alt-tvshows-2" />
+	<include name="skinshortcuts-group-tvshows-3" />
+	<include name="skinshortcuts-group-alt-tvshows-3" />
+	<include name="skinshortcuts-group-tvshows-4" />
+	<include name="skinshortcuts-group-alt-tvshows-4" />
+	<include name="skinshortcuts-group-tvshows-5" />
+	<include name="skinshortcuts-group-alt-tvshows-5" />
 	<include name="skinshortcuts-group-19019" />
 	<include name="skinshortcuts-group-alt-19019" />
+	<include name="skinshortcuts-group-19019-1" />
+	<include name="skinshortcuts-group-alt-19019-1" />
+	<include name="skinshortcuts-group-19019-2" />
+	<include name="skinshortcuts-group-alt-19019-2" />
+	<include name="skinshortcuts-group-19019-3" />
+	<include name="skinshortcuts-group-alt-19019-3" />
+	<include name="skinshortcuts-group-19019-4" />
+	<include name="skinshortcuts-group-alt-19019-4" />
+	<include name="skinshortcuts-group-19019-5" />
+	<include name="skinshortcuts-group-alt-19019-5" />
 	<include name="skinshortcuts-group-music">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1185,8 +1235,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-music-1" />
+	<include name="skinshortcuts-group-alt-music-1" />
+	<include name="skinshortcuts-group-music-2" />
+	<include name="skinshortcuts-group-alt-music-2" />
+	<include name="skinshortcuts-group-music-3" />
+	<include name="skinshortcuts-group-alt-music-3" />
+	<include name="skinshortcuts-group-music-4" />
+	<include name="skinshortcuts-group-alt-music-4" />
+	<include name="skinshortcuts-group-music-5" />
+	<include name="skinshortcuts-group-alt-music-5" />
 	<include name="skinshortcuts-group-1036" />
 	<include name="skinshortcuts-group-alt-1036" />
+	<include name="skinshortcuts-group-1036-1" />
+	<include name="skinshortcuts-group-alt-1036-1" />
+	<include name="skinshortcuts-group-1036-2" />
+	<include name="skinshortcuts-group-alt-1036-2" />
+	<include name="skinshortcuts-group-1036-3" />
+	<include name="skinshortcuts-group-alt-1036-3" />
+	<include name="skinshortcuts-group-1036-4" />
+	<include name="skinshortcuts-group-alt-1036-4" />
+	<include name="skinshortcuts-group-1036-5" />
+	<include name="skinshortcuts-group-alt-1036-5" />
 	<include name="skinshortcuts-group-videos">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1281,8 +1351,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-videos-1" />
+	<include name="skinshortcuts-group-alt-videos-1" />
+	<include name="skinshortcuts-group-videos-2" />
+	<include name="skinshortcuts-group-alt-videos-2" />
+	<include name="skinshortcuts-group-videos-3" />
+	<include name="skinshortcuts-group-alt-videos-3" />
+	<include name="skinshortcuts-group-videos-4" />
+	<include name="skinshortcuts-group-alt-videos-4" />
+	<include name="skinshortcuts-group-videos-5" />
+	<include name="skinshortcuts-group-alt-videos-5" />
 	<include name="skinshortcuts-group-31101" />
 	<include name="skinshortcuts-group-alt-31101" />
+	<include name="skinshortcuts-group-31101-1" />
+	<include name="skinshortcuts-group-alt-31101-1" />
+	<include name="skinshortcuts-group-31101-2" />
+	<include name="skinshortcuts-group-alt-31101-2" />
+	<include name="skinshortcuts-group-31101-3" />
+	<include name="skinshortcuts-group-alt-31101-3" />
+	<include name="skinshortcuts-group-31101-4" />
+	<include name="skinshortcuts-group-alt-31101-4" />
+	<include name="skinshortcuts-group-31101-5" />
+	<include name="skinshortcuts-group-alt-31101-5" />
 	<include name="skinshortcuts-group-31100">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1317,8 +1407,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-31100-1" />
+	<include name="skinshortcuts-group-alt-31100-1" />
+	<include name="skinshortcuts-group-31100-2" />
+	<include name="skinshortcuts-group-alt-31100-2" />
+	<include name="skinshortcuts-group-31100-3" />
+	<include name="skinshortcuts-group-alt-31100-3" />
+	<include name="skinshortcuts-group-31100-4" />
+	<include name="skinshortcuts-group-alt-31100-4" />
+	<include name="skinshortcuts-group-31100-5" />
+	<include name="skinshortcuts-group-alt-31100-5" />
 	<include name="skinshortcuts-group-weather" />
 	<include name="skinshortcuts-group-alt-weather" />
+	<include name="skinshortcuts-group-weather-1" />
+	<include name="skinshortcuts-group-alt-weather-1" />
+	<include name="skinshortcuts-group-weather-2" />
+	<include name="skinshortcuts-group-alt-weather-2" />
+	<include name="skinshortcuts-group-weather-3" />
+	<include name="skinshortcuts-group-alt-weather-3" />
+	<include name="skinshortcuts-group-weather-4" />
+	<include name="skinshortcuts-group-alt-weather-4" />
+	<include name="skinshortcuts-group-weather-5" />
+	<include name="skinshortcuts-group-alt-weather-5" />
 	<include name="skinshortcuts-group-settings">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1445,8 +1555,28 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-settings-1" />
+	<include name="skinshortcuts-group-alt-settings-1" />
+	<include name="skinshortcuts-group-settings-2" />
+	<include name="skinshortcuts-group-alt-settings-2" />
+	<include name="skinshortcuts-group-settings-3" />
+	<include name="skinshortcuts-group-alt-settings-3" />
+	<include name="skinshortcuts-group-settings-4" />
+	<include name="skinshortcuts-group-alt-settings-4" />
+	<include name="skinshortcuts-group-settings-5" />
+	<include name="skinshortcuts-group-alt-settings-5" />
 	<include name="skinshortcuts-group-13012" />
 	<include name="skinshortcuts-group-alt-13012" />
+	<include name="skinshortcuts-group-13012-1" />
+	<include name="skinshortcuts-group-alt-13012-1" />
+	<include name="skinshortcuts-group-13012-2" />
+	<include name="skinshortcuts-group-alt-13012-2" />
+	<include name="skinshortcuts-group-13012-3" />
+	<include name="skinshortcuts-group-alt-13012-3" />
+	<include name="skinshortcuts-group-13012-4" />
+	<include name="skinshortcuts-group-alt-13012-4" />
+	<include name="skinshortcuts-group-13012-5" />
+	<include name="skinshortcuts-group-alt-13012-5" />
 	<include name="skinshortcuts-group-shutdown">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
@@ -1849,4 +1979,14 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-shutdown-1" />
+	<include name="skinshortcuts-group-alt-shutdown-1" />
+	<include name="skinshortcuts-group-shutdown-2" />
+	<include name="skinshortcuts-group-alt-shutdown-2" />
+	<include name="skinshortcuts-group-shutdown-3" />
+	<include name="skinshortcuts-group-alt-shutdown-3" />
+	<include name="skinshortcuts-group-shutdown-4" />
+	<include name="skinshortcuts-group-alt-shutdown-4" />
+	<include name="skinshortcuts-group-shutdown-5" />
+	<include name="skinshortcuts-group-alt-shutdown-5" />
 </includes>
