@@ -922,9 +922,33 @@ msgid "IMDB Top250 Movies"
 msgstr ""
 
 msgctxt "#31511"
-msgid "Unwatched Episodes"
+msgid "TuneIn Recents"
 msgstr ""
 
 msgctxt "#31512"
-msgid "Recently Watched Episodes"
+msgid "Random Songs"
+msgstr ""
+
+msgctxt "#31513"
+msgid "TuneIn Local"
+msgstr ""
+
+msgctxt "#31514"
+msgid "TuneIn Favourites"
+msgstr ""
+
+msgctxt "#31515"
+msgid "Drama and Thriller Movies"
+msgstr ""
+
+msgctxt "#31516"
+msgid "Drama and Thriller TV Shows"
+msgstr ""
+
+msgctxt "#31517"
+msgid "War and History Movies"
+msgstr ""
+
+msgctxt "#31518"
+msgid "War and History TV Shows"
 msgstr ""

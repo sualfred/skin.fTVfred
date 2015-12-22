@@ -30,9 +30,16 @@
 	<shortcut label="31180" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ComedyTVShows.xsp,return)</shortcut>
 	<shortcut label="31181" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/SciFiTVShows.xsp,return)</shortcut>
 	<shortcut label="31182" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedTVShows.xsp,return)</shortcut>	
+	<shortcut label="31510" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
+	<shortcut label="31515" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerMovies.xsp,return)</shortcut>	
+	<shortcut label="31516" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerTVShows.xsp,return)</shortcut>	
+	<shortcut label="31517" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>	
+	<shortcut label="31518" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryTVShows.xsp,return)</shortcut>	
 	<shortcut label="31510" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
-	<shortcut label="31511" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/UnwatchedEpisodes.xsp,return)</shortcut>	
-	<shortcut label="31512" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyWatchedEpisodes.xsp,return)</shortcut>	
+	<shortcut label="31511" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
+	<shortcut label="31514" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut>	
+	<shortcut label="31513" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=local,return)</shortcut>	
+	<shortcut label="31512" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/RandomSongs.xsp,return)</shortcut>	
 	<shortcut label="31183" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
 	<shortcut label="31184" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
 	<shortcut label="31185" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
