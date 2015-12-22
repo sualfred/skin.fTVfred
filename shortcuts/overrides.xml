@@ -36,9 +36,12 @@
 	<shortcut label="31517" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>	
 	<shortcut label="31518" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryTVShows.xsp,return)</shortcut>	
 	<shortcut label="31510" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
-	<shortcut label="31511" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
-	<shortcut label="31514" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut>	
-	<shortcut label="31513" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
+	<shortcut label="31511" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
+	<shortcut label="31514" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut>	
+	<shortcut label="31513" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
+	<shortcut label="31512" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,addons://sources/audio/,return)</shortcut>	
+	<shortcut label="31520" type="program" grouping="addon-program" icon="ftv_icon.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>	
+	<shortcut label="31519" type="video" grouping="addon-video" icon="ftv_icon.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>	
 	<shortcut label="31183" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
 	<shortcut label="31184" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
 	<shortcut label="31185" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>

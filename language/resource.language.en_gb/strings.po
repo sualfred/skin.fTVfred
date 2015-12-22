@@ -926,7 +926,7 @@ msgid "TuneIn Recents"
 msgstr ""
 
 msgctxt "#31512"
-msgid ""
+msgid "Audio Add-ons"
 msgstr ""
 
 msgctxt "#31513"
@@ -951,4 +951,12 @@ msgstr ""
 
 msgctxt "#31518"
 msgid "War and History TV Shows"
+msgstr ""
+
+msgctxt "#31519"
+msgid "Video Add-ons"
+msgstr ""
+
+msgctxt "#31520"
+msgid "Program Add-ons"
 msgstr ""

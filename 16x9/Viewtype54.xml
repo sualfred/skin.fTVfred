@@ -49,7 +49,7 @@
 				<top>292</top>
 				<width>1000</width>
 				<height>900</height>
-				<onup>noop</onup>
+				<onup>back</onup>
 				<ondown>noop</ondown>
 				<onleft>2001</onleft>
 				<onright>noop</onright>
