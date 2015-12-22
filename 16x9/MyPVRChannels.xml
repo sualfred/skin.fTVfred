@@ -113,7 +113,7 @@
 						<label>-</label>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
-						<visible>!Control.HasFocus(1002) + !Control.HasFocus(20) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005)</visible>
+						<visible>!Control.HasFocus(30)</visible>
 					</control>
 					<control id="30" type="button">
 						<width min="104" max="204">auto</width>
@@ -129,7 +129,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!StringCompare(ListItem.Label,..) + !SubString(Container.FolderName,$LOCALIZE[20434]) + !SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 				</control>
 				<!-- Small Details -->
