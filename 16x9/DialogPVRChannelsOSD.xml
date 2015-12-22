@@ -6,10 +6,10 @@
 
 		<control type="group">	
 			<width>644</width>
-			<animation easing="inout" effect="slide" end="0,0" start="-111,0" time="120" tween="sine">WindowOpen</animation>
-			<animation easing="inout" effect="slide" end="-111,0" start="0,0" time="120" tween="sine">WindowClose</animation>
-			<animation easing="inout" effect="slide" end="0,0" start="-111,0" time="120" tween="sine">Visible</animation>
-			<animation easing="inout" effect="slide" end="-111,0" start="0,0" time="120" tween="sine">Hidden</animation>
+			<animation easing="inout" effect="slide" end="0,0" start="-614,0" time="120" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="slide" end="-614,0" start="0,0" time="120" tween="sine">WindowClose</animation>
+			<animation easing="inout" effect="slide" end="0,0" start="-614,0" time="120" tween="sine">Visible</animation>
+			<animation easing="inout" effect="slide" end="-614,0" start="0,0" time="120" tween="sine">Hidden</animation>
 
 			<!-- background -->
 			<control type="image">
