@@ -22,7 +22,7 @@
 
 			<!-- list -->
 			<control type="group">
-				<animation condition="Container(11).Row(0)" effect="slide" end="0,0" time="200">Conditional</animation>
+				<animation condition="Container(11).Row(0)" effect="slide" end="0,-22" time="200">Conditional</animation>
 				<animation condition="Container(11).Row(1)" effect="slide" end="0,-66" time="200">Conditional</animation>
 				<animation condition="Container(11).Row(2)" effect="slide" end="0,-110" time="200">Conditional</animation>
 				<animation condition="Container(11).Row(3)" effect="slide" end="0,-154" time="200">Conditional</animation>
@@ -201,7 +201,7 @@
 					</focusedlayout>
 
 				</control>
-				
+
 			</control>
 
 			<!-- heading background -->
