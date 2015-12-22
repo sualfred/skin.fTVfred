@@ -47,12 +47,13 @@
 			<control type="button" id="1000">
 				<left>-5</left>
 				<bottom>0</bottom>
-				<width>500</width>
+				<width>500</width>				
 				<height>76</height>
 				<align>center</align>
 				<aligny>top</aligny>
 				<font>MedUpper24</font>
 				<textoffsety>27</textoffsety>
+				<textoffsetx>27</textoffsetx>
 			</control>
 		</control>
 	</controls>
