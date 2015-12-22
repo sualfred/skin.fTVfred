@@ -40,25 +40,15 @@
 					<onup>noop</onup>
 					<ondown>noop</ondown>
 					<scrolltime easing="out" tween="sine">180</scrolltime>
-					<itemlayout height="166">
 
+					<itemlayout height="166">
 						<control type="image">
 							<left>21</left>
 							<top>160</top>
 							<width>591</width>
 							<height>2</height>
 							<texture>pvr/_PVR_OSD_LINE.png</texture>
-						</control>	
-
-						<control type="image">
-							<left>20</left>
-							<top>0</top>
-							<width>590</width>
-							<height>154</height>
-							<texture border="5">pvr/epg_button_nf.png</texture>
-							<visible>false</visible>
 						</control>
-
 						<control type="image">
 							<left>40</left>
 							<top>12</top>
@@ -67,7 +57,6 @@
 							<texture fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
-
 						<control type="progress">
 							<left>40</left>
 							<top>136</top>
@@ -80,7 +69,6 @@
 							<overlaytexture>-</overlaytexture>
 							<info>ListItem.Progress</info>
 						</control>
-
 						<control type="group">
 							<top>-100</top>
 							<control type="label">
@@ -127,11 +115,9 @@
 								<visible>!IsEmpty(ListItem.NextTitle)</visible>
 							</control>					
 						</control>
-
 					</itemlayout>
 
 					<focusedlayout height="166">
-
 						<control type="image">
 							<left>21</left>
 							<top>160</top>
@@ -154,7 +140,6 @@
 							<texture fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
-
 						<control type="progress">
 							<left>40</left>
 							<top>136</top>
@@ -167,7 +152,6 @@
 							<overlaytexture>-</overlaytexture>
 							<info>ListItem.Progress</info>
 						</control>
-
 						<control type="group">
 							<top>-100</top>
 							<control type="label">
@@ -191,7 +175,6 @@
 								<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
 								<visible>!IsEmpty(ListItem.Title)</visible>
 							</control>
-
 							<control type="label">
 								<left>180</left>
 								<top>130</top>
@@ -215,10 +198,10 @@
 								<visible>!IsEmpty(ListItem.NextTitle)</visible>
 							</control>
 						</control>
-
 					</focusedlayout>
-				</control>
 
+				</control>
+				
 			</control>
 
 			<!-- heading background -->
@@ -324,5 +307,4 @@
 
 		</control>
 	</controls>
-
 </window>
