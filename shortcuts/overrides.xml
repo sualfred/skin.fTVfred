@@ -38,8 +38,7 @@
 	<shortcut label="31510" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
 	<shortcut label="31511" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
 	<shortcut label="31514" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut>	
-	<shortcut label="31513" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=local,return)</shortcut>	
-	<shortcut label="31512" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/RandomSongs.xsp,return)</shortcut>	
+	<shortcut label="31513" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
 	<shortcut label="31183" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
 	<shortcut label="31184" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
 	<shortcut label="31185" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
