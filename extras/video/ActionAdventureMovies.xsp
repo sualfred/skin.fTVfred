@@ -5,6 +5,7 @@
     <rule field="genre" operator="contains">
         <value>Action</value>
         <value>Adventure</value>
+        <value>Abenteuer</value>
     </rule>
     <order direction="ascending">sorttitle</order>
 </smartplaylist>

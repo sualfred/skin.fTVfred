@@ -4,6 +4,9 @@
     <match>all</match>
     <rule field="genre" operator="contains">
         <value>Sci-Fi</value>
+        <value>SciFi</value>
+        <value>Science Fiction</value>
+        <value>Science-Fiction</value>
     </rule>
     <order direction="ascending">sorttitle</order>
 </smartplaylist>

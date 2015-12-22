@@ -30,6 +30,9 @@
 	<shortcut label="31180" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ComedyTVShows.xsp,return)</shortcut>
 	<shortcut label="31181" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/SciFiTVShows.xsp,return)</shortcut>
 	<shortcut label="31182" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedTVShows.xsp,return)</shortcut>	
+	<shortcut label="31510" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
+	<shortcut label="31511" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/UnwatchedEpisodes.xsp,return)</shortcut>	
+	<shortcut label="31512" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyWatchedEpisodes.xsp,return)</shortcut>	
 	<shortcut label="31183" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
 	<shortcut label="31184" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
 	<shortcut label="31185" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>

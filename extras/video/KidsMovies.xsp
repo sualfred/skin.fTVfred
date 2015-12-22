@@ -4,6 +4,12 @@
     <match>one</match>
     <rule field="genre" operator="is">
         <value>family</value>
+        <value>Familie</value>
+        <value>kids</value>
+        <value>kinder</value>
+        <value>kinderfilm</value>
+        <value>cartoon</value>
+        <value>comic</value>
     </rule>
     <order direction="ascending">sorttitle</order>
 </smartplaylist>

@@ -916,3 +916,15 @@ msgstr ""
 msgctxt "#31509"
 msgid "Set Widget"
 msgstr ""
+
+msgctxt "#31510"
+msgid "IMDB Top250 Movies"
+msgstr ""
+
+msgctxt "#31511"
+msgid "Unwatched Episodes"
+msgstr ""
+
+msgctxt "#31512"
+msgid "Recently Watched Episodes"
+msgstr ""
