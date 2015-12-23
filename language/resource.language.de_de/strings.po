@@ -220,7 +220,7 @@ msgstr "Addon[CR]zurücksetzen"
 
 msgctxt "#31041"
 msgid "Debug grid"
-msgstr "Debug Gitter
+msgstr "Debug Gitter"
 
 msgctxt "#31042"
 msgid "Debug labels"
@@ -824,3 +824,139 @@ msgstr "Addons"
 msgctxt "#31196"
 msgid "Your Android Apps"
 msgstr "Android Apps"
+
+msgctxt "#31197"
+msgid "Widget"
+msgstr "Widget"
+
+msgctxt "#31198"
+msgid "View Type"
+msgstr "View Type"
+
+msgctxt "#31199"
+msgid "Label Overlay"
+msgstr "Label Overlay"
+
+msgctxt "#31200"
+msgid "Enter Name"
+msgstr "Setze Name"
+
+msgctxt "#31201"
+msgid "Choose Shortcut"
+msgstr "Wähle Shortcut"
+
+msgctxt "#31202"
+msgid "Widget Action"
+msgstr "Widget Aktion"
+
+msgctxt "#31203"
+msgid "Square Info"
+msgstr "Square Info"
+
+msgctxt "#31204"
+msgid "Titles with"
+msgstr "Titel mit"
+
+msgctxt "#31205"
+msgid "Refresh Information"
+msgstr "Update Informationen"
+
+msgctxt "#31206"
+msgid "Enable Auto-Update"
+msgstr "Aktiviere Auto-Update"
+
+msgctxt "#31207"
+msgid "Disable Auto-Update"
+msgstr "Deaktiviere Auto-Update"
+
+msgctxt "#31208"
+msgid "Enable Higher Levels"
+msgstr "Aktiviere höhere Level"
+
+msgctxt "#31209"
+msgid "Disable Higher Levels"
+msgstr "Deaktiviere höhere Level"
+
+msgctxt "#31500"
+msgid "Widget Group 1"
+msgstr "Widget Gruppe 1"
+
+msgctxt "#31501"
+msgid "Widget Group 2"
+msgstr "Widget Gruppe 2"
+
+msgctxt "#31502"
+msgid "Widget Group 3"
+msgstr "Widget Gruppe 3"
+
+msgctxt "#31503"
+msgid "Widget Group 4"
+msgstr "Widget Gruppe 4"
+
+msgctxt "#31504"
+msgid "Widget Group 5"
+msgstr "Widget Gruppe 5"
+
+msgctxt "#31505"
+msgid "Widget Group 6"
+msgstr "Widget Gruppe 6"
+
+msgctxt "#31506"
+msgid "Widget Group 7"
+msgstr "Widget Gruppe 7"
+
+msgctxt "#31507"
+msgid "Widget Group 8"
+msgstr "Widget Gruppe 8"
+
+msgctxt "#31508"
+msgid "Edit"
+msgstr "Edit"
+
+msgctxt "#31509"
+msgid "Set Widget"
+msgstr "Setze Widget"
+
+msgctxt "#31510"
+msgid "IMDB Top250 Movies"
+msgstr "IMDB Top250 Filme"
+
+msgctxt "#31511"
+msgid "TuneIn Recents"
+msgstr "TuneIn Verlauf"
+
+msgctxt "#31512"
+msgid "Audio Add-ons"
+msgstr "Audio Add-ons"
+
+msgctxt "#31513"
+msgid "TuneIn Local"
+msgstr "TuneIn Lokal"
+
+msgctxt "#31514"
+msgid "TuneIn Favourites"
+msgstr "TuneIn Favouriten"
+
+msgctxt "#31515"
+msgid "Drama and Thriller Movies"
+msgstr "Drama und Thriller Filme"
+
+msgctxt "#31516"
+msgid "Drama and Thriller TV Shows"
+msgstr "Drama und Thriller Serien"
+
+msgctxt "#31517"
+msgid "War and History Movies"
+msgstr "Krieg und Historie Filme"
+
+msgctxt "#31518"
+msgid "War and History TV Shows"
+msgstr "Krieg und Historie Serien"
+
+msgctxt "#31519"
+msgid "Video Add-ons"
+msgstr "Video Add-ons"
+
+msgctxt "#31520"
+msgid "Program Add-ons"
+msgstr "Programm Add-ons"
