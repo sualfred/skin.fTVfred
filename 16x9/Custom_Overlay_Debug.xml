@@ -26,8 +26,7 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[Container.CurrentItem]</label>
-				<visible>Window.IsVisible(tvguide)</visible>
+				<label>Test Value: $INFO[Window(home).Property(BackToMenu)]</label>
 			</control>
 			<!-- Window labels -->
 			<control type="label">
