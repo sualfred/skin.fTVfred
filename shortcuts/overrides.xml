@@ -14,42 +14,141 @@
 	<icon labelID="settings">DefaultSettings.png</icon>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
 	<widgetPlaylists>False</widgetPlaylists>
-	<shortcut label="31167" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyAddedMovies.xsp,return)</shortcut>
-	<shortcut label="31168" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourMovies.xsp,return)</shortcut>
-	<shortcut label="31169" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressMovies.xsp,return)</shortcut>
-	<shortcut label="31170" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/KidsMovies.xsp,return)</shortcut>
-	<shortcut label="31171" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ActionAdventureMovies.xsp,return)</shortcut>
-	<shortcut label="31172" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ComedyMovies.xsp,return)</shortcut>
-	<shortcut label="31173" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/SciFiMovies.xsp,return)</shortcut>
-	<shortcut label="31174" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedMovies.xsp,return)</shortcut>	
-	<shortcut label="31175" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyUpdatedTVShows.xsp,return)</shortcut>
-	<shortcut label="31176" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourTVShows.xsp,return)</shortcut>
-	<shortcut label="31177" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressTVShows.xsp,return)</shortcut>
-	<shortcut label="31178" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/KidsTVShows.xsp,return)</shortcut>
-	<shortcut label="31179" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ActionAdventureTVShows.xsp,return)</shortcut>
-	<shortcut label="31180" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ComedyTVShows.xsp,return)</shortcut>
-	<shortcut label="31181" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/SciFiTVShows.xsp,return)</shortcut>
-	<shortcut label="31182" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedTVShows.xsp,return)</shortcut>	
-	<shortcut label="31510" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
-	<shortcut label="31515" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerMovies.xsp,return)</shortcut>	
-	<shortcut label="31516" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerTVShows.xsp,return)</shortcut>	
-	<shortcut label="31517" type="movie" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>	
-	<shortcut label="31518" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryTVShows.xsp,return)</shortcut>	
-	<shortcut label="31510" type="tvshow" grouping="video" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
-	<shortcut label="31511" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
-	<shortcut label="31514" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut>	
-	<shortcut label="31513" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
-	<shortcut label="31512" type="music" grouping="addon-audio" icon="ftv_icon.png">ActivateWindow(MusicLibrary,addons://sources/audio/,return)</shortcut>	
-	<shortcut label="31520" type="program" grouping="addon-program" icon="ftv_icon.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>	
-	<shortcut label="31519" type="video" grouping="addon-video" icon="ftv_icon.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>	
-	<shortcut label="31183" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
-	<shortcut label="31184" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
-	<shortcut label="31185" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
-	<shortcut label="31186" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://artists/,return)</shortcut>
-	<shortcut label="31187" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://genres/,return)</shortcut>
-	<shortcut label="31188" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/albums/,return)</shortcut>
-	<shortcut label="31189" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/songs/,return)</shortcut>
-	<shortcut label="31190" type="music" grouping="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://songs/,return)</shortcut>
+
+
+	<groupings>
+
+		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
+		<node label="fTV">
+			<node label="342">
+				<shortcut label="31167" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyAddedMovies.xsp,return)</shortcut>
+				<shortcut label="31168" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourMovies.xsp,return)</shortcut>
+				<shortcut label="31169" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressMovies.xsp,return)</shortcut>
+				<shortcut label="31170" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/KidsMovies.xsp,return)</shortcut>
+				<shortcut label="31171" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ActionAdventureMovies.xsp,return)</shortcut>
+				<shortcut label="31172" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ComedyMovies.xsp,return)</shortcut>
+				<shortcut label="31173" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/SciFiMovies.xsp,return)</shortcut>
+				<shortcut label="31174" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedMovies.xsp,return)</shortcut>	
+				<shortcut label="31510" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
+				<shortcut label="31515" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerMovies.xsp,return)</shortcut>	
+				<shortcut label="31517" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>	
+			</node>
+			<node label="20343">
+				<shortcut label="31175" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyUpdatedTVShows.xsp,return)</shortcut>
+				<shortcut label="31176" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourTVShows.xsp,return)</shortcut>
+				<shortcut label="31177" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressTVShows.xsp,return)</shortcut>
+				<shortcut label="31178" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/KidsTVShows.xsp,return)</shortcut>
+				<shortcut label="31179" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ActionAdventureTVShows.xsp,return)</shortcut>
+				<shortcut label="31180" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ComedyTVShows.xsp,return)</shortcut>
+				<shortcut label="31181" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/SciFiTVShows.xsp,return)</shortcut>
+				<shortcut label="31182" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedTVShows.xsp,return)</shortcut>	
+				<shortcut label="31516" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerTVShows.xsp,return)</shortcut>	
+				<shortcut label="31518" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryTVShows.xsp,return)</shortcut>	
+				<shortcut label="31510" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
+			</node>
+			<node label="2">
+				<shortcut label="31183" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
+				<shortcut label="31184" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
+				<shortcut label="31185" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
+				<shortcut label="31186" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://artists/,return)</shortcut>
+				<shortcut label="31187" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://genres/,return)</shortcut>
+				<shortcut label="31188" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/albums/,return)</shortcut>
+				<shortcut label="31189" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/songs/,return)</shortcut>
+				<shortcut label="31190" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://songs/,return)</shortcut>
+			</node>
+			<node label="24001">
+				<shortcut label="31512" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,addons://sources/audio/,return)</shortcut>	
+				<shortcut label="31520" type="program" icon="ftv_icon.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>	
+				<shortcut label="31519" type="video" icon="ftv_icon.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>	
+				<shortcut label="31511" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
+				<shortcut label="31514" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut><shortcut label="31513" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
+			</node>
+		</node>
+		<node label="32029">
+			<content>common</content>
+		</node>
+		<node label="32030">
+			<content>video</content>
+			<node label="32040">
+				<content>playlist-video</content>
+			</node>
+			<node label="32010">
+				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="32075">
+				<content>videosources</content>
+				<content>upnp-video</content>
+			</node>
+		</node>
+		<node label="32031">
+			<content>music</content>
+			<node label="32040">
+				<content>playlist-audio</content>
+			</node>
+			<node label="32011">
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="32075">
+				<content>musicsources</content>
+				<content>upnp-music</content>
+			</node>
+		</node>
+		<node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
+			<content>pvr</content>
+			<node label="19023">
+				<content>pvr-tv</content>
+			</node>
+			<node label="19024">
+				<content>pvr-radio</content>
+			</node>
+		</node>
+		<node label="32017" condition="PVR.HasTVChannels" version="14">
+			<content>pvr</content>
+			<node label="19023">
+				<content>pvr-tv</content>
+			</node>
+		</node>
+		<node label="32087" condition="PVR.HasRadioChannels" version="14">
+			<content>radio</content>
+			<node label="19024">
+				<content>pvr-radio</content>
+			</node>
+		</node>
+		<node label="32020">
+			<content>picturesources</content>
+		</node>
+		<node label="32007">
+			<node label="32009">
+				<shortcut label="10001" type="32021" icon="DefaultAddonProgram.png">ActivateWindow(Programs,Addons,return)</shortcut>
+				<content>addon-program</content>
+			</node>
+			<node label="32010">
+				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="32011">
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="32012">
+				<shortcut label="1039" type="32020" icon="DefaultAddonPicture.png">ActivateWindow(Pictures,Addons,return)</shortcut>
+				<content>addon-image</content>
+			</node>
+		</node>
+		<node label="32006">
+			<content>favourite</content>
+		</node>
+		<node label="10004">
+			<content>settings</content>
+		</node>
+		<node label="32054">
+			<content>commands</content>
+		</node>
+	</groupings>
+
+	
 
 	<!-- ============= -->
 	<!-- Widgets	   -->
