@@ -98,16 +98,17 @@
 		<animation condition="Container(9000).Row(11)" effect="slide" end="0,-122" time="200">Conditional</animation>
 	</include>
 	<!-- Widget Focus Animation -->
+	<!--<include name="WidgetFocusAnimation">
+		<animation condition="StringCompare(Container($PARAM[ID]).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
+		<animation condition="StringCompare(Container($PARAM[ID]).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
+		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + [Container($PARAM[ID]).Row(1) | !Control.HasFocus($PARAM[ID])]" easing="inout" effect="slide" start="0,114" end="0,114" time="220" tween="sine">Conditional</animation>
+		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(2) + Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0,-114" time="220" tween="sine">Conditional</animation>
+		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(3)" easing="inout" effect="slide" end="0,-326" time="220" tween="sine">Conditional</animation>
+	</include>-->
 	<include name="WidgetFocusAnimation">
 		<animation condition="StringCompare(Container($PARAM[ID]).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 		<animation condition="StringCompare(Container($PARAM[ID]).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
-		
-		<!--row 1 focused -->
-		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + [Container($PARAM[ID]).Row(1) | !Control.HasFocus($PARAM[ID])]" easing="inout" effect="slide" start="0,114" end="0,114" time="220" tween="sine">Conditional</animation>
-		<!--row 2 focused -->
-		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(2) + Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0,-114" time="220" tween="sine">Conditional</animation>
-		<!--row 3 focused -->
-		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(3)" easing="inout" effect="slide" end="0,-326" time="220" tween="sine">Conditional</animation>
-
+		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
+		<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(3)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
 	</include>
 </includes>

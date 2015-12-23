@@ -1,35 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>		
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">30</defaultcontrol>
-	<animation effect="fade" start="100" end="0" time="400" delay="5" condition="System.GetBool(pvrmanager.enabled)">WindowClose</animation>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<animation effect="fade" start="100" end="0" time="0" delay="5">WindowClose</animation>
 	<controls>
-		
+		<!-- splash -->
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
 			<height>1080</height>
 			<texture background="true">loading.jpg</texture>
-			<visible>System.GetBool(pvrmanager.enabled)</visible>
 		</control>
-
-		<control type="button" id="30">
-			<description>trigger</description>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>			
-			<onfocus>SetFocus(20)</onfocus>
-		</control>
-
-		<!-- workaround: startup delay for the pvr widget. otherise it will be empty for some reasons -->
-		<control type="button" id="20">
-			<description>check if pvr is enabled</description>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>	
-			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,SetFocus(10),00:01,silent)</onfocus>
-			<onfocus condition="!System.GetBool(pvrmanager.enabled)">SetFocus(10)</onfocus>
-		</control>
-
+		<!-- switch to home -->
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
