@@ -9,10 +9,10 @@
 			<include>DialogAnimation</include>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<width>1000</width>
+			<width>1200</width>
 			<height>312</height>
 			<control type="image">
-				<width>1000</width>
+				<width>1200</width>
 				<height>312</height>
 				<texture>dialogs/rule_back.png</texture>
 			</control>
@@ -30,11 +30,11 @@
 			<!-- Left group -->
 			<control type="group" id="100">
 				<top>60</top>
-				<width>600</width>
+				<width>800</width>
 				<height>336</height>
 				<!-- Rule Field -->
 				<control type="spincontrolex" id="15">
-					<width>600</width>
+					<width>800</width>
 					<height>84</height>
 					<onleft>noop</onleft>
 					<onright>9001</onright>
@@ -50,7 +50,7 @@
 				<!-- Rule Field label -->
 				<control type="label">
 					<left>40</left>
-					<width>520</width>
+					<width>620</width>
 					<height>84</height>
 					<font>Light32</font>
 					<textcolor>ffffaf37</textcolor>
@@ -59,7 +59,7 @@
 				</control>
 				<control type="label">
 					<left>40</left>
-					<width>520</width>
+					<width>620</width>
 					<height>84</height>
 					<font>Light32</font>
 					<textcolor>ff505153</textcolor>
@@ -69,7 +69,7 @@
 				<!-- Rule operator -->
 				<control type="spincontrolex" id="16">
 					<top>84</top>
-					<width>600</width>
+					<width>800</width>
 					<height>84</height>
 					<onleft>noop</onleft>
 					<onright>9001</onright>
@@ -86,7 +86,7 @@
 				<control type="label">
 					<top>84</top>
 					<left>40</left>
-					<width>520</width>
+					<width>620</width>
 					<height>84</height>
 					<font>Light32</font>
 					<textcolor>ffffaf37</textcolor>
@@ -96,7 +96,7 @@
 				<control type="label">
 					<top>84</top>
 					<left>40</left>
-					<width>520</width>
+					<width>620</width>
 					<height>84</height>
 					<font>Light32</font>
 					<textcolor>ff505153</textcolor>
@@ -106,7 +106,7 @@
 				<!-- Value edit -->
 				<control type="edit" id="17">
 					<top>168</top>
-					<width>600</width>
+					<width>500</width>
 					<height>84</height>
 					<onup>16</onup>
 					<onleft>noop</onleft>
@@ -122,16 +122,16 @@
 				</control>
 				<!-- Browse Button -->
 				<control type="button" id="20">
-					<left>400</left>
+					<left>500</left>
 					<top>168</top>
-					<width>200</width>
+					<width>300</width>
 					<height>84</height>
 					<onleft>17</onleft>
 					<onright>9001</onright>
 					<onup>16</onup>
 					<ondown>noop</ondown>
 					<font>Light32</font>
-					<textwidth>738</textwidth>
+					<align>center</align>
 					<textoffsetx>40</textoffsetx>
 					<textcolor>ff505153</textcolor>
 					<focusedcolor>ffffaf37</focusedcolor>
