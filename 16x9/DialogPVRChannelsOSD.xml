@@ -216,7 +216,7 @@
 			<!-- Heading -->
 			<control type="grouplist">
 				<top>20</top>
-				<width>630</width>
+				<width>480</width>
 				<align>left</align>
 				<left>25</left>
 				<height>80</height>
@@ -225,7 +225,7 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<include>VisibleDelayFadeAnimation</include>
 				<control type="label">
-					<width max="510">auto</width>
+					<width max="360">auto</width>
 					<height>60</height>
 					<font>Med48</font>
 					<aligny>bottom</aligny>
@@ -261,6 +261,48 @@
 					<textcolor>ff505050</textcolor>
 					<label>$INFO[Container(11).NumItems]</label>
 					<visible>IntegerGreaterThan(Container(11).NumItems,0)</visible>
+				</control>
+			</control>
+			<!--  Current time -->
+			<control type="grouplist">
+				<left>460</left>
+				<top>20</top>
+				<width>150</width>
+				<height>60</height>
+				<align>right</align>
+				<itemgap>3</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<include>VisibleDelayFadeAnimation</include>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Med32</font>
+					<align>right</align>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>$INFO[System.Time(HH)]</label>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<align>right</align>
+					<aligny>bottom</aligny>
+					<font>Light32</font>
+					<textcolor>ff505050</textcolor>
+					<label>:</label>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<align>right</align>
+					<aligny>bottom</aligny>
+					<font>Light32</font>
+					<textcolor>ff505050</textcolor>
+					<label>$INFO[System.Time(MM)]</label>
 				</control>
 			</control>
 
@@ -304,6 +346,8 @@
 					<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 				</control>
 			</control>
+
+
 
 		</control>
 	</controls>
