@@ -88,7 +88,7 @@
 					<width>550</width>
 					<height>252</height>
 					<onup>12</onup>
-					<ondown>noop</ondown>
+					<ondown>9001</ondown>
 					<onleft>noop</onleft>
 					<onright>300</onright>
 					<itemgap>0</itemgap>
