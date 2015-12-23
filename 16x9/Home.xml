@@ -6,7 +6,7 @@
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<!-- trigger to load the ftv widgets for 1 second -->	
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
-	<onload condition="Window.Previous(startup)">AlarmClock(preloadtimer,ClearProperty(preload,Home),00:01,silent)</onload>
+	<onload condition="Window.Previous(startup)">AlarmClock(preloadtimer,ClearProperty(preload,Home),00:$INFO[Skin.String(LoadingDelay)],silent)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	
 	<controls>
 		<control type="group">
@@ -19,8 +19,8 @@
 			</control>
 			<control type="button" id="90000">
 				<include>HiddenControl</include>
-				<onfocus condition="Window.Previous(startup) + StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,1),00:01,silent)</onfocus>
-				<onfocus condition="Window.Previous(startup) + !StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,0),00:01,silent)</onfocus>
+				<onfocus condition="Window.Previous(startup) + StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,1),00:$INFO[Skin.String(LoadingDelay)],silent)</onfocus>
+				<onfocus condition="Window.Previous(startup) + !StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,0),00:$INFO[Skin.String(LoadingDelay)],silent)</onfocus>
 				<onfocus condition="!Window.Previous(startup) + StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(9000,1)</onfocus>
 				<onfocus condition="!Window.Previous(startup) + !StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(9000,0)</onfocus>
 			</control>

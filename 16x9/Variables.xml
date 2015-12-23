@@ -626,6 +626,7 @@
 		<value condition="ControlGroup(9).HasFocus(16)">$LOCALIZE[31038]</value>
 		<value condition="ControlGroup(9).HasFocus(17)">$LOCALIZE[31034]</value>
 		<value condition="ControlGroup(9).HasFocus(18)">$LOCALIZE[31150]</value>
+		<value condition="ControlGroup(9).HasFocus(19)">Adjust the startup loading delay until the menu is going to be visible. This can solve some issues on slower machines or if too much internet based addons are used for widgets.</value>
 		<value condition="ControlGroup(9).HasFocus(21)">$LOCALIZE[31039]</value>
 		<value condition="ControlGroup(9).HasFocus(22)">$LOCALIZE[31040]</value>
 	</variable>

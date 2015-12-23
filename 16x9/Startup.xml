@@ -2,6 +2,7 @@
 <window>		
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">10</defaultcontrol>	
+	<onload condition="IsEmpty(Skin.String(LoadingDelay)">Skin.SetString(LoadingDelay,05)</onload>
 	<animation effect="fade" start="100" end="0" time="0" delay="5">WindowClose</animation>
 	<controls>
 		<!-- splash -->
