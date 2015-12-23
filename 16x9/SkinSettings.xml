@@ -423,40 +423,6 @@
 					<onclick>Skin.ToggleSetting(HideOSDControls)</onclick>
 					<selected>Skin.HasSetting(HideOSDControls)</selected>
 				</control>
-				<control id="19" type="button">
-					<width>958</width>
-					<height>84</height>
-					<font>Light32</font>
-					<label>Adjust loading delay</label>
-					<label2>$INFO[Skin.String(LoadingDelay),,s]</label2>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<onclick>SetProperty(Dialog.NumItems,10)</onclick>
-					<onclick>SetProperty(Dialog.1.Label,3 second)</onclick>
-					<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(LoadingDelay,03))</onclick>
-					<onclick>SetProperty(Dialog.2.Label,4 seconds)</onclick>
-					<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(LoadingDelay,04))</onclick>
-					<onclick>SetProperty(Dialog.3.Label,5 seconds)</onclick>
-					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(LoadingDelay,05))</onclick>
-					<onclick>SetProperty(Dialog.4.Label,6 seconds)</onclick>
-					<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(LoadingDelay,06))</onclick>
-					<onclick>SetProperty(Dialog.5.Label,7 seconds)</onclick>
-					<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(LoadingDelay,07))</onclick>
-					<onclick>SetProperty(Dialog.6.Label,8 seconds)</onclick>
-					<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(LoadingDelay,08))</onclick>
-					<onclick>SetProperty(Dialog.7.Label,9 seconds)</onclick>
-					<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(LoadingDelay,09))</onclick>
-					<onclick>SetProperty(Dialog.8.Label,10 seconds)</onclick>
-					<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(LoadingDelay,10))</onclick>
-					<onclick>SetProperty(Dialog.9.Label,11 seconds)</onclick>
-					<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(LoadingDelay,11))</onclick>
-					<onclick>SetProperty(Dialog.10.Label,12 seconds)</onclick>
-					<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString(LoadingDelay,12))</onclick>
-					<onclick>RunScript(script.toolbox,info=selectdialog,header=Adjust Loading Delay)</onclick> 					
-				</control>
 				<control id="21" type="radiobutton">
 					<width>958</width>
 					<height>84</height>
