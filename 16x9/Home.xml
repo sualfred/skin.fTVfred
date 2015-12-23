@@ -1036,7 +1036,7 @@
 				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(widget),widget5)</visible>
 
 				<include name="WidgetFocusAnimation">
-					<param name="ID">400</param>
+					<param name="ID">500</param>
 				</include>
 
 				<itemlayout height="370" width="2000">
