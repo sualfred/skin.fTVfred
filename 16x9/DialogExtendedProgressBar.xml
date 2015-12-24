@@ -2,6 +2,10 @@
 <window>
 	<!-- extendedprogressdialog -->
 	<zorder>2</zorder>
+	<onload condition="!IsEmpty(Window.Property(UpdateInProgress))">ClearProperty(UpdateInProgress)</onload>
+	<onload condition="Library.IsScanningVideo">SetProperty(UpdateInProgress,1)</onload>
+	<onunload condition="!IsEmpty(Window.Property(UpdateInProgress))">XBMC.RunScript(script.artwork.downloader,silent=true)</onunload>
+	<onunload condition="!IsEmpty(Window.Property(UpdateInProgress))">ClearProperty(UpdateInProgress)</onunload>
 	<controls>
 		<!-- Main group -->
 		<control type="group">
