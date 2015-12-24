@@ -1975,7 +1975,7 @@
 			<align>center</align>
 			<width>1920</width>
 			<height>200</height>	
-			<label>loading widgets</label>		
+			<label>updating widgets</label>		
 			<visible>[Container(101).IsUpdating
 				| Container(102).IsUpdating
 				| Container(103).IsUpdating
@@ -2042,7 +2042,7 @@
 				| Container(807).IsUpdating
 				| Container(808).IsUpdating
 				| Container(888).IsUpdating
-				| Container(889).IsUpdating]
+				| Container(902).IsUpdating]
 			</visible>
 			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
 		</control>
