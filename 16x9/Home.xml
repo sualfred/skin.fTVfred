@@ -2041,8 +2041,8 @@
 				| Container(806).IsUpdating
 				| Container(807).IsUpdating
 				| Container(808).IsUpdating
-				| Container(901).IsUpdating
-				| Container(902).IsUpdating]
+				| Container(888).IsUpdating
+				| Container(889).IsUpdating]
 			</visible>
 			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
 		</control>
@@ -2121,8 +2121,8 @@
 				| Container(806).IsUpdating
 				| Container(807).IsUpdating
 				| Container(808).IsUpdating
-				| Container(901).IsUpdating
-				| Container(902).IsUpdating]
+				| Container(889).IsUpdating
+				| Container(888).IsUpdating]
 			</visible>
 			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
 		</control>

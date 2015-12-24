@@ -777,8 +777,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon1),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel1)]</label>
+				<visible>SubString(ListItem.Property(Icon1),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -812,8 +833,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon2),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel2)]</label>
+				<visible>SubString(ListItem.Property(Icon2),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -839,8 +881,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon3),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel3)]</label>
+				<visible>SubString(ListItem.Property(Icon3),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -866,8 +929,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon4),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel4)]</label>
+				<visible>SubString(ListItem.Property(Icon4),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -895,8 +979,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon1),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel1)]</label>
+				<visible>SubString(ListItem.Property(Icon1),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -932,8 +1037,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon2),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel2)]</label>
+				<visible>SubString(ListItem.Property(Icon2),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -960,8 +1086,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon3),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel3)]</label>
+				<visible>SubString(ListItem.Property(Icon3),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -988,8 +1135,29 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
 			</control>
+
+			<control type="image">
+				<top>13</top>
+				<width>308</width>
+				<height>308</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>SubString(ListItem.Property(Icon4),default)</visible>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>269</top>
+				<width>286</width>
+				<height>28</height>
+				<font>Bold28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$INFO[ListItem.Property(InfoLabel4)]</label>
+				<visible>SubString(ListItem.Property(Icon4),default)</visible>
+			</control>
+
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -4241,6 +4409,10 @@
 				<property name="Icon2">$INFO[Container(888).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(888).ListItemPosition(2).Icon]</property>
 				<property name="Icon4">$INFO[Container(888).ListItemPosition(3).Icon]</property>
+				<property name="InfoLabel1">$INFO[Container(888).ListItemPosition(0).ChannelName]</property>
+				<property name="InfoLabel2">$INFO[Container(888).ListItemPosition(1).ChannelName]</property>
+				<property name="InfoLabel3">$INFO[Container(888).ListItemPosition(2).ChannelName]</property>
+				<property name="InfoLabel4">$INFO[Container(888).ListItemPosition(3).ChannelName]</property>
 				<property name="Path">channels</property>
 				<onclick>ActivateWindow(tvchannels)</onclick>
 			</item>
@@ -4251,6 +4423,10 @@
 				<property name="Icon2">$INFO[Window(0).Property(chan2)]</property>
 				<property name="Icon3">$INFO[Window(0).Property(chan3)]</property>
 				<property name="Icon4">$INFO[Window(0).Property(chan4)]</property>
+				<property name="InfoLabel1">$INFO[Window(0).Property(channame1)]</property>
+				<property name="InfoLabel2">$INFO[Window(0).Property(channame2)]</property>
+				<property name="InfoLabel3">$INFO[Window(0).Property(channame3)]</property>
+				<property name="InfoLabel4">$INFO[Window(0).Property(channame4)]</property>
 				<property name="Path">channels</property>
 				<onclick>>ActivateWindow(tvchannels)</onclick>
 			</item>

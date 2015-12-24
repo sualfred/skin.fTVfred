@@ -283,6 +283,10 @@
                             <onfocus>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onfocus>
                             <onfocus>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onfocus>
                             <onfocus>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onfocus>
+                            <onfocus>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onfocus>
+                            <onfocus>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onfocus>
+                            <onfocus>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onfocus>
+                            <onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
                         </control>
 
                         <control type="image" id="2">

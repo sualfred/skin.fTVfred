@@ -56,6 +56,24 @@
 							<top>48</top>
 							<width>480</width>
 							<height>480</height>
+							<texture border="2">views/season_overlay.png</texture>
+							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="label">
+							<left>18</left>
+							<top>427</top>
+							<width>448</width>
+							<height>42</height>
+							<font>Bold44</font>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.ChannelName]</label>
+							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
 							<texture>views/OverlayNF.png</texture>
 						</control>
 						<control type="image">
@@ -76,6 +94,10 @@
 						<onfocus>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onfocus>
 						<onfocus>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onfocus>
 						<onfocus>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onfocus>
+						<onfocus>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onfocus>
+						<onfocus>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onfocus>
+						<onfocus>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onfocus>
+						<onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
 					</control>
 					<control type="group">
 						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Conditional</animation>
@@ -93,6 +115,24 @@
 							<height>480</height>
 							<aspectratio align="center">keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture border="2">views/season_overlay.png</texture>
+							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="label">
+							<left>18</left>
+							<top>427</top>
+							<width>448</width>
+							<height>42</height>
+							<font>Bold44</font>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.ChannelName]</label>
+							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>-48</left>

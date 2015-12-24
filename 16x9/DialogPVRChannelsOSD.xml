@@ -69,6 +69,21 @@
 							<overlaytexture>-</overlaytexture>
 							<info>ListItem.Progress</info>
 						</control>
+
+						<control type="label">
+							<left>40</left>
+							<top>100</top>
+							<width>117</width>
+							<height>40</height>
+							<align>left</align>
+							<textoffsetx>5</textoffsetx>
+							<textcolor>ff505050</textcolor>
+							<selectedcolor>ff505050</selectedcolor>
+							<font>Med20</font>
+							<label fallback="195">$INFO[ListItem.ChannelName]</label>
+							<visible>IsEmpty(ListItem.Icon)</visible>
+						</control>
+
 						<control type="group">
 							<top>-100</top>
 							<control type="label">
@@ -118,6 +133,18 @@
 					</itemlayout>
 
 					<focusedlayout height="166">
+						<control type="button">
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onfocus>SetProperty(chan1,$INFO[ListItem.Icon],Home)</onfocus>
+							<onfocus>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onfocus>
+							<onfocus>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onfocus>
+							<onfocus>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onfocus>
+                            <onfocus>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onfocus>
+                            <onfocus>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onfocus>
+                            <onfocus>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onfocus>
+                            <onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
+						</control>
 						<control type="image">
 							<left>21</left>
 							<top>160</top>
@@ -152,6 +179,21 @@
 							<overlaytexture>-</overlaytexture>
 							<info>ListItem.Progress</info>
 						</control>
+
+						<control type="label">
+							<left>40</left>
+							<top>100</top>
+							<width>117</width>
+							<height>40</height>
+							<align>left</align>
+							<textoffsetx>5</textoffsetx>
+							<textcolor>ffFFC24B</textcolor>
+							<selectedcolor>ffFFC24B</selectedcolor>
+							<font>Med20</font>
+							<label fallback="195">$INFO[ListItem.ChannelName]</label>
+							<visible>IsEmpty(ListItem.Icon)</visible>
+						</control>
+						
 						<control type="group">
 							<top>-100</top>
 							<control type="label">
