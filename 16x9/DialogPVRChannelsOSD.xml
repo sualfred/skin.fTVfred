@@ -54,7 +54,7 @@
 							<top>12</top>
 							<width>117</width>
 							<height>117</height>
-							<texture fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="progress">
@@ -72,11 +72,11 @@
 
 						<control type="label">
 							<left>40</left>
-							<top>100</top>
+							<top>90</top>
 							<width>117</width>
 							<height>40</height>
 							<align>left</align>
-							<textoffsetx>5</textoffsetx>
+							<textoffsetx>10</textoffsetx>
 							<textcolor>ff505050</textcolor>
 							<selectedcolor>ff505050</selectedcolor>
 							<font>Med20</font>
@@ -164,7 +164,7 @@
 							<top>12</top>
 							<width>117</width>
 							<height>117</height>
-							<texture fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="progress">
@@ -182,18 +182,18 @@
 
 						<control type="label">
 							<left>40</left>
-							<top>100</top>
+							<top>90</top>
 							<width>117</width>
 							<height>40</height>
 							<align>left</align>
-							<textoffsetx>5</textoffsetx>
-							<textcolor>ffFFC24B</textcolor>
-							<selectedcolor>ffFFC24B</selectedcolor>
+							<textoffsetx>10</textoffsetx>
+							<textcolor>white</textcolor>
+							<selectedcolor>white</selectedcolor>
 							<font>Med20</font>
 							<label fallback="195">$INFO[ListItem.ChannelName]</label>
 							<visible>IsEmpty(ListItem.Icon)</visible>
 						</control>
-						
+
 						<control type="group">
 							<top>-100</top>
 							<control type="label">

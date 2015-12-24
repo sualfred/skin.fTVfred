@@ -31,7 +31,7 @@
 						<font>Med40</font>
 						<textcolor>ffeaeaea</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</label>
+						<label>$INFO[VideoPlayer.ChannelName,, [COLOR=ff696969]|[/COLOR] ]$INFO[VideoPlayer.Title]</label>
 						<visible>VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
 					</control>
 					<!--  Movie title -->
