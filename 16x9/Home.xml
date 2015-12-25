@@ -5,11 +5,12 @@
 	<defaultcontrol>90000</defaultcontrol>
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
+	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	
 	<controls>
 		<control type="group">
-			<!-- Fake hidden to avoid preload trigger glitches-->
-			<animation effect="slide" time="0" end="0,2000" condition="System.HasAlarm(waitforpreload)">Conditional</animation>
+			<!-- Hide elements until  preloading is done -->
+			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(preload)) | System.HasAlarm(waitforpreload) | Control.IsVisible(90001)">Conditional</animation>			
 			<!-- Hidden control to load weather conditions -->
 			<control type="label">
 				<font>-</font>
@@ -1965,17 +1966,10 @@
 			<height>1080</height>
 			<texture background="true">loading.jpg</texture>
 			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
+			<visible>Control.HasFocus(90000) | Control.HasFocus(90003) | Control.HasFocus(90004) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
 		</control>
 		<control type="button" id="90001">
-			<include>NoTextures</include>
-			<left>0</left>
-			<top>495</top>
-			<font>Light24</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<width>1920</width>
-			<height>200</height>	
-			<label>updating widgets</label>		
+			<include>HiddenControl</include>			
 			<visible>[Container(101).IsUpdating
 				| Container(102).IsUpdating
 				| Container(103).IsUpdating
@@ -2044,10 +2038,8 @@
 				| Container(888).IsUpdating
 				| Container(902).IsUpdating]
 			</visible>
-			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
 		</control>
-		<control type="label" id="90002">
-			<include>NoTextures</include>
+		<control type="label">
 			<left>0</left>
 			<top>495</top>
 			<font>Light24</font>
@@ -2055,81 +2047,28 @@
 			<align>center</align>
 			<width>1920</width>
 			<height>200</height>	
-			<label>done!</label>
-			<visible>![Container(101).IsUpdating
-				| Container(102).IsUpdating
-				| Container(103).IsUpdating
-				| Container(104).IsUpdating
-				| Container(105).IsUpdating
-				| Container(106).IsUpdating
-				| Container(107).IsUpdating
-				| Container(108).IsUpdating
-				| Container(201).IsUpdating
-				| Container(202).IsUpdating
-				| Container(203).IsUpdating
-				| Container(204).IsUpdating
-				| Container(205).IsUpdating
-				| Container(206).IsUpdating
-				| Container(207).IsUpdating
-				| Container(208).IsUpdating
-				| Container(301).IsUpdating
-				| Container(302).IsUpdating
-				| Container(303).IsUpdating
-				| Container(304).IsUpdating
-				| Container(305).IsUpdating
-				| Container(306).IsUpdating
-				| Container(307).IsUpdating
-				| Container(308).IsUpdating
-				| Container(401).IsUpdating
-				| Container(402).IsUpdating
-				| Container(403).IsUpdating
-				| Container(404).IsUpdating
-				| Container(405).IsUpdating
-				| Container(406).IsUpdating
-				| Container(407).IsUpdating
-				| Container(408).IsUpdating
-				| Container(501).IsUpdating
-				| Container(502).IsUpdating
-				| Container(503).IsUpdating
-				| Container(504).IsUpdating
-				| Container(505).IsUpdating
-				| Container(506).IsUpdating
-				| Container(507).IsUpdating
-				| Container(508).IsUpdating
-				| Container(601).IsUpdating
-				| Container(602).IsUpdating
-				| Container(603).IsUpdating
-				| Container(604).IsUpdating
-				| Container(605).IsUpdating
-				| Container(606).IsUpdating
-				| Container(607).IsUpdating
-				| Container(608).IsUpdating
-				| Container(701).IsUpdating
-				| Container(702).IsUpdating
-				| Container(703).IsUpdating
-				| Container(704).IsUpdating
-				| Container(705).IsUpdating
-				| Container(706).IsUpdating
-				| Container(707).IsUpdating
-				| Container(708).IsUpdating
-				| Container(800).IsUpdating
-				| Container(801).IsUpdating
-				| Container(802).IsUpdating
-				| Container(803).IsUpdating
-				| Container(804).IsUpdating
-				| Container(805).IsUpdating
-				| Container(806).IsUpdating
-				| Container(807).IsUpdating
-				| Container(808).IsUpdating
-				| Container(889).IsUpdating
-				| Container(888).IsUpdating]
-			</visible>
+			<label>updating widgets</label>			
+			<visible>Control.HasFocus(90000) | Control.HasFocus(90003) | Control.HasFocus(90004) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
+			<visible>Control.IsVisible(90001)</visible>
+		</control>
+		<control type="label">
+			<left>0</left>
+			<top>495</top>
+			<font>Light24</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<width>1920</width>
+			<height>200</height>	
+			<label>done!</label>			
+			<visible>Control.HasFocus(90000) | Control.HasFocus(90003) | Control.HasFocus(90004) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
+			<visible>!Control.IsVisible(90001)</visible>
 			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
 		</control>
 		<!-- check if preloading is in progress -->
 		<control type="button" id="90000">
 			<include>HiddenControl</include>
 			<onfocus>SetProperty(preload,1,Home)</onfocus>
+			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>
 			<onfocus condition="Control.IsVisible(90001)">SetFocus(90003)</onfocus>
 			<onfocus condition="!Control.IsVisible(90001)">SetFocus(90004)</onfocus>
 		</control>
@@ -2144,6 +2083,7 @@
 			<onfocus condition="StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,1),00:01,silent)</onfocus>
 			<onfocus condition="!StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,0),00:01,silent)</onfocus>
 			<onfocus>AlarmClock(preload,ClearProperty(preload,Home),00:01,silent)</onfocus>			
+			<onfocus>AlarmClock(fadeoutdelay,ClearProperty(fadeoutdelay,Home),00:05,silent)</onfocus>			
 		</control>
 
 	</controls>
