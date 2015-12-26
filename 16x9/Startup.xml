@@ -3,7 +3,6 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">10</defaultcontrol>				
 	<onload>SetProperty(preload,1,Home)</onload>	
-	<animation effect="fade" start="100" end="0" time="0" delay="2000">WindowClose</animation>
 	<controls>
 		<!-- splash -->
 		<control type="image">
@@ -12,6 +11,16 @@
 			<width>1920</width>
 			<height>1080</height>
 			<texture background="true">loading.jpg</texture>
+		</control>
+		<control type="label">
+			<left>0</left>
+			<top>495</top>
+			<font>Light24</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<width>1920</width>
+			<height>200</height>	
+			<label>loading</label>						
 		</control>
 		<!-- switch to home -->
 		<control type="button" id="10">			
