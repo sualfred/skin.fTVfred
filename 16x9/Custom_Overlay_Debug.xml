@@ -26,7 +26,7 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>Temp: $INFO[Window(Home).Property(PVRTimeoutTimer]</label>
+				<label>Temp: $INFO[Window(settings).Property(SettingsCurrentItem)]</label>
 			</control>
 			<control type="label">
 				<width>780</width>
