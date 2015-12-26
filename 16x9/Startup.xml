@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>		
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">10</defaultcontrol>	
-	<animation effect="fade" start="100" end="0" time="0" delay="5">WindowClose</animation>
+	<defaultcontrol always="true">10</defaultcontrol>				
+	<onload>SetProperty(preload,1,Home)</onload>	
+	<animation effect="fade" start="100" end="0" time="0" delay="2000">WindowClose</animation>
 	<controls>
 		<!-- splash -->
 		<control type="image">
@@ -15,7 +16,9 @@
 		<!-- switch to home -->
 		<control type="button" id="10">			
 			<onfocus>SetProperty(preload,1,Home)</onfocus>
-			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<!-- workaround to fill the tv channel list correclty -->
+			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent)</onfocus>
+			<onfocus condition="!System.GetBool(pvrmanager.enabled)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>

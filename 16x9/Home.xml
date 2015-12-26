@@ -271,12 +271,13 @@
 			<control id="808" type="list">
 				<include>HiddenHomeList</include>
 				<content limit="6">$INFO[Skin.String(8-WidgetList-8)]</content>
+
 			</control>
-			<!--livetv hiddenlist-->
+			<!--livetv hiddenlist-->	
 			<control id="888" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="4">pvr://channels/tv/1</content>
-			</control>
+				<content limit="4">pvr://channels/tv/all channels</content>
+			</control>		
 			<!--recordings hiddenlist-->
 			<control id="889" type="list">
 				<include>HiddenHomeList</include>
@@ -1959,15 +1960,6 @@
 		</control>
 
 		<!-- preload widgets -->
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<texture background="true">loading.jpg</texture>
-			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
-			<visible>Control.HasFocus(90000) | Control.HasFocus(90003) | Control.HasFocus(90004) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
-		</control>
 		<control type="button" id="90001">
 			<include>HiddenControl</include>			
 			<visible>[Container(101).IsUpdating
@@ -2036,8 +2028,18 @@
 				| Container(807).IsUpdating
 				| Container(808).IsUpdating
 				| Container(888).IsUpdating
-				| Container(902).IsUpdating]
+				| Container(889).IsUpdating
+				| Container(901).IsUpdating]
 			</visible>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture background="true">loading.jpg</texture>
+			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(90001) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
+			<visible>Control.HasFocus(90000) | Control.HasFocus(90003) | Control.HasFocus(90004) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
 		</control>
 		<control type="label">
 			<left>0</left>

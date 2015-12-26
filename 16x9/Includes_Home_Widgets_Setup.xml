@@ -4404,7 +4404,7 @@
 		<content>
 			<item>
 				<label>$LOCALIZE[4]</label>
-				<visible>!IsEmpty(Container(888).ListItemPosition(0).Label) + IsEmpty(Window(0).Property(chan1))</visible>
+				<visible>IsEmpty(Window(0).Property(chan1))</visible>
 				<property name="Icon1">$INFO[Container(888).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(888).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(888).ListItemPosition(2).Icon]</property>
@@ -4418,7 +4418,7 @@
 			</item>
 			<item>
 				<label>$LOCALIZE[4]</label>
-				<visible>!IsEmpty(Container(888).ListItemPosition(0).Label) + !IsEmpty(Window(0).Property(chan1))</visible>
+				<visible>!IsEmpty(Window(0).Property(chan1))</visible>
 				<property name="Icon1">$INFO[Window(0).Property(chan1)]</property>
 				<property name="Icon2">$INFO[Window(0).Property(chan2)]</property>
 				<property name="Icon3">$INFO[Window(0).Property(chan3)]</property>
