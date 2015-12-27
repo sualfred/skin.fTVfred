@@ -26,7 +26,18 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>Temp: $INFO[Window(settings).Property(SettingsCurrentItem)]</label>
+				<label>hasepg true </label>
+				<visible>Pvr.HasEpg</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>haschannels true </label>
+				<visible>Pvr.HasTVChannels</visible>
 			</control>
 			<control type="label">
 				<width>780</width>

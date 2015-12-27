@@ -61,7 +61,8 @@
 				<shortcut label="31520" type="program" icon="ftv_icon.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>	
 				<shortcut label="31519" type="video" icon="ftv_icon.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>	
 				<shortcut label="31511" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
-				<shortcut label="31514" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;id=presets,return)</shortcut><shortcut label="31513" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
+				<shortcut label="31514" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?id=presets&amp;path=browse)</shortcut>
+				<shortcut label="31513" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
 			</node>
 		</node>
 		<node label="32029">
