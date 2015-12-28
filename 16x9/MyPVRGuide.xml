@@ -139,6 +139,7 @@
                                 <aligny>bottom</aligny>
                                 <textcolor>ffbebebe</textcolor>
                                 <label>$INFO[ListItem.Genre]</label>
+                                <visible>!StringCompare(ListItem.Genre,$LOCALIZE[19499])</visible>
                             </control>
                         </control>
 

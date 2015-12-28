@@ -162,7 +162,7 @@
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
 						<label>$INFO[ListItem.Genre]</label>
-						<visible>!StringCompare(ListItem.Genre,Andere / Unbekannt) + !StringCompare(ListItem.Genre,Other / Unkown)</visible>
+						<visible>!StringCompare(ListItem.Genre,$LOCALIZE[19499])</visible>
 					</control>
 				</control>
 				<!-- Details -->
