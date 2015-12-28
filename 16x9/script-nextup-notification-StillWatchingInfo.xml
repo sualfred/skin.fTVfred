@@ -112,7 +112,7 @@
 			<control type="label">
 				<width>auto</width>
 				<height>32</height>
-				<font>Light32</font>
+				<font>Med32</font>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
 				<label>31164</label>
@@ -167,7 +167,7 @@
 				<top>286</top>
 				<width>auto</width>
 				<height>24</height>
-				<font>Light24</font>
+				<font>Med24</font>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
 				<label>$INFO[Control.GetLabel(4008),$LOCALIZE[20373] ], $INFO[Control.GetLabel(4009),Ep. ]</label>

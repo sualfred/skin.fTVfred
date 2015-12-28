@@ -26,7 +26,7 @@
 				<texture>osd/mask.png</texture>
 				<visible>Player.Forwarding | Player.Rewinding</visible>
 			</control>
-			<control type="grouplist">
+			<control id="99" type="grouplist">
 				<left>20</left>
 				<top>64</top>
 				<width>1880</width>
@@ -34,16 +34,6 @@
 				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>				
-				<!--  LiveTV title -->
-				<control id="99" type="label">
-					<width>auto</width>
-					<height>50</height>
-					<font>Med40</font>
-					<textcolor>ffeaeaea</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[VideoPlayer.ChannelName,, [COLOR=ff696969]|[/COLOR] ]$INFO[VideoPlayer.Title]</label>
-					<visible>VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
-				</control>
 				<!--  Movie title -->
 				<control id="99" type="label">
 					<width>auto</width>
@@ -52,7 +42,7 @@
 					<textcolor>ffeaeaea</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>!VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
+					<visible>IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
 				<!--  TV Show title -->
 				<control id="99" type="label">
@@ -62,10 +52,10 @@
 					<textcolor>ffeaeaea</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[VideoPlayer.TVShowTitle]</label>
-					<visible>!VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
+					<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
 				<!-- Season/Episode number -->
-				<control type="label">
+				<control id="99" type="label">
 					<width>auto</width>
 					<height>50</height>
 					<font>Med40</font>
@@ -75,7 +65,7 @@
 				</control>
 			</control>
 			<!--  Episode title -->
-			<control type="label">
+			<control id="99" type="label">
 				<left>20</left>
 				<top>127</top>
 				<width>1880</width>
@@ -85,7 +75,20 @@
 				<textcolor>fffe8e8e8</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
 				<label>$INFO[VideoPlayer.Title]</label>
-				<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				<visible>!VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
+			</control>
+			<!--  Channel name -->
+			<control id="99" type="label">
+				<left>20</left>
+				<top>127</top>
+				<width>1880</width>
+				<height>40</height>
+				<align>center</align>
+				<font>Light26</font>
+				<textcolor>fffe8e8e8</textcolor>
+				<shadowcolor>ff000000</shadowcolor>
+				<label>$INFO[VideoPlayer.ChannelName]</label>
+				<visible>VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.ChannelName)</visible>
 			</control>
 			<!-- Pause -->
 			<control type="image">
