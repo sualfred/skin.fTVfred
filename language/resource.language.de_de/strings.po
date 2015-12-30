@@ -960,3 +960,7 @@ msgstr "Video Add-ons"
 msgctxt "#31520"
 msgid "Program Add-ons"
 msgstr "Programm Add-ons"
+
+msgctxt "#31521"
+msgid "Picture Add-ons"
+msgstr "Bilder Add-ons"
