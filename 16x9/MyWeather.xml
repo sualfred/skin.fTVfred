@@ -3,6 +3,11 @@
 	<!-- weather -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>
+	<onunload condition="StringCompare(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onunload>
+	<onunload condition="StringCompare(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onunload>
+	<onunload condition="StringCompare(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onunload>
+	<onunload condition="StringCompare(Container(1000).CurrentItem,5)">Control.Move(1000,-4)</onunload>
+	<onunload condition="StringCompare(Container(1000).CurrentItem,6)">Control.Move(1000,-5)</onunload>
 	<controls>
 		<control type="group">
 			<left>128</left>
@@ -17,7 +22,7 @@
 			<control type="image">
 				<width>1664</width>
 				<height>1080</height>
-				<texture fallback="weather/background/na.jpg">$INFO[Window(Weather).Property(Current.FanartCode),weather/background/,.jpg]</texture>
+				<texture fallback="weather/background/na.jpg">$VAR[WeatherFanartCodeBack]</texture>
 			</control>
 			<control type="image">
 				<top>148</top>
@@ -49,7 +54,7 @@
 						<top>129</top>
 						<width>128</width>
 						<height>128</height>
-						<texture fallback="weather/icons/na.png">$INFO[Window(Weather).Property(Current.FanartCode),weather/icons/,.png]</texture>
+						<texture fallback="weather/icons/na.png">$INFO[Window(Weather).Property(Current.FanartCode),weather/background/,.jpg]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -97,66 +102,110 @@
 					<control type="grouplist">
 						<left>447</left>
 						<top>157</top>
-						<width>1002</width>
-						<height>331</height>
+						<width>1202</width>
+						<height>351</height>
 						<itemgap>11</itemgap>
 						<align>center</align>
 						<orientation>vertical</orientation>
 						<control type="label">
-							<width>1002</width>
+							<width>1202</width>
 							<height>40</height>
 							<font>Light40</font>
 							<label>$VAR[DayNightWeather]</label>
 							<textcolor>ffffffff</textcolor>
 						</control>
 						<control type="label">
-							<width>1002</width>
+							<width>1202</width>
 							<height>4</height>
 							<font>-</font>
 						</control>
 						<control type="textbox">
-							<width>1002</width>
+							<width>1202</width>
 							<height>auto</height>
 							<font>Med59</font>
 							<autoscroll>False</autoscroll>
-							<label>$INFO[Window(Weather).Property(Day0.Outlook)]</label>
+							<label>$VAR[WeatherOutlook]</label>
 							<textcolor>ffffffff</textcolor>
 						</control>
 						<control type="label">
-							<width>1002</width>
+							<width>1202</width>
 							<height>4</height>
 							<font>-</font>
 						</control>
 						<control type="label">
-							<width>1002</width>
+							<width>1202</width>
 							<height>32</height>
 							<font>Light32</font>
-							<label>$INFO[Window(Weather).Property(Day0.LowTemp),Low ,°]    $INFO[Window(Weather).Property(Day0.HighTemp),High ,°]</label>
+							<label>$VAR[WeatherOutlookTemp]</label>
 							<textcolor>ffffffff</textcolor>
 						</control>
 						<control type="label">
-							<width>1002</width>
+							<width>1202</width>
 							<height>32</height>
 							<font>Light32</font>
-							<label>$INFO[Window(Weather).Property(Today.Sunrise),Sunrise ]    $INFO[Window(Weather).Property(Today.Sunset),Sunset ]</label>
+							<label>$INFO[Window(Weather).Property(Today.Sunrise),[B]$LOCALIZE[33027][/B] ]    $INFO[Window(Weather).Property(Today.Sunset),[B]$LOCALIZE[33028][/B] ]</label>
 							<textcolor>ffffffff</textcolor>
+							<visible>!Control.HasFocus(1000) | StringCompare(Container(1000).CurrentItem,1)</visible>
+						</control>
+						<control type="label">
+							<width>1102</width>
+							<height>32</height>
+							<font>Light32</font>
+							<label>$INFO[Window(Weather).Property(Current.Wind),[B]$LOCALIZE[383][/B] ]</label>
+							<textcolor>ffffffff</textcolor>
+							<visible>!Control.HasFocus(1000) | StringCompare(Container(1000).CurrentItem,1)</visible>
 						</control>
 					</control>
-					<control type="fixedlist">
+					<!-- white borders -->
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<width>1386</width>
+						<height>200</height>
+						<left>410</left>
+						<top>577</top>
+						<itemgap>223</itemgap>
+						<control type="image">
+							<width>8</width>
+							<height>144</height>
+							<colordiffuse>55ffffff</colordiffuse>
+							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+						</control>
+						<control type="image">
+							<width>8</width>
+							<height>144</height>
+							<colordiffuse>55ffffff</colordiffuse>
+							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+						</control>
+						<control type="image">
+							<width>8</width>
+							<height>144</height>
+							<colordiffuse>55ffffff</colordiffuse>
+							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+						</control>
+						<control type="image">
+							<width>8</width>
+							<height>144</height>
+							<colordiffuse>55ffffff</colordiffuse>
+							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+						</control>
+						<control type="image">
+							<width>8</width>
+							<height>144</height>
+							<colordiffuse>55ffffff</colordiffuse>
+							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+						</control>
+					</control>
+					<!-- weekly forecast -->
+					<control type="list" id="1000">
 						<left>179</left>
 						<top>549</top>
 						<width>1386</width>
 						<height>200</height>
+						<onleft>100</onleft>
+						<onright>noop</onright>
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<itemlayout height="200" width="231">
-							<control type="image">
-								<top>28</top>
-								<width>8</width>
-								<height>144</height>
-								<colordiffuse>55ffffff</colordiffuse>
-								<texture border="3,0,0,0">common/WhiteLine.png</texture>
-							</control>
 							<control type="image">
 								<left>68</left>
 								<top>3</top>
@@ -201,6 +250,17 @@
 								<align>center</align>
 								<textcolor>ffffffff</textcolor>
 								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<visible>!Control.HasFocus(1000)</visible>
+							</control>
+							<control type="label">
+								<top>110</top>
+								<width>231</width>
+								<height>34</height>
+								<font>Med24</font>
+								<align>center</align>
+								<textcolor>ffffc24b</textcolor>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<visible>Control.HasFocus(1000)</visible>
 							</control>
 							<control type="label">
 								<top>164</top>
@@ -210,6 +270,17 @@
 								<align>center</align>
 								<textcolor>ffffffff</textcolor>
 								<label>$INFO[ListItem.Label2]</label>
+								<visible>!Control.HasFocus(1000)</visible>
+							</control>
+							<control type="label">
+								<top>164</top>
+								<width>231</width>
+								<height>34</height>
+								<font>Med24</font>
+								<align>center</align>
+								<textcolor>ffffc24b</textcolor>
+								<label>$INFO[ListItem.Label2]</label>
+								<visible>Control.HasFocus(1000)</visible>
 							</control>
 						</focusedlayout>
 						<content>
@@ -258,6 +329,7 @@
 						</content>
 					</control>
 				</control>
+				<!-- controls -->
 				<control type="group">
 					<control id="100" type="button">
 						<top>575</top>
@@ -268,7 +340,7 @@
 						<onup>Back</onup>
 						<ondown>101</ondown>
 						<onleft>Back</onleft>
-						<onright>noop</onright>
+						<onright>1000</onright>
 						<onclick>Weather.LocationNext</onclick>
 						<texturefocus border="3">common/button_fo.png</texturefocus>
 						<texturenofocus border="3">common/button_nf.png</texturenofocus>
@@ -282,7 +354,7 @@
 						<onup>100</onup>
 						<ondown>noop</ondown>
 						<onleft>Back</onleft>
-						<onright>noop</onright>
+						<onright>1000</onright>
 						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 						<texturefocus border="3">common/button_fo.png</texturefocus>
 						<texturenofocus border="3">common/button_nf.png</texturenofocus>
