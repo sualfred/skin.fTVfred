@@ -168,31 +168,36 @@
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
-							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+							<texture border="3,0,0,0">common/WhiteLine.png</texture>
+							<visible>IntegerGreaterThan(Container(1000).NumItems,1)</visible>	
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+							<visible>IntegerGreaterThan(Container(1000).NumItems,2)</visible>
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+							<visible>IntegerGreaterThan(Container(1000).NumItems,3)</visible>
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+							<visible>IntegerGreaterThan(Container(1000).NumItems,4)</visible>
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
+							<visible>IntegerGreaterThan(Container(1000).NumItems,5)</visible>
 						</control>
 					</control>
 					<!-- weekly forecast -->

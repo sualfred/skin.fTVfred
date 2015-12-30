@@ -1738,18 +1738,20 @@
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>ffffffff</textcolor>
 					</control>
-					<control type="label">
+					<control type="textbox">
 						<left>23</left>
-						<top>380</top>
+						<top>383</top>
 						<width>253</width>
-						<height>30</height>
+						<height>auto</height>
+						<wrapmultiline>true</wrapmultiline>
 						<font>Med20</font>
 						<label>$INFO[ListItem.Property(Outlook)]</label>
+						<autoscroll>False</autoscroll>
 						<textcolor>ffdadada</textcolor>
 					</control>
 					<control type="image">
 						<left>23</left>
-						<top>408</top>
+						<top>411</top>
 						<width>140</width>
 						<height>140</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -1787,19 +1789,20 @@
 						<textcolor>ffffffff</textcolor>
 						<scroll>false</scroll>
 					</control>
-					<control type="label">
+					<control type="textbox">
 						<left>23</left>
-						<top>380</top>
+						<top>383</top>
 						<width>253</width>
-						<height>30</height>
+						<height>auto</height>
+						<wrapmultiline>true</wrapmultiline>
 						<font>Med20</font>
 						<label>$INFO[ListItem.Property(Outlook)]</label>
-						<scroll>false</scroll>
+						<autoscroll>False</autoscroll>
 						<textcolor>ffdadada</textcolor>
 					</control>
 					<control type="image">
 						<left>23</left>
-						<top>408</top>
+						<top>411</top>
 						<width>140</width>
 						<height>140</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
