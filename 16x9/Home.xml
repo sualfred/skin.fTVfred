@@ -18,260 +18,259 @@
 			</control>
 			<control id="101" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-1)]</content>
+				<content sortby="$VAR[1-orderby-1]" limit="6">$INFO[Skin.String(1-WidgetList-1)]</content>
 			</control>
 			<control id="102" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-2)]</content>
+				<content sortby="$VAR[1-orderby-2]" limit="6">$INFO[Skin.String(1-WidgetList-2)]</content>
 			</control>
 			<control id="103" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-3)]</content>
+				<content sortby="$VAR[1-orderby-3]" limit="6">$INFO[Skin.String(1-WidgetList-3)]</content>
 			</control>
 			<control id="104" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-4)]</content>
+				<content sortby="$VAR[1-orderby-4]" limit="6">$INFO[Skin.String(1-WidgetList-4)]</content>
 			</control>
 			<control id="105" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-5)]</content>
+				<content sortby="$VAR[1-orderby-5]" limit="6">$INFO[Skin.String(1-WidgetList-5)]</content>
 			</control>
 			<control id="106" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-6)]</content>
+				<content sortby="$VAR[1-orderby-6]" limit="6">$INFO[Skin.String(1-WidgetList-6)]</content>
 			</control>
 			<control id="107" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-7)]</content>
+				<content sortby="$VAR[1-orderby-7]" limit="6">$INFO[Skin.String(1-WidgetList-7)]</content>
 			</control>
 			<control id="108" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(1-WidgetList-8)]</content>
+				<content sortby="$VAR[1-orderby-8]" limit="6">$INFO[Skin.String(1-WidgetList-8)]</content>
 			</control>
 			<control id="201" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-1)]</content>
+				<content sortby="$VAR[2-orderby-1]" limit="6">$INFO[Skin.String(2-WidgetList-1)]</content>
 			</control>
 			<control id="202" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-2)]</content>
+				<content sortby="$VAR[2-orderby-2]" limit="6">$INFO[Skin.String(2-WidgetList-2)]</content>
 			</control>
 			<control id="203" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-3)]</content>
+				<content sortby="$VAR[2-orderby-3]" limit="6">$INFO[Skin.String(2-WidgetList-3)]</content>
 			</control>
 			<control id="204" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-4)]</content>
+				<content sortby="$VAR[2-orderby-4]" limit="6">$INFO[Skin.String(2-WidgetList-4)]</content>
 			</control>
 			<control id="205" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-5)]</content>
+				<content sortby="$VAR[2-orderby-5]" limit="6">$INFO[Skin.String(2-WidgetList-5)]</content>
 			</control>
 			<control id="206" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-6)]</content>
+				<content sortby="$VAR[2-orderby-6]" limit="6">$INFO[Skin.String(2-WidgetList-6)]</content>
 			</control>
 			<control id="207" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-7)]</content>
+				<content sortby="$VAR[2-orderby-7]" limit="6">$INFO[Skin.String(2-WidgetList-7)]</content>
 			</control>
 			<control id="208" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(2-WidgetList-8)]</content>
+				<content sortby="$VAR[2-orderby-8]" limit="6">$INFO[Skin.String(2-WidgetList-8)]</content>
 			</control>
 			<control id="301" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-1)]</content>
+				<content sortby="$VAR[3-orderby-1]" limit="6">$INFO[Skin.String(3-WidgetList-1)]</content>
 			</control>
 			<control id="302" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-2)]</content>
+				<content sortby="$VAR[3-orderby-2]" limit="6">$INFO[Skin.String(3-WidgetList-2)]</content>
 			</control>
 			<control id="303" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-3)]</content>
+				<content sortby="$VAR[3-orderby-3]" limit="6">$INFO[Skin.String(3-WidgetList-3)]</content>
 			</control>
 			<control id="304" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-4)]</content>
+				<content sortby="$VAR[3-orderby-4]" limit="6">$INFO[Skin.String(3-WidgetList-4)]</content>
 			</control>
 			<control id="305" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-5)]</content>
+				<content sortby="$VAR[3-orderby-5]" limit="6">$INFO[Skin.String(3-WidgetList-5)]</content>
 			</control>
 			<control id="306" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-6)]</content>
+				<content sortby="$VAR[3-orderby-6]" limit="6">$INFO[Skin.String(3-WidgetList-6)]</content>
 			</control>
 			<control id="307" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-7)]</content>
+				<content sortby="$VAR[3-orderby-7]" limit="6">$INFO[Skin.String(3-WidgetList-7)]</content>
 			</control>
 			<control id="308" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(3-WidgetList-8)]</content>
+				<content sortby="$VAR[3-orderby-8]" limit="6">$INFO[Skin.String(3-WidgetList-8)]</content>
 			</control>
 			<control id="401" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-1)]</content>
+				<content sortby="$VAR[4-orderby-1]" limit="6">$INFO[Skin.String(4-WidgetList-1)]</content>
 			</control>
 			<control id="402" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-2)]</content>
+				<content sortby="$VAR[4-orderby-2]" limit="6">$INFO[Skin.String(4-WidgetList-2)]</content>
 			</control>
 			<control id="403" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-3)]</content>
+				<content sortby="$VAR[4-orderby-3]" limit="6">$INFO[Skin.String(4-WidgetList-3)]</content>
 			</control>
 			<control id="404" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-4)]</content>
+				<content sortby="$VAR[4-orderby-4]" limit="6">$INFO[Skin.String(4-WidgetList-4)]</content>
 			</control>
 			<control id="405" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-5)]</content>
+				<content sortby="$VAR[4-orderby-5]" limit="6">$INFO[Skin.String(4-WidgetList-5)]</content>
 			</control>
 			<control id="406" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-6)]</content>
+				<content sortby="$VAR[4-orderby-6]" limit="6">$INFO[Skin.String(4-WidgetList-6)]</content>
 			</control>
 			<control id="407" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-7)]</content>
+				<content sortby="$VAR[4-orderby-7]" limit="6">$INFO[Skin.String(4-WidgetList-7)]</content>
 			</control>
 			<control id="408" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(4-WidgetList-8)]</content>
+				<content sortby="$VAR[4-orderby-8]" limit="6">$INFO[Skin.String(4-WidgetList-8)]</content>
 			</control>
 			<control id="501" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-1)]</content>
+				<content sortby="$VAR[5-orderby-1]" limit="6">$INFO[Skin.String(5-WidgetList-1)]</content>
 			</control>
 			<control id="502" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-2)]</content>
+				<content sortby="$VAR[5-orderby-2]" limit="6">$INFO[Skin.String(5-WidgetList-2)]</content>
 			</control>
 			<control id="503" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-3)]</content>
+				<content sortby="$VAR[5-orderby-3]" limit="6">$INFO[Skin.String(5-WidgetList-3)]</content>
 			</control>
 			<control id="504" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-4)]</content>
+				<content sortby="$VAR[5-orderby-4]" limit="6">$INFO[Skin.String(5-WidgetList-4)]</content>
 			</control>
 			<control id="505" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-5)]</content>
+				<content sortby="$VAR[5-orderby-5]" limit="6">$INFO[Skin.String(5-WidgetList-5)]</content>
 			</control>
 			<control id="506" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-6)]</content>
+				<content sortby="$VAR[5-orderby-6]" limit="6">$INFO[Skin.String(5-WidgetList-6)]</content>
 			</control>
 			<control id="507" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-7)]</content>
+				<content sortby="$VAR[5-orderby-7]" limit="6">$INFO[Skin.String(5-WidgetList-7)]</content>
 			</control>
 			<control id="508" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(5-WidgetList-8)]</content>
+				<content sortby="$VAR[5-orderby-8]" limit="6">$INFO[Skin.String(5-WidgetList-8)]</content>
 			</control>
 			<control id="601" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-1)]</content>
+				<content sortby="$VAR[6-orderby-1]" limit="6">$INFO[Skin.String(6-WidgetList-1)]</content>
 			</control>
 			<control id="602" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-2)]</content>
+				<content sortby="$VAR[6-orderby-2]" limit="6">$INFO[Skin.String(6-WidgetList-2)]</content>
 			</control>
 			<control id="603" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-3)]</content>
+				<content sortby="$VAR[6-orderby-3]" limit="6">$INFO[Skin.String(6-WidgetList-3)]</content>
 			</control>
 			<control id="604" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-4)]</content>
+				<content sortby="$VAR[6-orderby-4]" limit="6">$INFO[Skin.String(6-WidgetList-4)]</content>
 			</control>
 			<control id="605" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-5)]</content>
+				<content sortby="$VAR[6-orderby-5]" limit="6">$INFO[Skin.String(6-WidgetList-5)]</content>
 			</control>
 			<control id="606" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-6)]</content>
+				<content sortby="$VAR[6-orderby-6]" limit="6">$INFO[Skin.String(6-WidgetList-6)]</content>
 			</control>
 			<control id="607" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-7)]</content>
+				<content sortby="$VAR[6-orderby-7]" limit="6">$INFO[Skin.String(6-WidgetList-7)]</content>
 			</control>
 			<control id="608" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(6-WidgetList-8)]</content>
+				<content sortby="$VAR[6-orderby-8]" limit="6">$INFO[Skin.String(6-WidgetList-8)]</content>
 			</control>
 			<control id="701" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-1)]</content>
+				<content sortby="$VAR[7-orderby-1]" limit="6">$INFO[Skin.String(7-WidgetList-1)]</content>
 			</control>
 			<control id="702" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-2)]</content>
+				<content sortby="$VAR[7-orderby-2]" limit="6">$INFO[Skin.String(7-WidgetList-2)]</content>
 			</control>
 			<control id="703" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-3)]</content>
+				<content sortby="$VAR[7-orderby-3]" limit="6">$INFO[Skin.String(7-WidgetList-3)]</content>
 			</control>
 			<control id="704" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-4)]</content>
+				<content sortby="$VAR[7-orderby-4]" limit="6">$INFO[Skin.String(7-WidgetList-4)]</content>
 			</control>
 			<control id="705" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-5)]</content>
+				<content sortby="$VAR[7-orderby-5]" limit="6">$INFO[Skin.String(7-WidgetList-5)]</content>
 			</control>
 			<control id="706" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-6)]</content>
+				<content sortby="$VAR[7-orderby-6]" limit="6">$INFO[Skin.String(7-WidgetList-6)]</content>
 			</control>
 			<control id="707" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-7)]</content>
+				<content sortby="$VAR[7-orderby-7]" limit="6">$INFO[Skin.String(7-WidgetList-7)]</content>
 			</control>
 			<control id="708" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(7-WidgetList-8)]</content>
+				<content sortby="$VAR[7-orderby-8]" limit="6">$INFO[Skin.String(7-WidgetList-8)]</content>
 			</control>
 			<control id="801" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-1)]</content>
+				<content sortby="$VAR[8-orderby-1]" limit="6">$INFO[Skin.String(8-WidgetList-1)]</content>
 			</control>
 			<control id="802" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-2)]</content>
+				<content sortby="$VAR[8-orderby-2]" limit="6">$INFO[Skin.String(8-WidgetList-2)]</content>
 			</control>
 			<control id="803" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-3)]</content>
+				<content sortby="$VAR[8-orderby-3]" limit="6">$INFO[Skin.String(8-WidgetList-3)]</content>
 			</control>
 			<control id="804" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-4)]</content>
+				<content sortby="$VAR[8-orderby-4]" limit="6">$INFO[Skin.String(8-WidgetList-4)]</content>
 			</control>
 			<control id="805" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-5)]</content>
+				<content sortby="$VAR[8-orderby-5]" limit="6">$INFO[Skin.String(8-WidgetList-5)]</content>
 			</control>
 			<control id="806" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-6)]</content>
+				<content sortby="$VAR[8-orderby-6]" limit="6">$INFO[Skin.String(8-WidgetList-6)]</content>
 			</control>
 			<control id="808" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-7)]</content>
+				<content sortby="$VAR[8-orderby-7]" limit="6">$INFO[Skin.String(8-WidgetList-7)]</content>
 			</control>
 			<control id="808" type="list">
 				<include>HiddenHomeList</include>
-				<content limit="6">$INFO[Skin.String(8-WidgetList-8)]</content>
-
+				<content sortby="$VAR[8-orderby-8]" limit="6">$INFO[Skin.String(8-WidgetList-8)]</content>
 			</control>
 			<!--livetv hiddenlist-->	
 			<control id="888" type="list">
