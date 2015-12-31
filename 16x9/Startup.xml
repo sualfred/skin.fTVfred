@@ -2,6 +2,9 @@
 <window>		
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">10</defaultcontrol>				
+	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)</onload>
+	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems)">RunScript(script.skin.helper.service,action=togglekodisetting,filelists.showparentdiritems)</onload>
+	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(musiclibrary.showallitems)">RunScript(script.skin.helper.service,action=togglekodisetting,musiclibrary.showallitems)</onload>
 	<onload>SetProperty(preload,1,Home)</onload>	
 	<controls>
 		<!-- splash -->
@@ -10,7 +13,7 @@
 			<top>0</top>
 			<width>1920</width>
 			<height>1080</height>
-			<texture background="true">loading.jpg</texture>
+			<texture background="true">special://skin/extras/backgrounds/loading.jpg</texture>
 		</control>
 		<control type="label">
 			<left>0</left>
