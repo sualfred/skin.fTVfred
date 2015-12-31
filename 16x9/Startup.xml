@@ -3,8 +3,8 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">10</defaultcontrol>				
 	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)</onload>
-	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems)">RunScript(script.skin.helper.service,action=togglekodisetting,filelists.showparentdiritems)</onload>
-	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(musiclibrary.showallitems)">RunScript(script.skin.helper.service,action=togglekodisetting,musiclibrary.showallitems)</onload>
+	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)</onload>
+	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(musiclibrary.showallitems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)</onload>
 	<onload>SetProperty(preload,1,Home)</onload>	
 	<controls>
 		<!-- splash -->
