@@ -132,7 +132,7 @@
 					<!-- Biography -->
 					<control type="textbox">
 						<width>1192</width>
-						<height max="124">172</height>
+						<height max="172">auto</height>
 						<align>left</align>
 						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
@@ -143,7 +143,7 @@
 					</control>
 					<!-- More button -->
 					<control id="3000" type="button">
-						<left>1174</left>
+						<left>1194</left>
 						<top>130</top>
 						<width>37</width>
 						<height>23</height>
@@ -152,7 +152,6 @@
 						<ondown condition="Control.IsVisible(250)">250</ondown>
 						<onleft>7000</onleft>
 						<onright>8</onright>
-						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
 						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[Window.Property(Biography)]"')</onclick>
 						<visible>Control.IsVisible(96) + !IsEmpty(Window.Property(Biography))</visible>
 						<include>DialogVideoInfoAnimation</include>
@@ -176,7 +175,7 @@
 						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR ff717171][B]$LOCALIZE[31108][/B][/COLOR]  [LIGHT]$VAR[MovieList][/LIGHT]</label>
+						<label>[COLOR ff717171][B]$LOCALIZE[31108][/B][/COLOR]  [LIGHT]$INFO[Container(150).ListItemAbsolute(0).Label]$INFO[Container(150).ListItemAbsolute(1).Label,$COMMA ]$INFO[Container(150).ListItemAbsolute(2).Label,$COMMA ][/LIGHT]</label>
 						<include>DialogVideoInfoAnimation</include>
 					</control>
 				</control>

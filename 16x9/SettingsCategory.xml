@@ -511,7 +511,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>dialogs/DialogBackground.png</texture>
-			<visible>ControlGroup(5).HasFocus</visible>
+			<visible>ControlGroup(5).HasFocus | Control.HasFocus(3000)</visible>
 			<animation delay="125" effect="fade" end="100" start="0" time="200">Visible</animation>
 			<animation delay="100" effect="fade" end="0" start="100" time="200">Hidden</animation>
 		</control>
@@ -520,7 +520,7 @@
 			<top>289</top>
 			<width>958</width>
 			<height>480</height>
-			<visible>ControlGroup(5).HasFocus</visible>
+			<visible>ControlGroup(5).HasFocus | Control.HasFocus(3000)</visible>
 			<animation reversible="false" type="Visible">
 				<effect end="100" start="0" time="200" type="fade" />
 				<effect easing="inout" end="0,0" start="500,0" time="200" tween="sine" type="slide" />
@@ -556,7 +556,7 @@
 				<onleft>3</onleft>
 				<onleft>ClearProperty(SettingHeading,home)</onleft>
 				<onleft>ClearProperty(SettingInfo,home)</onleft>
-				<onright>noop</onright>
+				<onright>3000</onright>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
 				<onback>3</onback>
@@ -569,12 +569,36 @@
 				<left>980</left>
 				<top>22</top>
 				<width>420</width>
-				<height>438</height>
+				<height>436</height>
 				<font>Med24</font>
 				<aligny>top</aligny>
-				<label>$INFO[Control.GetLabel(6)]</label>
-				<textcolor>ffdadada</textcolor>
-			</control>
+ 				<pagecontrol>96</pagecontrol>
+ 				<autoscroll>false</autoscroll>
+  				<textcolor>ffdadada</textcolor>
+ 				<label>$INFO[Control.GetLabel(6)]</label>
+ 			</control>
+ 			<control id="96" type="scrollbar">
+ 				<top>22</top>
+ 				<width>420</width>
+ 				<height>436</height>
+ 				<showonepage>false</showonepage>
+ 				<orientation>vertical</orientation>
+ 			</control>
+ 			<!-- More button -->
+ 			<control id="3000" type="button">
+ 				<left>1380</left>
+ 				<top>424</top>
+ 				<width>37</width>
+ 				<height>23</height>
+ 				<onup>noop</onup>
+ 				<ondown>noop</ondown>
+ 				<onleft>5</onleft>
+ 				<onright>noop</onright>
+ 				<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[Control.GetLabel(6)]"')</onclick>
+ 				<visible>Control.IsVisible(96)</visible>
+ 				<texturefocus>views/more_fo.png</texturefocus>
+ 				<texturenofocus>views/more_nf.png</texturenofocus>
+  			</control>
 		</control>
 		<control id="7" type="button">
 			<width>958</width>

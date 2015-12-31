@@ -6,13 +6,7 @@
 	<onload>Control.Move(5000,1)</onload>
 	<onload>Control.Move(50,$INFO[Container(50).CurrentItem,-])</onload>
 	<onload>Control.Move(50,1)</onload>
-	<onload>SetProperty(Actor1,$INFO[Container(50).ListItemNoWrap(0).Label],home)</onload>
-	<onload>SetProperty(Actor2,$INFO[Container(50).ListItemNoWrap(1).Label],home)</onload>
-	<onload>SetProperty(Actor3,$INFO[Container(50).ListItemNoWrap(2).Label],home)</onload>
 	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
-	<onunload>ClearProperty(Actor1,home)</onunload>
-	<onunload>ClearProperty(Actor2,home)</onunload>
-	<onunload>ClearProperty(Actor3,home)</onunload>
 	<onunload>ClearProperty(Similar,home)</onunload>
 	<onunload>SetFocus(50)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
@@ -281,7 +275,7 @@
 				<!-- More button -->
 				<control id="3002" type="button">
 					<left>1194</left>
-					<top>-34</top>
+					<top>-38</top>
 					<width>37</width>
 					<height>23</height>
 					<onleft>7000</onleft>
@@ -320,7 +314,7 @@
 					<font>Light30Spaced</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffbcbcbc</textcolor>
-					<label>$VAR[CastList]</label>
+					<label>$INFO[Container(50).ListItemAbsolute(0).Label]$INFO[Container(50).ListItemAbsolute(1).Label,$COMMA ]$INFO[Container(50).ListItemAbsolute(2).Label,$COMMA ]</label>
 				</control>
 			</control>
 			<!-- Director -->

@@ -8,17 +8,19 @@
 			<include>HiddenControl</include>
 			<onleft>noop</onleft>
 			<onright>303</onright>
-			<onup>Control.Move(211,-1)</onup>
-			<ondown>Control.Move(211,1)</ondown>
-		</control>
-		<!-- Move up -->
-		<control type="button" id="303">
-			<include>HiddenControl</include>
-			<onleft>304</onleft>
-			<onright>9000</onright>
-			<onup>Control.Move(211,-1)</onup>
-			<ondown>Control.Move(211,1)</ondown>
-		</control>
+			<onup condition="!IsEmpty(Container(211).ListItemNoWrap(-1).Label)">Control.Move(211,-1)</onup>
+ 			<ondown condition="!IsEmpty(Container(211).ListItemNoWrap(1).Label)">Control.Move(211,1)</ondown>
+ 			<ondown condition="IsEmpty(Container(211).ListItemNoWrap(1).Label)">9001</ondown>
+  		</control>
+  		<!-- Move up -->
+  		<control type="button" id="303">
+  			<include>HiddenControl</include>
+  			<onleft>304</onleft>
+  			<onright>9000</onright>
+ 			<onup condition="!IsEmpty(Container(211).ListItemNoWrap(-1).Label)">Control.Move(211,-1)</onup>
+ 			<ondown condition="!IsEmpty(Container(211).ListItemNoWrap(1).Label)">Control.Move(211,1)</ondown>
+ 			<ondown condition="IsEmpty(Container(211).ListItemNoWrap(1).Label)">9001</ondown>
+  		</control>
 		<include>DialogBackgroundImage</include>
 		<!-- Main group -->
 		<control type="group">

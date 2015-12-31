@@ -182,23 +182,35 @@
 					<label>[LIGHT]$INFO[ListItem.Artist,[B]$LOCALIZE[557]:[/B] ][/LIGHT]</label>
 				</control>
 			</control>
-			<!-- Star rating -->
-			<control type="group">
-				<top>183</top>
-				<height>36</height>
-				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
-				<visible>Container.Content(albums) + !IsEmpty(ListItem.Rating)</visible>
-				<control type="label">
- 					<top>-13</top>
- 					<width>auto</width>
+			<!-- Star rating / Rating -->
+ 			<control type="grouplist">
+  				<top>183</top>
+ 				<height>40</height>
+ 				<itemgap>10</itemgap>
+  				<orientation>horizontal</orientation>
+  				<usecontrolcoords>true</usecontrolcoords>
+				<visible>!Control.HasFocus(50) + !Control.HasFocus(5000)</visible>
+				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+				<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
+				<control type="image">
+					<top>2</top>
+ 					<width>147</width>
+ 					<height>24</height>
+ 					<texture>$INFO[ListItem.UserRating,rating/rating,.png]</texture>
+ 					<aspectratio align="left">keep</aspectratio>
+ 					<visible>!IsEmpty(ListItem.UserRating)</visible>
+ 				</control>
+  				<control type="label">
+  					<top>-13</top>
+  					<width>auto</width>
  					<height>34</height>
- 					<font>Bold30</font>
- 					<aligny>bottom</aligny>
- 					<textcolor>ffbcbcbc</textcolor>
- 					<label>$INFO[ListItem.Rating,,/5]</label>
+  					<font>Bold30</font>
+  					<aligny>bottom</aligny>
+  					<textcolor>ffbcbcbc</textcolor>
+ 					<label>$INFO[ListItem.Rating,,/10]</label>
+ 					<visible>!IsEmpty(ListItem.Rating)</visible>
   				</control>
-			</control>
+  			</control>
 			<control type="group">
 				<animation condition="!IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<!-- Button grouplist -->
@@ -267,6 +279,24 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Control.IsEnabled(12)</visible>
 					</control>
+					<!-- User Rating Button -->
+ 					<control id="7" type="button">
+ 						<width min="104" max="204">auto</width>
+ 						<wrapmultiline>true</wrapmultiline>
+ 						<height>116</height>
+ 						<onup condition="!Control.IsVisible(96)">Close</onup>
+ 						<onup condition="Control.IsVisible(96)">3002</onup>
+ 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
+ 						<ondown condition="Control.IsVisible(50)">50</ondown>
+ 						<font>Med24</font>
+ 						<label>[CAPITALIZE]$LOCALIZE[31194][/CAPITALIZE]</label>
+ 						<textoffsetx>28</textoffsetx>
+ 						<textcolor>ffdadada</textcolor>
+ 						<focusedcolor>ff222222</focusedcolor>
+ 						<visible>Control.IsEnabled(7)</visible>
+ 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+ 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+ 					</control>
 				</control>
 			</control>
 			<control type="group">

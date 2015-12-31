@@ -39,7 +39,7 @@
 		<control type="textbox">
 			<left>-1200</left>
 			<width>1192</width>
-			<height>126</height>
+			<height>124</height>
 			<align>left</align>
 			<font>Light30Spaced</font>
 			<pagecontrol>96</pagecontrol>
@@ -217,7 +217,7 @@
 				<!-- Plot -->
 				<control type="textbox">
 					<width>1192</width>
-					<height max="122">auto</height>
+					<height max="124">auto</height>
 					<align>left</align>
 					<font>Light30Spaced</font>
 					<autoscroll>false</autoscroll>
@@ -416,7 +416,7 @@
 				<!-- Plot -->
 				<control type="textbox">
 					<width>1192</width>
-					<height max="122">auto</height>
+					<height max="124">auto</height>
 					<align>left</align>
 					<font>Light30Spaced</font>
 					<autoscroll>false</autoscroll>

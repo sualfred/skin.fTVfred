@@ -454,16 +454,6 @@
 						<visible>Control.IsVisible(96)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
-						<visible>!Window.IsVisible(textviewer)</visible>
-					</control>
-					<!-- More button -->
-					<control type="image">
-						<left>1194</left>
-						<top>192</top>
-						<width>37</width>
-						<height>23</height>
-						<texture>views/more_nf.png</texture>
-						<visible>Window.IsVisible(textviewer)</visible>
 					</control>
 				</control>
 				<!-- Season Plot -->
@@ -502,16 +492,6 @@
 						<visible>Control.IsVisible(97)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
-						<visible>!Window.IsVisible(textviewer)</visible>
-					</control>
-					<!-- More button -->
-					<control type="image">
-						<left>1194</left>
-						<top>192</top>
-						<width>37</width>
-						<height>23</height>
-						<texture>views/more_nf.png</texture>
-						<visible>Window.IsVisible(textviewer)</visible>
 					</control>
 				</control>
 				<!-- Episode Plot -->
@@ -586,16 +566,6 @@
 						<visible>Control.IsVisible(98)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
-						<visible>!Window.IsVisible(textviewer)</visible>
-					</control>
-					<!-- More button -->
-					<control type="image">
-						<left>1194</left>
-						<top>192</top>
-						<width>37</width>
-						<height>23</height>
-						<texture>views/more_nf.png</texture>
-						<visible>Window.IsVisible(textviewer)</visible>
 					</control>
 				</control>
 			</control>
@@ -742,16 +712,6 @@
 					<visible>Control.IsVisible(99)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
-					<visible>!Window.IsVisible(textviewer)</visible>
-				</control>
-				<!-- More button -->
-				<control type="image">
-					<left>1194</left>
-					<top>192</top>
-					<width>37</width>
-					<height>23</height>
-					<texture>views/more_nf.png</texture>
-					<visible>Window.IsVisible(textviewer)</visible>
 				</control>
 			</control>
 		</control>

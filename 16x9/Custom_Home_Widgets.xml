@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1105">
 	<defaultcontrol always="true">30</defaultcontrol>
+	<onload>Skin.SetString($INFO[Window(home).Property(SubMenu),WidgetMenu-],$INFO[Window(home).Property(WidgetMenu)])</onload>
 	<onunload>ClearProperty(SubMenu,Home)</onunload>
 	<controls>
 		<!-- List 200 Control -->

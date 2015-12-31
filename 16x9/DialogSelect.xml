@@ -4,6 +4,10 @@
 	<defaultcontrol always="true">3</defaultcontrol>
 	<zorder>2</zorder>
 	<controls>
+		<!-- Hidden Button -->
+ 		<control id="7" type="button">
+ 			<include>HiddenControl</include>
+ 		</control>
 		<control id="1" type="label">
 			<visible>false</visible>
 		</control>

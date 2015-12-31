@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<onload condition="!SubString(Control.GetLabel(13),*) | IsEmpty(Skin.String(AutoUpdate))">Skin.SetString(AutoUpdate,off)</onload>
 	<onunload>ClearProperty(AddonDetails,home)</onunload>
-	<onunload>SetFocus(55)</onunload>
+	<onunload>SetFocus(50)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
 		<!-- Hidden Description -->

@@ -1133,16 +1133,6 @@
 		<value condition="[Container.Content(tvshows) | Container.Content(episodes)] + !IsEmpty(Window(home).Property(TVShowID))">plugin://script.extendedinfo?info=similartvshows&amp;&amp;dbid=$INFO[Window(home).Property(TVShowID)]</value>
 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.DBID)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[ListItem.DBID]</value>
 	</variable>
-	<variable name="CastList">
-		<value condition="!IsEmpty(Window(home).Property(Actor3))">$INFO[Window(home).Property(Actor1)], $INFO[Window(home).Property(Actor2)], $INFO[Window(home).Property(Actor3)]</value>
-		<value condition="!IsEmpty(Window(home).Property(Actor2))">$INFO[Window(home).Property(Actor1)], $INFO[Window(home).Property(Actor2)]</value>
-		<value condition="!IsEmpty(Window(home).Property(Actor1))">$INFO[Window(home).Property(Actor1)]</value>
-	</variable>
-	<variable name="MovieList">
-		<value condition="!IsEmpty(Container(150).ListItemNoWrap(2).Label)">$INFO[Container(150).ListItemNoWrap(0).Label], $INFO[Container(150).ListItemNoWrap(1).Label], $INFO[Container(150).ListItemNoWrap(2).Label]</value>
-		<value condition="!IsEmpty(Container(150).ListItemNoWrap(1).Label)">$INFO[Container(150).ListItemNoWrap(0).Label], $INFO[Container(150).ListItemNoWrap(1).Label]</value>
-		<value condition="!IsEmpty(Container(150).ListItemNoWrap(0).Label)">$INFO[Container(150).ListItemNoWrap(0).Label]</value>
-	</variable>
 	<variable name="HeadingLabel">
 		<value condition="!StringCompare(Container.FolderName,$LOCALIZE[369]) + !IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="Container.Content(movies)">$LOCALIZE[342]</value>

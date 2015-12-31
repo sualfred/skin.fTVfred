@@ -2074,11 +2074,13 @@
 		<!-- check if preloading is in progress -->
 		<control type="button" id="90000">
 			<include>HiddenControl</include>
+			<onfocus condition="IsEmpty(Window(Home).Property(killpreloadtimer))">SetProperty(killpreloadtimer,1,Home)</onfocus>
+			<onfocus>AlarmClock(killpreload,ClearProperty(killpreloadtimer,Home),00:10,silent)</onfocus>			
 			<onfocus>SetProperty(preload,1,Home)</onfocus>
-			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>
-			<onfocus condition="Control.IsVisible(90001)">SetFocus(90003)</onfocus>
-			<onfocus condition="!Control.IsVisible(90001)">SetFocus(90004)</onfocus>
-		</control>
+			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>						
+			<onfocus condition="Control.IsVisible(90001) + !IsEmpty(Window(Home).Property(killpreloadtimer))">SetFocus(90003)</onfocus>
+			<onfocus condition="!Control.IsVisible(90001) | IsEmpty(Window(Home).Property(killpreloadtimer))">SetFocus(90004)</onfocus>
+		</control>[
 		<!-- loop trigger -->
 		<control type="button" id="90003">
 			<include>HiddenControl</include>
