@@ -5,7 +5,7 @@
 	<defaultcontrol>90000</defaultcontrol>
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
-	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>
+	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>		
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	
 	<controls>
 		<control type="group">
@@ -1967,7 +1967,8 @@
 		<!-- preload widgets -->
 		<control type="button" id="90001">
 			<include>HiddenControl</include>			
-			<visible>[Container(101).IsUpdating
+			<visible>System.HasAlarm(killpreloadtimer)				
+			 	+ [Container(101).IsUpdating
 				| Container(102).IsUpdating
 				| Container(103).IsUpdating
 				| Container(104).IsUpdating
@@ -2075,14 +2076,18 @@
 		<control type="button" id="90000">
 			<include>HiddenControl</include>
 			<onfocus>SetProperty(preload,1,Home)</onfocus>
-			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>
+			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>			
 			<onfocus condition="Control.IsVisible(90001)">SetFocus(90003)</onfocus>
 			<onfocus condition="!Control.IsVisible(90001)">SetFocus(90004)</onfocus>
+			<onclick>SetFocus(90004)</onclick>
+			<onback>SetFocus(90004)</onback>
 		</control>
 		<!-- loop trigger -->
 		<control type="button" id="90003">
 			<include>HiddenControl</include>
 			<onfocus>SetFocus(90000)</onfocus>
+			<onclick>SetFocus(90004)</onclick>
+			<onback>SetFocus(90004)</onback>
 		</control>
 		<!-- ready to focus -->
 		<control type="button" id="90004">
