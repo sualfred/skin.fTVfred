@@ -84,11 +84,31 @@
 					<width>321</width>
 					<height>341</height>
 					<texture>osd/Pause.png</texture>
-					<visible>Player.Paused</visible>
-					<animation condition="System.IdleTime(2) + !Player.Caching" reversible="true" type="Conditional">
-						<effect end="0" start="100" time="200" type="fade" />
-					</animation>
+ 					<visible>Player.Paused + !Player.Caching</visible>
+ 					<animation condition="System.IdleTime(2)" reversible="true" type="Conditional">
+  						<effect end="0" start="100" time="200" type="fade" />
+  					</animation>
 				</control>
+				<control type="group">
+ 					<visible>Player.Caching</visible>
+ 					<!-- Busy -->
+ 					<control type="image">
+ 						<centerleft>50%</centerleft>
+ 						<centertop>50%</centertop>
+ 						<width>94</width>
+ 						<height>94</height>
+ 						<texture>common/spinner_outer.png</texture>
+ 						<animation effect="rotate" end="-360" center="auto" time="1680" loop="true" reversible="false" condition="true">Conditional</animation>
+ 					</control>
+ 					<control type="image">
+ 						<centerleft>50%</centerleft>
+ 						<centertop>50%</centertop>
+ 						<width>94</width>
+ 						<height>94</height>
+ 						<texture>common/spinner_inner.png</texture>
+ 						<animation effect="rotate" end="360" center="auto" time="1120" loop="true" reversible="false" condition="true">Conditional</animation>
+ 					</control>
+ 				</control>
 				<control type="image">
 					<bottom>0</bottom>
 					<width>1980</width>
