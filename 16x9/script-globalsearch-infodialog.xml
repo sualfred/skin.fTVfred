@@ -6,7 +6,7 @@
 	<controls>
 		<control type="list" id="100">
 			<visible>false</visible>
-			<include>HiddenControl</include>
+			<include>HiddenHomeList</include>
 		</control>
 		<control type="list" id="110">
 			<include>HiddenControl</include>
@@ -70,7 +70,7 @@
 			<top>99</top>
 			<animation effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 			<control type="group">
-				<visible>Control.IsVisible(110) | Control.IsVisible(120) | Control.IsVisible(130) | Control.IsVisible(140)</visible>
+				<visible>Control.IsVisible(110) | Control.IsVisible(120) | Control.IsVisible(130)</visible>
 				<!-- Icon -->
 				<control type="image">
 					<width>320</width>
@@ -97,19 +97,9 @@
 					<texture border="2">views/ProgressBar.png</texture>
 					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
 				</control>
-				<control type="button">
-					<top>518</top>
-					<width>480</width>
-					<height>35</height>
-					<font>Light35</font>
-					<textcolor>ffdadada</textcolor>
-					<focusedcolor>ffffc24b</focusedcolor>
-					<label>$LOCALIZE[31026]</label>
-					<include>NoTextures</include>
-				</control>
 			</control>
 			<control type="group">
-				<visible>Control.IsVisible(150) | Control.IsVisible(160) | Control.IsVisible(170) | Control.IsVisible(180)</visible>
+				<visible>Control.IsVisible(140) | Control.IsVisible(150) | Control.IsVisible(160) | Control.IsVisible(170) | Control.IsVisible(180)</visible>
 				<!-- Icon -->
 				<control type="image">
 					<width>336</width>
@@ -117,15 +107,24 @@
 					<texture>$INFO[Container(100).ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
-				<control type="button">
-					<top>374</top>
-					<width>480</width>
-					<height>35</height>
-					<font>Light35</font>
-					<textcolor>ffdadada</textcolor>
-					<focusedcolor>ffffc24b</focusedcolor>
-					<label>$LOCALIZE[31026]</label>
-					<include>NoTextures</include>
+				<control type="image">
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(Container(100).ListItem.Property(VideoResolution),719)</visible>
+				</control>
+				<control type="image">
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
+				</control>
+				<control type="image">
+					<top>336</top>
+					<width>336</width>
+					<height>8</height>
+					<texture border="2">views/ProgressBar.png</texture>
+					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
 				</control>
 			</control>
 		</control>
@@ -181,6 +180,14 @@
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="image">
+					<top>2</top>
+					<width>147</width>
+					<height>24</height>
+					<texture>$INFO[Container(100).ListItem.Property(UserRating),rating/rating,.png]</texture>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>!IsEmpty(Container(100).ListItem.Property(UserRating))</visible>
+				</control>
+				<control type="image">
 					<top>4</top>
 					<width>48</width>
 					<height>23</height>
@@ -210,6 +217,7 @@
 				<width>2800</width>
 				<height>1400</height>
 				<itemgap>0</itemgap>
+				<ondown>9001</ondown>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
 				<orientation>vertical</orientation>
@@ -232,26 +240,13 @@
 				<!-- More button -->
 				<control id="3002" type="button">
 					<left>1194</left>
-					<top>-34</top>
+					<top>-38</top>
 					<width>37</width>
 					<height>23</height>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$VAR[SearchPlot]"')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
 					<visible>Control.IsVisible(96)</visible>
-				</control>
-				<control id="3004" type="button">
-					<onfocus>SetFocus(9001)</onfocus>
-					<visible allowhiddenfocus="true">false</visible>
-				</control>
-				<!-- More button -->
-				<control type="image">
-					<left>1194</left>
-					<top>192</top>
-					<width>37</width>
-					<height>23</height>
-					<texture>views/more_nf.png</texture>
-					<visible>Window.IsVisible(textviewer)</visible>
 				</control>
 			</control>
 			<!-- Director -->
@@ -409,6 +404,7 @@
 				<width>2800</width>
 				<height>1400</height>
 				<itemgap>0</itemgap>
+				<ondown>9001</ondown>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
 				<orientation>vertical</orientation>
@@ -431,26 +427,13 @@
 				<!-- More button -->
 				<control id="3002" type="button">
 					<left>1194</left>
-					<top>-34</top>
+					<top>-38</top>
 					<width>37</width>
 					<height>23</height>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$VAR[SearchPlot]"')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
 					<visible>Control.IsVisible(96)</visible>
-				</control>
-				<control id="3004" type="button">
-					<onfocus>9001</onfocus>
-					<visible allowhiddenfocus="true">false</visible>
-				</control>
-				<!-- More button -->
-				<control type="image">
-					<left>1194</left>
-					<top>192</top>
-					<width>37</width>
-					<height>23</height>
-					<texture>views/more_nf.png</texture>
-					<visible>Window.IsVisible(textviewer)</visible>
 				</control>
 			</control>
 		</control>
@@ -461,7 +444,7 @@
 			<animation effect="slide" end="-50,0" start="0,0" time="0" condition="Control.IsVisible(160) | Control.IsVisible(170) | Control.IsVisible(180)">Conditional</animation>
 			<!-- Button grouplist -->
 			<control id="9001" type="grouplist">
-				<left>-2</left>
+				<left>-12</left>
 				<top>409</top>
 				<width>1620</width>
 				<height>116</height>

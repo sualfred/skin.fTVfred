@@ -964,3 +964,7 @@ msgstr "Programm Add-ons"
 msgctxt "#31521"
 msgid "Picture Add-ons"
 msgstr "Bilder Add-ons"
+
+msgctxt "#31522"
+msgid "New Search"
+msgstr "Neue Suche"

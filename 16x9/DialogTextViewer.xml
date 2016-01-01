@@ -3,8 +3,8 @@
 	<!-- textviewer -->
 	<zorder>2</zorder>
 	<defaultcontrol always="true">3000</defaultcontrol>
-	<onunload condition="Window.IsVisible(tvchannels) + !IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(59)</onunload>
-	<onunload condition="!Window.IsVisible(tvchannels) + !IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(50)</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(50)</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(SearchOpenTextViewer))">$VAR[SearchSetFocus]</onunload>
 	<onunload>ClearProperty(OpenTextViewer,home)</onunload>
 	<controls>
 		<control id="5" type="textbox">
