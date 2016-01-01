@@ -3723,4 +3723,8 @@
 		<value condition="StringCompare(Container(59).FolderPath,pvr://channels/tv/all channels/)">$LOCALIZE[19287]</value>
 		<value>$INFO[Container(59).FolderName]</value>
 	</variable>
+	<variable name="SeekStepIcon">
+		<value condition="[!IsEmpty(Player.SeekOffset) + !SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + !SubString(Player.SeekStepSize,-)]">osd/step_forward.png</value>
+		<value condition="[!IsEmpty(Player.SeekOffset) + SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize,-)]">osd/step_back.png</value>
+	</variable>
 </includes>

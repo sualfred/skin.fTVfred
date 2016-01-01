@@ -300,22 +300,13 @@
 			</control>
 			<control type="group">
 				<include>VisibleFadeAnimation</include>
-				<visible>!Player.Paused + !Player.Forwarding + !Player.Rewinding + [Player.Seeking | Player.DisplayAfterSeek]</visible>
+				<visible>!Player.Forwarding + !Player.Rewinding + [Player.Seeking | Player.DisplayAfterSeek]</visible>
 				<control type="image">
 					<left>97</left>
 					<bottom>123</bottom>
 					<width>80</width>
 					<height>80</height>
-					<texture>osd/step_forward.png</texture>
-					<visible>[!IsEmpty(Player.SeekOffset) + !SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + !SubString(Player.SeekStepSize,-)]</visible>
-				</control>
-				<control type="image">
-					<left>97</left>
-					<bottom>123</bottom>
-					<width>80</width>
-					<height>80</height>
-					<texture>osd/step_back.png</texture>
-					<visible>[!IsEmpty(Player.SeekOffset) + SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize,-)]</visible>
+					<texture>$VAR[SeekStepIcon]</texture>
 				</control>
 				<control type="label">
 					<centerleft>136</centerleft>
@@ -336,7 +327,7 @@
 					<textureslidernib>osd/osd_seek_bar.png</textureslidernib>
 					<textureslidernibfocus>osd/osd_seek_bar.png</textureslidernibfocus>
 					<info>Player.SeekTime</info>
-					<visible>!Player.Paused + !Player.Forwarding + !Player.Rewinding + Player.Seeking</visible>
+					<visible>!Player.Forwarding + !Player.Rewinding + Player.Seeking</visible>
 				</control>
 			</control>
 		</control>

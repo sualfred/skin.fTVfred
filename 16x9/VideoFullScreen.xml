@@ -744,33 +744,6 @@
 				</control>
 			</control>
 		</control>
-		<control type="group" id="99">
- 			<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
- 			<!-- Background -->
- 			<control type="image" id="99">
- 				<include>FullscreenDimensions</include>
- 				<texture>dialogs/DialogBackground.png</texture>
- 				<animation effect="fade" end="100" start="0" time="200">WindowOpen</animation>
- 				<animation delay="100" effect="fade" end="0" start="100" time="200">WindowClose</animation>
- 			</control>
- 			<!-- Busy -->
- 			<control type="image" id="99">
- 				<centerleft>50%</centerleft>
- 				<centertop>50%</centertop>
- 				<width>94</width>
- 				<height>94</height>
- 				<texture>common/spinner_outer.png</texture>
- 				<animation effect="rotate" end="-360" center="auto" time="1680" loop="true" reversible="false" condition="true">Conditional</animation>
- 			</control>
- 			<control type="image" id="99">
- 				<centerleft>50%</centerleft>
- 				<centertop>50%</centertop>
- 				<width>94</width>
- 				<height>94</height>
- 				<texture>common/spinner_inner.png</texture>
- 				<animation effect="rotate" end="360" center="auto" time="1120" loop="true" reversible="false" condition="true">Conditional</animation>
- 			</control>
- 		</control>
 		<control type="group">
 			<left>80</left>
 			<top>200</top>
