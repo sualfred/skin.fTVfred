@@ -55,7 +55,7 @@
 				<!-- Arrow down -->
 				<control type="image">
 					<left>942</left>
-					<top>620</top>
+					<top>600</top>
 					<width>36</width>
 					<height>20</height>
 					<texture>views/arrow_down.png</texture>
@@ -121,6 +121,7 @@
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
 						<label>$LOCALIZE[222]</label>
+						<visible>false</visible>
 					</control>
 
 					<!-- Rec Button -->
