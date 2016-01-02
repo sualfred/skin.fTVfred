@@ -968,3 +968,7 @@ msgstr "Bilder Add-ons"
 msgctxt "#31522"
 msgid "New Search"
 msgstr "Neue Suche"
+
+msgctxt "#31523"
+msgid "Text Input"
+msgstr "Texteingabe"

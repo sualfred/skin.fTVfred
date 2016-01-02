@@ -545,7 +545,7 @@
 				<width>419</width>
 				<aligny>center</aligny>
 				<font>Bold30</font>
-				<label>$INFO[Window(home).Property(SettingHeading)]</label>
+				<label fallback="166">$INFO[Window(home).Property(SettingHeading)]</label>
 				<textcolor>ffdadada</textcolor>
 			</control>
 			<control id="5" type="grouplist">

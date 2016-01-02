@@ -24,6 +24,14 @@
 		<animation easing="inout" effect="slide" end="0,0" start="0,-111" time="120" tween="sine">WindowOpen</animation>
 		<animation easing="inout" effect="slide" end="0,-111" start="0,0" time="120" tween="sine">WindowClose</animation>
 	</include>
+	<!-- Keyboard fade animation -->
+	<include name="KeyboardAnimation">
+		<animation easing="inout" effect="slide" end="0,0" start="0,-700" time="120" tween="sine" condition="!IntegerGreaterThan(Container(9091).NumItems,0)">WindowOpen</animation>
+		<animation easing="inout" effect="slide" end="0,0" start="0,-1145" time="120" tween="sine" condition="IntegerGreaterThan(Container(9091).NumItems,0)">WindowOpen</animation>
+		<animation easing="inout" effect="slide" end="0,-700" start="0,0" time="120" tween="sine" condition="!IntegerGreaterThan(Container(9091).NumItems,0)">WindowClose</animation>
+		<animation easing="inout" effect="slide" end="0,-1145" start="0,0" time="120" tween="sine" condition="IntegerGreaterThan(Container(9091).NumItems,0)">WindowClose</animation>
+		<animation condition="Window.IsVisible(numericinput)" easing="inout" effect="fade" end="0" start="100" time="120" tween="sine">Conditional</animation>
+	</include>
 	<!-- Dialog fade animation -->
 	<include name="DialogAnimation">
 		<animation easing="inout" effect="fade" end="100" start="0" time="120" tween="sine">WindowOpen</animation>

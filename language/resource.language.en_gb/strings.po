@@ -968,3 +968,7 @@ msgstr ""
 msgctxt "#31522"
 msgid "New Search"
 msgstr ""
+
+msgctxt "#31523"
+msgid "Text Input"
+msgstr ""

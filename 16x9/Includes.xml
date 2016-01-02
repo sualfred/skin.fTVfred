@@ -4,6 +4,7 @@
 	<include file="Defaults.xml" />
 	<include file="Includes_Home_Widgets_Setup.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
+	<include file="Includes_Keyboard.xml" />
 	<include file="Viewtype50.xml" />
 	<include file="Viewtype51.xml" />
 	<include file="Viewtype52.xml" />
@@ -434,15 +435,52 @@
 	</include>
 	<!-- Small Keyboard buttons -->
 	<include name="SmallKeyboardButtons">
-		<width>78</width>
-		<height>78</height>
-		<font>Med40</font>
+		<width>48</width>
+		<height>44</height>
+		<font>Light40</font>
+		<align>center</align>
+		<textcolor>ff808080</textcolor>
+		<focusedcolor>ffffc24b</focusedcolor>		
+		<texturefocus border="2">-</texturefocus>
+		<texturenofocus border="2">-</texturenofocus>
+	</include>
+	<!-- Hidden Keyboard Button -->
+	<include name="HiddenKeyboardButtons">
+		<width>48</width>
+		<height>44</height>
+		<font>invisible</font>
+		<texturefocus border="2">-</texturefocus>
+		<texturenofocus border="2">-</texturenofocus>
+	</include>
+	<!-- Control buttons -->
+	<include name="BottomControlButtons">
+		<width>48</width>
+		<height>44</height>
+		<font>invisible</font>
 		<align>center</align>
 		<aligny>center</aligny>
-		<textcolor>ffdadada</textcolor>
-		<focusedcolor>ff0c0c0c</focusedcolor>
-		<texturefocus border="2">dialogs/KeyboardButtonFO.png</texturefocus>
-		<texturenofocus border="2">-</texturenofocus>
+		<textcolor>ff808080</textcolor>
+		<focusedcolor>ffffc24b</focusedcolor>
+		<texturefocus border="2">dialogs/keys/keyboard_$PARAM[name]_fo.png</texturefocus>
+		<texturenofocus border="2">dialogs/keys/keyboard_$PARAM[name]_nf.png</texturenofocus>
+	</include>
+	<include name="KeyboardControlButtons">
+		<control type="image">
+			<width>48</width>
+			<height>44</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texture>dialogs/keys/keyboard_$PARAM[name]_fo.png</texture>
+			<visible>Control.HasFocus($PARAM[ID])</visible>
+		</control>
+		<control type="image">
+			<width>48</width>
+			<height>44</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texture>dialogs/keys/keyboard_$PARAM[name]_nf.png</texture>
+			<visible>!Control.HasFocus($PARAM[ID])</visible>
+		</control>
 	</include>
 	<!-- Keyboard buttons -->
 	<include name="KeyboardButtons">
