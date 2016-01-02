@@ -166,7 +166,7 @@
 						<!-- First row -->
 						<control id="1000" type="grouplist">
 							<width>856</width>
-							<height>44</height>
+							<height>48</height>
 							<itemgap>12</itemgap>
 							<onleft>309</onleft>
 							<onright>301</onright>							
@@ -246,7 +246,7 @@
 						<control id="2000" type="grouplist">
 							<top>80</top>
 							<width>856</width>
-							<height>44</height>
+							<height>48</height>
 							<itemgap>12</itemgap>
 							<onleft>307</onleft>
 							<onright>304</onright>					
@@ -340,7 +340,7 @@
 						<control id="3000" type="grouplist">
 							<top>160</top>
 							<width>856</width>
-							<height>44</height>
+							<height>48</height>
 							<itemgap>12</itemgap>
 							<onleft>303</onleft>
 							<onright>8</onright>					
@@ -434,7 +434,7 @@
 						<control id="4000" type="grouplist">
 							<top>240</top>
 							<width>856</width>
-							<height>44</height>
+							<height>48</height>
 							<itemgap>12</itemgap>
 							<onleft>302</onleft>
 							<onright>32</onright>
