@@ -972,3 +972,7 @@ msgstr "Neue Suche"
 msgctxt "#31523"
 msgid "Text Input"
 msgstr "Texteingabe"
+
+msgctxt "#31524"
+msgid "Numeric Input"
+msgstr "Zahleneingabe"

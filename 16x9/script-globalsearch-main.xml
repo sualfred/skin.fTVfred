@@ -12,6 +12,7 @@
 		<control type="button" id="300">
 			<height>1</height>
 			<width>1</width>
+			<!--<onfocus condition="IsEmpty(Window(Home).Property(Category)) + IsEmpty(Window(Home).Property(CategoryFocus))">999</onfocus>-->
 			<onup>Close</onup>			
 			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),movies)">SetFocus(111)</ondown>
 			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),tvshows)">SetFocus(121)</ondown>
@@ -23,6 +24,7 @@
 			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),songs)">SetFocus(181)</ondown>
 			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),actors)">SetFocus(219)</ondown>			
 			<ondown>ClearProperty(CategoryFocus,home)</ondown>
+			<onclick>Close</onclick>
 			<onclick>RunScript(script.globalsearch)</onclick>
 			<onleft>185</onleft>
 			<onright>999</onright>
@@ -259,6 +261,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ffdadada</textcolor>
 							<label>$VAR[GlobalSearchCurrentItem]</label>
+							<visible>!IsEmpty(Window(home).Property(Category))</visible>
 						</control>
 						<control type="label">
 							<top>14</top>
@@ -268,6 +271,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ff505050</textcolor>
 							<label>|</label>
+							<visible>!IsEmpty(Window(home).Property(Category))</visible>
 						</control>
 						<control type="label">
 							<top>15</top>
@@ -277,6 +281,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ff505050</textcolor>
 							<label>$VAR[GlobalSearchNumItems]</label>
+							<visible>!IsEmpty(Window(home).Property(Category))</visible>
 						</control>
 					</control>
 					<control type="group">

@@ -972,3 +972,7 @@ msgstr ""
 msgctxt "#31523"
 msgid "Text Input"
 msgstr ""
+
+msgctxt "#31524"
+msgid "Numeric Input"
+msgstr ""
