@@ -3,761 +3,773 @@
 	<!-- Home Square Info Itemlayout -->
 	<include name="HomeSquareInfoItemlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>			
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon1),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel1)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel1)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+			<control type="group">
+				<left>604</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon2),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel2)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel2)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon1),Default)</visible>
+			<control type="group">
+				<left>935</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon3),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel3)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel3)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel1)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel1)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>604</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon2),Default)</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel2)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel2)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>935</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon3),Default)</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel3)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel3)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1266</left>
-			<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon4),Default)</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel4)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel4)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			<control type="group">
+				<left>1266</left>
+				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon4),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel4)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel4)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
 		</control>
 	</include>
 	<!-- Home Square Info Focusedlayout -->
 	<include name="HomeSquareInfoFocusedlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon1),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel1)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel1)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+			<control type="group">
+				<left>604</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon2),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel2)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel2)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon1),Default)</visible>
+			<control type="group">
+				<left>935</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon3),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel3)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel3)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel1)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel1)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel1))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>604</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon2),Default)</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel2)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel2)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel2))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>935</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon3),Default)</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel3)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel3)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel3))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1266</left>
-			<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon4),Default)</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel4)]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel4)]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+			<control type="group">
+				<left>1266</left>
+				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!SubString(ListItem.Property(Icon4),Default)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>251</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
+				</control>
+				<control type="label">
+					<left>61</left>
+					<top>269</top>
+					<width>236</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel4)]</label>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
+				</control>
+				<control type="label">
+					<left>11</left>
+					<top>269</top>
+					<width>286</width>
+					<height>28</height>
+					<font>Bold28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Property(InfoLabel4)]</label>
+					<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel4))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
 		</control>
 	</include>
 	<!-- Home Square Itemlayout -->
 	<include name="HomeSquareItemlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161])</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+			<control type="group">
+				<left>604</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			<control type="group">
+				<left>935</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-		</control>
-		<control type="group">
-			<left>604</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>935</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1266</left>
-			<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			<control type="group">
+				<left>1266</left>
+				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
 		</control>
 	</include>
 	<!-- Home Square Focusedlayout -->
 	<include name="HomeSquareFocusedlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161])</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+			<control type="group">
+				<left>604</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+			<control type="group">
+				<left>935</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-		</control>
-		<control type="group">
-			<left>604</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>935</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1266</left>
-			<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
+			<control type="group">
+				<left>1266</left>
+				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>308</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
+			</control>			
 		</control>
 	</include>
 	<!-- Home LiveTV Itemlayout -->
@@ -1172,758 +1184,770 @@
 	<!-- Home Poster Itemlayout -->
 	<include name="HomePosterItemlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160])</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+			<control type="group">
+				<left>501</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
+			<control type="group">
+				<left>729</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			<control type="group">
+				<left>957</left>
+				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay4),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-		</control>
-		<control type="group">
-			<left>501</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<control type="group">
+				<left>1185</left>
+				<visible>!IsEmpty(ListItem.Property(Icon5))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon5)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution5),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay5),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon5))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>729</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>957</left>
-			<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay4),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1185</left>
-			<visible>!IsEmpty(ListItem.Property(Icon5))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon5)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution5),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay5),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon5))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1413</left>
-			<visible>!IsEmpty(ListItem.Property(Icon6))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon6)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution6),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay6),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon6))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			<control type="group">
+				<left>1413</left>
+				<visible>!IsEmpty(ListItem.Property(Icon6))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon6)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution6),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay6),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon6))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
 		</control>
 	</include>
 	<!-- Home Poster Focusedlayout -->
 	<include name="HomePosterFocusedlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160])</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+			<control type="group">
+				<left>501</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
+			<control type="group">
+				<left>729</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+			<control type="group">
+				<left>957</left>
+				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay4),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-		</control>
-		<control type="group">
-			<left>501</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+			<control type="group">
+				<left>1185</left>
+				<visible>!IsEmpty(ListItem.Property(Icon5))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon5)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution5),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay5),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon5))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>729</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>957</left>
-			<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay4),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon4))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1185</left>
-			<visible>!IsEmpty(ListItem.Property(Icon5))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon5)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution5),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay5),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon5))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1413</left>
-			<visible>!IsEmpty(ListItem.Property(Icon6))</visible>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon6)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution6),719)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay6),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>205</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon6))</visible>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+			<control type="group">
+				<left>1413</left>
+				<visible>!IsEmpty(ListItem.Property(Icon6))</visible>
+				<control type="image">
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon6)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution6),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay6),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>205</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon6))</visible>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
 		</control>
 	</include>
 	<!-- Home Wide Itemlayout -->
 	<include name="HomeWideItemlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV1))</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159])</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>!IsEmpty(ListItem.Property(ArtFTV1))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>193</top>
+					<width>257</width>
+					<height>101</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(ArtLogo1)]</texture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV1)) + IsEmpty(ListItem.Property(ArtFanart1))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>413</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
+			<control type="group">
+				<left>707</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>!IsEmpty(ListItem.Property(ArtFTV2))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>193</top>
+					<width>257</width>
+					<height>101</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(ArtLogo2)]</texture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV2)) + IsEmpty(ListItem.Property(ArtFanart2))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>413</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo1)]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV1)) + IsEmpty(ListItem.Property(ArtFanart1))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>413</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>707</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV2))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
-			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo2)]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV2)) + IsEmpty(ListItem.Property(ArtFanart2))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>413</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1141</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV3))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
-			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo3)]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV3)) + IsEmpty(ListItem.Property(ArtFanart3))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>413</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+			<control type="group">
+				<left>1141</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>!IsEmpty(ListItem.Property(ArtFTV3))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>193</top>
+					<width>257</width>
+					<height>101</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(ArtLogo3)]</texture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>413</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+				</control>
 			</control>
 		</control>
 	</include>
 	<!-- Home Wide Focusedlayout -->
 	<include name="HomeWideFocusedlayout">
 		<control type="group">
-			<left>273</left>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV1))</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159])</visible>
+			<control type="group">
+				<left>273</left>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>!IsEmpty(ListItem.Property(ArtFTV1))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>193</top>
+					<width>257</width>
+					<height>101</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(ArtLogo1)]</texture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV1)) + IsEmpty(ListItem.Property(ArtFanart1))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>413</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
+			<control type="group">
+				<left>707</left>
+				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>!IsEmpty(ListItem.Property(ArtFTV2))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>193</top>
+					<width>257</width>
+					<height>101</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(ArtLogo2)]</texture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV2)) + IsEmpty(ListItem.Property(ArtFanart2))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>413</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo1)]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV1)) + !IsEmpty(ListItem.Property(ArtFanart1))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV1)) + IsEmpty(ListItem.Property(ArtFanart1))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>413</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon1))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>707</left>
-			<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV2))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
-			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo2)]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV2)) + !IsEmpty(ListItem.Property(ArtFanart2))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV2)) + IsEmpty(ListItem.Property(ArtFanart2))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>413</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon2))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
-			</control>
-		</control>
-		<control type="group">
-			<left>1141</left>
-			<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV3))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
-			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo3)]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV3)) + IsEmpty(ListItem.Property(ArtFanart3))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>413</width>
-				<height>308</height>
-				<texture>views/OverlayNF.png</texture>
-				<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
-				<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-				<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+			<control type="group">
+				<left>1141</left>
+				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>!IsEmpty(ListItem.Property(ArtFTV3))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>193</top>
+					<width>257</width>
+					<height>101</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(ArtLogo3)]</texture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + !IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<width>423</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Property(Overlay3),OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>413</width>
+					<height>308</height>
+					<texture>views/OverlayNF.png</texture>
+					<visible>!Control.HasFocus(9000) + !IsEmpty(ListItem.Property(Icon3))</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -1933,6 +1957,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(101).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(101).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(101).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(101).ListItemPosition(2).Icon]</property>
@@ -1971,6 +1996,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(102).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(102).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(102).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(102).ListItemPosition(2).Icon]</property>
@@ -2009,6 +2035,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(103).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(103).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(103).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(103).ListItemPosition(2).Icon]</property>
@@ -2047,6 +2074,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(104).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(104).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(104).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(104).ListItemPosition(2).Icon]</property>
@@ -2085,6 +2113,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(105).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(105).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(105).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(105).ListItemPosition(2).Icon]</property>
@@ -2123,6 +2152,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(106).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(106).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(106).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(106).ListItemPosition(2).Icon]</property>
@@ -2161,6 +2191,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(107).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(107).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(107).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(107).ListItemPosition(2).Icon]</property>
@@ -2199,6 +2230,7 @@
 			<item>
 				<label>$INFO[Skin.String(1-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(108).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(1-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(108).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(108).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(108).ListItemPosition(2).Icon]</property>
@@ -2242,6 +2274,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(201).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(201).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(201).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(201).ListItemPosition(2).Icon]</property>
@@ -2280,6 +2313,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(202).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(202).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(202).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(202).ListItemPosition(2).Icon]</property>
@@ -2318,6 +2352,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(203).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(203).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(203).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(203).ListItemPosition(2).Icon]</property>
@@ -2356,6 +2391,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(204).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(204).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(204).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(204).ListItemPosition(2).Icon]</property>
@@ -2394,6 +2430,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(205).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(205).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(205).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(205).ListItemPosition(2).Icon]</property>
@@ -2432,6 +2469,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(206).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(206).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(206).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(206).ListItemPosition(2).Icon]</property>
@@ -2470,6 +2508,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(207).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(207).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(207).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(207).ListItemPosition(2).Icon]</property>
@@ -2508,6 +2547,7 @@
 			<item>
 				<label>$INFO[Skin.String(2-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(208).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(2-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(208).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(208).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(208).ListItemPosition(2).Icon]</property>
@@ -2551,6 +2591,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(301).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(301).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(301).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(301).ListItemPosition(2).Icon]</property>
@@ -2589,6 +2630,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(302).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(302).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(302).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(302).ListItemPosition(2).Icon]</property>
@@ -2627,6 +2669,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(303).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(303).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(303).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(303).ListItemPosition(2).Icon]</property>
@@ -2665,6 +2708,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(304).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(304).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(304).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(304).ListItemPosition(2).Icon]</property>
@@ -2703,6 +2747,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(305).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(305).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(305).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(305).ListItemPosition(2).Icon]</property>
@@ -2741,6 +2786,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(306).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(306).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(306).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(306).ListItemPosition(2).Icon]</property>
@@ -2779,6 +2825,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(307).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(307).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(307).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(307).ListItemPosition(2).Icon]</property>
@@ -2817,6 +2864,7 @@
 			<item>
 				<label>$INFO[Skin.String(3-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(308).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(3-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(308).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(308).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(308).ListItemPosition(2).Icon]</property>
@@ -2860,6 +2908,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(401).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(401).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(401).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(401).ListItemPosition(2).Icon]</property>
@@ -2898,6 +2947,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(402).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(402).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(402).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(402).ListItemPosition(2).Icon]</property>
@@ -2936,6 +2986,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(403).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(403).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(403).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(403).ListItemPosition(2).Icon]</property>
@@ -2974,6 +3025,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(404).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(404).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(404).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(404).ListItemPosition(2).Icon]</property>
@@ -3012,6 +3064,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(405).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(405).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(405).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(405).ListItemPosition(2).Icon]</property>
@@ -3050,6 +3103,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(406).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(406).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(406).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(406).ListItemPosition(2).Icon]</property>
@@ -3088,6 +3142,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(407).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(407).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(407).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(407).ListItemPosition(2).Icon]</property>
@@ -3126,6 +3181,7 @@
 			<item>
 				<label>$INFO[Skin.String(4-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(408).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(4-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(408).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(408).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(408).ListItemPosition(2).Icon]</property>
@@ -3169,6 +3225,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(501).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(501).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(501).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(501).ListItemPosition(2).Icon]</property>
@@ -3207,6 +3264,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(502).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(502).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(502).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(502).ListItemPosition(2).Icon]</property>
@@ -3245,6 +3303,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(503).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(503).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(503).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(503).ListItemPosition(2).Icon]</property>
@@ -3283,6 +3342,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(504).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(504).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(504).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(504).ListItemPosition(2).Icon]</property>
@@ -3321,6 +3381,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(505).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(505).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(505).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(505).ListItemPosition(2).Icon]</property>
@@ -3359,6 +3420,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(506).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(506).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(506).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(506).ListItemPosition(2).Icon]</property>
@@ -3397,6 +3459,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(507).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(507).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(507).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(507).ListItemPosition(2).Icon]</property>
@@ -3435,6 +3498,7 @@
 			<item>
 				<label>$INFO[Skin.String(5-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(508).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(5-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(508).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(508).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(508).ListItemPosition(2).Icon]</property>
@@ -3478,6 +3542,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(601).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(601).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(601).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(601).ListItemPosition(2).Icon]</property>
@@ -3516,6 +3581,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(602).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(602).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(602).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(602).ListItemPosition(2).Icon]</property>
@@ -3554,6 +3620,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(603).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(603).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(603).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(603).ListItemPosition(2).Icon]</property>
@@ -3592,6 +3659,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(604).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(604).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(604).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(604).ListItemPosition(2).Icon]</property>
@@ -3630,6 +3698,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(605).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(605).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(605).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(605).ListItemPosition(2).Icon]</property>
@@ -3668,6 +3737,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(606).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(606).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(606).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(606).ListItemPosition(2).Icon]</property>
@@ -3706,6 +3776,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(607).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(607).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(607).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(607).ListItemPosition(2).Icon]</property>
@@ -3744,6 +3815,7 @@
 			<item>
 				<label>$INFO[Skin.String(6-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(608).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(6-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(608).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(608).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(608).ListItemPosition(2).Icon]</property>
@@ -3787,6 +3859,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(701).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(701).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(701).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(701).ListItemPosition(2).Icon]</property>
@@ -3825,6 +3898,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(702).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(702).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(702).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(702).ListItemPosition(2).Icon]</property>
@@ -3863,6 +3937,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(703).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(703).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(703).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(703).ListItemPosition(2).Icon]</property>
@@ -3901,6 +3976,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(704).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(704).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(704).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(704).ListItemPosition(2).Icon]</property>
@@ -3939,6 +4015,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(705).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(705).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(705).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(705).ListItemPosition(2).Icon]</property>
@@ -3977,6 +4054,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(706).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(706).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(706).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(706).ListItemPosition(2).Icon]</property>
@@ -4015,6 +4093,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(707).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(707).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(707).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(707).ListItemPosition(2).Icon]</property>
@@ -4053,6 +4132,7 @@
 			<item>
 				<label>$INFO[Skin.String(7-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(708).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(7-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(708).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(708).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(708).ListItemPosition(2).Icon]</property>
@@ -4096,6 +4176,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-1)]</label>
 				<visible>!IsEmpty(Container(801).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-1)]</property>
 				<property name="Icon1">$INFO[Container(801).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(801).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(801).ListItemPosition(2).Icon]</property>
@@ -4134,6 +4215,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-2)]</label>
 				<visible>!IsEmpty(Container(802).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-2)]</property>
 				<property name="Icon1">$INFO[Container(802).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(802).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(802).ListItemPosition(2).Icon]</property>
@@ -4172,6 +4254,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-3)]</label>
 				<visible>!IsEmpty(Container(803).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-3)]</property>
 				<property name="Icon1">$INFO[Container(803).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(803).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(803).ListItemPosition(2).Icon]</property>
@@ -4210,6 +4293,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-4)]</label>
 				<visible>!IsEmpty(Container(804).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-4)]</property>
 				<property name="Icon1">$INFO[Container(804).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(804).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(804).ListItemPosition(2).Icon]</property>
@@ -4248,6 +4332,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-5)]</label>
 				<visible>!IsEmpty(Container(805).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-5)]</property>
 				<property name="Icon1">$INFO[Container(805).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(805).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(805).ListItemPosition(2).Icon]</property>
@@ -4286,6 +4371,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-6)]</label>
 				<visible>!IsEmpty(Container(806).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-6)]</property>
 				<property name="Icon1">$INFO[Container(806).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(806).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(806).ListItemPosition(2).Icon]</property>
@@ -4324,6 +4410,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-7)]</label>
 				<visible>!IsEmpty(Container(807).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-7)]</property>
 				<property name="Icon1">$INFO[Container(807).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(807).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(807).ListItemPosition(2).Icon]</property>
@@ -4362,6 +4449,7 @@
 			<item>
 				<label>$INFO[Skin.String(8-WidgetLabel-8)]</label>
 				<visible>!IsEmpty(Container(808).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$INFO[Skin.String(8-WidgetStyle-8)]</property>
 				<property name="Icon1">$INFO[Container(808).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(808).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(808).ListItemPosition(2).Icon]</property>

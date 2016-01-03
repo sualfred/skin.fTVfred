@@ -477,23 +477,85 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-8)]</value>
 	</variable>
-	<variable name="WidgetView">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1) + !IsEmpty(Skin.String(1-WidgetView))">$INFO[Skin.String(1-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2) + !IsEmpty(Skin.String(2-WidgetView))">$INFO[Skin.String(2-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3) + !IsEmpty(Skin.String(3-WidgetView))">$INFO[Skin.String(3-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4) + !IsEmpty(Skin.String(4-WidgetView))">$INFO[Skin.String(4-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5) + !IsEmpty(Skin.String(5-WidgetView))">$INFO[Skin.String(5-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6) + !IsEmpty(Skin.String(6-WidgetView))">$INFO[Skin.String(6-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7) + !IsEmpty(Skin.String(7-WidgetView))">$INFO[Skin.String(7-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8) + !IsEmpty(Skin.String(8-WidgetView))">$INFO[Skin.String(8-WidgetView)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),1) + IsEmpty(Skin.String(1-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2) + IsEmpty(Skin.String(2-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3) + IsEmpty(Skin.String(3-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4) + IsEmpty(Skin.String(4-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5) + IsEmpty(Skin.String(5-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6) + IsEmpty(Skin.String(6-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7) + IsEmpty(Skin.String(7-WidgetView))">$LOCALIZE[31203]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8) + IsEmpty(Skin.String(8-WidgetView))">$LOCALIZE[31203]</value>
+	<variable name="WidgetStyle-1">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-1)]</value>
+	</variable>
+	<variable name="WidgetStyle-2">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-2)]</value>
+	</variable>
+	<variable name="WidgetStyle-3">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-3)]</value>
+	</variable>
+	<variable name="WidgetStyle-4">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-4)]</value>
+	</variable>
+	<variable name="WidgetStyle-5">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-5)]</value>
+	</variable>
+	<variable name="WidgetStyle-6">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-6)]</value>
+	</variable>
+	<variable name="WidgetStyle-7">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-7)]</value>
+	</variable>
+	<variable name="WidgetStyle-8">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-8)]</value>
 	</variable>
 	<variable name="NextEpisodeCountdown">
 		<value condition="IntegerGreaterThan(Player.TimeRemaining,29)">osd/countdown/30.png</value>

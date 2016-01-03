@@ -13,11 +13,13 @@
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(21)</onup>
 			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(21)</ondown>
 			<onclick>SetFocus(200)</onclick>
 			<onclick>Select</onclick>
@@ -27,20 +29,43 @@
 		<control type="button" id="30">
 			<include>HiddenControl</include>
 			<onleft>20</onleft>
-			<onright>noop</onright>
+			<onright>40</onright>
 			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(31)</onup>
 			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(31)</ondown>
 			<onclick>SetFocus(300)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(30)</onclick>
+		</control>
+		<!-- List 400 Control -->
+		<control type="button" id="40">
+			<include>HiddenControl</include>
+			<onleft>30</onleft>
+			<onright>noop</onright>
+			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(41)</onup>
+			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(41)</ondown>
+			<onclick>SetFocus(400)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(40)</onclick>
 		</control>
 		<!-- Button to fix movement problem  -->
 		<control type="button" id="21">
@@ -51,6 +76,11 @@
 		<control type="button" id="31">
 			<include>HiddenControl</include>
 			<onfocus>SetFocus(30)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="41">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(40)</onfocus>
 		</control>
 		<!-- Background -->
 		<include>DialogTextBackgroundImage</include>
@@ -106,6 +136,17 @@
 					<aligny>center</aligny>
 					<font>Bold30</font>
 					<label>$LOCALIZE[31202]</label>
+					<textcolor>ffdadada</textcolor>
+				</control>
+				<!-- Widget Layout -->
+				<control type="label">
+					<left>1540</left>
+					<top>14</top>
+					<height>30</height>
+					<width>1010</width>
+					<aligny>center</aligny>
+					<font>Bold30</font>
+					<label>$LOCALIZE[31198]</label>
 					<textcolor>ffdadada</textcolor>
 				</control>
 				<!-- Widget -->
@@ -299,13 +340,13 @@
 				<!-- Widget path -->
 				<control type="list" id="300">
 					<top>60</top>
-					<width>1740</width>
+					<width>1520</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="84" width="1740">
+					<itemlayout height="84" width="1760">
 						<control type="label">
 							<left>690</left>
-							<width>1010</width>
+							<width>840</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -314,7 +355,7 @@
 						</control>
 						<control type="label">
 							<left>690</left>
-							<width>1010</width>
+							<width>840</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -322,10 +363,10 @@
 							<visible>IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="84" width="1690">
+					<focusedlayout height="84" width="1720">
 						<control type="label">
 							<left>690</left>
-							<width>1010</width>
+							<width>840</width>
 							<height>84</height>
 							<font>Light32</font>
 							<scroll>true</scroll>
@@ -335,7 +376,7 @@
 						</control>
 						<control type="label">
 							<left>690</left>
-							<width>1010</width>
+							<width>840</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -344,7 +385,7 @@
 						</control>
 						<control type="label">
 							<left>690</left>
-							<width>1010</width>
+							<width>840</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
@@ -353,7 +394,7 @@
 						</control>
 						<control type="label">
 							<left>690</left>
-							<width>1010</width>
+							<width>840</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -404,6 +445,186 @@
 						</item>
 					</content>
 				</control>
+				<!-- Widget layout -->
+				<control type="list" id="400">
+					<top>60</top>
+					<width>1740</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="1740">
+						<control type="label">
+							<left>1540</left>
+							<width>1010</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<left>1540</left>
+							<width>1010</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>IsEmpty(ListItem.Label)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="84" width="1690">
+						<control type="label">
+							<left>1540</left>
+							<width>1010</width>
+							<height>84</height>
+							<font>Light32</font>
+							<scroll>true</scroll>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(40) + !IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<left>1540</left>
+							<width>1010</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(40) + !IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<left>1540</left>
+							<width>1010</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>Control.HasFocus(40) + IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<left>1540</left>
+							<width>1010</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>!Control.HasFocus(40) + IsEmpty(ListItem.Label)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$VAR[WidgetStyle-1]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-2]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-3]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-4]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-5]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-6]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-7]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+						<item>
+							<label>$VAR[WidgetStyle-8]</label>
+							<label2>$LOCALIZE[31203]</label2>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31159]))</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31160]))</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31161]))</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31203]))</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+						</item>
+					</content>
+				</control>
 				<!-- Button grouplist -->
 				<control type="grouplist" id="9001">
 					<left>0</left>
@@ -417,26 +638,6 @@
 					<ondown>noop</ondown>
 					<align>center</align>
 					<orientation>horizontal</orientation>
-					<!-- View Type Button -->
-					<control type="button" id="1000">
-						<width>380</width>
-						<height>76</height>
-						<aligny>top</aligny>
-						<font>Med24</font>
-						<textoffsetx>23</textoffsetx>
-						<textoffsety>27</textoffsety>
-						<label>$LOCALIZE[31198]</label>
-						<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
-						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetView],$LOCALIZE[31159]))</onclick>
-						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
-						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetView],$LOCALIZE[31160]))</onclick>
-						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
-						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetView],$LOCALIZE[31161]))</onclick>
-						<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
-						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetView],$LOCALIZE[31203]))</onclick>
-						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-					</control>
 					<!-- Reset Button -->
 					<control type="button" id="1002">
 						<width>320</width>
@@ -471,6 +672,14 @@
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-6])</onclick>
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-7])</onclick>
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-8])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8])</onclick>
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetView])</onclick>
 					</control>
 					<!-- OK Button -->
@@ -484,37 +693,6 @@
 						<textoffsety>27</textoffsety>
 						<label>186</label>
 						<onclick>Close</onclick>
-					</control>
-				</control>
-				<control type="grouplist">
-					<left>96</left>
-					<bottom>-15</bottom>
-					<width>870</width>
-					<height>76</height>
-					<itemgap>0</itemgap>
-					<align>center</align>
-					<orientation>horizontal</orientation>
-					<control type="label">
-						<bottom>6</bottom>
-						<width>380</width>
-						<height>76</height>
-						<align>right</align>
-						<aligny>top</aligny>
-						<font>Med24</font>
-						<label>$VAR[WidgetView]</label>
-						<textcolor>ff000000</textcolor>
-						<visible>Control.HasFocus(1000)</visible>
-					</control>
-					<control type="label">
-						<bottom>6</bottom>
-						<width>380</width>
-						<height>76</height>
-						<align>right</align>
-						<aligny>top</aligny>
-						<font>Med24</font>
-						<label>$VAR[WidgetView]</label>
-						<textcolor>ff505153</textcolor>
-						<visible>!Control.HasFocus(1000)</visible>
 					</control>
 				</control>
 			</control>

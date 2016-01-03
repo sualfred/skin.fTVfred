@@ -590,82 +590,82 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(1-WidgetView))">HomeSquareInfoItemlayout</include>
-				</itemlayout>
-				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(100).NumItems,1)">
-					<control type="button">
-						<include>HiddenControl</include>
-						<onfocus condition="StringCompare(Container(100).NumItems,2) + Container(100).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
-						<onfocus condition="StringCompare(Container(100).NumItems,2) + Container(100).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
-					</control>
-					<control type="group">
-						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
-						<control type="group">
-							<left>33</left>
-							<control type="image">
-								<width>227</width>
-								<height>334</height>
-								<texture border="0,14,11,14">home/home_button_nf.png</texture>
-							</control>
-							<control type="textbox">
-								<top>2</top>
-								<width>254</width>
-								<height>200</height>
-								<font>Bold34</font>
-								<align>left</align>
-								<textcolor>ffdadada</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-							</control>
-							<control type="image">
-								<width>227</width>
-								<height>334</height>
-								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
-								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
-								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
-							</control>
-							<control type="textbox">
-								<top>2</top>
-								<width>254</width>
-								<height>200</height>
-								<font>Bold34</font>
-								<align>left</align>
-								<textcolor>ff453a18</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
-								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
-								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
-								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-							</control>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
+					</itemlayout>
+					<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(100).NumItems,1)">
+						<control type="button">
+							<include>HiddenControl</include>
+							<onfocus condition="StringCompare(Container(100).NumItems,2) + Container(100).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
+							<onfocus condition="StringCompare(Container(100).NumItems,2) + Container(100).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
+							<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
+							<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
+							<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 						</control>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(1-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<control type="group">
+							<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+							<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+							<control type="group">
+								<left>33</left>
+								<control type="image">
+									<width>227</width>
+									<height>334</height>
+									<texture border="0,14,11,14">home/home_button_nf.png</texture>
+								</control>
+								<control type="textbox">
+									<top>2</top>
+									<width>254</width>
+									<height>200</height>
+									<font>Bold34</font>
+									<align>left</align>
+									<textcolor>ffdadada</textcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+									<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+									<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+								</control>
+								<control type="image">
+									<width>227</width>
+									<height>334</height>
+									<texture border="0,14,11,14">home/home_button_fo.png</texture>
+									<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+									<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+									<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+								</control>
+								<control type="textbox">
+									<top>2</top>
+									<width>254</width>
+									<height>200</height>
+									<font>Bold34</font>
+									<align>left</align>
+									<textcolor>ff453a18</textcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+									<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+									<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+									<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+									<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+								</control>
+							</control>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(100).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(1-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(1-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem1Content</include>
@@ -717,10 +717,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(2-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(200).NumItems,1)">
 					<control type="button">
@@ -780,19 +780,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(2-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>				
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(200).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(2-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem2Content</include>
@@ -844,10 +844,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(2-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(3-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(300).NumItems,1)">
 					<control type="button">
@@ -907,19 +907,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(3-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>			
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(300).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(3-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(3-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem3Content</include>
@@ -971,10 +971,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(4-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(400).NumItems,1)">
 					<control type="button">
@@ -1034,19 +1034,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(4-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>		
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(400).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(4-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(4-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem4Content</include>
@@ -1098,10 +1098,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(5-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(500).NumItems,1)">
 					<control type="button">
@@ -1161,19 +1161,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(5-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>		
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(500).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(5-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(5-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem5Content</include>
@@ -1225,10 +1225,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(6-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(600).NumItems,1)">
 					<control type="button">
@@ -1288,19 +1288,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(6-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>		
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(600).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(6-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(6-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem6Content</include>
@@ -1352,10 +1352,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(7-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container(700).NumItems,1)">
 					<control type="button">
@@ -1415,19 +1415,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(7-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>		
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(700).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(7-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(7-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem7Content</include>
@@ -1479,10 +1479,10 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
-					<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31160])">HomePosterItemlayout</include>
-					<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31159])">HomeWideItemlayout</include>
-					<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31161])">HomeSquareItemlayout</include>
-					<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(8-WidgetView))">HomeSquareInfoItemlayout</include>
+					<include>HomePosterFocusedlayout</include>
+					<include>HomeWideFocusedlayout</include>
+					<include>HomeSquareFocusedlayout</include>
+					<include>HomeSquareInfoFocusedlayout</include>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(800).NumItems,1)">
 					<control type="button">
@@ -1542,19 +1542,19 @@
 								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
 						</control>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(8-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>		
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container(800).NumItems,1)">
 					<control type="group">
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31160])">HomePosterFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31159])">HomeWideFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31161])">HomeSquareFocusedlayout</include>
-						<include condition="StringCompare(Skin.String(8-WidgetView),$LOCALIZE[31203]) | IsEmpty(Skin.String(8-WidgetView))">HomeSquareInfoFocusedlayout</include>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
 				<include>ListItem8Content</include>
