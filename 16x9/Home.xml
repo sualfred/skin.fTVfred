@@ -354,6 +354,9 @@
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(800).CurrentItem,8)">Control.Move(800,-7)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onfocus>
 
+				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
+				<onright>SetProperty(WidgetHasFocus,1,Home)</onright>
+
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget1) + IntegerGreaterThan(Container(100).NumItems,1)">SetFocus(100)</onright>
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget1) + !IntegerGreaterThan(Container(100).NumItems,1)">$INFO[Skin.String(1-WidgetAction-1)]</onright>
 
@@ -401,7 +404,8 @@
 				<focusedlayout height="128" width="284">
 					<control type="button">
 						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturenofocus>-</texturenofocus>						
+						<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 						<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 						<onfocus condition="!StringCompare(Container(9000).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(MainFocus)</onfocus>
 						<onfocus condition="!StringCompare(Container(9000).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(FocusRow)</onfocus>
@@ -601,8 +605,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(100).NumItems,2) + Container(100).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(100).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(100).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -626,7 +630,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(100)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -638,7 +644,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(100)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -724,8 +732,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(200).NumItems,2) + Container(200).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(200).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(200).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -749,7 +757,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(200)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -761,7 +771,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(200)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -847,8 +859,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(300).NumItems,2) + Container(300).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(300).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(300).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -872,7 +884,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(300)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -884,7 +898,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(300)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -970,8 +986,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(400).NumItems,2) + Container(400).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(400).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(400).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -995,7 +1011,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(400)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -1007,7 +1025,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(400)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -1093,8 +1113,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(500).NumItems,2) + Container(500).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(500).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(500).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -1118,7 +1138,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(500)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -1130,7 +1152,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(500)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -1216,8 +1240,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(600).NumItems,2) + Container(600).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(600).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(600).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -1241,7 +1265,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(600)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -1253,7 +1279,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(600)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -1339,8 +1367,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(700).NumItems,2) + Container(700).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(700).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(700).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -1364,7 +1392,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(700)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -1376,7 +1406,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(700)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -1462,8 +1494,8 @@
 						<onfocus condition="IntegerGreaterThan(Container(800).NumItems,2) + Container(800).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="142,167" condition="IntegerGreaterThan(Container(800).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(800).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -1487,7 +1519,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(800)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -1499,7 +1533,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(800)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
@@ -1737,7 +1773,9 @@
 								<width>227</width>
 								<height>334</height>
 								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>Control.HasFocus(901)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 							</control>
@@ -1749,7 +1787,9 @@
 								<align>left</align>
 								<textcolor>ff453a18</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(901)</visible>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
 								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
 								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
 								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
