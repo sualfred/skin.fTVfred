@@ -55,7 +55,7 @@
 					<height>54</height>
 					<font>Reg27</font>
 					<textcolor>ff7f7f7f</textcolor>
-					<label>195</label>
+					<label>$LOCALIZE[16028]</label>
 				</control>
 
 				<!-- Edit -->
