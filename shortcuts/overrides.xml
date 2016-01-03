@@ -48,13 +48,13 @@
 			</node>
 			<node label="2">
 				<shortcut label="31183" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
-				<shortcut label="31184" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://albums/,return)</shortcut>
+				<shortcut label="31184" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Albums.xsp,return)</shortcut>
 				<shortcut label="31185" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
-				<shortcut label="31186" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://artists/,return)</shortcut>
+				<shortcut label="31186" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Artists.xsp,return)</shortcut>
 				<shortcut label="31187" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://genres/,return)</shortcut>
 				<shortcut label="31188" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/albums/,return)</shortcut>
 				<shortcut label="31189" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/songs/,return)</shortcut>
-				<shortcut label="31190" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://songs/,return)</shortcut>
+				<shortcut label="31190" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Songs.xsp,return)</shortcut>
 			</node>
 			<node label="24001">
 				<shortcut label="31512" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,addons://sources/audio/,return)</shortcut>	
