@@ -105,6 +105,7 @@
 					<control type="group">
 						<!-- Numbers -->
 						<control id="1000" type="grouplist">
+							<left>-5</left>
 							<width>788</width>
 							<height>48</height>
 							<itemgap>12</itemgap>
