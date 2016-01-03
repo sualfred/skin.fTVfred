@@ -59,7 +59,10 @@
 					<onfocus condition="StringCompare(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
 					<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
 					<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
-					<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(3)">SetProperty(FocusRow,3_3)</onfocus>					
+					<onfocus condition="StringCompare(Container($PARAM[ID]).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,51,Home)</onfocus>
+					<onfocus condition="StringCompare(Container($PARAM[ID]).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,53,Home)</onfocus>
+					<onfocus condition="!StringCompare(Container($PARAM[ID]).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !StringCompare(Container($PARAM[ID]).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>					
 				</control>
 				<control type="group">
 					<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>

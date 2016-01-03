@@ -127,195 +127,259 @@
 	</variable>
 	<variable name="1-orderby-1">
 		<value condition="SubString(Skin.String(1-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-2">
 		<value condition="SubString(Skin.String(1-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-3">
 		<value condition="SubString(Skin.String(1-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-4">
 		<value condition="SubString(Skin.String(1-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-5">
 		<value condition="SubString(Skin.String(1-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-6">
 		<value condition="SubString(Skin.String(1-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-7">
 		<value condition="SubString(Skin.String(1-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="1-orderby-8">
 		<value condition="SubString(Skin.String(1-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-1">
 		<value condition="SubString(Skin.String(2-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-2">
 		<value condition="SubString(Skin.String(2-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-3">
 		<value condition="SubString(Skin.String(2-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-4">
 		<value condition="SubString(Skin.String(2-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-5">
 		<value condition="SubString(Skin.String(2-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-6">
 		<value condition="SubString(Skin.String(2-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-7">
 		<value condition="SubString(Skin.String(2-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="2-orderby-8">
 		<value condition="SubString(Skin.String(2-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-1">
 		<value condition="SubString(Skin.String(3-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-2">
 		<value condition="SubString(Skin.String(3-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-3">
 		<value condition="SubString(Skin.String(3-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-4">
 		<value condition="SubString(Skin.String(3-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-5">
 		<value condition="SubString(Skin.String(3-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-6">
 		<value condition="SubString(Skin.String(3-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-7">
 		<value condition="SubString(Skin.String(3-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="3-orderby-8">
 		<value condition="SubString(Skin.String(3-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-1">
 		<value condition="SubString(Skin.String(4-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-2">
 		<value condition="SubString(Skin.String(4-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-3">
 		<value condition="SubString(Skin.String(4-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-4">
 		<value condition="SubString(Skin.String(4-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-5">
 		<value condition="SubString(Skin.String(4-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-6">
 		<value condition="SubString(Skin.String(4-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-7">
 		<value condition="SubString(Skin.String(4-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="4-orderby-8">
 		<value condition="SubString(Skin.String(4-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-1">
 		<value condition="SubString(Skin.String(5-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-2">
 		<value condition="SubString(Skin.String(5-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-3">
 		<value condition="SubString(Skin.String(5-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-4">
 		<value condition="SubString(Skin.String(5-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-5">
 		<value condition="SubString(Skin.String(5-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-6">
 		<value condition="SubString(Skin.String(5-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-7">
 		<value condition="SubString(Skin.String(5-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="5-orderby-8">
 		<value condition="SubString(Skin.String(5-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-1">
 		<value condition="SubString(Skin.String(6-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-2">
 		<value condition="SubString(Skin.String(6-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-3">
 		<value condition="SubString(Skin.String(6-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-4">
 		<value condition="SubString(Skin.String(6-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-5">
 		<value condition="SubString(Skin.String(6-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-6">
 		<value condition="SubString(Skin.String(6-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-7">
 		<value condition="SubString(Skin.String(6-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="6-orderby-8">
 		<value condition="SubString(Skin.String(6-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-1">
 		<value condition="SubString(Skin.String(7-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-2">
 		<value condition="SubString(Skin.String(7-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-3">
 		<value condition="SubString(Skin.String(7-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-4">
 		<value condition="SubString(Skin.String(7-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-5">
 		<value condition="SubString(Skin.String(7-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-6">
 		<value condition="SubString(Skin.String(7-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-7">
 		<value condition="SubString(Skin.String(7-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="7-orderby-8">
 		<value condition="SubString(Skin.String(7-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-1">
 		<value condition="SubString(Skin.String(8-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-2">
 		<value condition="SubString(Skin.String(8-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-3">
 		<value condition="SubString(Skin.String(8-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-4">
 		<value condition="SubString(Skin.String(8-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-5">
 		<value condition="SubString(Skin.String(8-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-6">
 		<value condition="SubString(Skin.String(8-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-7">
 		<value condition="SubString(Skin.String(8-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="8-orderby-8">
 		<value condition="SubString(Skin.String(8-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="WidgetLabel-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-1)]</value>

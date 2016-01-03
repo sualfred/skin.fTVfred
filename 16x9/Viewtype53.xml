@@ -3,7 +3,7 @@
 	<include name="Viewtype53">
 		<control type="group">
 			<visible>Control.IsVisible(53)</visible>
-			<!-- List -->
+			<!-- Poster List -->
 			<control id="53" type="fixedlist">
 				<left>-102</left>
 				<top>242</top>
@@ -20,7 +20,8 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>[StringCompare(Window(Home).Property(ForceViewType),53) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]]
+				| [IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]]</visible>
 				<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />

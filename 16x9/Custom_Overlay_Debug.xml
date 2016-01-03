@@ -26,8 +26,37 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[Window(Weather).Property(Day5.Title)]</label>
-				<visible>false</visible>
+				<label>$INFO[Window(Home).Property(ForceViewType)]</label>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>movies</label>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>tvshows</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>artists</label>
+				<visible>Container.Content(artists)</visible>
 			</control>
 			<control type="label">
 				<width>780</width>
