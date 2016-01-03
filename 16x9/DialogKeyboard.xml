@@ -65,7 +65,7 @@
 				<!-- Edit -->
 				<control id="312" type="edit">
 					<left>7</left>
-					<top>535</top>
+					<top>545</top>
 					<width>788</width>
 					<height>48</height>
 					<onup>4000</onup>
@@ -80,11 +80,12 @@
 
 				<!-- Edit Text line -->
 				<control type="image">
-					<top>591</top>
-					<left>6</left>
-					<width>856</width>
-					<height>2</height>
-					<texture border="1">dialogs/KeyboardEditLine.png</texture>
+					<top>515</top>
+					<left>-25</left>
+					<width>918</width>
+					<height>1</height>
+					<colordiffuse>ff7f7f7f</colordiffuse>
+					<texture>dialogs/KeyboardEditLine.png</texture>
 				</control>
 
 				<!-- Keys -->
@@ -144,7 +145,7 @@
 					</control>
 					<!-- Control buttons edit field -->
 					<control id="6000" type="grouplist">
-						<top>366</top>
+						<top>376</top>
 						<width>868</width>
 						<height>44</height>
 						<itemgap>12</itemgap>
@@ -519,7 +520,7 @@
 				<!-- auto completion -->				
 					<control type="list" id="9091">
 						<left>7</left>
-						<top>605</top>
+						<top>615</top>
 						<width>846</width>
 						<height>432</height>
 						<onup>312</onup>

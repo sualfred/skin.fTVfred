@@ -13,14 +13,14 @@
 			<top>-34</top>
 			<width>1920</width>
 			<height>740</height>			
-			<animation easing="inout" effect="slide" end="0,0" start="0,-414" time="120" tween="sine">WindowOpen</animation>
-			<animation easing="inout" effect="slide" end="0,0" start="0,-414" time="120" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="slide" end="0,0" start="0,-444" time="120" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="slide" end="0,0" start="0,-444" time="120" tween="sine">WindowOpen</animation>
 
 			<!-- Background -->
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<width>980</width>
-				<height>414</height>
+				<height>444</height>
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
 			</control>
 			
@@ -61,7 +61,7 @@
 				<!-- Edit -->
 				<control id="4" type="label">
 					<left>7</left>
-					<top>249</top>
+					<top>289</top>
 					<width>788</width>
 					<height>48</height>
 					<onup>4000</onup>
@@ -75,11 +75,12 @@
 
 				<!-- Edit Text line -->
 				<control type="image">
-					<top>305</top>
-					<left>6</left>
-					<width>856</width>
-					<height>2</height>
-					<texture border="1">dialogs/KeyboardEditLine.png</texture>
+					<top>259</top>
+					<left>-25</left>
+					<width>918</width>
+					<height>1</height>
+					<colordiffuse>ff7f7f7f</colordiffuse>
+					<texture>dialogs/KeyboardEditLine.png</texture>
 				</control>
 
 				<!-- Keys -->
@@ -87,7 +88,7 @@
 					<top>171</top>	
 					<!-- Control buttons edit field -->
 					<control id="6000" type="grouplist">
-						<top>80</top>
+						<top>120</top>
 						<width>868</width>
 						<height>44</height>
 						<itemgap>12</itemgap>
