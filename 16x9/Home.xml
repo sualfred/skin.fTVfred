@@ -2187,8 +2187,8 @@
 		<!-- ready to focus -->
 		<control type="button" id="90004">
 			<include>HiddenControl</include>
-			<onfocus condition="StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,1),00:01,silent)</onfocus>
-			<onfocus condition="!StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,0),00:01,silent)</onfocus>
+			<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,1),00:01,silent)</onfocus>
+			<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(9000).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(9000,0),00:01,silent)</onfocus>
 			<onfocus>AlarmClock(preload,ClearProperty(preload,Home),00:01,silent)</onfocus>			
 			<onfocus>AlarmClock(fadeoutdelay,ClearProperty(fadeoutdelay,Home),00:05,silent)</onfocus>			
 		</control>

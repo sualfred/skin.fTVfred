@@ -423,6 +423,28 @@
 					<onclick>Skin.ToggleSetting(HideOSDControls)</onclick>
 					<selected>Skin.HasSetting(HideOSDControls)</selected>
 				</control>
+				<control id="19" type="radiobutton">
+					<width>958</width>
+					<height>84</height>
+					<font>Light32</font>
+					<label>31525</label>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>813</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(SkipSearchItem)</onclick>
+					<selected>Skin.HasSetting(SkipSearchItem)</selected>
+				</control>
 				<control id="21" type="radiobutton">
 					<width>958</width>
 					<height>84</height>

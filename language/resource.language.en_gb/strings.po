@@ -976,3 +976,11 @@ msgstr ""
 msgctxt "#31524"
 msgid "Numeric Input"
 msgstr ""
+
+msgctxt "#31525"
+msgid "Skip Search menu item"
+msgstr ""
+
+msgctxt "#31526"
+msgid "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
+msgstr ""

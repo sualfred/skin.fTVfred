@@ -110,7 +110,7 @@
 					<left>40</left>
 					<top>14</top>
 					<height>30</height>
-					<width>270</width>
+					<width>180</width>
 					<aligny>center</aligny>
 					<font>Bold30</font>
 					<label>$LOCALIZE[31197]</label>
@@ -121,7 +121,7 @@
 					<left>240</left>
 					<top>14</top>
 					<height>30</height>
-					<width>460</width>
+					<width>420</width>
 					<aligny>center</aligny>
 					<font>Bold30</font>
 					<label>$LOCALIZE[31024]</label>
@@ -132,7 +132,7 @@
 					<left>690</left>
 					<top>14</top>
 					<height>30</height>
-					<width>1010</width>
+					<width>820</width>
 					<aligny>center</aligny>
 					<font>Bold30</font>
 					<label>$LOCALIZE[31202]</label>
@@ -143,7 +143,7 @@
 					<left>1540</left>
 					<top>14</top>
 					<height>30</height>
-					<width>1010</width>
+					<width>180</width>
 					<aligny>center</aligny>
 					<font>Bold30</font>
 					<label>$LOCALIZE[31198]</label>
@@ -163,7 +163,7 @@
 						</control>
 						<control type="label">
 							<left>40</left>
-							<width>270</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -178,7 +178,7 @@
 						</control>
 						<control type="label">
 							<left>40</left>
-							<width>270</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
@@ -187,7 +187,7 @@
 						</control>
 						<control type="label">
 							<left>40</left>
-							<width>270</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -233,13 +233,13 @@
 				<!-- Widget label -->
 				<control type="list" id="200">
 					<top>60</top>
-					<width>1740</width>
+					<left>240</left>
+					<width>420</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="84" width="1740">
+					<itemlayout height="84" width="420">
 						<control type="label">
-							<left>240</left>
-							<width>440</width>
+							<width>420</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -247,8 +247,7 @@
 							<visible>!IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>240</left>
-							<width>440</width>
+							<width>420</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -256,10 +255,9 @@
 							<visible>IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="84" width="1740">
+					<focusedlayout height="84" width="420">
 						<control type="label">
-							<left>240</left>
-							<width>440</width>
+							<width>420</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
@@ -267,8 +265,7 @@
 							<visible>Control.HasFocus(20) + !IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>240</left>
-							<width>440</width>
+							<width>420</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -276,8 +273,7 @@
 							<visible>!Control.HasFocus(20) + !IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>240</left>
-							<width>440</width>
+							<width>420</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
@@ -285,8 +281,7 @@
 							<visible>Control.HasFocus(20) + IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>240</left>
-							<width>440</width>
+							<width>420</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -340,13 +335,13 @@
 				<!-- Widget path -->
 				<control type="list" id="300">
 					<top>60</top>
-					<width>1520</width>
+					<left>690</left>
+					<width>820</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="84" width="1760">
+					<itemlayout height="84" width="820">
 						<control type="label">
-							<left>690</left>
-							<width>840</width>
+							<width>820</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -354,8 +349,7 @@
 							<visible>!IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>690</left>
-							<width>840</width>
+							<width>820</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -363,10 +357,9 @@
 							<visible>IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="84" width="1720">
+					<focusedlayout height="84" width="820">
 						<control type="label">
-							<left>690</left>
-							<width>840</width>
+							<width>820</width>
 							<height>84</height>
 							<font>Light32</font>
 							<scroll>true</scroll>
@@ -375,8 +368,7 @@
 							<visible>Control.HasFocus(30) + !IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>690</left>
-							<width>840</width>
+							<width>820</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -384,8 +376,7 @@
 							<visible>!Control.HasFocus(30) + !IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>690</left>
-							<width>840</width>
+							<width>820</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
@@ -393,8 +384,7 @@
 							<visible>Control.HasFocus(30) + IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>690</left>
-							<width>840</width>
+							<width>820</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -448,13 +438,13 @@
 				<!-- Widget layout -->
 				<control type="list" id="400">
 					<top>60</top>
-					<width>1740</width>
+					<left>1540</left>
+					<width>180</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="84" width="1740">
+					<itemlayout height="84" width="180">
 						<control type="label">
-							<left>1540</left>
-							<width>1010</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -462,8 +452,7 @@
 							<visible>!IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>1540</left>
-							<width>1010</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
@@ -471,10 +460,9 @@
 							<visible>IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="84" width="1690">
+					<focusedlayout height="84" width="180">
 						<control type="label">
-							<left>1540</left>
-							<width>1010</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<scroll>true</scroll>
@@ -483,8 +471,7 @@
 							<visible>Control.HasFocus(40) + !IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>1540</left>
-							<width>1010</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
@@ -492,8 +479,7 @@
 							<visible>!Control.HasFocus(40) + !IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>1540</left>
-							<width>1010</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
@@ -501,8 +487,7 @@
 							<visible>Control.HasFocus(40) + IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<left>1540</left>
-							<width>1010</width>
+							<width>180</width>
 							<height>84</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>

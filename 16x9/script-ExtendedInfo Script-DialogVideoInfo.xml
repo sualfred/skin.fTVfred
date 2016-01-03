@@ -2,7 +2,6 @@
 <window>
 	<!-- script-ExtendedInfo Script-DialogVideoInfo -->
 	<defaultcontrol always="true">999</defaultcontrol>
-	<zorder>2</zorder>
 	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onunload>ClearProperty(ExActor1,home)</onunload>
 	<onunload>ClearProperty(ExActor2,home)</onunload>
