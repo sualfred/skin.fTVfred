@@ -850,7 +850,7 @@ msgid "Widget Action"
 msgstr "Widget Aktion"
 
 msgctxt "#31203"
-msgid "Quadrat Info"
+msgid "Square Info"
 msgstr "Quadrat Info"
 
 msgctxt "#31204"
