@@ -80,7 +80,7 @@
 					</control>
 					<control type="group">
 						<animation center="150,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-						<animation center="150,288" condition="Container(53).OnNext | Container(53).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+						<animation center="150,288" condition="Container(60).OnNext | Container(60).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 						<animation center="150,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 						<control type="image">
 							<top>48</top>
@@ -109,8 +109,8 @@
 							<width>416</width>
 							<height>576</height>
 							<texture border="51">views/shadow_fo.png</texture>
-							<animation center="auto" condition="Control.HasFocus(53) | Container(53).OnNext | Container(53).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-							<animation center="auto" condition="Container(53).OnNext | Container(53).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+							<animation center="auto" condition="Control.HasFocus(60) | Container(60).OnNext | Container(60).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+							<animation center="auto" condition="Container(60).OnNext | Container(60).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
 						</control>
 						<control type="image">
 							<left>-48</left>
@@ -118,16 +118,16 @@
 							<width>416</width>
 							<height>576</height>
 							<texture border="66,66,51,51">views/shadow_nf.png</texture>
-							<animation center="auto" condition="Control.HasFocus(53)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-							<animation center="auto" condition="Control.HasFocus(53)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+							<animation center="auto" condition="Control.HasFocus(60)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+							<animation center="auto" condition="Control.HasFocus(60)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 						</control>
 						<control type="image">
 							<top>48</top>
 							<width>320</width>
 							<height>480</height>
 							<texture>views/OverlayNF.png</texture>
-							<animation center="auto" condition="Control.HasFocus(53)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-							<animation center="auto" condition="Control.HasFocus(53)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+							<animation center="auto" condition="Control.HasFocus(60)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+							<animation center="auto" condition="Control.HasFocus(60)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 						</control>
 					</control>
 				</focusedlayout>
