@@ -1529,6 +1529,8 @@
 		<value condition="Window.IsVisible(servicesettings)">$NUMBER[9]</value>
 	</variable>
 	<variable name="ContainerID">
+		<value condition="Control.IsVisible(60)">60</value>
+		<value condition="Control.IsVisible(61)">61</value>
 		<value condition="Control.IsVisible(50)">50</value>
 		<value condition="Control.IsVisible(51)">51</value>
 		<value condition="Control.IsVisible(52)">52</value>
