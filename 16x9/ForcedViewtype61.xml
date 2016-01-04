@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Viewtype51">
+	<include name="ForcedViewtype61">
 		<control type="group">
-			<visible>Control.IsVisible(51)</visible>
+			<visible>Control.IsVisible(61)</visible>
 			<!-- Wide List -->
-			<control id="51" type="fixedlist">
+			<control id="61" type="fixedlist">
 				<left>-374</left>
 				<top>242</top>
 				<width>2344</width>
@@ -20,7 +20,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!StringCompare(Window(Home).Property(ForceViewType),60) + !StringCompare(Window(Home).Property(ForceViewType),61) + IsEmpty(Container.PluginName) + [[Skin.HasSetting(WideMovieArt) + [Container.Content(movies) | Container.Content(sets)]] | [Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>StringCompare(Window(Home).Property(ForceViewType),61) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(artists)]</visible>
 				<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />

@@ -8,7 +8,7 @@
 	<onunload condition="Window.Next(home)">Control.Move($VAR[ContainerID],$INFO[Container.CurrentItem,-])</onunload>
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onunload>	
 	<onunload>ClearProperty(Window(Home).Property(ForceViewType))</onunload>
-	<views>51,54,50,56,55,57</views>
+	<views>61,54,50,56,55,57</views>
 	<controls>
 		<control id="2" type="button">
 			<include>HiddenControl</include>
@@ -20,8 +20,8 @@
 		<!-- Fanart -->
 		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
 		<!-- Views -->
+		<include>ForcedViewtype61</include>
 		<include>Viewtype50</include>
-		<include>Viewtype51</include>
 		<include>Viewtype54</include>
 		<include>Viewtype55</include>
 		<include>Viewtype56</include>
