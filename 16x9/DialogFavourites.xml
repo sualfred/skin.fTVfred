@@ -78,12 +78,12 @@
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 				</animation>
-				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow))" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
-				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
-				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
-				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
-				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
-				<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow))" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
 				<itemlayout height="576" width="436">
 					<control type="group">
 						<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
