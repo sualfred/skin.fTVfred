@@ -20,7 +20,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!StringCompare(Window(Home).Property(ForceViewType),60) + !StringCompare(Window(Home).Property(ForceViewType),61) + IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
 				<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
