@@ -401,7 +401,7 @@
 				</control>
 				<!-- Play/Browse Button -->
 				<control id="8" type="togglebutton">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -423,7 +423,7 @@
 				</control>
 				<!-- Trailer button -->
 				<control id="1003" type="button">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -443,7 +443,7 @@
 				</control>
 				<!-- Refresh Button -->
 				<control id="6" type="button">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -461,7 +461,7 @@
 				</control>
 				<!-- Get Thumb Button -->
 				<control id="10" type="button">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -479,7 +479,7 @@
 				</control>
 				<!-- Artwork Downloader Button -->
 				<control id="20" type="button">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -499,7 +499,7 @@
 				</control>
 				<!-- Cinema Experience Button -->
 				<control id="21" type="button">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -519,7 +519,7 @@
 				</control>
 				<!-- User Rating Button -->
 				<control id="7" type="button">
-					<width min="104" max="204">auto</width>
+					<width min="104" max="224">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
