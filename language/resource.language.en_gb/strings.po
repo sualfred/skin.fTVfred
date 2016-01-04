@@ -984,3 +984,19 @@ msgstr ""
 msgctxt "#31526"
 msgid "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
 msgstr ""
+
+msgctxt "#31527"
+msgid "'Wide' for TV Shows / Movies / Sets / Artists"
+msgstr ""
+
+msgctxt "#31528"
+msgid "'Poster' for TV Shows / Movies / Sets"
+msgstr ""
+
+msgctxt "#31529"
+msgid "'Square' for Music / Add-ons"
+msgstr ""
+
+msgctxt "#31530"
+msgid "'Square Info' for Music / Add-ons"
+msgstr ""

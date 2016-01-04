@@ -850,8 +850,8 @@ msgid "Widget Action"
 msgstr "Widget Aktion"
 
 msgctxt "#31203"
-msgid "Square Info"
-msgstr "Square Info"
+msgid "Quadrat Info"
+msgstr "Quadrat Info"
 
 msgctxt "#31204"
 msgid "Titles with"
@@ -984,3 +984,19 @@ msgstr "Überspringe 'Suche' Menüeintrag"
 msgctxt "#31526"
 msgid "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
 msgstr "Aktiviere diese Option, falls dein erstes Hauptmenü-Item 'Suche' ist und du automatisch den nächsten Eintrag fokusiert haben willst nachdem Kodi gestaret ist."
+
+msgctxt "#31527"
+msgid "'Wide' for TV Shows / Movies / Sets / Artists"
+msgstr "'Breit' für Serien / Filme / Sets / Interpreten"
+
+msgctxt "#31528"
+msgid "'Poster' for TV Shows / Movies / Sets"
+msgstr "'Poster' für Serien / Filme / Sets"
+
+msgctxt "#31529"
+msgid "'Square' for Music / Add-ons"
+msgstr "'Quadrat' für Music / Add-ons"
+
+msgctxt "#31530"
+msgid "'Square Info' for Music / Add-ons"
+msgstr "'Quadrat Info' für Music / Add-ons"

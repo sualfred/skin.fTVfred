@@ -500,13 +500,13 @@
 							<label>$VAR[WidgetStyle-1]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -514,13 +514,13 @@
 							<label>$VAR[WidgetStyle-2]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -528,13 +528,13 @@
 							<label>$VAR[WidgetStyle-3]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -542,13 +542,13 @@
 							<label>$VAR[WidgetStyle-4]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -556,13 +556,13 @@
 							<label>$VAR[WidgetStyle-5]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -570,13 +570,13 @@
 							<label>$VAR[WidgetStyle-6]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -584,13 +584,13 @@
 							<label>$VAR[WidgetStyle-7]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
@@ -598,13 +598,13 @@
 							<label>$VAR[WidgetStyle-8]</label>
 							<label2>$LOCALIZE[31203]</label2>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31159])</onclick>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31160])</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
 							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31161])</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
 							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31203])</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
