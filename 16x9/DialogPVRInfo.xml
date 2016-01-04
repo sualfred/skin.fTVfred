@@ -85,7 +85,7 @@
 				<!-- Button grouplist -->
 				<control type="grouplist" id="2000">
 					<centerleft>50%</centerleft>
-					<bottom>12</bottom>
+					<bottom>24</bottom>
 					<width>1540</width>
 					<height>76</height>
 					<itemgap>0</itemgap>
