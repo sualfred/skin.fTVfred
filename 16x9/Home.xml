@@ -290,13 +290,13 @@
 				<height>942</height>
 				<onup>noop</onup>
 				<onup>SetProperty(Movement,1)</onup>
-				<onup>ClearProperty(ForceViewType,home)</onup>
 				<ondown>noop</ondown>
 				<ondown>ClearProperty(Movement)</ondown>
-				<ondown>ClearProperty(ForceViewType,home)</ondown>
-				<onleft>noop</onleft>			
-				
+				<onleft>noop</onleft>
+				<onright>ClearProperty(MainMenuFocus,home)</onright>
+
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
+
 				<!-- workaround to move the focused row after startup -->
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(100).CurrentItem,2)">Control.Move(100,-1)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(100).CurrentItem,3)">Control.Move(100,-2)</onfocus>
