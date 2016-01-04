@@ -272,6 +272,10 @@
 				<include>HiddenHomeList</include>
 				<content sortby="$VAR[8-orderby-8]" limit="6">$INFO[Skin.String(8-WidgetList-8)]</content>
 			</control>
+			<control id="899" type="list">
+				<include>HiddenHomeList</include>
+				<content sortby="$VAR[8-orderby-8]" limit="6">favourites://</content>
+			</control>
 			<!--livetv hiddenlist-->	
 			<control id="888" type="list">
 				<include>HiddenHomeList</include>
@@ -594,130 +598,40 @@
 				<param name="widget">widget8</param>
 				<param name="content">ListItem8Content</param>
 			</include>
-
 			<!-- Favourites widget -->
 			<control id="900" type="fixedlist">
-				<left>-3</left>
-				<top>252</top>
-				<width>2200</width>
-				<height>576</height>
-				<focusposition>1</focusposition>
+				<left>419</left>
+				<top>-367</top>
+				<width>2100</width>
+				<height>1500</height>
+				<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+				<onup>noop</onup>
+				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+				<ondown>noop</ondown>
+				<onleft>9000</onleft>
+				<onright>Select</onright>
+				<onback>9000</onback>
+				<movement>1</movement>
+				<preloaditems>2</preloaditems>
+				<focusposition>2</focusposition>
 				<viewtype label="">list</viewtype>
-				<orientation>horizontal</orientation>
-				<include>WindowHomeFadeAnimation</include>
+				<orientation>vertical</orientation>
+				<defaultcontrol>0</defaultcontrol>
+				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<include>HomeWidgetsAnimation</include>
-				<visible>StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
-				<itemlayout height="576" width="436">
-					<control type="image">
-						<top>83</top>
-						<width>408</width>
-						<height>408</height>
-						<texture border="2">common/default_empty.png</texture>
-					</control>
-					<control type="image">
-						<top>68</top>
-						<width>419</width>
-						<height>440</height>
-						<bordersize>0,17,13,17</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-					</control>
-					<control type="image">
-						<top>83</top>
-						<width>408</width>
-						<height>408</height>
-						<texture border="2">views/season_overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>14</left>
-						<top>398</top>
-						<width>53</width>
-						<height>53</height>
-						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-					</control>
-					<control type="label">
-						<left>83</left>
-						<top>422</top>
-						<width>311</width>
-						<height>36</height>
-						<font>Bold36</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-					</control>
-					<control type="label">
-						<left>14</left>
-						<top>422</top>
-						<width>379</width>
-						<height>36</height>
-						<font>Bold36</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-					</control>
+				<include>WindowHomeFadeAnimation</include>
+				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+				<animation condition="true" effect="slide" end="-304,0">Conditional</animation>
+				<itemlayout height="370" width="2000">
+					<include>HomeSquareInfoItemlayout</include>
 				</itemlayout>
-				<focusedlayout height="576" width="436">
-					<control type="image">
-						<top>83</top>
-						<width>408</width>
-						<height>408</height>
-						<texture border="2">common/default_empty.png</texture>
-					</control>
-					<control type="image">
-						<top>68</top>
-						<width>419</width>
-						<height>440</height>
-						<bordersize>0,17,13,17</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-					</control>
-					<control type="image">
-						<top>83</top>
-						<width>408</width>
-						<height>408</height>
-						<texture border="2">views/season_overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>14</left>
-						<top>398</top>
-						<width>53</width>
-						<height>53</height>
-						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-					</control>
-					<control type="label">
-						<left>83</left>
-						<top>422</top>
-						<width>311</width>
-						<height>36</height>
-						<font>Bold36</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
-					</control>
-					<control type="label">
-						<left>14</left>
-						<top>422</top>
-						<width>379</width>
-						<height>36</height>
-						<font>Bold36</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Label)</visible>
+				<focusedlayout height="370" width="2000">
+					<control type="group">
+						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
+						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
 				</focusedlayout>
-				<content limit="4">favourites://</content>
+				<include>FavouritesContent</include>				
 			</control>
 			<!-- PVR widget -->
 			<control id="901" type="fixedlist">
@@ -1166,6 +1080,7 @@
 				| Container(808).IsUpdating
 				| Container(888).IsUpdating
 				| Container(889).IsUpdating
+				| Container(899).IsUpdating
 				| Container(901).IsUpdating]
 			</visible>
 		</control>

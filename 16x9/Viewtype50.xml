@@ -9,8 +9,8 @@
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<onback condition="Window.IsVisible(tvchannels) + !StringCompare(Container(50).CurrentItem,0)">Control.Move(50,$INFO[Container(50).CurrentItem,-])</onback>
-				<onback condition="Window.IsVisible(tvchannels) + !StringCompare(Container(50).CurrentItem,0)">Control.Move(50,1)</onback>
+				<onback condition="!StringCompare(Container(50).CurrentItem,0)">Control.Move(50,$INFO[Container(50).CurrentItem,-])</onback>
+				<onback condition="!StringCompare(Container(50).CurrentItem,0)">Control.Move(50,1)</onback>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>

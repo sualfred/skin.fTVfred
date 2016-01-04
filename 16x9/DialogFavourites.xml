@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<onload>Control.Move(450,$INFO[Container(450).CurrentItem,-])</onload>
 	<onload>Control.Move(450,1)</onload>
-	<onload>SetProperty(MainMenuFocus,1,home)</onload>
+	<!--<onload>SetProperty(MainMenuFocus,1,home)</onload>-->
 	<controls>
 		<!-- Heading / Current item / Total items -->
 		<control type="grouplist">
@@ -59,7 +59,7 @@
 		<!-- List -->
 		<control id="450" type="fixedlist">
 			<left>-238</left>
-			<top>267</top>
+			<top>242</top>
 			<width>2200</width>
 			<height>576</height>
 			<onup>Back</onup>
@@ -77,7 +77,12 @@
 				<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 				<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 			</animation>
-			<animation easing="inout" effect="slide" end="0,0" start="193,-15" time="540" tween="sine" reversible="false">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
 			<itemlayout height="576" width="436">
 				<control type="group">
 					<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -92,7 +97,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
 						<left>-48</left>
@@ -162,7 +167,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
 						<left>-48</left>

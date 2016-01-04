@@ -47,10 +47,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</control>
-				<include>HomePosterFocusedlayout</include>
-				<include>HomeWideFocusedlayout</include>
-				<include>HomeSquareFocusedlayout</include>
-				<include>HomeSquareInfoFocusedlayout</include>
+				<include>HomePosterItemlayout</include>
+				<include>HomeWideItemlayout</include>
+				<include>HomeSquareItemlayout</include>
+				<include>HomeSquareInfoItemlayout</include>
 			</itemlayout>
 			<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,1)">
 				<control type="button">
@@ -4618,6 +4618,51 @@
 			</item>
 		</content>
 	</include>
+
+	<!-- Favourites Content -->
+	<include name="FavouritesContent">
+		<content>
+			<item>
+				<label>$LOCALIZE[10134]</label>
+				<visible>!IsEmpty(Container(899).ListItemPosition(0).Label)</visible>
+				<property name="Icon1">$INFO[Container(899).ListItemPosition(0).Icon]</property>
+				<property name="Icon2">$INFO[Container(899).ListItemPosition(1).Icon]</property>
+				<property name="Icon3">$INFO[Container(899).ListItemPosition(2).Icon]</property>
+				<property name="Icon4">$INFO[Container(899).ListItemPosition(3).Icon]</property>
+				<property name="Icon5">$INFO[Container(899).ListItemPosition(4).Icon]</property>
+				<property name="Icon6">$INFO[Container(899).ListItemPosition(5).Icon]</property>
+				<property name="InfoLabel1">$INFO[Container(899).ListItemPosition(0).Label]</property>
+				<property name="InfoLabel2">$INFO[Container(899).ListItemPosition(1).Label]</property>
+				<property name="InfoLabel3">$INFO[Container(899).ListItemPosition(2).Label]</property>
+				<property name="InfoLabel4">$INFO[Container(899).ListItemPosition(3).Label]</property>
+				<property name="InfoLabel5">$INFO[Container(899).ListItemPosition(4).Label]</property>
+				<property name="InfoLabel6">$INFO[Container(899).ListItemPosition(5).Label]</property>
+				<property name="Overlay1">$INFO[Container(899).ListItemPosition(0).Overlay]</property>
+				<property name="Overlay2">$INFO[Container(899).ListItemPosition(1).Overlay]</property>
+				<property name="Overlay3">$INFO[Container(899).ListItemPosition(2).Overlay]</property>
+				<property name="Overlay4">$INFO[Container(899).ListItemPosition(3).Overlay]</property>
+				<property name="Overlay5">$INFO[Container(899).ListItemPosition(4).Overlay]</property>
+				<property name="Overlay6">$INFO[Container(899).ListItemPosition(5).Overlay]</property>
+				<property name="VideoResolution1">$INFO[Container(899).ListItemPosition(0).VideoResolution]</property>
+				<property name="VideoResolution2">$INFO[Container(899).ListItemPosition(1).VideoResolution]</property>
+				<property name="VideoResolution3">$INFO[Container(899).ListItemPosition(2).VideoResolution]</property>
+				<property name="VideoResolution4">$INFO[Container(899).ListItemPosition(3).VideoResolution]</property>
+				<property name="VideoResolution5">$INFO[Container(899).ListItemPosition(4).VideoResolution]</property>
+				<property name="VideoResolution6">$INFO[Container(899).ListItemPosition(5).VideoResolution]</property>
+				<property name="ArtFTV1">$INFO[Container(899).ListItemPosition(0).Art(ftv)]</property>
+				<property name="ArtFTV2">$INFO[Container(899).ListItemPosition(1).Art(ftv)]</property>
+				<property name="ArtFTV3">$INFO[Container(899).ListItemPosition(2).Art(ftv)]</property>
+				<property name="ArtFanart1">$INFO[Container(899).ListItemPosition(0).Art(fanart)]</property>
+				<property name="ArtFanart2">$INFO[Container(899).ListItemPosition(1).Art(fanart)]</property>
+				<property name="ArtFanart3">$INFO[Container(899).ListItemPosition(2).Art(fanart)]</property>
+				<property name="ArtLogo1">$INFO[Container(899).ListItemPosition(0).Art(clearlogo)]</property>
+				<property name="ArtLogo2">$INFO[Container(899).ListItemPosition(1).Art(clearlogo)]</property>
+				<property name="ArtLogo3">$INFO[Container(899).ListItemPosition(2).Art(clearlogo)]</property>
+				<onclick>ActivateWindow(Favourites)</onclick>
+			</item>
+		</content>
+	</include>
+
 	<!-- List Item LiveTV Content -->
 	<include name="ListItemLiveTVContent">
 		<content>
