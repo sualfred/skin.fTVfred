@@ -104,6 +104,7 @@
 			<movement>3</movement>
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">1</defaultcontrol>
+			<animation effect="slide" time="0" end="-114,0" condition="StringCompare(Container(6000).NumItems,2) | StringCompare(Container(6000).NumItems,4) | StringCompare(Container(6000).NumItems,6)">Conditional</animation>
 			<itemlayout height="228" width="228">
 				<control type="image">
 					<left>20</left>

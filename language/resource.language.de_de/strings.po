@@ -997,7 +997,7 @@ msgstr "'Quadrat Info' für Music / Add-ons"
 
 msgctxt "#31531"
 msgid "loading"
-msgstr "lädt"
+msgstr "loading"
 
 msgctxt "#31532"
 msgid "updating widgets"
