@@ -1782,6 +1782,13 @@
 					<top>13</top>
 					<width>58</width>
 					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
 					<texture>views/OverlayWatched.png</texture>
 					<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
 				</control>
@@ -1837,6 +1844,13 @@
 					<top>13</top>
 					<width>58</width>
 					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
 					<texture>views/OverlayWatched.png</texture>
 					<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
 				</control>
@@ -1887,6 +1901,13 @@
 					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
 					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -1952,6 +1973,13 @@
 					<top>13</top>
 					<width>58</width>
 					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
 					<texture>views/OverlayWatched.png</texture>
 					<visible>StringCompare(ListItem.Property(Overlay1),OverlayWatched.png)</visible>
 				</control>
@@ -2009,6 +2037,13 @@
 					<top>13</top>
 					<width>58</width>
 					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
 					<texture>views/OverlayWatched.png</texture>
 					<visible>StringCompare(ListItem.Property(Overlay2),OverlayWatched.png)</visible>
 				</control>
@@ -2061,6 +2096,13 @@
 					<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
 					<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 					<visible>IsEmpty(ListItem.Property(ArtFTV3)) + IsEmpty(ListItem.Property(ArtFanart3))</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>

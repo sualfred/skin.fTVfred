@@ -379,11 +379,11 @@ msgid "Current Playlist"
 msgstr ""
 
 msgctxt "#31089"
-msgid "View[CR]Options"
+msgid "View Options"
 msgstr ""
 
 msgctxt "#31090"
-msgid "Update[CR]Library"
+msgid "Update Library"
 msgstr ""
 
 msgctxt "#31091"
