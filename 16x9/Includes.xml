@@ -2,6 +2,7 @@
 <includes>
 	<include file="Animations.xml" />
 	<include file="Defaults.xml" />
+	<include file="Parameters.xml" />
 	<include file="Includes_Home_Widgets_Setup.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Includes_Keyboard.xml" />

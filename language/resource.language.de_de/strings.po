@@ -1006,3 +1006,7 @@ msgstr "update widgets"
 msgctxt "#31533"
 msgid "done!"
 msgstr "fertig!"
+
+msgctxt "#31534"
+msgid "Air Time"
+msgstr "Sendetermin"
