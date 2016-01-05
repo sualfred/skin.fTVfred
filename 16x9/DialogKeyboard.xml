@@ -28,6 +28,8 @@
 				<visible>IntegerGreaterThan(Container(9091).NumItems,0)</visible>
 			</control>
 			
+
+
 			<!-- Control group -->
 			<control type="group">				
 				<top>48</top>
@@ -61,6 +63,68 @@
 					<textcolor>ff7f7f7f</textcolor>
 					<label>16028</label>
 				</control>
+
+				<!-- auto completion -->				
+				<control type="list" id="9091">
+					<left>7</left>
+					<top>607</top>
+					<width>846</width>
+					<height>432</height>
+					<onup>312</onup>
+					<content limit="9">plugin://script.extendedinfo?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]</content>
+					<width>1068</width>
+					<onup>312</onup>
+					<ondown>noop</ondown>
+					<onleft>300</onleft>
+					<onright>300</onright>
+					<onback>noop</onback>
+					<orientation>vertical</orientation>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="48" width="846">
+						<control type="label">
+							<width>846</width>
+							<height>48</height>
+							<font>Light39</font>
+							<textcolor>ff808080</textcolor>
+							<label>$INFO[ListItem.Label]</label>  
+						</control>
+					</itemlayout>
+					<focusedlayout height="48" width="846">						
+						<control type="label">
+							<width>846</width>
+							<height>48</height>
+							<font>Light39</font>
+							<textcolor>ffffc24b</textcolor>
+							<label>$INFO[ListItem.Label]</label>  
+							<visible>Control.HasFocus(9091)</visible> 
+						</control>	
+						<control type="label">
+							<width>846</width>
+							<height>48</height>
+							<font>Light39</font>
+							<textcolor>ff808080</textcolor>
+							<label>$INFO[ListItem.Label]</label>  
+							<visible>!Control.HasFocus(9091)</visible> 
+						</control>		
+					</focusedlayout>
+				</control>
+
+				<!--<control type="image">
+					<top>607</top>
+					<width>846</width>
+					<height>84</height>
+					<visible>Container(9091).HasPrevious + !Container(9091).Position(0)</visible>
+					<texture border="2" diffuse="settings/mask.png" flipy="true">settings/mask_back.png</texture>					
+					<animation effect="slide" tween="linear" easing="inout" end="0,-25" time="120" condition="Container(9091).Position(0) | Container(9091).Position(1)">Conditional</animation>
+				</control>
+				<control type="image">
+					<top>955</top>
+					<width>846</width>
+					<height>84</height>
+					<visible>Container(9091).HasNext + !Container(9091).Position(8)</visible>
+					<texture border="2" diffuse="settings/mask.png">settings/mask_back.png</texture>
+					<animation effect="slide" tween="linear" easing="inout" end="0,25" time="120" condition="Container(9091).Position(7) | Container(9091).Position(8)">Conditional</animation>
+				</control>-->
 
 				<!-- Edit -->
 				<control id="312" type="edit">
@@ -516,53 +580,6 @@
 					</control>
 
 				</control>
-
-				<!-- auto completion -->				
-					<control type="list" id="9091">
-						<left>7</left>
-						<top>607</top>
-						<width>846</width>
-						<height>432</height>
-						<onup>312</onup>
-						<content limit="9">plugin://script.extendedinfo?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]</content>
-						<width>1068</width>
-						<onup>312</onup>
-						<ondown>noop</ondown>
-						<onleft>300</onleft>
-						<onright>300</onright>
-						<onback>noop</onback>
-						<focusposition>0</focusposition>
-						<orientation>vertical</orientation>
-						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<itemlayout height="48" width="846">
-							<control type="label">
-								<width>846</width>
-								<height>48</height>
-								<font>Light39</font>
-								<textcolor>ff808080</textcolor>
-								<label>$INFO[ListItem.Label]</label>  
-							</control>
-						</itemlayout>
-						<focusedlayout height="48" width="846">						
-							<control type="label">
-								<width>846</width>
-								<height>48</height>
-								<font>Light39</font>
-								<textcolor>ffffc24b</textcolor>
-								<label>$INFO[ListItem.Label]</label>  
-								<visible>Control.HasFocus(9091)</visible> 
-							</control>	
-							<control type="label">
-								<width>846</width>
-								<height>48</height>
-								<font>Light39</font>
-								<textcolor>ff808080</textcolor>
-								<label>$INFO[ListItem.Label]</label>  
-								<visible>!Control.HasFocus(9091)</visible> 
-							</control>		
-						</focusedlayout>
-					</control>
-
 			</control>
 		</control>
 	</controls>
