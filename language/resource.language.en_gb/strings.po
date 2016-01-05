@@ -1016,3 +1016,15 @@ msgstr ""
 msgctxt "#31534"
 msgid "Air Time"
 msgstr ""
+
+msgctxt "#31535"
+msgid "Warning: No mouse support"
+msgstr ""
+
+msgctxt "#31536"
+msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I do this for you?"
+msgstr ""
+
+msgctxt "#31537"
+msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
+msgstr ""

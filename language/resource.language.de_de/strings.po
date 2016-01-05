@@ -1010,3 +1010,15 @@ msgstr "fertig!"
 msgctxt "#31534"
 msgid "Air Time"
 msgstr "Sendetermin"
+
+msgctxt "#31535"
+msgid "Warning: No mouse support"
+msgstr "Warnung: Keine Maus-Unterstützung!"
+
+msgctxt "#31536"
+msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I do this for you?"
+msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Soll ich das für dich tun?"
+
+msgctxt "#31537"
+msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
+msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Andernfalls kann es zu Problemen im Betrieb führen."

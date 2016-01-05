@@ -2,9 +2,9 @@
 <window>		
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">10</defaultcontrol>				
-	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)</onload>
+	<!--<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)</onload>
 	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)</onload>
-	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(musiclibrary.showallitems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)</onload>
+	<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(musiclibrary.showallitems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)</onload>-->
 	<onload>SetProperty(preload,1,Home)</onload>	
 	<controls>
 		<!-- splash -->
@@ -25,8 +25,16 @@
 			<height>200</height>	
 			<label>31531</label>						
 		</control>
+		<!-- ask to change stuff -->
+		<control type="button" id="10">							
+			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31535],text=$LOCALIZE[31536],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)||SetFocus(20),noaction=SetFocus(20),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
+			<onfocus condition="!System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.toolbox,info=okdialog,header=$LOCALIZE[31535],text=$LOCALIZE[31537])</onfocus>
+			<onfocus condition="!System.GetBool(input.enablemouse)">SetFocus(20)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		</control>
 		<!-- switch to home -->
-		<control type="button" id="10">			
+		<control type="button" id="20">			
 			<onfocus>SetProperty(preload,1,Home)</onfocus>			
 			<!-- workaround to fill the tv channel list correclty -->						
 			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent)</onfocus>
