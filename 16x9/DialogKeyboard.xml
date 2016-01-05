@@ -520,7 +520,7 @@
 				<!-- auto completion -->				
 					<control type="list" id="9091">
 						<left>7</left>
-						<top>615</top>
+						<top>607</top>
 						<width>846</width>
 						<height>432</height>
 						<onup>312</onup>
