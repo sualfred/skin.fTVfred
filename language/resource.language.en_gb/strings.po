@@ -1000,3 +1000,15 @@ msgstr ""
 msgctxt "#31530"
 msgid "'Square Info' for Music / Add-ons"
 msgstr ""
+
+msgctxt "#31531"
+msgid "loading"
+msgstr ""
+
+msgctxt "#31532"
+msgid "updating widgets"
+msgstr ""
+
+msgctxt "#31533"
+msgid "done!"
+msgstr ""

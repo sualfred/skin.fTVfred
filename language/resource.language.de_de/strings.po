@@ -17,42 +17,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.6\n"
 
-#, fuzzy
 msgctxt "#31100"
 msgid "Photos"
 msgstr "Bilder"
 
-#, fuzzy
 msgctxt "#31001"
 msgid "US"
 msgstr "US"
 
-#, fuzzy
 msgctxt "#31002"
 msgid "UK"
 msgstr "UK"
 
-#, fuzzy
 msgctxt "#31003"
 msgid "Germany"
 msgstr "Deutschland"
 
-#, fuzzy
 msgctxt "#31004"
 msgid "minute"
 msgstr "Minute"
 
-#, fuzzy
 msgctxt "#31005"
 msgid "hour"
 msgstr "Stunde"
 
-#, fuzzy
 msgctxt "#31006"
 msgid "Starts at"
 msgstr "Startet bei"
 
-#, fuzzy
 msgctxt "#31101"
 msgid "Apps"
 msgstr "Apps"
@@ -69,122 +61,98 @@ msgctxt "#31104"
 msgid "Cinema Experience"
 msgstr ""
 
-#, fuzzy
 msgctxt "#31000"
 msgid "Audio Options"
 msgstr "Audio Optionen"
 
-#, fuzzy
 msgctxt "#31007"
 msgid "System music files"
 msgstr "System-Musikdateien"
 
-#, fuzzy
 msgctxt "#31008"
 msgid "Current selection"
 msgstr "Aktuelle Auswahl"
 
-#, fuzzy
 msgctxt "#31014"
 msgid "Next Movie"
 msgstr "Nächster Film"
 
-#, fuzzy
 msgctxt "#31015"
 msgid "Next Video"
 msgstr "Nächstes Video"
 
-#, fuzzy
 msgctxt "#31009"
 msgid "Open playlist"
 msgstr "Wiedergabeliste öffnen"
 
-#, fuzzy
 msgctxt "#31017"
 msgid "View all of your enabled and disabled add-ons."
 msgstr "Aktivierte und deaktivierte Addons anzeigen"
 
-#, fuzzy
 msgctxt "#31018"
 msgid "View add-ons that have updates available."
 msgstr "Addons mit verfügbaren Aktualisierungen anzeigen"
 
-#, fuzzy
 msgctxt "#31019"
 msgid "View add-ons that are currently being downloaded."
 msgstr "Addons anzeigen, die gerade heruntergeladen werden"
 
-#, fuzzy
 msgctxt "#31020"
 msgid "View all the system add-ons including Dependencies, Orphaned Dependencies, and Running add-ons."
 msgstr "Systemaddons inklusive Abhängigkeiten, verweisten Abhängigkeiten und[CR]laufende Addons anzeigen"
 
-#, fuzzy
 msgctxt "#31021"
 msgid "Download add-ons from your installed repos."
 msgstr "Addons aus den installierten Repositories herunterladen"
 
-#, fuzzy
 msgctxt "#31010"
 msgid "Save playlist"
 msgstr "Wiedergabeliste speichern"
 
-#, fuzzy
 msgctxt "#31011"
 msgid "Close playlist"
 msgstr "Wiedergabeliste schließen"
 
-#, fuzzy
 msgctxt "#31012"
 msgid "Current playlist"
 msgstr "Aktuelle Wiedergabeliste"
 
-#, fuzzy
 msgctxt "#31013"
 msgid "Muted"
 msgstr "Stumm"
 
-#, fuzzy
 msgctxt "#31016"
 msgid "Settings level"
 msgstr "Einstellungsebene"
 
-#, fuzzy
 msgctxt "#31027"
 msgid "Install add-ons using the file browser."
 msgstr "Addons durch den Dateimanager installieren."
 
-#, fuzzy
 msgctxt "#31028"
 msgid "Search for an add-on from your installed repos."
 msgstr "Suche nach Addons in den installierten Repositories."
 
-#, fuzzy
 msgctxt "#31022"
 msgid "Update[CR]Now"
 msgstr "Jetzt[CR]aktualisieren"
 
-#, fuzzy
 msgctxt "#31030"
 msgid "Customise the home menu to your liking with the Skin Shortcuts script."
 msgstr "Verändert das Home Menü nach eigenen Vorstellungen mit dem Skin-Shortcuts-Skript"
 
-#, fuzzy
 msgctxt "#31031"
 msgid "Customise the shutdown menu to include your favourite actions."
 msgstr "Verändert das Ausschaltmenü, um die gewünschten Aktionen aufzunehmen"
 
-#, fuzzy
 msgctxt "#31032"
 msgid "Hide thumbnails for unwatched episodes to avoid possible spoilers."
 msgstr "Blende Vorschau ungesehener Episoden aus, um Spoiler zu vermeiden"
 
-#, fuzzy
 msgctxt "#31023"
 msgid "Widget Type"
 msgstr "Widget Typ"
 
-#, fuzzy
 msgctxt "#31034"
 msgid ""
 "Uses a combination of Fanart and Logo to display wide icons.[CR]Alternatively create and add your own as 'ftv' artwork."
@@ -192,42 +160,34 @@ msgstr ""
 "Verwendet eine Kombination aus Fanart und Logo um ein breites Symbol darzustellen.[CR]Erzeuge und füge alternativ eigene "
 "Grafiken als 'ftv' hinzu."
 
-#, fuzzy
 msgctxt "#31035"
 msgid "Runs Artwork Downloader in the background to fetch TV Show logos needed for wide icons."
 msgstr "Lässt Artwork Downloader im Hintergrund laufen, um Serienlogos für breite Symbole herunterzuladen."
 
-#, fuzzy
 msgctxt "#31036"
 msgid "Displays fanart for your media in the background."
 msgstr "Stellt Fanart der Medien als Hintergrundbild dar."
 
-#, fuzzy
 msgctxt "#31024"
 msgid "Widget Name"
 msgstr "Widget Name"
 
-#, fuzzy
 msgctxt "#31038"
 msgid "Select your scrapers preferred certification county."
 msgstr "Wähle bevorzugtes Land für die Altersbewertung des Scrapers aus"
 
-#, fuzzy
 msgctxt "#31039"
 msgid "Enable debug grid.[CR]Useful when skinning."
 msgstr "Debug Gitter aktivieren.[CR]Nützlich für Skinning."
 
-#, fuzzy
 msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
 msgstr "Debug Info aktivieren.[CR]Nützlich für die Meldung von Fehlern."
 
-#, fuzzy
 msgctxt "#31025"
 msgid "Widget Path"
 msgstr "Widget Pfad"
 
-#, fuzzy
 msgctxt "#31026"
 msgid "Overview"
 msgstr "Übersicht"
@@ -236,7 +196,6 @@ msgctxt "#31043"
 msgid "Turn Off Randomise"
 msgstr "Deaktiviere Shuffle"
 
-#, fuzzy
 msgctxt "#31029"
 msgid "Addon Details"
 msgstr "Addon Details"
@@ -257,17 +216,14 @@ msgctxt "#31037"
 msgid "Rollback Addon"
 msgstr "Addon zurücksetzen"
 
-#, fuzzy
 msgctxt "#31041"
 msgid "Debug grid"
 msgstr "Debug Gitter"
 
-#, fuzzy
 msgctxt "#31042"
 msgid "Debug labels"
 msgstr "Debug Bezeichnungen"
 
-#, fuzzy
 msgctxt "#31044"
 msgid "Local subtitle found!"
 msgstr "Lokaler Untertitel verfügbar!"
@@ -288,7 +244,6 @@ msgctxt "#31055"
 msgid "Turn On Repeat All"
 msgstr "Aktiviere Wiederholung"
 
-#, fuzzy
 msgctxt "#31056"
 msgid "Move, copy and delete your files with KODI's built-in file manager."
 msgstr "Verschiebe, kopiere und lösche Dateien mit KODIs eingebautem Dateimanager"
@@ -297,17 +252,14 @@ msgctxt "#31057"
 msgid "Watch Again"
 msgstr "Nochmal ansehen"
 
-#, fuzzy
 msgctxt "#31058"
 msgid "Today's weather:"
 msgstr "Heutiges Wetter:"
 
-#, fuzzy
 msgctxt "#31059"
 msgid "Tonight's weather:"
 msgstr "Heute Nacht:"
 
-#, fuzzy
 msgctxt "#31060"
 msgid "Play Now"
 msgstr "Jetzt abspielen"
@@ -316,22 +268,18 @@ msgctxt "#31050"
 msgid "Show Changelog"
 msgstr "Zeige Changelog"
 
-#, fuzzy
 msgctxt "#31047"
 msgid "Visualisation Presets"
 msgstr "Visualisierungspresets"
 
-#, fuzzy
 msgctxt "#31048"
 msgid "Playlist Options"
 msgstr "Wiedergabeliste-Optionen"
 
-#, fuzzy
 msgctxt "#31049"
 msgid "Customise Home Menu"
 msgstr "Home-Menü anpassen"
 
-#, fuzzy
 msgctxt "#31051"
 msgid "Settings can be accessed from the Shutdown menu or by rebooting XBMC!"
 msgstr "Einstellungen können vom Ausschaltmenü oder durch einen Neustart aufgerufen werden!"
@@ -344,32 +292,26 @@ msgctxt "#31067"
 msgid "Choose Fanart"
 msgstr "Wähle Fanart"
 
-#, fuzzy
 msgctxt "#31068"
 msgid "IP"
 msgstr "IP"
 
-#, fuzzy
 msgctxt "#31069"
 msgid "Change Rating"
 msgstr "Bewertung ändern"
 
-#, fuzzy
 msgctxt "#31070"
 msgid "Similar Titles"
 msgstr "Ähnliche Titel"
 
-#, fuzzy
 msgctxt "#31071"
 msgid "Starring"
 msgstr "In den Hauptrollen"
 
-#, fuzzy
 msgctxt "#31072"
 msgid "Directed by"
 msgstr "Unter der Regie von"
 
-#, fuzzy
 msgctxt "#31073"
 msgid "Next episode"
 msgstr "Nächste Episode"
@@ -382,236 +324,190 @@ msgctxt "#31075"
 msgid "Play Trailer"
 msgstr "Trailer abspielen"
 
-#, fuzzy
 msgctxt "#31076"
 msgid "Cast and Role"
 msgstr "Besetzung und Rollen"
 
-#, fuzzy
 msgctxt "#31077"
 msgid "Viewers Also Watched"
 msgstr "Andere sahen auch"
 
-#, fuzzy
 msgctxt "#31078"
 msgid "Sorry, we have no items for this title."
 msgstr "Keine Einträge zu diesem Titel vorhanden."
 
-#, fuzzy
 msgctxt "#31079"
 msgid "Movie Widget"
 msgstr "Film Widget"
 
-#, fuzzy
 msgctxt "#31080"
 msgid "TV Show Widget"
 msgstr "Serien Widget"
 
-#, fuzzy
 msgctxt "#31081"
 msgid "Music Widget"
 msgstr "Musik Widget"
 
-#, fuzzy
 msgctxt "#31082"
 msgid "Videos Widget"
 msgstr "Video Widget"
 
-#, fuzzy
 msgctxt "#31083"
 msgid "Programs Widget"
 msgstr "Programm Widget"
 
-#, fuzzy
 msgctxt "#31084"
 msgid "Pictures Widget"
 msgstr "Bilder Widget"
 
-#, fuzzy
 msgctxt "#31085"
 msgid "Shutdown Menu"
 msgstr "Ausschaltmenü"
 
-#, fuzzy
 msgctxt "#31086"
 msgid "Sorted by"
 msgstr "Sortierung"
 
-#, fuzzy
 msgctxt "#31087"
 msgid "Music Files"
 msgstr "Musik Dateien"
 
-#, fuzzy
 msgctxt "#31088"
 msgid "Current Playlist"
 msgstr "Aktuelle Playliste"
 
-#, fuzzy
 msgctxt "#31089"
 msgid "View Options"
 msgstr "View Optionen"
 
-#, fuzzy
 msgctxt "#31090"
 msgid "Update Library"
 msgstr "Bibliothek aktualisieren"
 
-#, fuzzy
 msgctxt "#31091"
 msgid "Stop scanning"
 msgstr "Scan abbrechen"
 
-#, fuzzy
 msgctxt "#31092"
 msgid "Sort By"
 msgstr "Sortierung"
 
-#, fuzzy
 msgctxt "#31093"
 msgid "Filter By"
 msgstr "Filtern nach"
 
-#, fuzzy
 msgctxt "#31094"
 msgid "Save Playlist"
 msgstr "Playliste speichern"
 
-#, fuzzy
 msgctxt "#31095"
 msgid "Clear Playlist"
 msgstr "Playliste löschen"
 
-#, fuzzy
 msgctxt "#31096"
 msgid "Your Songs"
 msgstr "Musik"
 
-#, fuzzy
 msgctxt "#31097"
 msgid "Music Library"
 msgstr "Musik Datenbank"
 
-#, fuzzy
 msgctxt "#31098"
 msgid "Your Photos"
 msgstr "Bilder"
 
-#, fuzzy
 msgctxt "#31099"
 msgid "Start Slideshow"
 msgstr "Diashow starten"
 
-#, fuzzy
 msgctxt "#31061"
 msgid "Enable Horizontal home layout"
 msgstr "Aktiviere horizontales Home Layout"
 
-#, fuzzy
 msgctxt "#31063"
 msgid "Add-ons"
 msgstr "Addons"
 
-#, fuzzy
 msgctxt "#31064"
 msgid "Custom background image"
 msgstr "Benutzerdefiniertes Hintergrundbild"
 
-#, fuzzy
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
 msgstr "Blende 'Mauswarnung' aus"
 
-#, fuzzy
 msgctxt "#31066"
 msgid "Cinema Exp."
 msgstr "Cinema Exp."
 
-#, fuzzy
 msgctxt "#31105"
 msgid "Your Addons"
 msgstr "Addons"
 
-#, fuzzy
 msgctxt "#31106"
 msgid "Now Playing"
 msgstr "Jetzt läuft"
 
-#, fuzzy
 msgctxt "#31107"
 msgid "TV Roles"
 msgstr "TV Rollen"
 
-#, fuzzy
 msgctxt "#31108"
 msgid "Known For"
 msgstr "Bekannt aus"
 
-#, fuzzy
 msgctxt "#31109"
 msgid "Watch Now"
 msgstr "Jetzt ansehen"
 
-#, fuzzy
 msgctxt "#31110"
 msgid "Written by"
 msgstr "Geschrieben von"
 
-#, fuzzy
 msgctxt "#31111"
 msgid "Sorry, no items where found for this search."
 msgstr "Leider fand die Suche keine Einträge."
 
-#, fuzzy
 msgctxt "#31112"
 msgid "Please try again."
 msgstr "Bitte noch einmal versuchen."
 
-#, fuzzy
 msgctxt "#31113"
 msgid "Results for"
 msgstr "Ergebnisse für"
 
-#, fuzzy
 msgctxt "#31114"
 msgid "Customise Shutdown Menu"
 msgstr "Ausschaltmenü anpassen"
 
-#, fuzzy
 msgctxt "#31115"
 msgid "Change the skin, set language and region, change file listing options and set up a screensaver."
 msgstr "Ändere den Skin · Wähle Sprache und Region · Ändere Dateilistenoptionen[CR]Setze Bildschirmschoner"
 
-#, fuzzy
 msgctxt "#31116"
 msgid "Manage, browse for, install and modify Add-ons."
 msgstr "Organisiere die installierten Addons · Installiere Addons[CR]Passe Addon-Einstellungen an"
 
-#, fuzzy
 msgctxt "#31117"
 msgid "Manage your video library, set video playback options, change video listing options and set subtitle fonts."
 msgstr ""
 "Organisiere die Video-Bibliothek · Setze die Videoabspieloptionen · Ändere die Videoauflistungsoptionen[CR]Setze "
 "Untertitel-Schriftart"
 
-#, fuzzy
 msgctxt "#31118"
 msgid "Manage your music library, set music playback options, change music listing options, and setup song submission."
 msgstr ""
 "Organisiere die Musik-Bibliothek · Setze die Musikabspieloptionen · Ändere die Musikauflistungsoptionen[CR]Konfiguriere "
 "die Musikübertragung"
 
-#, fuzzy
 msgctxt "#31119"
 msgid "Manage your weather addons and set cities to collect weather information."
 msgstr "Organisiere die Wetter-Addons und wähle die Städte zum Sammeln der Wetter-Informationen"
 
-#, fuzzy
 msgctxt "#31120"
 msgid "Set picture listing options and configure slideshow settings."
 msgstr "Setze Bildauflistungsoptionen · Konfiguriere Diashow"
 
-#, fuzzy
 msgctxt "#31121"
 msgid ""
 "Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable debugging "
@@ -620,98 +516,79 @@ msgstr ""
 "Konfiguriere und kalibriere Bildschirme · Konfiguriere Audioausgabe · Setze Fernbedienungseinstellungen[CR]Setze "
 "Energiespar-Optionen · Aktiviere Debugging · Richte die Master-Sperre ein"
 
-#, fuzzy
 msgctxt "#31122"
 msgid "Setup control of Kodi via UPnP and HTTP, configure file sharing, enable Zeroconf and configure AirPlay."
 msgstr ""
 "Richte Zugriff auf Kodi via UPnP und HTTP ein · Konfiguriere die Dateifreigabe[CR]Aktiviere Zeroconf · Konfiguriere AirPlay"
 
-#, fuzzy
 msgctxt "#31123"
 msgid "Profiles, File Manager, System Information and Settings Level."
 msgstr "Profile, Dateimanager, Systeminformationen und Einstellungsebene"
 
-#, fuzzy
 msgctxt "#31124"
 msgid "Personalise your experience with profiles. Includes enabling login screen, profile creation and management."
 msgstr "Personalisiere die Benutzererfahrung mit Profilen. Beinhaltet Anmeldebildschirm, Profilerstellung und -organisation"
 
-#, fuzzy
 msgctxt "#31125"
 msgid "Login"
 msgstr "Anmeldung"
 
-#, fuzzy
 msgctxt "#31126"
 msgid "Last login"
 msgstr "Letzte Anmeldung"
 
-#, fuzzy
 msgctxt "#31127"
 msgid "View your system's information. Includes storage, network, and hardware information."
 msgstr "Systeminformationen anzeigen. Beinhaltet Speicher, Netzwerk und Hardware "
 
-#, fuzzy
 msgctxt "#31128"
 msgid "About"
 msgstr "Über"
 
-#, fuzzy
 msgctxt "#31129"
 msgid "Kodi"
 msgstr "Kodi"
 
-#, fuzzy
 msgctxt "#31130"
 msgid "Hide Unwatched Episode Thumbs"
 msgstr "Vorschau ungesehener Episoden ausblenden"
 
-#, fuzzy
 msgctxt "#31131"
 msgid "Enable Wide TV Show Icons"
 msgstr "Breite Seriensymbole aktivieren"
 
-#, fuzzy
 msgctxt "#31132"
 msgid "Click to download TV Show logos"
 msgstr "Klicken, um Serienlogos herunterzuladen"
 
-#, fuzzy
 msgctxt "#31133"
 msgid "Enable Wide Season Icons"
 msgstr "Breite Staffelsymbole aktivieren"
 
-#, fuzzy
 msgctxt "#31134"
 msgid "Enable Fanart"
 msgstr "Fanart aktivieren"
 
-#, fuzzy
 msgctxt "#31135"
 msgid "Select Rating Country"
 msgstr "Land der Bewertung auswählen"
 
-#, fuzzy
 msgctxt "#31136"
 msgid "DVD Menu"
 msgstr "DVD Menü"
 
-#, fuzzy
 msgctxt "#31137"
 msgid "Video Options"
 msgstr "Video-Optionen"
 
-#, fuzzy
 msgctxt "#31138"
 msgid "Turn Subtitles On"
 msgstr "Aktiviere Untertitel"
 
-#, fuzzy
 msgctxt "#31139"
 msgid "Turn Subtitles Off"
 msgstr "Deaktiviere Untertitel"
 
-#, fuzzy
 msgctxt "#31140"
 msgid "Download Subtitles"
 msgstr "Untertitel herunterladen"
@@ -732,107 +609,86 @@ msgctxt "#31144"
 msgid ""
 msgstr ""
 
-#, fuzzy
 msgctxt "#31145"
 msgid "percent remaining"
 msgstr "Prozent verbleibend"
 
-#, fuzzy
 msgctxt "#31146"
 msgid "Special"
 msgstr "Besonderheit"
 
-#, fuzzy
 msgctxt "#31147"
 msgid "minutes"
 msgstr "Minuten"
 
-#, fuzzy
 msgctxt "#31148"
 msgid "hours"
 msgstr "Stunden"
 
-#, fuzzy
 msgctxt "#31149"
 msgid "Hide OSD controls"
 msgstr "Blende OSD-Bedienelemente aus"
 
-#, fuzzy
 msgctxt "#31150"
 msgid "Hides the Stop, Play, Pause, etc buttons from the music and video OSD."
 msgstr "Blendet die Stop, Abspielen, Pause und andere Bedienelemente aus dem On-Screen-Display für Musik und Video aus."
 
-#, fuzzy
 msgctxt "#31151"
 msgid "Creator"
 msgstr "Schöpfer"
 
-#, fuzzy
 msgctxt "#31152"
 msgid "Air Date"
 msgstr "Ausstrahlungsdatum"
 
-#, fuzzy
 msgctxt "#31153"
 msgid "3D Options"
 msgstr "3D Optionen"
 
-#, fuzzy
 msgctxt "#31154"
 msgid "Profile"
 msgstr "Profil"
 
-#, fuzzy
 msgctxt "#31155"
 msgid "Build Version"
 msgstr "Build Version"
 
-#, fuzzy
 msgctxt "#31156"
 msgid "Capacity"
 msgstr "Platz"
 
-#, fuzzy
 msgctxt "#31157"
 msgid "Current Date and Time"
 msgstr "Aktuelles Datum und Zeit"
 
-#, fuzzy
 msgctxt "#31158"
 msgid "Device Name"
 msgstr "Gerätename"
 
-#, fuzzy
 msgctxt "#31159"
 msgid "Wide"
 msgstr "Breit"
 
-#, fuzzy
 msgctxt "#31160"
 msgid "Poster"
 msgstr "Poster"
 
-#, fuzzy
 msgctxt "#31161"
 msgid "Square"
 msgstr "Quadrat"
 
-#, fuzzy
 msgctxt "#31162"
 msgid "Show"
 msgstr "Ansicht"
 
-#, fuzzy
 msgctxt "#31163"
 msgid "Start Party Mode"
 msgstr "Partymodus starten"
 
-#, fuzzy
 msgctxt "#31164"
 msgid "Next Up"
 msgstr "Es folgt"
 
-#, fuzzy
 msgctxt "#31165"
 msgid "Choose Art"
 msgstr "Grafik wählen"
@@ -841,374 +697,312 @@ msgctxt "#31166"
 msgid "Open Visualiser"
 msgstr ""
 
-#, fuzzy
 msgctxt "#31167"
 msgid "Recently Added Movies"
 msgstr "Kürzlich hinzugefügte Filme"
 
-#, fuzzy
 msgctxt "#31168"
 msgid "Your Movies"
 msgstr "Filme"
 
-#, fuzzy
 msgctxt "#31169"
 msgid "In Progress Movies"
 msgstr "Begonnene Filme"
 
-#, fuzzy
 msgctxt "#31170"
 msgid "Kids Movies"
 msgstr "Kinderfilme"
 
-#, fuzzy
 msgctxt "#31171"
 msgid "Action and Adventure Movies"
 msgstr "Action- und Abenteuerfilme"
 
-#, fuzzy
 msgctxt "#31172"
 msgid "Comedy Movies"
 msgstr "Komödien"
 
-#, fuzzy
 msgctxt "#31173"
 msgid "Sci-Fi Movies"
 msgstr "Science-Fiction Filme"
 
-#, fuzzy
 msgctxt "#31174"
 msgid "Top Rated Movies"
 msgstr "Filme mit Top-Bewertungen"
 
-#, fuzzy
 msgctxt "#31175"
 msgid "Recently Updated TV Shows"
 msgstr "Kürzlich aktualisierte Serien"
 
-#, fuzzy
 msgctxt "#31176"
 msgid "Your TV Shows"
 msgstr "Serien"
 
-#, fuzzy
 msgctxt "#31177"
 msgid "In Progress TV Shows"
 msgstr "Begonnene Serien"
 
-#, fuzzy
 msgctxt "#31178"
 msgid "Kids TV Shows"
 msgstr "Kinderserien"
 
-#, fuzzy
 msgctxt "#31179"
 msgid "Action and Adventure TV Shows"
 msgstr "Action- und Abenteuerserien"
 
-#, fuzzy
 msgctxt "#31180"
 msgid "Comedy TV Shows"
 msgstr "Comedy-Serien"
 
-#, fuzzy
 msgctxt "#31181"
 msgid "Sci-Fi TV Shows"
 msgstr "Science-Fiction-Serien"
 
-#, fuzzy
 msgctxt "#31182"
 msgid "Top Rated TV Shows"
 msgstr "Serien mit Top-Bewertung"
 
-#, fuzzy
 msgctxt "#31183"
 msgid "Recently Played Albums"
 msgstr "Kürzlich wiedergegebene Alben"
 
-#, fuzzy
 msgctxt "#31184"
 msgid "Your Albums"
 msgstr "Alben"
 
-#, fuzzy
 msgctxt "#31185"
 msgid "Recently Added Albums"
 msgstr "Kürzlich hinzugefügte Alben"
 
-#, fuzzy
 msgctxt "#31186"
 msgid "Your Artists"
 msgstr "Künstler"
 
-#, fuzzy
 msgctxt "#31187"
 msgid "Your Genres"
 msgstr "Genre"
 
-#, fuzzy
 msgctxt "#31188"
 msgid "Top Rated Albums"
 msgstr "Alben mit Top-Bewertungen"
 
-#, fuzzy
 msgctxt "#31189"
 msgid "Top Rated Songs"
 msgstr "Songs mit Top-Bewertungen"
 
-#, fuzzy
 msgctxt "#31190"
 msgid "Your Songs"
 msgstr "Musik"
 
-#, fuzzy
 msgctxt "#31191"
 msgid "Video root"
 msgstr "Video Hauptverzeichnis"
 
-#, fuzzy
 msgctxt "#31192"
 msgid "Your Music Videos"
 msgstr "Musikvideos"
 
-#, fuzzy
 msgctxt "#31193"
 msgid "Your Video Add-ons"
 msgstr "Video Addons"
 
-#, fuzzy
 msgctxt "#31194"
 msgid "Personal Rating"
 msgstr "Eigene Bewertung"
 
-#, fuzzy
 msgctxt "#31195"
 msgid "Your Add-ons"
 msgstr "Addons"
 
-#, fuzzy
 msgctxt "#31196"
 msgid "Your Android Apps"
 msgstr "Android Apps"
 
-#, fuzzy
 msgctxt "#31197"
 msgid "Widget"
 msgstr "Widget"
 
-#, fuzzy
 msgctxt "#31198"
 msgid "View Type"
 msgstr "View Type"
 
-#, fuzzy
 msgctxt "#31199"
 msgid "Label Overlay"
 msgstr "Label Overlay"
 
-#, fuzzy
 msgctxt "#31200"
 msgid "Enter Name"
 msgstr "Setze Name"
 
-#, fuzzy
 msgctxt "#31201"
 msgid "Choose Shortcut"
 msgstr "Wähle Shortcut"
 
-#, fuzzy
 msgctxt "#31202"
 msgid "Widget Action"
 msgstr "Widget Aktion"
 
-#, fuzzy
 msgctxt "#31203"
 msgid "Square Info"
 msgstr "Quadrat Info"
 
-#, fuzzy
 msgctxt "#31204"
 msgid "Titles with"
 msgstr "Titel mit"
 
-#, fuzzy
 msgctxt "#31205"
 msgid "Refresh Information"
 msgstr "Update Informationen"
 
-#, fuzzy
 msgctxt "#31206"
 msgid "Enable Auto-Update"
 msgstr "Aktiviere Auto-Update"
 
-#, fuzzy
 msgctxt "#31207"
 msgid "Disable Auto-Update"
 msgstr "Deaktiviere Auto-Update"
 
-#, fuzzy
 msgctxt "#31208"
 msgid "Enable Higher Levels"
 msgstr "Aktiviere höhere Level"
 
-#, fuzzy
 msgctxt "#31209"
 msgid "Disable Higher Levels"
 msgstr "Deaktiviere höhere Level"
 
-#, fuzzy
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"
 
-#, fuzzy
 msgctxt "#31501"
 msgid "Widget Group 2"
 msgstr "Widget Gruppe 2"
 
-#, fuzzy
 msgctxt "#31502"
 msgid "Widget Group 3"
 msgstr "Widget Gruppe 3"
 
-#, fuzzy
 msgctxt "#31503"
 msgid "Widget Group 4"
 msgstr "Widget Gruppe 4"
 
-#, fuzzy
 msgctxt "#31504"
 msgid "Widget Group 5"
 msgstr "Widget Gruppe 5"
 
-#, fuzzy
 msgctxt "#31505"
 msgid "Widget Group 6"
 msgstr "Widget Gruppe 6"
 
-#, fuzzy
 msgctxt "#31506"
 msgid "Widget Group 7"
 msgstr "Widget Gruppe 7"
 
-#, fuzzy
 msgctxt "#31507"
 msgid "Widget Group 8"
 msgstr "Widget Gruppe 8"
 
-#, fuzzy
 msgctxt "#31508"
 msgid "Edit"
 msgstr "Edit"
 
-#, fuzzy
 msgctxt "#31509"
 msgid "Set Widget"
 msgstr "Setze Widget"
 
-#, fuzzy
 msgctxt "#31510"
 msgid "IMDB Top250 Movies"
 msgstr "IMDB Top250 Filme"
 
-#, fuzzy
 msgctxt "#31511"
 msgid "TuneIn Recents"
 msgstr "TuneIn Verlauf"
 
-#, fuzzy
 msgctxt "#31512"
 msgid "Audio Add-ons"
 msgstr "Audio Add-ons"
 
-#, fuzzy
 msgctxt "#31513"
 msgid "TuneIn Local"
 msgstr "TuneIn Lokal"
 
-#, fuzzy
 msgctxt "#31514"
 msgid "TuneIn Favourites"
 msgstr "TuneIn Favouriten"
 
-#, fuzzy
 msgctxt "#31515"
 msgid "Drama and Thriller Movies"
 msgstr "Drama und Thriller Filme"
 
-#, fuzzy
 msgctxt "#31516"
 msgid "Drama and Thriller TV Shows"
 msgstr "Drama und Thriller Serien"
 
-#, fuzzy
 msgctxt "#31517"
 msgid "War and History Movies"
 msgstr "Krieg und Historie Filme"
 
-#, fuzzy
 msgctxt "#31518"
 msgid "War and History TV Shows"
 msgstr "Krieg und Historie Serien"
 
-#, fuzzy
 msgctxt "#31519"
 msgid "Video Add-ons"
 msgstr "Video Add-ons"
 
-#, fuzzy
 msgctxt "#31520"
 msgid "Program Add-ons"
 msgstr "Programm Add-ons"
 
-#, fuzzy
 msgctxt "#31521"
 msgid "Picture Add-ons"
 msgstr "Bilder Add-ons"
 
-#, fuzzy
 msgctxt "#31522"
 msgid "New Search"
 msgstr "Neue Suche"
 
-#, fuzzy
 msgctxt "#31523"
 msgid "Text Input"
 msgstr "Texteingabe"
 
-#, fuzzy
 msgctxt "#31524"
 msgid "Numeric Input"
 msgstr "Zahleneingabe"
 
-#, fuzzy
 msgctxt "#31525"
 msgid "Skip Search menu item"
 msgstr "Überspringe 'Suche' Menüeintrag"
 
-#, fuzzy
 msgctxt "#31526"
 msgid "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
 msgstr ""
 "Aktiviere diese Option, falls dein erstes Hauptmenü-Item 'Suche' ist und du automatisch den nächsten Eintrag fokusiert "
 "haben willst nachdem Kodi gestaret ist."
 
-#, fuzzy
 msgctxt "#31527"
 msgid "'Wide' for TV Shows / Movies / Sets / Artists"
 msgstr "'Breit' für Serien / Filme / Sets / Interpreten"
 
-#, fuzzy
 msgctxt "#31528"
 msgid "'Poster' for TV Shows / Movies / Sets"
 msgstr "'Poster' für Serien / Filme / Sets"
 
-#, fuzzy
 msgctxt "#31529"
 msgid "'Square' for Music / Add-ons"
 msgstr "'Quadrat' für Music / Add-ons"
 
-#, fuzzy
 msgctxt "#31530"
 msgid "'Square Info' for Music / Add-ons"
 msgstr "'Quadrat Info' für Music / Add-ons"
+
+msgctxt "#31531"
+msgid "loading"
+msgstr "lädt"
+
+msgctxt "#31532"
+msgid "updating widgets"
+msgstr "update widgets"
+
+msgctxt "#31533"
+msgid "done!"
+msgstr "fertig!"

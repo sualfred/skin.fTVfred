@@ -23,7 +23,7 @@
 			<align>center</align>
 			<width>1920</width>
 			<height>200</height>	
-			<label>loading</label>						
+			<label>31531</label>						
 		</control>
 		<!-- switch to home -->
 		<control type="button" id="10">			
