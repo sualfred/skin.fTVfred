@@ -27,8 +27,6 @@
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
 				<visible>IntegerGreaterThan(Container(9091).NumItems,0)</visible>
 			</control>
-			
-
 
 			<!-- Control group -->
 			<control type="group">				
@@ -108,23 +106,6 @@
 						</control>		
 					</focusedlayout>
 				</control>
-
-				<!--<control type="image">
-					<top>607</top>
-					<width>846</width>
-					<height>84</height>
-					<visible>Container(9091).HasPrevious + !Container(9091).Position(0)</visible>
-					<texture border="2" diffuse="settings/mask.png" flipy="true">settings/mask_back.png</texture>					
-					<animation effect="slide" tween="linear" easing="inout" end="0,-25" time="120" condition="Container(9091).Position(0) | Container(9091).Position(1)">Conditional</animation>
-				</control>
-				<control type="image">
-					<top>955</top>
-					<width>846</width>
-					<height>84</height>
-					<visible>Container(9091).HasNext + !Container(9091).Position(8)</visible>
-					<texture border="2" diffuse="settings/mask.png">settings/mask_back.png</texture>
-					<animation effect="slide" tween="linear" easing="inout" end="0,25" time="120" condition="Container(9091).Position(7) | Container(9091).Position(8)">Conditional</animation>
-				</control>-->
 
 				<!-- Edit -->
 				<control id="312" type="edit">
