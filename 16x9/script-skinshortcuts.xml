@@ -216,7 +216,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$LOCALIZE[31509]</label>
-					<visible>StringCompare(Container(211).ListItem.Property(defaultID),settings) | StringCompare(Container(211).ListItem.Property(defaultID),weather) | StringCompare(Container(211).ListItem.Property(defaultID),favourites) | StringCompare(Container(211).ListItem.Property(defaultID),19019)</visible>
+					<visible>StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
 				</control>
 				<control id="309" type="button">
 					<width>870</width>
@@ -230,7 +230,7 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32044]</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings) + !StringCompare(Container(211).ListItem.Property(defaultID),weather) + !StringCompare(Container(211).ListItem.Property(defaultID),favourites) + !StringCompare(Container(211).ListItem.Property(defaultID),19019)</visible>
+					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
 				</control>
 				<!-- Manage widgets -->
 				<control id="998" type="button">

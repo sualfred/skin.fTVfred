@@ -156,6 +156,9 @@
 	<!-- ============= -->
 	<!-- Widgets	   -->
 	<!-- ============= -->
+	<widget label="19020">livetv</widget>
+	<widget label="10508">weather</widget>
+	<widget label="1036">favourites</widget>
 	<widget label="31500">widget1</widget>
 	<widget label="31501">widget2</widget>
 	<widget label="31502">widget3</widget>
@@ -163,7 +166,10 @@
 	<widget label="31504">widget5</widget>
 	<widget label="31505">widget6</widget>
 	<widget label="31506">widget7</widget>
-	<widget label="31507">widget8</widget>
+	<widget label="31507">widget8</widget>	
+	<widgetdefault defaultID="livetv">livetv</widgetdefault>
+	<widgetdefault defaultID="weather">weather</widgetdefault>
+	<widgetdefault defaultID="favourites">favourites</widgetdefault>
 
 
 </overrides>

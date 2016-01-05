@@ -390,10 +390,12 @@
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + IntegerGreaterThan(Container(800).NumItems,1)">SetFocus(800)</onright>
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + !IntegerGreaterThan(Container(800).NumItems,1)">$INFO[Skin.String(8-WidgetAction-1)]</onright>	
 
-				<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019]) + StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onright>
-				<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])">SetFocus(901)</onright>		
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),livetv) + StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onright>
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),livetv)">SetFocus(901)</onright>		
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),weather)">ActivateWindow(weather)</onright>		
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),favourites)">ActivateWindow(favourites)</onright>		
 
-				<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),settings) | StringCompare(Container(9000).ListItem.Property(defaultID),weather) | StringCompare(Container(9000).ListItem.Property(defaultID),favourites) + !StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])">Select</onright>
+				<onright condition="StringCompare(Container(9000).ListItem.Property(defaultID),settings)">Select</onright>
 
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
@@ -623,7 +625,7 @@
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<include>HomeWidgetsAnimation</include>
 				<include>WindowHomeFadeAnimation</include>
-				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(widget),favourites)</visible>
 				<animation condition="true" effect="slide" end="-304,0">Conditional</animation>
 				<itemlayout height="370" width="2000">
 					<include>HomeSquareInfoItemlayout</include>
@@ -647,7 +649,6 @@
 				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
 				<ondown>noop</ondown>
 				<onleft>9000</onleft>			
-				<onright condition="StringCompare(Container(901).ListItem.Property(path),channels)">SetProperty(JumpToFirstChannel,1,Home)</onright>
 				<onright condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvchannels)</onright>
 				<onright condition="StringCompare(Container(901).ListItem.Property(path),recordings)">ActivateWindow(tvrecordings)</onright>
 				<onclick condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvguide)</onclick>
@@ -662,7 +663,7 @@
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<include>HomeWidgetsAnimation</include>
 				<include>WindowHomeFadeAnimation</include>
-				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(defaultID),$LOCALIZE[19019])</visible>
+				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(widget),livetv)</visible>
 				<!--<animation condition="StringCompare(Container(901).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>-->
 				<animation condition="StringCompare(Container(901).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 				<animation condition="[IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(1)] | [IntegerGreaterThan(Container(901).NumItems,2) + !Control.HasFocus(901)]" easing="inout" effect="slide" start="0,114" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -764,7 +765,7 @@
 				<orientation>horizontal</orientation>
 				<include>WindowHomeFadeAnimation</include>
 				<include>HomeWidgetsAnimation</include>
-				<visible>StringCompare(Container(9000).ListItem.Property(defaultID),weather)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(widget),weather)</visible>
 				<itemlayout height="914" width="299">
 					<control type="image">
 						<width>299</width>
