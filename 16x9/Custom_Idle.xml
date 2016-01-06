@@ -58,7 +58,6 @@
 			<animation loop="true" condition="true" start="0,0" end="-6234,0" time="50000" reversible="false" effect="slide">Conditional</animation>
 			<!-- row 1 -->
 			<control type="grouplist">
-				<visible>!Container.IsUpdating(1101) + !Container.IsUpdating(1102)</visible>	
 				<width>6234</width>
 				<orientation>horizontal</orientation>
 				<itemgap>5</itemgap>
@@ -66,70 +65,69 @@
 				<control type="image">
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(0).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(0).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(1).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(1).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(2).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(2).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(3).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(3).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(4).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(4).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(5).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(5).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(6).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(6).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(7).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(7).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(8).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(8).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 			</control>
 			<!-- row 2 -->
 			<control type="grouplist">				
-				<visible>!Container.IsUpdating(1101) + !Container.IsUpdating(1102)</visible>
 				<top>535</top>		
 				<width>6234</width>
 				<orientation>horizontal</orientation>
@@ -138,63 +136,63 @@
 				<control type="image">
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(1).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(1).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>			
 				<control type="image">
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(0).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(0).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(4).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(4).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(2).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(2).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(3).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(3).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(6).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(6).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(5).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(5).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(8).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(8).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(7).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(7).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
@@ -202,11 +200,10 @@
 		</control>
 		<!-- round 2 -->
 		<control type="group">
-			<top>10</top>
+			<top>7.5</top>
 			<animation loop="true" condition="true" start="0,0" end="-6234,0" time="50000" reversible="false" effect="slide">Conditional</animation>
 			<!-- row 1 -->
 			<control type="grouplist">
-				<visible>!Container.IsUpdating(1101) + !Container.IsUpdating(1102)</visible>	
 				<left>6239</left>
 				<width>6234</width>
 				<orientation>horizontal</orientation>
@@ -215,70 +212,69 @@
 				<control type="image">
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(0).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(0).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(1).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(1).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(2).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(2).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(3).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(3).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(4).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(4).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(5).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(5).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(6).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(6).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(7).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(7).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(8).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(8).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 			</control>
 			<!-- row 2 -->
 			<control type="grouplist">				
-				<visible>!Container.IsUpdating(1101) + !Container.IsUpdating(1102)</visible>
 				<top>535</top>		
 				<left>6239</left>
 				<width>6234</width>
@@ -288,63 +284,63 @@
 				<control type="image">
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(1).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(1).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>			
 				<control type="image">
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(0).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(0).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(4).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(4).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(2).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(2).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(3).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(3).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(6).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(6).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(5).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(5).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>361</width>
 					<height>530</height>
-					<texture fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(8).Art(poster)]</texture>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(8).Art(poster)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">	
 					<width>950</width>
 					<height>530</height>
-					<texture fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(7).Art(fanart)]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(7).Art(fanart)]</texture>
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>1000</fadetime>
 				</control>
