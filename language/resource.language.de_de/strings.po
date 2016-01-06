@@ -1022,3 +1022,11 @@ msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu
 msgctxt "#31537"
 msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
 msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Andernfalls kann es zu Problemen im Betrieb führen."
+
+msgctxt "#31538"
+msgid "Better fTV experience"
+msgstr "Besseres fTV-Erlebniss"
+
+msgctxt "#31539"
+msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
+msgstr "Es wird empfohlen 'Symbol für übergeordnetes Verzeichnis' und 'Zeige alle Einträge' zu deaktivieren. Soll ich das für dich tun?"

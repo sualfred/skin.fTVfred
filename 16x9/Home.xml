@@ -3,8 +3,8 @@
 	<!-- home -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90000</defaultcontrol>
+	<onload condition="!Skin.HasSetting(StartupQuestions)">ReplaceWindow(startup)</onload>
 	<onload>ClearProperty(BounceRight,Home)</onload>	
-	<!--<onload condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)</onload>-->
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>		
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	

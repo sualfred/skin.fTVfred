@@ -1028,3 +1028,11 @@ msgstr ""
 msgctxt "#31537"
 msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
 msgstr ""
+
+msgctxt "#31538"
+msgid "Better fTV experience"
+msgstr ""
+
+msgctxt "#31539"
+msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
+msgstr ""
