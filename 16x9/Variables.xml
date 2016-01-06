@@ -53,55 +53,55 @@
 	</variable>
 	<variable name="CategoryColourMovies">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),movies)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(111) | StringCompare(Window(home).Property(Category),movies)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourTVShows">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),tvshows)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(121) | StringCompare(Window(home).Property(Category),tvshows)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourSeasons">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),seasons)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(131) | StringCompare(Window(home).Property(Category),seasons)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourEpisodes">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),episodes)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(141) | StringCompare(Window(home).Property(Category),episodes)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourMusicVideos">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),musicvideos)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(151) | StringCompare(Window(home).Property(Category),musicvideos)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourArtists">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),artists)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(161) | StringCompare(Window(home).Property(Category),artists)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourAlbums">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),albums)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(171) | StringCompare(Window(home).Property(Category),albums)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourSongs">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),songs)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(181) | StringCompare(Window(home).Property(Category),songs)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>
 	<variable name="CategoryColourActors">
 		<value condition="!Control.HasFocus(300) + StringCompare(Window(home).Property(CategoryFocus),actors)">ffffc24b</value>
-		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
+		<value condition="Control.HasFocus(300) | ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value condition="Control.HasFocus(211) | StringCompare(Window(home).Property(Category),actors)">ffd7d7d7</value>
 		<value>ff505559</value>
 	</variable>

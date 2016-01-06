@@ -12,7 +12,6 @@
 		<control type="button" id="300">
 			<height>1</height>
 			<width>1</width>
-			<!--<onfocus condition="IsEmpty(Window(Home).Property(Category)) + IsEmpty(Window(Home).Property(CategoryFocus))">999</onfocus>-->
 			<onup>Close</onup>			
 			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),movies)">SetFocus(111)</ondown>
 			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),tvshows)">SetFocus(121)</ondown>
