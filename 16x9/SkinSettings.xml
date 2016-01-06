@@ -445,6 +445,61 @@
 					<onclick>Skin.ToggleSetting(SkipSearchItem)</onclick>
 					<selected>Skin.HasSetting(SkipSearchItem)</selected>
 				</control>
+				<control id="23" type="radiobutton">
+					<width>958</width>
+					<height>84</height>
+					<font>Light32</font>
+					<label>31540</label>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>813</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(fTVscreensaver)</onclick>
+					<selected>Skin.HasSetting(fTVscreensaver)</selected>
+				</control>
+				<control id="24" type="button">
+					<width>958</width>
+					<height>84</height>
+					<font>Light32</font>
+					<label>- $LOCALIZE[31542]</label>
+					<label2>$VAR[ScreensaverTimer]</label2>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>SetProperty(Dialog.NumItems,9)</onclick>
+					<onclick>SetProperty(Dialog.1.Label,30 $LOCALIZE[31543])</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(ScreensaverTimer,1))</onclick>
+					<onclick>SetProperty(Dialog.2.Label,60 $LOCALIZE[31543])</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(ScreensaverTimer,2))</onclick>
+					<onclick>SetProperty(Dialog.3.Label,2 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(ScreensaverTimer,3))</onclick>
+					<onclick>SetProperty(Dialog.4.Label,3 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(ScreensaverTimer,4))</onclick>
+					<onclick>SetProperty(Dialog.5.Label,4 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(ScreensaverTimer,5))</onclick>
+					<onclick>SetProperty(Dialog.6.Label,5 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(ScreensaverTimer,6))</onclick>
+					<onclick>SetProperty(Dialog.7.Label,10 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(ScreensaverTimer,7))</onclick>
+					<onclick>SetProperty(Dialog.8.Label,20 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(ScreensaverTimer,8))</onclick>
+					<onclick>SetProperty(Dialog.9.Label,30 $LOCALIZE[31544])</onclick>
+					<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(ScreensaverTimer,9))</onclick>					
+					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31542])</onclick>
+					<visible>Skin.HasSetting(fTVscreensaver)</visible>
+				</control>
 				<control id="21" type="radiobutton">
 					<width>958</width>
 					<height>84</height>

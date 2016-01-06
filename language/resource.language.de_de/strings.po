@@ -1030,3 +1030,24 @@ msgstr "Besseres fTV-Erlebniss"
 msgctxt "#31539"
 msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
 msgstr "Es wird empfohlen 'Symbol für übergeordnetes Verzeichnis' und 'Zeige alle Einträge' zu deaktivieren. Soll ich das für dich tun?"
+
+
+msgctxt "#31540"
+msgid "fTV screensaver"
+msgstr "fTV Screensaver"
+
+msgctxt "#31541"
+msgid "Imitates the original Fire TV screensaver slideshow based on your Movie and TV Show library. Please disable any activated real screensavers."
+msgstr "Imitiert die orignale Fire TV Screensaver Diashow basierend auf deiner Film und Serien Bibliothek. Bitte deaktiviere jeden echten Screensaver."
+
+msgctxt "#31542"
+msgid "Waiting period"
+msgstr "Wartezeit"
+
+msgctxt "#31543"
+msgid "seconds"
+msgstr "Sekunden"
+
+msgctxt "#31544"
+msgid "minutes"
+msgstr "Minuten"

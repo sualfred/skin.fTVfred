@@ -26,7 +26,7 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[Window(Home).Property(ForceViewType)]</label>
+				<label>$INFO[System.GetBool(screensaver.mode)]</label>
 			</control>
 			<control type="label">
 				<width>780</width>

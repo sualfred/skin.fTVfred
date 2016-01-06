@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="ScreensaverTimer">
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),1">30s</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),2">60s</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),3">2min</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),4">3min</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),5">4min</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),6">5min</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),7">10min</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),8">20min</value>
+		<value condition="StringCompare(Skin.String(ScreensaverTimer),9">30min</value>
+		<value>30s</value>
+	</variable>
 	<variable name="SearchSetFocus">
 		<value condition="Control.IsVisible(111)">SetFocus(111)</value>
 		<value condition="Control.IsVisible(121)">SetFocus(121)</value>
@@ -1457,6 +1469,8 @@
 		<value condition="ControlGroup(9).HasFocus(19)">$LOCALIZE[31526]</value>
 		<value condition="ControlGroup(9).HasFocus(21)">$LOCALIZE[31039]</value>
 		<value condition="ControlGroup(9).HasFocus(22)">$LOCALIZE[31040]</value>
+		<value condition="ControlGroup(9).HasFocus(23)">$LOCALIZE[31541]</value>
+		<value condition="ControlGroup(9).HasFocus(24)">$LOCALIZE[31541]</value>
 	</variable>
 	<variable name="AlbumArtistName">
 		<value condition="!IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>
