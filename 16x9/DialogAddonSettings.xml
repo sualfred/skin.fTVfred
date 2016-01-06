@@ -62,7 +62,7 @@
 				<onleft>9</onleft>
 				<onright>9000</onright>
 				<onup>noop</onup>
-				<ondown>noop</ondown>
+				<ondown>9000</ondown>
 				<onback>9</onback>
 				<scrolltime>0</scrolltime>
 				<usecontrolcoords>true</usecontrolcoords>
