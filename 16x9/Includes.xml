@@ -443,7 +443,7 @@
 		<font>Light40</font>
 		<align>center</align>
 		<textcolor>ff808080</textcolor>
-		<focusedcolor>ffffc24b</focusedcolor>		
+		<focusedcolor>ffffc24b</focusedcolor>
 		<texturefocus border="2">-</texturefocus>
 		<texturenofocus border="2">-</texturenofocus>
 	</include>
@@ -518,56 +518,56 @@
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(1).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(2).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(3).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(4).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(5).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(6).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1101).ListItemPosition(7).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1101).ListItemPosition(8).Art(poster)]</texture>
@@ -582,7 +582,7 @@
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(1).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
-		</control>			
+		</control>
 		<control type="image">
 			<width>950</width>
 			<height>530</height>
@@ -590,49 +590,49 @@
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(4).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(2).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(3).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(6).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(5).Art(fanart)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>361</width>
 			<height>530</height>
 			<texture background="true" fallback="views/poster_fallback.png">$INFO[Container(1102).ListItemPosition(8).Art(poster)]</texture>
 			<aspectratio align="center">scale</aspectratio>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">	
+		<control type="image">
 			<width>950</width>
 			<height>530</height>
 			<texture background="true" fallback="views/wide_fallback.png">$INFO[Container(1102).ListItemPosition(7).Art(fanart)]</texture>
