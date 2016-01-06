@@ -16,15 +16,38 @@
 		<effect easing="inout" end="100" start="0" time="400" tween="sine" type="fade" />
 	</animation>
 	<animation easing="inout" effect="fade" end="0" start="100" time="120" tween="sine">WindowClose</animation>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<controls>
+		<!-- refresh triggers -->
+		<control type="button" id="10">
+			<include>HiddenControl</include>			
+			<onfocus>AlarmClock(GoToTrigger2,SetFocus(20),00:50,silent)</onfocus>
+		</control>
+		<control type="button" id="20">
+			<include>HiddenControl</include>			
+			<onfocus>AlarmClock(GoToTrigger1,SetFocus(10),00:50,silent)</onfocus>
+		</control>
+
 		<!-- hidden lists -->
 		<control id="101" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
+			<visible>Control.HasFocus(10)</visible>
 		</control>
 		<control id="102" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="10">special://skin/extras/screensaver/tvshow_idle.xsp</content>
+			<visible>Control.HasFocus(10)</visible>
+		</control>
+		<control id="101" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
+			<visible>Control.HasFocus(20)</visible>
+		</control>
+		<control id="102" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="10">special://skin/extras/screensaver/tvshow_idle.xsp</content>
+			<visible>Control.HasFocus(20)</visible>
 		</control>
 		<!-- Background -->
 		<include>BackgroundImage</include>
