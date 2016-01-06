@@ -100,7 +100,7 @@
 						<onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
 					</control>
 					<control type="group">
-						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Conditional</animation>
+						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>							
 						<animation center="250,288" condition="Container(59).OnNext | Container(59).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 						<animation center="250,288" condition="Control.HasFocus(5000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>						
 						<control type="image">
