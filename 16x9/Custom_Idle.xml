@@ -1,55 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1106">
+<window type="dialog" id="1106">	
+	<zorder>101</zorder>
 	<visible>[[IsEmpty(Skin.String(ScreensaverTimer)) + System.IdleTime(30)] | [StringCompare(Skin.String(ScreensaverTimer),1) + System.IdleTime(30)] | [StringCompare(Skin.String(ScreensaverTimer),2) + System.IdleTime(60)] | [StringCompare(Skin.String(ScreensaverTimer),3) + System.IdleTime(120)] | [StringCompare(Skin.String(ScreensaverTimer),4) + System.IdleTime(180)] | [StringCompare(Skin.String(ScreensaverTimer),5) + System.IdleTime(240)] | [StringCompare(Skin.String(ScreensaverTimer),6) + System.IdleTime(300)] | [StringCompare(Skin.String(ScreensaverTimer),7) + System.IdleTime(600)] | [StringCompare(Skin.String(ScreensaverTimer),8) + System.IdleTime(1200)] | [StringCompare(Skin.String(ScreensaverTimer),9) + System.IdleTime(1800)]] + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + Skin.HasSetting(fTVscreensaver)</visible>	
 	<animation type="WindowOpen">
 		<effect center="auto" tween="circle" easing="out" end="100" start="110" time="400" type="zoom" />
 		<effect easing="inout" end="100" start="0" time="400" tween="sine" type="fade" />
 	</animation>
-	<animation easing="inout" effect="fade" end="0" start="100" time="120" tween="sine">WindowClose</animation>
-	<defaultcontrol always="true">10</defaultcontrol>
+	<animation easing="inout" effect="fade" end="0" start="0" time="0" tween="sine">WindowClose</animation>-->
 	<controls>
-		<!-- refresh triggers -->
-		<control type="button" id="10">
-			<include>HiddenControl</include>
-			<onback>Close</onback>
-			<onclick>Close</onclick>
-			<onup>Close</onup>
-			<ondown>Close</ondown>
-			<onright>Close</onright>
-			<onleft>Close</onleft>			
-			<onfocus>AlarmClock(GoToTrigger2,SetFocus(20),00:50,silent)</onfocus>
-		</control>
-		<control type="button" id="20">
-			<include>HiddenControl</include>
-			<onback>Close</onback>
-			<onclick>Close</onclick>
-			<onup>Close</onup>
-			<ondown>Close</ondown>
-			<onright>Close</onright>
-			<onleft>Close</onleft>			
-			<onfocus>AlarmClock(GoToTrigger1,SetFocus(10),00:50,silent)</onfocus>
-		</control>
-		<!-- hidden lists -->
+		<!-- hidden list -->
 		<control id="1101" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
-			<visible>Control.HasFocus(10)</visible>
+			<visible>StringCompare(Container(1100).ListItem.Label,content1)</visible>
 		</control>
+		
 		<control id="1102" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="10">special://skin/extras/screensaver/tvshow_idle.xsp</content>
-			<visible>Control.HasFocus(10)</visible>
+			<visible>StringCompare(Container(1100).ListItem.Label,content1)</visible>
 		</control>
-		<control id="1102" type="list">
-			<include>HiddenHomeList</include>
-			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
-			<visible>Control.HasFocus(20)</visible>
-		</control>
+
 		<control id="1101" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="10">special://skin/extras/screensaver/tvshow_idle.xsp</content>
-			<visible>Control.HasFocus(20)</visible>
+			<visible>StringCompare(Container(1100).ListItem.Label,content2)</visible>
 		</control>
+
+		<control id="1102" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
+			<visible>StringCompare(Container(1100).ListItem.Label,content2)</visible>
+		</control>
+
 		<!-- Background -->
 		<include>BackgroundImage</include>
 		<!-- round 1 -->
@@ -98,5 +81,27 @@
 				<include>ScreensaverContent2</include>
 			</control>
 		</control>		
+
+		<!-- refresh trigger -->
+		<control type="wraplist" id="1100">
+			<autoscroll>true</autoscroll>
+			<scrolltime tween="sine" easing="out">50000</scrolltime>
+			<include>HiddenHomeList</include>
+			<content>
+				<item id="1">
+					<label>content1</label>
+					<icon>-</icon>
+					<thumb>-</thumb>
+					<onclick>noop</onclick>
+				</item>
+				<item id="2">
+					<label>content2</label>
+					<icon>-</icon>
+					<thumb>-</thumb>
+					<onclick>noop</onclick>
+				</item>
+			</content>
+		</control>
+
 	</controls>
 </window>
