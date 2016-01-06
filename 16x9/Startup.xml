@@ -48,7 +48,7 @@
 		</control>
 		<!-- switch to home -->
 		<control type="button" id="30">		
-			<onfocus>Skin.ToggleSetting(StartupQuestions)</onfocus>			
+			<onfocus condition="!Skin.HasSetting(StartupQuestions)">Skin.ToggleSetting(StartupQuestions)</onfocus>			
 			<onfocus>SetProperty(preload,1,Home)</onfocus>			
 			<!-- workaround to fill the tv channel list correclty -->						
 			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent)</onfocus>
