@@ -1,87 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1106">	
+<window type="dialog" id="1106">
 	<zorder>101</zorder>
-	<visible>[[IsEmpty(Skin.String(ScreensaverTimer)) + System.IdleTime(30)] | [StringCompare(Skin.String(ScreensaverTimer),1) + System.IdleTime(30)] | [StringCompare(Skin.String(ScreensaverTimer),2) + System.IdleTime(60)] | [StringCompare(Skin.String(ScreensaverTimer),3) + System.IdleTime(120)] | [StringCompare(Skin.String(ScreensaverTimer),4) + System.IdleTime(180)] | [StringCompare(Skin.String(ScreensaverTimer),5) + System.IdleTime(240)] | [StringCompare(Skin.String(ScreensaverTimer),6) + System.IdleTime(300)] | [StringCompare(Skin.String(ScreensaverTimer),7) + System.IdleTime(600)] | [StringCompare(Skin.String(ScreensaverTimer),8) + System.IdleTime(1200)] | [StringCompare(Skin.String(ScreensaverTimer),9) + System.IdleTime(1800)]] + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + Skin.HasSetting(fTVscreensaver)</visible>	
+	<visible>[[IsEmpty(Skin.String(ScreensaverTimer)) + System.IdleTime(30)] | [StringCompare(Skin.String(ScreensaverTimer),1) + System.IdleTime(30)] | [StringCompare(Skin.String(ScreensaverTimer),2) + System.IdleTime(60)] | [StringCompare(Skin.String(ScreensaverTimer),3) + System.IdleTime(120)] | [StringCompare(Skin.String(ScreensaverTimer),4) + System.IdleTime(180)] | [StringCompare(Skin.String(ScreensaverTimer),5) + System.IdleTime(240)] | [StringCompare(Skin.String(ScreensaverTimer),6) + System.IdleTime(300)] | [StringCompare(Skin.String(ScreensaverTimer),7) + System.IdleTime(600)] | [StringCompare(Skin.String(ScreensaverTimer),8) + System.IdleTime(1200)] | [StringCompare(Skin.String(ScreensaverTimer),9) + System.IdleTime(1800)]] + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + Skin.HasSetting(fTVscreensaver)</visible>
+	<onload>AlarmClock(LoopDelayStart,SetProperty(StartLoop,1,Home),00:01,silent)</onload>
+	<onunload>ClearProperty(StartLoop,Home)</onunload>
 	<animation type="WindowOpen">
-		<effect center="auto" tween="circle" easing="out" end="100" start="110" time="400" type="zoom" />
+		<effect center="990,540" tween="circle" easing="out" end="100" start="110" time="400" type="zoom" />
 		<effect easing="inout" end="100" start="0" time="400" tween="sine" type="fade" />
 	</animation>
-	<animation easing="inout" effect="fade" end="0" start="0" time="0" tween="sine">WindowClose</animation>-->
 	<controls>
+		
 		<!-- hidden list -->
 		<control id="1101" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
+			<content limit="20">special://skin/extras/screensaver/movie_idle.xsp</content>
 			<visible>StringCompare(Container(1100).ListItem.Label,content1)</visible>
 		</control>
-		
 		<control id="1102" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="10">special://skin/extras/screensaver/tvshow_idle.xsp</content>
+			<content limit="20">special://skin/extras/screensaver/tvshow_idle.xsp</content>
 			<visible>StringCompare(Container(1100).ListItem.Label,content1)</visible>
 		</control>
-
 		<control id="1101" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="10">special://skin/extras/screensaver/tvshow_idle.xsp</content>
+			<content limit="20">special://skin/extras/screensaver/tvshow_idle.xsp</content>
 			<visible>StringCompare(Container(1100).ListItem.Label,content2)</visible>
 		</control>
-
 		<control id="1102" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="10">special://skin/extras/screensaver/movie_idle.xsp</content>
+			<content limit="20">special://skin/extras/screensaver/movie_idle.xsp</content>
 			<visible>StringCompare(Container(1100).ListItem.Label,content2)</visible>
 		</control>
 
 		<!-- Background -->
 		<include>BackgroundImage</include>
 		<!-- round 1 -->
-		<control type="group">
-			<top>7.5</top>
-			<animation loop="true" condition="true" start="0,0" end="-5019,0" time="50000" reversible="false" effect="slide">Conditional</animation>
-			<!-- row 1 -->
-			<control type="grouplist">
-				<width>5019</width>
-				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
-				<height>530</height>
-				<include>ScreensaverContent1</include>							
-			</control>
-			<!-- row 2 -->
-			<control type="grouplist">				
-				<top>535</top>		
-				<width>5019</width>
-				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
-				<height>530</height>	
-				<include>ScreensaverContent2</include>
-			</control>
+		<control type="grouplist">
+			<animation loop="true" condition="!IsEmpty(Window(Home).Property(StartLoop))" start="0,0" end="-6135,0" time="65000" reversible="false" effect="slide">Conditional</animation>
+			<heigth>1060</heigth>
+			<width>6135</width>
+			<top>10</top>
+			<orientation>horizontal</orientation>
+			<itemgap>10</itemgap>
+			<include>ScreensaverContent</include>
 		</control>
 		<!-- round 2 -->
-		<control type="group">
-			<top>7.5</top>
-			<animation loop="true" condition="true" start="0,0" end="-5019,0" time="50000" reversible="false" effect="slide">Conditional</animation>
-			<!-- row 1 -->
-			<control type="grouplist">
-				<left>5024</left>
-				<width>5019</width>
-				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
-				<height>530</height>
-				<include>ScreensaverContent1</include>
-			</control>
-			<!-- row 2 -->
-			<control type="grouplist">				
-				<top>535</top>		
-				<left>5024</left>
-				<width>5019</width>
-				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
-				<height>530</height>				
-				<include>ScreensaverContent2</include>
-			</control>
-		</control>		
-
+		<control type="grouplist">
+			<left>6145</left>
+			<animation loop="true" condition="!IsEmpty(Window(Home).Property(StartLoop))" start="0,0" end="-6135,0" time="65000" reversible="false" effect="slide">Conditional</animation>
+			<heigth>1060</heigth>
+			<width>6135</width>
+			<top>10</top>
+			<orientation>horizontal</orientation>
+			<itemgap>10</itemgap>
+			<include>ScreensaverContent</include>
+		</control>
 		<!-- refresh trigger -->
 		<control type="wraplist" id="1100">
 			<autoscroll>true</autoscroll>
