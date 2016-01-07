@@ -1036,23 +1036,3 @@ msgstr ""
 msgctxt "#31539"
 msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
 msgstr ""
-
-msgctxt "#31540"
-msgid "fTV screensaver"
-msgstr ""
-
-msgctxt "#31541"
-msgid "Imitates the original Fire TV screensaver slideshow based on your Movie and TV Show library. Please disable any activated real screensavers."
-msgstr ""
-
-msgctxt "#31542"
-msgid "Waiting period"
-msgstr ""
-
-msgctxt "#31543"
-msgid "seconds"
-msgstr ""
-
-msgctxt "#31544"
-msgid "minutes"
-msgstr ""

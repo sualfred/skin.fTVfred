@@ -14,19 +14,28 @@
 		<control type="grouplist">
 			<left>15</left>
 			<top>15</top>
-			<width>780</width>
+			<width>1920</width>
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
 			<!-- Window labels -->
 			<control type="label">
-				<width>780</width>
+				<width>1920</width>
 				<height>21</height>
 				<textcolor>FF0000FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[System.GetBool(screensaver.mode)]</label>
+				<label>Dim $INFO[Window(Home).Property(fTVscreensaver.dim)]</label>
+			</control>
+			<control type="label">
+				<width>1920</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>2 $INFO[Window(Home).Property(fTVscreensaver.content2)]</label>
 			</control>
 			<control type="label">
 				<width>780</width>
