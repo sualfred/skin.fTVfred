@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>		
+<window>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">40</defaultcontrol>	
-	<onload>SetProperty(preload,1,Home)</onload>	
+	<defaultcontrol always="true">40</defaultcontrol>
+	<onload>SetProperty(preload,1,Home)</onload>
 	<controls>
 		<!-- splash -->
 		<control type="image">
@@ -19,43 +19,43 @@
 			<textcolor>white</textcolor>
 			<align>center</align>
 			<width>1920</width>
-			<height>200</height>	
-			<label>31531</label>						
+			<height>200</height>
+			<label>31531</label>
 		</control>
 		<!-- trigger -->
 		<control type="button" id="40">
-			<onfocus condition="HasSetting(StartupQuestions)">SetFocus(30)</onfocus>				
-			<onfocus condition="!HasSetting(StartupQuestions)">SetFocus(10)</onfocus>	
+			<onfocus>SetProperty(preload,1,Home)</onfocus>
+			<onfocus condition="HasSetting(StartupQuestions) + System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
+			<onfocus condition="HasSetting(StartupQuestions) + !System.GetBool(pvrmanager.enabled)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<onfocus condition="!HasSetting(StartupQuestions)">SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>
 		<!-- ask to change stuff -->
-		<control type="button" id="10">							
+		<control type="button" id="10">
 			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31535],text=$LOCALIZE[31536],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)||SetFocus(20),noaction=SetFocus(20),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
 			<onfocus condition="!System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.toolbox,info=okdialog,header=$LOCALIZE[31535],text=$LOCALIZE[31537])</onfocus>
-			<onfocus condition="!System.HasAddon(script.skin.helper.service) | !System.GetBool(input.enablemouse)">SetFocus(20)</onfocus>			
+			<onfocus condition="!System.HasAddon(script.skin.helper.service) | !System.GetBool(input.enablemouse)">SetFocus(20)</onfocus>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>			
+			<texturefocus>-</texturefocus>
 		</control>
 		<!-- ask to change stuff -->
-		<control type="button" id="20">							
+		<control type="button" id="20">
 			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems) + System.GetBool(musiclibrary.showallitems)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31538],text=$LOCALIZE[31539],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)||RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)||SetFocus(30),noaction=SetFocus(30),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
 			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31538],text=$LOCALIZE[31539],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)||SetFocus(30),noaction=SetFocus(30),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
 			<onfocus condition="System.HasAddon(script.skin.helper.service) + !System.GetBool(filelists.showparentdiritems) + System.GetBool(musiclibrary.showallitems)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31538],text=$LOCALIZE[31539],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)||SetFocus(30),noaction=SetFocus(30),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
 			<onfocus condition="!System.HasAddon(script.skin.helper.service) | [!System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)]">SetFocus(30)</onfocus>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>	
+			<texturefocus>-</texturefocus>
 		</control>
 		<!-- switch to home -->
-		<control type="button" id="30">							
-			<onfocus condition="!HasSetting(StartupQuestions)">Skin.ToggleSetting(StartupQuestions)</onfocus>		
-			<onfocus>SetProperty(preload,1,Home)</onfocus>			
-			<!-- workaround to fill the tv channel list correclty -->						
-			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent)</onfocus>
+		<control type="button" id="30">
+			<onfocus condition="!HasSetting(StartupQuestions)">Skin.ToggleSetting(StartupQuestions)</onfocus>
+			<!-- workaround to fill the tv channel list correclty -->
+			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
 			<onfocus condition="!System.GetBool(pvrmanager.enabled)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>
-
 	</controls>
 </window>

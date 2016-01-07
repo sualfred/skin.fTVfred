@@ -3,7 +3,6 @@
 	<!-- home -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90000</defaultcontrol>
-	<onload condition="!Skin.HasSetting(StartupQuestions)">ReplaceWindow(startup)</onload>
 	<onload>ClearProperty(BounceRight,Home)</onload>	
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>		
