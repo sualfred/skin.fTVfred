@@ -22,14 +22,18 @@
 
 			<!-- list -->
 			<control type="group">
-				<animation condition="Container(11).Row(0)" effect="slide" end="0,-22" time="200">Conditional</animation>
-				<animation condition="Container(11).Row(1)" effect="slide" end="0,-66" time="200">Conditional</animation>
-				<animation condition="Container(11).Row(2)" effect="slide" end="0,-110" time="200">Conditional</animation>
-				<animation condition="Container(11).Row(3)" effect="slide" end="0,-154" time="200">Conditional</animation>
-				<animation condition="Container(11).Row(4)" effect="slide" end="0,-198" time="200">Conditional</animation>
-				<animation condition="Container(11).Row(5)" effect="slide" end="0,-242" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,3) + Container(11).Row(0)" effect="slide" end="0,-22" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(1)" effect="slide" end="0,-66" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(2)" effect="slide" end="0,-110" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(3)" effect="slide" end="0,-154" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(4)" effect="slide" end="0,-198" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(5)" effect="slide" end="0,-242" time="200">Conditional</animation>
+				<animation condition="StringCompare(Container(11).NumItems,4)" effect="slide" end="0,-188" time="0">Conditional</animation>
+				<animation condition="StringCompare(Container(11).NumItems,3)" effect="slide" end="0,-188" time="0">Conditional</animation>
+				<animation condition="StringCompare(Container(11).NumItems,2)" effect="slide" end="0,-354" time="0">Conditional</animation>
+				<animation condition="StringCompare(Container(11).NumItems,1)" effect="slide" end="0,-354" time="0">Conditional</animation>
 
-				<control type="list" id="11">
+				<control type="fixedlist" id="11">
 					<left>0</left>
 					<top>200</top>
 					<height>1000</height>
@@ -39,6 +43,9 @@
 					<onright>NextChannelGroup</onright>
 					<onup>noop</onup>
 					<ondown>noop</ondown>
+					<preloaditems>2</preloaditems>
+					<focusposition>2</focusposition>
+					<movement>3</movement>
 					<scrolltime easing="out" tween="sine">180</scrolltime>
 
 					<itemlayout height="166">
@@ -353,7 +360,7 @@
 				<top>84</top>
 				<width>614</width>			
 				<height>168</height>
-				<visible>!Container(11).Row(0)</visible>
+				<visible>!Container(11).Row(0) + !StringCompare(Container(11).CurrentItem,1)</visible>
 				<texture border="2" flipy="true">pvr/mask.png</texture>
 			</control>
 			<control type="image">
@@ -373,7 +380,7 @@
 					<width>36</width>
 					<height>20</height>
 					<texture>views/arrow_up.png</texture>
-					<visible>IntegerGreaterThan(Container(11).NumItems,3) + !StringCompare(Container(11).CurrentItem,1)</visible>
+					<visible>IntegerGreaterThan(Container(11).NumItems,4) + !StringCompare(Container(11).CurrentItem,1)</visible>
 					<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
 					<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 				</control>
