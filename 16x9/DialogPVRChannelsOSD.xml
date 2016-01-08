@@ -22,7 +22,7 @@
 
 			<!-- list -->
 			<control type="group">
-				<animation condition="IntegerGreaterThan(Container(11).NumItems,3) + Container(11).Row(0)" effect="slide" end="0,-22" time="200">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(0)" effect="slide" end="0,-22" time="200">Conditional</animation>
 				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(1)" effect="slide" end="0,-66" time="200">Conditional</animation>
 				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(2)" effect="slide" end="0,-110" time="200">Conditional</animation>
 				<animation condition="IntegerGreaterThan(Container(11).NumItems,4) + Container(11).Row(3)" effect="slide" end="0,-154" time="200">Conditional</animation>
@@ -46,7 +46,7 @@
 					<preloaditems>2</preloaditems>
 					<focusposition>2</focusposition>
 					<movement>3</movement>
-					<scrolltime easing="out" tween="sine">180</scrolltime>
+					<scrolltime easing="out" tween="sine">400</scrolltime>
 
 					<itemlayout height="166">
 						<control type="image">
