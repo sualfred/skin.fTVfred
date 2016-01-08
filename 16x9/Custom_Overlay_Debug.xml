@@ -20,6 +20,15 @@
 			<visible>Skin.HasSetting(DebugInfo)</visible>
 			<!-- Window labels -->
 			<control type="label">
+				<width>1920</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>$INFO[Window(Home).Property(fTVscreensaver.Movie.FanArt)]</label>
+			</control>
+			<control type="label">
 				<width>780</width>
 				<height>21</height>
 				<textcolor>FF0000FF</textcolor>

@@ -37,12 +37,11 @@
 				<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 			</animation>
 			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
- 			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
- 			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
- 			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
- 			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
- 			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
-  			
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
 			<itemlayout height="576" width="436">
 				<control type="group">
 					<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -236,8 +235,8 @@
 					<left>-10</left>
 					<height>100</height>
 					<itemgap>0</itemgap>
-					<onleft>SetFocus(55)</onleft>
-					<onright>SetFocus(55)</onright>
+					<onleft>Setfocus(570)</onleft>
+					<onright>Setfocus(570)</onright>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<defaultcontrol always="true">1001</defaultcontrol>
@@ -251,10 +250,10 @@
 						<visible>!Control.HasFocus(21) + !Control.HasFocus(30) + !Control.HasFocus(20)</visible>
 					</control>
 					<control id="21" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
-						<onup>55</onup>
+						<onup>570</onup>
 						<ondown>3000</ondown>
 						<font>Med24</font>
 						<label>-</label>
@@ -268,7 +267,7 @@
 						<width min="184" max="264">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
-						<onup>55</onup>
+						<onup>570</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(22)</onclick>
 						<onclick>Select</onclick>
@@ -284,10 +283,10 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="20" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
-						<onup>55</onup>
+						<onup>570</onup>
 						<ondown>3000</ondown>
 						<font>Med24</font>
 						<label>192</label>
@@ -298,10 +297,10 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1003" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
-						<onup>55</onup>
+						<onup>570</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(5001)</onclick>
 						<font>Med24</font>
@@ -335,13 +334,14 @@
 				<!-- More button -->
 				<control id="3000" type="button">
 					<left>1194</left>
-					<top>192</top>
+					<top>196</top>
 					<width>37</width>
 					<height>23</height>
 					<onup>1000</onup>
 					<ondown>noop</ondown>
-					<onleft>55</onleft>
-					<onright>55</onright>
+					<onleft>570</onleft>
+					<onright>570</onright>
+					<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$INFO[ListItem.Property(Event.Description)]"')</onclick>
 					<visible>Control.IsVisible(96)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
@@ -375,8 +375,8 @@
 				<height>620</height>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
-				<onleft>55</onleft>
-				<onright>55</onright>
+				<onleft>570</onleft>
+				<onright>570</onright>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>vertical</orientation>
@@ -415,7 +415,7 @@
 					<font>Light30Spaced</font>
 					<label>584</label>
 					<altlabel>585</altlabel>
-					<onback>55</onback>
+					<onback>570</onback>
 					<textcolor>ff505153</textcolor>
 					<focusedcolor>ffffaf37</focusedcolor>
 					<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
@@ -438,8 +438,8 @@
 					<height>84</height>
 					<align>center</align>
 					<aligny>top</aligny>
-					<onback>55</onback>
-					<onclick>SetFocus(55)</onclick>
+					<onback>570</onback>
+					<onclick>SetFocus(570)</onclick>
 					<font>Med24</font>
 					<label>20177</label>
 					<textoffsety>27</textoffsety>

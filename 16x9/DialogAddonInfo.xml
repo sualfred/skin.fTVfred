@@ -87,6 +87,7 @@
 				<ondown>noop</ondown>
 				<onleft>Close</onleft>
 				<onright>noop</onright>
+				<onright condition="Control.IsVisible(96)">3002</onright>
 				<onfocus>SetProperty(AddonDetails,1,home)</onfocus>
 				<font>Light35</font>
 				<textcolor>ffdadada</textcolor>

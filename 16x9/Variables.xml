@@ -1769,8 +1769,8 @@
 		<value condition="SubString(ListItem.Premiered,/20)">20</value>
 	</variable>
 	<variable name="SimilarVideos">
-		<value condition="[Container.Content(tvshows) | Container.Content(episodes)] + !IsEmpty(Window(home).Property(TVShowID))">plugin://script.extendedinfo?info=similartvshows&amp;&amp;dbid=$INFO[Window(home).Property(TVShowID)]</value>
-		<value condition="Container.Content(movies) + !IsEmpty(ListItem.DBID)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[ListItem.DBID]</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(episodes)] + !IsEmpty(Window(home).Property(TVShowID))">plugin://script.skin.helper.service/?action=similarshows&amp;imdbid=$INFO[Window(home).Property(TVShowID)]&amp;limit=20</value>
+ 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.IMDBNumber)">plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=20</value>
 	</variable>
 	<variable name="HeadingLabel">
 		<value condition="!StringCompare(Container.FolderName,$LOCALIZE[369]) + !IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>

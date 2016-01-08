@@ -4,6 +4,7 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90000</defaultcontrol>
 	<onload>ClearProperty(BounceRight,Home)</onload>	
+	<onload>RunScript(script.grab.fanart)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>		
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	

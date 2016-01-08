@@ -103,7 +103,7 @@
 						<texturenofocus>-</texturenofocus>
 						<onfocus>ClearProperty(ContentEpisodes,home)</onfocus>
 						<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
-						<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.DBID],home)</onfocus>
+						<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>						
 						<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.UserRating],home)</onfocus>
 						<onfocus condition="!IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 					</control>

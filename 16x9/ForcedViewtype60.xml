@@ -76,6 +76,7 @@
 						<texturenofocus>-</texturenofocus>
 						<onfocus>ClearProperty(TVShowID,home)</onfocus>
 						<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
+						<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>
 						<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 					</control>
 					<control type="group">
