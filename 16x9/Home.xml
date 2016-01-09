@@ -1004,8 +1004,8 @@
 					</item>
 					<item>
 						<onclick>noop</onclick>
-						<label>8</label>
-						<icon>settings/icon_weather.png</icon>
+						<label>19020</label>
+						<icon>settings/icon_tv.png</icon>
 					</item>
 				</content>
 			</control>
