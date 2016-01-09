@@ -237,6 +237,16 @@
 			<filename>HelveticaNeue_Med.ttf</filename>
 			<size>20</size>
 		</font>
+		<font>
+			<name>Med18</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Med16</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>16</size>
+		</font>
 		<!-- Med uppercase -->
 		<font>
 			<name>MedUpper24</name>

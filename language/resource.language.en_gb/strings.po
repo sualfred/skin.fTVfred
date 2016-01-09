@@ -1036,3 +1036,19 @@ msgstr ""
 msgctxt "#31539"
 msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
 msgstr ""
+
+msgctxt "#31539"
+msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
+msgstr ""
+
+msgctxt "#31540"
+msgid "Still there? Press Continue to watch the next episode."
+msgstr ""
+
+msgctxt "#31541"
+msgid "Continue"
+msgstr ""
+
+msgctxt "#31542"
+msgid "Continue Watching?"
+msgstr ""

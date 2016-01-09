@@ -42,17 +42,17 @@
 		</control>
 		<!-- Main group -->
 		<control type="group">
-			<include>DialogAnimation</include>
+			<animation easing="inout" effect="slide" end="0,0" start="0,-289" time="120" tween="sine" delay="1500">WindowOpen</animation>
+			<animation easing="inout" effect="slide" end="0,-289" start="0,0" time="120" tween="sine">WindowClose</animation>
 			<centerleft>50%</centerleft>
-			<centertop>50%</centertop>
+			<top>42</top>
 			<width>716</width>
 			<height>289</height>
 			<!-- Background -->
 			<control type="image">
 				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>100%</width>
-				<height>100%</height>
+				<width>716</width>
+				<height>239</height>
 				<include>MessageBackground</include>
 			</control>
 			<!-- Heading -->
@@ -63,7 +63,7 @@
 				<height>38</height>
 				<font>Bold38</font>
 				<textcolor>ffdadada</textcolor>
-				<label>$ADDON[service.nextup.notification 30010]</label>
+				<label>31542</label>
 			</control>
 			<!-- Details -->
 			<control type="textbox">
@@ -73,12 +73,12 @@
 				<height>146</height>
 				<font>Light28</font>
 				<textcolor>ff9d9d9d</textcolor>
-				<label>$ADDON[service.nextup.notification 30012]</label>
+				<label>31540</label>
 			</control>
 			<!-- No -->
 			<control id="4013" type="button">
 				<left>-5</left>
-				<bottom>0</bottom>
+				<bottom>25</bottom>
 				<width>363</width>
 				<height>76</height>
 				<align>center</align>
@@ -92,7 +92,7 @@
 			<!-- Yes -->
 			<control id="4012" type="button">
 				<right>-5</right>
-				<bottom>0</bottom>
+				<bottom>25</bottom>
 				<width>363</width>
 				<height>76</height>
 				<align>center</align>
@@ -101,12 +101,12 @@
 				<onright>noop</onright>
 				<font>MedUpper24</font>
 				<textoffsety>27</textoffsety>
-				<label>19194</label>
+				<label>31541</label>
 			</control>
 		</control>
 		<control type="group">
-			<left>1430</left>
-			<top>666</top>
+			<left>1330</left>
+			<top>566</top>
 			<animation effect="fade" end="100" start="0" time="200" condition="Window.IsVisible(script-nextup-notification-NextUpInfo.xml)">Conditional</animation>
 			<!--  Next up label -->
 			<control type="label">
@@ -120,57 +120,70 @@
 			<!-- Next episode thumb -->
 			<control type="image">
 				<top>56</top>
-				<width>370</width>
-				<height>277</height>
+				<width>470</width>
+				<height>377</height>
 				<texture>views/episode_fallback.png</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
 				<top>56</top>
-				<width>370</width>
-				<height>277</height>
+				<width>470</width>
+				<height>377</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[StillWatchingThumb]</texture>
+				<texture>$VAR[NextUpThumb]</texture>
 			</control>
 			<control type="image">
 				<top>56</top>
-				<width>370</width>
-				<height>277</height>
+				<width>470</width>
+				<height>377</height>
 				<aspectratio align="center">scale</aspectratio>
 				<texture>views/episode_fallback.png</texture>
-				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !IntegerGreaterThan(Control.GetLabel(4018),0)</visible>
+				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !IntegerGreaterThan(Control.GetLabel(3018),0)</visible>
 			</control>
 			<control type="image">
 				<top>56</top>
 				<width>90</width>
 				<height>90</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(Control.GetLabel(4011),719)</visible>
+				<visible>IntegerGreaterThan(Control.GetLabel(3011),719)</visible>
 			</control>
 			<control type="image">
-				<top>56</top>
-				<width>370</width>
+				<top>156</top>
+				<width>470</width>
 				<height>277</height>
 				<texture border="2">views/season_overlay.png</texture>
 			</control>
 			<!-- Next episode countdown -->
 			<control type="image">
 				<left>12</left>
-				<top>276</top>
-				<width>44</width>
-				<height>44</height>
+				<top>369</top>
+				<width>46</width>
+				<height>46</height>
 				<texture>$VAR[NextEpisodeCountdown]</texture>
+			</control>
+			<!--  Next up label -->
+			<control type="label">
+				<left>64</left>
+				<top>367</top>
+				<width>auto</width>
+				<height>24</height>
+				<font>Med16</font>
+				<textcolor>ffffc448</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$LOCALIZE[19194]</label>
+				<animation delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">WindowOpen</animation>
 			</control>
 			<!--  Next episode label -->
 			<control type="label">
 				<left>64</left>
-				<top>286</top>
+				<top>381</top>
 				<width>auto</width>
 				<height>24</height>
 				<font>Med24</font>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
-				<label>$INFO[Control.GetLabel(4008),$LOCALIZE[20373] ], $INFO[Control.GetLabel(4009),Ep. ]</label>
+				<label>$INFO[Control.GetLabel(3015),$LOCALIZE[20373] ], $INFO[Control.GetLabel(3016),Ep. ]</label>
+				<animation delay="560" easing="inout" effect="slide" end="0,9" reversible="false" start="0,0" time="220" tween="sine">WindowOpen</animation>
 			</control>
 		</control>
 	</controls>

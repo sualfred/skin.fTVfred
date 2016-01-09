@@ -106,21 +106,34 @@
 			<!-- Next episode countdown -->
 			<control type="image">
 				<left>12</left>
-				<top>376</top>
-				<width>44</width>
-				<height>44</height>
+				<top>369</top>
+				<width>46</width>
+				<height>46</height>
 				<texture>$VAR[NextEpisodeCountdown]</texture>
+			</control>
+			<!--  Next up label -->
+			<control type="label">
+				<left>64</left>
+				<top>367</top>
+				<width>auto</width>
+				<height>24</height>
+				<font>Med16</font>
+				<textcolor>ffffc448</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$LOCALIZE[31060]</label>
+				<animation delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">WindowOpen</animation>
 			</control>
 			<!--  Next episode label -->
 			<control type="label">
 				<left>64</left>
-				<top>386</top>
+				<top>381</top>
 				<width>auto</width>
 				<height>24</height>
 				<font>Med24</font>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
 				<label>$INFO[Control.GetLabel(3015),$LOCALIZE[20373] ], $INFO[Control.GetLabel(3016),Ep. ]</label>
+				<animation delay="560" easing="inout" effect="slide" end="0,9" reversible="false" start="0,0" time="220" tween="sine">WindowOpen</animation>
 			</control>
 		</control>
 	</controls>
