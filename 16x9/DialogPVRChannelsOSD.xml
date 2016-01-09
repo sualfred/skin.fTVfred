@@ -45,9 +45,8 @@
 					<ondown>noop</ondown>
 					<preloaditems>2</preloaditems>
 					<focusposition>2</focusposition>
-					<movement>3</movement>
-					<scrolltime easing="out" tween="sine">400</scrolltime>
-
+					<movement>3</movement>					
+					<scrolltime easing="inout" tween="sine">300</scrolltime>
 					<itemlayout height="166">
 						<control type="image">
 							<left>21</left>
@@ -147,10 +146,10 @@
 							<onfocus>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onfocus>
 							<onfocus>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onfocus>
 							<onfocus>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onfocus>
-                            <onfocus>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onfocus>
-                            <onfocus>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onfocus>
-                            <onfocus>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onfocus>
-                            <onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
+							<onfocus>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onfocus>
+							<onfocus>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onfocus>
+							<onfocus>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onfocus>
+							<onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
 						</control>
 						<control type="image">
 							<left>21</left>
