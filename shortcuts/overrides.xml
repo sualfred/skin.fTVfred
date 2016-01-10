@@ -66,6 +66,10 @@
 				<shortcut label="31514" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?id=presets&amp;path=browse)</shortcut>
 				<shortcut label="31513" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
 			</node>
+			<node label="19020">
+				<shortcut label="19019" type="movie" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/1,return)</shortcut>
+				<shortcut label="19017" type="movie" icon="ftv_icon.png">ActivateWindow(tvrecordings,pvr://recordings/active,return)</shortcut>
+			</node>
 		</node>
 		<node label="32029">
 			<content>common</content>

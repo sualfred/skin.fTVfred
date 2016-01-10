@@ -8,28 +8,7 @@
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<!-- workaround to focus the first item -->
-				<onback>ClearProperty(chan1,Home)</onback>
-				<onback>ClearProperty(chan2,Home)</onback>
-				<onback>ClearProperty(chan3,Home)</onback>
-				<onback>ClearProperty(chan4,Home)</onback>
-				<onback>ClearProperty(channame1,Home)</onback>
-				<onback>ClearProperty(channame2,Home)</onback>
-				<onback>ClearProperty(channame3,Home)</onback>
-				<onback>ClearProperty(channame4,Home)</onback>
-				<onup>ClearProperty(chan1,Home)</onup>
-				<onup>ClearProperty(chan2,Home)</onup>
-				<onup>ClearProperty(chan3,Home)</onup>
-				<onup>ClearProperty(chan4,Home)</onup>
-				<onup>ClearProperty(channame1,Home)</onup>
-				<onup>ClearProperty(channame2,Home)</onup>
-				<onup>ClearProperty(channame3,Home)</onup>
-				<onup>ClearProperty(channame4,Home)</onup>
-				<onup condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,$INFO[Container.CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,1)</onup>
 				<onup>back</onup>
-				<onback condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,$INFO[Container.CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,1)</onback>
 				<ondown>1000</ondown>
 				<onleft>Back</onleft>
 				<onright>noop</onright>
@@ -64,7 +43,7 @@
 							<width>480</width>
 							<height>480</height>
 							<aspectratio align="center">keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="image">
 							<left>-48</left>
@@ -78,7 +57,7 @@
 							<width>480</width>
 							<height>480</height>
 							<texture border="2">views/season_overlay.png</texture>
-							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="label">
 							<left>18</left>
@@ -89,7 +68,7 @@
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
-							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="image">
 							<top>48</top>
@@ -108,18 +87,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="576" width="436">		
-					<control type="button">
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onfocus>SetProperty(chan1,$INFO[ListItem.Icon],Home)</onfocus>
-						<onfocus>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onfocus>
-						<onfocus>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onfocus>
-						<onfocus>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onfocus>
-						<onfocus>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onfocus>
-						<onfocus>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onfocus>
-						<onfocus>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onfocus>
-						<onfocus>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onfocus>
-					</control>
 					<control type="group">
 						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>							
 						<animation center="250,288" condition="Container(59).OnNext | Container(59).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
@@ -135,14 +102,14 @@
 							<width>480</width>
 							<height>480</height>
 							<aspectratio align="center">keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="image">
 							<top>48</top>
 							<width>480</width>
 							<height>480</height>
 							<texture border="2">views/season_overlay.png</texture>
-							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="label">
 							<left>18</left>
@@ -153,7 +120,7 @@
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
-							<visible>!StringCompare(ListItem.Label,..) + SubString(ListItem.Icon,Default)</visible>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="image">
 							<left>-48</left>
@@ -189,7 +156,6 @@
 							<texture>views/equaliser.gif</texture>
 							<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
 						</control>
-
 						<!-- Progress -->
 						<control type="progress">
 							<left>3</left>
@@ -204,8 +170,8 @@
 							<info>ListItem.Progress</info>
 							<animation center="auto" condition="Control.HasFocus(59)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
 							<animation center="auto" condition="Control.HasFocus(59)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-						</control>ControlGroup(99999).HasFocus | 
-
+							<visible>IntegerGreaterThan(ListItem.Progress,0)</visible>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>

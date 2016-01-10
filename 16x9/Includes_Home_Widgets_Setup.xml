@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!-- Home Square Info Itemlayout -->
-	<include name="HomeSquareInfoItemlayout">
+	<include name="HomeSquareInfoItemlayout">		
 		<control type="group">
 			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>			
 			<control type="group">
@@ -20,6 +20,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -86,6 +95,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -152,6 +170,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -218,6 +245,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -289,6 +325,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -356,6 +401,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -423,6 +477,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -490,6 +553,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -562,6 +634,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -589,6 +670,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -616,6 +706,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -643,6 +742,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -675,6 +783,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon1)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -703,6 +820,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -731,6 +857,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon3)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -759,6 +894,15 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<width>318</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
+					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -2033,6 +2177,7 @@
 				<property name="ArtLogo1">$INFO[Container(101).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(101).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(101).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -2072,6 +2217,7 @@
 				<property name="ArtLogo1">$INFO[Container(102).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(102).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(102).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -2111,6 +2257,7 @@
 				<property name="ArtLogo1">$INFO[Container(103).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(103).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(103).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -2150,6 +2297,7 @@
 				<property name="ArtLogo1">$INFO[Container(104).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(104).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(104).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -2189,6 +2337,7 @@
 				<property name="ArtLogo1">$INFO[Container(105).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(105).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(105).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -2228,6 +2377,7 @@
 				<property name="ArtLogo1">$INFO[Container(106).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(106).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(106).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -2267,6 +2417,7 @@
 				<property name="ArtLogo1">$INFO[Container(107).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(107).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(107).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -2306,6 +2457,7 @@
 				<property name="ArtLogo1">$INFO[Container(108).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(108).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(108).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(1-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(1-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -2350,6 +2502,7 @@
 				<property name="ArtLogo1">$INFO[Container(201).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(201).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(201).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -2389,6 +2542,7 @@
 				<property name="ArtLogo1">$INFO[Container(202).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(202).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(202).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -2428,6 +2582,7 @@
 				<property name="ArtLogo1">$INFO[Container(203).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(203).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(203).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -2467,6 +2622,7 @@
 				<property name="ArtLogo1">$INFO[Container(204).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(204).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(204).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -2506,6 +2662,7 @@
 				<property name="ArtLogo1">$INFO[Container(205).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(205).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(205).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -2545,6 +2702,7 @@
 				<property name="ArtLogo1">$INFO[Container(206).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(206).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(206).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -2584,6 +2742,7 @@
 				<property name="ArtLogo1">$INFO[Container(207).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(207).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(207).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -2623,6 +2782,7 @@
 				<property name="ArtLogo1">$INFO[Container(208).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(208).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(208).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(2-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(2-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -2667,6 +2827,7 @@
 				<property name="ArtLogo1">$INFO[Container(301).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(301).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(301).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -2706,6 +2867,7 @@
 				<property name="ArtLogo1">$INFO[Container(302).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(302).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(302).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -2745,6 +2907,7 @@
 				<property name="ArtLogo1">$INFO[Container(303).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(303).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(303).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -2784,6 +2947,7 @@
 				<property name="ArtLogo1">$INFO[Container(304).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(304).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(304).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -2823,6 +2987,7 @@
 				<property name="ArtLogo1">$INFO[Container(305).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(305).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(305).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -2862,6 +3027,7 @@
 				<property name="ArtLogo1">$INFO[Container(306).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(306).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(306).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -2901,6 +3067,7 @@
 				<property name="ArtLogo1">$INFO[Container(307).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(307).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(307).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -2940,6 +3107,7 @@
 				<property name="ArtLogo1">$INFO[Container(308).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(308).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(308).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(3-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(3-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -2984,6 +3152,7 @@
 				<property name="ArtLogo1">$INFO[Container(401).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(401).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(401).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -3023,6 +3192,7 @@
 				<property name="ArtLogo1">$INFO[Container(402).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(402).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(402).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -3062,6 +3232,7 @@
 				<property name="ArtLogo1">$INFO[Container(403).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(403).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(403).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -3101,6 +3272,7 @@
 				<property name="ArtLogo1">$INFO[Container(404).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(404).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(404).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -3140,6 +3312,7 @@
 				<property name="ArtLogo1">$INFO[Container(405).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(405).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(405).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -3179,6 +3352,7 @@
 				<property name="ArtLogo1">$INFO[Container(406).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(406).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(406).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -3218,6 +3392,7 @@
 				<property name="ArtLogo1">$INFO[Container(407).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(407).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(407).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -3257,6 +3432,7 @@
 				<property name="ArtLogo1">$INFO[Container(408).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(408).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(408).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(4-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(4-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -3301,6 +3477,7 @@
 				<property name="ArtLogo1">$INFO[Container(501).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(501).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(501).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -3340,6 +3517,7 @@
 				<property name="ArtLogo1">$INFO[Container(502).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(502).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(502).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -3379,6 +3557,7 @@
 				<property name="ArtLogo1">$INFO[Container(503).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(503).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(503).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -3418,6 +3597,7 @@
 				<property name="ArtLogo1">$INFO[Container(504).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(504).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(504).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -3457,6 +3637,7 @@
 				<property name="ArtLogo1">$INFO[Container(505).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(505).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(505).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -3496,6 +3677,7 @@
 				<property name="ArtLogo1">$INFO[Container(506).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(506).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(506).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -3535,6 +3717,7 @@
 				<property name="ArtLogo1">$INFO[Container(507).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(507).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(507).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -3574,6 +3757,7 @@
 				<property name="ArtLogo1">$INFO[Container(508).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(508).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(508).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(5-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(5-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -3618,6 +3802,7 @@
 				<property name="ArtLogo1">$INFO[Container(601).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(601).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(601).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -3657,6 +3842,7 @@
 				<property name="ArtLogo1">$INFO[Container(602).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(602).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(602).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -3696,6 +3882,7 @@
 				<property name="ArtLogo1">$INFO[Container(603).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(603).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(603).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -3735,6 +3922,7 @@
 				<property name="ArtLogo1">$INFO[Container(604).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(604).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(604).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -3774,6 +3962,7 @@
 				<property name="ArtLogo1">$INFO[Container(605).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(605).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(605).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -3813,6 +4002,7 @@
 				<property name="ArtLogo1">$INFO[Container(606).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(606).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(606).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -3852,6 +4042,7 @@
 				<property name="ArtLogo1">$INFO[Container(607).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(607).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(607).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -3891,6 +4082,7 @@
 				<property name="ArtLogo1">$INFO[Container(608).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(608).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(608).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(6-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(6-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -3935,6 +4127,7 @@
 				<property name="ArtLogo1">$INFO[Container(701).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(701).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(701).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -3974,6 +4167,7 @@
 				<property name="ArtLogo1">$INFO[Container(702).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(702).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(702).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -4013,6 +4207,7 @@
 				<property name="ArtLogo1">$INFO[Container(703).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(703).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(703).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -4052,6 +4247,7 @@
 				<property name="ArtLogo1">$INFO[Container(704).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(704).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(704).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -4091,6 +4287,7 @@
 				<property name="ArtLogo1">$INFO[Container(705).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(705).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(705).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -4130,6 +4327,7 @@
 				<property name="ArtLogo1">$INFO[Container(706).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(706).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(706).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -4169,6 +4367,7 @@
 				<property name="ArtLogo1">$INFO[Container(707).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(707).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(707).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -4208,6 +4407,7 @@
 				<property name="ArtLogo1">$INFO[Container(708).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(708).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(708).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(7-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(7-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -4252,6 +4452,7 @@
 				<property name="ArtLogo1">$INFO[Container(801).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(801).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(801).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-1)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-1)]</onclick>
 			</item>
 			<item>
@@ -4291,6 +4492,7 @@
 				<property name="ArtLogo1">$INFO[Container(802).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(802).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(802).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-2)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-2)]</onclick>
 			</item>
 			<item>
@@ -4330,6 +4532,7 @@
 				<property name="ArtLogo1">$INFO[Container(803).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(803).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(803).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-3)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-3)]</onclick>
 			</item>
 			<item>
@@ -4369,6 +4572,7 @@
 				<property name="ArtLogo1">$INFO[Container(804).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(804).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(804).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-4)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-4)]</onclick>
 			</item>
 			<item>
@@ -4408,6 +4612,7 @@
 				<property name="ArtLogo1">$INFO[Container(805).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(805).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(805).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-5)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-5)]</onclick>
 			</item>
 			<item>
@@ -4447,6 +4652,7 @@
 				<property name="ArtLogo1">$INFO[Container(806).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(806).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(806).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-6)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-6)]</onclick>
 			</item>
 			<item>
@@ -4486,6 +4692,7 @@
 				<property name="ArtLogo1">$INFO[Container(807).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(807).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(807).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-7)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-7)]</onclick>
 			</item>
 			<item>
@@ -4525,6 +4732,7 @@
 				<property name="ArtLogo1">$INFO[Container(808).ListItemPosition(0).Art(clearlogo)]</property>
 				<property name="ArtLogo2">$INFO[Container(808).ListItemPosition(1).Art(clearlogo)]</property>
 				<property name="ArtLogo3">$INFO[Container(808).ListItemPosition(2).Art(clearlogo)]</property>
+				<property name="Path">$INFO[Skin.String(8-WidgetList-8)]</property>
 				<onclick>$INFO[Skin.String(8-WidgetAction-8)]</onclick>
 			</item>
 		</content>
@@ -4578,8 +4786,9 @@
 	<include name="ListItemLiveTVContent">
 		<content>
 			<item>
-				<label>$LOCALIZE[4]</label>
-				<visible>IsEmpty(Window(0).Property(chan1))</visible>
+				<label>$LOCALIZE[19019]</label>				
+				<visible>!IsEmpty(Container(888).ListItemPosition(0).Label)</visible>
+				<property name="WidgetStyle">$LOCALIZE[31161]</property>
 				<property name="Icon1">$INFO[Container(888).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(888).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(888).ListItemPosition(2).Icon]</property>
@@ -4588,26 +4797,12 @@
 				<property name="InfoLabel2">$INFO[Container(888).ListItemPosition(1).ChannelName]</property>
 				<property name="InfoLabel3">$INFO[Container(888).ListItemPosition(2).ChannelName]</property>
 				<property name="InfoLabel4">$INFO[Container(888).ListItemPosition(3).ChannelName]</property>
-				<property name="Path">channels</property>
-				<onclick>ActivateWindow(tvchannels)</onclick>
-			</item>
-			<item>
-				<label>$LOCALIZE[4]</label>
-				<visible>!IsEmpty(Window(0).Property(chan1))</visible>
-				<property name="Icon1">$INFO[Window(0).Property(chan1)]</property>
-				<property name="Icon2">$INFO[Window(0).Property(chan2)]</property>
-				<property name="Icon3">$INFO[Window(0).Property(chan3)]</property>
-				<property name="Icon4">$INFO[Window(0).Property(chan4)]</property>
-				<property name="InfoLabel1">$INFO[Window(0).Property(channame1)]</property>
-				<property name="InfoLabel2">$INFO[Window(0).Property(channame2)]</property>
-				<property name="InfoLabel3">$INFO[Window(0).Property(channame3)]</property>
-				<property name="InfoLabel4">$INFO[Window(0).Property(channame4)]</property>
-				<property name="Path">channels</property>
-				<onclick>>ActivateWindow(tvchannels)</onclick>
+				<property name="Path">pvr://channels/tv/1</property>
+				<onclick>ActivateWindow(1106)</onclick>
 			</item>
 			<item>
 				<label>$LOCALIZE[19017]</label>
-				<visible>!IsEmpty(Container(889).ListItemPosition(0).Label)</visible>
+				<!--<visible>!IsEmpty(Container(889).ListItemPosition(0).Label)</visible>-->
 				<property name="Icon1">$INFO[Container(889).ListItemPosition(0).Icon]</property>
 				<property name="Icon2">$INFO[Container(889).ListItemPosition(1).Icon]</property>
 				<property name="Icon3">$INFO[Container(889).ListItemPosition(2).Icon]</property>
@@ -4616,7 +4811,7 @@
 				<property name="InfoLabel2">$INFO[Container(889).ListItemPosition(1).Label]</property>
 				<property name="InfoLabel3">$INFO[Container(889).ListItemPosition(2).Label]</property>
 				<property name="InfoLabel4">$INFO[Container(889).ListItemPosition(3).Label]</property>
-				<property name="Path">recordings</property>
+				<property name="Path">pvr://recordings/active</property>
 				<onclick>ActivateWindow(tvrecordings)</onclick>
 			</item>
 		</content>

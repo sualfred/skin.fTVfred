@@ -1809,6 +1809,9 @@
 		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>		
 	</variable>
 	<variable name="Plot">
+		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.PlotOutline,, ]$INFO[Container(100).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.PlotOutline]</value>
+		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Plot]</value>
 		<value condition="!StringCompare(ListItem.PlotOutline,ListItem.Plot)">$INFO[ListItem.PlotOutline,, ]$INFO[ListItem.Plot]</value>
 		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
@@ -3850,8 +3853,8 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PVRPath">
-		<value condition="StringCompare(Container(59).FolderPath,pvr://channels/tv/all channels/)">$LOCALIZE[19287]</value>
-		<value>$INFO[Container(59).FolderName]</value>
+		<value condition="StringCompare(Container.FolderPath,pvr://channels/tv/all channels/)">$LOCALIZE[19287]</value>
+		<value>$INFO[Container.FolderName]</value>
 	</variable>
 	<variable name="SeekStepIcon">
 		<value condition="[!IsEmpty(Player.SeekOffset) + !SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + !SubString(Player.SeekStepSize,-)]">osd/step_forward.png</value>

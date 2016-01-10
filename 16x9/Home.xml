@@ -385,10 +385,11 @@
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget7) + !IntegerGreaterThan(Container(700).NumItems,1)">$INFO[Skin.String(7-WidgetAction-1)]</onright>
 
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + IntegerGreaterThan(Container(800).NumItems,1)">SetFocus(800)</onright>
-				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + !IntegerGreaterThan(Container(800).NumItems,1)">$INFO[Skin.String(8-WidgetAction-1)]</onright>	
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),widget8) + !IntegerGreaterThan(Container(800).NumItems,1)">$INFO[Skin.String(8-WidgetAction-1)]</onright>					
 
-				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),livetv) + StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onright>
-				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),livetv)">SetFocus(901)</onright>		
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),livetv) + IntegerGreaterThan(Container(901).NumItems,1)">SetFocus(901)</onright>
+				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),livetv) + !IntegerGreaterThan(Container(901).NumItems,1)">ActivateWindow(1106)</onright>
+
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),weather)">ActivateWindow(weather)</onright>		
 				<onright condition="StringCompare(Container(9000).ListItem.Property(widget),favourites)">ActivateWindow(favourites)</onright>		
 
@@ -636,122 +637,11 @@
 				<include>FavouritesContent</include>				
 			</control>
 			<!-- PVR widget -->
-			<control id="901" type="fixedlist">
-				<left>419</left>
-				<top>-367</top>
-				<width>2100</width>
-				<height>1500</height>
-				<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
-				<onup>noop</onup>
-				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
-				<ondown>noop</ondown>
-				<onleft>9000</onleft>			
-				<onright condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvchannels)</onright>
-				<onright condition="StringCompare(Container(901).ListItem.Property(path),recordings)">ActivateWindow(tvrecordings)</onright>
-				<onclick condition="StringCompare(Container(901).ListItem.Property(path),channels)">ActivateWindow(tvguide)</onclick>
-				<onclick condition="StringCompare(Container(901).ListItem.Property(path),recordings)">ActivateWindow(tvrecordings)</onclick>
-				<onback>9000</onback>
-				<movement>1</movement>
-				<preloaditems>2</preloaditems>
-				<focusposition>2</focusposition>
-				<viewtype label="">list</viewtype>
-				<orientation>vertical</orientation>
-				<defaultcontrol>0</defaultcontrol>
-				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<include>HomeWidgetsAnimation</include>
-				<include>WindowHomeFadeAnimation</include>
-				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(widget),livetv)</visible>
-				<!--<animation condition="StringCompare(Container(901).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>-->
-				<animation condition="StringCompare(Container(901).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
-				<animation condition="[IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(1)] | [IntegerGreaterThan(Container(901).NumItems,2) + !Control.HasFocus(901)]" easing="inout" effect="slide" start="0,114" end="0,114" time="220" tween="sine">Conditional</animation>
-				<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(2) + Control.HasFocus(901)" easing="inout" effect="slide" end="0,-114" time="220" tween="sine">Conditional</animation>
-				<animation condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(3)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
-				<itemlayout height="370" width="2000">
-					<control type="group">
-						<left>33</left>
-						<control type="image">
-							<width>227</width>
-							<height>334</height>
-							<texture border="0,14,11,14">home/home_button_nf.png</texture>
-						</control>
-						<control type="textbox">
-							<left>14</left>
-							<top>22</top>
-							<width>191</width>
-							<height>152</height>
-							<font>Bold26</font>
-							<align>left</align>
-							<textcolor>ffdadada</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</control>
-					<include>HomeLiveTVItemlayout</include>				
-				</itemlayout>
-				<focusedlayout height="370" width="2000">
-					<control type="button">
-						<include>HiddenControl</include>
-						<onfocus condition="StringCompare(Container(901).NumItems,2) + Container(901).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
-						<onfocus condition="StringCompare(Container(901).NumItems,2) + Container(901).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container(901).NumItems,2) + Container(901).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
-					</control>
-					<control type="group">
-						<animation center="142,167" condition="StringCompare(Container(901).NumItems,1)" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(901).NumItems,1)" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-						<animation center="142,167" condition="IntegerGreaterThan(Container(901).NumItems,1)" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
-						<control type="group">
-							<left>33</left>
-							<visible>IntegerGreaterThan(Container(901).NumItems,0)</visible>
-							<control type="image">
-								<width>227</width>
-								<height>334</height>
-								<texture border="0,14,11,14">home/home_button_nf.png</texture>
-							</control>
-							<control type="textbox">
-								<top>2</top>
-								<width>254</width>
-								<height>200</height>
-								<font>Bold34</font>
-								<align>left</align>
-								<textcolor>ffdadada</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-							</control>
-							<control type="image">
-								<width>227</width>
-								<height>334</height>
-								<texture border="0,14,11,14">home/home_button_fo.png</texture>
-								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
-								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
-								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
-							</control>
-							<control type="textbox">
-								<top>2</top>
-								<width>254</width>
-								<height>200</height>
-								<font>Bold34</font>
-								<align>left</align>
-								<textcolor>ff453a18</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
-								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
-								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
-								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-							</control>
-						</control>
-						<include>HomeLiveTVFocusedlayout</include>
-					</control>
-				</focusedlayout>
-				<include>ListItemLiveTVContent</include>
-			</control>
+			<include name="ParamWidgetInclude">
+				<param name="ID">901</param>
+				<param name="widget">livetv</param>
+				<param name="content">ListItemLiveTVContent</param>
+			</include>
 			<!-- Weather widget -->
 			<control type="fixedlist">
 				<left>433</left>

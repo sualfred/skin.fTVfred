@@ -1046,3 +1046,15 @@ msgstr "Weiter ansehen?"
 msgctxt "#31543"
 msgid "Please select"
 msgstr "Bitte auswählen"
+
+msgctxt "#31544"
+msgid "Switch group"
+msgstr "Wechsle Kanalgruppe"
+
+msgctxt "#31545"
+msgid "Open TV-Guide"
+msgstr "Öffne TV-Guide"
+
+msgctxt "#31546"
+msgid "My recordings"
+msgstr "Meine Aufnahmen"
