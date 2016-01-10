@@ -2,13 +2,34 @@
 <includes>
 	<include name="Viewtype59">
 		<control type="group">
-			<!-- List -->
+			<!-- pvr channels list -->
 			<control id="59" type="fixedlist">
 				<left>-238</left>
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<onup>Back</onup>
+				<!-- workaround to focus the first item -->
+				<onback>ClearProperty(chan1,Home)</onback>
+				<onback>ClearProperty(chan2,Home)</onback>
+				<onback>ClearProperty(chan3,Home)</onback>
+				<onback>ClearProperty(chan4,Home)</onback>
+				<onback>ClearProperty(channame1,Home)</onback>
+				<onback>ClearProperty(channame2,Home)</onback>
+				<onback>ClearProperty(channame3,Home)</onback>
+				<onback>ClearProperty(channame4,Home)</onback>
+				<onup>ClearProperty(chan1,Home)</onup>
+				<onup>ClearProperty(chan2,Home)</onup>
+				<onup>ClearProperty(chan3,Home)</onup>
+				<onup>ClearProperty(chan4,Home)</onup>
+				<onup>ClearProperty(channame1,Home)</onup>
+				<onup>ClearProperty(channame2,Home)</onup>
+				<onup>ClearProperty(channame3,Home)</onup>
+				<onup>ClearProperty(channame4,Home)</onup>
+				<onup condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,$INFO[Container.CurrentItem,-])</onup>
+				<onup condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,1)</onup>
+				<onup>back</onup>
+				<onback condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,$INFO[Container.CurrentItem,-])</onback>
+				<onback condition="!StringCompare(Container(59).ListItem.CurrentItem,1)">Control.Move(59,1)</onback>
 				<ondown>1000</ondown>
 				<onleft>Back</onleft>
 				<onright>noop</onright>

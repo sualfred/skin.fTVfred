@@ -2,14 +2,9 @@
 <window>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0xff12161b</backgroundcolor>
-    <defaultcontrol always="true">2</defaultcontrol>
-    <onload>Control.SetFocus(10,0)</onload>
+    <defaultcontrol always="true">10</defaultcontrol>
     <views>10,11,12,13</views>
-    <controls>      
-        <control id="2" type="button">
-            <include>HiddenControl</include>
-            <onfocus condition="Window.Previous(home)">Control.SetFocus(10,1)</onfocus>
-        </control>      
+    <controls> 
         <control type="group" id="50">
             <control type="group">
                 <visible>Control.IsVisible(10)</visible>
@@ -180,6 +175,145 @@
                     <top>280</top>
                     <width>1850</width>
                     <height>490</height>
+                    <!-- workaround to focus the first item without any glitches during load and other pvr windows-->
+                    <onback>ClearProperty(chan1,Home)</onback>
+                    <onback>ClearProperty(chan2,Home)</onback>
+                    <onback>ClearProperty(chan3,Home)</onback>
+                    <onback>ClearProperty(chan4,Home)</onback>
+                    <onback>ClearProperty(channame1,Home)</onback>
+                    <onback>ClearProperty(channame2,Home)</onback>
+                    <onback>ClearProperty(channame3,Home)</onback>
+                    <onback>ClearProperty(channame4,Home)</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback condition="!StringCompare(Container(10).ListItem.CurrentItem,1)">PageUp</onback>
+                    <onback>SetProperty(chan1,$INFO[ListItem.Icon],Home)</onback>
+                    <onback>SetProperty(chan2,$INFO[ListItemNoWrap(1).Icon],Home)</onback>
+                    <onback>SetProperty(chan3,$INFO[ListItemNoWrap(2).Icon],Home)</onback>
+                    <onback>SetProperty(chan4,$INFO[ListItemNoWrap(3).Icon],Home)</onback>
+                    <onback>SetProperty(channame1,$INFO[ListItem.ChannelName],Home)</onback>
+                    <onback>SetProperty(channame2,$INFO[ListItemNoWrap(1).ChannelName],Home)</onback>
+                    <onback>SetProperty(channame3,$INFO[ListItemNoWrap(2).ChannelName],Home)</onback>
+                    <onback>SetProperty(channame4,$INFO[ListItemNoWrap(3).ChannelName],Home)</onback>
+
                     <onback>1001</onback>
                     <viewtype label="19069">list</viewtype>
                     <progresstexture border="5" colordiffuse="33FFFFFF">pvr/_PVR_progressline.png</progresstexture>
