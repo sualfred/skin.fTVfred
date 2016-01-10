@@ -1032,8 +1032,8 @@ msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. S
 msgstr "Es wird empfohlen 'Symbol für übergeordnetes Verzeichnis' und 'Zeige alle Einträge' zu deaktivieren. Soll ich das für dich tun?"
 
 msgctxt "#31540"
-msgid "Still there? Press Continue to watch the next episode."
-msgstr "Noch da? Wähle Weiter um die nächste Episode zu sehen."
+msgid "Still there? Press 'Continue' to watch the next episode, otherwise the playback will be stopped."
+msgstr "Noch da? Drücke 'Weiter' um die nächste Folge zu sehen. Andernfalls wird die Wiedergabe gestoppt."
 
 msgctxt "#31541"
 msgid "Continue"
@@ -1042,3 +1042,7 @@ msgstr "Weiter"
 msgctxt "#31542"
 msgid "Continue Watching?"
 msgstr "Weiter ansehen?"
+
+msgctxt "#31543"
+msgid "Please select"
+msgstr "Bitte auswählen"

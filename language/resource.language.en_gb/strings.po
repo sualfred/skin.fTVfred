@@ -1042,7 +1042,7 @@ msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. S
 msgstr ""
 
 msgctxt "#31540"
-msgid "Still there? Press Continue to watch the next episode."
+msgid "Still there? Press 'Continue' to watch the next episode, otherwise the playback will be stopped."
 msgstr ""
 
 msgctxt "#31541"
@@ -1051,4 +1051,8 @@ msgstr ""
 
 msgctxt "#31542"
 msgid "Continue Watching?"
+msgstr ""
+
+msgctxt "#31543"
+msgid "Please select"
 msgstr ""
