@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1106">
+<window id="1106">
+	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>
-	<zorder>2</zorder>
-	<allowoverlay>true</allowoverlay>
-	<onunload>ClearProperty(SwitchPVRWindow,home)</onunload>	
+	<onunload>ClearProperty(SkipScrollingAnimation,home)</onunload>
 	<onunload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onunload>
-	<onunload>Control.Move(100,1)</onunload>	
-	<!-- page up workaround animation -->
+	<onunload>Control.Move(100,1)</onunload>
+	<!-- workaround animation for focusing the first item -->
 	<animation effect="fade" start="100" end="100" time="1">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<include>BackgroundImage</include>
 			<!-- pvr channels list -->
 			<control id="100" type="fixedlist">
-				<animation effect="fade" start="0" end="0" time="0" condition="!IsEmpty(Window(Home).Property(SwitchPVRWindow))">Conditional</animation>
+				<animation effect="fade" start="0" end="0" time="0" condition="!IsEmpty(Window(Home).Property(SkipScrollingAnimation))">Conditional</animation>
 				<left>-238</left>
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<onup>SetProperty(SwitchPVRWindow,1,home)</onup>
-				<onback>SetProperty(SwitchPVRWindow,1,home)</onback>				
-				<onback>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onback>
-				<onback>Control.Move(100,1)</onback>
-				<onup>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onup>
-				<onup>Control.Move(100,1)</onup>	
-				<onfocus>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onfocus>
-				<onfocus>Control.Move(100,1)</onfocus>			
+				<onup>SetProperty(SkipScrollingAnimation,1,home)</onup>
+				<onback>SetProperty(SkipScrollingAnimation,1,home)</onback>
+				<onback condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,$INFO[Container(100).CurrentItem,-])</onback>
+				<onback condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,1)</onback>
+				<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,$INFO[Container(100).CurrentItem,-])</onup>
+				<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,1)</onup>
 				<onup>back</onup>
 				<onleft>Back</onleft>
 				<onright>noop</onright>
@@ -196,7 +192,7 @@
 			</control>
 			<control type="group">
 				<include>VisibleDelayFadeAnimation</include>
-				<visible>IsEmpty(Window(Home).Property(SwitchPVRWindow))</visible>
+				<visible>IsEmpty(Window(Home).Property(SkipScrollingAnimation))</visible>
 				<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 				<!-- Heading / Current item / Total items -->
 				<control type="grouplist">
@@ -213,7 +209,7 @@
 						<font>Med48</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffdadada</textcolor>
-						<label>[CAPITALIZE]$LOCALIZE[19217][/CAPITALIZE]  </label>
+						<label>[CAPITALIZE]$LOCALIZE[19217][/CAPITALIZE]</label>
 					</control>
 					<control type="label">
 						<top>15</top>
@@ -306,12 +302,7 @@
 							<height>100</height>
 							<onup>100</onup>
 							<ondown>3000</ondown>
-							<onclick>Close</onclick>
-							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
-							<onclick>ClearProperty(FocusRow)</onclick>
-							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
-							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
-							<onclick>Control.Move(100,1)</onclick>
+							<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
 							<onclick>ActivateWindow(tvguide)</onclick>
 							<font>Med24</font>
 							<label>$LOCALIZE[31545]</label>
@@ -328,12 +319,7 @@
 							<height>100</height>
 							<onup>100</onup>
 							<ondown>3000</ondown>
-							<onclick>Close</onclick>
-							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
-							<onclick>ClearProperty(FocusRow)</onclick>
-							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
-							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
-							<onclick>Control.Move(100,1)</onclick>
+							<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
 							<onclick>ActivateWindow(tvchannels)</onclick>
 							<font>Med24</font>
 							<label>$LOCALIZE[31547]</label>
@@ -349,12 +335,7 @@
 							<height>100</height>
 							<onup>100</onup>
 							<ondown>3000</ondown>
-							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
-							<onclick>ClearProperty(FocusRow)</onclick>
-							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
-							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
-							<onclick>Control.Move(100,1)</onclick>
-							<onclick>close</onclick>
+							<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
 							<onclick>ActivateWindow(tvrecordings)</onclick>
 							<font>Med24</font>
 							<label>$LOCALIZE[31546]</label>
