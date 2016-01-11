@@ -1,433 +1,441 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="1106">
-	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">999</defaultcontrol>
-	<onunload condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,$INFO[Container(100).CurrentItem,-])</onunload>
-	<onunload condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,1)</onunload>
-	<onunload condition="!StringCompare(Container(200).CurrentItem,1)">Control.Move(200,$INFO[Container(200).CurrentItem,-])</onunload>
-	<onunload condition="!StringCompare(Container(200).CurrentItem,1)">Control.Move(200,1)</onunload>
-	<onunload>ClearProperty(Window(Home).Property(ForceViewType))</onunload>
+<window type="dialog" id="1106">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<zorder>2</zorder>
+	<allowoverlay>true</allowoverlay>
+	<onunload>ClearProperty(SwitchPVRWindow,home)</onunload>
+	<!-- page up workaround animation -->
+	<animation effect="fade" start="100" end="100" time="1">WindowClose</animation>
 	<controls>
-		<!--focus animation fix -->
-		<control id="999" type="button">
-			<width>1</width>
-			<height>1</height>
-			<onfocus>Control.SetFocus(100,0)</onfocus>
-		</control>
-		<!-- pvr channels list -->
-		<control id="100" type="fixedlist">
-			<left>-238</left>
-			<top>242</top>
-			<width>2200</width>
-			<height>576</height>
-			<onup>back</onup>			
-			<onleft>Back</onleft>
-			<onright>noop</onright>
-			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
-			<ondown>1001</ondown>
-			<preloaditems>2</preloaditems>
-			<focusposition>1</focusposition>
-			<orientation>horizontal</orientation>
-			<defaultcontrol always="true">0</defaultcontrol>
-			<scrolltime easing="inout" tween="sine">300</scrolltime>
-			<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
-				<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
-				<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
-			</animation>
-			<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow))" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
-			<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
-			<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
-			<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
-			<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
-			<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
-			<itemlayout width="436">
-				<control type="group">
-					<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture background="true">common/default_empty.png</texture>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>576</width>
-						<height>576</height>
-						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
-					</control>
-					<control type="label">
-						<left>18</left>
-						<top>427</top>
-						<width>448</width>
-						<height>42</height>
-						<font>Bold44</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.ChannelName]</label>
-						<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture>views/OverlayNF.png</texture>
-					</control>
-					<control type="image">
-						<left>17</left>
-						<top>419</top>
-						<width>62</width>
-						<height>62</height>
-						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
-					</control>
-				</control>
-			</itemlayout>
-			<focusedlayout height="576" width="436">
-				<control type="group">
-					<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-					<animation center="250,288" condition="Container(100).OnNext | Container(100).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine" reversible="false">UnFocus</animation>
-					<animation center="250,288" condition="Control.HasFocus(999)" easing="inout" effect="zoom" end="85" start="100" time="0" tween="sine" reversible="false">UnFocus</animation>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture background="true">common/default_empty.png</texture>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
-					</control>
-					<control type="label">
-						<left>18</left>
-						<top>427</top>
-						<width>448</width>
-						<height>42</height>
-						<font>Bold44</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.ChannelName]</label>
-						<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>576</width>
-						<height>576</height>
-						<texture border="51">views/shadow_fo.png</texture>
-						<animation center="auto" condition="Control.HasFocus(100) | Container(100).OnNext | Container(100).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus(999)" easing="inout" effect="fade" end="0" start="100" time="0" tween="sine">UnFocus</animation>
-						<animation center="auto" condition="Container(100).OnNext | Container(100).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>576</width>
-						<height>576</height>
-						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						<animation center="auto" condition="Control.HasFocus(999)" easing="inout" effect="fade" end="100" start="0" time="0" tween="sine">UnFocus</animation>
-						<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture>views/OverlayNF.png</texture>
-						<animation center="auto" condition="Control.HasFocus(999)" easing="inout" effect="fade" end="100" start="0" time="0" tween="sine">UnFocus</animation>
-						<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<left>17</left>
-						<top>419</top>
-						<width>62</width>
-						<height>62</height>
-						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
-					</control>
-					<!-- Progress -->
-					<control type="progress">
-						<left>3</left>
-						<top>512</top>
-						<width>474</width>
-						<height>6</height>
-						<texturebg border="4">osd/progress_back.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="4">osd/progress_bar.png</midtexture>
-						<righttexture>-</righttexture>
-						<overlaytexture>-</overlaytexture>
-						<info>ListItem.Progress</info>
-						<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-						<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-						<visible>IntegerGreaterThan(ListItem.Progress,0) + !Control.HasFocus(999)</visible>
-					</control>
-				</control>
-			</focusedlayout>
-			<content>pvr://channels/tv/$INFO[Container(200).CurrentItem]</content>
-		</control>
-		
-		<!-- hidden group index list -->
-		<control id="200" type="wraplist">
-			<include>HiddenControl</include>
-			<content>pvr://channels/tv/</content>
-		</control>
-
-		<control type="group">			
-			<include>VisibleDelayFadeAnimation</include>
-			<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
-			<!-- Heading / Current item / Total items -->
-			<control type="grouplist">
-				<left>198</left>
-				<top>134</top>
-				<height>80</height>
-				<itemgap>10</itemgap>
+		<control type="group">
+			<include>BackgroundImage</include>
+			<!-- pvr channels list -->
+			<control id="100" type="fixedlist">
+				<visible>IsEmpty(Window(Home).Property(SwitchPVRWindow))</visible>
+				<left>-238</left>
+				<top>242</top>
+				<width>2200</width>
+				<height>576</height>
+				<onup>SetProperty(SwitchPVRWindow,1,home)</onup>
+				<onback>SetProperty(SwitchPVRWindow,1,home)</onback>
+				<include>PageUpWorkaround</include>				
+				<onup>back</onup>
+				<onleft>Back</onleft>
+				<onright>noop</onright>
+				<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
+				<ondown>1001</ondown>
+				<oninfo>RunScript(script.toolbox,info=textviewer,header=$INFO[Container(100).ListItem.Label],text='"$VAR[Plot]"')</oninfo>
+				<preloaditems>2</preloaditems>
+				<focusposition>1</focusposition>
 				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
-				<include>VisibleDelayFadeAnimation</include>
-				<control type="label">
-					<width>auto</width>
-					<height>60</height>
-					<font>Med48</font>
-					<aligny>bottom</aligny>
-					<textcolor>ffdadada</textcolor>
-					<label>[CAPITALIZE]$LOCALIZE[19023][/CAPITALIZE]  </label>
-				</control>
-				<control type="label">
-					<top>15</top>
-					<width>auto</width>
-					<height>60</height>
-					<font>Med32</font>
-					<aligny>bottom</aligny>
-					<textcolor>ffdadada</textcolor>
-					<label>$INFO[Container(100).CurrentItem]</label>
-					<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
-				</control>
-				<control type="label">
-					<top>14</top>
-					<width>auto</width>
-					<height>60</height>
-					<font>Light36</font>
-					<aligny>bottom</aligny>
-					<textcolor>ff505050</textcolor>
-					<label>|</label>
-					<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
-				</control>
-				<control type="label">
-					<top>15</top>
-					<width>auto</width>
-					<height>60</height>
-					<font>Light32</font>
-					<aligny>bottom</aligny>
-					<textcolor>ff505050</textcolor>
-					<label>$INFO[Container(100).NumItems]</label>
-					<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
-				</control>
+				<defaultcontrol always="true">0</defaultcontrol>
+				<scrolltime easing="inout" tween="sine">300</scrolltime>
+				<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
+					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
+					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
+				</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow))" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
+				<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
+				<itemlayout width="436">
+					<control type="group">
+						<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture background="true">common/default_empty.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<aspectratio align="center">keep</aspectratio>
+							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="image">
+							<left>-48</left>
+							<centertop>288</centertop>
+							<width>576</width>
+							<height>576</height>
+							<texture border="66,66,51,51">views/shadow_nf.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture border="2">views/season_overlay.png</texture>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+						</control>
+						<control type="label">
+							<left>18</left>
+							<top>427</top>
+							<width>448</width>
+							<height>42</height>
+							<font>Bold44</font>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.ChannelName]</label>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture>views/OverlayNF.png</texture>
+						</control>
+						<control type="image">
+							<left>17</left>
+							<top>419</top>
+							<width>62</width>
+							<height>62</height>
+							<texture>views/equaliser.gif</texture>
+							<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="576" width="436">
+					<control type="group">
+						<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+						<animation center="250,288" condition="Container(100).OnNext | Container(100).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+						<animation center="250,288" condition="Control.HasFocus(5000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture background="true">common/default_empty.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<aspectratio align="center">keep</aspectratio>
+							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture border="2">views/season_overlay.png</texture>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+						</control>
+						<control type="label">
+							<left>18</left>
+							<top>427</top>
+							<width>448</width>
+							<height>42</height>
+							<font>Bold44</font>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.ChannelName]</label>
+							<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+						</control>
+						<control type="image">
+							<left>-48</left>
+							<centertop>288</centertop>
+							<width>576</width>
+							<height>576</height>
+							<texture border="51">views/shadow_fo.png</texture>
+							<animation center="auto" condition="Control.HasFocus(100) | Container(100).OnNext | Container(100).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+							<animation center="auto" condition="Container(100).OnNext | Container(100).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+						</control>
+						<control type="image">
+							<left>-48</left>
+							<centertop>288</centertop>
+							<width>576</width>
+							<height>576</height>
+							<texture border="66,66,51,51">views/shadow_nf.png</texture>
+							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>480</width>
+							<height>480</height>
+							<texture>views/OverlayNF.png</texture>
+							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						</control>
+						<control type="image">
+							<left>17</left>
+							<top>419</top>
+							<width>62</width>
+							<height>62</height>
+							<texture>views/equaliser.gif</texture>
+							<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
+						</control>
+						<!-- Progress -->
+						<control type="progress">
+							<left>3</left>
+							<top>512</top>
+							<width>474</width>
+							<height>6</height>
+							<texturebg border="4">osd/progress_back.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<info>ListItem.Progress</info>
+							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+							<visible>IntegerGreaterThan(ListItem.Progress,0) + !Control.HasFocus(999)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>pvr://channels/tv/1</content>
 			</control>
-			<!-- Sort method -->
-			<control type="grouplist">
-				<left>1360</left>
-				<top>153</top>
-				<width>440</width>
-				<height>60</height>
-				<align>right</align>
-				<itemgap>6</itemgap>
-				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
-				<include>VisibleDelayFadeAnimation</include>
-				<control type="label">
-					<width>auto</width>
-					<height>30</height>
-					<font>Light28</font>
-					<align>right</align>
-					<textcolor>ffa4a4a4</textcolor>
-					<label>$LOCALIZE[31086]</label>
-				</control>
-				<control type="label">
-					<top>1</top>
-					<width>auto</width>
-					<height>30</height>
-					<align>right</align>
-					<font>Med28</font>
-					<textcolor>ffa4a4a4</textcolor>
-					<label>$LOCALIZE[549]</label>
-				</control>
-			</control>
-			<!-- Lower group -->
 			<control type="group">
-				<left>196</left>
-				<top>807</top>
-				<include>VisibleDelayFadeAnimation</include>				
-				<!-- Controls -->
-				<control id="1000" type="grouplist">
-					<left>-10</left>
-					<height>100</height>
-					<itemgap>0</itemgap>
-					<onleft>100</onleft>
-					<onright>100</onright>
-					<onup>100</onup>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<defaultcontrol always="true">1001</defaultcontrol>
-					<!-- Dummy to always set focus to first visible button -->
-					<control id="1001" type="button">
-						<width>0</width>
-						<height>0</height>
-						<label>-</label>
-						<onfocus>Right</onfocus>
-						<include>NoTextures</include>
-						<visible>!Control.HasFocus(30)</visible>
-					</control>
-					<control id="30" type="button">
-						<width min="104" max="204">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>100</onup>
-						<ondown>3000</ondown>
-						<onclick>ActivateWindow(tvguide)</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31545]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!StringCompare(Container(100).ListItem.Label,..)</visible>
-					</control>
-					<control id="32" type="button">
-						<width min="104" max="204">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>100</onup>
-						<ondown>3000</ondown>
-						<onclick>Control.Move(200,1)</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31544]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>IntegerGreaterThan(Container(200).NumItems,1)</visible>
-					</control>
-					<control id="31" type="button">
-						<width min="104" max="204">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>100</onup>
-						<ondown>3000</ondown>
-						<onclick>ActivateWindow(tvrecordings)</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31546]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!StringCompare(Container(100).ListItem.Label,..)</visible>
-					</control>
-				</control>
-				<!-- Small Details -->
+				<include>VisibleDelayFadeAnimation</include>
+				<visible>IsEmpty(Window(Home).Property(SwitchPVRWindow))</visible>
+				<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<!-- Heading / Current item / Total items -->
 				<control type="grouplist">
-					<top>110</top>
-					<height>26</height>
+					<left>198</left>
+					<top>134</top>
+					<height>80</height>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
+					<include>VisibleDelayFadeAnimation</include>
 					<control type="label">
 						<width>auto</width>
-						<height>24</height>
-						<font>Med24Num</font>
+						<height>60</height>
+						<font>Med48</font>
 						<aligny>bottom</aligny>
-						<textcolor>ffFFC24B</textcolor>
-						<label>$INFO[Container(100).ListItem.ChannelName]</label>
+						<textcolor>ffdadada</textcolor>
+						<label>[CAPITALIZE]$LOCALIZE[19217][/CAPITALIZE]  </label>
 					</control>
 					<control type="label">
+						<top>15</top>
 						<width>auto</width>
-						<height>24</height>
-						<font>Med24Num</font>
+						<height>60</height>
+						<font>Med32</font>
 						<aligny>bottom</aligny>
-						<textcolor>ffbebebe</textcolor>
-						<label>$INFO[Container(100).ListItem.StartTime,,,  •  ]$INFO[Container(100).ListItem.EndTime, - ,]</label>
+						<textcolor>ffdadada</textcolor>
+						<label>$INFO[Container(100).CurrentItem]</label>
+						<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
 					</control>
 					<control type="label">
+						<top>14</top>
 						<width>auto</width>
-						<height>24</height>
-						<font>Med24Num</font>
+						<height>60</height>
+						<font>Light36</font>
 						<aligny>bottom</aligny>
-						<textcolor>ffbebebe</textcolor>
-						<label>$INFO[Container(100).ListItem.Genre]</label>
-						<visible>!StringCompare(Container(100).ListItem.Genre,$LOCALIZE[19499])</visible>
+						<textcolor>ff505050</textcolor>
+						<label>|</label>
+						<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
+					</control>
+					<control type="label">
+						<top>15</top>
+						<width>auto</width>
+						<height>60</height>
+						<font>Light32</font>
+						<aligny>bottom</aligny>
+						<textcolor>ff505050</textcolor>
+						<label>$INFO[Container(100).NumItems]</label>
+						<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
 					</control>
 				</control>
-				<!-- Details -->
-				<control type="textbox">
-					<top>143</top>
-					<width>1192</width>
-					<height>84</height>
-					<align>left</align>
-					<font>Reg30Spaced</font>
-					<pagecontrol>99</pagecontrol>
-					<autoscroll>false</autoscroll>
-					<textcolor>ffbcbcbc</textcolor>
-					<label>[B]$INFO[Container(100).ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+				<!-- Sort method -->
+				<control type="grouplist">
+					<left>1360</left>
+					<top>153</top>
+					<width>440</width>
+					<height>60</height>
+					<align>right</align>
+					<itemgap>6</itemgap>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<include>VisibleDelayFadeAnimation</include>
+					<control type="label">
+						<width>auto</width>
+						<height>30</height>
+						<font>Light28</font>
+						<align>right</align>
+						<textcolor>ffa4a4a4</textcolor>
+						<label>$LOCALIZE[31086]</label>
+					</control>
+					<control type="label">
+						<top>1</top>
+						<width>auto</width>
+						<height>30</height>
+						<align>right</align>
+						<font>Med28</font>
+						<textcolor>ffa4a4a4</textcolor>
+						<label>$LOCALIZE[549]</label>
+					</control>
 				</control>
-				<control id="99" type="scrollbar">
-					<top>103</top>
-					<width>1192</width>
-					<height>126</height>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				</control>
-				<!-- More button -->
-				<control id="3000" type="button">
-					<left>1194</left>
-					<top>192</top>
-					<width>37</width>
-					<height>23</height>
-					<onup>59</onup>
-					<ondown>noop</ondown>
-					<onleft>59</onleft>
-					<onright>59</onright>
-					<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[Container(100).ListItem.Label],text='"$VAR[Plot]"')</onclick>
-					<visible>Control.IsVisible(99)</visible>
-					<texturefocus>views/more_fo.png</texturefocus>
-					<texturenofocus>views/more_nf.png</texturenofocus>
-					<visible>!Window.IsVisible(textviewer)</visible>
-				</control>
-				<!-- More button -->
-				<control type="image">
-					<left>1194</left>
-					<top>192</top>
-					<width>37</width>
-					<height>23</height>
-					<texture>views/more_nf.png</texture>
-					<visible>Window.IsVisible(textviewer)</visible>
+				<!-- Lower group -->
+				<control type="group">
+					<left>196</left>
+					<top>807</top>
+					<include>VisibleDelayFadeAnimation</include>
+					<!-- Controls -->
+					<control id="1000" type="grouplist">
+						<left>-10</left>
+						<height>100</height>
+						<itemgap>0</itemgap>
+						<onleft>100</onleft>
+						<onright>100</onright>
+						<onup>100</onup>
+						<orientation>horizontal</orientation>
+						<usecontrolcoords>true</usecontrolcoords>
+						<defaultcontrol always="true">1001</defaultcontrol>
+						<!-- Dummy to always set focus to first visible button -->
+						<control id="1001" type="button">
+							<width>0</width>
+							<height>0</height>
+							<label>-</label>
+							<onfocus>Right</onfocus>
+							<include>NoTextures</include>
+							<visible>!Control.HasFocus(30)</visible>
+						</control>
+						<control id="30" type="button">
+							<width min="104" max="204">auto</width>
+							<wrapmultiline>true</wrapmultiline>
+							<height>100</height>
+							<onup>100</onup>
+							<ondown>3000</ondown>
+							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
+							<onclick>ClearProperty(FocusRow)</onclick>
+							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
+							<onclick>Control.Move(100,1)</onclick>
+							<onclick>close</onclick>
+							<onclick>ActivateWindow(tvguide)</onclick>
+							<font>Med24</font>
+							<label>$LOCALIZE[31545]</label>
+							<textoffsetx>28</textoffsetx>
+							<textcolor>ffdadada</textcolor>
+							<focusedcolor>ff222222</focusedcolor>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+							<visible>!StringCompare(Container(100).ListItem.Label,..)</visible>
+						</control>
+						<control id="32" type="button">
+							<width min="104" max="204">auto</width>
+							<wrapmultiline>true</wrapmultiline>
+							<height>100</height>
+							<onup>100</onup>
+							<ondown>3000</ondown>
+							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
+							<onclick>ClearProperty(FocusRow)</onclick>
+							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
+							<onclick>Control.Move(100,1)</onclick>
+							<onclick>close</onclick>
+							<onclick>ActivateWindow(tvchannels)</onclick>
+							<font>Med24</font>
+							<label>$LOCALIZE[31547]</label>
+							<textoffsetx>28</textoffsetx>
+							<textcolor>ffdadada</textcolor>
+							<focusedcolor>ff222222</focusedcolor>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						</control>
+						<control id="31" type="button">
+							<width min="104" max="204">auto</width>
+							<wrapmultiline>true</wrapmultiline>
+							<height>100</height>
+							<onup>100</onup>
+							<ondown>3000</ondown>
+							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
+							<onclick>ClearProperty(FocusRow)</onclick>
+							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
+							<onclick>Control.Move(100,1)</onclick>
+							<onclick>close</onclick>
+							<onclick>ActivateWindow(tvrecordings)</onclick>
+							<font>Med24</font>
+							<label>$LOCALIZE[31546]</label>
+							<textoffsetx>28</textoffsetx>
+							<textcolor>ffdadada</textcolor>
+							<focusedcolor>ff222222</focusedcolor>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+							<visible>!StringCompare(Container(100).ListItem.Label,..)</visible>
+						</control>
+					</control>
+					<!-- Small Details -->
+					<control type="grouplist">
+						<top>110</top>
+						<height>26</height>
+						<itemgap>10</itemgap>
+						<orientation>horizontal</orientation>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffFFC24B</textcolor>
+							<label>$INFO[Container(100).ListItem.ChannelName]</label>
+						</control>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbebebe</textcolor>
+							<label>$INFO[Container(100).ListItem.StartTime,,,  •  ]$INFO[Container(100).ListItem.EndTime, - ,]</label>
+						</control>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbebebe</textcolor>
+							<label>$INFO[Container(100).ListItem.Genre]</label>
+							<visible>!StringCompare(Container(100).ListItem.Genre,$LOCALIZE[19499])</visible>
+						</control>
+					</control>
+					<!-- Details -->
+					<control type="textbox">
+						<top>143</top>
+						<width>1192</width>
+						<height>84</height>
+						<align>left</align>
+						<font>Reg30Spaced</font>
+						<pagecontrol>99</pagecontrol>
+						<autoscroll>false</autoscroll>
+						<textcolor>ffbcbcbc</textcolor>
+						<label>[B]$INFO[Container(100).ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+					</control>
+					<control id="99" type="scrollbar">
+						<top>103</top>
+						<width>1192</width>
+						<height>126</height>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+					<!-- More button -->
+					<control id="3000" type="button">
+						<left>1194</left>
+						<top>192</top>
+						<width>37</width>
+						<height>23</height>
+						<onup>100</onup>
+						<ondown>noop</ondown>
+						<onleft>100</onleft>
+						<onright>100</onright>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[Container(100).ListItem.Label],text='"$VAR[Plot]"')</onclick>
+						<visible>Control.IsVisible(99)</visible>
+						<texturefocus>views/more_fo.png</texturefocus>
+						<texturenofocus>views/more_nf.png</texturenofocus>
+						<visible>!Window.IsVisible(textviewer)</visible>
+					</control>
+					<!-- More button -->
+					<control type="image">
+						<left>1194</left>
+						<top>192</top>
+						<width>37</width>
+						<height>23</height>
+						<texture>views/more_nf.png</texture>
+						<visible>Window.IsVisible(textviewer)</visible>
+					</control>
 				</control>
 			</control>
 		</control>

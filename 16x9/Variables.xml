@@ -1809,7 +1809,7 @@
 		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>		
 	</variable>
 	<variable name="Plot">
-		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.PlotOutline,, ]$INFO[Container(100).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.PlotOutline,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
 		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.PlotOutline]</value>
 		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Plot]</value>
 		<value condition="!StringCompare(ListItem.PlotOutline,ListItem.Plot)">$INFO[ListItem.PlotOutline,, ]$INFO[ListItem.Plot]</value>

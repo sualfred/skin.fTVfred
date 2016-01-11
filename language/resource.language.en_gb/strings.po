@@ -1068,3 +1068,7 @@ msgstr ""
 msgctxt "#31546"
 msgid "My recordings"
 msgstr ""
+
+msgctxt "#31547"
+msgid "Show all groups"
+msgstr ""

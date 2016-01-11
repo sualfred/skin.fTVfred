@@ -298,7 +298,6 @@
 				<ondown>ClearProperty(Movement)</ondown>
 				<onleft>noop</onleft>
 				<onright>ClearProperty(MainMenuFocus,home)</onright>
-
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 
 				<!-- workaround to move the focused row after startup -->
@@ -971,8 +970,7 @@
 				| Container(808).IsUpdating
 				| Container(888).IsUpdating
 				| Container(889).IsUpdating
-				| Container(899).IsUpdating
-				| Container(901).IsUpdating]
+				| Container(899).IsUpdating]
 			</visible>
 		</control>
 		<control type="image">

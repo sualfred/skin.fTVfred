@@ -5,11 +5,10 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">59</defaultcontrol>
 	<views>59</views>
-	<controls>		
+	<controls>
 		<!-- Views -->
 		<include>Viewtype59</include>
-		
-		<control type="group">			
+		<control type="group">
 			<include>VisibleDelayFadeAnimation</include>
 			<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 			<!-- Heading / Current item / Total items -->
@@ -27,7 +26,7 @@
 					<font>Med48</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
-					<label>[CAPITALIZE]$VAR[PVRPath][/CAPITALIZE]  </label>
+					<label>[CAPITALIZE]$VAR[PVRPath][/CAPITALIZE]</label>
 				</control>
 				<control type="label">
 					<top>15</top>
@@ -95,7 +94,6 @@
 				<top>807</top>
 				<include>VisibleDelayFadeAnimation</include>
 				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
-				
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
 					<left>-10</left>
@@ -130,7 +128,7 @@
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
-					</control>					
+					</control>
 					<control id="30" type="button">
 						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>

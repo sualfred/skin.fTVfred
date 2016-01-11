@@ -1058,3 +1058,7 @@ msgstr "Öffne TV-Guide"
 msgctxt "#31546"
 msgid "My recordings"
 msgstr "Meine Aufnahmen"
+
+msgctxt "#31547"
+msgid "Show all groups"
+msgstr "Zeige alle Gruppen"
