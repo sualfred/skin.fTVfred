@@ -23,7 +23,9 @@
 				<onback>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onback>
 				<onback>Control.Move(100,1)</onback>
 				<onup>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onup>
-				<onup>Control.Move(100,1)</onup>				
+				<onup>Control.Move(100,1)</onup>	
+				<onfocus>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onfocus>
+				<onfocus>Control.Move(100,1)</onfocus>			
 				<onup>back</onup>
 				<onleft>Back</onleft>
 				<onright>noop</onright>
@@ -303,14 +305,13 @@
 							<wrapmultiline>true</wrapmultiline>
 							<height>100</height>
 							<onup>100</onup>
-							<onback>100</onback>
 							<ondown>3000</ondown>
+							<onclick>Close</onclick>
 							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
 							<onclick>ClearProperty(FocusRow)</onclick>
 							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
 							<onclick>Control.Move(100,1)</onclick>
-							<onclick>close</onclick>
 							<onclick>ActivateWindow(tvguide)</onclick>
 							<font>Med24</font>
 							<label>$LOCALIZE[31545]</label>
@@ -326,14 +327,13 @@
 							<wrapmultiline>true</wrapmultiline>
 							<height>100</height>
 							<onup>100</onup>
-							<onback>100</onback>
 							<ondown>3000</ondown>
+							<onclick>Close</onclick>
 							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
 							<onclick>ClearProperty(FocusRow)</onclick>
 							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 							<onclick>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onclick>
 							<onclick>Control.Move(100,1)</onclick>
-							<onclick>close</onclick>
 							<onclick>ActivateWindow(tvchannels)</onclick>
 							<font>Med24</font>
 							<label>$LOCALIZE[31547]</label>
@@ -348,7 +348,6 @@
 							<wrapmultiline>true</wrapmultiline>
 							<height>100</height>
 							<onup>100</onup>
-							<onback>100</onback>
 							<ondown>3000</ondown>
 							<onclick>SetProperty(SwitchPVRWindow,1,home)</onclick>
 							<onclick>ClearProperty(FocusRow)</onclick>
