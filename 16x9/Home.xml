@@ -600,6 +600,12 @@
 				<param name="widget">widget8</param>
 				<param name="content">ListItem8Content</param>
 			</include>
+			<!-- PVR widget -->
+			<include name="ParamWidgetInclude">
+				<param name="ID">901</param>
+				<param name="widget">livetv</param>
+				<param name="content">ListItemLiveTVContent</param>
+			</include>
 			<!-- Favourites widget -->
 			<control id="900" type="fixedlist">
 				<left>419</left>
@@ -635,12 +641,6 @@
 				</focusedlayout>
 				<include>FavouritesContent</include>				
 			</control>
-			<!-- PVR widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">901</param>
-				<param name="widget">livetv</param>
-				<param name="content">ListItemLiveTVContent</param>
-			</include>
 			<!-- Weather widget -->
 			<control type="fixedlist">
 				<left>433</left>

@@ -870,8 +870,8 @@ msgid "Disable Higher Levels"
 msgstr "Deaktiviere höhere Level"
 
 msgctxt "#31210"
-msgid "Set layout for all"
-msgstr "Layout für alle setzen"
+msgid "Set Vier for all"
+msgstr "Setze Layout für alle"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

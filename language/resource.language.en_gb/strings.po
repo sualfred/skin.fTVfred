@@ -878,7 +878,7 @@ msgid "Disable Higher Levels"
 msgstr ""
 
 msgctxt "#31210"
-msgid "Set layout for all"
+msgid "Set View for all"
 msgstr ""
 
 msgctxt "#31500"
