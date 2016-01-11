@@ -23,7 +23,7 @@
 		</control>
 		<!-- 404 -->
 		<control type="button" id="404">
-			<include>HiddenControl</include>			
+			<include>HiddenControl</include>
 		</control>
 		<include>DialogBackgroundImage</include>
 		<!-- Main group -->
@@ -222,20 +222,6 @@
 					<label>$LOCALIZE[31509]</label>
 					<visible>StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
 				</control>
-				<!--<control id="312" type="button">
-					<width>870</width>
-					<height>84</height>
-					<font>Light32</font>
-					<textwidth>790</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>$ADDON[script.skinshortcuts 32044]</label>
-					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
-				</control>-->
 				<control id="997" type="button">
 					<width>870</width>
 					<height>84</height>
@@ -269,7 +255,7 @@
 					<onclick>SetProperty(Dialog.11.Label,$VAR[ftvLabelWidget8])</onclick>
 					<onclick>SetProperty(Dialog.11.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget8)||Skin.SetString(ftvLabelWidget8)||SendClick(404))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$ADDON[script.skinshortcuts 32044])</onclick>
-					<label>$ADDON[script.skinshortcuts 32044]</label>
+					<label>31509</label>
 					<label2>$VAR[ftvWidgetLabel]</label2>
 					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
 				</control>
@@ -310,7 +296,6 @@
 					<label>-</label>
 				</control>
 			</control>
-
 			<control type="image">
 				<left>670</left>
 				<top>480</top>
