@@ -869,6 +869,10 @@ msgctxt "#31209"
 msgid "Disable Higher Levels"
 msgstr "Deaktiviere höhere Level"
 
+msgctxt "#31210"
+msgid "Set layout for all"
+msgstr "Layout für alle setzen"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"
@@ -1048,8 +1052,8 @@ msgid "Please select"
 msgstr "Bitte auswählen"
 
 msgctxt "#31544"
-msgid "Switch group"
-msgstr "Wechsle Kanalgruppe"
+msgid "Change widget name"
+msgstr "Ändere Widget-Name"
 
 msgctxt "#31545"
 msgid "Open TV-Guide"

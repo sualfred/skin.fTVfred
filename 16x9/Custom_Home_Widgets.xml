@@ -623,6 +623,39 @@
 					<ondown>noop</ondown>
 					<align>center</align>
 					<orientation>horizontal</orientation>
+					<!-- Set View Type for all -->
+					<control type="button" id="1004">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>$LOCALIZE[31210]</label>
+						<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31159]))</onclick>
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31160]))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31161]))</onclick>
+						<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31203]))</onclick>
+						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+					</control>
+					<!-- Change Group Name -->
+					<control type="button" id="1001">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>31544</label>
+						<onclick>Skin.SetString(ftvLabelWidget$INFO[Window(home).Property(SubMenu)])</onclick>
+					</control>
 					<!-- Reset Button -->
 					<control type="button" id="1002">
 						<width>320</width>
