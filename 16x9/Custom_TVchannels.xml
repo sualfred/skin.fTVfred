@@ -11,7 +11,7 @@
 			<include>BackgroundImage</include>
 			<!-- pvr channels list -->
 			<control id="100" type="fixedlist">
-				<visible>IsEmpty(Window(Home).Property(SwitchPVRWindow))</visible>
+				<animation effect="fade" start="0" end="0" time="0" condition="!IsEmpty(Window(Home).Property(SwitchPVRWindow))">Conditional</animation>
 				<left>-238</left>
 				<top>242</top>
 				<width>2200</width>
