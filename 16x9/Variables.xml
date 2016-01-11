@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="ftvWidgetLabel">
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),livetv)">$VAR[ftvLabelTV]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),weather)">$VAR[ftvLabelWeather]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),favourites)">$VAR[ftvLabelFavourites]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget1)">$VAR[ftvLabelWidget1]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget2)">$VAR[ftvLabelWidget2]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget3)">$VAR[ftvLabelWidget3]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget4)">$VAR[ftvLabelWidget4]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget5)">$VAR[ftvLabelWidget5]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">$VAR[ftvLabelWidget6]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">$VAR[ftvLabelWidget7]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">$VAR[ftvLabelWidget8]</value>
+	</variable>
+	<variable name="ftvLabelTV">
+		<value condition="!IsEmpty(Skin.String(ftvLabelTV)">$INFO[Skin.String(ftvLabelTV)]</value>
+		<value>$LOCALIZE[19020]</value>
+	</variable>
+	<variable name="ftvLabelWeather">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWeather)">$INFO[Skin.String(ftvLabelWeather)]</value>
+		<value>$LOCALIZE[10508]</value>
+	</variable>
+	<variable name="ftvLabelFavourites">
+		<value condition="!IsEmpty(Skin.String(ftvLabelFavourites)">$INFO[Skin.String(ftvLabelFavourites)]</value>
+		<value>$LOCALIZE[1036]</value>
+	</variable>
+	<variable name="ftvLabelWidget1">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1)">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1), ',']</value>
+		<value>$LOCALIZE[31500]</value>
+	</variable>
+	<variable name="ftvLabelWidget2">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2)">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2), ',']</value>
+		<value>$LOCALIZE[31501]</value>
+	</variable>
+	<variable name="ftvLabelWidget3">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3)">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3), ',']</value>
+		<value>$LOCALIZE[31502]</value>
+	</variable>
+	<variable name="ftvLabelWidget4">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4)">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4), ',']</value>
+		<value>$LOCALIZE[31503]</value>
+	</variable>
+	<variable name="ftvLabelWidget5">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5)">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5), ',']</value>
+		<value>$LOCALIZE[31504]</value>
+	</variable>
+	<variable name="ftvLabelWidget6">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6)">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6), ',']</value>
+		<value>$LOCALIZE[31505]</value>
+	</variable>
+	<variable name="ftvLabelWidget7">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7)">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7), ',']</value>
+		<value>$LOCALIZE[31506]</value>
+	</variable>
+	<variable name="ftvLabelWidget8">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8)">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8), ',']</value>
+		<value>$LOCALIZE[31507]</value>
+	</variable>
 	<variable name="SearchSetFocus">
 		<value condition="Control.IsVisible(111)">SetFocus(111)</value>
 		<value condition="Control.IsVisible(121)">SetFocus(121)</value>
@@ -1770,7 +1827,7 @@
 	</variable>
 	<variable name="SimilarVideos">
 		<value condition="[Container.Content(tvshows) | Container.Content(episodes)] + !IsEmpty(Window(home).Property(TVShowID))">plugin://script.skin.helper.service/?action=similarshows&amp;imdbid=$INFO[Window(home).Property(TVShowID)]&amp;limit=20</value>
- 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.IMDBNumber)">plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=20</value>
+		<value condition="Container.Content(movies) + !IsEmpty(ListItem.IMDBNumber)">plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=20</value>
 	</variable>
 	<variable name="HeadingLabel">
 		<value condition="!StringCompare(Container.FolderName,$LOCALIZE[369]) + !IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>

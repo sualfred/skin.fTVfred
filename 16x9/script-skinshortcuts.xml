@@ -21,6 +21,10 @@
 			<ondown condition="!IsEmpty(Container(211).ListItemNoWrap(1).Label)">Control.Move(211,1)</ondown>
 			<ondown condition="IsEmpty(Container(211).ListItemNoWrap(1).Label)">9001</ondown>
 		</control>
+		<!-- 404 -->
+		<control type="button" id="404">
+			<include>HiddenControl</include>			
+		</control>
 		<include>DialogBackgroundImage</include>
 		<!-- Main group -->
 		<control type="group">
@@ -218,7 +222,7 @@
 					<label>$LOCALIZE[31509]</label>
 					<visible>StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
 				</control>
-				<control id="312" type="button">
+				<!--<control id="312" type="button">
 					<width>870</width>
 					<height>84</height>
 					<font>Light32</font>
@@ -231,116 +235,153 @@
 					<label>$ADDON[script.skinshortcuts 32044]</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
 					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
+				</control>-->
+				<control id="997" type="button">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[19020])</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,livetv)||Skin.SetString(ftvLabelTV,$LOCALIZE[19020])||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[10508])</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,weather)||Skin.SetString(ftvLabelWeather,$LOCALIZE[10508])||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[1036])</onclick>
+					<onclick>SetProperty(Dialog.3.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,favourites)||Skin.SetString(ftvLabelFavourites,$LOCALIZE[1036])||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.4.Label,$VAR[ftvLabelWidget1])</onclick>
+					<onclick>SetProperty(Dialog.4.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget1)||Skin.SetString(ftvLabelWidget1)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.5.Label,$VAR[ftvLabelWidget2])</onclick>
+					<onclick>SetProperty(Dialog.5.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget2)||Skin.SetString(ftvLabelWidget2)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.6.Label,$VAR[ftvLabelWidget3])</onclick>
+					<onclick>SetProperty(Dialog.6.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget3)||Skin.SetString(ftvLabelWidget3)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.7.Label,$VAR[ftvLabelWidget4])</onclick>
+					<onclick>SetProperty(Dialog.7.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget4)||Skin.SetString(ftvLabelWidget4)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.8.Label,$VAR[ftvLabelWidget5])</onclick>
+					<onclick>SetProperty(Dialog.8.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget5)||Skin.SetString(ftvLabelWidget5)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.9.Label,$VAR[ftvLabelWidget6])</onclick>
+					<onclick>SetProperty(Dialog.9.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget6)||Skin.SetString(ftvLabelWidget6)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.10.Label,$VAR[ftvLabelWidget7])</onclick>
+					<onclick>SetProperty(Dialog.10.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget7)||Skin.SetString(ftvLabelWidget7)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.11.Label,$VAR[ftvLabelWidget8])</onclick>
+					<onclick>SetProperty(Dialog.11.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget8)||Skin.SetString(ftvLabelWidget8)||SendClick(404))</onclick>
+					<onclick>RunScript(script.toolbox,info=selectdialog,header=$ADDON[script.skinshortcuts 32044])</onclick>
+					<label>$ADDON[script.skinshortcuts 32044]</label>
+					<label2>$VAR[ftvWidgetLabel]</label2>
+					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
 				</control>
-			<!-- Manage widgets -->
-			<control id="998" type="button">
-				<width>870</width>
-				<height>84</height>
-				<font>Light32</font>
-				<textwidth>790</textwidth>
-				<textoffsetx>40</textoffsetx>
-				<textcolor>ff505153</textcolor>
-				<focusedcolor>ffffaf37</focusedcolor>
-				<texturefocus border="3">settings/button_focus.png</texturefocus>
-				<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-				<label>- $LOCALIZE[31508] $INFO[Container(211).ListItem.Property(widgetName)]</label>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget1)">SetProperty(SubMenu,1,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget2)">SetProperty(SubMenu,2,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget3)">SetProperty(SubMenu,3,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget4)">SetProperty(SubMenu,4,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget5)">SetProperty(SubMenu,5,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget6)">SetProperty(SubMenu,6,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget7)">SetProperty(SubMenu,7,home)</onclick>
-				<onclick condition="StringCompare(Container(211).ListItem.Property(widget),widget8)">SetProperty(SubMenu,8,home)</onclick>
-				<visible>SubString(Container(211).ListItem.Property(widget),widget,left)</visible>
-				<onclick>ActivateWindow(1105)</onclick>
+				<!-- Manage widgets -->
+				<control id="998" type="button">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>- $LOCALIZE[31508] $VAR[ftvWidgetLabel]</label>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8,home)</onclick>
+					<visible>SubString(Container(211).ListItem.Property(ftvWidget),widget,left)</visible>
+					<onclick>ActivateWindow(1105)</onclick>
+				</control>
+				<!-- Remove -->
+				<control type="button" id="302">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>-</label>
+				</control>
 			</control>
-			<!-- Remove -->
-			<control type="button" id="302">
-				<width>870</width>
-				<height>84</height>
-				<font>Light32</font>
-				<textwidth>790</textwidth>
-				<textoffsetx>40</textoffsetx>
-				<textcolor>ff505153</textcolor>
-				<focusedcolor>ffffaf37</focusedcolor>
-				<texturefocus border="3">settings/button_focus.png</texturefocus>
-				<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-				<label>-</label>
-			</control>
-		</control>
 
-		<control type="image">
-			<left>670</left>
-			<top>480</top>
-			<width>870</width>
-			<height>84</height>
-			<texture border="3">settings/button_no_focus.png</texture>
+			<control type="image">
+				<left>670</left>
+				<top>480</top>
+				<width>870</width>
+				<height>84</height>
+				<texture border="3">settings/button_no_focus.png</texture>
+			</control>
+			<!-- Button grouplist -->
+			<control type="grouplist" id="9001">
+				<left>0</left>
+				<bottom>12</bottom>
+				<width>1540</width>
+				<height>76</height>
+				<itemgap>0</itemgap>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onup>9000</onup>
+				<ondown>noop</ondown>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<!-- Add -->
+				<control type="button" id="301">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>303</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>$ADDON[script.skinshortcuts 32000]</label>
+				</control>
+				<!-- Reset -->
+				<control type="button" id="308">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>303</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>$ADDON[script.skinshortcuts 32028]</label>
+				</control>
+				<!-- Cancel Button -->
+				<control type="button" id="21">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>222</label>
+					<onclick>Close</onclick>
+				</control>
+				<!-- OK Button -->
+				<control type="button" id="10">
+					<width>320</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>186</label>
+					<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=5&amp;group=mainmenu|shutdown)</onback>
+					<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
+					<onclick>Close</onclick>
+				</control>
+			</control>
 		</control>
-		<!-- Button grouplist -->
-		<control type="grouplist" id="9001">
-			<left>0</left>
-			<bottom>12</bottom>
-			<width>1540</width>
-			<height>76</height>
-			<itemgap>0</itemgap>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<onup>9000</onup>
-			<ondown>noop</ondown>
-			<align>center</align>
-			<orientation>horizontal</orientation>
-			<!-- Add -->
-			<control type="button" id="301">
-				<width>320</width>
-				<height>76</height>
-				<align>center</align>
-				<aligny>top</aligny>
-				<font>Med24</font>
-				<onup>303</onup>
-				<textoffsetx>23</textoffsetx>
-				<textoffsety>27</textoffsety>
-				<label>$ADDON[script.skinshortcuts 32000]</label>
-			</control>
-			<!-- Reset -->
-			<control type="button" id="308">
-				<width>320</width>
-				<height>76</height>
-				<align>center</align>
-				<aligny>top</aligny>
-				<font>Med24</font>
-				<onup>303</onup>
-				<textoffsetx>23</textoffsetx>
-				<textoffsety>27</textoffsety>
-				<label>$ADDON[script.skinshortcuts 32028]</label>
-			</control>
-			<!-- Cancel Button -->
-			<control type="button" id="21">
-				<width>320</width>
-				<height>76</height>
-				<align>center</align>
-				<aligny>top</aligny>
-				<font>Med24</font>
-				<textoffsetx>23</textoffsetx>
-				<textoffsety>27</textoffsety>
-				<label>222</label>
-				<onclick>Close</onclick>
-			</control>
-			<!-- OK Button -->
-			<control type="button" id="10">
-				<width>320</width>
-				<height>76</height>
-				<align>center</align>
-				<aligny>top</aligny>
-				<font>Med24</font>
-				<textoffsetx>23</textoffsetx>
-				<textoffsety>27</textoffsety>
-				<label>186</label>
-				<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=5&amp;group=mainmenu|shutdown)</onback>
-				<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
-				<onclick>Close</onclick>
-			</control>
-		</control>
-	</control>
-</controls>
+	</controls>
 </window>
