@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1106">
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol always="true">100</defaultcontrol>	
 	<onunload>ClearProperty(SkipScrollingAnimation,home)</onunload>
 	<onunload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onunload>
 	<onunload>Control.Move(100,1)</onunload>
@@ -209,7 +209,7 @@
 						<font>Med48</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffdadada</textcolor>
-						<label>[CAPITALIZE]$LOCALIZE[19217][/CAPITALIZE]</label>
+						<label>[CAPITALIZE]$LOCALIZE[19217][/CAPITALIZE]  </label>
 					</control>
 					<control type="label">
 						<top>15</top>
