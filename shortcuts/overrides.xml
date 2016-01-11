@@ -14,13 +14,24 @@
 	<icon labelID="settings">DefaultSettings.png</icon>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
 	<widgetPlaylists>False</widgetPlaylists>
-
-
+	<widgetRename>False</widgetRename>
+	<widget-groupings>
+		<shortcut label="19020" icon="ftv_icon.png" widget="livetv">livetv</shortcut>		
+		<shortcut label="10508" icon="ftv_icon.png" widget="weather">weather</shortcut>	
+		<shortcut label="1036" icon="ftv_icon.png" widget="favourites">favourites</shortcut>
+		<shortcut label="31500" icon="ftv_icon.png" widget="widget1">widget1</shortcut>	
+		<shortcut label="31501" icon="ftv_icon.png" widget="widget2">widget2</shortcut>	
+		<shortcut label="31502" icon="ftv_icon.png" widget="widget3">widget3</shortcut>	
+		<shortcut label="31503" icon="ftv_icon.png" widget="widget4">widget4</shortcut>	
+		<shortcut label="31504" icon="ftv_icon.png" widget="widget5">widget5</shortcut>	
+		<shortcut label="31505" icon="ftv_icon.png" widget="widget6">widget6</shortcut>	
+		<shortcut label="31506" icon="ftv_icon.png" widget="widget7">widget7</shortcut>	
+		<shortcut label="31507" icon="ftv_icon.png" widget="widget8">widget8</shortcut>
+	</widget-groupings>
 	<groupings>
-
 		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
 		<node label="fTV">
-				<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
+			<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
 			<node label="342">
 				<shortcut label="31167" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyAddedMovies.xsp,return)</shortcut>
 				<shortcut label="31168" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourMovies.xsp,return)</shortcut>
