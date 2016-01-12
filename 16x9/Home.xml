@@ -95,7 +95,7 @@
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + IntegerGreaterThan(Container(1000).NumItems,1)">SetFocus(1000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + !IntegerGreaterThan(Container(1000).NumItems,1)">$INFO[Skin.String(1000-WidgetAction-1)]</onright>
 
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + IntegerGreaterThan(Container(2000).NumItems,1)">SetFocus(0200)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + IntegerGreaterThan(Container(2000).NumItems,1)">SetFocus(2000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + !IntegerGreaterThan(Container(2000).NumItems,1)">$INFO[Skin.String(2000-WidgetAction-1)]</onright>
 
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3) + IntegerGreaterThan(Container(3000).NumItems,1)">SetFocus(3000)</onright>
