@@ -55,12 +55,12 @@
 	</include>
 	<!-- Home Widgets Animation -->
 	<include name="HomeWidgetsAnimation">
-		<animation condition="Container(9000).OnNext" reversible="false" type="Visible">
+		<animation condition="Container(99).OnNext" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation condition="Container(9000).OnPrevious" reversible="false" type="Visible">
+		<animation condition="Container(99).OnPrevious" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
@@ -80,30 +80,30 @@
 	</include>
 	<!-- Home menu slide animations -->
 	<include name="HomeMenuSlideAnimation">
-		<animation condition="IntegerGreaterThan(Container(9000).NumItems,12)" effect="slide" end="0,50" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,12)" effect="slide" end="0,18" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,11)" effect="slide" end="0,50" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,10)" effect="slide" end="0,82" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,9)" effect="slide" end="0,114" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,8)" effect="slide" end="0,146" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,7)" effect="slide" end="0,178" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,6)" effect="slide" end="0,210" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,5)" effect="slide" end="0,242" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,4)" effect="slide" end="0,274" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,3)" effect="slide" end="0,306" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,2)" effect="slide" end="0,338" time="0">Conditional</animation>
-		<animation condition="StringCompare(Container(9000).NumItems,1)" effect="slide" end="0,370" time="0">Conditional</animation>
-		<animation condition="Container(9000).Row(0)" effect="slide" end="0,0" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(1)" effect="slide" end="0,-11" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(2)" effect="slide" end="0,-22" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(3)" effect="slide" end="0,-33" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(4)" effect="slide" end="0,-44" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(5)" effect="slide" end="0,-55" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(6)" effect="slide" end="0,-66" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(7)" effect="slide" end="0,-77" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(8)" effect="slide" end="0,-88" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(9)" effect="slide" end="0,-99" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(10)" effect="slide" end="0,-110" time="200">Conditional</animation>
-		<animation condition="Container(9000).Row(11)" effect="slide" end="0,-122" time="200">Conditional</animation>
+		<animation condition="IntegerGreaterThan(Container(99).NumItems,12)" effect="slide" end="0,50" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,12)" effect="slide" end="0,18" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,11)" effect="slide" end="0,50" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,10)" effect="slide" end="0,82" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,9)" effect="slide" end="0,114" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,8)" effect="slide" end="0,146" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,7)" effect="slide" end="0,178" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,6)" effect="slide" end="0,210" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,5)" effect="slide" end="0,242" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,4)" effect="slide" end="0,274" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,3)" effect="slide" end="0,306" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,2)" effect="slide" end="0,338" time="0">Conditional</animation>
+		<animation condition="StringCompare(Container(99).NumItems,1)" effect="slide" end="0,370" time="0">Conditional</animation>
+		<animation condition="Container(99).Row(0)" effect="slide" end="0,0" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(1)" effect="slide" end="0,-11" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(2)" effect="slide" end="0,-22" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(3)" effect="slide" end="0,-33" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(4)" effect="slide" end="0,-44" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(5)" effect="slide" end="0,-55" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(6)" effect="slide" end="0,-66" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(7)" effect="slide" end="0,-77" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(8)" effect="slide" end="0,-88" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(9)" effect="slide" end="0,-99" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(10)" effect="slide" end="0,-110" time="200">Conditional</animation>
+		<animation condition="Container(99).Row(11)" effect="slide" end="0,-122" time="200">Conditional</animation>
 	</include>
 </includes>

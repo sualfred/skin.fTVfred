@@ -271,14 +271,14 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>- $LOCALIZE[31508] $VAR[ftvWidgetLabel]</label>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7,home)</onclick>
-					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</onclick>
 					<visible>SubString(Container(211).ListItem.Property(ftvWidget),widget,left)</visible>
 					<onclick>ActivateWindow(1105)</onclick>
 				</control>
@@ -362,8 +362,8 @@
 					<textoffsetx>23</textoffsetx>
 					<textoffsety>27</textoffsety>
 					<label>186</label>
-					<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=5&amp;group=mainmenu|shutdown)</onback>
-					<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
+					<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=5&amp;group=mainmenu|shutdown)</onback>
+					<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
 					<onclick>Close</onclick>
 				</control>
 			</control>

@@ -24,6 +24,10 @@
 		</control>
 		<!-- trigger -->
 		<control type="button" id="40">
+
+			<include>TemporaryMoveExistingStrings</include>
+			<include>TemporaryClearExistingStrings</include>
+
 			<onfocus>SetProperty(preload,1,Home)</onfocus>
 			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">SetFocus(10)</onfocus>
 			<!-- workaround to fill the tv channel list correclty -->

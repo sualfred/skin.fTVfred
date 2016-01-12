@@ -182,501 +182,501 @@
 		<value condition="SubString(Skin.String(AutoUpdate),off)">$LOCALIZE[31206]</value>
 		<value>$LOCALIZE[31207]</value>
 	</variable>
-	<variable name="1-orderby-1">
-		<value condition="SubString(Skin.String(1-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-1">
+		<value condition="SubString(Skin.String(1000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-2">
-		<value condition="SubString(Skin.String(1-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-2">
+		<value condition="SubString(Skin.String(1000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-3">
-		<value condition="SubString(Skin.String(1-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-3">
+		<value condition="SubString(Skin.String(1000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-4">
-		<value condition="SubString(Skin.String(1-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-4">
+		<value condition="SubString(Skin.String(1000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-5">
-		<value condition="SubString(Skin.String(1-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-5">
+		<value condition="SubString(Skin.String(1000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-6">
-		<value condition="SubString(Skin.String(1-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-6">
+		<value condition="SubString(Skin.String(1000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-7">
-		<value condition="SubString(Skin.String(1-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-7">
+		<value condition="SubString(Skin.String(1000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="1-orderby-8">
-		<value condition="SubString(Skin.String(1-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(1-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="1000-orderby-8">
+		<value condition="SubString(Skin.String(1000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-1">
-		<value condition="SubString(Skin.String(2-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-1">
+		<value condition="SubString(Skin.String(2000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-2">
-		<value condition="SubString(Skin.String(2-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-2">
+		<value condition="SubString(Skin.String(2000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-3">
-		<value condition="SubString(Skin.String(2-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-3">
+		<value condition="SubString(Skin.String(2000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-4">
-		<value condition="SubString(Skin.String(2-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-4">
+		<value condition="SubString(Skin.String(2000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-5">
-		<value condition="SubString(Skin.String(2-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-5">
+		<value condition="SubString(Skin.String(2000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-6">
-		<value condition="SubString(Skin.String(2-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-6">
+		<value condition="SubString(Skin.String(2000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-7">
-		<value condition="SubString(Skin.String(2-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-7">
+		<value condition="SubString(Skin.String(2000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="2-orderby-8">
-		<value condition="SubString(Skin.String(2-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(2-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="2000-orderby-8">
+		<value condition="SubString(Skin.String(2000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-1">
-		<value condition="SubString(Skin.String(3-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-1">
+		<value condition="SubString(Skin.String(3000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-2">
-		<value condition="SubString(Skin.String(3-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-2">
+		<value condition="SubString(Skin.String(3000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-3">
-		<value condition="SubString(Skin.String(3-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-3">
+		<value condition="SubString(Skin.String(3000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-4">
-		<value condition="SubString(Skin.String(3-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-4">
+		<value condition="SubString(Skin.String(3000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-5">
-		<value condition="SubString(Skin.String(3-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-5">
+		<value condition="SubString(Skin.String(3000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-6">
-		<value condition="SubString(Skin.String(3-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-6">
+		<value condition="SubString(Skin.String(3000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-7">
-		<value condition="SubString(Skin.String(3-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-7">
+		<value condition="SubString(Skin.String(3000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="3-orderby-8">
-		<value condition="SubString(Skin.String(3-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(3-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="3000-orderby-8">
+		<value condition="SubString(Skin.String(3000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-1">
-		<value condition="SubString(Skin.String(4-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-1">
+		<value condition="SubString(Skin.String(4000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-2">
-		<value condition="SubString(Skin.String(4-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-2">
+		<value condition="SubString(Skin.String(4000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-3">
-		<value condition="SubString(Skin.String(4-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-3">
+		<value condition="SubString(Skin.String(4000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-4">
-		<value condition="SubString(Skin.String(4-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-4">
+		<value condition="SubString(Skin.String(4000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-5">
-		<value condition="SubString(Skin.String(4-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-5">
+		<value condition="SubString(Skin.String(4000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-6">
-		<value condition="SubString(Skin.String(4-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-6">
+		<value condition="SubString(Skin.String(4000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-7">
-		<value condition="SubString(Skin.String(4-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-7">
+		<value condition="SubString(Skin.String(4000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="4-orderby-8">
-		<value condition="SubString(Skin.String(4-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(4-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="4000-orderby-8">
+		<value condition="SubString(Skin.String(4000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-1">
-		<value condition="SubString(Skin.String(5-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-1">
+		<value condition="SubString(Skin.String(5000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-2">
-		<value condition="SubString(Skin.String(5-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-2">
+		<value condition="SubString(Skin.String(5000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-3">
-		<value condition="SubString(Skin.String(5-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-3">
+		<value condition="SubString(Skin.String(5000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-4">
-		<value condition="SubString(Skin.String(5-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-4">
+		<value condition="SubString(Skin.String(5000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-5">
-		<value condition="SubString(Skin.String(5-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-5">
+		<value condition="SubString(Skin.String(5000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-6">
-		<value condition="SubString(Skin.String(5-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-6">
+		<value condition="SubString(Skin.String(5000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-7">
-		<value condition="SubString(Skin.String(5-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-7">
+		<value condition="SubString(Skin.String(5000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="5-orderby-8">
-		<value condition="SubString(Skin.String(5-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(5-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="5000-orderby-8">
+		<value condition="SubString(Skin.String(5000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-1">
-		<value condition="SubString(Skin.String(6-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-1">
+		<value condition="SubString(Skin.String(6000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-2">
-		<value condition="SubString(Skin.String(6-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-2">
+		<value condition="SubString(Skin.String(6000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-3">
-		<value condition="SubString(Skin.String(6-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-3">
+		<value condition="SubString(Skin.String(6000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-4">
-		<value condition="SubString(Skin.String(6-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-4">
+		<value condition="SubString(Skin.String(6000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-5">
-		<value condition="SubString(Skin.String(6-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-5">
+		<value condition="SubString(Skin.String(6000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-6">
-		<value condition="SubString(Skin.String(6-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-6">
+		<value condition="SubString(Skin.String(6000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-7">
-		<value condition="SubString(Skin.String(6-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-7">
+		<value condition="SubString(Skin.String(6000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="6-orderby-8">
-		<value condition="SubString(Skin.String(6-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(6-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="6000-orderby-8">
+		<value condition="SubString(Skin.String(6000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-1">
-		<value condition="SubString(Skin.String(7-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-1">
+		<value condition="SubString(Skin.String(7000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-2">
-		<value condition="SubString(Skin.String(7-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-2">
+		<value condition="SubString(Skin.String(7000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-3">
-		<value condition="SubString(Skin.String(7-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-3">
+		<value condition="SubString(Skin.String(7000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-4">
-		<value condition="SubString(Skin.String(7-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-4">
+		<value condition="SubString(Skin.String(7000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-5">
-		<value condition="SubString(Skin.String(7-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-5">
+		<value condition="SubString(Skin.String(7000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-6">
-		<value condition="SubString(Skin.String(7-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-6">
+		<value condition="SubString(Skin.String(7000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-7">
-		<value condition="SubString(Skin.String(7-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-7">
+		<value condition="SubString(Skin.String(7000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="7-orderby-8">
-		<value condition="SubString(Skin.String(7-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(7-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="7000-orderby-8">
+		<value condition="SubString(Skin.String(7000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-1">
-		<value condition="SubString(Skin.String(8-WidgetList-1),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-1),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-1">
+		<value condition="SubString(Skin.String(8000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-1),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-2">
-		<value condition="SubString(Skin.String(8-WidgetList-2),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-2),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-2">
+		<value condition="SubString(Skin.String(8000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-2),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-3">
-		<value condition="SubString(Skin.String(8-WidgetList-3),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-3),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-3">
+		<value condition="SubString(Skin.String(8000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-3),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-4">
-		<value condition="SubString(Skin.String(8-WidgetList-4),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-4),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-4">
+		<value condition="SubString(Skin.String(8000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-4),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-5">
-		<value condition="SubString(Skin.String(8-WidgetList-5),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-5),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-5">
+		<value condition="SubString(Skin.String(8000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-5),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-6">
-		<value condition="SubString(Skin.String(8-WidgetList-6),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-6),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-6">
+		<value condition="SubString(Skin.String(8000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-6),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-7">
-		<value condition="SubString(Skin.String(8-WidgetList-7),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-7),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-7">
+		<value condition="SubString(Skin.String(8000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-7),musicdb://artists/)">artist</value>
 	</variable>
-	<variable name="8-orderby-8">
-		<value condition="SubString(Skin.String(8-WidgetList-8),addons://sources/)">label</value>
-		<value condition="SubString(Skin.String(8-WidgetList-8),musicdb://artists/)">artist</value>
+	<variable name="8000-orderby-8">
+		<value condition="SubString(Skin.String(8000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
 	<variable name="WidgetLabel-1">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-1)]</value>
 	</variable>
 	<variable name="WidgetLabel-2">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-2)]</value>
 	</variable>
 	<variable name="WidgetLabel-3">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-3)]</value>
 	</variable>
 	<variable name="WidgetLabel-4">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-4)]</value>
 	</variable>
 	<variable name="WidgetLabel-5">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-5)]</value>
 	</variable>
 	<variable name="WidgetLabel-6">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-6)]</value>
 	</variable>
 	<variable name="WidgetLabel-7">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-7)]</value>
 	</variable>
 	<variable name="WidgetLabel-8">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetLabel-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-8)]</value>
 	</variable>
 	<variable name="WidgetAction-1">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-1)]</value>
 	</variable>
 	<variable name="WidgetAction-2">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-2)]</value>
 	</variable>
 	<variable name="WidgetAction-3">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-3)]</value>
 	</variable>
 	<variable name="WidgetAction-4">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-4)]</value>
 	</variable>
 	<variable name="WidgetAction-5">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-5)]</value>
 	</variable>
 	<variable name="WidgetAction-6">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-6)]</value>
 	</variable>
 	<variable name="WidgetAction-7">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-7)]</value>
 	</variable>
 	<variable name="WidgetAction-8">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-8)]</value>
 	</variable>
 	<variable name="WidgetStyle-1">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-1)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-1)]</value>
 	</variable>
 	<variable name="WidgetStyle-2">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-2)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-2)]</value>
 	</variable>
 	<variable name="WidgetStyle-3">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-3)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-3)]</value>
 	</variable>
 	<variable name="WidgetStyle-4">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-4)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-4)]</value>
 	</variable>
 	<variable name="WidgetStyle-5">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-5)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-5)]</value>
 	</variable>
 	<variable name="WidgetStyle-6">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-6)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-6)]</value>
 	</variable>
 	<variable name="WidgetStyle-7">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-7)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-7)]</value>
 	</variable>
 	<variable name="WidgetStyle-8">
-		<value condition="StringCompare(Window(home).Property(SubMenu),1)">$INFO[Skin.String(1-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),2)">$INFO[Skin.String(2-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),3)">$INFO[Skin.String(3-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),4)">$INFO[Skin.String(4-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),5)">$INFO[Skin.String(5-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),6)">$INFO[Skin.String(6-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),7)">$INFO[Skin.String(7-WidgetStyle-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),8)">$INFO[Skin.String(8-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">$INFO[Skin.String(3000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">$INFO[Skin.String(4000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">$INFO[Skin.String(5000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-8)]</value>
 	</variable>
 	<variable name="NextEpisodeCountdown">
 		<value condition="IntegerGreaterThan(Player.TimeRemaining,29)">osd/countdown/30.png</value>

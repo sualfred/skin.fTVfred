@@ -3,7 +3,7 @@
 	<!-- skinsettings -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">9</defaultcontrol>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0&amp;group=mainmenu|shutdown)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onunload>
 	<controls>
 		<!-- Dummy items to fake opening dialog -->
 		<control type="group">

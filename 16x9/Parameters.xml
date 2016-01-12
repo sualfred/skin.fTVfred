@@ -110,9 +110,9 @@
 				</control>
 			</focusedlayout>
 		</control>
-	</include>
+	</include>	
 	<!-- Home Widget Param Include -->
-	<include name="ParamWidgetInclude">
+	<include name="ParamWidgetIncludeOld">
 		<control id="$PARAM[ID]" type="fixedlist">
 			<left>419</left>
 			<top>-367</top>
@@ -122,9 +122,9 @@
 			<onup>noop</onup>
 			<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
 			<ondown>noop</ondown>
-			<onleft>9000</onleft>
+			<onleft>99</onleft>
 			<onright>Select</onright>
-			<onback>9000</onback>
+			<onback>99</onback>
 			<movement>1</movement>
 			<preloaditems>2</preloaditems>
 			<focusposition>2</focusposition>
@@ -134,7 +134,7 @@
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(9000).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
+			<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
 			<animation condition="StringCompare(Container($PARAM[ID]).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
 			<animation condition="StringCompare(Container($PARAM[ID]).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
 			<animation condition="IntegerGreaterThan(Container($PARAM[ID]).NumItems,2) + Container($PARAM[ID]).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
@@ -241,5 +241,361 @@
 			</focusedlayout>
 			<include>$PARAM[content]</include>
 		</control>
+	</include>
+
+
+
+	<!-- Home Widget Param Include -->
+	<include name="ParamWidgetInclude">
+		<param name="ID"/>
+		<param name="widget"/>
+		<param name="content" default="FtvWidget"/>
+		<definition>
+			<include name="Param$PARAM[content]Lists">				
+				<param name="ID">$PARAM[ID]</param>
+			</include>
+			<control id="$PARAM[ID]0" type="fixedlist">
+				<left>419</left>
+				<top>-367</top>
+				<width>2100</width>
+				<height>1500</height>
+				<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+				<onup>noop</onup>
+				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+				<ondown>noop</ondown>
+				<onleft>99</onleft>
+				<onright>Select</onright>
+				<onback>99</onback>
+				<movement>1</movement>
+				<preloaditems>2</preloaditems>
+				<focusposition>2</focusposition>
+				<viewtype label="">list</viewtype>
+				<orientation>vertical</orientation>
+				<defaultcontrol>0</defaultcontrol>
+				<scrolltime easing="inout" tween="sine">300</scrolltime>
+				<include>HomeWidgetsAnimation</include>
+				<include>WindowHomeFadeAnimation</include>
+				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
+				<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,1)" effect="slide" end="-304,0">Conditional</animation>
+				<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2)" effect="slide" end="0,-185">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" end="0,114" time="220" tween="sine">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
+				<itemlayout height="370" width="2000">
+					<control type="group">
+						<left>33</left>
+						<control type="image">
+							<width>227</width>
+							<height>334</height>
+							<texture border="0,14,11,14">home/home_button_nf.png</texture>
+						</control>
+						<control type="textbox">
+							<left>14</left>
+							<top>22</top>
+							<width>191</width>
+							<height>152</height>
+							<font>Bold26</font>
+							<align>left</align>
+							<textcolor>ffdadada</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					<include>HomePosterItemlayout</include>
+					<include>HomeWideItemlayout</include>
+					<include>HomeSquareItemlayout</include>
+					<include>HomeSquareInfoItemlayout</include>
+				</itemlayout>
+				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
+					<control type="button">
+						<include>HiddenControl</include>
+						<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
+						<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
+						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
+						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
+						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,3_3)</onfocus>					
+						<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,61,Home)</onfocus>
+						<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,60,Home)</onfocus>
+						<onfocus condition="!StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>					
+					</control>
+					<control type="group">
+						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+						<control type="group">
+							<left>33</left>
+							<control type="image">
+								<width>227</width>
+								<height>334</height>
+								<texture border="0,14,11,14">home/home_button_nf.png</texture>
+							</control>
+							<control type="textbox">
+								<top>2</top>
+								<width>254</width>
+								<height>200</height>
+								<font>Bold34</font>
+								<align>left</align>
+								<textcolor>ffdadada</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							</control>
+							<control type="image">
+								<width>227</width>
+								<height>334</height>
+								<texture border="0,14,11,14">home/home_button_fo.png</texture>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+							</control>
+							<control type="textbox">
+								<top>2</top>
+								<width>254</width>
+								<height>200</height>
+								<font>Bold34</font>
+								<align>left</align>
+								<textcolor>ff453a18</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+								<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+								<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+								<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							</control>
+						</control>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
+					<control type="group">
+						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
+						<include>HomePosterFocusedlayout</include>
+						<include>HomeWideFocusedlayout</include>
+						<include>HomeSquareFocusedlayout</include>
+						<include>HomeSquareInfoFocusedlayout</include>
+					</control>
+				</focusedlayout>
+				<content>
+					<include name="$PARAM[content]">
+						<param name="ID">$PARAM[ID]</param>
+					</include>
+				</content>
+			</control>
+		</definition>
+	</include>
+	<!-- widget hiddenlists -->
+	<include name="ParamFtvWidgetLists">
+		<control id="$PARAM[ID]1" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-1]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-1)]</content>
+		</control>
+		<control id="$PARAM[ID]2" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-2]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-2)]</content>
+		</control>
+		<control id="$PARAM[ID]3" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-3]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-3)]</content>
+		</control>
+		<control id="$PARAM[ID]4" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-4]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-4)]</content>
+		</control>
+		<control id="$PARAM[ID]5" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-5]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-5)]</content>
+		</control>
+		<control id="$PARAM[ID]6" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-6]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-6)]</content>
+		</control>
+		<control id="$PARAM[ID]7" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-7]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-7)]</content>
+		</control>
+		<control id="$PARAM[ID]8" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$VAR[$PARAM[ID]0-orderby-8]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-8)]</content>
+		</control>
+	</include>
+	<include name="ParamLivetvWidgetLists">
+		<control id="$PARAM[ID]1" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="4">pvr://channels/tv/all channels</content>
+		</control>		
+		<control id="$PARAM[ID]2" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="4">pvr://recordings/active</content>
+		</control>
+	</include>
+	<include name="ParamFavouritesWidgetLists">
+		<control id="$PARAM[ID]1" type="list">
+			<include>HiddenHomeList</include>
+			<content limit="6">favourites://</content>
+		</control>
+	</include>
+	<!-- widget contents -->
+	<include name="FtvWidget">
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]1</param>
+			<param name="POS">1</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]2</param>
+			<param name="POS">2</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]3</param>
+			<param name="POS">3</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]4</param>
+			<param name="POS">4</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]5</param>
+			<param name="POS">5</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]6</param>
+			<param name="POS">6</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]7</param>
+			<param name="POS">7</param>
+		</include>
+		<include name="ParamWidgetContent">
+			<param name="ListID">$PARAM[ID]</param>
+			<param name="ID">$PARAM[ID]8</param>
+			<param name="POS">8</param>
+		</include>
+	</include>
+	<include name="LivetvWidget">
+		<item>
+			<label>$LOCALIZE[19019]</label>				
+			<visible>!IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)</visible>
+			<property name="WidgetStyle">$LOCALIZE[31161]</property>
+			<property name="Icon1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Icon]</property>
+			<property name="Icon2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Icon]</property>
+			<property name="Icon3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Icon]</property>
+			<property name="Icon4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).Icon]</property>
+			<property name="InfoLabel1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).ChannelName]</property>
+			<property name="InfoLabel2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).ChannelName]</property>
+			<property name="InfoLabel3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).ChannelName]</property>
+			<property name="InfoLabel4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).ChannelName]</property>
+			<property name="Path">pvr://channels/tv/1</property>
+			<onclick>ActivateWindow(1106)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[19017]</label>
+			<visible>!IsEmpty(Container($PARAM[ID]2).ListItemPosition(0).Label)</visible>
+			<property name="Icon1">$INFO[Container($PARAM[ID]2).ListItemPosition(0).Icon]</property>
+			<property name="Icon2">$INFO[Container($PARAM[ID]2).ListItemPosition(1).Icon]</property>
+			<property name="Icon3">$INFO[Container($PARAM[ID]2).ListItemPosition(2).Icon]</property>
+			<property name="Icon4">$INFO[Container($PARAM[ID]2).ListItemPosition(3).Icon]</property>
+			<property name="InfoLabel1">$INFO[Container($PARAM[ID]2).ListItemPosition(0).Label]</property>
+			<property name="InfoLabel2">$INFO[Container($PARAM[ID]2).ListItemPosition(1).Label]</property>
+			<property name="InfoLabel3">$INFO[Container($PARAM[ID]2).ListItemPosition(2).Label]</property>
+			<property name="InfoLabel4">$INFO[Container($PARAM[ID]2).ListItemPosition(3).Label]</property>
+			<property name="Path">pvr://recordings/active</property>
+			<onclick>ActivateWindow(tvrecordings)</onclick>
+		</item>
+	</include>
+	<include name="FavouritesWidget">
+		<item>
+			<label>$LOCALIZE[10134]</label>
+			<visible>!IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)</visible>
+			<property name="WidgetStyle">$LOCALIZE[31161]</property>
+			<property name="Icon1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Icon]</property>
+			<property name="Icon2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Icon]</property>
+			<property name="Icon3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Icon]</property>
+			<property name="Icon4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).Icon]</property>
+			<property name="Icon5">$INFO[Container($PARAM[ID]1).ListItemPosition(4).Icon]</property>
+			<property name="Icon6">$INFO[Container($PARAM[ID]1).ListItemPosition(5).Icon]</property>
+			<property name="InfoLabel1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Label]</property>
+			<property name="InfoLabel2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Label]</property>
+			<property name="InfoLabel3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Label]</property>
+			<property name="InfoLabel4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).Label]</property>
+			<property name="InfoLabel5">$INFO[Container($PARAM[ID]1).ListItemPosition(4).Label]</property>
+			<property name="InfoLabel6">$INFO[Container($PARAM[ID]1).ListItemPosition(5).Label]</property>
+			<property name="Overlay1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Overlay]</property>
+			<property name="Overlay2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Overlay]</property>
+			<property name="Overlay3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Overlay]</property>
+			<property name="Overlay4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).Overlay]</property>
+			<property name="Overlay5">$INFO[Container($PARAM[ID]1).ListItemPosition(4).Overlay]</property>
+			<property name="Overlay6">$INFO[Container($PARAM[ID]1).ListItemPosition(5).Overlay]</property>
+			<property name="VideoResolution1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).VideoResolution]</property>
+			<property name="VideoResolution2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).VideoResolution]</property>
+			<property name="VideoResolution3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).VideoResolution]</property>
+			<property name="VideoResolution4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).VideoResolution]</property>
+			<property name="VideoResolution5">$INFO[Container($PARAM[ID]1).ListItemPosition(4).VideoResolution]</property>
+			<property name="VideoResolution6">$INFO[Container($PARAM[ID]1).ListItemPosition(5).VideoResolution]</property>
+			<property name="ArtFTV1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Art(ftv)]</property>
+			<property name="ArtFTV2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Art(ftv)]</property>
+			<property name="ArtFTV3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Art(ftv)]</property>
+			<property name="ArtFanart1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Art(fanart)]</property>
+			<property name="ArtFanart2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Art(fanart)]</property>
+			<property name="ArtFanart3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Art(fanart)]</property>
+			<property name="ArtLogo1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Art(clearlogo)]</property>
+			<property name="ArtLogo2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Art(clearlogo)]</property>
+			<property name="ArtLogo3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Art(clearlogo)]</property>
+			<property name="Path">favourites://</property>
+			<onclick>ActivateWindow(Favourites)</onclick>
+		</item>
+	</include>
+	<!-- custom widget group static items -->
+	<include name="ParamWidgetContent">
+		<item>
+			<label>$INFO[Skin.String($PARAM[ListID]0-WidgetLabel-$PARAM[POS])]</label>
+			<visible>!IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)</visible>
+			<property name="WidgetStyle">$INFO[Skin.String($PARAM[ListID]0-WidgetStyle-$PARAM[POS])]</property>
+			<property name="Icon1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Icon]</property>
+			<property name="Icon2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Icon]</property>
+			<property name="Icon3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Icon]</property>
+			<property name="Icon4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Icon]</property>
+			<property name="Icon5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Icon]</property>
+			<property name="Icon6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Icon]</property>
+			<property name="InfoLabel1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Label]</property>
+			<property name="InfoLabel2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Label]</property>
+			<property name="InfoLabel3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Label]</property>
+			<property name="InfoLabel4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Label]</property>
+			<property name="InfoLabel5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Label]</property>
+			<property name="InfoLabel6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Label]</property>
+			<property name="Overlay1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Overlay]</property>
+			<property name="Overlay2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Overlay]</property>
+			<property name="Overlay3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Overlay]</property>
+			<property name="Overlay4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Overlay]</property>
+			<property name="Overlay5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Overlay]</property>
+			<property name="Overlay6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Overlay]</property>
+			<property name="VideoResolution1">$INFO[Container($PARAM[ID]).ListItemPosition(0).VideoResolution]</property>
+			<property name="VideoResolution2">$INFO[Container($PARAM[ID]).ListItemPosition(1).VideoResolution]</property>
+			<property name="VideoResolution3">$INFO[Container($PARAM[ID]).ListItemPosition(2).VideoResolution]</property>
+			<property name="VideoResolution4">$INFO[Container($PARAM[ID]).ListItemPosition(3).VideoResolution]</property>
+			<property name="VideoResolution5">$INFO[Container($PARAM[ID]).ListItemPosition(4).VideoResolution]</property>
+			<property name="VideoResolution6">$INFO[Container($PARAM[ID]).ListItemPosition(5).VideoResolution]</property>
+			<property name="ArtFTV1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(ftv)]</property>
+			<property name="ArtFTV2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(ftv)]</property>
+			<property name="ArtFTV3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(ftv)]</property>
+			<property name="ArtFanart1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(fanart)]</property>
+			<property name="ArtFanart2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(fanart)]</property>
+			<property name="ArtFanart3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(fanart)]</property>
+			<property name="ArtLogo1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(clearlogo)]</property>
+			<property name="ArtLogo2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(clearlogo)]</property>
+			<property name="ArtLogo3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(clearlogo)]</property>
+			<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
+			<onclick>$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
+		</item>
 	</include>
 </includes>
