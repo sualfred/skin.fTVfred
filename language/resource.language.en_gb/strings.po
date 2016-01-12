@@ -881,6 +881,16 @@ msgctxt "#31210"
 msgid "Set View for all"
 msgstr ""
 
+#: \16x9\SkinSettings.xml:287
+msgctxt "#31211"
+msgid "Preload widgets on startup"
+msgstr ""
+
+#: \16x9\Variables.xml:1512
+msgctxt "#31212"
+msgid "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

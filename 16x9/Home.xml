@@ -596,7 +596,7 @@
 		<!-- preload widgets -->
 		<control type="button" id="91">
 			<include>HiddenControl</include>			
-			<visible>[Container(1001).IsUpdating
+			<visible>!Skin.HasSetting(PreloadDeactivated) + [Container(1001).IsUpdating
 				| Container(1002).IsUpdating
 				| Container(1003).IsUpdating
 				| Container(1004).IsUpdating

@@ -292,7 +292,7 @@
 	<include name="ParamLivetvWidgetLists">
 		<control id="$PARAM[ID]1" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="4">pvr://channels/tv/all channels</content>
+			<content limit="4">pvr://channels/tv/1</content>
 		</control>		
 		<control id="$PARAM[ID]2" type="list">
 			<include>HiddenHomeList</include>
