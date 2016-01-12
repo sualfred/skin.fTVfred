@@ -87,7 +87,7 @@
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
-				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(300).CurrentItem,2)">Control.Move(300,-1)</onfocus>
 
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 				<onright>SetProperty(WidgetHasFocus,1,Home)</onright>
@@ -203,7 +203,7 @@
 						<onfocus condition="!Control.IsVisible(8000) + StringCompare(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
 						<onfocus condition="!Control.IsVisible(8000) + StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
 						<onfocus condition="!Control.IsVisible(8000) + StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
-						<onfocus condition="!Control.IsVisible(901) + StringCompare(Container(901).CurrentItem,2)">Control.Move(901,-1)</onfocus>
+						<onfocus condition="!Control.IsVisible(300) + StringCompare(Container(300).CurrentItem,2)">Control.Move(300,-1)</onfocus>
 					</control>
 					<control type="label">
 						<width>284</width>
