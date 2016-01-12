@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!-- Home Square Info Itemlayout -->
-	<include name="HomeSquareInfoItemlayout">		
+	<include name="HomeSquareInfoItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>			
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>
 			<control type="group">
 				<left>273</left>
 				<control type="image">
@@ -913,7 +913,7 @@
 					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
 					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
 				</control>
-			</control>			
+			</control>
 		</control>
 	</include>
 	<!-- Home Poster Itemlayout -->

@@ -5,12 +5,12 @@
 	<defaultcontrol>90</defaultcontrol>
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(preload,1,Home)</onload>
-	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>		
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>	
+	<onload condition="Window.Previous(startup)">SetProperty(fadeoutdelay,1,Home)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
 		<control type="group">
 			<!-- Hide elements until  preloading is done -->
-			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(preload)) | System.HasAlarm(waitforpreload) | Control.IsVisible(91)">Conditional</animation>			
+			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(preload)) | System.HasAlarm(waitforpreload) | Control.IsVisible(91)">Conditional</animation>
 			<!-- Hidden control to load weather conditions -->
 			<control type="label">
 				<font>-</font>
@@ -27,9 +27,8 @@
 				<ondown>noop</ondown>
 				<ondown>ClearProperty(Movement)</ondown>
 				<onleft>noop</onleft>
-				<onright>ClearProperty(MainMenuFocus,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
-
+				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 				<!-- workaround to move the focused row after startup -->
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onfocus>
@@ -88,42 +87,30 @@
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(300).CurrentItem,2)">Control.Move(300,-1)</onfocus>
-
-				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
+				<!--on right-->
+				<onright>ClearProperty(MainMenuFocus,home)</onright>
 				<onright>SetProperty(WidgetHasFocus,1,Home)</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + IntegerGreaterThan(Container(1000).NumItems,1)">SetFocus(1000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + !IntegerGreaterThan(Container(1000).NumItems,1)">$INFO[Skin.String(1000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + IntegerGreaterThan(Container(2000).NumItems,1)">SetFocus(2000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + !IntegerGreaterThan(Container(2000).NumItems,1)">$INFO[Skin.String(2000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3) + IntegerGreaterThan(Container(3000).NumItems,1)">SetFocus(3000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3) + !IntegerGreaterThan(Container(3000).NumItems,1)">$INFO[Skin.String(3000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4) + IntegerGreaterThan(Container(4000).NumItems,1)">SetFocus(4000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4) + !IntegerGreaterThan(Container(4000).NumItems,1)">$INFO[Skin.String(4000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5) + IntegerGreaterThan(Container(5000).NumItems,1)">SetFocus(5000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5) + !IntegerGreaterThan(Container(5000).NumItems,1)">$INFO[Skin.String(5000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6) + IntegerGreaterThan(Container(6000).NumItems,1)">SetFocus(6000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6) + !IntegerGreaterThan(Container(6000).NumItems,1)">$INFO[Skin.String(6000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7) + IntegerGreaterThan(Container(7000).NumItems,1)">SetFocus(7000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7) + !IntegerGreaterThan(Container(7000).NumItems,1)">$INFO[Skin.String(7000-WidgetAction-1)]</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + IntegerGreaterThan(Container(8000).NumItems,1)">SetFocus(8000)</onright>
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + !IntegerGreaterThan(Container(8000).NumItems,1)">$INFO[Skin.String(8000-WidgetAction-1)]</onright>					
-
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + !IntegerGreaterThan(Container(8000).NumItems,1)">$INFO[Skin.String(8000-WidgetAction-1)]</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + IntegerGreaterThan(Container(901).NumItems,1)">SetFocus(901)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + !IntegerGreaterThan(Container(901).NumItems,1)">ActivateWindow(1106)</onright>
-
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather)">ActivateWindow(weather)</onright>		
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites)">ActivateWindow(favourites)</onright>		
-
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather)">ActivateWindow(weather)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites)">ActivateWindow(favourites)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
-
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
 				<include>WindowHomeFadeAnimation</include>
@@ -142,7 +129,7 @@
 				<focusedlayout height="128" width="284">
 					<control type="button">
 						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>						
+						<texturenofocus>-</texturenofocus>
 						<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 						<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 						<onfocus condition="!StringCompare(Container(99).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(MainFocus)</onfocus>
@@ -251,6 +238,7 @@
 					<include>skinshortcuts-mainmenu</include>
 				</content>
 			</control>
+			<!-- Menu diffuse -->
 			<control type="image">
 				<left>0</left>
 				<top>-706</top>
@@ -281,321 +269,12 @@
 				<animation condition="StringCompare(Container(99).NumItems,2)" effect="slide" end="0,297" time="0">Conditional</animation>
 				<animation condition="StringCompare(Container(99).NumItems,1)" effect="slide" end="0,330" time="0">Conditional</animation>
 			</control>
-
-			<!-- List Item #1 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">100</param>
-				<param name="widget">widget1</param>
-			</include>
-			<!-- List Item #2 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">200</param>
-				<param name="widget">widget2</param>
-			</include>
-			<!-- List Item #3 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">300</param>
-				<param name="widget">widget3</param>
-			</include>
-			<!-- List Item #4 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">400</param>
-				<param name="widget">widget4</param>
-			</include>
-			<!-- List Item #5 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">500</param>
-				<param name="widget">widget5</param>
-			</include>
-			<!-- List Item #6 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">600</param>
-				<param name="widget">widget6</param>
-			</include>
-			<!-- List Item #7 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">700</param>
-				<param name="widget">widget7</param>
-			</include>
-			<!-- List Item #8 Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">800</param>
-				<param name="widget">widget8</param>
-			</include>
-			<!-- Favourites Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">20</param>
-				<param name="widget">favourites</param>
-				<param name="content">FavouritesWidget</param>
-			</include>
-			<!-- LiveTV Widget -->
-			<include name="ParamWidgetInclude">
-				<param name="ID">30</param>
-				<param name="widget">livetv</param>
-				<param name="content">LivetvWidget</param>
-			</include>
-			<!-- Weather Widget -->
-			<control type="fixedlist">
-				<left>433</left>
-				<top>83</top>
-				<width>2000</width>
-				<height>914</height>
-				<viewtype label="">list</viewtype>
-				<orientation>horizontal</orientation>
-				<include>WindowHomeFadeAnimation</include>
-				<include>HomeWidgetsAnimation</include>
-				<visible>StringCompare(Container(99).ListItem.Property(ftvWidget),weather)</visible>
-				<itemlayout height="914" width="299">
-					<control type="image">
-						<width>299</width>
-						<height>914</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
-					</control>
-					<control type="image">
-						<top>321</top>
-						<width>299</width>
-						<height>272</height>
-						<texture background="true">views/OverlayNF.png</texture>
-					</control>
-					<control type="label">
-						<left>23</left>
-						<top>334</top>
-						<width>253</width>
-						<height>38</height>
-						<font>Light28</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ffffffff</textcolor>
-					</control>
-					<control type="textbox">
-						<left>23</left>
-						<top>383</top>
-						<width>253</width>
-						<height>auto</height>
-						<wrapmultiline>true</wrapmultiline>
-						<font>Med20</font>
-						<label>$INFO[ListItem.Property(Outlook)]</label>
-						<autoscroll>False</autoscroll>
-						<textcolor>ffdadada</textcolor>
-					</control>
-					<control type="image">
-						<left>23</left>
-						<top>411</top>
-						<width>140</width>
-						<height>140</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<left>23</left>
-						<top>548</top>
-						<width>253</width>
-						<height>30</height>
-						<font>Med20</font>
-						<textcolor>ffffffff</textcolor>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="914" width="299">
-					<control type="image">
-						<width>299</width>
-						<height>914</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
-					</control>
-					<control type="image">
-						<top>321</top>
-						<width>299</width>
-						<height>272</height>
-						<texture background="true">views/OverlayNF.png</texture>
-					</control>
-					<control type="label">
-						<left>23</left>
-						<top>334</top>
-						<width>253</width>
-						<height>38</height>
-						<font>Light28</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ffffffff</textcolor>
-						<scroll>false</scroll>
-					</control>
-					<control type="textbox">
-						<left>23</left>
-						<top>383</top>
-						<width>253</width>
-						<height>auto</height>
-						<wrapmultiline>true</wrapmultiline>
-						<font>Med20</font>
-						<label>$INFO[ListItem.Property(Outlook)]</label>
-						<autoscroll>False</autoscroll>
-						<textcolor>ffdadada</textcolor>
-					</control>
-					<control type="image">
-						<left>23</left>
-						<top>411</top>
-						<width>140</width>
-						<height>140</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<left>23</left>
-						<top>548</top>
-						<width>253</width>
-						<height>30</height>
-						<font>Med20</font>
-						<textcolor>ffffffff</textcolor>
-						<label>$INFO[ListItem.Label2]</label>
-						<scroll>false</scroll>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<onclick>noop</onclick>
-						<label>$INFO[Window(Weather).Property(Day0.Title)]</label>
-						<label2>$INFO[Window(Weather).Property(Day0.LowTemp),$LOCALIZE[391] ,°]    $INFO[Window(Weather).Property(Day0.HighTemp),$LOCALIZE[393] ,°]</label2>
-						<icon>$INFO[Window(Weather).Property(Day0.FanartCode),weather/icons/,.png]</icon>
-						<property name="Fanart">$INFO[Window(Weather).Property(Day0.FanartCode),weather/home/,.jpg]</property>
-						<property name="Outlook">$INFO[Window(Weather).Property(Day0.Outlook)]</property>
-						<visible>!IsEmpty(Window(Weather).Property(Day0.Outlook))</visible>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
-						<label2>$INFO[Window(Weather).Property(Day1.LowTemp),$LOCALIZE[391] ,°]    $INFO[Window(Weather).Property(Day1.HighTemp),$LOCALIZE[393] ,°]</label2>
-						<icon>$INFO[Window(Weather).Property(Day1.FanartCode),weather/icons/,.png]</icon>
-						<property name="Fanart">$INFO[Window(Weather).Property(Day1.FanartCode),weather/home/,.jpg]</property>
-						<property name="Outlook">$INFO[Window(Weather).Property(Day1.Outlook)]</property>
-						<visible>!IsEmpty(Window(Weather).Property(Day1.Outlook))</visible>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
-						<label2>$INFO[Window(Weather).Property(Day2.LowTemp),$LOCALIZE[391] ,°]    $INFO[Window(Weather).Property(Day2.HighTemp),$LOCALIZE[393] ,°]</label2>
-						<icon>$INFO[Window(Weather).Property(Day2.FanartCode),weather/icons/,.png]</icon>
-						<property name="Fanart">$INFO[Window(Weather).Property(Day2.FanartCode),weather/home/,.jpg]</property>
-						<property name="Outlook">$INFO[Window(Weather).Property(Day2.Outlook)]</property>
-						<visible>!IsEmpty(Window(Weather).Property(Day2.Outlook))</visible>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
-						<label2>$INFO[Window(Weather).Property(Day3.LowTemp),$LOCALIZE[391] ,°]    $INFO[Window(Weather).Property(Day3.HighTemp),$LOCALIZE[393] ,°]</label2>
-						<icon>$INFO[Window(Weather).Property(Day3.FanartCode),weather/icons/,.png]</icon>
-						<property name="Fanart">$INFO[Window(Weather).Property(Day3.FanartCode),weather/home/,.jpg]</property>
-						<property name="Outlook">$INFO[Window(Weather).Property(Day3.Outlook)]</property>
-						<visible>!IsEmpty(Window(Weather).Property(Day3.Outlook))</visible>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>$INFO[Window(Weather).Property(Day4.Title)]</label>
-						<label2>$INFO[Window(Weather).Property(Day4.LowTemp),$LOCALIZE[391] ,°]    $INFO[Window(Weather).Property(Day4.HighTemp),$LOCALIZE[393] ,°]</label2>
-						<icon>$INFO[Window(Weather).Property(Day4.FanartCode),weather/icons/,.png]</icon>
-						<property name="Fanart">$INFO[Window(Weather).Property(Day4.FanartCode),weather/home/,.jpg]</property>
-						<property name="Outlook">$INFO[Window(Weather).Property(Day4.Outlook)]</property>
-						<visible>!IsEmpty(Window(Weather).Property(Day4.Outlook))</visible>
-					</item>
-				</content>
-			</control>
-			<!-- Settings Widget -->
-			<control id="900" type="fixedlist">
-				<left>133</left>
-				<top>289</top>
-				<width>2200</width>
-				<height>497</height>
-				<focusposition>1</focusposition>
-				<viewtype label="">list</viewtype>
-				<orientation>horizontal</orientation>
-				<include>WindowHomeFadeAnimation</include>
-				<include>HomeWidgetsAnimation</include>			
-				<visible>StringCompare(Container(99).ListItem.Property(defaultID),settings)</visible>
-				<itemlayout height="497" width="300">
-					<control type="group">
-						<animation center="134,240" condition="True" effect="zoom" end="84.5" start="84.5">Conditional</animation>
-						<control type="image">
-							<left>-24</left>
-							<width>333</width>
-							<height>497</height>
-							<texture border="1,1,14,18">settings/settings_tile.png</texture>
-						</control>
-						<control type="label">
-							<left>-10</left>
-							<top>28</top>
-							<width>276</width>
-							<height>32</height>
-							<font>Bold34</font>
-							<textcolor>ffdadada</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="image">
-							<left>-13</left>
-							<top>123</top>
-							<width>300</width>
-							<height>300</height>
-							<aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout height="497" width="300">
-					<control type="group">
-						<animation center="134,240" condition="True" effect="zoom" end="84.5" start="84.5">Conditional</animation>
-						<control type="image">
-							<left>-24</left>
-							<width>333</width>
-							<height>497</height>
-							<texture border="1,1,14,18">settings/settings_tile.png</texture>
-						</control>
-						<control type="label">
-							<left>-10</left>
-							<top>28</top>
-							<width>276</width>
-							<height>32</height>
-							<font>Bold34</font>
-							<textcolor>ffdadada</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="image">
-							<left>-13</left>
-							<top>123</top>
-							<width>300</width>
-							<height>300</height>
-							<aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<onclick>noop</onclick>
-						<label>480</label>
-						<icon>settings/icon_appearance.png</icon>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>24001</label>
-						<icon>settings/icon_addons.png</icon>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>3</label>
-						<icon>settings/icon_videos.png</icon>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>2</label>
-						<icon>settings/icon_music.png</icon>
-					</item>
-					<item>
-						<onclick>noop</onclick>
-						<label>19020</label>
-						<icon>settings/icon_tv.png</icon>
-					</item>
-				</content>
-			</control>
+			<!-- Widgets -->
+			<include>HomeWidgets</include>
 		</control>
-
-		<!-- preload widgets -->
+		<!-- Preload widgets -->
 		<control type="button" id="91">
-			<include>HiddenControl</include>			
+			<include>HiddenControl</include>
 			<visible>!Skin.HasSetting(PreloadDeactivated) + [Container(1001).IsUpdating
 				| Container(1002).IsUpdating
 				| Container(1003).IsUpdating
@@ -663,8 +342,7 @@
 				| Container(8008).IsUpdating
 				| Container(201).IsUpdating
 				| Container(301).IsUpdating
-				| Container(302).IsUpdating]
-			</visible>
+				| Container(302).IsUpdating]</visible>
 		</control>
 		<control type="image">
 			<left>0</left>
@@ -682,8 +360,8 @@
 			<textcolor>white</textcolor>
 			<align>center</align>
 			<width>1920</width>
-			<height>200</height>	
-			<label>31532</label>			
+			<height>200</height>
+			<label>31532</label>
 			<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
 			<visible>Control.IsVisible(91)</visible>
 		</control>
@@ -694,37 +372,36 @@
 			<textcolor>white</textcolor>
 			<align>center</align>
 			<width>1920</width>
-			<height>200</height>	
-			<label>31533</label>			
+			<height>200</height>
+			<label>31533</label>
 			<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
 			<visible>!Control.IsVisible(91)</visible>
 			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(91) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
 		</control>
-		<!-- check if preloading is in progress -->
+		<!-- Check if preloading is in progress -->
 		<control type="button" id="90">
 			<include>HiddenControl</include>
 			<onfocus>SetProperty(preload,1,Home)</onfocus>
-			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>			
+			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>
 			<onfocus condition="Control.IsVisible(91)">SetFocus(93)</onfocus>
 			<onfocus condition="!Control.IsVisible(91)">SetFocus(94)</onfocus>
 			<onclick>SetFocus(94)</onclick>
 			<onback>SetFocus(94)</onback>
 		</control>
-		<!-- loop trigger -->
+		<!-- Loop trigger -->
 		<control type="button" id="93">
 			<include>HiddenControl</include>
 			<onfocus>SetFocus(90)</onfocus>
 			<onclick>SetFocus(94)</onclick>
 			<onback>SetFocus(94)</onback>
 		</control>
-		<!-- ready to focus -->
+		<!-- Ready to focus -->
 		<control type="button" id="94">
 			<include>HiddenControl</include>
 			<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(99,1),00:01,silent)</onfocus>
 			<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(99,0),00:01,silent)</onfocus>
-			<onfocus>AlarmClock(preload,ClearProperty(preload,Home),00:01,silent)</onfocus>			
-			<onfocus>AlarmClock(fadeoutdelay,ClearProperty(fadeoutdelay,Home),00:05,silent)</onfocus>			
+			<onfocus>AlarmClock(preload,ClearProperty(preload,Home),00:01,silent)</onfocus>
+			<onfocus>AlarmClock(fadeoutdelay,ClearProperty(fadeoutdelay,Home),00:05,silent)</onfocus>
 		</control>
-
 	</controls>
 </window>
