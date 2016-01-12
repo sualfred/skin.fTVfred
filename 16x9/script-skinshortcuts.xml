@@ -208,20 +208,7 @@
 					<label>$ADDON[script.skinshortcuts 32027]</label>
 					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
 				</control>
-				<!-- built in widget button -->
-				<control id="997" type="button">
-					<width>870</width>
-					<height>84</height>
-					<font>Light32</font>
-					<textwidth>790</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>DisabledColor</textcolor>
-					<focusedcolor>DisabledColor</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>$LOCALIZE[31509]</label>
-					<visible>StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
-				</control>
+				<!-- widget button -->
 				<control id="997" type="button">
 					<width>870</width>
 					<height>84</height>
@@ -257,7 +244,7 @@
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$ADDON[script.skinshortcuts 32044])</onclick>
 					<label>31509</label>
 					<label2>$VAR[ftvWidgetLabel]</label2>
-					<visible>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</visible>
+					<enable>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</enable>
 				</control>
 				<!-- Manage widgets -->
 				<control id="998" type="button">
