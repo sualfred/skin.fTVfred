@@ -30,51 +30,51 @@
 		<value>$LOCALIZE[1036]</value>
 	</variable>
 	<variable name="ftvLabelWidget1000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1)">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1000)">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1000), ',']</value>
 		<value>$LOCALIZE[31500]</value>
 	</variable>
 	<variable name="ftvLabelWidget2000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2)">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2000)">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2000), ',']</value>
 		<value>$LOCALIZE[31501]</value>
 	</variable>
 	<variable name="ftvLabelWidget3000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3)">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3000)">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3000), ',']</value>
 		<value>$LOCALIZE[31502]</value>
 	</variable>
 	<variable name="ftvLabelWidget4000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4)">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4000)">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4000), ',']</value>
 		<value>$LOCALIZE[31503]</value>
 	</variable>
 	<variable name="ftvLabelWidget5000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5)">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5000)">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5000), ',']</value>
 		<value>$LOCALIZE[31504]</value>
 	</variable>
 	<variable name="ftvLabelWidget6000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6)">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6000)">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6000), ',']</value>
 		<value>$LOCALIZE[31505]</value>
 	</variable>
 	<variable name="ftvLabelWidget7000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7)">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7000)">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7000), ',']</value>
 		<value>$LOCALIZE[31506]</value>
 	</variable>
 	<variable name="ftvLabelWidget8000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8)">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8000)">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8000), ',']</value>
 		<value>$LOCALIZE[31507]</value>
 	</variable>
 	<variable name="ftvLabelWidget9000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget9)">$LOCALIZE[31213]$INFO[Skin.String(ftvLabelWidget9000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget9000)">$LOCALIZE[31213]$INFO[Skin.String(ftvLabelWidget9000), ',']</value>
 		<value>$LOCALIZE[31213]</value>
 	</variable>
 	<variable name="ftvLabelWidget10000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget10)">$LOCALIZE[31214]$INFO[Skin.String(ftvLabelWidget10000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget10000)">$LOCALIZE[31214]$INFO[Skin.String(ftvLabelWidget10000), ',']</value>
 		<value>$LOCALIZE[31214]</value>
 	</variable>
 	<variable name="ftvLabelWidget11000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget11)">$LOCALIZE[31215]$INFO[Skin.String(ftvLabelWidget11000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget11000)">$LOCALIZE[31215]$INFO[Skin.String(ftvLabelWidget11000), ',']</value>
 		<value>$LOCALIZE[31215]</value>
 	</variable>
 	<variable name="ftvLabelWidget12000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget12)">$LOCALIZE[31216]$INFO[Skin.String(ftvLabelWidget12000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget12000)">$LOCALIZE[31216]$INFO[Skin.String(ftvLabelWidget12000), ',']</value>
 		<value>$LOCALIZE[31216]</value>
 	</variable>
 	<variable name="SearchSetFocus">
