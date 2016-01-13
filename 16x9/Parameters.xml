@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<includes>	
+<includes>
 	<!-- Widet Move Down Include -->
-	<include name="ParamWidgetMoveDownInclude">		
+	<include name="ParamWidgetMoveDownInclude">
 		<include name="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">1</param>
@@ -43,18 +43,18 @@
 			<param name="Pos">7</param>
 			<param name="TempPos">8</param>
 			<param name="Move">1</param>
-		</include>						
+		</include>
 		<item>
 			<label>noop</label>
 			<onclick>noop</onclick>
 		</item>
 	</include>
 	<!-- Widet Move Up Include -->
-	<include name="ParamWidgetMoveUpInclude">						
+	<include name="ParamWidgetMoveUpInclude">
 		<item>
 			<label>noop</label>
 			<onclick>noop</onclick>
-		</item>	
+		</item>
 		<include name="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">2</param>
@@ -96,50 +96,46 @@
 			<param name="Pos">8</param>
 			<param name="TempPos">7</param>
 			<param name="Move">-1</param>
-		</include>	
+		</include>
 	</include>
 	<!-- Widget movement function -->
 	<include name="ParamWidgetMoveFunction">
-		<param name="SubMenu" default="$INFO[Window(home).Property(SubMenu)]" />
-		<param name="Pos" />
-		<definition>
-			<item>
-				<label>$PARAM[Pos]</label>
-				<!-- temporary save next items -->
-				<onclick>Skin.SetString(TempItemLabel,$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos])])</onclick>
-				<onclick>Skin.SetString(TempItemAction,$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos])])</onclick>
-				<onclick>Skin.SetString(TempItemStyle,$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos])])</onclick>
-				<onclick>Skin.SetString(TempItemType,$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[TempPos])])</onclick>
-				<onclick>Skin.SetString(TempItemList,$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[TempPos])])</onclick>
-				<!-- save current items to next position -->				
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos])])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[Pos])])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos])])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[Pos])])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[Pos])])</onclick>
-				<!-- save temporary items to current postion -->
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos],$INFO[Skin.String(TempItemLabel)])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[Pos],$INFO[Skin.String(TempItemAction)])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos],$INFO[Skin.String(TempItemStyle)])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[Pos],$INFO[Skin.String(TempItemType)])</onclick>
-				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[Pos],$INFO[Skin.String(TempItemList)])</onclick>
-				<!-- clear temp strings -->
-				<onclick>Skin.Reset(TempItemLabel)</onclick>
-				<onclick>Skin.Reset(TempItemAction)</onclick>
-				<onclick>Skin.Reset(TempItemStyle)</onclick>
-				<onclick>Skin.Reset(TempItemType)</onclick>
-				<onclick>Skin.Reset(TempItemList)</onclick>
-				<!-- move with the lines -->
-				<onclick>Control.Move(100,$PARAM[Move])</onclick>
-				<onclick>Control.Move(200,$PARAM[Move])</onclick>
-				<onclick>Control.Move(300,$PARAM[Move])</onclick>
-				<onclick>Control.Move(400,$PARAM[Move])</onclick>
-				<onclick>Control.Move(500,$PARAM[Move])</onclick>
-				<onclick>Control.Move(600,$PARAM[Move])</onclick>
-			</item>
-		</definition>
+		<item>
+			<label>$PARAM[Pos]</label>
+			<!-- temporary save next items -->
+			<onclick>Skin.SetString(TempItemLabel,$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos])])</onclick>
+			<onclick>Skin.SetString(TempItemAction,$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos])])</onclick>
+			<onclick>Skin.SetString(TempItemStyle,$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos])])</onclick>
+			<onclick>Skin.SetString(TempItemType,$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[TempPos])])</onclick>
+			<onclick>Skin.SetString(TempItemList,$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[TempPos])])</onclick>
+			<!-- save current items to next position -->
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos])])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[Pos])])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos])])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[Pos])])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[Pos])])</onclick>
+			<!-- save temporary items to current postion -->
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos],$INFO[Skin.String(TempItemLabel)])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[Pos],$INFO[Skin.String(TempItemAction)])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos],$INFO[Skin.String(TempItemStyle)])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[Pos],$INFO[Skin.String(TempItemType)])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[Pos],$INFO[Skin.String(TempItemList)])</onclick>
+			<!-- clear temp strings -->
+			<onclick>Skin.Reset(TempItemLabel)</onclick>
+			<onclick>Skin.Reset(TempItemAction)</onclick>
+			<onclick>Skin.Reset(TempItemStyle)</onclick>
+			<onclick>Skin.Reset(TempItemType)</onclick>
+			<onclick>Skin.Reset(TempItemList)</onclick>
+			<!-- move with the lines -->
+			<onclick>Control.Move(100,$PARAM[Move])</onclick>
+			<onclick>Control.Move(200,$PARAM[Move])</onclick>
+			<onclick>Control.Move(300,$PARAM[Move])</onclick>
+			<onclick>Control.Move(400,$PARAM[Move])</onclick>
+			<onclick>Control.Move(500,$PARAM[Move])</onclick>
+			<onclick>Control.Move(600,$PARAM[Move])</onclick>
+		</item>
 	</include>
-	<!--next aired -->
+	<!-- next aired -->
 	<include name="NextAiredItems">
 		<item id="1$PARAM[ItemID]">
 			<onclick>SetFocus($PARAM[ItemID])</onclick>
@@ -161,7 +157,7 @@
 			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
 			<onfocus>SetProperty(Category,$PARAM[ListID],home)</onfocus>
 			<oninfo>ActivateWindow(1104)</oninfo>
-			<preloaditems>2</preloaditems>			
+			<preloaditems>2</preloaditems>
 			<focusposition>1</focusposition>
 			<viewtype label="">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -249,14 +245,14 @@
 				</control>
 			</focusedlayout>
 		</control>
-	</include>	
+	</include>
 	<!-- Home Widget Param Include -->
 	<include name="ParamWidgetInclude">
 		<param name="ID"/>
 		<param name="widget"/>
 		<param name="content" default="FtvWidget"/>
 		<definition>
-			<include name="Param$PARAM[content]Lists">				
+			<include name="Param$PARAM[content]Lists">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
 			<control id="$PARAM[ID]0" type="fixedlist">
@@ -316,10 +312,10 @@
 						<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
-						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,3_3)</onfocus>					
+						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
 						<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,61,Home)</onfocus>
 						<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,60,Home)</onfocus>
-						<onfocus condition="!StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>					
+						<onfocus condition="!StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>
 					</control>
 					<control type="group">
 						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
@@ -432,7 +428,7 @@
 		<control id="$PARAM[ID]1" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="4">pvr://channels/tv/1</content>
-		</control>		
+		</control>
 		<control id="$PARAM[ID]2" type="list">
 			<include>HiddenHomeList</include>
 			<content limit="4">pvr://recordings/active</content>
@@ -489,7 +485,7 @@
 	</include>
 	<include name="LivetvWidget">
 		<item>
-			<label>$LOCALIZE[19019]</label>				
+			<label>$LOCALIZE[19019]</label>
 			<visible>!IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)</visible>
 			<property name="WidgetStyle">$LOCALIZE[31161]</property>
 			<property name="Icon1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Icon]</property>
