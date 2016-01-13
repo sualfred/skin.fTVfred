@@ -14,12 +14,16 @@
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(21)</onup>
 			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(21)</ondown>
 			<onclick>SetFocus(200)</onclick>
 			<onclick>Select</onclick>
@@ -35,12 +39,16 @@
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(31)</onup>
 			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(31)</ondown>
 			<onclick>SetFocus(300)</onclick>
 			<onclick>Select</onclick>
@@ -50,22 +58,76 @@
 		<control type="button" id="40">
 			<include>HiddenControl</include>
 			<onleft>30</onleft>
-			<onright>noop</onright>
+			<onright>50</onright>
 			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(41)</onup>
 			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
 			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(41)</ondown>
 			<onclick>SetFocus(400)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(40)</onclick>
+		</control>
+		<!-- List 500 Control -->
+		<control type="button" id="50">
+			<include>HiddenControl</include>
+			<onleft>40</onleft>
+			<onright>60</onright>
+			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(51)</onup>
+			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(51)</ondown>
+			<onclick>SetFocus(500)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(50)</onclick>
+		</control>
+		<!-- List 600 Control -->
+		<control type="button" id="60">
+			<include>HiddenControl</include>
+			<onleft>50</onleft>
+			<onright>noop</onright>
+			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(61)</onup>
+			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(61)</ondown>
+			<onclick>SetFocus(600)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(60)</onclick>
 		</control>
 		<!-- Button to fix movement problem  -->
 		<control type="button" id="21">
@@ -81,6 +143,16 @@
 		<control type="button" id="41">
 			<include>HiddenControl</include>
 			<onfocus>SetFocus(40)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="51">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="61">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(60)</onfocus>
 		</control>
 		<!-- Background -->
 		<include>DialogTextBackgroundImage</include>
@@ -105,20 +177,20 @@
 					<height>832</height>
 					<texture border="1,61,1,1">dialogs/file_manager_back.png</texture>
 				</control>
-				<!-- Widget type -->
+				<!-- Widget type -->				
 				<control type="label">
 					<left>40</left>
 					<top>14</top>
 					<height>30</height>
-					<width>180</width>
+					<width>70</width>
 					<aligny>center</aligny>
 					<font>Bold30</font>
-					<label>$LOCALIZE[31197]</label>
+					<label>$LOCALIZE[31217]</label>
 					<textcolor>ffdadada</textcolor>
 				</control>
 				<!-- Widget name -->
 				<control type="label">
-					<left>240</left>
+					<left>130</left>
 					<top>14</top>
 					<height>30</height>
 					<width>420</width>
@@ -129,7 +201,7 @@
 				</control>
 				<!-- Widget path -->
 				<control type="label">
-					<left>690</left>
+					<left>570</left>
 					<top>14</top>
 					<height>30</height>
 					<width>820</width>
@@ -140,7 +212,7 @@
 				</control>
 				<!-- Widget Layout -->
 				<control type="label">
-					<left>1540</left>
+					<left>1430</left>
 					<top>14</top>
 					<height>30</height>
 					<width>180</width>
@@ -233,7 +305,7 @@
 				<!-- Widget label -->
 				<control type="list" id="200">
 					<top>60</top>
-					<left>240</left>
+					<left>130</left>
 					<width>420</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
@@ -335,7 +407,7 @@
 				<!-- Widget path -->
 				<control type="list" id="300">
 					<top>60</top>
-					<left>690</left>
+					<left>570</left>
 					<width>820</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
@@ -438,7 +510,7 @@
 				<!-- Widget layout -->
 				<control type="list" id="400">
 					<top>60</top>
-					<left>1540</left>
+					<left>1430</left>
 					<width>180</width>
 					<height>672</height>
 					<scrolltime>0</scrolltime>
@@ -608,6 +680,132 @@
 							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31203]))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 						</item>
+					</content>
+				</control>
+				<!-- Move Down -->
+				<control type="list" id="500">
+					<top>60</top>
+					<left>1635</left>
+					<width>33</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="33" />
+					<focusedlayout height="84" width="33">						
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinDownWhite.png</texture>
+							<visible>!Control.HasFocus(50)</visible>
+						</control>
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinDownFO.png</texture>							
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include condition="StringCompare(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">1000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">2000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">3000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">4000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">5000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">6000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">7000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">8000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">9000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">10000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">11000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">12000</param>
+						</include>
+					</content>
+				</control>
+				<!-- Move Up -->
+				<control type="list" id="600">
+					<top>60</top>
+					<left>1668</left>
+					<width>33</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="33" />
+					<focusedlayout height="84" width="33">						
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinUpWhite.png</texture>
+							<visible>!Control.HasFocus(60)</visible>
+						</control>
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinUpFO.png</texture>							
+							<visible>Control.HasFocus(60)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include condition="StringCompare(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">1000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">2000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">3000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">4000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">5000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">6000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">7000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">8000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">9000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">10000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">11000</param>
+						</include>
+						<include condition="StringCompare(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">12000</param>
+						</include>
 					</content>
 				</control>
 				<!-- Button grouplist -->

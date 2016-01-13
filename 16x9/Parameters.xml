@@ -1,5 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<includes>
+<includes>	
+	<!-- Widet Move Down Include -->
+	<include name="ParamWidgetMoveDownInclude">		
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">1</param>
+			<param name="TempPos">2</param>
+			<param name="Move">1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">2</param>
+			<param name="TempPos">3</param>
+			<param name="Move">1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">3</param>
+			<param name="TempPos">4</param>
+			<param name="Move">1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">4</param>
+			<param name="TempPos">5</param>
+			<param name="Move">1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">5</param>
+			<param name="TempPos">6</param>
+			<param name="Move">1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">6</param>
+			<param name="TempPos">7</param>
+			<param name="Move">1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">7</param>
+			<param name="TempPos">8</param>
+			<param name="Move">1</param>
+		</include>						
+		<item>
+			<label>noop</label>
+			<onclick>noop</onclick>
+		</item>
+	</include>
+	<!-- Widet Move Up Include -->
+	<include name="ParamWidgetMoveUpInclude">						
+		<item>
+			<label>noop</label>
+			<onclick>noop</onclick>
+		</item>	
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">2</param>
+			<param name="TempPos">1</param>
+			<param name="Move">-1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">3</param>
+			<param name="TempPos">2</param>
+			<param name="Move">-1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">4</param>
+			<param name="TempPos">3</param>
+			<param name="Move">-1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">5</param>
+			<param name="TempPos">4</param>
+			<param name="Move">-1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">6</param>
+			<param name="TempPos">5</param>
+			<param name="Move">-1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">7</param>
+			<param name="TempPos">6</param>
+			<param name="Move">-1</param>
+		</include>
+		<include name="ParamWidgetMoveFunction">
+			<param name="SubMenu">$PARAM[SubMenu]</param>
+			<param name="Pos">8</param>
+			<param name="TempPos">7</param>
+			<param name="Move">-1</param>
+		</include>	
+	</include>
+	<!-- Widget movement function -->
+	<include name="ParamWidgetMoveFunction">
+		<param name="SubMenu" default="$INFO[Window(home).Property(SubMenu)]" />
+		<param name="Pos" />
+		<definition>
+			<item>
+				<label>$PARAM[Pos]</label>
+				<!-- temporary save next items -->
+				<onclick>Skin.SetString(TempItemLabel,$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos])])</onclick>
+				<onclick>Skin.SetString(TempItemAction,$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos])])</onclick>
+				<onclick>Skin.SetString(TempItemStyle,$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos])])</onclick>
+				<onclick>Skin.SetString(TempItemType,$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[TempPos])])</onclick>
+				<onclick>Skin.SetString(TempItemList,$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[TempPos])])</onclick>
+				<!-- save current items to next position -->				
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos])])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[Pos])])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos])])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[Pos])])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[Pos])])</onclick>
+				<!-- save temporary items to current postion -->
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos],$INFO[Skin.String(TempItemLabel)])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[Pos],$INFO[Skin.String(TempItemAction)])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos],$INFO[Skin.String(TempItemStyle)])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[Pos],$INFO[Skin.String(TempItemType)])</onclick>
+				<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[Pos],$INFO[Skin.String(TempItemList)])</onclick>
+				<!-- clear temp strings -->
+				<onclick>Skin.Reset(TempItemLabel)</onclick>
+				<onclick>Skin.Reset(TempItemAction)</onclick>
+				<onclick>Skin.Reset(TempItemStyle)</onclick>
+				<onclick>Skin.Reset(TempItemType)</onclick>
+				<onclick>Skin.Reset(TempItemList)</onclick>
+				<!-- move with the lines -->
+				<onclick>Control.Move(100,$PARAM[Move])</onclick>
+				<onclick>Control.Move(200,$PARAM[Move])</onclick>
+				<onclick>Control.Move(300,$PARAM[Move])</onclick>
+				<onclick>Control.Move(400,$PARAM[Move])</onclick>
+				<onclick>Control.Move(500,$PARAM[Move])</onclick>
+				<onclick>Control.Move(600,$PARAM[Move])</onclick>
+			</item>
+		</definition>
+	</include>
 	<!--next aired -->
 	<include name="NextAiredItems">
 		<item id="1$PARAM[ItemID]">
@@ -423,45 +562,45 @@
 	</include>
 	<!-- custom widget group static items -->
 	<include name="ParamWidgetContent">
-			<item id="$PARAM[POS]">
-				<label>$INFO[Skin.String($PARAM[ListID]0-WidgetLabel-$PARAM[POS])]</label>
-				<visible>!IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)</visible>
-				<property name="WidgetStyle">$INFO[Skin.String($PARAM[ListID]0-WidgetStyle-$PARAM[POS])]</property>
-				<property name="Icon1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Icon]</property>
-				<property name="Icon2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Icon]</property>
-				<property name="Icon3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Icon]</property>
-				<property name="Icon4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Icon]</property>
-				<property name="Icon5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Icon]</property>
-				<property name="Icon6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Icon]</property>
-				<property name="InfoLabel1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Label]</property>
-				<property name="InfoLabel2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Label]</property>
-				<property name="InfoLabel3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Label]</property>
-				<property name="InfoLabel4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Label]</property>
-				<property name="InfoLabel5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Label]</property>
-				<property name="InfoLabel6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Label]</property>
-				<property name="Overlay1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Overlay]</property>
-				<property name="Overlay2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Overlay]</property>
-				<property name="Overlay3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Overlay]</property>
-				<property name="Overlay4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Overlay]</property>
-				<property name="Overlay5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Overlay]</property>
-				<property name="Overlay6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Overlay]</property>
-				<property name="VideoResolution1">$INFO[Container($PARAM[ID]).ListItemPosition(0).VideoResolution]</property>
-				<property name="VideoResolution2">$INFO[Container($PARAM[ID]).ListItemPosition(1).VideoResolution]</property>
-				<property name="VideoResolution3">$INFO[Container($PARAM[ID]).ListItemPosition(2).VideoResolution]</property>
-				<property name="VideoResolution4">$INFO[Container($PARAM[ID]).ListItemPosition(3).VideoResolution]</property>
-				<property name="VideoResolution5">$INFO[Container($PARAM[ID]).ListItemPosition(4).VideoResolution]</property>
-				<property name="VideoResolution6">$INFO[Container($PARAM[ID]).ListItemPosition(5).VideoResolution]</property>
-				<property name="ArtFTV1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(ftv)]</property>
-				<property name="ArtFTV2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(ftv)]</property>
-				<property name="ArtFTV3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(ftv)]</property>
-				<property name="ArtFanart1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(fanart)]</property>
-				<property name="ArtFanart2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(fanart)]</property>
-				<property name="ArtFanart3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(fanart)]</property>
-				<property name="ArtLogo1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(clearlogo)]</property>
-				<property name="ArtLogo2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(clearlogo)]</property>
-				<property name="ArtLogo3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(clearlogo)]</property>
-				<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
-				<onclick>$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
-			</item>
+		<item id="$PARAM[POS]">
+			<label>$INFO[Skin.String($PARAM[ListID]0-WidgetLabel-$PARAM[POS])]</label>
+			<visible>!IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)</visible>
+			<property name="WidgetStyle">$INFO[Skin.String($PARAM[ListID]0-WidgetStyle-$PARAM[POS])]</property>
+			<property name="Icon1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Icon]</property>
+			<property name="Icon2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Icon]</property>
+			<property name="Icon3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Icon]</property>
+			<property name="Icon4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Icon]</property>
+			<property name="Icon5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Icon]</property>
+			<property name="Icon6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Icon]</property>
+			<property name="InfoLabel1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Label]</property>
+			<property name="InfoLabel2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Label]</property>
+			<property name="InfoLabel3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Label]</property>
+			<property name="InfoLabel4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Label]</property>
+			<property name="InfoLabel5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Label]</property>
+			<property name="InfoLabel6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Label]</property>
+			<property name="Overlay1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Overlay]</property>
+			<property name="Overlay2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Overlay]</property>
+			<property name="Overlay3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Overlay]</property>
+			<property name="Overlay4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Overlay]</property>
+			<property name="Overlay5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Overlay]</property>
+			<property name="Overlay6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Overlay]</property>
+			<property name="VideoResolution1">$INFO[Container($PARAM[ID]).ListItemPosition(0).VideoResolution]</property>
+			<property name="VideoResolution2">$INFO[Container($PARAM[ID]).ListItemPosition(1).VideoResolution]</property>
+			<property name="VideoResolution3">$INFO[Container($PARAM[ID]).ListItemPosition(2).VideoResolution]</property>
+			<property name="VideoResolution4">$INFO[Container($PARAM[ID]).ListItemPosition(3).VideoResolution]</property>
+			<property name="VideoResolution5">$INFO[Container($PARAM[ID]).ListItemPosition(4).VideoResolution]</property>
+			<property name="VideoResolution6">$INFO[Container($PARAM[ID]).ListItemPosition(5).VideoResolution]</property>
+			<property name="ArtFTV1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(ftv)]</property>
+			<property name="ArtFTV2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(ftv)]</property>
+			<property name="ArtFTV3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(ftv)]</property>
+			<property name="ArtFanart1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(fanart)]</property>
+			<property name="ArtFanart2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(fanart)]</property>
+			<property name="ArtFanart3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(fanart)]</property>
+			<property name="ArtLogo1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(clearlogo)]</property>
+			<property name="ArtLogo2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(clearlogo)]</property>
+			<property name="ArtLogo3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(clearlogo)]</property>
+			<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
+			<onclick>$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
+		</item>
 	</include>
 </includes>

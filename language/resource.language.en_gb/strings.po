@@ -914,6 +914,11 @@ msgctxt "#31216"
 msgid "Widget Group 12"
 msgstr ""
 
+#: \16x9\Custom_Home_Widgets.xml:188
+msgctxt "#31217"
+msgid "No."
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

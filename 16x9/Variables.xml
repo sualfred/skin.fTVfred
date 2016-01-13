@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="SubMenu">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">1000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">2000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000)">3000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000)">4000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000)">5000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">6000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">7000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">8000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">9000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">10000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">11000</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">12000</value>
+	</variable>
 	<variable name="ftvWidgetLabel">
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),livetv)">$VAR[ftvLabelTV]</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),weather)">$VAR[ftvLabelWeather]</value>
