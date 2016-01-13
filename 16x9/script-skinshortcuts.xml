@@ -219,28 +219,37 @@
 					<focusedcolor>ffffaf37</focusedcolor>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>SetProperty(DisableSuggestions,1,Home)</onclick>
 					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[19020])</onclick>
 					<onclick>SetProperty(Dialog.1.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,livetv)||Skin.SetString(ftvLabelTV,$LOCALIZE[19020])||SendClick(404))</onclick>
 					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[10508])</onclick>
 					<onclick>SetProperty(Dialog.2.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,weather)||Skin.SetString(ftvLabelWeather,$LOCALIZE[10508])||SendClick(404))</onclick>
 					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[1036])</onclick>
 					<onclick>SetProperty(Dialog.3.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,favourites)||Skin.SetString(ftvLabelFavourites,$LOCALIZE[1036])||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.4.Label,$VAR[ftvLabelWidget1])</onclick>
-					<onclick>SetProperty(Dialog.4.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget1)||Skin.SetString(ftvLabelWidget1)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.5.Label,$VAR[ftvLabelWidget2])</onclick>
-					<onclick>SetProperty(Dialog.5.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget2)||Skin.SetString(ftvLabelWidget2)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.6.Label,$VAR[ftvLabelWidget3])</onclick>
-					<onclick>SetProperty(Dialog.6.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget3)||Skin.SetString(ftvLabelWidget3)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.7.Label,$VAR[ftvLabelWidget4])</onclick>
-					<onclick>SetProperty(Dialog.7.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget4)||Skin.SetString(ftvLabelWidget4)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.8.Label,$VAR[ftvLabelWidget5])</onclick>
-					<onclick>SetProperty(Dialog.8.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget5)||Skin.SetString(ftvLabelWidget5)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.9.Label,$VAR[ftvLabelWidget6])</onclick>
-					<onclick>SetProperty(Dialog.9.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget6)||Skin.SetString(ftvLabelWidget6)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.10.Label,$VAR[ftvLabelWidget7])</onclick>
-					<onclick>SetProperty(Dialog.10.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget7)||Skin.SetString(ftvLabelWidget7)||SendClick(404))</onclick>
-					<onclick>SetProperty(Dialog.11.Label,$VAR[ftvLabelWidget8])</onclick>
-					<onclick>SetProperty(Dialog.11.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget8)||Skin.SetString(ftvLabelWidget8)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.4.Label,$VAR[ftvLabelWidget1000])</onclick>
+					<onclick>SetProperty(Dialog.4.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget1)||Skin.SetString(ftvLabelWidget1000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.5.Label,$VAR[ftvLabelWidget2000])</onclick>
+					<onclick>SetProperty(Dialog.5.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget2)||Skin.SetString(ftvLabelWidget2000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.6.Label,$VAR[ftvLabelWidget3000])</onclick>
+					<onclick>SetProperty(Dialog.6.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget3)||Skin.SetString(ftvLabelWidget3000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.7.Label,$VAR[ftvLabelWidget4000])</onclick>
+					<onclick>SetProperty(Dialog.7.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget4)||Skin.SetString(ftvLabelWidget4000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.8.Label,$VAR[ftvLabelWidget5000])</onclick>
+					<onclick>SetProperty(Dialog.8.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget5)||Skin.SetString(ftvLabelWidget5000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.9.Label,$VAR[ftvLabelWidget6000])</onclick>
+					<onclick>SetProperty(Dialog.9.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget6)||Skin.SetString(ftvLabelWidget6000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.10.Label,$VAR[ftvLabelWidget7000])</onclick>
+					<onclick>SetProperty(Dialog.10.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget7)||Skin.SetString(ftvLabelWidget7000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.11.Label,$VAR[ftvLabelWidget8000])</onclick>
+					<onclick>SetProperty(Dialog.11.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget8)||Skin.SetString(ftvLabelWidget8000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.12.Label,$VAR[ftvLabelWidget9000])</onclick>
+					<onclick>SetProperty(Dialog.12.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget9)||Skin.SetString(ftvLabelWidget9000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.13.Label,$VAR[ftvLabelWidget10000])</onclick>
+					<onclick>SetProperty(Dialog.13.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget10)||Skin.SetString(ftvLabelWidget10000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.14.Label,$VAR[ftvLabelWidget11000])</onclick>
+					<onclick>SetProperty(Dialog.14.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget11)||Skin.SetString(ftvLabelWidget11000)||SendClick(404))</onclick>
+					<onclick>SetProperty(Dialog.15.Label,$VAR[ftvLabelWidget12000])</onclick>
+					<onclick>SetProperty(Dialog.15.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget12)||Skin.SetString(ftvLabelWidget12000)||SendClick(404))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$ADDON[script.skinshortcuts 32044])</onclick>
 					<label>31509</label>
 					<label2>$VAR[ftvWidgetLabel]</label2>
@@ -266,6 +275,10 @@
 					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</onclick>
 					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</onclick>
 					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget9)">SetProperty(SubMenu,9000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</onclick>
+					<onclick condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</onclick>
 					<visible>SubString(Container(211).ListItem.Property(ftvWidget),widget,left)</visible>
 					<onclick>ActivateWindow(1105)</onclick>
 				</control>

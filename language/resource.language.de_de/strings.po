@@ -883,6 +883,26 @@ msgctxt "#31212"
 msgid "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
 msgstr "Aktiviert das Preloaden der Widgets beim Start. Wenn deaktiviert, wartet der Skin nicht bis alle Widgets gefüllt sind. Bitte beachte, dass dies unsaubere Animation beim Start verursachen kann."
 
+#: \16x9\Variables.xml:65
+msgctxt "#31213"
+msgid "Widget Group 9"
+msgstr "Widget Gruppe 9"
+
+#: \16x9\Variables.xml:69
+msgctxt "#31214"
+msgid "Widget Group 10"
+msgstr "Widget Gruppe 10"
+
+#: \16x9\Variables.xml:73
+msgctxt "#31215"
+msgid "Widget Group 11"
+msgstr "Widget Gruppe 11"
+
+#: \16x9\Variables.xml:77
+msgctxt "#31216"
+msgid "Widget Group 12"
+msgstr "Widget Gruppe 12"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"

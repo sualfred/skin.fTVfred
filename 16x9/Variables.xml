@@ -4,14 +4,18 @@
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),livetv)">$VAR[ftvLabelTV]</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),weather)">$VAR[ftvLabelWeather]</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),favourites)">$VAR[ftvLabelFavourites]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget1)">$VAR[ftvLabelWidget1]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget2)">$VAR[ftvLabelWidget2]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget3)">$VAR[ftvLabelWidget3]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget4)">$VAR[ftvLabelWidget4]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget5)">$VAR[ftvLabelWidget5]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">$VAR[ftvLabelWidget6]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">$VAR[ftvLabelWidget7]</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">$VAR[ftvLabelWidget8]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget1)">$VAR[ftvLabelWidget1000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget2)">$VAR[ftvLabelWidget2000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget3)">$VAR[ftvLabelWidget3000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget4)">$VAR[ftvLabelWidget4000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget5)">$VAR[ftvLabelWidget5000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget6)">$VAR[ftvLabelWidget6000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget7)">$VAR[ftvLabelWidget7000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget8)">$VAR[ftvLabelWidget8000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget9)">$VAR[ftvLabelWidget9000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget10)">$VAR[ftvLabelWidget10000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget11)">$VAR[ftvLabelWidget11000]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget12)">$VAR[ftvLabelWidget12000]</value>
 	</variable>
 	<variable name="ftvLabelTV">
 		<value condition="!IsEmpty(Skin.String(ftvLabelTV)">$INFO[Skin.String(ftvLabelTV)]</value>
@@ -25,37 +29,53 @@
 		<value condition="!IsEmpty(Skin.String(ftvLabelFavourites)">$INFO[Skin.String(ftvLabelFavourites)]</value>
 		<value>$LOCALIZE[1036]</value>
 	</variable>
-	<variable name="ftvLabelWidget1">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1)">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1), ',']</value>
+	<variable name="ftvLabelWidget1000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1)">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1000), ',']</value>
 		<value>$LOCALIZE[31500]</value>
 	</variable>
-	<variable name="ftvLabelWidget2">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2)">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2), ',']</value>
+	<variable name="ftvLabelWidget2000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2)">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2000), ',']</value>
 		<value>$LOCALIZE[31501]</value>
 	</variable>
-	<variable name="ftvLabelWidget3">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3)">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3), ',']</value>
+	<variable name="ftvLabelWidget3000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3)">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3000), ',']</value>
 		<value>$LOCALIZE[31502]</value>
 	</variable>
-	<variable name="ftvLabelWidget4">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4)">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4), ',']</value>
+	<variable name="ftvLabelWidget4000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4)">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4000), ',']</value>
 		<value>$LOCALIZE[31503]</value>
 	</variable>
-	<variable name="ftvLabelWidget5">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5)">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5), ',']</value>
+	<variable name="ftvLabelWidget5000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5)">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5000), ',']</value>
 		<value>$LOCALIZE[31504]</value>
 	</variable>
-	<variable name="ftvLabelWidget6">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6)">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6), ',']</value>
+	<variable name="ftvLabelWidget6000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6)">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6000), ',']</value>
 		<value>$LOCALIZE[31505]</value>
 	</variable>
-	<variable name="ftvLabelWidget7">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7)">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7), ',']</value>
+	<variable name="ftvLabelWidget7000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7)">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7000), ',']</value>
 		<value>$LOCALIZE[31506]</value>
 	</variable>
-	<variable name="ftvLabelWidget8">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8)">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8), ',']</value>
+	<variable name="ftvLabelWidget8000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8)">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8000), ',']</value>
 		<value>$LOCALIZE[31507]</value>
+	</variable>
+	<variable name="ftvLabelWidget9000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget9)">$LOCALIZE[31213]$INFO[Skin.String(ftvLabelWidget9000), ',']</value>
+		<value>$LOCALIZE[31213]</value>
+	</variable>
+	<variable name="ftvLabelWidget10000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget10)">$LOCALIZE[31214]$INFO[Skin.String(ftvLabelWidget10000), ',']</value>
+		<value>$LOCALIZE[31214]</value>
+	</variable>
+	<variable name="ftvLabelWidget11000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget11)">$LOCALIZE[31215]$INFO[Skin.String(ftvLabelWidget11000), ',']</value>
+		<value>$LOCALIZE[31215]</value>
+	</variable>
+	<variable name="ftvLabelWidget12000">
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget12)">$LOCALIZE[31216]$INFO[Skin.String(ftvLabelWidget12000), ',']</value>
+		<value>$LOCALIZE[31216]</value>
 	</variable>
 	<variable name="SearchSetFocus">
 		<value condition="Control.IsVisible(111)">SetFocus(111)</value>
@@ -438,6 +458,134 @@
 		<value condition="SubString(Skin.String(8000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-8),musicdb://artists/)">artist</value>
 	</variable>
+	<variable name="9000-orderby-1">
+		<value condition="SubString(Skin.String(9000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-1),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-2">
+		<value condition="SubString(Skin.String(9000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-2),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-3">
+		<value condition="SubString(Skin.String(9000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-3),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-4">
+		<value condition="SubString(Skin.String(9000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-4),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-5">
+		<value condition="SubString(Skin.String(9000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-5),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-6">
+		<value condition="SubString(Skin.String(9000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-6),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-7">
+		<value condition="SubString(Skin.String(9000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-7),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="9000-orderby-8">
+		<value condition="SubString(Skin.String(9000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-8),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-1">
+		<value condition="SubString(Skin.String(10000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-1),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-2">
+		<value condition="SubString(Skin.String(10000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-2),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-3">
+		<value condition="SubString(Skin.String(10000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-3),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-4">
+		<value condition="SubString(Skin.String(10000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-4),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-5">
+		<value condition="SubString(Skin.String(10000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-5),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-6">
+		<value condition="SubString(Skin.String(10000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-6),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-7">
+		<value condition="SubString(Skin.String(10000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-7),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="10000-orderby-8">
+		<value condition="SubString(Skin.String(10000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-8),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-1">
+		<value condition="SubString(Skin.String(11000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-1),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-2">
+		<value condition="SubString(Skin.String(11000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-2),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-3">
+		<value condition="SubString(Skin.String(11000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-3),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-4">
+		<value condition="SubString(Skin.String(11000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-4),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-5">
+		<value condition="SubString(Skin.String(11000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-5),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-6">
+		<value condition="SubString(Skin.String(11000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-6),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-7">
+		<value condition="SubString(Skin.String(11000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-7),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="11000-orderby-8">
+		<value condition="SubString(Skin.String(11000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-8),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-1">
+		<value condition="SubString(Skin.String(12000-WidgetList-1),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-1),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-2">
+		<value condition="SubString(Skin.String(12000-WidgetList-2),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-2),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-3">
+		<value condition="SubString(Skin.String(12000-WidgetList-3),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-3),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-4">
+		<value condition="SubString(Skin.String(12000-WidgetList-4),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-4),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-5">
+		<value condition="SubString(Skin.String(12000-WidgetList-5),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-5),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-6">
+		<value condition="SubString(Skin.String(12000-WidgetList-6),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-6),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-7">
+		<value condition="SubString(Skin.String(12000-WidgetList-7),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-7),musicdb://artists/)">artist</value>
+	</variable>
+	<variable name="12000-orderby-8">
+		<value condition="SubString(Skin.String(12000-WidgetList-8),addons://sources/)">label</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-8),musicdb://artists/)">artist</value>
+	</variable>
 	<variable name="WidgetLabel-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),2000)">$INFO[Skin.String(2000-WidgetLabel-1)]</value>
@@ -447,6 +595,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-1)]</value>
 	</variable>
 	<variable name="WidgetLabel-2">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-2)]</value>
@@ -457,6 +609,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-2)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-2)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-2)]</value>
 	</variable>
 	<variable name="WidgetLabel-3">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-3)]</value>
@@ -467,6 +623,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-3)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-3)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-3)]</value>
 	</variable>
 	<variable name="WidgetLabel-4">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-4)]</value>
@@ -477,6 +637,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-4)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-4)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-4)]</value>
 	</variable>
 	<variable name="WidgetLabel-5">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-5)]</value>
@@ -487,6 +651,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-5)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-5)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-5)]</value>
 	</variable>
 	<variable name="WidgetLabel-6">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-6)]</value>
@@ -497,6 +665,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-6)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-6)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-6)]</value>
 	</variable>
 	<variable name="WidgetLabel-7">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-7)]</value>
@@ -507,6 +679,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-7)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-7)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-7)]</value>
 	</variable>
 	<variable name="WidgetLabel-8">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-8)]</value>
@@ -517,6 +693,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetLabel-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetLabel-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetLabel-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetLabel-8)]</value>
 	</variable>
 	<variable name="WidgetAction-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-1)]</value>
@@ -527,6 +707,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-1)]</value>
 	</variable>
 	<variable name="WidgetAction-2">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-2)]</value>
@@ -537,6 +721,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-2)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-2)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-2)]</value>
 	</variable>
 	<variable name="WidgetAction-3">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-3)]</value>
@@ -547,6 +735,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-3)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-3)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-3)]</value>
 	</variable>
 	<variable name="WidgetAction-4">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-4)]</value>
@@ -557,6 +749,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-4)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-4)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-4)]</value>
 	</variable>
 	<variable name="WidgetAction-5">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-5)]</value>
@@ -567,6 +763,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-5)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-5)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-5)]</value>
 	</variable>
 	<variable name="WidgetAction-6">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-6)]</value>
@@ -577,6 +777,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-6)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-6)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-6)]</value>
 	</variable>
 	<variable name="WidgetAction-7">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-7)]</value>
@@ -587,6 +791,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-7)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-7)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-7)]</value>
 	</variable>
 	<variable name="WidgetAction-8">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetAction-8)]</value>
@@ -597,6 +805,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetAction-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-8]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-8]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-8]</value>
 	</variable>
 	<variable name="WidgetStyle-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-1)]</value>
@@ -607,6 +819,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-1)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-1)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-1)]</value>
 	</variable>
 	<variable name="WidgetStyle-2">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-2)]</value>
@@ -617,6 +833,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-2)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-2)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-2)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-2)]</value>
 	</variable>
 	<variable name="WidgetStyle-3">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-3)]</value>
@@ -627,6 +847,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-3)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-3)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-3)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-3)]</value>
 	</variable>
 	<variable name="WidgetStyle-4">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-4)]</value>
@@ -637,6 +861,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-4)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-4)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-4)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-4)]</value>
 	</variable>
 	<variable name="WidgetStyle-5">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-5)]</value>
@@ -647,6 +875,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-5)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-5)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-5)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-5)]</value>
 	</variable>
 	<variable name="WidgetStyle-6">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-6)]</value>
@@ -657,6 +889,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-6)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-6)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-6)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-6)]</value>
 	</variable>
 	<variable name="WidgetStyle-7">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-7)]</value>
@@ -667,6 +903,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-7)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-7)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-7)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-7)]</value>
 	</variable>
 	<variable name="WidgetStyle-8">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-8)]</value>
@@ -677,6 +917,10 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),6000)">$INFO[Skin.String(6000-WidgetStyle-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetStyle-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyle-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-8)]</value>
 	</variable>
 	<variable name="NextEpisodeCountdown">
 		<value condition="IntegerGreaterThan(Player.TimeRemaining,29)">osd/countdown/30.png</value>

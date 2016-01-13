@@ -86,6 +86,34 @@
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,2)">Control.Move(9000,-1)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,3)">Control.Move(9000,-2)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,4)">Control.Move(9000,-3)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,5)">Control.Move(9000,-4)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,6)">Control.Move(9000,-5)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,7)">Control.Move(9000,-6)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(9000).CurrentItem,8)">Control.Move(9000,-7)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,2)">Control.Move(10000,-1)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,3)">Control.Move(10000,-2)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,4)">Control.Move(10000,-3)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,5)">Control.Move(10000,-4)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,6)">Control.Move(10000,-5)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,7)">Control.Move(10000,-6)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(10000).CurrentItem,8)">Control.Move(10000,-7)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,2)">Control.Move(11000,-1)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,3)">Control.Move(11000,-2)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,4)">Control.Move(11000,-3)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,5)">Control.Move(11000,-4)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,6)">Control.Move(11000,-5)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,7)">Control.Move(11000,-6)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(11000).CurrentItem,8)">Control.Move(11000,-7)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,2)">Control.Move(12000,-1)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,3)">Control.Move(12000,-2)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,4)">Control.Move(12000,-3)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,5)">Control.Move(12000,-4)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,6)">Control.Move(12000,-5)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
+				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(300).CurrentItem,2)">Control.Move(300,-1)</onfocus>
 				<!--on right-->
 				<onright>ClearProperty(MainMenuFocus,home)</onright>
@@ -106,6 +134,14 @@
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7) + !IntegerGreaterThan(Container(7000).NumItems,1)">$INFO[Skin.String(7000-WidgetAction-1)]</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + IntegerGreaterThan(Container(8000).NumItems,1)">SetFocus(8000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + !IntegerGreaterThan(Container(8000).NumItems,1)">$INFO[Skin.String(8000-WidgetAction-1)]</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9) + IntegerGreaterThan(Container(9000).NumItems,1)">SetFocus(9000)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9) + !IntegerGreaterThan(Container(9000).NumItems,1)">$INFO[Skin.String(9000-WidgetAction-1)]</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10) + IntegerGreaterThan(Container(10000).NumItems,1)">SetFocus(10000)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10) + !IntegerGreaterThan(Container(10000).NumItems,1)">$INFO[Skin.String(10000-WidgetAction-1)]</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11) + IntegerGreaterThan(Container(11000).NumItems,1)">SetFocus(11000)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11) + !IntegerGreaterThan(Container(11000).NumItems,1)">$INFO[Skin.String(11000-WidgetAction-1)]</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12) + IntegerGreaterThan(Container(12000).NumItems,1)">SetFocus(12000)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12) + !IntegerGreaterThan(Container(12000).NumItems,1)">$INFO[Skin.String(12000-WidgetAction-1)]</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + IntegerGreaterThan(Container(901).NumItems,1)">SetFocus(901)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + !IntegerGreaterThan(Container(901).NumItems,1)">ActivateWindow(1106)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather)">ActivateWindow(weather)</onright>
@@ -190,6 +226,34 @@
 						<onfocus condition="!Control.IsVisible(8000) + StringCompare(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
 						<onfocus condition="!Control.IsVisible(8000) + StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
 						<onfocus condition="!Control.IsVisible(8000) + StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,2)">Control.Move(9000,-1)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,3)">Control.Move(9000,-2)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,4)">Control.Move(9000,-3)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,5)">Control.Move(9000,-4)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,6)">Control.Move(9000,-5)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,7)">Control.Move(9000,-6)</onfocus>
+						<onfocus condition="!Control.IsVisible(9000) + StringCompare(Container(9000).CurrentItem,8)">Control.Move(9000,-7)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,2)">Control.Move(10000,-1)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,3)">Control.Move(10000,-2)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,4)">Control.Move(10000,-3)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,5)">Control.Move(10000,-4)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,6)">Control.Move(10000,-5)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,7)">Control.Move(10000,-6)</onfocus>
+						<onfocus condition="!Control.IsVisible(10000) + StringCompare(Container(10000).CurrentItem,8)">Control.Move(10000,-7)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,2)">Control.Move(11000,-1)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,3)">Control.Move(11000,-2)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,4)">Control.Move(11000,-3)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,5)">Control.Move(11000,-4)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,6)">Control.Move(11000,-5)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,7)">Control.Move(11000,-6)</onfocus>
+						<onfocus condition="!Control.IsVisible(11000) + StringCompare(Container(11000).CurrentItem,8)">Control.Move(11000,-7)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,2)">Control.Move(12000,-1)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,3)">Control.Move(12000,-2)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,4)">Control.Move(12000,-3)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,5)">Control.Move(12000,-4)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,6)">Control.Move(12000,-5)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
+						<onfocus condition="!Control.IsVisible(12000) + StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
 						<onfocus condition="!Control.IsVisible(300) + StringCompare(Container(300).CurrentItem,2)">Control.Move(300,-1)</onfocus>
 					</control>
 					<control type="label">
@@ -331,7 +395,6 @@
 				| Container(7006).IsUpdating
 				| Container(7007).IsUpdating
 				| Container(7008).IsUpdating
-				| Container(8000).IsUpdating
 				| Container(8001).IsUpdating
 				| Container(8002).IsUpdating
 				| Container(8003).IsUpdating
@@ -340,68 +403,100 @@
 				| Container(8006).IsUpdating
 				| Container(8007).IsUpdating
 				| Container(8008).IsUpdating
+				| Container(9001).IsUpdating
+				| Container(9002).IsUpdating
+				| Container(9003).IsUpdating
+				| Container(9004).IsUpdating
+				| Container(9005).IsUpdating
+				| Container(9006).IsUpdating
+				| Container(9007).IsUpdating
+				| Container(9008).IsUpdating
+				| Container(10001).IsUpdating
+				| Container(10002).IsUpdating
+				| Container(10003).IsUpdating
+				| Container(10004).IsUpdating
+				| Container(10005).IsUpdating
+				| Container(10006).IsUpdating
+				| Container(10007).IsUpdating
+				| Container(10008).IsUpdating
+				| Container(11001).IsUpdating
+				| Container(11002).IsUpdating
+				| Container(11003).IsUpdating
+				| Container(11004).IsUpdating
+				| Container(11005).IsUpdating
+				| Container(11006).IsUpdating
+				| Container(11007).IsUpdating
+				| Container(11008).IsUpdating
+				| Container(12001).IsUpdating
+				| Container(12002).IsUpdating
+				| Container(12003).IsUpdating
+				| Container(12004).IsUpdating
+				| Container(12005).IsUpdating
+				| Container(12006).IsUpdating
+				| Container(12007).IsUpdating
+				| Container(12008).IsUpdating
 				| Container(201).IsUpdating
 				| Container(301).IsUpdating
 				| Container(302).IsUpdating]</visible>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<texture background="true">special://skin/extras/backgrounds/loading.jpg</texture>
-			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(91) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
-			<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
-		</control>
-		<control type="label">
-			<left>0</left>
-			<top>495</top>
-			<font>Light24</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<width>1920</width>
-			<height>200</height>
-			<label>31532</label>
-			<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
-			<visible>Control.IsVisible(91)</visible>
-		</control>
-		<control type="label">
-			<left>0</left>
-			<top>495</top>
-			<font>Light24</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<width>1920</width>
-			<height>200</height>
-			<label>31533</label>
-			<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
-			<visible>!Control.IsVisible(91)</visible>
-			<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(91) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
-		</control>
-		<!-- Check if preloading is in progress -->
-		<control type="button" id="90">
-			<include>HiddenControl</include>
-			<onfocus>SetProperty(preload,1,Home)</onfocus>
-			<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>
-			<onfocus condition="Control.IsVisible(91)">SetFocus(93)</onfocus>
-			<onfocus condition="!Control.IsVisible(91)">SetFocus(94)</onfocus>
-			<onclick>SetFocus(94)</onclick>
-			<onback>SetFocus(94)</onback>
-		</control>
-		<!-- Loop trigger -->
-		<control type="button" id="93">
-			<include>HiddenControl</include>
-			<onfocus>SetFocus(90)</onfocus>
-			<onclick>SetFocus(94)</onclick>
-			<onback>SetFocus(94)</onback>
-		</control>
-		<!-- Ready to focus -->
-		<control type="button" id="94">
-			<include>HiddenControl</include>
-			<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(99,1),00:01,silent)</onfocus>
-			<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(99,0),00:01,silent)</onfocus>
-			<onfocus>AlarmClock(preload,ClearProperty(preload,Home),00:01,silent)</onfocus>
-			<onfocus>AlarmClock(fadeoutdelay,ClearProperty(fadeoutdelay,Home),00:05,silent)</onfocus>
-		</control>
-	</controls>
-</window>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture background="true">special://skin/extras/backgrounds/loading.jpg</texture>
+				<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(91) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
+				<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>495</top>
+				<font>Light24</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<width>1920</width>
+				<height>200</height>
+				<label>31532</label>
+				<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
+				<visible>Control.IsVisible(91)</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>495</top>
+				<font>Light24</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<width>1920</width>
+				<height>200</height>
+				<label>31533</label>
+				<visible>Control.HasFocus(90) | Control.HasFocus(93) | Control.HasFocus(94) | !IsEmpty(Window(Home).Property(fadeoutdelay))</visible>
+				<visible>!Control.IsVisible(91)</visible>
+				<animation effect="fade" start="100" end="0" time="500" delay="100" condition="!Control.IsVisible(91) + !System.HasAlarm(waitforpreload)" reversible="false">Conditional</animation>
+			</control>
+			<!-- Check if preloading is in progress -->
+			<control type="button" id="90">
+				<include>HiddenControl</include>
+				<onfocus>SetProperty(preload,1,Home)</onfocus>
+				<onfocus>SetProperty(fadeoutdelay,1,Home)</onfocus>
+				<onfocus condition="Control.IsVisible(91)">SetFocus(93)</onfocus>
+				<onfocus condition="!Control.IsVisible(91)">SetFocus(94)</onfocus>
+				<onclick>SetFocus(94)</onclick>
+				<onback>SetFocus(94)</onback>
+			</control>
+			<!-- Loop trigger -->
+			<control type="button" id="93">
+				<include>HiddenControl</include>
+				<onfocus>SetFocus(90)</onfocus>
+				<onclick>SetFocus(94)</onclick>
+				<onback>SetFocus(94)</onback>
+			</control>
+			<!-- Ready to focus -->
+			<control type="button" id="94">
+				<include>HiddenControl</include>
+				<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(99,1),00:01,silent)</onfocus>
+				<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(waitforpreload,Control.SetFocus(99,0),00:01,silent)</onfocus>
+				<onfocus>AlarmClock(preload,ClearProperty(preload,Home),00:01,silent)</onfocus>
+				<onfocus>AlarmClock(fadeoutdelay,ClearProperty(fadeoutdelay,Home),00:05,silent)</onfocus>
+			</control>
+		</controls>
+	</window>

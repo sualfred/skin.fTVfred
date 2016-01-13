@@ -654,6 +654,7 @@
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
 						<label>31544</label>
+						<onclick>SetProperty(DisableSuggestions,1,Home)</onclick>
 						<onclick>Skin.SetString(ftvLabelWidget$INFO[Window(home).Property(SubMenu)])</onclick>
 					</control>
 					<!-- Reset Button -->

@@ -2,6 +2,7 @@
 <window>
 	<!-- virtualkeyboard -->
 	<defaultcontrol always="true">300</defaultcontrol>
+	<onunload>ClearProperty(DisableSuggestions,home)</onunload>
 	<controls>
 		<!-- Background -->
 		<include>DialogBackgroundImage</include>
@@ -18,14 +19,14 @@
 				<width>980</width>
 				<height>700</height>
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
-				<visible>!IntegerGreaterThan(Container(9091).NumItems,0)</visible>
+				<visible>!IsEmpty(Window(Home).Property(DisableSuggestions)) | !IntegerGreaterThan(Container(9091).NumItems,0)</visible>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<width>980</width>
 				<height>1145</height>
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
-				<visible>IntegerGreaterThan(Container(9091).NumItems,0)</visible>
+				<visible>IsEmpty(Window(Home).Property(DisableSuggestions)) + IntegerGreaterThan(Container(9091).NumItems,0)</visible>
 			</control>
 
 			<!-- Control group -->
@@ -64,6 +65,7 @@
 
 				<!-- auto completion -->				
 				<control type="list" id="9091">
+					<visible>IsEmpty(Window(Home).Property(DisableSuggestions))</visible>
 					<left>7</left>
 					<top>607</top>
 					<width>846</width>

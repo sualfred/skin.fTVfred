@@ -26,12 +26,12 @@
 	</include>
 	<!-- Keyboard fade animation -->
 	<include name="KeyboardAnimation">
-		<animation easing="inout" effect="slide" end="0,0" start="0,-700" time="120" tween="sine" condition="!IntegerGreaterThan(Container(9091).NumItems,0)">WindowOpen</animation>
-		<animation easing="inout" effect="slide" end="0,0" start="0,-1145" time="120" tween="sine" condition="IntegerGreaterThan(Container(9091).NumItems,0)">WindowOpen</animation>
-		<animation easing="inout" effect="slide" end="0,-700" start="0,0" time="120" tween="sine" condition="!IntegerGreaterThan(Container(9091).NumItems,0)">WindowClose</animation>
-		<animation easing="inout" effect="slide" end="0,-1145" start="0,0" time="120" tween="sine" condition="IntegerGreaterThan(Container(9091).NumItems,0)">WindowClose</animation>
-		<animation easing="inout" effect="slide" end="0,-700" start="0,0" time="120" tween="sine" condition="!IntegerGreaterThan(Container(9091).NumItems,0) + Window.IsVisible(numericinput)">Conditional</animation>
-		<animation easing="inout" effect="slide" end="0,-1145" start="0,0" time="120" tween="sine" condition="IntegerGreaterThan(Container(9091).NumItems,0) + Window.IsVisible(numericinput)">Conditional</animation>
+		<animation easing="inout" effect="slide" end="0,0" start="0,-700" time="120" tween="sine" condition="!IsEmpty(Window(Home).Property(DisableSuggestions)) | !IntegerGreaterThan(Container(9091).NumItems,0)">WindowOpen</animation>
+		<animation easing="inout" effect="slide" end="0,0" start="0,-1145" time="120" tween="sine" condition="IsEmpty(Window(Home).Property(DisableSuggestions)) + IntegerGreaterThan(Container(9091).NumItems,0)">WindowOpen</animation>
+		<animation easing="inout" effect="slide" end="0,-700" start="0,0" time="120" tween="sine" condition="!IsEmpty(Window(Home).Property(DisableSuggestions)) | !IntegerGreaterThan(Container(9091).NumItems,0)">WindowClose</animation>
+		<animation easing="inout" effect="slide" end="0,-1145" start="0,0" time="120" tween="sine" condition="IsEmpty(Window(Home).Property(DisableSuggestions)) + IntegerGreaterThan(Container(9091).NumItems,0)">WindowClose</animation>
+		<animation easing="inout" effect="slide" end="0,-700" start="0,0" time="120" tween="sine" condition="[!IsEmpty(Window(Home).Property(DisableSuggestions)) | !IntegerGreaterThan(Container(9091).NumItems,0)] + Window.IsVisible(numericinput)">Conditional</animation>
+		<animation easing="inout" effect="slide" end="0,-1145" start="0,0" time="120" tween="sine" condition="IsEmpty(Window(Home).Property(DisableSuggestions)) + IntegerGreaterThan(Container(9091).NumItems,0) + Window.IsVisible(numericinput)">Conditional</animation>
 	</include>
 	<!-- Dialog fade animation -->
 	<include name="DialogAnimation">

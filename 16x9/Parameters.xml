@@ -22,7 +22,7 @@
 			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
 			<onfocus>SetProperty(Category,$PARAM[ListID],home)</onfocus>
 			<oninfo>ActivateWindow(1104)</oninfo>
-			<preloaditems>2</preloaditems>
+			<preloaditems>2</preloaditems>			
 			<focusposition>1</focusposition>
 			<viewtype label="">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -136,7 +136,7 @@
 				<focusposition>2</focusposition>
 				<viewtype label="">list</viewtype>
 				<orientation>vertical</orientation>
-				<defaultcontrol>0</defaultcontrol>
+				<defaultcontrol>1</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<include>HomeWidgetsAnimation</include>
 				<include>WindowHomeFadeAnimation</include>
@@ -172,6 +172,7 @@
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
 					<control type="button">
 						<include>HiddenControl</include>
+						<onfocus>SetProperty(MainFocus,$INFO[Container(99).ListItem.Property(defaultID)])</onfocus>
 						<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
 						<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,1_3)</onfocus>

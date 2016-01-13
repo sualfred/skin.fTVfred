@@ -41,6 +41,26 @@
 			<param name="ID">800</param>
 			<param name="widget">widget8</param>
 		</include>
+		<!-- #9 Widget -->
+		<include name="ParamWidgetInclude">
+			<param name="ID">900</param>
+			<param name="widget">widget9</param>
+		</include>
+		<!-- #10 Widget -->
+		<include name="ParamWidgetInclude">
+			<param name="ID">1000</param>
+			<param name="widget">widget10</param>
+		</include>
+		<!-- #11 Widget -->
+		<include name="ParamWidgetInclude">
+			<param name="ID">1100</param>
+			<param name="widget">widget11</param>
+		</include>
+		<!-- #12 Widget -->
+		<include name="ParamWidgetInclude">
+			<param name="ID">1200</param>
+			<param name="widget">widget12</param>
+		</include>
 		<!-- Favourites Widget -->
 		<include name="ParamWidgetInclude">
 			<param name="ID">20</param>
