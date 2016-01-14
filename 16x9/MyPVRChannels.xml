@@ -94,7 +94,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Title]</label>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 				</control>
 				<control type="label">
 					<left>1229</left>
@@ -102,7 +102,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ff505559</textcolor>
-					<label>$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
+					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
 				</control>
 			</itemlayout>
 
@@ -150,7 +150,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
-					<label>$INFO[ListItem.Title]</label>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 				</control>
 				<control type="label">
 					<left>1229</left>
@@ -159,7 +159,7 @@
 					<height>67</height>
 					<textcolor>ff8e8b90</textcolor>
 					<scroll>false</scroll>
-					<label>$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
+					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
 				</control>
 			</focusedlayout>    
 		</control>
