@@ -105,7 +105,6 @@
 					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
 				</control>
 			</itemlayout>
-
 			<focusedlayout height="70" width="1850">
 				<control type="image">
 					<top>10</top>
@@ -157,7 +156,7 @@
 					<width>480</width>
 					<aligny>center</aligny>
 					<height>67</height>
-					<textcolor>ff8e8b90</textcolor>
+					<textcolor>ff505559</textcolor>
 					<scroll>false</scroll>
 					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
 				</control>
