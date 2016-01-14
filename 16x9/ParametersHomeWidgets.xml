@@ -183,10 +183,6 @@
 			<include>HiddenHomeList</include>
 			<content limit="4">pvr://channels/tv/1</content>
 		</control>
-		<control id="$PARAM[ID]2" type="list">
-			<include>HiddenHomeList</include>
-			<content limit="4">pvr://recordings/active</content>
-		</control>
 	</include>
 	<include name="ParamFavouritesWidgetLists">
 		<control id="$PARAM[ID]1" type="list">
@@ -252,20 +248,6 @@
 			<property name="InfoLabel4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).ChannelName]</property>
 			<property name="Path">pvr://channels/tv/1</property>
 			<onclick>ActivateWindow(1106)</onclick>
-		</item>
-		<item>
-			<label>$LOCALIZE[19017]</label>
-			<visible>!IsEmpty(Container($PARAM[ID]2).ListItemPosition(0).Label)</visible>
-			<property name="Icon1">$INFO[Container($PARAM[ID]2).ListItemPosition(0).Icon]</property>
-			<property name="Icon2">$INFO[Container($PARAM[ID]2).ListItemPosition(1).Icon]</property>
-			<property name="Icon3">$INFO[Container($PARAM[ID]2).ListItemPosition(2).Icon]</property>
-			<property name="Icon4">$INFO[Container($PARAM[ID]2).ListItemPosition(3).Icon]</property>
-			<property name="InfoLabel1">$INFO[Container($PARAM[ID]2).ListItemPosition(0).Label]</property>
-			<property name="InfoLabel2">$INFO[Container($PARAM[ID]2).ListItemPosition(1).Label]</property>
-			<property name="InfoLabel3">$INFO[Container($PARAM[ID]2).ListItemPosition(2).Label]</property>
-			<property name="InfoLabel4">$INFO[Container($PARAM[ID]2).ListItemPosition(3).Label]</property>
-			<property name="Path">pvr://recordings/active</property>
-			<onclick>ActivateWindow(tvrecordings)</onclick>
 		</item>
 	</include>
 	<include name="FavouritesWidget">

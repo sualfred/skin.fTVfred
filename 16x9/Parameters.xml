@@ -5,6 +5,7 @@
 		<item>
 			<label>$VAR[WidgetLabel-$PARAM[Pos]]</label>
 			<label2>31200</label2>
+			<onclick>SetProperty(DisableSuggestions,1,Home)</onclick>
 			<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-$PARAM[Pos]])</onclick>
 		</item>
 	</include>

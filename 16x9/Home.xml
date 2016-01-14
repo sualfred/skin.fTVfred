@@ -436,8 +436,7 @@
 				| Container(12007).IsUpdating
 				| Container(12008).IsUpdating
 				| Container(201).IsUpdating
-				| Container(301).IsUpdating
-				| Container(302).IsUpdating]</visible>
+				| Container(301).IsUpdating]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
