@@ -362,46 +362,30 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item>
-							<label>$VAR[WidgetLabel-1]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-1])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-2]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-2])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-3]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-3])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-4]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-4])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-5]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-5])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-6]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-6])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-7]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-7])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetLabel-8]</label>
-							<label2>31200</label2>
-							<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-8])</onclick>
-						</item>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">1</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">2</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">3</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">4</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">5</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">6</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">7</param>
+						</include>
+						<include name="ParamWidgetLabel">
+							<param name="Pos">8</param>
+						</include>
 					</content>
 				</control>
 				<!-- Widget path -->
@@ -465,46 +449,30 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item>
-							<label>$VAR[WidgetAction-1]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-1&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-1&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-1&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-1)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-2]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-2&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-2&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-2&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-2)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-3]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-3&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-3&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-3&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-3)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-4]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-4&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-4&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-4&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-4)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-5]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-5&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-5&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-5&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-5)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-6]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-6&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-6&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-6&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-6)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-7]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-7&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-7&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-7&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-7)</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetAction-8]</label>
-							<label2>31201</label2>
-							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-8&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-8&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-8&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-8)</onclick>
-						</item>
+						<include name="ParamWidgetPath">
+							<param name="Pos">1</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">2</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">3</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">4</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">5</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">6</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">7</param>
+						</include>
+						<include name="ParamWidgetPath">
+							<param name="Pos">8</param>
+						</include>
 					</content>
 				</control>
 				<!-- Widget layout -->
@@ -568,118 +536,30 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item>
-							<label>$VAR[WidgetStyle-1]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-2]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-3]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-4]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-5]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-6]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-7]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
-						<item>
-							<label>$VAR[WidgetStyle-8]</label>
-							<label2>$LOCALIZE[31203]</label2>
-							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
-							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31159]))</onclick>
-							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31160]))</onclick>
-							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
-							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31161]))</onclick>
-							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
-							<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],$LOCALIZE[31203]))</onclick>
-							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
-						</item>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">1</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">2</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">3</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">4</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">5</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">6</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">7</param>
+						</include>
+						<include name="ParamWidgetLayout">
+							<param name="Pos">8</param>
+						</include>
 					</content>
 				</control>
 				<!-- Move Down -->

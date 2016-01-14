@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<!-- Widet Move Down Include -->
+	<!-- Widget Label Include -->
+	<include name="ParamWidgetLabel">
+		<item>
+			<label>$VAR[WidgetLabel-$PARAM[Pos]]</label>
+			<label2>31200</label2>
+			<onclick>Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetLabel-$PARAM[Pos]])</onclick>
+		</item>
+	</include>
+	<!-- Widget Path Include -->
+	<include name="ParamWidgetPath">
+		<item>
+			<label>$VAR[WidgetAction-$PARAM[Pos]]</label>
+			<label2>31201</label2>
+			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-$PARAM[Pos]&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-$PARAM[Pos]&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-$PARAM[Pos]&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-$PARAM[Pos])</onclick>
+		</item>
+	</include>
+	<!-- Widget Layout Include -->
+	<include name="ParamWidgetLayout">
+		<item>
+			<label>$VAR[WidgetStyle-$PARAM[Pos]]</label>
+			<label2>$LOCALIZE[31203]</label2>
+			<onclick>SetProperty(Dialog.NumItems,$PARAM[Pos])</onclick>
+			<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
+			<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31159]))</onclick>
+			<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
+			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31160]))</onclick>
+			<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31529])</onclick>
+			<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31161]))</onclick>
+			<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31530])</onclick>
+			<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31203]))</onclick>
+			<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+		</item>
+	</include>
+	<!-- Widget Move Down Include -->
 	<include name="ParamWidgetMoveDownInclude">
 		<include name="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
