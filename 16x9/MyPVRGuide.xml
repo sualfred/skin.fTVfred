@@ -60,8 +60,35 @@
                             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
                         </control>
                     </control>
-
-
+                    <!-- Time -->
+                    <control type="grouplist">
+                        <left>1360</left>
+                        <top>153</top>
+                        <width>440</width>
+                        <height>60</height>
+                        <align>right</align>
+                        <itemgap>6</itemgap>
+                        <orientation>horizontal</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <include>VisibleDelayFadeAnimation</include>
+                        <control type="label">
+                            <width>auto</width>
+                            <height>30</height>
+                            <font>Light28</font>
+                            <align>right</align>
+                            <textcolor>ffa4a4a4</textcolor>
+                            <label>$LOCALIZE[31217]</label>
+                        </control>
+                        <control type="label">
+                            <top>1</top>
+                            <width>auto</width>
+                            <height>30</height>
+                            <align>right</align>
+                            <font>Med28</font>
+                            <textcolor>ffa4a4a4</textcolor>
+                            <label>$INFO[System.Time]</label>
+                        </control>
+                    </control>
                     <!-- Controls -->
                     <control id="1000" type="grouplist">
                         <left>186</left>
@@ -87,7 +114,7 @@
                             <width min="104" max="204">auto</width>
                             <wrapmultiline>true</wrapmultiline>
                             <height>100</height>
-                            <onup>10</onup>
+                            <onup>59</onup>
                             <ondown>3000</ondown>
                             <onclick>NextChannelGroup</onclick>
                             <font>Med24</font>
@@ -97,7 +124,23 @@
                             <focusedcolor>ff222222</focusedcolor>
                             <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
                             <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-                            <visible>!StringCompare(ListItem.Label,..) + !SubString(Container.FolderName,$LOCALIZE[20434]) + !SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+                            <visible>!StringCompare(ListItem.Label,..)</visible>
+                        </control>
+                        <control id="32" type="button">
+                            <width min="104" max="204">auto</width>
+                            <wrapmultiline>true</wrapmultiline>
+                            <height>100</height>
+                            <onup>59</onup>
+                            <ondown>3000</ondown>
+                            <onclick>ActivateWindow(tvrecordings)</onclick>
+                            <font>Med24</font>
+                            <label>$LOCALIZE[31546]</label>
+                            <textoffsetx>28</textoffsetx>
+                            <textcolor>ffdadada</textcolor>
+                            <focusedcolor>ff222222</focusedcolor>
+                            <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+                            <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+                            <visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
                         </control>
                     </control>
 
@@ -169,7 +212,7 @@
                     </control>
                 </control>
 
-                <!-- EPG GRID -->
+                <!-- Guide -->
                 <control type="epggrid" id="10" description="EPG">     
                     <left>198</left>
                     <top>280</top>
@@ -177,17 +220,16 @@
                     <height>490</height>
                     <onback>1001</onback>
                     <viewtype label="19069">list</viewtype>
-                    <progresstexture border="5" colordiffuse="33FFFFFF">pvr/_PVR_progressline.png</progresstexture>
+                    <progresstexture border="5" colordiffuse="33FFFFFF">pvr/progressline.png</progresstexture>
                     <scrolltime tween="quadratic">300</scrolltime>
                     <timeblocks>40</timeblocks>
                     <rulerunit>6</rulerunit>
-
-                    <!-- rulerlayout -->
+                    <!-- Ruler -->
                     <rulerlayout height="70" width="260">
                         <control type="label" id="2">
                             <left>0</left>
                             <top>20</top>
-                            <width>200</width>
+                            <width>300</width>
                             <align>left</align>
                             <aligny>top</aligny>
                             <font>Med24Num</font>                            
@@ -196,8 +238,7 @@
                             <textcolor>White</textcolor>
                         </control>
                     </rulerlayout>
-
-                    <!-- CHANNEL LIST ON THE LEFT -->
+                    <!-- Channels -->
                     <channellayout height="70" width="320">
                         <control type="label">
                             <posx>90</posx>
@@ -215,7 +256,6 @@
                             <aspectratio aligny="center" align="left">keep</aspectratio>
                         </control>
                     </channellayout>
-
                     <focusedchannellayout height="70" width="320">  
                         <control type="label">
                             <posx>90</posx>
@@ -235,7 +275,7 @@
                             <aspectratio aligny="center" align="left">keep</aspectratio>
                         </control>
                     </focusedchannellayout>    
-                    <!-- show grid -->
+                    <!-- Grid -->
                     <itemlayout height="70" width="260">
                         <control type="image" id="2">
                             <width>256</width>
@@ -246,7 +286,7 @@
                             <posy>6</posy>
                             <width>52</width>
                             <height>52</height>
-                            <texture>pvr/_PVR_timer.png</texture>
+                            <texture>pvr/timer.png</texture>
                             <colordiffuse>White</colordiffuse>
                             <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>   
@@ -269,9 +309,7 @@
                             <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
                         </control>
                     </itemlayout>
-
                     <focusedlayout height="70" width="260">
-
                         <control type="image" id="2">
                             <width>256</width>
                             <height>67</height>
@@ -281,7 +319,7 @@
                             <posy>6</posy>
                             <width>52</width>
                             <height>52</height>
-                            <texture>pvr/_PVR_timer.png</texture>
+                            <texture>pvr/timer.png</texture>
                             <colordiffuse>White</colordiffuse>
                             <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>   
@@ -304,12 +342,8 @@
                             <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
                         </control>
                     </focusedlayout>
-
                 </control>
             </control>
-
-
-
         </control>
     </controls>
 </window>

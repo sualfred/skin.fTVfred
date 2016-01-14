@@ -888,10 +888,7 @@ msgstr ""
 
 #: \16x9\Variables.xml:1512
 msgctxt "#31212"
-msgid ""
-"Activates the preloading of widgets on startup. By disabling it, the skin "
-"won't wait until all widgets are loaded. Please note that this can cause "
-"some minor animation glitches on startup."
+msgid "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
 msgstr ""
 
 #: \16x9\Variables.xml:65
@@ -914,9 +911,9 @@ msgctxt "#31216"
 msgid "Widget Group 12"
 msgstr ""
 
-#: \16x9\Custom_Home_Widgets.xml:188
+#: \16x9\MyPVRChannels.xml:234
 msgctxt "#31217"
-msgid "No."
+msgid "Current time"
 msgstr ""
 
 msgctxt "#31500"

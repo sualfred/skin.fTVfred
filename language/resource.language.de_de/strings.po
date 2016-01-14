@@ -903,6 +903,11 @@ msgctxt "#31216"
 msgid "Widget Group 12"
 msgstr "Widget Gruppe 12"
 
+#: \16x9\MyPVRChannels.xml:234
+msgctxt "#31217"
+msgid "Current time"
+msgstr "Aktuelle Uhrzeit"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"

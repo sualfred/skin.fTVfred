@@ -53,7 +53,7 @@
 							<top>160</top>
 							<width>591</width>
 							<height>2</height>
-							<texture>pvr/_PVR_OSD_LINE.png</texture>
+							<texture>pvr/osd_line.png</texture>
 						</control>
 						<control type="image">
 							<left>40</left>
@@ -156,7 +156,7 @@
 							<top>160</top>
 							<width>591</width>
 							<height>2</height>
-							<texture>pvr/_PVR_OSD_LINE.png</texture>
+							<texture>pvr/osd_line.png</texture>
 						</control>	
 						<control type="image">
 							<left>20</left>

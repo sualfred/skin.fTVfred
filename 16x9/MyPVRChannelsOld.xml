@@ -6,164 +6,8 @@
 	<defaultcontrol always="true">59</defaultcontrol>
 	<views>59</views>
 	<controls>
-		<!-- Channels -->
-		<control type="group">
-			<left>198</left>
-			<top>281</top>
-			<width>1850</width>
-			<height>420</height>
-			<control type="label">
-				<left>0</left>
-				<width>310</width>
-				<aligny>center</aligny>
-				<height>67</height>
-				<textcolor>ffbebebe</textcolor>
-				<font>Med24Num</font>
-				<label>$INFO[System.Date]</label>
-			</control>
-			<control type="label">
-				<left>335</left>
-				<width>1260</width>
-				<aligny>center</aligny>
-				<height>67</height>
-				<textcolor>ffbebebe</textcolor>
-				<font>Med24Num</font>
-				<label>$LOCALIZE[31106]</label>
-			</control>
-			<control type="label">
-				<left>1229</left>
-				<width>1260</width>
-				<aligny>center</aligny>
-				<height>67</height>
-				<font>Med24Num</font>
-				<textcolor>ffbebebe</textcolor>
-				<label>$LOCALIZE[19031]</label>
-			</control>
-		</control>
-		<control type="list" id="59">    
-			<left>198</left>
-			<top>350</top>
-			<width>1850</width>
-			<height>420</height>
-			<onleft>1001</onleft>
-			<onright>NextChannelGroup</onright>
-			<viewtype label="19069">list</viewtype>
-			<progresstexture border="5" colordiffuse="33FFFFFF">pvr/_PVR_progressline.png</progresstexture>
-			<scrolltime tween="quadratic">300</scrolltime>
-			<timeblocks>40</timeblocks>
-			<rulerunit>6</rulerunit>
-			<itemlayout height="70" width="1850">
-				<control type="image">
-					<top>10</top>
-					<bottom>10</bottom>
-					<width>50</width>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio aligny="center" align="left">keep</aspectratio>
-				</control>
-				<control type="label">
-					<left>90</left>
-					<width>200</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ff5b6064</textcolor>
-					<label>$INFO[ListItem.ChannelName]</label>
-				</control>
-				<!-- Progress -->
-				<control type="progress">
-					<left>320</left>
-					<width>890</width>
-					<height>67</height>
-					<texturebg border="5">pvr/epg_button_nf.png</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</midtexture>
-					<righttexture>-</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<info>ListItem.Progress</info>
-				</control>
-				<!-- Fake Progress -->
-				<control type="image">
-					<left>1214</left>
-					<width>720</width>
-					<height>67</height>
-					<texture border="5">pvr/epg_button_nf.png</texture>
-					<overlaytexture>-</overlaytexture>
-				</control>
-				<control type="label">
-					<left>335</left>
-					<width>855</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Title]</label>
-				</control>
-				<control type="label">
-					<left>1229</left>
-					<width>480</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ff505559</textcolor>
-					<label>$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
-				</control>
-			</itemlayout>
-
-			<focusedlayout height="70" width="1850">
-				<control type="image">
-					<top>10</top>
-					<bottom>10</bottom>
-					<width>50</width>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio aligny="center" align="left">keep</aspectratio>
-				</control>
-				<control type="label">
-					<left>90</left>
-					<width>200</width>
-					<scroll>false</scroll>
-					<aligny>center</aligny>
-					<height>67</height>
-					<selectedcolor>ffFFC24B</selectedcolor>
-					<textcolor>ffFFC24B</textcolor>
-					<label>$INFO[ListItem.ChannelName]</label>
-				</control>
-				<!-- Progress -->
-				<control type="progress">
-					<left>320</left>
-					<width>890</width>
-					<height>67</height>
-					<texturebg border="5">pvr/epg_button_nf.png</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</midtexture>
-					<righttexture>-</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<info>ListItem.Progress</info>
-				</control>
-				<!-- Fake Progress -->
-				<control type="image">
-					<left>1214</left>
-					<width>720</width>
-					<height>67</height>
-					<texture border="5">pvr/epg_button_nf.png</texture>
-					<overlaytexture>-</overlaytexture>
-				</control>
-				<control type="label">
-					<left>335</left>
-					<width>855</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ffFFC24B</textcolor>
-					<label>$INFO[ListItem.Title]</label>
-				</control>
-				<control type="label">
-					<left>1229</left>
-					<width>480</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ff8e8b90</textcolor>
-					<scroll>false</scroll>
-					<label>$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
-				</control>
-			</focusedlayout>    
-		</control>
-		<!-- Window Layout -->
+		<!-- Views -->
+		<include>Viewtype59</include>
 		<control type="group">
 			<include>VisibleDelayFadeAnimation</include>
 			<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
@@ -215,7 +59,7 @@
 					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
 				</control>
 			</control>
-			<!-- Time -->
+			<!-- Sort method -->
 			<control type="grouplist">
 				<left>1360</left>
 				<top>153</top>
@@ -232,7 +76,7 @@
 					<font>Light28</font>
 					<align>right</align>
 					<textcolor>ffa4a4a4</textcolor>
-					<label>$LOCALIZE[31217]</label>
+					<label>$LOCALIZE[31086]</label>
 				</control>
 				<control type="label">
 					<top>1</top>
@@ -241,7 +85,7 @@
 					<align>right</align>
 					<font>Med28</font>
 					<textcolor>ffa4a4a4</textcolor>
-					<label>$INFO[System.Time]</label>
+					<label>$INFO[Container.SortMethod]</label>
 				</control>
 			</control>
 			<!-- Lower group -->
