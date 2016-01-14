@@ -14,7 +14,7 @@
 			<height>420</height>
 			<control type="label">
 				<left>0</left>
-				<width>310</width>
+				<width>315</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffbebebe</textcolor>
