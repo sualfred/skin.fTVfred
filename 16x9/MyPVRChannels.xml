@@ -80,7 +80,9 @@
 					<width>890</width>
 					<height>67</height>
 					<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
-					<include>FakeProgressAnimation</include>
+					<include name="FakeProgressAnimation">
+						<param name="posx">320</param>
+					</include>
 				</control>
 				<!-- Fake Next Progress -->
 				<control type="image">
@@ -136,7 +138,9 @@
 					<width>890</width>
 					<height>67</height>
 					<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
-					<include>FakeProgressAnimation</include>
+					<include name="FakeProgressAnimation">
+						<param name="posx">320</param>
+					</include>
 				</control>
 				<!-- Fake Next Progress -->
 				<control type="image">
