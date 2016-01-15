@@ -261,8 +261,8 @@
 					<left>-10</left>
 					<height>100</height>
 					<itemgap>0</itemgap>
-					<onleft>50</onleft>
-					<onright>50</onright>
+					<onleft>59</onleft>
+					<onright>59</onright>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<defaultcontrol always="true">1001</defaultcontrol>
@@ -273,12 +273,13 @@
 						<label>-</label>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
-						<visible>!Control.HasFocus(31)</visible>
+						<visible>!Control.HasFocus(33)</visible>
 					</control>
 					<control id="33" type="button">
 						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
+						<onleft>59</onleft>
 						<onup>59</onup>
 						<ondown>3000</ondown>
 						<onclick>ActivateWindow(tvguide)</onclick>
