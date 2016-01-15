@@ -19,7 +19,7 @@
 				<height>67</height>
 				<textcolor>ffbebebe</textcolor>
 				<font>Med24Num</font>
-				<label>$INFO[System.Date]</label>
+				<label>$LOCALIZE[19019]</label>
 			</control>
 			<control type="label">
 				<left>335</left>
@@ -28,7 +28,7 @@
 				<height>67</height>
 				<textcolor>ffbebebe</textcolor>
 				<font>Med24Num</font>
-				<label>$LOCALIZE[31106]</label>
+				<label>$LOCALIZE[369]</label>
 			</control>
 			<control type="label">
 				<left>1229</left>
@@ -37,7 +37,7 @@
 				<height>67</height>
 				<font>Med24Num</font>
 				<textcolor>ffbebebe</textcolor>
-				<label>$LOCALIZE[19031]</label>
+				<label>$LOCALIZE[21820]</label>
 			</control>
 		</control>
 		<control type="list" id="59">    
@@ -59,6 +59,7 @@
 					<width>50</width>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center" align="left">keep</aspectratio>
+					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
 					<left>90</left>
@@ -97,7 +98,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
-					<label fallback="195">$INFO[ListItem.Title]</label>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
 					<left>1229</left>
@@ -105,7 +106,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ff505559</textcolor>
-					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
+					<label>$INFO[ListItem.Date]</label>
 				</control>
 			</itemlayout>
 			<focusedlayout height="70" width="1850">
@@ -115,6 +116,7 @@
 					<width>50</width>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center" align="left">keep</aspectratio>
+					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
 					<left>90</left>
@@ -156,7 +158,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
-					<label fallback="195">$INFO[ListItem.Title]</label>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 				</control>
 				<control type="label">
 					<left>1229</left>
@@ -165,7 +167,7 @@
 					<height>67</height>
 					<textcolor>ff505559</textcolor>
 					<scroll>false</scroll>
-					<label>$INFO[ListItem.Date]asdfasdf</label>
+					<label>$INFO[ListItem.Date]</label>
 				</control>
 			</focusedlayout>    
 		</control>
@@ -188,7 +190,7 @@
 					<font>Med48</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
-					<label>[CAPITALIZE]$VAR[PVRPath][/CAPITALIZE]  </label>
+					<label>[CAPITALIZE]$LOCALIZE[19040][/CAPITALIZE]  </label>
 				</control>
 				<control type="label">
 					<top>15</top>
@@ -255,7 +257,6 @@
 				<left>196</left>
 				<top>807</top>
 				<include>VisibleDelayFadeAnimation</include>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
 					<left>-10</left>
@@ -275,37 +276,20 @@
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(31)</visible>
 					</control>
-					<control id="33" type="button">
+					<control id="28" type="button">
 						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>59</onup>
 						<ondown>3000</ondown>
-						<onclick>ActivateWindow(tvguide)</onclick>
 						<font>Med24</font>
-						<label>$LOCALIZE[31545]</label>
+						<label>$LOCALIZE[19142]</label>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
-					</control>
-					<control id="30" type="button">
-						<width min="104" max="224">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>59</onup>
-						<ondown>3000</ondown>
-						<onclick>NextChannelGroup</onclick>
-						<font>Med24</font>
-						<label>[CAPITALIZE]$LOCALIZE[19141][CR]$VAR[PVRPath][/CAPITALIZE]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control id="32" type="button">
 						<width min="104" max="224">auto</width>
