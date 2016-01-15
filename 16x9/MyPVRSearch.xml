@@ -69,12 +69,21 @@
 					<textcolor>ff5b6064</textcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
 				</control>
+				<!-- Fake Bar -->
+				<control type="image">
+					<left>0</left>
+					<width>1920</width>
+					<height>67</height>
+					<texture border="5">pvr/epg_button_nf.png</texture>
+					<visible>IsEmpty(ListItem.Date)</visible>
+				</control>
 				<!-- Fake Progress -->
 				<control type="image">
 					<left>320</left>
 					<width>890</width>
 					<height>67</height>
 					<texture border="5">pvr/epg_button_nf.png</texture>
+					<visible>!IsEmpty(ListItem.Date)</visible>
 				</control>
 				<control type="image">
 					<left>320</left>
@@ -91,7 +100,7 @@
 					<width>720</width>
 					<height>67</height>
 					<texture border="5">pvr/epg_button_nf.png</texture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!IsEmpty(ListItem.Date)</visible>
 				</control>
 				<control type="label">
 					<left>335</left>
@@ -100,6 +109,7 @@
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]</label>
+					<animation effect="slide" time="0" end="-320" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>1229</left>
@@ -141,12 +151,21 @@
 					<label>$INFO[ListItem.ChannelName]</label>
 					<visible>Control.HasFocus(59)</visible>
 				</control>
+				<!-- Fake Bar -->
+				<control type="image">
+					<left>0</left>
+					<width>1920</width>
+					<height>67</height>
+					<texture border="5">pvr/epg_button_nf.png</texture>
+					<visible>IsEmpty(ListItem.Date)</visible>
+				</control>
 				<!-- Fake Progress -->
 				<control type="image">
 					<left>320</left>
 					<width>890</width>
 					<height>67</height>
 					<texture border="5">pvr/epg_button_nf.png</texture>
+					<visible>!IsEmpty(ListItem.Date)</visible>
 				</control>
 				<control type="image">
 					<left>320</left>
@@ -164,7 +183,7 @@
 					<height>67</height>
 					<texture border="5">pvr/epg_button_nf.png</texture>
 					<overlaytexture>-</overlaytexture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!IsEmpty(ListItem.Date)</visible>
 				</control>
 				<control type="label">
 					<left>335</left>
@@ -174,6 +193,7 @@
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 					<visible>!Control.HasFocus(59)</visible>
+					<animation effect="slide" time="0" end="-320" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>335</left>
@@ -183,6 +203,7 @@
 					<textcolor>ffFFC24B</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 					<visible>Control.HasFocus(59)</visible>
+					<animation effect="slide" time="0" end="-320" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>1229</left>
