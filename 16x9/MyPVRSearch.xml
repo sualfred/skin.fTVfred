@@ -126,8 +126,20 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<selectedcolor>ffFFC24B</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<visible>!Control.HasFocus(59)</visible>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<width>200</width>
+					<scroll>false</scroll>
+					<aligny>center</aligny>
+					<height>67</height>
+					<selectedcolor>ffFFC24B</selectedcolor>
 					<textcolor>ffFFC24B</textcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
+					<visible>Control.HasFocus(59)</visible>
 				</control>
 				<!-- Fake Progress -->
 				<control type="image">
@@ -159,8 +171,18 @@
 					<width>855</width>
 					<aligny>center</aligny>
 					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>!Control.HasFocus(59)</visible>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>855</width>
+					<aligny>center</aligny>
+					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>Control.HasFocus(59)</visible>
 				</control>
 				<control type="label">
 					<left>1229</left>
