@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="PVRTimeProgress">
+		<value condition="!IntegerGreaterThan(ListItem.Progress,5)">0</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,5) + !IntegerGreaterThan(ListItem.Progress,10)">10</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,10) + !IntegerGreaterThan(ListItem.Progress,15)">15</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,15) + !IntegerGreaterThan(ListItem.Progress,20)">20</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,20) + !IntegerGreaterThan(ListItem.Progress,25)">25</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,25) + !IntegerGreaterThan(ListItem.Progress,30)">30</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,30) + !IntegerGreaterThan(ListItem.Progress,35)">35</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,35) + !IntegerGreaterThan(ListItem.Progress,40)">40</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,40) + !IntegerGreaterThan(ListItem.Progress,45)">45</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,45) + !IntegerGreaterThan(ListItem.Progress,50)">50</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,50) + !IntegerGreaterThan(ListItem.Progress,55)">55</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,55) + !IntegerGreaterThan(ListItem.Progress,60)">60</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,60) + !IntegerGreaterThan(ListItem.Progress,65)">65</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,65) + !IntegerGreaterThan(ListItem.Progress,70)">70</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,70) + !IntegerGreaterThan(ListItem.Progress,75)">75</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,75) + !IntegerGreaterThan(ListItem.Progress,80)">80</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,80) + !IntegerGreaterThan(ListItem.Progress,85)">85</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,85) + !IntegerGreaterThan(ListItem.Progress,90)">90</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,90) + !IntegerGreaterThan(ListItem.Progress,95)">95</value>		
+		<value condition="IntegerGreaterThan(ListItem.Progress,95) + !IntegerGreaterThan(ListItem.Progress,100)">100</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,100)">100</value>
+	</variable>
 	<variable name="ftvWidgetLabel">
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),livetv)">$VAR[ftvLabelTV]</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),weather)">$VAR[ftvLabelWeather]</value>

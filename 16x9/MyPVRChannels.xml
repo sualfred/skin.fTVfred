@@ -68,25 +68,26 @@
 					<textcolor>ff5b6064</textcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
 				</control>
-				<!-- Progress -->
-				<control type="progress">
+				<!-- Fake Progress -->
+				<control type="image">
 					<left>320</left>
 					<width>890</width>
 					<height>67</height>
-					<texturebg border="5">pvr/epg_button_nf.png</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</midtexture>
-					<righttexture>-</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<info>ListItem.Progress</info>
+					<texture border="5">pvr/epg_button_nf.png</texture>
 				</control>
-				<!-- Fake Progress -->
+				<control type="image">
+					<left>320</left>
+					<width>890</width>
+					<height>67</height>
+					<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
+					<include>FakeProgressAnimation</include>
+				</control>
+				<!-- Fake Next Progress -->
 				<control type="image">
 					<left>1214</left>
 					<width>720</width>
 					<height>67</height>
 					<texture border="5">pvr/epg_button_nf.png</texture>
-					<overlaytexture>-</overlaytexture>
 				</control>
 				<control type="label">
 					<left>335</left>
@@ -123,19 +124,21 @@
 					<textcolor>ffFFC24B</textcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
 				</control>
-				<!-- Progress -->
-				<control type="progress">
+				<!-- Fake Progress -->
+				<control type="image">
 					<left>320</left>
 					<width>890</width>
 					<height>67</height>
-					<texturebg border="5">pvr/epg_button_nf.png</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</midtexture>
-					<righttexture>-</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<info>ListItem.Progress</info>
+					<texture border="5">pvr/epg_button_nf.png</texture>
 				</control>
-				<!-- Fake Progress -->
+				<control type="image">
+					<left>320</left>
+					<width>890</width>
+					<height>67</height>
+					<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
+					<include>FakeProgressAnimation</include>
+				</control>
+				<!-- Fake Next Progress -->
 				<control type="image">
 					<left>1214</left>
 					<width>720</width>
