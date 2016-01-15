@@ -241,7 +241,7 @@
                     <!-- Channels -->
                     <channellayout height="70" width="320">
                         <control type="label">
-                            <posx>90</posx>
+                            <left>90</left>
                             <width>200</width>
                             <aligny>center</aligny>
                             <height>67</height>
@@ -258,7 +258,7 @@
                     </channellayout>
                     <focusedchannellayout height="70" width="320">  
                         <control type="label">
-                            <posx>90</posx>
+                            <left>90</left>
                             <width>200</width>
                             <scroll>false</scroll>
                             <aligny>center</aligny>
@@ -281,26 +281,34 @@
                             <width>256</width>
                             <height>67</height>
                             <texture border="5">pvr/epg_button_nf.png</texture>
-                        </control> 
+                        </control>
                         <control type="image">
-                            <posy>6</posy>
+                            <top>6</top>
                             <width>52</width>
                             <height>52</height>
                             <texture>pvr/timer.png</texture>
                             <colordiffuse>White</colordiffuse>
-                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                        </control>   
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                        <control type="image">
+                            <top>6</top>
+                            <width>52</width>
+                            <height>52</height>
+                            <texture>pvr/rec.png</texture>
+                            <colordiffuse>ffFFC24B</colordiffuse>
+                            <visible>ListItem.IsRecording</visible>
+                        </control>
                         <control type="label" id="1">
-                            <posx>0</posx>
+                            <left>0</left>
                             <height>66</height>
                             <width>285</width>
                             <textoffsetx>50</textoffsetx>
                             <textcolor>White</textcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
                         </control>
                         <control type="label" id="1">
-                            <posx>15</posx>
+                            <left>15</left>
                             <width>226</width>
                             <height>67</height>
                             <textcolor>White</textcolor>
@@ -316,7 +324,7 @@
                             <texture border="5">pvr/epg_button_fo.png</texture>
                         </control> 
                         <control type="image">
-                            <posy>6</posy>
+                            <top>6</top>
                             <width>52</width>
                             <height>52</height>
                             <texture>pvr/timer.png</texture>
@@ -324,7 +332,7 @@
                             <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>   
                         <control type="label" id="1">
-                            <posx>0</posx>
+                            <left>0</left>
                             <height>66</height>
                             <width>285</width>
                             <textoffsetx>50</textoffsetx>
@@ -333,7 +341,7 @@
                             <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>
                         <control type="label" id="1">
-                            <posx>15</posx>
+                            <left>15</left>
                             <width>226</width>
                             <height>67</height>
                             <textcolor>ff222222</textcolor>
