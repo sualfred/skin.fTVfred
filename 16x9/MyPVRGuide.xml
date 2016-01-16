@@ -114,7 +114,7 @@
                             <width min="104" max="224">auto</width>
                             <wrapmultiline>true</wrapmultiline>
                             <height>100</height>
-                            <onup>59</onup>
+                            <onup>10</onup>
                             <ondown>3000</ondown>
                             <onclick>NextChannelGroup</onclick>
                             <font>Med24</font>
@@ -130,7 +130,7 @@
                             <width min="104" max="224">auto</width>
                             <wrapmultiline>true</wrapmultiline>
                             <height>100</height>
-                            <onup>59</onup>
+                            <onup>10</onup>
                             <ondown>3000</ondown>
                             <onclick>ActivateWindow(tvrecordings)</onclick>
                             <font>Med24</font>
@@ -142,8 +142,23 @@
                             <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
                             <visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
                         </control>
+                        <control id="34" type="button">
+                            <width min="104" max="224">auto</width>
+                            <wrapmultiline>true</wrapmultiline>
+                            <height>100</height>
+                            <onup>10</onup>
+                            <ondown>3000</ondown>
+                            <onclick>ActivateWindow(TVTimers)</onclick>
+                            <font>Med24</font>
+                            <label>$LOCALIZE[31548]</label>
+                            <textoffsetx>28</textoffsetx>
+                            <textcolor>ffdadada</textcolor>
+                            <focusedcolor>ff222222</focusedcolor>
+                            <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+                            <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+                            <visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
+                        </control>
                     </control>
-
                     <!-- title plot section -->
                     <control type="group">                    
                         <left>196</left>
@@ -180,7 +195,6 @@
                                 <visible>!StringCompare(ListItem.Genre,$LOCALIZE[19499])</visible>
                             </control>
                         </control>
-
                         <!-- Details -->
                         <control type="textbox">
                             <top>143</top>
@@ -211,12 +225,11 @@
                         </control>
                     </control>
                 </control>
-
                 <!-- Guide -->
                 <control type="epggrid" id="10" description="EPG">     
                     <left>198</left>
                     <top>280</top>
-                    <width>1850</width>
+                    <width>1722</width>
                     <height>490</height>
                     <onback>1001</onback>
                     <viewtype label="19069">list</viewtype>
