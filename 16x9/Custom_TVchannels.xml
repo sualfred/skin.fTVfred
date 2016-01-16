@@ -346,6 +346,22 @@
 							<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 							<visible>!StringCompare(Container(100).ListItem.Label,..)</visible>
 						</control>
+						<control id="34" type="button">
+							<width min="104" max="224">auto</width>
+							<wrapmultiline>true</wrapmultiline>
+							<height>100</height>
+							<onup>59</onup>
+							<ondown>3000</ondown>
+							<onclick>ActivateWindow(TVTimers)</onclick>
+							<font>Med24</font>
+							<label>$LOCALIZE[31548]</label>
+							<textoffsetx>28</textoffsetx>
+							<textcolor>ffdadada</textcolor>
+							<focusedcolor>ff222222</focusedcolor>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+							<visible>!StringCompare(Container(100).ListItem.Label,..)</visible>
+						</control>
 					</control>
 					<!-- Small Details -->
 					<control type="grouplist">

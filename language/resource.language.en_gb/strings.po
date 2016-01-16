@@ -1113,13 +1113,17 @@ msgid "Change widget name"
 msgstr ""
 
 msgctxt "#31545"
-msgid "Open TV-Guide"
+msgid "TV Guide"
 msgstr ""
 
 msgctxt "#31546"
-msgid "My recordings"
+msgid "TV recordings"
 msgstr ""
 
 msgctxt "#31547"
-msgid "Show all groups"
+msgid "All groups"
+msgstr ""
+
+msgctxt "#31548"
+msgid "TV timers"
 msgstr ""

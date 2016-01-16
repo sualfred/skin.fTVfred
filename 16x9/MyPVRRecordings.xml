@@ -35,7 +35,7 @@
                     <font>Med48</font>
                     <aligny>bottom</aligny>
                     <textcolor>ffdadada</textcolor>
-                    <label>Your Recordings  </label>
+                    <label>$LOCALIZE[31546]  </label>
                 </control>
                 <control type="label">
                     <top>15</top>
