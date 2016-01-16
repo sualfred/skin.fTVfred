@@ -137,31 +137,55 @@
                         <texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
                     </control>
                 </control>
+                <!-- Small Details -->
+                <control type="grouplist">
+                    <top>110</top>
+                    <height>26</height>
+                    <itemgap>10</itemgap>
+                    <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>24</height>
+                        <font>Med24Num</font>
+                        <aligny>bottom</aligny>
+                        <textcolor>ffFFC24B</textcolor>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>24</height>
+                        <font>Med24Num</font>
+                        <aligny>bottom</aligny>
+                        <textcolor>ffbebebe</textcolor>
+                        <label>$INFO[ListItem.Duration]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>24</height>
+                        <font>Med24Num</font>
+                        <aligny>bottom</aligny>
+                        <textcolor>ffbebebe</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                        <visible>!StringCompare(ListItem.Genre,$LOCALIZE[19499])</visible>
+                    </control>
+                </control>
                 <!-- Details -->
                 <control type="textbox">
-                    <top>107</top>
+                    <top>143</top>
                     <width>1192</width>
-                    <height>120</height>
+                    <height>84</height>
                     <align>left</align>
-                    <font>Light32</font>
-                    <pagecontrol>96</pagecontrol>
+                    <font>Reg30Spaced</font>
+                    <pagecontrol>99</pagecontrol>
                     <autoscroll>false</autoscroll>
                     <textcolor>ffbcbcbc</textcolor>
-                    <label>[COLOR 00ffffff][B]$INFO[ListItem.Label,,---][/B][/COLOR]$INFO[ListItem.Label2]</label>
+                    <label>[B]$INFO[ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
                 </control>
-                <control type="textbox">
-                    <top>97</top>
+                <control id="99" type="scrollbar">
+                    <top>103</top>
                     <width>1192</width>
-                    <height>120</height>
-                    <align>left</align>
-                    <font>Bold32</font>
-                    <textcolor>ffbcbcbc</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control id="96" type="scrollbar">
-                    <top>105</top>
-                    <width>1192</width>
-                    <height>120</height>
+                    <height>126</height>
                     <showonepage>false</showonepage>
                     <orientation>vertical</orientation>
                 </control>
@@ -171,25 +195,26 @@
                     <top>192</top>
                     <width>37</width>
                     <height>23</height>
-                    <onup>1000</onup>
+                    <onup>50</onup>
                     <ondown>noop</ondown>
                     <onleft>50</onleft>
                     <onright>50</onright>
-                    <onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$INFO[ListItem.Label2]"')</onclick>
-                    <visible>Control.IsVisible(96)</visible>
+                    <onclick>SetProperty(OpenTextViewer,1,home)</onclick>
+                    <onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[Plot]"')</onclick>
+                    <visible>Control.IsVisible(99)</visible>
                     <texturefocus>views/more_fo.png</texturefocus>
                     <texturenofocus>views/more_nf.png</texturenofocus>
                     <visible>!Window.IsVisible(textviewer)</visible>
                 </control>
-                    <!-- More button -->
-                    <control type="image">
-                        <left>1194</left>
-                        <top>192</top>
-                        <width>37</width>
-                        <height>23</height>
-                        <texture>views/more_nf.png</texture>
-                        <visible>Window.IsVisible(textviewer)</visible>
-                    </control>
+                <!-- More button -->
+                <control type="image">
+                    <left>1194</left>
+                    <top>192</top>
+                    <width>37</width>
+                    <height>23</height>
+                    <texture>views/more_nf.png</texture>
+                    <visible>Window.IsVisible(textviewer)</visible>
+                </control>
             </control>
         </control>
         <!-- Background -->

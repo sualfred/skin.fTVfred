@@ -97,6 +97,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffffffff</selectedcolor>
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
@@ -106,6 +107,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffffffff</selectedcolor>
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 				</control>
@@ -133,6 +135,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ff505559</textcolor>
+					<selectedcolor>ff505559</selectedcolor>
 					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
 				</control>
 			</itemlayout>
@@ -196,6 +199,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
+					<selectedcolor>ffFFC24B</selectedcolor>
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
@@ -205,6 +209,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffFFC24B</selectedcolor>
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
@@ -214,6 +219,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
+					<selectedcolor>ffFFC24B</selectedcolor>
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 				</control>
@@ -223,6 +229,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffFFC24B</selectedcolor>
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 				</control>
@@ -250,6 +257,7 @@
 					<aligny>center</aligny>
 					<height>67</height>
 					<textcolor>ff505559</textcolor>
+					<selectedcolor>ff505559</selectedcolor>
 					<scroll>false</scroll>
 					<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
 				</control>

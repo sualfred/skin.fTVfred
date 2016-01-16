@@ -10,11 +10,11 @@
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
 			<width>1337</width>
-			<height>480</height>
+			<height>564</height>
 			<control type="image">
 				<width>1337</width>
-				<height>480</height>
-				<texture>dialogs/network_back.png</texture>
+				<height>564</height>
+				<texture>dialogs/PVRGuideInfo_Back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label">
@@ -31,7 +31,7 @@
 			<control type="grouplist" id="5">
 				<top>60</top>
 				<width>937</width>
-				<height>420</height>
+				<height>504</height>
 				<itemgap>0</itemgap>
 				<onleft>noop</onleft>
 				<onright>9001</onright>

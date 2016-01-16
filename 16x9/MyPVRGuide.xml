@@ -305,7 +305,7 @@
                             <textoffsetx>50</textoffsetx>
                             <textcolor>White</textcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>
                         <control type="label" id="1">
                             <left>15</left>
@@ -328,8 +328,16 @@
                             <width>52</width>
                             <height>52</height>
                             <texture>pvr/timer.png</texture>
-                            <colordiffuse>White</colordiffuse>
-                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                            <colordiffuse>ff222222</colordiffuse>
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>   
+                        <control type="image">
+                            <top>6</top>
+                            <width>52</width>
+                            <height>52</height>
+                            <texture>pvr/rec.png</texture>
+                            <colordiffuse>ff222222</colordiffuse>
+                            <visible>ListItem.IsRecording</visible>
                         </control>   
                         <control type="label" id="1">
                             <left>0</left>

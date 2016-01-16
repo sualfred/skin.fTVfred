@@ -55,15 +55,8 @@
 			<itemlayout height="70" width="1850">
 				<!-- Button layouts -->
 				<control type="group">					
-					<visible>IsEmpty(ListItem.Date)</visible>					
-					<control type="image">
-						<left>0</left>
-						<width>315</width>
-						<height>67</height>
-						<texture border="5">pvr/epg_button_nf.png</texture>
-					</control>
+					<visible>IsEmpty(ListItem.Date)</visible>
 					<control type="label">
-						<left>15</left>
 						<width>285</width>
 						<aligny>center</aligny>
 						<height>67</height>
@@ -118,6 +111,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ffffffff</textcolor>
+						<selectedcolor>ffffffff</selectedcolor>
 						<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
@@ -127,6 +121,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ffffffff</textcolor>
+						<selectedcolor>ffffffff</selectedcolor>
 						<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 					</control>
@@ -154,6 +149,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ff505559</textcolor>
+						<selectedcolor>ff505559</selectedcolor>
 						<label>$INFO[ListItem.StartDate,, ]$INFO[ListItem.StartTime]</label>
 					</control>
 				</control>
@@ -161,15 +157,8 @@
 			<focusedlayout height="70" width="1850">
 				<!-- Button layouts -->
 				<control type="group">					
-					<visible>IsEmpty(ListItem.Date)</visible>					
-					<control type="image">
-						<left>0</left>
-						<width>315</width>
-						<height>67</height>
-						<texture border="5">pvr/epg_button_nf.png</texture>
-					</control>
+					<visible>IsEmpty(ListItem.Date)</visible>
 					<control type="label">
-						<left>15</left>
 						<width>285</width>
 						<aligny>center</aligny>
 						<height>67</height>
@@ -178,7 +167,6 @@
 						<visible>!Control.HasFocus(59)</visible>
 					</control>
 					<control type="label">
-						<left>15</left>
 						<width>855</width>
 						<aligny>center</aligny>
 						<height>67</height>
@@ -248,6 +236,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
 						<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						<visible>Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
@@ -257,6 +246,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ffffffff</textcolor>
+						<selectedcolor>ffffffff</selectedcolor>
 						<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						<visible>!Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
@@ -266,6 +256,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
 						<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						<visible>Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 					</control>
@@ -275,6 +266,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ffffffff</textcolor>
+						<selectedcolor>ffffffff</selectedcolor>
 						<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						<visible>!Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 					</control>
@@ -302,6 +294,7 @@
 						<aligny>center</aligny>
 						<height>67</height>
 						<textcolor>ff505559</textcolor>
+						<selectedcolor>ff505559</selectedcolor>
 						<label>$INFO[ListItem.StartDate,, ]$INFO[ListItem.StartTime]</label>
 					</control>
 				</control>				
