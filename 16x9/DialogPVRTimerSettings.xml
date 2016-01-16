@@ -24,7 +24,7 @@
 				<width>937</width>
 				<aligny>center</aligny>
 				<font>Bold30</font>
-				<label>19142</label>
+				<label>$LOCALIZE[19061]</label>
 				<textcolor>ffdadada</textcolor>
 			</control>
 			<!-- Grouplist -->

@@ -1104,4 +1104,4 @@ msgstr "Alle Gruppen"
 
 msgctxt "#31548"
 msgid "TV timers"
-msgstr "TV Timer"
+msgstr "TV Timers"

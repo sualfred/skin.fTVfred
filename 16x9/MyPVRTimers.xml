@@ -405,6 +405,22 @@
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(28)</visible>
 					</control>
+					<control id="30" type="button">
+						<width min="104" max="224">auto</width>
+						<wrapmultiline>true</wrapmultiline>
+						<height>100</height>
+						<onup>59</onup>
+						<ondown>3000</ondown>
+						<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
+						<onclick>ActivateWindow(tvguide)</onclick>
+						<font>Med24</font>
+						<label>$LOCALIZE[31545]</label>
+						<textoffsetx>28</textoffsetx>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ff222222</focusedcolor>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+					</control>
 					<control id="28" type="button">
 						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
