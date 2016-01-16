@@ -14,7 +14,7 @@
 			<control type="image">
 				<width>1337</width>
 				<height>564</height>
-				<texture>dialogs/PVRGuideInfo_Back.png</texture>
+				<texture>dialogs/pvr_dialog_back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label">
