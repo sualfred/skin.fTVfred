@@ -11,7 +11,7 @@
         <!-- Fanart -->
         <include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
         <!-- Views -->
-        <!--<include>Viewtype50</include>-->
+        <include>Viewtype50</include>
         <include>Viewtype51</include>
         <include>Viewtype52</include>
         <include>Viewtype53</include>

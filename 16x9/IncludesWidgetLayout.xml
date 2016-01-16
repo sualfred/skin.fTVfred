@@ -80,7 +80,7 @@
 			</control>
 			<control type="group">
 				<left>604</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -155,7 +155,7 @@
 			</control>
 			<control type="group">
 				<left>935</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -230,7 +230,7 @@
 			</control>
 			<control type="group">
 				<left>1266</left>
-				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel4))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -386,7 +386,7 @@
 			</control>
 			<control type="group">
 				<left>604</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -462,7 +462,7 @@
 			</control>
 			<control type="group">
 				<left>935</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -538,7 +538,7 @@
 			</control>
 			<control type="group">
 				<left>1266</left>
-				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel4))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -655,7 +655,7 @@
 			</control>
 			<control type="group">
 				<left>604</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -691,7 +691,7 @@
 			</control>
 			<control type="group">
 				<left>935</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -727,7 +727,7 @@
 			</control>
 			<control type="group">
 				<left>1266</left>
-				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel4))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -805,7 +805,7 @@
 			</control>
 			<control type="group">
 				<left>604</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -842,7 +842,7 @@
 			</control>
 			<control type="group">
 				<left>935</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -879,7 +879,7 @@
 			</control>
 			<control type="group">
 				<left>1266</left>
-				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel4))</visible>
 				<control type="image">
 					<width>318</width>
 					<height>334</height>
@@ -955,7 +955,7 @@
 			</control>
 			<control type="group">
 				<left>501</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -989,7 +989,7 @@
 			</control>
 			<control type="group">
 				<left>729</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1023,7 +1023,7 @@
 			</control>
 			<control type="group">
 				<left>957</left>
-				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel4))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1057,7 +1057,7 @@
 			</control>
 			<control type="group">
 				<left>1185</left>
-				<visible>!IsEmpty(ListItem.Property(Icon5))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel5))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1091,7 +1091,7 @@
 			</control>
 			<control type="group">
 				<left>1413</left>
-				<visible>!IsEmpty(ListItem.Property(Icon6))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel6))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1165,7 +1165,7 @@
 			</control>
 			<control type="group">
 				<left>501</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1200,7 +1200,7 @@
 			</control>
 			<control type="group">
 				<left>729</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1235,7 +1235,7 @@
 			</control>
 			<control type="group">
 				<left>957</left>
-				<visible>!IsEmpty(ListItem.Property(Icon4))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel4))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1270,7 +1270,7 @@
 			</control>
 			<control type="group">
 				<left>1185</left>
-				<visible>!IsEmpty(ListItem.Property(Icon5))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel5))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1305,7 +1305,7 @@
 			</control>
 			<control type="group">
 				<left>1413</left>
-				<visible>!IsEmpty(ListItem.Property(Icon6))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel6))</visible>
 				<control type="image">
 					<width>215</width>
 					<height>334</height>
@@ -1407,7 +1407,7 @@
 			</control>
 			<control type="group">
 				<left>707</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>423</width>
 					<height>334</height>
@@ -1469,7 +1469,7 @@
 			</control>
 			<control type="group">
 				<left>1141</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>423</width>
 					<height>334</height>
@@ -1600,7 +1600,7 @@
 			</control>
 			<control type="group">
 				<left>707</left>
-				<visible>!IsEmpty(ListItem.Property(Icon2))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel2))</visible>
 				<control type="image">
 					<width>423</width>
 					<height>334</height>
@@ -1664,7 +1664,7 @@
 			</control>
 			<control type="group">
 				<left>1141</left>
-				<visible>!IsEmpty(ListItem.Property(Icon3))</visible>
+				<visible>!IsEmpty(ListItem.Property(InfoLabel3))</visible>
 				<control type="image">
 					<width>423</width>
 					<height>334</height>
