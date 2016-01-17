@@ -359,7 +359,7 @@
 					<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, silent=true, clearlogo)</onclick>
 					<visible>Skin.HasSetting(WideTVShowArt)</visible>
 				</control>
-				<control id="17" type="radiobutton">
+				<control id="20" type="radiobutton">
 					<width>958</width>
 					<height>84</height>
 					<font>Light32</font>
