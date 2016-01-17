@@ -29,7 +29,6 @@
 		<shortcut label="31507" icon="ftv_icon.png" widget="widget8">widget8</shortcut>
 	</widget-groupings>
 	<groupings>
-		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
 		<node label="fTV">
 			<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
 			<node label="342">
@@ -81,8 +80,7 @@
 				<shortcut label="19217" type="livetv" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/1,return)</shortcut>
 				<shortcut label="19017" type="livetv" icon="ftv_icon.png">ActivateWindow(tvrecordings,pvr://recordings/active,return)</shortcut>
 			</node>
-		</node>
-		<node label="32029">
+		</node><node label="32029">
 			<content>common</content>
 		</node>
 		<node label="32030">
@@ -164,6 +162,7 @@
 		<node label="32054">
 			<content>commands</content>
 		</node>
+		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>-->
 	</groupings>
 
 	
