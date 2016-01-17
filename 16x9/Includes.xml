@@ -84,6 +84,18 @@
 			</control>
 		</control>
 	</include>
+	<!-- PVR Fanart -->
+	<include name="PVRFanart">
+		<control type="group">
+			<animation condition="!Window.Previous(visualisation)" delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<fadetime>400</fadetime>
+				<colordiffuse>0effffff</colordiffuse>
+				<texture background="true">$VAR[Fanart]</texture>
+			</control>
+		</control>
+	</include>
 	<!-- No textures -->
 	<include name="NoTextures">
 		<texturefocus>-</texturefocus>

@@ -7,7 +7,18 @@
 	<onunload>Control.Move(100,1)</onunload>
 	<!-- workaround animation for focusing the first item -->
 	<animation effect="fade" start="100" end="100" time="1">WindowClose</animation>
-	<controls>
+	<controls>		
+		<!-- Fanart -->
+		<control type="group">
+			<animation condition="!Window.Previous(visualisation)" delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<fadetime>400</fadetime>
+				<colordiffuse>26ffffff</colordiffuse>
+				<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(100).Listitem.Title]&amp;channel=$INFO[Container(100).ListItem.ChannelName]&amp;type=fanart</texture>
+				<visible>Skin.HasSetting(EnableFanart)</visible>
+			</control>
+		</control>
 		<control type="group">
 			<!-- pvr channels list -->
 			<control id="100" type="fixedlist">
@@ -90,14 +101,6 @@
 							<height>480</height>
 							<texture>views/OverlayNF.png</texture>
 						</control>
-						<control type="image">
-							<left>17</left>
-							<top>419</top>
-							<width>62</width>
-							<height>62</height>
-							<texture>views/equaliser.gif</texture>
-							<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
-						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="576" width="436">
@@ -162,14 +165,6 @@
 							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
 							<animation center="auto" condition="Control.HasFocus(100)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 						</control>
-						<control type="image">
-							<left>17</left>
-							<top>419</top>
-							<width>62</width>
-							<height>62</height>
-							<texture>views/equaliser.gif</texture>
-							<visible>Player.Playing + VideoPlayer.Content(livetv) + StringCompare(VideoPlayer.ChannelName,ListItem.ChannelName)</visible>
-						</control>
 						<!-- Progress -->
 						<control type="progress">
 							<left>3</left>
@@ -188,7 +183,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content>pvr://channels/tv/1</content>
+				<content>pvr://channels/tv/all channels/</content>
 			</control>
 			<control type="group">
 				<include>VisibleDelayFadeAnimation</include>
@@ -382,7 +377,7 @@
 							<font>Med24Num</font>
 							<aligny>bottom</aligny>
 							<textcolor>ffbebebe</textcolor>
-							<label>$INFO[Container(100).ListItem.StartTime,,,  •  ]$INFO[Container(100).ListItem.EndTime, - ,]</label>
+							<label>$INFO[Container(100).ListItem.StartTime]$INFO[Container(100).ListItem.EndTime, - ,]</label>
 						</control>
 						<control type="label">
 							<width>auto</width>

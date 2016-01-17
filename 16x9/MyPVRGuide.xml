@@ -3,10 +3,12 @@
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0xff12161b</backgroundcolor>
     <defaultcontrol always="true">10</defaultcontrol>
-    <views>10,11,12,13</views>
+    <views>10</views>
     <controls> 
         <control type="group" id="50">
             <control type="group">
+                <!-- Fanart -->
+                <include condition="Skin.HasSetting(EnableFanart)">PVRFanart</include>
                 <visible>Control.IsVisible(10)</visible>
                 <height>1080</height>
                 <!-- Title -->

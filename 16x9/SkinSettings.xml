@@ -400,7 +400,8 @@
 					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<onclick>Skin.ToggleSetting(EnableFanart)</onclick>
+					<onclick>Skin.ToggleSetting(EnableFanart)</onclick>					
+					<onclick condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.ToggleSetting(SkinHelper.EnablePVRThumbs)</onclick>
 					<selected>Skin.HasSetting(EnableFanart)</selected>
 				</control>
 				<control id="16" type="button">

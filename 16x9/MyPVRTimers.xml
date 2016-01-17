@@ -6,6 +6,8 @@
 	<defaultcontrol always="true">59</defaultcontrol>
 	<views>59</views>
 	<controls>
+		<!-- Fanart -->
+		<include condition="Skin.HasSetting(EnableFanart)">PVRFanart</include>
 		<!-- Channels -->
 		<control type="group">
 			<left>198</left>

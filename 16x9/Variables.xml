@@ -1819,6 +1819,8 @@
 		<value>$INFO[Player.Duration(mm:ss)]</value>
 	</variable>
 	<variable name="Fanart">
+		<value condition="Window.IsActive(1106)">$INFO[Container(100).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
 		<value condition="[Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
