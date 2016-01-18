@@ -173,14 +173,14 @@
 				<height>377</height>
 				<aspectratio align="center">scale</aspectratio>
 				<texture>views/episode_fallback.png</texture>
-				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !IntegerGreaterThan(Control.GetLabel(3018),0)</visible>
+				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !IntegerGreaterThan(Control.GetLabel(4018),0)</visible>
 			</control>
 			<control type="image">
 				<top>56</top>
 				<width>90</width>
 				<height>90</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(Control.GetLabel(3011),719)</visible>
+				<visible>IntegerGreaterThan(Control.GetLabel(4011),719)</visible>
 			</control>
 			<control type="image">
 				<top>156</top>
@@ -217,7 +217,7 @@
 				<font>Med24</font>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
-				<label>$INFO[Control.GetLabel(3015),$LOCALIZE[20373] ], $INFO[Control.GetLabel(3016),Ep. ]</label>
+				<label>$INFO[Control.GetLabel(4008),$LOCALIZE[20373] ], $INFO[Control.GetLabel(4009),Ep. ]</label>
 				<animation delay="560" easing="inout" effect="slide" end="0,9" reversible="false" start="0,0" time="220" tween="sine">WindowOpen</animation>
 			</control>
 		</control>
