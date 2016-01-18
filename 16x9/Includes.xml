@@ -389,67 +389,6 @@
 			<visible>!IsEmpty(ListItem.Mpaa) + SubString(ListItem.Mpaa,y7)</visible>
 		</control>
 	</include>
-	<!-- Fake Keyboard buttons -->
-	<include name="FakeKeyboardButtons">
-		<width>78</width>
-		<height>78</height>
-		<font>Med40</font>
-		<align>center</align>
-		<aligny>center</aligny>
-		<textcolor>ffdadada</textcolor>
-		<focusedcolor>ff0c0c0c</focusedcolor>
-		<texturefocus border="2">dialogs/KeyboardButtonFO.png</texturefocus>
-		<texturenofocus border="2">dialogs/KeyboardButtonNF.png</texturenofocus>
-	</include>
-	<!-- Fake Keyboard row -->
-	<include name="FakeKeyBoardRow">
-		<param name="Top" default="0"/>
-		<definition>
-			<control type="grouplist">
-				<top>$PARAM[Top]</top>
-				<width>1068</width>
-				<height>78</height>
-				<itemgap>12</itemgap>
-				<orientation>horizontal</orientation>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-				<control type="button">
-					<include>FakeKeyboardButtons</include>
-				</control>
-			</control>
-		</definition>
-	</include>
 	<!-- Small Keyboard buttons -->
 	<include name="SmallKeyboardButtons">
 		<width>48</width>
