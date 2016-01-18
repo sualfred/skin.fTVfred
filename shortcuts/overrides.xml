@@ -184,6 +184,9 @@
 	<widgetdefault defaultID="livetv">livetv</widgetdefault>
 	<widgetdefault defaultID="weather">weather</widgetdefault>
 	<widgetdefault defaultID="favourites">favourites</widgetdefault>
+	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
+	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>
+	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
 
 
 </overrides>
