@@ -6,19 +6,10 @@
 	<include file="ParametersHomeWidgets.xml" />
 	<include file="IncludesWidgetLayout.xml" />
 	<include file="IncludesWidgets.xml" />
+	<include file="ViewTypes.xml" />
+	<include file="IncludesViewTypes.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Includes_Keyboard.xml" />
-	<include file="Viewtype50.xml" />
-	<include file="Viewtype51.xml" />
-	<include file="Viewtype52.xml" />
-	<include file="Viewtype53.xml" />
-	<include file="Viewtype54.xml" />
-	<include file="Viewtype55.xml" />
-	<include file="Viewtype56.xml" />
-	<include file="Viewtype57.xml" />
-	<include file="Viewtype59.xml" />
-	<include file="ForcedViewtype60.xml" />
-	<include file="ForcedViewtype61.xml" />
 	<include file="Variables.xml" />
 	<!-- Fullscreen dimensions -->
 	<include name="FullscreenDimensions">

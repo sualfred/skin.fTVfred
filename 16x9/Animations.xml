@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<!--ViewType bounce animation-->
+	<include name="ViewTypeBounceAnimation">
+		<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
+			<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
+			<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
+		</animation>
+	</include>
 	<!-- PVR Fake Progress Animation -->	
 	<include name="FakeProgressAnimation">
 		<animation reversible="false" effect="zoom" start="0,100" end="0,100" center="$PARAM[posx],0" time="0" condition="!IntegerGreaterThan(ListItem.Progress,2)">Conditional</animation>
