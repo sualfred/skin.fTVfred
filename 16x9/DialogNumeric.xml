@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- virtualkeyboard -->
-	<defaultcontrol always="true">1000</defaultcontrol>
+	<defaultcontrol always="true">21</defaultcontrol>
 	<controls>
-		<!-- Background -->		
+		<!-- Background -->
 		<control type="group">
 			<include>DialogBackgroundImage</include>
 			<visible>!Window.IsVisible(virtualkeyboard)</visible>
@@ -12,10 +12,9 @@
 		<control type="group">
 			<top>-34</top>
 			<width>1920</width>
-			<height>740</height>			
+			<height>740</height>
 			<animation easing="inout" effect="slide" end="0,0" start="0,-444" time="120" tween="sine">WindowOpen</animation>
 			<animation easing="inout" effect="slide" end="0,0" start="0,-444" time="120" tween="sine">WindowOpen</animation>
-
 			<!-- Background -->
 			<control type="image">
 				<centerleft>50%</centerleft>
@@ -23,13 +22,11 @@
 				<height>444</height>
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
 			</control>
-			
 			<!-- Control group -->
-			<control type="group">				
+			<control type="group">
 				<top>48</top>
 				<width>868</width>
 				<centerleft>50%</centerleft>
-				
 				<!-- Icon -->
 				<control type="image">
 					<top>10</top>
@@ -37,7 +34,6 @@
 					<height>111</height>
 					<texture border="4">dialogs/keyboard_number_icon.png</texture>
 				</control>
-
 				<!-- Heading -->
 				<control type="label">
 					<left>132</left>
@@ -48,7 +44,7 @@
 					<textcolor>fff4f4f4</textcolor>
 					<label>31524</label>
 				</control>
-				<control  id="1" type="label">
+				<control id="1" type="label">
 					<left>132</left>
 					<top>56</top>
 					<width>736</width>
@@ -57,7 +53,6 @@
 					<textcolor>ff7f7f7f</textcolor>
 					<label>$LOCALIZE[16028]</label>
 				</control>
-
 				<!-- Edit -->
 				<control id="4" type="label">
 					<left>7</left>
@@ -65,14 +60,13 @@
 					<width>788</width>
 					<height>48</height>
 					<onup>4000</onup>
-					<onright>21</onright>			
+					<onright>21</onright>
 					<onclick>21</onclick>
 					<font>Light39</font>
 					<align>left</align>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ffffc24b</focusedcolor>
 				</control>
-
 				<!-- Edit Text line -->
 				<control type="image">
 					<top>259</top>
@@ -82,25 +76,23 @@
 					<colordiffuse>ff7f7f7f</colordiffuse>
 					<texture>dialogs/KeyboardEditLine.png</texture>
 				</control>
-
 				<!-- Keys -->
 				<control type="group">
-					<top>171</top>	
+					<top>171</top>
 					<!-- Control buttons edit field -->
 					<control id="6000" type="grouplist">
 						<top>120</top>
 						<width>868</width>
 						<height>44</height>
 						<itemgap>12</itemgap>
-						<onup>2000</onup>
 						<align>right</align>
-						<orientation>horizontal</orientation>						
+						<orientation>horizontal</orientation>
 						<control id="21" type="button">
-							<onup>2000</onup>
+							<onup>11</onup>
 							<include name="BottomControlButtons">
 								<param name="name">enter</param>
 							</include>
-						</control>		
+						</control>
 					</control>
 					<!-- Rows -->
 					<control type="group">
@@ -110,7 +102,8 @@
 							<width>788</width>
 							<height>48</height>
 							<itemgap>12</itemgap>
-							<onright>20</onright>							
+							<onleft>noop</onleft>
+							<onright>20</onright>
 							<align>left</align>
 							<orientation>horizontal</orientation>
 							<!-- '1' -->
@@ -142,7 +135,8 @@
 								<ondown>21</ondown>
 								<label>12315</label>
 								<include>SmallKeyboardButtons</include>
-							</control><!-- '6' -->
+							</control>
+							<!-- '6' -->
 							<control id="16" type="button">
 								<ondown>21</ondown>
 								<label>12316</label>
@@ -178,7 +172,8 @@
 							<width>868</width>
 							<height>48</height>
 							<itemgap>12</itemgap>
-							<onleft>10</onleft>			
+							<onleft>10</onleft>
+							<onright>noop</onright>
 							<align>right</align>
 							<orientation>horizontal</orientation>
 							<!-- 'previous' -->
@@ -215,9 +210,7 @@
 							</control>
 						</control>
 					</control>
-
 				</control>
-
 			</control>
 		</control>
 	</controls>
