@@ -55,6 +55,7 @@
 					</control>
 					<include>HomePosterItemlayout</include>
 					<include>HomeWideItemlayout</include>
+					<include>HomeWideEpisodeItemlayout</include>
 					<include>HomeSquareItemlayout</include>
 					<include>HomeSquareInfoItemlayout</include>
 				</itemlayout>
@@ -122,6 +123,7 @@
 						</control>
 						<include>HomePosterFocusedlayout</include>
 						<include>HomeWideFocusedlayout</include>
+						<include>HomeWideEpisodeFocusedlayout</include>
 						<include>HomeSquareFocusedlayout</include>
 						<include>HomeSquareInfoFocusedlayout</include>
 					</control>
@@ -131,6 +133,7 @@
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
 						<include>HomePosterFocusedlayout</include>
 						<include>HomeWideFocusedlayout</include>
+						<include>HomeWideEpisodeFocusedlayout</include>
 						<include>HomeSquareFocusedlayout</include>
 						<include>HomeSquareInfoFocusedlayout</include>
 					</control>

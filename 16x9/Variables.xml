@@ -228,386 +228,482 @@
 	<variable name="1000-orderby-1">
 		<value condition="SubString(Skin.String(1000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-2">
 		<value condition="SubString(Skin.String(1000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-3">
 		<value condition="SubString(Skin.String(1000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-4">
 		<value condition="SubString(Skin.String(1000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-5">
 		<value condition="SubString(Skin.String(1000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-6">
 		<value condition="SubString(Skin.String(1000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-7">
 		<value condition="SubString(Skin.String(1000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="1000-orderby-8">
 		<value condition="SubString(Skin.String(1000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(1000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(1000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-1">
 		<value condition="SubString(Skin.String(2000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-2">
 		<value condition="SubString(Skin.String(2000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-3">
 		<value condition="SubString(Skin.String(2000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-4">
 		<value condition="SubString(Skin.String(2000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-5">
 		<value condition="SubString(Skin.String(2000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-6">
 		<value condition="SubString(Skin.String(2000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-7">
 		<value condition="SubString(Skin.String(2000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="2000-orderby-8">
 		<value condition="SubString(Skin.String(2000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(2000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(2000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-1">
 		<value condition="SubString(Skin.String(3000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-2">
 		<value condition="SubString(Skin.String(3000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-3">
 		<value condition="SubString(Skin.String(3000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-4">
 		<value condition="SubString(Skin.String(3000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-5">
 		<value condition="SubString(Skin.String(3000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-6">
 		<value condition="SubString(Skin.String(3000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-7">
 		<value condition="SubString(Skin.String(3000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="3000-orderby-8">
 		<value condition="SubString(Skin.String(3000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(3000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(3000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-1">
 		<value condition="SubString(Skin.String(4000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-2">
 		<value condition="SubString(Skin.String(4000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-3">
 		<value condition="SubString(Skin.String(4000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-4">
 		<value condition="SubString(Skin.String(4000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-5">
 		<value condition="SubString(Skin.String(4000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-6">
 		<value condition="SubString(Skin.String(4000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-7">
 		<value condition="SubString(Skin.String(4000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="4000-orderby-8">
 		<value condition="SubString(Skin.String(4000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(4000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(4000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-1">
 		<value condition="SubString(Skin.String(5000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-2">
 		<value condition="SubString(Skin.String(5000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-3">
 		<value condition="SubString(Skin.String(5000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-4">
 		<value condition="SubString(Skin.String(5000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-5">
 		<value condition="SubString(Skin.String(5000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-6">
 		<value condition="SubString(Skin.String(5000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-7">
 		<value condition="SubString(Skin.String(5000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="5000-orderby-8">
 		<value condition="SubString(Skin.String(5000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(5000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(5000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-1">
 		<value condition="SubString(Skin.String(6000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-2">
 		<value condition="SubString(Skin.String(6000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-3">
 		<value condition="SubString(Skin.String(6000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-4">
 		<value condition="SubString(Skin.String(6000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-5">
 		<value condition="SubString(Skin.String(6000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-6">
 		<value condition="SubString(Skin.String(6000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-7">
 		<value condition="SubString(Skin.String(6000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="6000-orderby-8">
 		<value condition="SubString(Skin.String(6000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(6000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(6000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-1">
 		<value condition="SubString(Skin.String(7000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-2">
 		<value condition="SubString(Skin.String(7000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-3">
 		<value condition="SubString(Skin.String(7000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-4">
 		<value condition="SubString(Skin.String(7000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-5">
 		<value condition="SubString(Skin.String(7000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-6">
 		<value condition="SubString(Skin.String(7000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-7">
 		<value condition="SubString(Skin.String(7000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="7000-orderby-8">
 		<value condition="SubString(Skin.String(7000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(7000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(7000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-1">
 		<value condition="SubString(Skin.String(8000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-2">
 		<value condition="SubString(Skin.String(8000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-3">
 		<value condition="SubString(Skin.String(8000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-4">
 		<value condition="SubString(Skin.String(8000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-5">
 		<value condition="SubString(Skin.String(8000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-6">
 		<value condition="SubString(Skin.String(8000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-7">
 		<value condition="SubString(Skin.String(8000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="8000-orderby-8">
 		<value condition="SubString(Skin.String(8000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(8000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(8000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-1">
 		<value condition="SubString(Skin.String(9000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-2">
 		<value condition="SubString(Skin.String(9000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-3">
 		<value condition="SubString(Skin.String(9000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-4">
 		<value condition="SubString(Skin.String(9000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-5">
 		<value condition="SubString(Skin.String(9000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-6">
 		<value condition="SubString(Skin.String(9000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-7">
 		<value condition="SubString(Skin.String(9000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="9000-orderby-8">
 		<value condition="SubString(Skin.String(9000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(9000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(9000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-1">
 		<value condition="SubString(Skin.String(10000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-2">
 		<value condition="SubString(Skin.String(10000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-3">
 		<value condition="SubString(Skin.String(10000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-4">
 		<value condition="SubString(Skin.String(10000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-5">
 		<value condition="SubString(Skin.String(10000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-6">
 		<value condition="SubString(Skin.String(10000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-7">
 		<value condition="SubString(Skin.String(10000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="10000-orderby-8">
 		<value condition="SubString(Skin.String(10000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(10000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(10000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-1">
 		<value condition="SubString(Skin.String(11000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-2">
 		<value condition="SubString(Skin.String(11000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-3">
 		<value condition="SubString(Skin.String(11000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-4">
 		<value condition="SubString(Skin.String(11000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-5">
 		<value condition="SubString(Skin.String(11000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-6">
 		<value condition="SubString(Skin.String(11000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-7">
 		<value condition="SubString(Skin.String(11000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="11000-orderby-8">
 		<value condition="SubString(Skin.String(11000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(11000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(11000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-1">
 		<value condition="SubString(Skin.String(12000-WidgetList-1),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-1),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-1),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-2">
 		<value condition="SubString(Skin.String(12000-WidgetList-2),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-2),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-2),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-3">
 		<value condition="SubString(Skin.String(12000-WidgetList-3),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-3),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-3),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-4">
 		<value condition="SubString(Skin.String(12000-WidgetList-4),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-4),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-4),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-5">
 		<value condition="SubString(Skin.String(12000-WidgetList-5),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-5),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-5),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-6">
 		<value condition="SubString(Skin.String(12000-WidgetList-6),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-6),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-6),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-7">
 		<value condition="SubString(Skin.String(12000-WidgetList-7),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-7),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-7),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="12000-orderby-8">
 		<value condition="SubString(Skin.String(12000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-8),musicdb://artists/)">artist</value>
+		<value condition="SubString(Skin.String(12000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
 	</variable>
 	<variable name="WidgetLabel-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-1)]</value>

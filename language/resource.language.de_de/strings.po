@@ -1105,3 +1105,11 @@ msgstr "Alle Gruppen"
 msgctxt "#31548"
 msgid "TV timers"
 msgstr "TV Timers"
+
+msgctxt "#31549"
+msgid "Episode"
+msgstr "Episode"
+
+msgctxt "#31550"
+msgid "'Episode' for episodes or video add-on contents"
+msgstr "'Episode' für Episoden or Video Add-On Inhalte"

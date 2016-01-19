@@ -1127,3 +1127,11 @@ msgstr ""
 msgctxt "#31548"
 msgid "TV timers"
 msgstr ""
+
+msgctxt "#31549"
+msgid "Episode"
+msgstr ""
+
+msgctxt "#31550"
+msgid "'Episode' for episodes or video add-on contents"
+msgstr ""
