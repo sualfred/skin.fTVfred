@@ -26,8 +26,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</label>
-			</control>			
+				<label>$INFO[Window(home).Property(ForceViewType)]</label>
+			</control>
 			<!-- Window labels -->
 			<control type="label">
 				<width>780</width>

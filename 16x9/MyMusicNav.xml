@@ -7,7 +7,7 @@
 	<onload condition="Window.Previous(home) + system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onload>
 	<onunload condition="Window.Next(home)">Control.Move($VAR[ContainerID],$INFO[Container.CurrentItem,-])</onunload>
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onunload>	
-	<onunload>ClearProperty(Window(Home).Property(ForceViewType))</onunload>
+	<onunload>ClearProperty(ForceViewType,home)</onunload>
 	<views>61,54,50,56,55,57</views>
 	<controls>
 		<control id="2" type="button">
