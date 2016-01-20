@@ -227,7 +227,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>				
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewSquareInfoLayout">
 					<param name="ID">56</param>
 				</include>

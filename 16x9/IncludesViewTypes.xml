@@ -828,4 +828,602 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<!--tv channels-->
+	<include name="ViewPVRLayout">
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
+		<itemlayout width="436">
+			<control type="group">
+				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture background="true">common/default_empty.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<left>-48</left>
+					<centertop>288</centertop>
+					<width>576</width>
+					<height>576</height>
+					<texture border="66,66,51,51">views/shadow_nf.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>427</top>
+					<width>448</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture>views/OverlayNF.png</texture>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="576" width="436">
+			<control type="group">
+				<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="250,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture background="true">common/default_empty.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>427</top>
+					<width>448</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)</visible>
+				</control>
+				<control type="image">
+					<left>-48</left>
+					<centertop>288</centertop>
+					<width>576</width>
+					<height>576</height>
+					<texture border="51">views/shadow_fo.png</texture>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+				</control>
+				<control type="image">
+					<left>-48</left>
+					<centertop>288</centertop>
+					<width>576</width>
+					<height>576</height>
+					<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture>views/OverlayNF.png</texture>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+				</control>
+				<control type="progress">
+					<top>515</top>
+					<width>480</width>
+					<height>12</height>
+					<texturebg border="2">views/ProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">views/ProgressBar.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<info>ListItem.Progress</info>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<!--tv list channels -->
+	<include name="ViewPVRListLayout">		
+		<itemlayout height="70" width="1850">
+			<control type="image">
+				<top>10</top>
+				<bottom>10</bottom>
+				<width>50</width>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio aligny="center" align="left">keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>90</left>
+				<width>200</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ff5b6064</textcolor>
+				<label>$INFO[ListItem.ChannelName]</label>
+			</control>
+			<!-- Fake Progress -->
+			<control type="image">
+				<left>320</left>
+				<width>890</width>
+				<height>67</height>
+				<texture border="5">pvr/epg_button_nf.png</texture>
+			</control>
+			<control type="image">
+				<left>320</left>
+				<width>890</width>
+				<height>67</height>
+				<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
+				<include name="FakeProgressAnimation">
+					<param name="posx">320</param>
+				</include>
+			</control>
+			<!-- Fake Next Progress -->
+			<control type="image">
+				<left>1214</left>
+				<width>720</width>
+				<height>67</height>
+				<texture border="5">pvr/epg_button_nf.png</texture>
+			</control>
+			<control type="label">
+				<left>335</left>
+				<width>855</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ffffffff</textcolor>
+				<selectedcolor>ffffffff</selectedcolor>
+				<label fallback="195">$INFO[ListItem.Title]</label>
+				<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+			</control>
+			<control type="label">
+				<left>335</left>
+				<width>805</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ffffffff</textcolor>
+				<selectedcolor>ffffffff</selectedcolor>
+				<label fallback="195">$INFO[ListItem.Title]</label>
+				<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+			</control>
+			<control type="image">
+				<left>1152</left>
+				<top>6</top>
+				<width>52</width>
+				<height>52</height>
+				<texture>pvr/timer.png</texture>
+				<colordiffuse>White</colordiffuse>
+				<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+			</control>
+			<control type="image">
+				<left>1152</left>
+				<top>6</top>
+				<width>52</width>
+				<height>52</height>
+				<texture>pvr/rec.png</texture>
+				<colordiffuse>ftvgold</colordiffuse>
+				<visible>ListItem.IsRecording</visible>
+			</control>
+			<control type="label">
+				<left>1229</left>
+				<width>480</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ff505559</textcolor>
+				<selectedcolor>ff505559</selectedcolor>
+				<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
+			</control>
+		</itemlayout>
+		<focusedlayout height="70" width="1850">
+			<control type="image">
+				<top>10</top>
+				<bottom>10</bottom>
+				<width>50</width>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio aligny="center" align="left">keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>90</left>
+				<width>200</width>
+				<scroll>false</scroll>
+				<aligny>center</aligny>
+				<height>67</height>
+				<selectedcolor>ffFFC24B</selectedcolor>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[ListItem.ChannelName]</label>
+				<visible>!Control.HasFocus(59)</visible>
+			</control>
+			<control type="label">
+				<left>90</left>
+				<width>200</width>
+				<scroll>false</scroll>
+				<aligny>center</aligny>
+				<height>67</height>
+				<selectedcolor>ffFFC24B</selectedcolor>
+				<textcolor>ffFFC24B</textcolor>
+				<label>$INFO[ListItem.ChannelName]</label>
+				<visible>Control.HasFocus(59)</visible>
+			</control>
+			<!-- Fake Progress -->
+			<control type="image">
+				<left>320</left>
+				<width>890</width>
+				<height>67</height>
+				<texture border="5">pvr/epg_button_nf.png</texture>
+			</control>
+			<control type="image">
+				<left>320</left>
+				<width>890</width>
+				<height>67</height>
+				<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
+				<include name="FakeProgressAnimation">
+					<param name="posx">320</param>
+				</include>
+			</control>
+			<!-- Fake Next Progress -->
+			<control type="image">
+				<left>1214</left>
+				<width>720</width>
+				<height>67</height>
+				<texture border="5">pvr/epg_button_nf.png</texture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label">
+				<left>335</left>
+				<width>855</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ffFFC24B</textcolor>
+				<selectedcolor>ffFFC24B</selectedcolor>
+				<label fallback="195">$INFO[ListItem.Title]</label>
+				<visible>Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
+			</control>
+			<control type="label">
+				<left>335</left>
+				<width>855</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ffffffff</textcolor>
+				<selectedcolor>ffFFC24B</selectedcolor>
+				<label fallback="195">$INFO[ListItem.Title]</label>
+				<visible>!Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
+			</control>
+			<control type="label">
+				<left>335</left>
+				<width>805</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ffFFC24B</textcolor>
+				<selectedcolor>ffFFC24B</selectedcolor>
+				<label fallback="195">$INFO[ListItem.Title]</label>
+				<visible>Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
+			</control>
+			<control type="label">
+				<left>335</left>
+				<width>805</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ffffffff</textcolor>
+				<selectedcolor>ffFFC24B</selectedcolor>
+				<label fallback="195">$INFO[ListItem.Title]</label>
+				<visible>!Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
+			</control>
+			<control type="image">
+				<left>1152</left>
+				<top>6</top>
+				<width>52</width>
+				<height>52</height>
+				<texture>pvr/timer.png</texture>
+				<colordiffuse>White</colordiffuse>
+				<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+			</control>
+			<control type="image">
+				<left>1152</left>
+				<top>6</top>
+				<width>52</width>
+				<height>52</height>
+				<texture>pvr/rec.png</texture>
+				<colordiffuse>ftvgold</colordiffuse>
+				<visible>ListItem.IsRecording</visible>
+			</control>
+			<control type="label">
+				<left>1229</left>
+				<width>480</width>
+				<aligny>center</aligny>
+				<height>67</height>
+				<textcolor>ff505559</textcolor>
+				<selectedcolor>ff505559</selectedcolor>
+				<scroll>false</scroll>
+				<label fallback="195">$INFO[ListItem.NextStartTime,,  ]$INFO[ListItem.NextTitle]</label>
+			</control>
+		</focusedlayout>   
+	</include>
+	<!--PVR Search/Timers-->
+	<include name="ViewPVRResultsLayout">		
+		<itemlayout height="70" width="1850">
+			<!-- Button layouts -->
+			<control type="group">					
+				<visible>IsEmpty(ListItem.Date)</visible>
+				<control type="label">
+					<width>285</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</control>
+			<!-- Results layout -->
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Date)</visible>					
+				<control type="image">
+					<top>10</top>
+					<bottom>10</bottom>
+					<width>50</width>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio aligny="center" align="left">keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<width>200</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ff5b6064</textcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+				</control>
+				<!-- Fake Progress -->
+				<control type="image">
+					<left>320</left>
+					<width>890</width>
+					<height>67</height>
+					<texture border="5">pvr/epg_button_nf.png</texture>
+				</control>
+				<control type="image">
+					<left>320</left>
+					<width>890</width>
+					<height>67</height>
+					<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
+					<include name="FakeProgressAnimation">
+						<param name="posx">320</param>
+					</include>
+				</control>
+				<!-- Fake Next Progress -->
+				<control type="image">
+					<left>1214</left>
+					<width>720</width>
+					<height>67</height>
+					<texture border="5">pvr/epg_button_nf.png</texture>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>855</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffffffff</selectedcolor>
+					<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>805</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffffffff</selectedcolor>
+					<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<left>1152</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>pvr/timer.png</texture>
+					<colordiffuse>White</colordiffuse>
+					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<left>1152</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>pvr/rec.png</texture>
+					<colordiffuse>ftvgold</colordiffuse>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="label">
+					<left>1229</left>
+					<width>480</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ff505559</textcolor>
+					<selectedcolor>ff505559</selectedcolor>
+					<label>$INFO[ListItem.StartDate,, ]$INFO[ListItem.StartTime]</label>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="70" width="1850">
+			<!-- Button layouts -->
+			<control type="group">					
+				<visible>IsEmpty(ListItem.Date)</visible>
+				<control type="label">
+					<width>285</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!Control.HasFocus(59)</visible>
+				</control>
+				<control type="label">
+					<width>855</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffFFC24B</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>Control.HasFocus(59)</visible>
+				</control>
+			</control>
+			<!-- Results layout -->
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Date)</visible>					
+				<control type="image">
+					<top>10</top>
+					<bottom>10</bottom>
+					<width>50</width>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio aligny="center" align="left">keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<width>200</width>
+					<scroll>false</scroll>
+					<aligny>center</aligny>
+					<height>67</height>
+					<selectedcolor>ffFFC24B</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<visible>!Control.HasFocus(59)</visible>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<width>200</width>
+					<scroll>false</scroll>
+					<aligny>center</aligny>
+					<height>67</height>
+					<selectedcolor>ffFFC24B</selectedcolor>
+					<textcolor>ffFFC24B</textcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<visible>Control.HasFocus(59)</visible>
+				</control>
+				<!-- Fake Progress -->
+				<control type="image">
+					<left>320</left>
+					<width>890</width>
+					<height>67</height>
+					<texture border="5">pvr/epg_button_nf.png</texture>
+				</control>
+				<control type="image">
+					<left>320</left>
+					<width>890</width>
+					<height>67</height>
+					<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
+					<include name="FakeProgressAnimation">
+						<param name="posx">320</param>
+					</include>
+				</control>
+				<!-- Fake Next Progress -->
+				<control type="image">
+					<left>1214</left>
+					<width>720</width>
+					<height>67</height>
+					<texture border="5">pvr/epg_button_nf.png</texture>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>855</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffFFC24B</textcolor>
+					<selectedcolor>ffFFC24B</selectedcolor>
+					<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>855</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffffffff</selectedcolor>
+					<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>!Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>805</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffFFC24B</textcolor>
+					<selectedcolor>ffFFC24B</selectedcolor>
+					<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
+				</control>
+				<control type="label">
+					<left>335</left>
+					<width>805</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ffffffff</selectedcolor>
+					<label fallback="195">$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+					<visible>!Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
+				</control>
+				<control type="image">
+					<left>1152</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>pvr/timer.png</texture>
+					<colordiffuse>White</colordiffuse>
+					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<left>1152</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>pvr/rec.png</texture>
+					<colordiffuse>ftvgold</colordiffuse>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="label">
+					<left>1229</left>
+					<width>480</width>
+					<aligny>center</aligny>
+					<height>67</height>
+					<textcolor>ff505559</textcolor>
+					<selectedcolor>ff505559</selectedcolor>
+					<label>$INFO[ListItem.StartDate,, ]$INFO[ListItem.StartTime]</label>
+				</control>
+			</control>		
+		</focusedlayout>    
+	</include>
 </includes>
