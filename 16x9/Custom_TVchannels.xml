@@ -45,7 +45,7 @@
 			<focusposition>1</focusposition>
 			<orientation>horizontal</orientation>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
-			<include>ViewPVRLayout">
+			<include name="ViewPVRLayout">
 				<param name="ID">100</param>
 			</include>
 			<content>pvr://channels/tv/all channels/</content>
