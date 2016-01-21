@@ -22,6 +22,37 @@
 				<texture background="true">$VAR[NextAiredFanart]</texture>
 				<visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
 			</control>
+			<!-- No results -->
+			<control type="group">
+				<visible>Control.HasFocus(8)</visible>
+				<animation delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<top>385</top>
+					<width>1490</width>
+					<height>310</height>
+					<texture>dialogs/empty_search.png</texture>
+				</control>
+				<control type="group">
+					<centerleft>50%</centerleft>
+					<top>473</top>
+					<control type="label">
+						<height>32</height>
+						<font>Bold32</font>
+						<align>center</align>
+						<textcolor>ffdadada</textcolor>
+						<label>$LOCALIZE[31221]</label>
+					</control>
+					<control type="label">
+						<top>34</top>
+						<height>32</height>
+						<font>Reg22</font>
+						<align>center</align>
+						<textcolor>ff717171</textcolor>
+						<label>$LOCALIZE[31222]</label>
+					</control>
+				</control>
+			</control>
 		</control>
 		<control type="group">
 			<animation type="WindowOpen">
@@ -181,7 +212,7 @@
 						<font>Med24</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
-						<label>[COLOR ff707070]$LOCALIZE[31227]: [/COLOR]$VAR[NextAiredShortTime]</label>
+						<label>$VAR[NextAiredShortTime[COLOR ff707070]$LOCALIZE[31534]: [/COLOR]]</label
 					</control>
 				</control>
 				<control type="group">

@@ -916,6 +916,14 @@ msgctxt "#31217"
 msgid "Current time"
 msgstr ""
 
+msgctxt "#31221"
+msgid "Sorry, no shows are airing at this time."
+msgstr "Sorry, keine Sendezeiten gefunden."
+
+msgctxt "#31222"
+msgid "Please try again later."
+msgstr "Bitte später nochmal probieren."
+
 msgctxt "#31219"
 msgid "Watch"
 msgstr ""
