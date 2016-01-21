@@ -1042,8 +1042,8 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyle-8)]</value>
 	</variable>
 	<variable name="NextEpisodeCountdown">
-		<value condition="IntegerGreaterThan(Player.TimeRemaining,29)">osd/countdown/30.png</value>
-		<value>$INFO[Player.TimeRemaining(ss),osd/countdown/,.png]</value>
+		<value condition="StringCompare(Player.TimeRemaining(hh),00) + StringCompare(Player.TimeRemaining(mm),00)">$INFO[Player.TimeRemaining(ss),osd/nextup/countdown/,.png]</value>
+ 		<value>osd/nextup/countdown/60.png</value>
 	</variable>
 	<variable name="RatingCountry">
 		<value condition="Stringcompare(Skin.String(RatingCountry),US)">$LOCALIZE[31001]</value>

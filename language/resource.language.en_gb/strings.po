@@ -916,6 +916,14 @@ msgctxt "#31217"
 msgid "Current time"
 msgstr ""
 
+msgctxt "#31219"
+msgid "Watch"
+msgstr ""
+
+msgctxt "#31220"
+msgid "Cancel Next Up"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

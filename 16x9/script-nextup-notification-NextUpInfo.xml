@@ -55,85 +55,92 @@
 			<visible>false</visible>
 		</control>
 		<control type="group">
-			<left>1330</left>
-			<top>566</top>
+			<left>1422</left>
+			<top>523</top>
+			<width>378</width>
 			<animation effect="fade" end="100" start="0" time="200" condition="Window.IsVisible(script-nextup-notification-NextUpInfo.xml)">Conditional</animation>
 			<!--  Next up label -->
 			<control type="label">
 				<width>auto</width>
-				<height>32</height>
-				<font>Med32</font>
+				<height>50</height>
+				<font>Med40</font>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
 				<label>31164</label>
 			</control>
 			<!-- Next episode thumb -->
 			<control type="image">
-				<top>56</top>
-				<width>470</width>
-				<height>377</height>
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
 				<texture>views/episode_fallback.png</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
-				<top>56</top>
-				<width>470</width>
-				<height>377</height>
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
 				<aspectratio>scale</aspectratio>
 				<texture>$VAR[NextUpThumb]</texture>
 			</control>
 			<control type="image">
-				<top>56</top>
-				<width>470</width>
-				<height>377</height>
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
 				<aspectratio align="center">scale</aspectratio>
 				<texture>views/episode_fallback.png</texture>
 				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !IntegerGreaterThan(Control.GetLabel(3018),0)</visible>
 			</control>
 			<control type="image">
-				<top>56</top>
+				<top>70</top>
 				<width>90</width>
 				<height>90</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(Control.GetLabel(3011),719)</visible>
-			</control>
-			<control type="image">
-				<top>156</top>
-				<width>470</width>
-				<height>277</height>
-				<texture border="2">views/season_overlay.png</texture>
+				<visible>IntegerGreaterThan(Control.GetLabel(3011),709)</visible>
 			</control>
 			<!-- Next episode countdown -->
 			<control type="image">
-				<left>12</left>
-				<top>369</top>
-				<width>46</width>
-				<height>46</height>
+				<left>134</left>
+				<top>163</top>
+				<width>110</width>
+				<height>110</height>
 				<texture>$VAR[NextEpisodeCountdown]</texture>
 			</control>
-			<!--  Next up label -->
-			<control type="label">
-				<left>64</left>
-				<top>367</top>
-				<width>auto</width>
-				<height>24</height>
-				<font>Med16</font>
-				<textcolor>ffffc448</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$LOCALIZE[31060]</label>
-				<animation delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">WindowOpen</animation>
+			<control type="image">
+				<top>365</top>
+				<width>378</width>
+				<height>68</height>
+				<texture>osd/nextup/background.png</texture>
 			</control>
 			<!--  Next episode label -->
 			<control type="label">
-				<left>64</left>
-				<top>381</top>
-				<width>auto</width>
-				<height>24</height>
-				<font>Med24</font>
+				<top>379</top>
+				<width>378</width>
+				<height>40</height>
+				<font>Light28</font>
+				<align>center</align>
+				<textcolor>ff000000</textcolor>
+				<label>$INFO[Control.GetLabel(3016),$LOCALIZE[31219] $LOCALIZE[20359] ]</label>
+			</control>
+			<!--  Close NextUp label -->
+			<control type="label">
+				<right>55</right>
+				<top>464</top>
+				<width>378</width>
+				<height>40</height>
+				<font>Light27</font>
+				<align>right</align>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
-				<label>$INFO[Control.GetLabel(3015),$LOCALIZE[20373] ], $INFO[Control.GetLabel(3016),Ep. ]</label>
-				<animation delay="560" easing="inout" effect="slide" end="0,9" reversible="false" start="0,0" time="220" tween="sine">WindowOpen</animation>
+				<label>$LOCALIZE[31220]</label>
+			</control>
+			<!--  Close NextUp image -->
+			<control type="image">
+				<right>0</right>
+				<top>463</top>
+				<width>44</width>
+				<height>44</height>
+				<texture>osd/nextup/back.png</texture>
 			</control>
 		</control>
 	</controls>
