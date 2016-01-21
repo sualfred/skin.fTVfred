@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1106">
+	<menucontrol>1000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>	
 	<onunload>ClearProperty(SkipScrollingAnimation,home)</onunload>

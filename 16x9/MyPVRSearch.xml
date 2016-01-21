@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- videolibrary -->
-	<menucontrol>5000</menucontrol>
+	<menucontrol>1000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">59</defaultcontrol>
 	<views>59</views>

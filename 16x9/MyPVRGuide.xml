@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
+<window>    
+    <menucontrol>1000</menucontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0xff12161b</backgroundcolor>
     <defaultcontrol always="true">10</defaultcontrol>
