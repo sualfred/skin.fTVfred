@@ -888,7 +888,10 @@ msgstr ""
 
 #: \16x9\Variables.xml:1512
 msgctxt "#31212"
-msgid "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
+msgid ""
+"Activates the preloading of widgets on startup. By disabling it, the skin "
+"won't wait until all widgets are loaded. Please note that this can cause "
+"some minor animation glitches on startup."
 msgstr ""
 
 #: \16x9\Variables.xml:65
@@ -916,6 +919,19 @@ msgctxt "#31217"
 msgid "Current time"
 msgstr ""
 
+#: \16x9\DialogAudioDSPManager.xml:294
+msgctxt "#31218"
+msgid "No mode available"
+msgstr ""
+
+msgctxt "#31219"
+msgid "Watch"
+msgstr ""
+
+msgctxt "#31220"
+msgid "Cancel Next Up"
+msgstr ""
+
 msgctxt "#31221"
 msgid "Sorry, no shows are airing at this time."
 msgstr "Sorry, keine Sendezeiten gefunden."
@@ -924,12 +940,14 @@ msgctxt "#31222"
 msgid "Please try again later."
 msgstr "Bitte später nochmal probieren."
 
-msgctxt "#31219"
-msgid "Watch"
+#: \16x9\DialogAudioDSPManager.xml:175
+msgctxt "#31223"
+msgid "No mode activated"
 msgstr ""
 
-msgctxt "#31220"
-msgid "Cancel Next Up"
+#: \16x9\DialogAudioDSPManager.xml:407
+msgctxt "#31224"
+msgid "Direct"
 msgstr ""
 
 msgctxt "#31500"

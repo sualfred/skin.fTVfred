@@ -908,6 +908,11 @@ msgctxt "#31217"
 msgid "Current time"
 msgstr "Aktuelle Uhrzeit"
 
+#: \16x9\DialogAudioDSPManager.xml:294
+msgctxt "#31218"
+msgid "No mode available"
+msgstr "Kein Modus verfügbar"
+
 msgctxt "#31219"
 msgid "Watch"
 msgstr "Starte"
@@ -923,6 +928,16 @@ msgstr "Sorry, keine Sendezeiten gefunden."
 msgctxt "#31222"
 msgid "Please try again later."
 msgstr "Bitte später nochmal probieren."
+
+#: \16x9\DialogAudioDSPManager.xml:175
+msgctxt "#31223"
+msgid "No mode activated"
+msgstr "Kein Modus aktiviert"
+
+#: \16x9\DialogAudioDSPManager.xml:407
+msgctxt "#31224"
+msgid "Direct"
+msgstr "Direkt"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
