@@ -146,7 +146,7 @@
 					<align>right</align>
 					<textcolor>ff636364</textcolor>
 					<label>[COLOR ffb2b2b2]$INFO[Container(21).CurrentItem][/COLOR] | $INFO[Container(21).NumItems]</label>
-					<visible>IntegerGreaterThan(Container(21).NumItems,0)</visible>
+					<visible>Control.HasFocus(21)</visible>
 				</control>
 				<control type="label">
 					<left>40</left>
@@ -156,7 +156,7 @@
 					<align>right</align>
 					<textcolor>ff636364</textcolor>
 					<label>$INFO[Container(21).NumItems]</label>
-					<visible>!IntegerGreaterThan(Container(21).NumItems,0)</visible>
+					<visible>!Control.HasFocus(21)</visible>
 				</control>
 				<!-- No active mode -->
 				<control type="group">
@@ -267,7 +267,7 @@
 					<align>right</align>
 					<textcolor>ff636364</textcolor>
 					<label>[COLOR ffb2b2b2]$INFO[Container(20).CurrentItem][/COLOR] | $INFO[Container(20).NumItems]</label>
-					<visible>IntegerGreaterThan(Container(20).NumItems,0)</visible>
+					<visible>Control.HasFocus(20)</visible>
 				</control>
 				<control type="label">
 					<left>40</left>
@@ -277,7 +277,7 @@
 					<align>right</align>
 					<textcolor>ff636364</textcolor>
 					<label>$INFO[Container(20).NumItems]</label>
-					<visible>!IntegerGreaterThan(Container(20).NumItems,0)</visible>
+					<visible>!Control.HasFocus(20)</visible>
 				</control>
 				<!-- no available modes -->
 				<control type="group">
