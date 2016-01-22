@@ -22,7 +22,7 @@
 				<left>40</left>
 				<top>14</top>
 				<height>30</height>
-				<width>1361</width>
+				<width>408</width>
 				<aligny>center</aligny>
 				<font>Bold30</font>
 				<label>15020</label>
@@ -251,7 +251,7 @@
 				<!-- Heading -->
 				<control type="label">
 					<left>40</left>
-					<top>14</top>
+					<top>15</top>
 					<height>30</height>
 					<width>878</width>
 					<aligny>center</aligny>
@@ -261,7 +261,7 @@
 				</control>
 				<control type="label">
 					<left>40</left>
-					<top>14</top>
+					<top>15</top>
 					<height>30</height>
 					<width>878</width>
 					<align>right</align>
@@ -271,7 +271,7 @@
 				</control>
 				<control type="label">
 					<left>40</left>
-					<top>14</top>
+					<top>15</top>
 					<height>30</height>
 					<width>878</width>
 					<align>right</align>

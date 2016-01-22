@@ -14,51 +14,11 @@
 		<control type="grouplist">
 			<left>15</left>
 			<top>15</top>
-			<width>720</width>
+			<width>780</width>
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
-			<!-- Test labels -->
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>$INFO[Window(home).Property(ForceViewType)]</label>
-			</control>
 			<!-- Window labels -->
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>movies</label>
-				<visible>Container.Content(movies)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>tvshows</label>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>artists</label>
-				<visible>Container.Content(artists)</visible>
-			</control>
 			<control type="label">
 				<width>780</width>
 				<height>21</height>
@@ -970,30 +930,76 @@
 				<label>script-nextup-notification-StillWatchingInfo.xml</label>
 				<visible>Window.IsVisible(script-nextup-notification-StillWatchingInfo.xml)</visible>
 			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>DialogAudioDSPManager.xml</label>
+				<visible>Window.IsVisible(DialogAudioDSPManager.xml)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>DialogAudioDSPSettings.xml</label>
+				<visible>Window.IsVisible(DialogAudioDSPSettings.xml)</visible>
+			</control>
 		</control>
-		<!-- Control label -->
-		<control type="label">
+		<!-- Controls debug -->
+		<control type="grouplist">
 			<right>15</right>
 			<top>15</top>
-			<height>21</height>
-			<textcolor>FF0000FF</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>font13</font>
-			<align>right</align>
-			<label>$INFO[System.CurrentControl]</label>
+			<width>1000</width>
+			<height>450</height>
+			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
-		</control>
-		<!-- Path label -->
-		<control type="label">
-			<right>15</right>
-			<top>48</top>
-			<height>21</height>
-			<textcolor>FFFF0000</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>font13</font>
-			<align>right</align>
-			<label>[COLOR FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
-			<visible>Skin.HasSetting(DebugInfo)</visible>
+			<!-- Control label -->
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[System.CurrentControl,[COLOR FF00FF00]Current control - [/COLOR]]<!--$INFO[System.CurrentControlID,ID=,]--></label>
+			</control>
+			<!-- Folder label -->
+			<control type="label">
+				<top>48</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Container.FolderName,[COLOR FF00FF00]Folder name - [/COLOR]]</label>
+			</control>
+			<!-- Path label -->
+			<control type="label">
+				<top>48</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<scroll>true</scroll>
+				<label>$INFO[Container.FolderPath,[COLOR FF00FF00]Folder path - [/COLOR]]</label>
+			</control>
+			<!-- Content label -->
+			<control type="label">
+				<top>48</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Container.Content,[COLOR FF00FF00]Content - [/COLOR]]</label>
+			</control>
 		</control>
 	</controls>
 </window>
