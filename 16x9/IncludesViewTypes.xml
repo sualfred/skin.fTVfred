@@ -16,6 +16,13 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/episode_fallback.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/episode_fallback.png">$VAR[TVShowWideImage]</texture>
 				</control>
 				<control type="image">
@@ -88,6 +95,13 @@
 				<animation center="316,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="316,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="316,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/episode_fallback.png</texture>
+				</control>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -181,6 +195,13 @@
 					<width>320</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/movie_fallback.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>320</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
 				</control>
 				<control type="image">
@@ -225,6 +246,13 @@
 				<animation center="150,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="150,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="150,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>320</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/movie_fallback.png</texture>
+				</control>
 				<control type="image">
 					<top>48</top>
 					<width>320</width>
@@ -465,6 +493,13 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/episode_fallback.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/episode_fallback.png">$VAR[WideImage]</texture>
 				</control>
 				<control type="image">
@@ -561,6 +596,13 @@
 				<animation center="316,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="316,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="316,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/episode_fallback.png</texture>
+				</control>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -696,6 +738,13 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/wide_fallback.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/wide_fallback.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="image">
@@ -759,6 +808,13 @@
 				<animation center="316,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="316,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="316,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">views/wide_fallback.png</texture>
+				</control>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
