@@ -1,3 +1,6 @@
+2.0.2:
+- Added HD flags for PVR widget views
+
 2.0.1:
 - Adjusted NextUp labels
 - Skin Shortcuts overrides adjustments and cleanup

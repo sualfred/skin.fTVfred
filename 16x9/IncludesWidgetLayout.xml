@@ -32,6 +32,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture border="2">views/season_overlay.png</texture>
@@ -104,6 +111,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -182,6 +196,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture border="2">views/season_overlay.png</texture>
@@ -254,6 +275,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -337,6 +365,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture border="2">views/season_overlay.png</texture>
@@ -410,6 +445,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -489,6 +531,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture border="2">views/season_overlay.png</texture>
@@ -562,6 +611,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -646,6 +702,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture>views/OverlayNF.png</texture>
@@ -679,6 +742,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -718,6 +788,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture>views/OverlayNF.png</texture>
@@ -751,6 +828,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -795,6 +879,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution1),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture>views/OverlayNF.png</texture>
@@ -829,6 +920,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon2)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution2),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>
@@ -869,6 +967,13 @@
 				</control>
 				<control type="image">
 					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution3),719)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
 					<width>308</width>
 					<height>308</height>
 					<texture>views/OverlayNF.png</texture>
@@ -903,6 +1008,13 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon4)]</texture>
 					<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<width>58</width>
+					<height>58</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.Property(VideoResolution4),719)</visible>
 				</control>
 				<control type="image">
 					<top>13</top>

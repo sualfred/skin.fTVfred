@@ -249,6 +249,10 @@
 			<property name="InfoLabel2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).ChannelName]</property>
 			<property name="InfoLabel3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).ChannelName]</property>
 			<property name="InfoLabel4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).ChannelName]</property>
+			<property name="VideoResolution1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).VideoResolution]</property>
+			<property name="VideoResolution2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).VideoResolution]</property>
+			<property name="VideoResolution3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).VideoResolution]</property>
+			<property name="VideoResolution4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).VideoResolution]</property>
 			<property name="Path">pvr://channels/tv/1</property>
 			<onclick>ActivateWindow(1106)</onclick>
 		</item>

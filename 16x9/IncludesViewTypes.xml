@@ -917,6 +917,13 @@
 				</control>
 				<control type="image">
 					<top>48</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.VideoResolution,719)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
 					<width>480</width>
 					<height>480</height>
 					<visible>!StringCompare(ListItem.Label,..)</visible>
@@ -959,6 +966,13 @@
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.VideoResolution,719)</visible>
 				</control>
 				<control type="image">
 					<left>-48</left>
