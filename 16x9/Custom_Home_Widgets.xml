@@ -185,7 +185,7 @@
 					<width>70</width>
 					<aligny>center</aligny>
 					<font>Bold30</font>
-					<label>$LOCALIZE[31217]</label>
+					<label>$LOCALIZE[31225]</label>
 					<textcolor>ffdadada</textcolor>
 				</control>
 				<!-- Widget name -->

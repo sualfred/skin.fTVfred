@@ -13,22 +13,7 @@
 	<icon labelID="20045">DefaultMastermode.png</icon>
 	<icon labelID="settings">DefaultSettings.png</icon>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
-	<widgetPlaylists>False</widgetPlaylists>
-	<widgetRename>False</widgetRename>
-	<widget-groupings>
-		<shortcut label="19020" icon="ftv_icon.png" widget="livetv">livetv</shortcut>		
-		<shortcut label="10508" icon="ftv_icon.png" widget="weather">weather</shortcut>	
-		<shortcut label="1036" icon="ftv_icon.png" widget="favourites">favourites</shortcut>
-		<shortcut label="31500" icon="ftv_icon.png" widget="widget1">widget1</shortcut>	
-		<shortcut label="31501" icon="ftv_icon.png" widget="widget2">widget2</shortcut>	
-		<shortcut label="31502" icon="ftv_icon.png" widget="widget3">widget3</shortcut>	
-		<shortcut label="31503" icon="ftv_icon.png" widget="widget4">widget4</shortcut>	
-		<shortcut label="31504" icon="ftv_icon.png" widget="widget5">widget5</shortcut>	
-		<shortcut label="31505" icon="ftv_icon.png" widget="widget6">widget6</shortcut>	
-		<shortcut label="31506" icon="ftv_icon.png" widget="widget7">widget7</shortcut>	
-		<shortcut label="31507" icon="ftv_icon.png" widget="widget8">widget8</shortcut>
-	</widget-groupings>
-	<groupings>
+	<ftv-groupings>
 		<node label="fTV">
 			<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
 			<node label="342">
@@ -80,8 +65,14 @@
 				<shortcut label="19217" type="livetv" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/1,return)</shortcut>
 				<shortcut label="19017" type="livetv" icon="ftv_icon.png">ActivateWindow(tvrecordings,pvr://recordings/active,return)</shortcut>
 			</node>
-		</node><node label="32029">
-			<content>common</content>
+		</node>
+		<node label="559">
+			<node label="32030">
+				<content>playlist-video</content>
+			</node>
+			<node label="32031">
+				<content>playlist-audio</content>
+			</node>
 		</node>
 		<node label="32030">
 			<content>video</content>
@@ -111,27 +102,6 @@
 				<content>upnp-music</content>
 			</node>
 		</node>
-		<node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
-			<content>pvr</content>
-			<node label="19023">
-				<content>pvr-tv</content>
-			</node>
-			<node label="19024">
-				<content>pvr-radio</content>
-			</node>
-		</node>
-		<node label="32017" condition="PVR.HasTVChannels" version="14">
-			<content>pvr</content>
-			<node label="19023">
-				<content>pvr-tv</content>
-			</node>
-		</node>
-		<node label="32087" condition="PVR.HasRadioChannels" version="14">
-			<content>radio</content>
-			<node label="19024">
-				<content>pvr-radio</content>
-			</node>
-		</node>
 		<node label="32020">
 			<content>picturesources</content>
 		</node>
@@ -153,40 +123,9 @@
 				<content>addon-image</content>
 			</node>
 		</node>
-		<node label="32006">
-			<content>favourite</content>
-		</node>
-		<node label="10004">
-			<content>settings</content>
-		</node>
-		<node label="32054">
-			<content>commands</content>
-		</node>
 		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>-->
-	</groupings>
-
-	
-
-	<!-- ============= -->
-	<!-- Widgets	   -->
-	<!-- ============= -->
-	<widget label="19020">livetv</widget>
-	<widget label="10508">weather</widget>
-	<widget label="1036">favourites</widget>
-	<widget label="31500">widget1</widget>
-	<widget label="31501">widget2</widget>
-	<widget label="31502">widget3</widget>
-	<widget label="31503">widget4</widget>
-	<widget label="31504">widget5</widget>
-	<widget label="31505">widget6</widget>
-	<widget label="31506">widget7</widget>
-	<widget label="31507">widget8</widget>	
-	<widgetdefault defaultID="livetv">livetv</widgetdefault>
-	<widgetdefault defaultID="weather">weather</widgetdefault>
-	<widgetdefault defaultID="favourites">favourites</widgetdefault>
+	</ftv-groupings>
 	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
 	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>
 	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
-
-
 </overrides>

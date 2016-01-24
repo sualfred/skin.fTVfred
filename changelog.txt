@@ -1,14 +1,24 @@
+2.0.1:
+- Adjusted NextUp labels
+- Skin Shortcuts overrides adjustments and cleanup
+- Fixed wrong label in widget setup dialog
+- Improved layout of TV widget for setups without channel logos
+- Slightly increased season overlay transparency
+
 2.0.0:
 - Starting with own version numbering (2.x.x is for Jarvis)
 - Most important changes so far:
 	* Full Live TV part including dialogs, windows and widgets
+	* PVR fanart support
 	* Increased widget groups to 12
 	* Widget preloading (can be disabled)
 	* Dynamic widget layouts
 	* Dynamic view type selection based on the widgets	
 	* Widget position can be moved
 	* Widgets can be assigend to every main menu item
+	* Set widget labels are used for the library views
 	* Weather and Favourites widget can be placed everywhere
+	* New "Episode" widget layout to use for episodes and video addon contents
 	* Globalsearch window redesigned
 	* New virtual keyboard
 	* Weather window features increased
@@ -16,5 +26,5 @@
 	* 100% DE strings
 	* Fixed a lot of minor issues, layouts and changed a lot of small skin behaviours
 
-Latest used fTV version: 2.2.17 (except Hitchers fixes and changes I liked)
+Latest used fTV version: 2.2.17 (except Hitchers newer fixes and changes I liked)
 

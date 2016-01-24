@@ -205,16 +205,14 @@
 				<font>Light28</font>
 				<align>center</align>
 				<textcolor>ff000000</textcolor>
-				<label>$INFO[Control.GetLabel(4009),$LOCALIZE[31228] $LOCALIZE[20359] ]</label>
+				<label>$INFO[Control.GetLabel(4008),$LOCALIZE[20373] ], $INFO[Control.GetLabel(4009),Ep. ]</label>
 			</control>
 			<!--  Close NextUp label -->
 			<control type="label">
-				<right>55</right>
 				<top>464</top>
 				<width>378</width>
 				<height>40</height>
 				<font>Light27</font>
-				<align>right</align>
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>ff080808</shadowcolor>
 				<label>$LOCALIZE[31220]</label>

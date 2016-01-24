@@ -950,6 +950,16 @@ msgctxt "#31224"
 msgid "Direct"
 msgstr ""
 
+#: \16x9\Custom_Home_Widgets.xml:188
+msgctxt "#31225"
+msgid "No."
+msgstr ""
+
+#: \16x9\IncludesViewTypes.xml:996
+msgctxt "#31226"
+msgid "Tune in"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""
