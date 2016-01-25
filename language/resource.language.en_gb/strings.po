@@ -960,6 +960,31 @@ msgctxt "#31226"
 msgid "Tune in"
 msgstr ""
 
+#: \16x9\SkinSettings.xml:475
+msgctxt "#31227"
+msgid "Backup or restore fTV settings"
+msgstr ""
+
+#: \16x9\Variables.xml:1881
+msgctxt "#31228"
+msgid "Backup, restore or reset skin configuration."
+msgstr ""
+
+#: \16x9\SkinSettings.xml:482
+msgctxt "#31229"
+msgid "Create new backup"
+msgstr ""
+
+#: \16x9\SkinSettings.xml:484
+msgctxt "#31230"
+msgid "Restore existing backup"
+msgstr ""
+
+#: \16x9\SkinSettings.xml:486
+msgctxt "#31231"
+msgid "Reset skin settings"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""
