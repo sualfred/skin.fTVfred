@@ -359,6 +359,25 @@
 					<texture>views/equaliser.gif</texture>
 					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
 				</control>
+				<control type="progress">
+					<top>515</top>
+					<width>480</width>
+					<height>12</height>
+					<info>ListItem.PercentPlayed</info>
+					<texturebg border="2">views/ProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">views/ProgressBar.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>ListItem.IsResumable</visible>
+				</control>
+				<control type="image">
+					<top>515</top>
+					<width>480</width>
+					<height>12</height>
+					<texture border="2">views/ProgressBar.png</texture>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+				</control>
 				<control type="label">
 					<left>98</left>
 					<top>447</top>
@@ -450,6 +469,25 @@
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
 					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+				</control>
+				<control type="progress">
+					<top>515</top>
+					<width>480</width>
+					<height>12</height>
+					<info>ListItem.PercentPlayed</info>
+					<texturebg border="2">views/ProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">views/ProgressBar.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>ListItem.IsResumable</visible>
+				</control>
+				<control type="image">
+					<top>515</top>
+					<width>480</width>
+					<height>12</height>
+					<texture border="2">views/ProgressBar.png</texture>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -813,6 +851,25 @@
 					<label>$INFO[ListItem.Label]</label>
 					<visible>!StringCompare(ListItem.Label,..)</visible>
 				</control>
+				<control type="progress">
+					<top>515</top>
+					<width>640</width>
+					<height>12</height>
+					<info>ListItem.PercentPlayed</info>
+					<texturebg border="2">views/ProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">views/ProgressBar.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>ListItem.IsResumable</visible>
+				</control>
+				<control type="image">
+					<top>515</top>
+					<width>640</width>
+					<height>12</height>
+					<texture border="2">views/ProgressBar.png</texture>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+				</control>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -908,6 +965,25 @@
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>!StringCompare(ListItem.Label,..)</visible>
+				</control>
+				<control type="progress">
+					<top>515</top>
+					<width>640</width>
+					<height>12</height>
+					<info>ListItem.PercentPlayed</info>
+					<texturebg border="2">views/ProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">views/ProgressBar.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>ListItem.IsResumable</visible>
+				</control>
+				<control type="image">
+					<top>515</top>
+					<width>640</width>
+					<height>12</height>
+					<texture border="2">views/ProgressBar.png</texture>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1094,7 +1170,7 @@
 				<top>10</top>
 				<bottom>10</bottom>
 				<width>50</width>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="center" align="left">keep</aspectratio>
 			</control>
 			<control type="label">
@@ -1181,7 +1257,7 @@
 				<top>10</top>
 				<bottom>10</bottom>
 				<width>50</width>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="center" align="left">keep</aspectratio>
 			</control>
 			<control type="label">
