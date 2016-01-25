@@ -1,3 +1,7 @@
+2.0.6:
+- Fixed View fallback textures for transparent icons
+- Changed icon aspectratios for MyPVRRecordings to prevent ugly channel icons
+
 2.0.5:
 - Added skin backup functionality
 

@@ -16,7 +16,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/episode_fallback.png</texture>
+					<texture background="true">common/wide_empty.png</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -100,7 +100,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/episode_fallback.png</texture>
+					<texture background="true">common/wide_empty.png</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -195,7 +195,7 @@
 					<width>320</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/movie_fallback.png</texture>
+					<texture background="true">common/poster_empty.png</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -251,7 +251,7 @@
 					<width>320</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/movie_fallback.png</texture>
+					<texture background="true">common/poster_empty.png</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -325,8 +325,17 @@
 					<top>48</top>
 					<width>480</width>
 					<height>480</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[SquareImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[SquareImage]</texture>
+					<visible>!Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -405,8 +414,17 @@
 					<top>48</top>
 					<width>480</width>
 					<height>480</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[SquareImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[SquareImage]</texture>
+					<visible>!Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -493,7 +511,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/episode_fallback.png</texture>
+					<texture background="true">common/wide_empty.png</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -601,7 +619,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/episode_fallback.png</texture>
+					<texture background="true">common/wide_empty.png</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -738,7 +756,15 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/wide_fallback.png</texture>
+					<texture background="true">common/wide_empty.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[WideImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -746,6 +772,7 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[WideImage]</texture>
+					<visible>!Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -813,7 +840,15 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">views/wide_fallback.png</texture>
+					<texture background="true">common/wide_empty.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>640</width>
+					<height>480</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[WideImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -821,6 +856,7 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[WideImage]</texture>
+					<visible>!Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
