@@ -326,7 +326,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$VAR[SquareImage]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -406,7 +406,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$VAR[SquareImage]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -745,7 +745,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true" fallback="views/wide_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$VAR[WideImage]</texture>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -820,7 +820,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true" fallback="views/wide_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$VAR[WideImage]</texture>
 				</control>
 				<control type="image">
 					<top>48</top>

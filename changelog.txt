@@ -1,3 +1,6 @@
+2.0.4:
+- Fixed empty icons for Square and Wide layouts
+
 2.0.3:
 - Enabled Square/Poster/Wide view for MyRecordings
 - Changed lower labels for MyRecordings

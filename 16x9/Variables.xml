@@ -1969,6 +1969,7 @@
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(thumb)) + [!Skin.HasSetting(HideUnwatchedThumbs) | [Skin.HasSetting(HideUnwatchedThumbs) + StringCompare(ListItem.Overlay,OverlayWatched.png)]]">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(fanart)) + [IsEmpty(ListItem.Art(thumb)) | [Skin.HasSetting(HideUnwatchedThumbs) + !StringCompare(ListItem.Overlay,OverlayWatched.png)]]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!Container.Content(episodes) + !IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/episode_fallback.png</value>
 	</variable>
 	<variable name="TVShowWideImage">
@@ -1982,6 +1983,11 @@
 		<value condition="StringCompare(ListItem.Label,..)">views/folder_back_poster.png</value>
 		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/movie_fallback.png</value>
+	</variable>
+	<variable name="SquareImage">
+		<value condition="StringCompare(ListItem.Label,..)">views/folder_back_square.png</value>
+		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+		<value>views/square_fallback.png</value>
 	</variable>
 	<variable name="SeasonValue">
 		<value condition="!SubString(ListItem.Episode,s) + !IsEmpty(ListItem.Season)">$INFO[ListItem.Season,$LOCALIZE[20373] ]</value>

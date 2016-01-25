@@ -210,7 +210,7 @@
 						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
-						<onup>59</onup>
+						<onup>100</onup>
 						<ondown>3000</ondown>
 						<onclick>ActivateWindow(TVTimers)</onclick>
 						<font>Med24</font>
