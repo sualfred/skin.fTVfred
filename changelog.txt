@@ -1,5 +1,6 @@
 2.0.7:
 - Added progress bar to PVR MyRecordings
+- Added watched/hd flags to PVR MyRecordings Square
 
 2.0.6:
 - Fixed View fallback textures for transparent icons

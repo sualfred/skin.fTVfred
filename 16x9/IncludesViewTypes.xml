@@ -338,6 +338,20 @@
 					<visible>!Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
+					<top>48</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.VideoResolution,719)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
 					<left>-48</left>
 					<centertop>288</centertop>
 					<width>576</width>
@@ -444,6 +458,20 @@
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[SquareImage]</texture>
 					<visible>!Window.IsActive(tvrecordings)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>IntegerGreaterThan(ListItem.VideoResolution,719)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayWatched.png</texture>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<control type="image">
 					<left>-48</left>
