@@ -2,6 +2,7 @@
 <window>
     <!-- PVR Recordings -->
     <backgroundcolor>0xff12161b</backgroundcolor>
+    <menucontrol>5000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
     <onload condition="Window.Previous(home) + system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onload>
     <onunload condition="Window.Next(home)">Control.Move($VAR[ContainerID],$INFO[Container.CurrentItem,-])</onunload>
@@ -35,7 +36,7 @@
                     <font>Med48</font>
                     <aligny>bottom</aligny>
                     <textcolor>ffdadada</textcolor>
-                    <label>$LOCALIZE[31546]  </label>
+                    <label>$LOCALIZE[19017]  </label>
                 </control>
                 <control type="label">
                     <top>15</top>
@@ -125,7 +126,7 @@
                         <width min="104" max="224">auto</width>
                         <wrapmultiline>true</wrapmultiline>
                         <height>100</height>
-                        <onup>100</onup>
+                        <onup>50</onup>
                         <ondown>3000</ondown>
                         <onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
                         <onclick>ActivateWindow(tvguide)</onclick>
@@ -182,6 +183,7 @@
                         <aligny>bottom</aligny>
                         <textcolor>ffFFC24B</textcolor>
                         <label>$INFO[ListItem.ChannelName]</label>
+                        <visible>!IsEmpty(ListItem.ChannelName)</visible>
                     </control>
                     <control type="label">
                         <width>auto</width>
@@ -189,7 +191,17 @@
                         <font>Med24Num</font>
                         <aligny>bottom</aligny>
                         <textcolor>ffbebebe</textcolor>
-                        <label>$INFO[ListItem.Duration]</label>
+                        <label>$VAR[Duration]</label>
+                        <visible>!IsEmpty(ListItem.Duration)</visible>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>24</height>
+                        <font>Med24Num</font>
+                        <aligny>bottom</aligny>
+                        <textcolor>ffbebebe</textcolor>
+                        <label>[COLOR ff707070]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.Date]</label>
+                        <visible>!IsEmpty(ListItem.Date)</visible>
                     </control>
                     <control type="label">
                         <width>auto</width>
@@ -212,6 +224,19 @@
                     <autoscroll>false</autoscroll>
                     <textcolor>ffbcbcbc</textcolor>
                     <label>[B]$INFO[ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+                    <visible>!IsEmpty(ListItem.Title) + !StringCompare(ListItem.Label,..)</visible>
+                </control>
+                <control type="textbox">
+                    <top>143</top>
+                    <width>1192</width>
+                    <height>84</height>
+                    <align>left</align>
+                    <font>Reg30Spaced</font>
+                    <pagecontrol>99</pagecontrol>
+                    <autoscroll>false</autoscroll>
+                    <textcolor>ffbcbcbc</textcolor>
+                    <label>[B]$INFO[ListItem.Label][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+                    <visible>IsEmpty(ListItem.Title) + !StringCompare(ListItem.Label,..)</visible>
                 </control>
                 <control id="99" type="scrollbar">
                     <top>103</top>
@@ -265,13 +290,12 @@
             <animation reversible="true" type="Hidden">
                 <effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
                 <effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
-            </animation>
-            <!-- Controls -->
+            </animation><!-- Controls -->
             <control type="grouplist" id="5000">
                 <centerleft>50%</centerleft>
                 <centertop>50%</centertop>
                 <width>640</width>
-                <height>620</height>
+                <height>810</height>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <onleft>50</onleft>
@@ -285,12 +309,43 @@
                     <width>-8</width>
                     <height>0</height>
                     <label>-</label>
-                    <onfocus condition="Control.IsEnabled(3)">SetFocus(5004)</onfocus>
-                    <onfocus condition="!Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(4)</onfocus>
-                    <onfocus condition="!Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
-                    <onfocus condition="!Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
+                    <onfocus condition="!IsEmpty(Container.PluginName)">SetFocus(5022)</onfocus>
+                    <onfocus condition="IsEmpty(Container.PluginName) + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
+                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(14)</onfocus>
+                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4) + Control.IsEnabled(14)">SetFocus(4)</onfocus>
+                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
+                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
                     <include>NoTextures</include>
-                    <visible>!Control.HasFocus(5004) + !Control.HasFocus(4) + !Control.HasFocus(19) + !Control.HasFocus(5011) + !Control.HasFocus(5013)</visible>
+                    <visible>!Control.HasFocus(5022) + !Control.HasFocus(5004) + !Control.HasFocus(14) + !Control.HasFocus(4) + !Control.HasFocus(19) + !Control.HasFocus(5011) + !Control.HasFocus(5013)</visible>
+                </control>
+                <control type="image" id="5020">
+                    <width>640</width>
+                    <height>60</height>
+                    <texture border="2">dialogs/OptionsBackgroundHeading.png</texture>
+                </control>
+                <control type="label" id="5021">
+                    <left>40</left>
+                    <top>-60</top>
+                    <width>560</width>
+                    <height>60</height>
+                    <font>Bold30</font>
+                    <textcolor>ffdadada</textcolor>
+                    <label>$LOCALIZE[582]:</label>
+                </control>
+                <control type="button" id="5022">
+                    <height>110</height>
+                    <width>640</width>
+                    <textoffsetx>40</textoffsetx>
+                    <textwidth>560</textwidth>
+                    <aligny>center</aligny>
+                    <font>Light30Spaced</font>
+                    <label>$INFO[Container.Viewmode]</label>
+                    <onback>50</onback>
+                    <onclick>Container.NextViewMode</onclick>
+                    <textcolor>ff505153</textcolor>
+                    <focusedcolor>ffffaf37</focusedcolor>
+                    <texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+                    <texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
                 </control>
                 <control type="image" id="5002">
                     <width>640</width>
@@ -323,6 +378,41 @@
                     <texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
                     <texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
                     <visible>Control.IsEnabled(3)</visible>
+                </control>
+                <control type="image" id="5024">
+                    <width>640</width>
+                    <height>60</height>
+                    <texture border="2">dialogs/OptionsBackgroundHeading.png</texture>
+                    <visible>Control.IsEnabled(14) + IsEmpty(Container.PluginName)</visible>
+                </control>
+                <control type="label" id="5025">
+                    <left>40</left>
+                    <top>-60</top>
+                    <width>560</width>
+                    <height>60</height>
+                    <font>Bold30</font>
+                    <textcolor>ffdadada</textcolor>
+                    <label>$LOCALIZE[31162]:</label>
+                    <visible>Control.IsEnabled(14) + IsEmpty(Container.PluginName)</visible>
+                </control>
+                <control type="togglebutton" id="14">
+                    <height>110</height>
+                    <width>640</width>
+                    <textoffsetx>40</textoffsetx>
+                    <textwidth>560</textwidth>
+                    <aligny>center</aligny>
+                    <font>Light30Spaced</font>
+                    <label>16100</label>
+                    <altlabel>16101</altlabel>
+                    <onback>50</onback>
+                    <textcolor>ff505153</textcolor>
+                    <focusedcolor>ffffaf37</focusedcolor>
+                    <texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+                    <texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+                    <alttexturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</alttexturefocus>
+                    <alttexturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</alttexturenofocus>
+                    <usealttexture>System.Setting(hidewatched)</usealttexture>
+                    <visible>Control.IsEnabled(14) + IsEmpty(Container.PluginName)</visible>
                 </control>
                 <control type="image" id="5005">
                     <width>640</width>

@@ -1157,19 +1157,19 @@ msgid "Change widget name"
 msgstr ""
 
 msgctxt "#31545"
-msgid "TV Guide"
+msgid "View[CR]TV guide"
 msgstr ""
 
 msgctxt "#31546"
-msgid "TV recordings"
+msgid "View[CR]TV recordings"
 msgstr ""
 
 msgctxt "#31547"
-msgid "All groups"
+msgid "View[CR]All groups"
 msgstr ""
 
 msgctxt "#31548"
-msgid "TV timers"
+msgid "View[CR]TV timers"
 msgstr ""
 
 msgctxt "#31549"

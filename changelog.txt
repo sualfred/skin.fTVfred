@@ -1,3 +1,8 @@
+2.0.3:
+- Enabled Square/Poster/Wide view for MyRecordings
+- Changed lower labels for MyRecordings
+- Changed some PVR language strings
+
 2.0.2:
 - Added HD flags for PVR widget views
 
