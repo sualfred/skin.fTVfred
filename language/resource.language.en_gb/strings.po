@@ -702,7 +702,7 @@ msgid "Choose Art"
 msgstr ""
 
 msgctxt "#31166"
-msgid "Open Visualiser"
+msgid "Open Visualisation"
 msgstr ""
 
 msgctxt "#31167"

@@ -153,7 +153,7 @@
 						<visible>!StringCompare(ListItem.Label,..) + !Control.IsVisible(54) + [Container.Content(artists) | Container.Content(albums)]</visible>
 					</control>
 					<control id="1005" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -169,7 +169,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1006" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -184,7 +184,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1007" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -200,7 +200,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="16" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -215,7 +215,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="20" type="togglebutton">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>

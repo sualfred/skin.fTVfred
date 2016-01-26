@@ -2,6 +2,7 @@
 - Code cleanup
 - Added Tagline to library views and plots
 - Changed video playlist layout to the same as episodes
+- Fixed MusicNav button widths
 
 2.0.7:
 - Added progress bar to PVR MyRecordings

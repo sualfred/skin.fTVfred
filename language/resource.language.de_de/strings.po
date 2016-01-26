@@ -694,8 +694,8 @@ msgid "Choose Art"
 msgstr "Grafik wählen"
 
 msgctxt "#31166"
-msgid "Open Visualiser"
-msgstr ""
+msgid "Open Visualisation"
+msgstr "Öffne Visualisierung"
 
 msgctxt "#31167"
 msgid "Recently Added Movies"
