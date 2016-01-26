@@ -41,63 +41,63 @@
 		<value condition="StringCompare(Container(211).ListItem.Property(ftvWidget),widget12)">$VAR[ftvLabelWidget12000]</value>
 	</variable>
 	<variable name="ftvLabelTV">
-		<value condition="!IsEmpty(Skin.String(ftvLabelTV)">$INFO[Skin.String(ftvLabelTV)]</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelTV))">$INFO[Skin.String(ftvLabelTV)]</value>
 		<value>$LOCALIZE[19020]</value>
 	</variable>
 	<variable name="ftvLabelWeather">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWeather)">$INFO[Skin.String(ftvLabelWeather)]</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWeather))">$INFO[Skin.String(ftvLabelWeather)]</value>
 		<value>$LOCALIZE[10508]</value>
 	</variable>
 	<variable name="ftvLabelFavourites">
-		<value condition="!IsEmpty(Skin.String(ftvLabelFavourites)">$INFO[Skin.String(ftvLabelFavourites)]</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelFavourites))">$INFO[Skin.String(ftvLabelFavourites)]</value>
 		<value>$LOCALIZE[1036]</value>
 	</variable>
 	<variable name="ftvLabelWidget1000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1000)">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget1000))">$LOCALIZE[31500]$INFO[Skin.String(ftvLabelWidget1000), ',']</value>
 		<value>$LOCALIZE[31500]</value>
 	</variable>
 	<variable name="ftvLabelWidget2000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2000)">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget2000))">$LOCALIZE[31501]$INFO[Skin.String(ftvLabelWidget2000), ',']</value>
 		<value>$LOCALIZE[31501]</value>
 	</variable>
 	<variable name="ftvLabelWidget3000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3000)">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget3000))">$LOCALIZE[31502]$INFO[Skin.String(ftvLabelWidget3000), ',']</value>
 		<value>$LOCALIZE[31502]</value>
 	</variable>
 	<variable name="ftvLabelWidget4000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4000)">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget4000))">$LOCALIZE[31503]$INFO[Skin.String(ftvLabelWidget4000), ',']</value>
 		<value>$LOCALIZE[31503]</value>
 	</variable>
 	<variable name="ftvLabelWidget5000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5000)">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget5000))">$LOCALIZE[31504]$INFO[Skin.String(ftvLabelWidget5000), ',']</value>
 		<value>$LOCALIZE[31504]</value>
 	</variable>
 	<variable name="ftvLabelWidget6000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6000)">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget6000))">$LOCALIZE[31505]$INFO[Skin.String(ftvLabelWidget6000), ',']</value>
 		<value>$LOCALIZE[31505]</value>
 	</variable>
 	<variable name="ftvLabelWidget7000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7000)">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget7000))">$LOCALIZE[31506]$INFO[Skin.String(ftvLabelWidget7000), ',']</value>
 		<value>$LOCALIZE[31506]</value>
 	</variable>
 	<variable name="ftvLabelWidget8000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8000)">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget8000))">$LOCALIZE[31507]$INFO[Skin.String(ftvLabelWidget8000), ',']</value>
 		<value>$LOCALIZE[31507]</value>
 	</variable>
 	<variable name="ftvLabelWidget9000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget9000)">$LOCALIZE[31213]$INFO[Skin.String(ftvLabelWidget9000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget9000))">$LOCALIZE[31213]$INFO[Skin.String(ftvLabelWidget9000), ',']</value>
 		<value>$LOCALIZE[31213]</value>
 	</variable>
 	<variable name="ftvLabelWidget10000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget10000)">$LOCALIZE[31214]$INFO[Skin.String(ftvLabelWidget10000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget10000))">$LOCALIZE[31214]$INFO[Skin.String(ftvLabelWidget10000), ',']</value>
 		<value>$LOCALIZE[31214]</value>
 	</variable>
 	<variable name="ftvLabelWidget11000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget11000)">$LOCALIZE[31215]$INFO[Skin.String(ftvLabelWidget11000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget11000))">$LOCALIZE[31215]$INFO[Skin.String(ftvLabelWidget11000), ',']</value>
 		<value>$LOCALIZE[31215]</value>
 	</variable>
 	<variable name="ftvLabelWidget12000">
-		<value condition="!IsEmpty(Skin.String(ftvLabelWidget12000)">$LOCALIZE[31216]$INFO[Skin.String(ftvLabelWidget12000), ',']</value>
+		<value condition="!IsEmpty(Skin.String(ftvLabelWidget12000))">$LOCALIZE[31216]$INFO[Skin.String(ftvLabelWidget12000), ',']</value>
 		<value>$LOCALIZE[31216]</value>
 	</variable>
 	<variable name="SearchSetFocus">
@@ -925,9 +925,9 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),7000)">$INFO[Skin.String(7000-WidgetAction-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),8000)">$INFO[Skin.String(8000-WidgetAction-8)]</value>
 		<value condition="StringCompare(Window(home).Property(SubMenu),9000)">$INFO[Skin.String(9000-WidgetAction-8)]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-8]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-8]</value>
-		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-8]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000)">$INFO[Skin.String(10000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetAction-8)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetAction-8)]</value>
 	</variable>
 	<variable name="WidgetStyle-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetStyle-1)]</value>
@@ -2369,12 +2369,12 @@
 		<value>$INFO[Container.FolderName]</value>
 	</variable>
 	<variable name="Plot">
-		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Tagline,- [B],[/B] ]$INFO[Container(100).ListItem.PlotOutline,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
-		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.Tagline,- [B],[/B] ]$INFO[Container(100).ListItem.PlotOutline]</value>
-		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Tagline,- [B],[/B] ]$INFO[Container(100).ListItem.Plot]</value>
-		<value condition="!StringCompare(ListItem.PlotOutline,ListItem.Plot)">$INFO[ListItem.Tagline,- [B],[/B] ]$INFO[ListItem.PlotOutline,, ]$INFO[ListItem.Plot]</value>
-		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,- [B],[/B] ]$INFO[ListItem.PlotOutline]</value>
-		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,- [B],[/B] ]$INFO[ListItem.Plot]</value>
+		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.PlotOutline,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.PlotOutline]</value>
+		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Plot]</value>
+		<value condition="!StringCompare(ListItem.PlotOutline,ListItem.Plot)">$INFO[ListItem.PlotOutline,, ]$INFO[ListItem.Plot]</value>
+		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="TxTPlot">
 		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Tagline,,[CR][CR]]$INFO[Container(100).ListItem.PlotOutline,,[CR]]$INFO[Container(100).ListItem.Plot]</value>

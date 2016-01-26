@@ -26,7 +26,7 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[VideoPlayer.Tagline]</label>
+				<label>$INFO[Window(Home).Property(TextViewer.Text)]</label>
 			</control>
 			<!-- Window labels -->
 			<control type="label">

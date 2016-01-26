@@ -230,7 +230,7 @@
 					<height>23</height>
 					<onleft>7000</onleft>
 					<onright>8</onright>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[Window.Property(Plot)]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Window.Property(Title)]',text='$ESCINFO[Window.Property(Plot)]')</onclick>
 					<include>DialogVideoInfoAnimation</include>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

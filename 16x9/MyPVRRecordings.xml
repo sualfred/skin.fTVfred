@@ -256,7 +256,7 @@
                     <onleft>50</onleft>
                     <onright>50</onright>
                     <onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-                    <onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[TxTPlot]"')</onclick>
+                    <onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[TxTPlot]')</onclick>
                     <visible>Control.IsVisible(99)</visible>
                     <texturefocus>views/more_fo.png</texturefocus>
                     <texturenofocus>views/more_nf.png</texturenofocus>
