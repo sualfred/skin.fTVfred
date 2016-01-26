@@ -256,7 +256,7 @@
                     <onleft>50</onleft>
                     <onright>50</onright>
                     <onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-                    <onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[Plot]"')</onclick>
+                    <onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[TxTPlot]"')</onclick>
                     <visible>Control.IsVisible(99)</visible>
                     <texturefocus>views/more_fo.png</texturefocus>
                     <texturenofocus>views/more_nf.png</texturenofocus>
@@ -309,12 +309,7 @@
                     <width>-8</width>
                     <height>0</height>
                     <label>-</label>
-                    <onfocus condition="!IsEmpty(Container.PluginName)">SetFocus(5022)</onfocus>
-                    <onfocus condition="IsEmpty(Container.PluginName) + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
-                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(14)</onfocus>
-                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4) + Control.IsEnabled(14)">SetFocus(4)</onfocus>
-                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
-                    <onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
+                    <onfocus>SetFocus(5022)</onfocus>
                     <include>NoTextures</include>
                     <visible>!Control.HasFocus(5022) + !Control.HasFocus(5004) + !Control.HasFocus(14) + !Control.HasFocus(4) + !Control.HasFocus(19) + !Control.HasFocus(5011) + !Control.HasFocus(5013)</visible>
                 </control>

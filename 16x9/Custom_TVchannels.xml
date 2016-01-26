@@ -285,7 +285,7 @@
 					<ondown>noop</ondown>
 					<onleft>100</onleft>
 					<onright>100</onright>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[Container(100).ListItem.Label],text='"$VAR[Plot]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[Container(100).ListItem.Label],text='"$VAR[TxTPlot]"')</onclick>
 					<visible>Control.IsVisible(99)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

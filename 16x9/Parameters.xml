@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- ViewType progress -->
+	<include name="ParamProgress">
+		<control type="progress">
+			<top>515</top>
+			<width>$PARAM[width]</width>
+			<height>12</height>
+			<info>ListItem.PercentPlayed</info>
+			<texturebg border="2">views/ProgressBack.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture border="2">views/ProgressBar.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>ListItem.IsResumable</visible>
+		</control>
+		<control type="image">
+			<top>515</top>
+			<width>$PARAM[width]</width>
+			<height>12</height>
+			<texture border="2">views/ProgressBar.png</texture>
+			<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+		</control>
+	</include>
 	<!-- Widget Label Include -->
 	<include name="ParamWidgetLabel">
 		<item>

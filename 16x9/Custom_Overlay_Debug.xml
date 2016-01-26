@@ -26,6 +26,16 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
+				<label>$INFO[VideoPlayer.Tagline]</label>
+			</control>
+			<!-- Window labels -->
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
 				<label>AddonBrowser.xml</label>
 				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
 			</control>

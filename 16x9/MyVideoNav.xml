@@ -453,7 +453,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[Plot]"')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[TxTPlot]"')</onclick>
 						<visible>Control.IsVisible(96)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -491,7 +491,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.TVShowTitle] - $VAR[SeasonValue],text='"$VAR[Plot]"')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.TVShowTitle] - $VAR[SeasonValue],text='"$VAR[TxTPlot]"')</onclick>
 						<visible>Control.IsVisible(97)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -565,7 +565,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Title],text='"$VAR[Plot]"')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Title],text='"$VAR[TxTPlot]"')</onclick>
 						<visible>Control.IsVisible(98)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -711,7 +711,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[Plot]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$VAR[TxTPlot]"')</onclick>
 					<visible>Control.IsVisible(99)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

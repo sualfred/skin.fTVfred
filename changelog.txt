@@ -1,3 +1,8 @@
+2.0.8:
+- Code cleanup
+- Added Tagline to library views and plots
+- Changed video playlist layout to the same as episodes
+
 2.0.7:
 - Added progress bar to PVR MyRecordings
 - Added watched/hd flags to PVR MyRecordings Square
