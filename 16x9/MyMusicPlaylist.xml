@@ -392,7 +392,7 @@
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(21) + !Control.HasFocus(22) + !Control.HasFocus(1004)</visible>
 					</control>
 					<control id="1002" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -406,7 +406,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1003" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -420,7 +420,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="21" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -434,7 +434,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="22" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -448,7 +448,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1004" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
