@@ -278,7 +278,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[SquareImage]</texture>
+					<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
@@ -372,7 +372,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[SquareImage]</texture>
+					<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
@@ -669,7 +669,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[WideImage]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$VAR[WideImage]</texture>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
@@ -744,7 +744,7 @@
 					<width>640</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[WideImage]</texture>
+					<texture background="true" fallback="views/wide_fallback.png">$VAR[WideImage]</texture>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">

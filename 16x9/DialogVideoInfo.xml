@@ -21,7 +21,7 @@
 			<pagecontrol>96</pagecontrol>
 			<autoscroll>false</autoscroll>
 			<textcolor>ffbbbbbb</textcolor>
-			<label>$VAR[Plot]</label>
+			<label>$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
 		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
@@ -264,7 +264,7 @@
 					<font>Light30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>$VAR[Plot]</label>
+					<label>$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
 					<include>DialogVideoInfoAnimation</include>
 					<visible>!IsEmpty(ListItem.Plot) | !IsEmpty(ListItem.PlotOutline)</visible>
 				</control>

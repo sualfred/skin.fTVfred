@@ -206,6 +206,17 @@
 					<visible>!IsEmpty(ListItem.Rating)</visible>
 				</control>
 			</control>
+			<!-- Tagline -->
+			<control type="label">
+				<left>198</left>
+				<top>200</top>
+				<width max="1610">auto</width>
+				<height>32</height>
+				<font>Med32</font>
+				<textcolor>ffbebebe</textcolor>
+				<label>$INFO[ListItem.Tagline]</label>
+				<visible>Container.Content(movies)</visible>
+			</control>
 			<!-- TV show title -->
 			<control type="label">
 				<left>198</left>

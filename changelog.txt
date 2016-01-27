@@ -1,3 +1,7 @@
+2.0.9:
+- Fixed plot textviewer breaks. Please use https://github.com/sualfred/script.toolbox until Phil65 merged the changes to his official Git repo. Otherwise you will see '" %s "' in the dialogs.
+- Added tagline to movie view header
+
 2.0.8:
 - Code cleanup
 - Added Tagline to library views and plots

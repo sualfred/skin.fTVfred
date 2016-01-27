@@ -344,7 +344,7 @@
 			<control type="image">
 				<left>0</left>
 				<top>-706</top>
-				<width>1920</width>
+				<width>418</width>
 				<height>1858</height>
 				<aspectratio>stretch</aspectratio>
 				<texture border="2" diffuse="special://skin/extras/backgrounds/diffuse.png">special://skin/extras/backgrounds/default.png</texture>
