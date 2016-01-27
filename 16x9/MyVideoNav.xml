@@ -209,10 +209,13 @@
 			<!-- Tagline -->
 			<control type="label">
 				<left>198</left>
-				<top>200</top>
+				<top>206</top>
 				<width max="1610">auto</width>
-				<height>32</height>
+				<height>64</height>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
 				<font>Med32</font>
+				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$INFO[ListItem.Tagline]</label>
 				<visible>Container.Content(movies)</visible>

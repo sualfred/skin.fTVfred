@@ -250,8 +250,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ffdadada</textcolor>
 							<label>$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[283] “,”]  </label>
-						</control>	
-
+						</control>
 						<control type="label">
 							<top>15</top>
 							<width>auto</width>
@@ -644,7 +643,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(111) | Control.HasFocus(115) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),movies]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(111) | Control.HasFocus(115) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),movies)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -772,7 +771,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(121) | Control.HasFocus(125) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),tvshows]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(121) | Control.HasFocus(125) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),tvshows)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -900,7 +899,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(131) | Control.HasFocus(135) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),seasons]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(131) | Control.HasFocus(135) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),seasons)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1029,7 +1028,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(141) | Control.HasFocus(145) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),episodes]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(141) | Control.HasFocus(145) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),episodes)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1222,7 +1221,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(151) | Control.HasFocus(155) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),musicvideos]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(151) | Control.HasFocus(155) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),musicvideos)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1351,7 +1350,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(161) | Control.HasFocus(165) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),artists]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(161) | Control.HasFocus(165) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),artists)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1452,7 +1451,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(171) | Control.HasFocus(175) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),albums]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(171) | Control.HasFocus(175) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),albums)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1553,7 +1552,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(181) | Control.HasFocus(185) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),songs]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(181) | Control.HasFocus(185) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),songs)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1654,7 +1653,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(211) | Control.HasFocus(215) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),actors]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(211) | Control.HasFocus(215) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),actors)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
