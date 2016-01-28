@@ -18,34 +18,7 @@
 		<!-- Fanart -->
 		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
 		<!-- List -->
-		<control id="50" type="fixedlist">
-			<left>-374</left>
-			<top>267</top>
-			<width>2344</width>
-			<height>576</height>
-			<onup>Back</onup>
-			<ondown>1001</ondown>
-			<onleft>Back</onleft>
-			<onright>noop</onright>
-			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
-			<preloaditems>2</preloaditems>
-			<focusposition>1</focusposition>
-			<viewtype label="">list</viewtype>
-			<orientation>horizontal</orientation>
-			<scrolltime easing="inout" tween="sine">300</scrolltime>
-			<include>ViewTypeBounceAnimation</include>
-			<include name="ViewOpenAnimation">
-				<param name="pos1">186,10</param>
-				<param name="pos2">490,-174</param>
-				<param name="pos3">490,195</param>
-				<param name="pos4">490,-246</param>
-				<param name="pos5">490,10</param>
-				<param name="pos6">490,168</param>
-			</include>
-			<include name="ViewEpisodeLayout">
-				<param name="ID">50</param>
-			</include>
-		</control>
+		<include>ViewVideoPlaylist</include>
 		<control type="group">
 			<animation condition="!Window.Previous(visualisation)" delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 			<!-- Heading / Current item / Total items -->
@@ -100,20 +73,26 @@
 			<!-- Album -->
 			<control type="label">
 				<left>198</left>
-				<top>200</top>
-				<width>auto</width>
-				<height>32</height>
+				<top>206</top>
+				<width max="1610">auto</width>
+				<height>64</height>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
 				<font>Med32</font>
+				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$INFO[ListItem.Album]</label>
 			</control>
 			<!-- TV Show -->
 			<control type="label">
 				<left>198</left>
-				<top>200</top>
-				<width>auto</width>
-				<height>32</height>
+				<top>206</top>
+				<width max="1610">auto</width>
+				<height>64</height>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
 				<font>Med32</font>
+				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$INFO[ListItem.TvShowTitle]</label>
 				<visible>StringCompare(ListItem.DBTYPE,episode) | StringCompare(ListItem.DBTYPE,season) | StringCompare(ListItem.DBTYPE,tvshow)</visible>
@@ -121,10 +100,13 @@
 			<!-- TV Show -->
 			<control type="label">
 				<left>198</left>
-				<top>200</top>
-				<width>auto</width>
-				<height>32</height>
+				<top>206</top>
+				<width max="1610">auto</width>
+				<height>64</height>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
 				<font>Med32</font>
+				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$INFO[ListItem.Title]</label>
 				<visible>![StringCompare(ListItem.DBTYPE,episode) | StringCompare(ListItem.DBTYPE,season) | StringCompare(ListItem.DBTYPE,tvshow)]</visible>

@@ -61,10 +61,13 @@
 			<!-- Label -->
 			<control type="label">
 				<left>198</left>
-				<top>200</top>
-				<width>auto</width>
-				<height>32</height>
+				<top>206</top>
+				<width max="1610">auto</width>
+				<height>64</height>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
 				<font>Med32</font>
+				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])</visible>

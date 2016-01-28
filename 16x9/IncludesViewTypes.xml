@@ -17,7 +17,7 @@
 		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
 		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
 	</include>
-	<!--wide-->
+	<!--Wide-->
 	<include name="ViewWideLayout">
 		<itemlayout height="576" width="572">
 			<control type="group">
@@ -166,7 +166,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!--poster-->
+	<!--Poster-->
 	<include name="ViewPosterLayout">
 		<itemlayout height="576" width="300">
 			<control type="group">
@@ -260,7 +260,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!--square info-->
+	<!--Square Info-->
 	<include name="ViewSquareInfoLayout">
 		<itemlayout height="576" width="436">
 			<control type="group">
@@ -455,7 +455,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!--episodes-->
+	<!--Episodes-->
 	<include name="ViewEpisodeLayout">
 		<animation condition="Control.HasFocus(55) | Control.HasFocus(2003) | Control.HasFocus(2004) | Control.HasFocus(3001)" effect="fade" end="0" start="100" time="200">Conditional</animation>
 		<itemlayout height="576" width="572">
@@ -795,7 +795,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!--tv channels-->
+	<!--TV Channels-->
 	<include name="ViewPVRLayout">
 		<itemlayout width="436">
 			<control type="group">
@@ -944,7 +944,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!--tv list channels -->
+	<!--TV List Channels -->
 	<include name="ViewPVRListLayout">		
 		<itemlayout height="70" width="1850">
 			<control type="image">
@@ -1406,5 +1406,244 @@
 				</control>
 			</control>		
 		</focusedlayout>    
+	</include>
+	<!--Music Playlist-->
+	<include name="ViewMusicPlaylistLayout">		
+		<itemlayout height="576" width="436">
+			<control type="group">
+				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<left>-48</left>
+					<centertop>288</centertop>
+					<width>576</width>
+					<height>576</height>
+					<texture border="66,66,51,51">views/shadow_nf.png</texture>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+				</control>
+				<control type="image">
+					<left>17</left>
+					<top>419</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<left>98</left>
+					<top>447</top>
+					<width>366</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Title]</label>
+					<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>447</top>
+					<width>446</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Title]</label>
+					<visible>!StringCompare(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+				</control>
+				<control type="label">
+					<left>98</left>
+					<top>462</top>
+					<width>366</width>
+					<height>28</height>
+					<font>Med28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Artist]</label>
+					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>462</top>
+					<width>446</width>
+					<height>28</height>
+					<font>Med28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Artist]</label>
+					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture>views/OverlayNF.png</texture>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="576" width="436">
+			<control type="group">
+				<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="250,288" condition="Container(50).OnNext | Container(50).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<left>-48</left>
+					<centertop>288</centertop>
+					<width>576</width>
+					<height>576</height>
+					<texture border="51">views/shadow_fo.png</texture>
+					<animation center="auto" condition="Control.HasFocus(50) | Container(50).OnNext | Container(50).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Container(50).OnNext | Container(50).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+				</control>
+				<control type="image">
+					<left>-48</left>
+					<centertop>288</centertop>
+					<width>576</width>
+					<height>576</height>
+					<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture border="2">views/season_overlay.png</texture>
+					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+				</control>
+				<control type="image">
+					<left>17</left>
+					<top>419</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/playlist_play.png</texture>
+					<visible>!StringCompare(MusicPlayer.Title,ListItem.Title) | [!Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
+				</control>
+				<control type="label">
+					<left>98</left>
+					<top>447</top>
+					<width>366</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Title]</label>
+					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
+				</control>
+				<control type="label">
+					<left>98</left>
+					<top>462</top>
+					<width>366</width>
+					<height>28</height>
+					<font>Med28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Artist]</label>
+					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist)</visible>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
+				</control>
+				<control type="label">
+					<left>98</left>
+					<top>447</top>
+					<width>366</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Title]</label>
+					<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>447</top>
+					<width>446</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Title]</label>
+					<visible>Control.HasFocus(50)</visible>
+					<visible>!StringCompare(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
+				</control>
+				<control type="image">
+					<left>17</left>
+					<top>419</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/equaliser.gif</texture>
+					<visible>Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<left>98</left>
+					<top>462</top>
+					<width>366</width>
+					<height>28</height>
+					<font>Med28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Artist]</label>
+					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>462</top>
+					<width>446</width>
+					<height>28</height>
+					<font>Med28</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.Artist]</label>
+					<visible>Control.HasFocus(50)</visible>
+					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<texture>views/OverlayNF.png</texture>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+				</control>
+			</control>
+		</focusedlayout>
 	</include>
 </includes>

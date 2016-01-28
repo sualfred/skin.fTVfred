@@ -98,7 +98,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)</visible>
+				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + SubString(Container.FolderPath,.m3u)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -172,7 +172,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + Container.Content(episodes)</visible>
+				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(episodes) | [Container.Content(files) + SubString(Container.FolderPath,.m3u)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -662,6 +662,68 @@
 			<include name="$PARAM[layout]">
 				<param name="ID">450</param>
 			</include>
+		</control>
+	</include>
+
+	<!--Video Playlist-->
+	<include name="ViewVideoPlaylist">
+		<control id="50" type="fixedlist">
+			<left>-374</left>
+			<top>267</top>
+			<width>2344</width>
+			<height>576</height>
+			<onup>Back</onup>
+			<ondown>1001</ondown>
+			<onleft>Back</onleft>
+			<onright>noop</onright>
+			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<viewtype label="">list</viewtype>
+			<orientation>horizontal</orientation>
+			<scrolltime easing="inout" tween="sine">300</scrolltime>
+			<include>ViewTypeBounceAnimation</include>
+			<include name="ViewOpenAnimation">
+				<param name="pos1">186,15</param>
+				<param name="pos2">490,-200</param>
+				<param name="pos3">490,170</param>
+				<param name="pos4">490,-271</param>
+				<param name="pos5">490,-15</param>
+				<param name="pos6">490,143</param>
+			</include>
+			<include name="ViewEpisodeLayout">
+				<param name="ID">50</param>
+			</include>
+		</control>
+	</include>
+
+	<!--Music Playlist-->
+	<include name="ViewMusicPlaylist">		
+		<control id="50" type="fixedlist">
+			<left>-238</left>
+			<top>267</top>
+			<width>2200</width>
+			<height>576</height>
+			<onup>Back</onup>
+			<ondown>1001</ondown>
+			<onleft>Back</onleft>
+			<onright>noop</onright>
+			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<viewtype label="">list</viewtype>
+			<orientation>horizontal</orientation>
+			<scrolltime easing="inout" tween="sine">300</scrolltime>
+			<include>ViewTypeBounceAnimation</include>
+			<include name="ViewOpenAnimsation">
+				<param name="pos1">193,15</param>
+				<param name="pos2">497,-200</param>
+				<param name="pos3">497,170</param>
+				<param name="pos4">497,-271</param>
+				<param name="pos5">497,-15</param>
+				<param name="pos6">497,143</param>
+			</include>
+			<include>ViewMusicPlaylistLayout</include>
 		</control>
 	</include>
 </includes>

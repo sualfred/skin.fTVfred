@@ -26,36 +26,6 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>Window.Previous home</label>
-				<visible>Window.Previous(home)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>Window.IsVisible home</label>
-				<visible>Window.IsVisible(home)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>$INFO[Window(home).Property(FocusRow)]</label>
-			</control>
-			<!-- Window labels -->
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
 				<label>AddonBrowser.xml</label>
 				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
 			</control>

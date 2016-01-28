@@ -1,3 +1,7 @@
+2.0.12:
+- Changed static .m3u playlists with file content to 'Episode' layout
+- Code cleanup
+
 2.0.11:
 - Reworked Favourites dialog with the option to change the default layout to Poster or Wide (Can be set in the skin settings)
 - Fixed wrong icon in Wide for addons (thx iRubin)
