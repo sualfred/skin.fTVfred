@@ -467,7 +467,27 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(SkipSearchItem)</onclick>
 					<selected>Skin.HasSetting(SkipSearchItem)</selected>
-				</control>				
+				</control>
+				<control id="24" type="button">
+					<width>958</width>
+					<height>84</height>
+					<font>Light32</font>
+					<label>$LOCALIZE[31232]</label>
+					<label2>$VAR[FavouritesLayout]</label2>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>SetProperty(Dialog.NumItems,3)</onclick>
+					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31203])</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(FavouritesLayout,$LOCALIZE[31203]))</onclick>
+					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31159])</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(FavouritesLayout,$LOCALIZE[31159]))</onclick>
+					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31160])</onclick>
+					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(FavouritesLayout,$LOCALIZE[31160]))</onclick>
+					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+				</control>
 				<control id="23" type="button">
 					<width>958</width>
 					<height>84</height>

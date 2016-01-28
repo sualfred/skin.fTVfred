@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- View WindowOpen Animations -->
+	<include name="ViewOpenAnimation">
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos2]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos3]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
+	</include>
+	<include name="ViewOpenAnimationDialog">
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(FocusRow)) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos2]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos3]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
+	</include>
 	<!--wide-->
 	<include name="ViewWideLayout">
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="186,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,-174" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,195" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,-246" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,168" time="540" tween="sine">WindowOpen</animation>
 		<itemlayout height="576" width="572">
 			<control type="group">
 				<animation center="316,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -156,13 +167,7 @@
 		</focusedlayout>
 	</include>
 	<!--poster-->
-	<include name="ViewPosterLayout">		
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="208,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="512,-175" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="512,195" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="512,-246" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="512,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="512,168" time="540" tween="sine">WindowOpen</animation>
+	<include name="ViewPosterLayout">
 		<itemlayout height="576" width="300">
 			<control type="group">
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -256,13 +261,7 @@
 		</focusedlayout>
 	</include>
 	<!--square info-->
-	<include name="ViewSquareInfoLayout">		
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
+	<include name="ViewSquareInfoLayout">
 		<itemlayout height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -458,12 +457,6 @@
 	</include>
 	<!--episodes-->
 	<include name="ViewEpisodeLayout">
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="186,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,-174" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,195" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,-246" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,168" time="540" tween="sine">WindowOpen</animation>
 		<animation condition="Control.HasFocus(55) | Control.HasFocus(2003) | Control.HasFocus(2004) | Control.HasFocus(3001)" effect="fade" end="0" start="100" time="200">Conditional</animation>
 		<itemlayout height="576" width="572">
 			<control type="group">
@@ -647,13 +640,7 @@
 		</focusedlayout>
 	</include>
 	<!--Wide info -->
-	<include name="ViewDefaultWideLayout">	
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="186,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,-174" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,195" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,-246" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,10" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="490,168" time="540" tween="sine">WindowOpen</animation>
+	<include name="ViewDefaultWideLayout">
 		<itemlayout height="576" width="572">
 			<control type="group">
 				<animation center="316,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -810,12 +797,6 @@
 	</include>
 	<!--tv channels-->
 	<include name="ViewPVRLayout">
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
 		<itemlayout width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>

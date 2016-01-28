@@ -22,6 +22,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>StringCompare(Window(Home).Property(ForceViewType),poster) + IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">208,10</param>
+					<param name="pos2">512,-174</param>
+					<param name="pos3">512,195</param>
+					<param name="pos4">512,-246</param>
+					<param name="pos5">512,10</param>
+					<param name="pos6">512,168</param>
+				</include>
 				<include name="ViewPosterLayout">
 					<param name="ID">60</param>
 				</include>
@@ -51,6 +59,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>StringCompare(Window(Home).Property(ForceViewType),wide) + IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(artists)]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">186,10</param>
+					<param name="pos2">490,-174</param>
+					<param name="pos3">490,195</param>
+					<param name="pos4">490,-246</param>
+					<param name="pos5">490,10</param>
+					<param name="pos6">490,168</param>
+				</include>
 				<include name="ViewWideLayout">
 					<param name="ID">61</param>
 				</include>
@@ -83,6 +99,14 @@
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">193,10</param>
+					<param name="pos2">497,-174</param>
+					<param name="pos3">497,195</param>
+					<param name="pos4">497,-246</param>
+					<param name="pos5">497,10</param>
+					<param name="pos6">497,168</param>
+				</include>
 				<include name="ViewSquareInfoLayout">
 					<param name="ID">50</param>
 				</include>
@@ -112,6 +136,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>[[!StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)] + IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [[Skin.HasSetting(WideMovieArt) + [Container.Content(movies) | Container.Content(sets)]] | [Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">186,10</param>
+					<param name="pos2">490,-174</param>
+					<param name="pos3">490,195</param>
+					<param name="pos4">490,-246</param>
+					<param name="pos5">490,10</param>
+					<param name="pos6">490,168</param>
+				</include>
 				<include name="ViewWideLayout">
 					<param name="ID">51</param>
 				</include>
@@ -141,6 +173,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + Container.Content(episodes)</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">186,10</param>
+					<param name="pos2">490,-174</param>
+					<param name="pos3">490,195</param>
+					<param name="pos4">490,-246</param>
+					<param name="pos5">490,10</param>
+					<param name="pos6">490,168</param>
+				</include>
 				<include name="ViewEpisodeLayout">
 					<param name="ID">52</param>
 				</include>
@@ -170,6 +210,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">208,10</param>
+					<param name="pos2">512,-174</param>
+					<param name="pos3">512,195</param>
+					<param name="pos4">512,-246</param>
+					<param name="pos5">512,10</param>
+					<param name="pos6">512,168</param>
+				</include>
 				<include name="ViewPosterLayout">
 					<param name="ID">53</param>
 				</include>
@@ -199,6 +247,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">186,10</param>
+					<param name="pos2">490,-174</param>
+					<param name="pos3">490,195</param>
+					<param name="pos4">490,-246</param>
+					<param name="pos5">490,10</param>
+					<param name="pos6">490,168</param>
+				</include>
 				<include name="ViewDefaultWideLayout">
 					<param name="ID">55</param>
 				</include>
@@ -228,6 +284,14 @@
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">193,10</param>
+					<param name="pos2">497,-174</param>
+					<param name="pos3">497,195</param>
+					<param name="pos4">497,-246</param>
+					<param name="pos5">497,10</param>
+					<param name="pos6">497,168</param>
+				</include>
 				<include name="ViewSquareInfoLayout">
 					<param name="ID">56</param>
 				</include>
@@ -257,6 +321,14 @@
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">208,10</param>
+					<param name="pos2">512,-174</param>
+					<param name="pos3">512,195</param>
+					<param name="pos4">512,-246</param>
+					<param name="pos5">512,10</param>
+					<param name="pos6">512,168</param>
+				</include>
 				<include name="ViewPosterLayout">
 					<param name="ID">57</param>
 				</include>
@@ -541,6 +613,55 @@
 					</control>
 				</control>
 			</control>
+		</control>
+	</include>
+
+	<!--Favourites-->
+	<include name="ViewFavourites">		
+		<control id="450" type="fixedlist">			
+			<left>$PARAM[left]</left>
+			<top>242</top>
+			<width>$PARAM[width]</width>
+			<height>576</height>
+			<onup>Back</onup>
+			<ondown>1001</ondown>
+			<onleft>Back</onleft>
+			<onright>noop</onright>
+			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<viewtype label="31161">list</viewtype>
+			<orientation>horizontal</orientation>
+			<defaultcontrol always="true">0</defaultcontrol>
+			<scrolltime easing="inout" tween="sine">300</scrolltime>
+			<include>ViewTypeBounceAnimation</include>			
+			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))" name="ViewOpenAnimationDialog">
+				<param name="pos1">193,10</param>
+				<param name="pos2">497,-174</param>
+				<param name="pos3">497,195</param>
+				<param name="pos4">497,-246</param>
+				<param name="pos5">497,10</param>
+				<param name="pos6">497,168</param>
+			</include>
+			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])" name="ViewOpenAnimationDialog">
+				<param name="pos1">208,10</param>
+				<param name="pos2">512,-174</param>
+				<param name="pos3">512,195</param>
+				<param name="pos4">512,-246</param>
+				<param name="pos5">512,10</param>
+				<param name="pos6">512,168</param>
+			</include>
+			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])" name="ViewOpenAnimationDialog">
+				<param name="pos1">186,10</param>
+				<param name="pos2">490,-174</param>
+				<param name="pos3">490,195</param>
+				<param name="pos4">490,-246</param>
+				<param name="pos5">490,10</param>
+				<param name="pos6">490,168</param>
+			</include>
+			<include name="$PARAM[layout]">
+				<param name="ID">450</param>
+			</include>
 		</control>
 	</include>
 </includes>

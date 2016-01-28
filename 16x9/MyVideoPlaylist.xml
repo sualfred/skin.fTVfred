@@ -34,6 +34,14 @@
 			<orientation>horizontal</orientation>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>ViewTypeBounceAnimation</include>
+			<include name="ViewOpenAnimation">
+				<param name="pos1">186,10</param>
+				<param name="pos2">490,-174</param>
+				<param name="pos3">490,195</param>
+				<param name="pos4">490,-246</param>
+				<param name="pos5">490,10</param>
+				<param name="pos6">490,168</param>
+			</include>
 			<include name="ViewEpisodeLayout">
 				<param name="ID">50</param>
 			</include>

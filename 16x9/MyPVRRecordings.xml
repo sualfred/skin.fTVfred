@@ -290,7 +290,8 @@
             <animation reversible="true" type="Hidden">
                 <effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
                 <effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
-            </animation><!-- Controls -->
+            </animation>
+            <!-- Controls -->
             <control type="grouplist" id="5000">
                 <centerleft>50%</centerleft>
                 <centertop>50%</centertop>

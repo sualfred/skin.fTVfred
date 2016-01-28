@@ -957,7 +957,7 @@ msgstr "fTV Einstellungen sichern oder wiederherstellen"
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"
 msgid "Backup, restore or reset skin configuration."
-msgstr "fTV Skin Eisntellungen sichern, wiederherstellen oder zurücksetzen."
+msgstr "fTV Skin Einstellungen sichern, wiederherstellen oder zurücksetzen."
 
 #: \16x9\SkinSettings.xml:482
 msgctxt "#31229"
@@ -973,6 +973,16 @@ msgstr "Importiere vorhandenes Backup"
 msgctxt "#31231"
 msgid "Reset skin settings"
 msgstr "Skin-Einstellungen zurücksetzen"
+
+#: /16x9/SkinSettings.xml:475
+msgctxt "#31232"
+msgid "Set Favourites layout"
+msgstr "Setze Favouriten Layout"
+
+#: /16x9/Variables.xml:1865
+msgctxt "#31233"
+msgid "Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want them displayed with the poster.[CR]Default is 'Square Info'."
+msgstr "Ändert die Darstellung der Favouriten. Nützlich falls diese zum anzeigen der Lieblingsfilme im Poster-Layout verwendet werden sollen.[CR]Standard ist 'Quadrat Info'."
 
 msgctxt "#31500"
 msgid "Widget Group 1"

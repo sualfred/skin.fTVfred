@@ -184,6 +184,7 @@
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + !IntegerGreaterThan(Container(901).NumItems,1)">ActivateWindow(1106)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather)">ActivateWindow(weather)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites)">ActivateWindow(favourites)</onright>
+
 				<onright condition="StringCompare(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
