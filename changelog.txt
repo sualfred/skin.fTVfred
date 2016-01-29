@@ -1,3 +1,6 @@
+2.0.14:
+- Added cast to dialog fullscreeninfo (wip)
+
 2.0.13:
 - Added forced viewtype feature to Favourites
 - Parameterized widget home layouts

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="XrayCast">
+		<value condition="VideoPlayer.Content(movies)">plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[VideoPlayer.Title]&amp;downloadthumbs=true</value>
+		<value condition="VideoPlayer.Content(episodes)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[VideoPlayer.TVShowTitle]&amp;downloadthumbs=true</value>
+	</variable>
 	<variable name="FavouritesLayout">
 		<value condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203])">$LOCALIZE[31203]</value>
 		<value condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])">$LOCALIZE[31159]</value>

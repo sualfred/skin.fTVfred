@@ -15,6 +15,11 @@
 			<size>36</size>
 		</font>
 		<font>
+ 			<name>Reg32</name>
+ 			<filename>HelveticaNeue.ttf</filename>
+ 			<size>32</size>
+ 		</font>
+		<font>
 			<name>Reg30Spaced</name>
 			<filename>HelveticaNeue.ttf</filename>
 			<linespacing>1.15</linespacing>
