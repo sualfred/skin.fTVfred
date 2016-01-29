@@ -70,7 +70,7 @@
 				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])</visible>
+				<visible>[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])]</visible>
 			</control>
 		</control>
 		<!-- Square -->
