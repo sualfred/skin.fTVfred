@@ -243,7 +243,7 @@
 					<top>-38</top>
 					<width>37</width>
 					<height>23</height>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$VAR[SearchPlot]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[SearchPlot]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
 					<visible>Control.IsVisible(96)</visible>
@@ -430,7 +430,7 @@
 					<top>-38</top>
 					<width>37</width>
 					<height>23</height>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$VAR[SearchPlot]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[SearchPlot]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
 					<visible>Control.IsVisible(96)</visible>

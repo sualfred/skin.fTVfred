@@ -342,7 +342,7 @@
 					<onleft>570</onleft>
 					<onright>570</onright>
 					<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$INFO[ListItem.Property(Event.Description)]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='$ESCINFO[ListItem.Property(Event.Description)]')</onclick>
 					<visible>Control.IsVisible(96)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

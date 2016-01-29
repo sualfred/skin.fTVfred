@@ -349,7 +349,7 @@
 					<height>23</height>
 					<onleft>7001</onleft>
 					<onright>50</onright>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$VAR[MusicInfoDescription]"')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[MusicInfoDescription]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
 					<visible>Control.IsVisible(96)</visible>

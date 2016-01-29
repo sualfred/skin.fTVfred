@@ -536,7 +536,7 @@
 						<onleft>51</onleft>
 						<onright>9000</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[ListItem.Property(Addon.Description)]"')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.Property(Addon.Description)]')</onclick>
 						<include>DialogVideoInfoAnimation</include>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>

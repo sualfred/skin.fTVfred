@@ -635,7 +635,7 @@
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>ViewTypeBounceAnimation</include>			
-			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))" name="ViewOpenAnimationDialog">
+			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + [StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewOpenAnimationDialog">
 				<param name="pos1">193,10</param>
 				<param name="pos2">497,-174</param>
 				<param name="pos3">497,195</param>
@@ -643,7 +643,7 @@
 				<param name="pos5">497,10</param>
 				<param name="pos6">497,168</param>
 			</include>
-			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])" name="ViewOpenAnimationDialog">
+			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">208,10</param>
 				<param name="pos2">512,-174</param>
 				<param name="pos3">512,195</param>
@@ -651,7 +651,7 @@
 				<param name="pos5">512,10</param>
 				<param name="pos6">512,168</param>
 			</include>
-			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])" name="ViewOpenAnimationDialog">
+			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">186,10</param>
 				<param name="pos2">490,-174</param>
 				<param name="pos3">490,195</param>

@@ -969,7 +969,7 @@ msgstr ""
 
 #: /16x9/SkinSettings.xml:475
 msgctxt "#31232"
-msgid "Set Favourites layout"
+msgid "Set default Favourites layout"
 msgstr ""
 
 #: /16x9/Variables.xml:1865

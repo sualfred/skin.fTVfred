@@ -75,8 +75,7 @@
 		</control>
 		<!-- Square -->
 		<control type="group">
-			<visible>StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))</visible>
-			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))" name="ViewFavourites">
+			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + [StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewFavourites">
 				<param name="left">-238</param>
 				<param name="width">2200</param>
 				<param name="layout">ViewSquareInfoLayout</param>
@@ -84,8 +83,7 @@
 		</control>
 		<!-- Poster -->
 		<control type="group">
-			<visible>StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])</visible>
-			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])" name="ViewFavourites">
+			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewFavourites">
 				<param name="left">-102</param>
 				<param name="width">2036</param>
 				<param name="layout">ViewPosterLayout</param>
@@ -93,8 +91,7 @@
 		</control>
 		<!--Wide-->
 		<control type="group">
-			<visible>StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])</visible>
-			<include condition="StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])" name="ViewFavourites">
+			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewFavourites">
 				<param name="left">-374</param>
 				<param name="width">2344</param>
 				<param name="layout">ViewDefaultWideLayout</param>

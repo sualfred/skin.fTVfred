@@ -578,7 +578,7 @@
 									<onleft>$VAR[SearchSetFocus]</onleft>
 									<onright>$VAR[SearchSetFocus]</onright>
 									<onclick>SetProperty(SearchOpenTextViewer,1,home)</onclick>
-									<onclick>RunScript(script.toolbox,info=textviewer,header=$VAR[SearchLabel],text='"$VAR[SearchPlot]"')</onclick>
+									<onclick>RunScript(script.toolbox,info=textviewer,header=$VAR[SearchLabel],text='$ESCVAR[SearchPlot]')</onclick>
 									<visible>Control.IsVisible(96)</visible>
 									<texturefocus>views/more_fo.png</texturefocus>
 									<texturenofocus>views/more_nf.png</texturenofocus>
@@ -615,7 +615,7 @@
 									<onleft>$VAR[SearchSetFocus]</onleft>
 									<onright>$VAR[SearchSetFocus]</onright>
 									<onclick>SetProperty(SearchOpenTextViewer,1,home)</onclick>
-									<onclick>RunScript(script.toolbox,info=textviewer,header=$VAR[SearchLabel],text='"$VAR[SearchPlot]"')</onclick>
+									<onclick>RunScript(script.toolbox,info=textviewer,header=$VAR[SearchLabel],text='$ESCVAR[SearchPlot]')</onclick>
 									<visible>Control.IsVisible(99)</visible>
 									<texturefocus>views/more_fo.png</texturefocus>
 									<texturenofocus>views/more_nf.png</texturenofocus>

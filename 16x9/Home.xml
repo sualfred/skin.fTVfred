@@ -117,8 +117,7 @@
 				<onfocus condition="System.HasAlarm(waitforpreload) + StringCompare(Container(300).CurrentItem,2)">Control.Move(300,-1)</onfocus>
 				<!--on right-->
 				<onright>ClearProperty(MainMenuFocus,home)</onright>
-				<onright>SetProperty(WidgetHasFocus,1,Home)</onright>
-				
+				<onright condition="SubString(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>				
 				<!-- #1 -->
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + IntegerGreaterThan(Container(1000).NumItems,1)">SetFocus(1000)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + !IntegerGreaterThan(Container(1000).NumItems,1) + StringCompare(Container(1000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
@@ -184,7 +183,6 @@
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + !IntegerGreaterThan(Container(901).NumItems,1)">ActivateWindow(1106)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather)">ActivateWindow(weather)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites)">ActivateWindow(favourites)</onright>
-
 				<onright condition="StringCompare(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>

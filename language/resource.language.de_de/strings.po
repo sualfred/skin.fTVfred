@@ -976,8 +976,8 @@ msgstr "Skin-Einstellungen zurücksetzen"
 
 #: /16x9/SkinSettings.xml:475
 msgctxt "#31232"
-msgid "Set Favourites layout"
-msgstr "Setze Favouriten Layout"
+msgid "Set default Favourites layout"
+msgstr "Setze Standard Favouriten Layout"
 
 #: /16x9/Variables.xml:1865
 msgctxt "#31233"
