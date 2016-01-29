@@ -48,9 +48,11 @@
 			<orientation>vertical</orientation>
 		</control>
 		<!-- Background -->
-		<include>BackgroundImage</include>
+		<include condition="!Window.IsVisible(fullscreenvideo)">BackgroundImage</include>
+		<include condition="Window.IsVisible(fullscreenvideo)">DialogBackgroundImage</include>
 		<!-- Fanart -->
 		<control type="group">
+			<visible>!Window.IsVisible(fullscreenvideo)</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<colordiffuse>26ffffff</colordiffuse>

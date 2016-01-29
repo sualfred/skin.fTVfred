@@ -38,7 +38,8 @@
 			<orientation>vertical</orientation>
 		</control>
 		<!-- Background -->
-		<include>BackgroundImage</include>
+		<include condition="!Window.IsVisible(fullscreenvideo)">BackgroundImage</include>
+		<include condition="Window.IsVisible(fullscreenvideo)">DialogBackgroundImage</include>
 		<control type="group">
 			<control type="group">
 				<left>90</left>
