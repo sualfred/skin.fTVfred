@@ -1,3 +1,6 @@
+2.0.17:
+- Added an slight overlay to the fanart for the Wide viewtype if a clearlogo is displayed. Not noticeable but increases the quality of the fake fTV art effect
+
 2.0.16:
 - Finalized cast layout for fullscreeninfo dialog
 - Changed some setfocus conditions in extendedinfo
