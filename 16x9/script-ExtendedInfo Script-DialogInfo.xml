@@ -68,8 +68,8 @@
 					<onup condition="Control.IsVisible(96)">3000</onup>
 					<ondown>7001</ondown>
 					<onleft>Close</onleft>
-					<onright condition="!IsEmpty(Container(150).ListItemNoWrap(0).Label)">150</onright>
-					<onright condition="IsEmpty(Container(150).ListItemNoWrap(0).Label) + Control.IsVisible(96)">3000</onright>
+					<onright condition="!Control.IsVisible(96) + !IsEmpty(Container(150).ListItemNoWrap(0).Label)">150</onright>
+					<onright condition="Control.IsVisible(96)">3000</onright>
 					<onfocus>ClearProperty(StarredInTV,home)</onfocus>
 					<font>Light35</font>
 					<textcolor>ffdadada</textcolor>

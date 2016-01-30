@@ -85,9 +85,10 @@
 				<height>35</height>
 				<onup condition="!Control.IsVisible(96)">Close</onup>
 				<onup condition="Control.IsVisible(96)">3002</onup>
+				<onright condition="!Control.IsVisible(96)">1000</onright>
+				<onright condition="Control.IsVisible(96)">3002</onright>
 				<ondown>7001</ondown>
 				<onleft>Close</onleft>
-				<onright>1000</onright>
 				<onfocus>ClearProperty(Similar,home)</onfocus>
 				<font>Light35</font>
 				<textcolor>ffdadada</textcolor>

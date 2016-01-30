@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- fullscreeninfo -->
-	<defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol always="true">101</defaultcontrol>
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
 	<onload>Control.Move(100,1)</onload>
 	<controls>
+		<!--Xray Control -->
+		<control type="button" id="101">
+			<include>HiddenControl</include>
+			<onleft condition="Container(100).HasPrevious">Control.Move(100,-1)</onleft>
+			<onright condition="Container(100).HasNext">Control.Move(100,1)</onright>
+			<onright condition="!Window.IsVisible(1103) + !Container(100).HasNext">SetProperty(BounceRight,1,Home)</onright>
+			<onclick>close</onclick>
+			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</onup>
+			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</onup>
+		</control>
+		<!--Fullscreen Info-->
 		<control type="group">
 			<visible>!Window.IsActive(seekbar) + !Window.IsActive(videoosd) + IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
@@ -190,7 +201,7 @@
 				<label>$INFO[System.Time]</label>
 			</control>
 		</control>
-		<!--xray-->
+		<!--XRay-->
 		<control type="group">
 			<visible>Window.IsActive(fullscreeninfo) + !Window.IsVisible(videoosd) + !Window.IsVisible(seekbar) + !Window.IsVisible(videobookmarks) + IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!--Xray Icon-->
@@ -222,101 +233,106 @@
 				<animation effect="fade" time="0" start="100" end="0" condition="Container(100).IsUpdating">Conditional</animation>
 				<visible>IsEmpty(Window(home).Property(ShowXRay))</visible>
 				<control id="100" type="fixedlist">
+					<width>1920</width>
+					<left>0</left>
 					<left>-350</left>
-					<bottom>136</bottom>
+					<bottom>136</bottom>					
 					<width>2270</width>
 					<height>128</height>
 					<onleft>noop</onleft>
 					<onright>noop</onright>
-					<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
-					<onclick>close</onclick>
-					<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</onup>
-					<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</onup>
-					<include>ViewTypeBounceAnimation</include>
 					<defaultcontrol always="true">0</defaultcontrol>
 					<preloaditems>2</preloaditems>
-					<focusposition>1</focusposition>
+					<focusposition>0</focusposition>
+					<movement>2</movement>
 					<orientation>horizontal</orientation>
+					<include>ViewTypeBounceAnimation</include>
 					<scrolltime easing="inout" tween="sine">300</scrolltime>		
 					<itemlayout height="128" width="442">
-						<control type="image">
-							<width>412</width>
-							<height>128</height>
-							<texture>dialogs/DialogBackground.png</texture>
-						</control>
-						<control type="image">
-							<width>96</width>
-							<height>128</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/cast_fallback.png</texture>
-						</control>
-						<control type="image">
-							<width>96</width>
-							<height>128</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="label">
-							<left>116</left>
-							<top>27</top>
-							<width>278</width>
-							<height>40</height>
-							<font>Reg32</font>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>80000000</shadowcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>116</left>
-							<top>66</top>
-							<width>278</width>
-							<height>36</height>
-							<font>Light26</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>80000000</shadowcolor>
-							<label>$INFO[ListItem.Label2]</label>
+						<control type="group">
+							<left>90</left>
+							<control type="image">
+								<width>412</width>
+								<height>128</height>
+								<texture>dialogs/DialogBackground.png</texture>
+							</control>
+							<control type="image">
+								<width>96</width>
+								<height>128</height>
+								<aspectratio align="center">scale</aspectratio>
+								<texture background="true">views/cast_fallback.png</texture>
+							</control>
+							<control type="image">
+								<width>96</width>
+								<height>128</height>
+								<aspectratio align="center">scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<left>116</left>
+								<top>27</top>
+								<width>278</width>
+								<height>40</height>
+								<font>Reg32</font>
+								<textcolor>ffffffff</textcolor>
+								<shadowcolor>80000000</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>116</left>
+								<top>66</top>
+								<width>278</width>
+								<height>36</height>
+								<font>Light26</font>
+								<scroll>false</scroll>
+								<textcolor>ffffffff</textcolor>
+								<shadowcolor>80000000</shadowcolor>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
 						</control>
 					</itemlayout>
 					<focusedlayout height="128" width="442">
-						<control type="image">
-							<width>412</width>
-							<height>128</height>
-							<texture>dialogs/DialogBackground.png</texture>
-						</control>
-						<control type="image">
-							<width>96</width>
-							<height>128</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/cast_fallback.png</texture>
-						</control>
-						<control type="image">
-							<width>96</width>
-							<height>128</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="label">
-							<left>116</left>
-							<top>27</top>
-							<width>278</width>
-							<height>40</height>
-							<font>Reg32</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>80000000</shadowcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>116</left>
-							<top>66</top>
-							<width>278</width>
-							<height>36</height>
-							<font>Light26</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>80000000</shadowcolor>
-							<label>$INFO[ListItem.Label2]</label>
+						<control type="group">
+							<left>90</left>
+							<control type="image">
+								<width>412</width>
+								<height>128</height>
+								<texture>dialogs/DialogBackground.png</texture>
+							</control>
+							<control type="image">
+								<width>96</width>
+								<height>128</height>
+								<aspectratio align="center">scale</aspectratio>
+								<texture background="true">views/cast_fallback.png</texture>
+							</control>
+							<control type="image">
+								<width>96</width>
+								<height>128</height>
+								<aspectratio align="center">scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<left>116</left>
+								<top>27</top>
+								<width>278</width>
+								<height>40</height>
+								<font>Reg32</font>
+								<scroll>false</scroll>
+								<textcolor>ffffffff</textcolor>
+								<shadowcolor>80000000</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>116</left>
+								<top>66</top>
+								<width>278</width>
+								<height>36</height>
+								<font>Light26</font>
+								<scroll>false</scroll>
+								<textcolor>ffffffff</textcolor>
+								<shadowcolor>80000000</shadowcolor>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
 						</control>
 					</focusedlayout>
 					<content>$VAR[XrayCast]</content>

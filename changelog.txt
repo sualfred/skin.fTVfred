@@ -1,3 +1,7 @@
+2.0.16:
+- Finalized cast layout for fullscreeninfo dialog
+- Changed some setfocus conditions in extendedinfo
+
 2.0.15:
 - Added ExtendedInfo to video playback (wip)
 
