@@ -989,6 +989,26 @@ msgctxt "#31234"
 msgid "View ExtendedInfo"
 msgstr "Zeige ExtendedInfo"
 
+#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
+msgctxt "#31235"
+msgid "Awards"
+msgstr "Awards"
+
+#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:346
+msgctxt "#31236"
+msgid "budget"
+msgstr "Budget"
+
+#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:346
+msgctxt "#31237"
+msgid "grossed"
+msgstr "eingespielt"
+
+#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
+msgctxt "#31238"
+msgid "revenue"
+msgstr "Einnahmen"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"

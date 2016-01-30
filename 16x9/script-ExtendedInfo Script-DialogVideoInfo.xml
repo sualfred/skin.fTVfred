@@ -316,6 +316,67 @@
 					<label>$INFO[Window.Property(director)]</label>
 				</control>
 			</control>
+			<!-- Xray Infos -->
+			<control type="grouplist">
+				<top>381</top>
+				<width>1192</width>
+				<height>40</height>
+				<itemgap>20</itemgap>
+				<include>DialogVideoInfoAnimation</include>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<visible>!IsEmpty(Window.Property(omdb.Awards)) + Window.IsVisible(fullscreenvideo)</visible>
+				<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
+				<control type="label">
+					<width>auto</width>
+					<height>24</height>
+					<font>Med30</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff717171</textcolor>
+					<label>$LOCALIZE[31235]:</label>
+				</control>
+				<control type="label">
+					<top>-1</top>
+					<width>auto</width>
+					<height>24</height>
+					<font>Light30Spaced</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffbcbcbc</textcolor>
+					<label>$INFO[Window.Property(omdb.Awards)]</label>
+				</control>
+			</control>
+			<control type="grouplist">
+				<top>423</top>
+				<width>1192</width>
+				<height>40</height>
+				<itemgap>20</itemgap>
+				<include>DialogVideoInfoAnimation</include>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<visible>!IsEmpty(Window.Property(revenue)) + !IsEmpty(Window.Property(budget)) + Window.IsVisible(fullscreenvideo)</visible>
+				<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
+				<animation condition="!IsEmpty(Window.Property(omdb.Awards)) + [IsEmpty(Window.Property(revenue)) | IsEmpty(Window.Property(budget))]" effect="slide" end="0,-42" start="0" time="0">Conditional</animation>
+				<animation condition="IsEmpty(Window.Property(omdb.Awards)) + [IsEmpty(Window.Property(revenue)) | IsEmpty(Window.Property(budget))]" effect="slide" end="0,-84" start="0" time="0">Conditional</animation>
+				<control type="label">
+					<width>auto</width>
+					<height>24</height>
+					<font>Med30</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff717171</textcolor>
+					<label>$LOCALIZE[31238]:</label>
+				</control>
+				<control type="label">
+					<top>-1</top>
+					<width>auto</width>
+					<height>24</height>
+					<font>Light30Spaced</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffbcbcbc</textcolor>
+					<label>$INFO[Window.Property(budget),, $LOCALIZE[31236]], $INFO[Window.Property(revenue),, $LOCALIZE[31237]]</label>
+				</control>
+			</control>
 			<!-- Button grouplist -->
 			<control id="9000" type="grouplist">
 				<left>-12</left>
