@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- script-ExtendedInfo Script-DialogInfo.xml -->
-	<defaultcontrol always="true">7000</defaultcontrol>
+	<defaultcontrol always="true">999</defaultcontrol>
+	<onload condition="Window.IsVisible(fullscreenvideo)">SetProperty(ShowXRay,true,home)</onload>
 	<onunload>ClearProperty(StarredInTV,home)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
+		<control type="button" id="999">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(7000)</onfocus>
+		</control>
 		<!-- Hidden Lists -->
 		<control id="350" type="list" />
 		<control id="450" type="list" />
@@ -33,13 +38,16 @@
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
 			<width>1192</width>
-			<height>172</height>
+			<height>126</height>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 		</control>
 		<!-- Background -->
-		<include condition="!Window.IsVisible(fullscreenvideo)">BackgroundImage</include>
-		<include condition="Window.IsVisible(fullscreenvideo)">DialogBackgroundImage</include>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>special://skin/extras/backgrounds/default.png</texture>
+			<visible>!Window.IsVisible(fullscreenvideo)</visible>
+		</control>
 		<control type="group">
 			<control type="group">
 				<left>90</left>
@@ -57,7 +65,7 @@
 					<width>480</width>
 					<height>35</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
-					<onup condition="Control.IsVisible(96)">3002</onup>
+					<onup condition="Control.IsVisible(96)">3000</onup>
 					<ondown>7001</ondown>
 					<onleft>Close</onleft>
 					<onright condition="!IsEmpty(Container(150).ListItemNoWrap(0).Label)">150</onright>

@@ -974,7 +974,14 @@ msgstr ""
 
 #: /16x9/Variables.xml:1865
 msgctxt "#31233"
-msgid "Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want them displayed with the poster.[CR]Default is 'Square Info'."
+msgid ""
+"Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want "
+"them displayed with the poster.[CR]Default is 'Square Info'."
+msgstr ""
+
+#: /16x9/DialogFullScreenInfo.xml:212
+msgctxt "#31234"
+msgid "View ExtendedInfo"
 msgstr ""
 
 msgctxt "#31500"

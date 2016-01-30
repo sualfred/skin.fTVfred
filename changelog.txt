@@ -1,3 +1,6 @@
+2.0.15:
+- Added ExtendedInfo to video playback (wip)
+
 2.0.14:
 - Added cast to dialog fullscreeninfo (wip)
 

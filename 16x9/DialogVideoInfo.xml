@@ -587,6 +587,13 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">view/cast_fallback.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="image">
@@ -639,6 +646,13 @@
 						<animation center="150,288" condition="Control.HasFocus(50) + [Container(50).OnNext | Container(50).OnPrevious]" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 						<animation center="150,288" condition="Control.HasFocus(50) + [Container(50).OnNext | Container(50).OnPrevious]" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 						<animation center="150,288" condition="!Control.HasFocus(50)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">view/cast_fallback.png</texture>
+						</control>
 						<control type="image">
 							<top>48</top>
 							<width>320</width>

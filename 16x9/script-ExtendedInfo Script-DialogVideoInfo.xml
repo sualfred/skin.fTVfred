@@ -3,16 +3,20 @@
 	<!-- script-ExtendedInfo Script-DialogVideoInfo -->
 	<defaultcontrol always="true">999</defaultcontrol>
 	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
+	<onload condition="Window.IsVisible(fullscreenvideo)">SetProperty(ShowXRay,true,home)</onload>
 	<onunload>ClearProperty(ExActor1,home)</onunload>
 	<onunload>ClearProperty(ExActor2,home)</onunload>
 	<onunload>ClearProperty(ExActor3,home)</onunload>
 	<onunload>ClearProperty(Similar,home)</onunload>
+	<onunload condition="!Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">ClearProperty(ShowXRay,home)</onunload>
+	<onunload condition="!Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">Dialog.Close(fullscreeninfo,true)</onunload>
 	<onunload>SetFocus(1000)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
 		<control type="button" id="999">
-			<onfocus condition="!IsEmpty(Window.Property(DBID))">SetFocus(8)</onfocus>
-			<onfocus condition="IsEmpty(Window.Property(DBID))">SetFocus(7000)</onfocus>
+			<include>HiddenControl</include>
+			<onfocus condition="!IsEmpty(Window.Property(DBID)) + IsEmpty(Window(home).Property(ShowXRay))">SetFocus(8)</onfocus>
+			<onfocus condition="IsEmpty(Window.Property(DBID)) | !IsEmpty(Window(home).Property(ShowXRay))">SetFocus(7000)</onfocus>
 		</control>
 		<!-- Hidden Lists -->
 		<control id="250" type="list" />
@@ -48,11 +52,14 @@
 			<orientation>vertical</orientation>
 		</control>
 		<!-- Background -->
-		<include condition="!Window.IsVisible(fullscreenvideo)">BackgroundImage</include>
-		<include condition="Window.IsVisible(fullscreenvideo)">DialogBackgroundImage</include>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>special://skin/extras/backgrounds/default.png</texture>
+			<visible>!Window.IsVisible(fullscreenvideo)</visible>
+		</control>
 		<!-- Fanart -->
 		<control type="group">
-			<visible>!Window.IsVisible(fullscreenvideo)</visible>
+			<visible>IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<colordiffuse>26ffffff</colordiffuse>
@@ -327,7 +334,8 @@
 					<width>0</width>
 					<height>0</height>
 					<label>-</label>
-					<onfocus>Right</onfocus>
+					<onfocus condition="Control.IsVisible(8)">Right</onfocus>
+					<onfocus condition="!Control.IsVisible(8)">SetFocus(3002)</onfocus>
 					<include>NoTextures</include>
 					<visible>!Control.HasFocus(8) + !Control.HasFocus(206)</visible>
 				</control>
@@ -347,7 +355,7 @@
 					<focusedcolor>ff222222</focusedcolor>
 					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-					<visible>!IsEmpty(Window.Property(DBID))</visible>
+					<visible>!IsEmpty(Window.Property(DBID)) + IsEmpty(Window(home).Property(ShowXRay))</visible>
 				</control>
 			</control>
 		</control>
