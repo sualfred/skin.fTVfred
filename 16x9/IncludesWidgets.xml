@@ -68,11 +68,72 @@
 			<param name="content">FavouritesWidget</param>
 		</include>
 		<!-- LiveTV Widget -->
-		<include name="ParamWidgetInclude">
-			<param name="ID">30</param>
-			<param name="widget">livetv</param>
-			<param name="content">LivetvWidget</param>
-		</include>
+		<control type="list" id="301">
+			<visible>StringCompare(Container(99).ListItem.Property(ftvWidget),livetv)</visible>
+			<include>HomeWidgetsAnimation</include>
+			<include>WindowHomeFadeAnimation</include>
+			<left>391</left>
+			<top>252</top>
+			<width>2200</width>
+			<height>576</height>
+			<defaultcontrol always="true">0</defaultcontrol>
+			<preloaditems>2</preloaditems>
+			<orientation>horizontal</orientation>
+			<defaultcontrol always="true">0</defaultcontrol>
+			<itemlayout height="576" width="436">
+				<control type="group">
+					<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">common/default_empty.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout height="576" width="436">
+				<control type="group">
+					<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">common/default_empty.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<content limit="4">pvr://channels/tv/1</content>
+		</control>
 		<!-- Weather Widget -->
 		<control type="fixedlist">
 			<left>433</left>

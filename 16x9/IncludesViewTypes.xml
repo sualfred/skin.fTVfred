@@ -834,7 +834,6 @@
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
 				</control>
-				<include>OverlayHD</include>
 				<control type="image">
 					<top>48</top>
 					<width>480</width>
@@ -880,7 +879,6 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 				</control>
-				<include>OverlayHD</include>
 				<control type="image">
 					<left>-48</left>
 					<centertop>288</centertop>

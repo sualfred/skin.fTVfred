@@ -34,7 +34,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -118,7 +118,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -247,7 +247,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -286,6 +286,13 @@
 				<aspectratio align="center">keep</aspectratio>
 				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/OverlayHD.png</texture>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>

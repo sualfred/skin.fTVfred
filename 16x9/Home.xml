@@ -179,10 +179,11 @@
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12) + !IntegerGreaterThan(Container(12000).NumItems,1) + StringCompare(Container(12000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12) + !IntegerGreaterThan(Container(12000).NumItems,1)">$INFO[Skin.String(12000-WidgetAction-1)]</onright>
 				<!-- Other -->
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + IntegerGreaterThan(Container(901).NumItems,1)">SetFocus(901)</onright>
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + !IntegerGreaterThan(Container(901).NumItems,1)">ActivateWindow(1106)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + IntegerGreaterThan(Container(301).NumItems,0)">ActivateWindow(1106)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + !IntegerGreaterThan(Container(301).NumItems,0)">Select</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites) + IntegerGreaterThan(Container(201).NumItems,0)">ActivateWindow(favourites)</onright>
+				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites) + !IntegerGreaterThan(Container(201).NumItems,0)">Select</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather)">ActivateWindow(weather)</onright>
-				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),favourites)">ActivateWindow(favourites)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
@@ -472,8 +473,7 @@
 				| Container(12006).IsUpdating
 				| Container(12007).IsUpdating
 				| Container(12008).IsUpdating
-				| Container(201).IsUpdating
-				| Container(301).IsUpdating]</visible>
+				| Container(201).IsUpdating]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
