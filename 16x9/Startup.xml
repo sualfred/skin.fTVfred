@@ -51,7 +51,7 @@
 		<control type="button" id="30">
 			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
 			<!-- workaround to fill the tv channel list correclty -->
-			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent)</onfocus>
+			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
 			<onfocus condition="!System.GetBool(pvrmanager.enabled)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
