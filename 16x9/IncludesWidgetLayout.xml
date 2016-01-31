@@ -518,11 +518,10 @@
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<width>423</width>
+				<height>334</height>
+				<bordersize>0,13,10,13</bordersize>
+				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" border="2">views/clearlogo_overlay.png</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
 			</control>
@@ -596,11 +595,10 @@
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<width>423</width>
+				<height>334</height>
+				<bordersize>0,13,10,13</bordersize>
+				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" border="2">views/clearlogo_overlay.png</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
 			</control>

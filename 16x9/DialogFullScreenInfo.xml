@@ -203,10 +203,10 @@
 		</control>
 		<!--XRay-->
 		<control type="group">
-			<visible>Window.IsActive(fullscreeninfo) + !Window.IsVisible(videoosd) + !Window.IsVisible(seekbar) + !Window.IsVisible(videobookmarks) + IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>Window.IsActive(fullscreeninfo) + !Window.IsVisible(videoosd) + !Window.IsVisible(videobookmarks) + IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!--Xray Icon-->
 			<control id="99" type="grouplist">
-				<visible>!IsEmpty(VideoPlayer.IMDBNumber)</visible>
+				<visible>!IsEmpty(VideoPlayer.IMDBNumber) + !Window.IsVisible(seekbar)</visible>
 				<centerleft>50%</centerleft>
 				<bottom>40</bottom>
 				<height>40</height>
