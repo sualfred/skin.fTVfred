@@ -4,6 +4,7 @@
 	<defaultcontrol always="true">101</defaultcontrol>
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
 	<onload>Control.Move(100,1)</onload>
+	<onunload condition="Player.Paused">Play</onunload>
 	<controls>
 		<!--Xray Control -->
 		<control type="button" id="101">
@@ -14,6 +15,7 @@
 			<onclick>close</onclick>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</onup>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</onup>
+			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber) + !Player.Paused">Pause</onup>
 		</control>
 		<!--Fullscreen Info-->
 		<control type="group">

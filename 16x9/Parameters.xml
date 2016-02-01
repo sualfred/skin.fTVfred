@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!--Info Dialog Fake List -->
+	<include name="InfoDialogVideoList">		
+		<control type="group">
+			<left>$PARAM[Left]</left>
+			<visible>!IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label)</visible>
+			<control type="image">
+				<top>48</top>
+				<width>320</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true">views/movie_fallback.png</texture>
+			</control>
+			<control type="image">
+				<top>48</top>
+				<width>320</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true" fallback="views/movie_fallback.png">$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon]</texture>
+				<visible>[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+			</control>
+			<control type="image">
+				<top>48</top>
+				<width>320</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true" fallback="views/movie_fallback.png">$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Art(poster)]</texture>
+				<visible>![Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+			</control>
+			<control type="image">
+				<left>-48</left>
+				<centertop>288</centertop>
+				<width>416</width>
+				<height>576</height>
+				<texture border="66,66,51,51">views/shadow_nf.png</texture>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>455</top>
+				<width>290</width>
+				<height>42</height>
+				<font>Bold42</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>80000000</shadowcolor>
+				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label]</label>
+				<visible>IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="InfoDialogCastList">
+		<control type="group">
+			<left>$PARAM[Left]</left>
+			<visible>!IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label)</visible>
+			<control type="image">
+				<top>48</top>
+				<width>320</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true">views/cast_fallback.png</texture>
+			</control>
+			<control type="image">
+				<top>48</top>
+				<width>320</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true" fallback="views/cast_fallback.png">$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon]</texture>
+			</control>
+			<control type="image">
+				<left>-48</left>
+				<centertop>288</centertop>
+				<width>416</width>
+				<height>576</height>
+				<texture border="66,66,51,51">views/shadow_nf.png</texture>
+			</control>
+			<control type="image">
+				<top>48</top>
+				<width>320</width>
+				<height>480</height>
+				<texture border="2">views/season_overlay.png</texture>
+				<visible>!SubString(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]),Default)</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>412</top>
+				<width>290</width>
+				<height>42</height>
+				<font>Bold42</font>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>80000000</shadowcolor>
+				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label]</label>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>463</top>
+				<width>290</width>
+				<height>28</height>
+				<font>Med28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>80000000</shadowcolor>
+				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Property(character),$LOCALIZE[20347] ,]</label>
+				<visible>[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>463</top>
+				<width>290</width>
+				<height>28</height>
+				<font>Med28</font>
+				<scroll>false</scroll>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>80000000</shadowcolor>
+				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label2,$LOCALIZE[20347] ,]</label>
+				<visible>![Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+			</control>
+		</control>
+	</include>
 	<!-- ViewType progress -->
 	<include name="ParamProgress">
 		<control type="progress">

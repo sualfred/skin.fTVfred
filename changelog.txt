@@ -1,3 +1,8 @@
+2.0.20:
+- More ExtendedInfo layout improvements
+- Added LiveTV controls to VideoOSD
+- Cleanup
+
 2.0.19:
 - Replaced internal LiveTV channel widget method to prevent a rare scenario, which cause an empty list.
 - Removed HD overlays of PVR channels. The backends simply does not provide them correctly.

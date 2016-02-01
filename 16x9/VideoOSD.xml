@@ -173,8 +173,9 @@
 				<bottom>26</bottom>
 				<width>800</width>
 				<height>64</height>
-				<onup condition="system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onup>
-				<onup condition="!system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onup>
+				<onup condition="VideoPlayer.Content(livetv)">SetFocus(19)</onup>
+				<onup condition="!VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onup>
+				<onup condition="!VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onup>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>
@@ -363,6 +364,53 @@
 					<texturenofocus>-</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 					<visible>Window.IsVisible(VideoFullScreen.xml) + system.getbool(videoplayer.autoplaynextitem)</visible>
+				</control>
+				<!-- Recording -->
+				<control id="17" type="button">
+					<width>600</width>
+					<height>58</height>
+					<font>Light32</font>
+					<align>right</align>
+					<label>$VAR[RecordingLabel]</label>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<focusedcolor>ffffc04b</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>PlayerControl(Record)</onclick>
+					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
+				</control>
+				<!-- EPG -->
+				<control id="18" type="button">
+					<width>600</width>
+					<height>58</height>
+					<font>Light32</font>
+					<align>right</align>
+					<label>$LOCALIZE[4]</label>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<focusedcolor>ffffc04b</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(tvguide)</onclick>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
+				<!-- Channels -->
+				<control id="19" type="button">
+					<width>600</width>
+					<height>58</height>
+					<font>Light32</font>
+					<align>right</align>
+					<label>$LOCALIZE[19023]</label>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<focusedcolor>ffffc04b</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(pvrosdchannels)</onclick>
+					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
 			</control>
 			<control type="image">

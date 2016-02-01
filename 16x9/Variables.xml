@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="RecordingLabel">
+		<value condition="Player.Recording">$LOCALIZE[19059]</value>
+		<value>$LOCALIZE[264]</value>
+	</variable>
 	<variable name="XrayCast">
 		<value condition="VideoPlayer.Content(movies)">plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[VideoPlayer.Title]&amp;downloadthumbs=true</value>
 		<value condition="VideoPlayer.Content(episodes)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[VideoPlayer.TVShowTitle]&amp;downloadthumbs=true</value>

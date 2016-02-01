@@ -1006,8 +1006,13 @@ msgstr "eingespielt"
 
 #: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
 msgctxt "#31238"
-msgid "revenue"
-msgstr "Einnahmen"
+msgid "Budget and revenue"
+msgstr "Budget und Einnahmen"
+
+#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:331
+msgctxt "#31239"
+msgid "Premiered on"
+msgstr "Erstaufführung am"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

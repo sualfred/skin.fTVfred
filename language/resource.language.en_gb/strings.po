@@ -1001,7 +1001,12 @@ msgstr ""
 
 #: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
 msgctxt "#31238"
-msgid "revenue"
+msgid "Budget and revenue"
+msgstr ""
+
+#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:331
+msgctxt "#31239"
+msgid "Premiered on"
 msgstr ""
 
 msgctxt "#31500"
