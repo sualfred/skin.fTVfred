@@ -306,6 +306,7 @@
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onclick>SetFocus(200)</onclick>
+					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<!-- Bookmarks -->
 				<control id="13" type="button">
@@ -321,6 +322,7 @@
 					<texturenofocus>-</texturenofocus>
 					<onclick>ActivateWindow(125)</onclick>
 					<onclick>Close</onclick>
+					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<!-- Video Settings -->
 				<control id="14" type="button">
@@ -377,6 +379,7 @@
 					<focusedcolor>ffffc04b</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>PlayerControl(Record)</onclick>
 					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
 				</control>

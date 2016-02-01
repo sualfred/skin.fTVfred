@@ -1,3 +1,8 @@
+2.0.21:
+- Changed visible conditions for VideoOSD elements
+- Increased startup delay if PVR is enabled
+- Fixed clearlogo overlay for widgets
+
 2.0.20:
 - More ExtendedInfo layout improvements
 - Added LiveTV controls to VideoOSD
