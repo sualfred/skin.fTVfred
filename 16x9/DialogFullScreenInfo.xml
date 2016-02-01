@@ -5,6 +5,7 @@
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
 	<onload>Control.Move(100,1)</onload>
 	<onunload condition="Player.Paused">Play</onunload>
+	<onunload>ClearProperty(ShowXray,home)</onunload>
 	<controls>
 		<!--Xray Control -->
 		<control type="button" id="101">
@@ -12,6 +13,7 @@
 			<onleft condition="Container(100).HasPrevious">Control.Move(100,-1)</onleft>
 			<onright condition="Container(100).HasNext">Control.Move(100,1)</onright>
 			<onright condition="!Window.IsVisible(1103) + !Container(100).HasNext">SetProperty(BounceRight,1,Home)</onright>
+			<ondown>close</ondown>
 			<onclick>close</onclick>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</onup>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</onup>
