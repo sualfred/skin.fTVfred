@@ -181,10 +181,10 @@
 				<onup condition="!Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onup>
 				<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onup>
 				<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onup>
-				<onup condition="Skin.HasSetting(HideOSDControls)">Dialog.Close(videoosd,true)</onup>
-				<onup condition="Skin.HasSetting(HideOSDControls)">ActivateWindow(fullscreeninfo)</onup>
-				<ondown condition="!Skin.HasSetting(HideOSDControls)">Dialog.Close(videoosd,true)</ondown>
-				<ondown condition="!Skin.HasSetting(HideOSDControls)">ActivateWindow(fullscreeninfo)</ondown>
+				<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
+				<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
+				<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</ondown>
+				<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</ondown>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>
@@ -255,8 +255,8 @@
 				<control type="button" id="400">
 					<visible>Skin.HasSetting(HideOSDControls)</visible>
 					<include>HiddenControl</include>
-					<onup>Dialog.Close(videoosd,true)</onup>
-					<onup>ActivateWindow(fullscreeninfo)</onup>
+					<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
+					<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
 					<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
 					<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
 					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
