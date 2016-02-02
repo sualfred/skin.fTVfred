@@ -1,3 +1,7 @@
+2.0.22:
+- Added options button to VideoOSD / FullscreenInfo
+- Changed VideoOSD menu behaviour
+
 2.0.21:
 - Changed visible conditions for VideoOSD elements
 - Increased startup delay if PVR is enabled

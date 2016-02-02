@@ -1009,6 +1009,11 @@ msgctxt "#31239"
 msgid "Premiered on"
 msgstr ""
 
+#: /16x9/VideoOSD.xml:288
+msgctxt "#31240"
+msgid "View cast"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

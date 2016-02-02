@@ -5,7 +5,7 @@
 	<onload condition="Window.IsVisible(fullscreenvideo)">SetProperty(ShowXRay,true,home)</onload>
 	<onload condition="Window.IsVisible(fullscreenvideo) + !Player.Paused">Pause</onload>
 	<onunload>ClearProperty(StarredInTV,home)</onunload>
-	<animation effect="fade" end="0" start="0" time="300">WindowClose</animation>
+	<animation effect="fade" end="0" start="0" time="200">WindowClose</animation>
 	<controls>
 		<!-- Hidden Lists -->
 		<control id="350" type="list" />

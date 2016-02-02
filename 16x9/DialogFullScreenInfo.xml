@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">101</defaultcontrol>
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
 	<onload>Control.Move(100,1)</onload>
-	<onunload condition="Player.Paused">Play</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(ShowXRay)) + Player.Paused">Play</onunload>
 	<onunload>ClearProperty(ShowXray,home)</onunload>
 	<controls>
 		<!--Xray Control -->
@@ -14,7 +14,9 @@
 			<onright condition="Container(100).HasNext">Control.Move(100,1)</onright>
 			<onright condition="!Window.IsVisible(1103) + !Container(100).HasNext">SetProperty(BounceRight,1,Home)</onright>
 			<ondown>close</ondown>
-			<onclick>close</onclick>
+			<onclick>SetProperty(ShowOptions,1,home)</onclick>
+			<onclick>Dialog.Close(fullscreeninfo,true)</onclick>
+			<onclick>ActivateWindow(VideoOSD)</onclick>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</onup>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</onup>
 			<onup condition="!IsEmpty(VideoPlayer.IMDBNumber) + !Player.Paused">Pause</onup>
@@ -193,17 +195,6 @@
 					<label>$VAR[PlayerResolution]</label>
 				</control>
 			</control>
-			<!--  Current time -->
-			<control type="label">
-				<right>92</right>
-				<bottom>45</bottom>
-				<width>800</width>
-				<height>30</height>
-				<font>Reg27</font>
-				<align>right</align>
-				<textcolor>fff3f3f3</textcolor>
-				<label>$INFO[System.Time]</label>
-			</control>
 		</control>
 		<!--XRay-->
 		<control type="group">
@@ -211,15 +202,15 @@
 			<!--Xray Icon-->
 			<control id="99" type="grouplist">
 				<visible>!IsEmpty(VideoPlayer.IMDBNumber) + !Window.IsVisible(seekbar)</visible>
-				<centerleft>50%</centerleft>
+				<right>92</right>
 				<bottom>40</bottom>
 				<height>40</height>
 				<itemgap>10</itemgap>
-				<align>center</align>
+				<align>right</align>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control id="99" type="label">
-					<top>6</top>
+					<top>4</top>
 					<width>auto</width>
 					<height>30</height>
 					<font>Reg27</font>
@@ -230,6 +221,19 @@
 					<width>40</width>
 					<height>40</height>
 					<texture>osd/x_ray.png</texture>
+				</control>
+				<control id="99" type="label">
+					<top>4</top>
+					<width>auto</width>
+					<height>30</height>
+					<font>Reg27</font>
+					<textcolor>fff3f3f3</textcolor>
+					<label>    $LOCALIZE[33063]</label>
+				</control>
+				<control id="99" type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture>osd/options.png</texture>
 				</control>
 			</control>
 			<!--Cast-->

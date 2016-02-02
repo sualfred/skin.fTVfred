@@ -9,9 +9,8 @@
 	<onunload>ClearProperty(ExActor2,home)</onunload>
 	<onunload>ClearProperty(ExActor3,home)</onunload>
 	<onunload>ClearProperty(Similar,home)</onunload>
-	<onunload condition="!Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">ClearProperty(ShowXRay,home)</onunload>
 	<onunload condition="!Window.IsActive(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsActive(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(busydialog)">Dialog.Close(fullscreeninfo,true)</onunload>
-	<animation effect="fade" end="0" start="0" time="300">WindowClose</animation>
+	<animation effect="fade" end="0" start="0" time="200">WindowClose</animation>
 	<controls>
 		<!-- Hidden Lists -->
 		<control id="250" type="list" />
