@@ -243,6 +243,7 @@
 					<top>-38</top>
 					<width>37</width>
 					<height>23</height>
+					<onclick>SetProperty(NoLabel,1,home)</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[SearchPlot]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
@@ -429,7 +430,8 @@
 					<left>1194</left>
 					<top>-38</top>
 					<width>37</width>
-					<height>23</height>
+					<height>23</height>					
+					<onclick>SetProperty(NoLabel,1,home)</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[SearchPlot]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

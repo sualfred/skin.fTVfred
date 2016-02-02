@@ -372,6 +372,7 @@
 					<height>23</height>
 					<onleft>7001</onleft>
 					<onright>50</onright>
+					<onclick>SetProperty(NoLabel,1,home)</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.Property(Addon.Description)]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

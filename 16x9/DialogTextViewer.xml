@@ -6,6 +6,7 @@
 	<onunload condition="!IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(50)</onunload>
 	<onunload condition="!IsEmpty(Window(home).Property(SearchOpenTextViewer))">$VAR[SearchSetFocus]</onunload>
 	<onunload>ClearProperty(OpenTextViewer,home)</onunload>
+	<onunload>ClearProperty(NoLabel,home)</onunload>
 	<controls>
 		<control id="5" type="textbox">
 			<font>-</font>
@@ -56,6 +57,20 @@
 				<autoscroll>false</autoscroll>
 				<textcolor>ffdadada</textcolor>
 				<label>[B][COLOR ffffffff]$INFO[Control.GetLabel(1),,[CR]][/B][/COLOR][LIGHT]$INFO[Control.GetLabel(5)][/LIGHT]</label>
+				<visible>IsEmpty(Window(home).Property(NoLabel))</visible>
+			</control>
+			<control id="10" type="textbox">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>788</width>
+				<height>452</height>
+				<align>left</align>
+				<font>Reg36Spaced</font>
+				<pagecontrol>3000</pagecontrol>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffdadada</textcolor>
+				<label>[LIGHT]$INFO[Control.GetLabel(5)][/LIGHT]</label>
+				<visible>!IsEmpty(Window(home).Property(NoLabel))</visible>
 			</control>
 			<!-- Arrow down -->
 			<control type="image">

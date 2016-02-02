@@ -594,6 +594,7 @@
  				<ondown>noop</ondown>
  				<onleft>5</onleft>
  				<onright>noop</onright>
+				<onclick>SetProperty(NoLabel,1,home)</onclick>
  				<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[Control.GetLabel(6)]')</onclick>
  				<visible>Control.IsVisible(96)</visible>
  				<texturefocus>views/more_fo.png</texturefocus>
