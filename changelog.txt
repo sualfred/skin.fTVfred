@@ -1,3 +1,7 @@
+2.0.23:
+- Changed movement logic for the previous commit
+- Improved Pause/Play for ExtendedInfo Xray mode
+
 2.0.22:
 - Added options button to VideoOSD / FullscreenInfo
 - Changed VideoOSD menu behaviour

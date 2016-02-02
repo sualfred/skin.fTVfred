@@ -177,9 +177,14 @@
 				<bottom>26</bottom>
 				<width>800</width>
 				<height>64</height>
-				<onup>Dialog.Close(videoosd,true)</onup>
-				<onup>ActivateWindow(fullscreeninfo)</onup>
-				<onright>400</onright>
+				<onup condition="!Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onup>
+				<onup condition="!Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onup>
+				<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onup>
+				<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onup>
+				<onup condition="Skin.HasSetting(HideOSDControls)">Dialog.Close(videoosd,true)</onup>
+				<onup condition="Skin.HasSetting(HideOSDControls)">ActivateWindow(fullscreeninfo)</onup>
+				<ondown condition="!Skin.HasSetting(HideOSDControls)">Dialog.Close(videoosd,true)</ondown>
+				<ondown condition="!Skin.HasSetting(HideOSDControls)">ActivateWindow(fullscreeninfo)</ondown>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>
@@ -248,14 +253,14 @@
 				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding</visible>
 				<!-- Options HiddenControl -->
 				<control type="button" id="400">
+					<visible>Skin.HasSetting(HideOSDControls)</visible>
 					<include>HiddenControl</include>
-					<onleft condition="!Skin.HasSetting(HideOSDControls)">306</onleft>				
 					<onup>Dialog.Close(videoosd,true)</onup>
 					<onup>ActivateWindow(fullscreeninfo)</onup>
-					<onclick>SetProperty(ShowOptions,1,home)</onclick>
-					<onclick condition="VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
-					<onclick condition="!VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
-					<onclick condition="!VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>
+					<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
+					<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
+					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
+					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>
 				</control>
 				<!--Xray Icon-->
 				<control type="grouplist">
@@ -279,6 +284,13 @@
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
+						<visible>Skin.HasSetting(HideOSDControls)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture flipy="true">osd/x_ray.png</texture>
+						<visible>!Skin.HasSetting(HideOSDControls)</visible>
 					</control>
 					<control type="label">
 						<top>4</top>
@@ -287,21 +299,24 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>    $LOCALIZE[33063]</label>
-						<visible>!Control.HasFocus(400) | Skin.HasSetting(HideOSDControls)</visible>
-					</control>
-					<control type="label">
-						<top>4</top>
-						<width>auto</width>
-						<height>30</height>
-						<font>Reg27</font>
-						<textcolor>ffffc04b</textcolor>
-						<label>    $LOCALIZE[33063]</label>
-						<visible>Control.HasFocus(400) + !Skin.HasSetting(HideOSDControls)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/options.png</texture>
+						<visible>false</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/options.png</texture>
+						<visible>Skin.HasSetting(HideOSDControls)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/x_ray.png</texture>
+						<visible>!Skin.HasSetting(HideOSDControls)</visible>
 					</control>
 				</control>
 			</control>
@@ -317,7 +332,8 @@
 				<onleft>noop</onleft>
 				<onright>noop</onright>				
 				<ondown>ClearProperty(ShowOptions,home)</ondown>
-				<ondown>400</ondown>
+				<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
+				<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
 				<orientation>vertical</orientation>
 				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + ControlGroup(100).HasFocus + !IsEmpty(Window(home).Property(ShowOptions))</visible>
 				<!-- 3D mode -->

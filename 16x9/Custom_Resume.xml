@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1107">
+	<visible>Window.IsVisible(fullscreenvideo) + !IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
+	<onload condition="!Player.Paused">Pause</onload>
+	<onunload condition="Player.Paused">Play</onunload>
+	<onunload>Dialog.Close(fullscreeninfo,true)</onunload>
+	<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+	<controls />
+</window>

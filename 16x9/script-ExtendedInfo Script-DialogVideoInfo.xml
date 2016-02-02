@@ -4,12 +4,10 @@
 	<defaultcontrol always="true">7000</defaultcontrol>
 	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="Window.IsVisible(fullscreenvideo)">SetProperty(ShowXRay,true,home)</onload>
-	<onload condition="Window.IsVisible(fullscreenvideo) + !Player.Paused">Pause</onload>
 	<onunload>ClearProperty(ExActor1,home)</onunload>
 	<onunload>ClearProperty(ExActor2,home)</onunload>
 	<onunload>ClearProperty(ExActor3,home)</onunload>
 	<onunload>ClearProperty(Similar,home)</onunload>
-	<onunload condition="!Window.IsActive(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsActive(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(busydialog)">Dialog.Close(fullscreeninfo,true)</onunload>
 	<animation effect="fade" end="0" start="0" time="200">WindowClose</animation>
 	<controls>
 		<!-- Hidden Lists -->

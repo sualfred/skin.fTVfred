@@ -4,7 +4,7 @@
 	<defaultcontrol>-</defaultcontrol>
 	<controls>
 		<control type="image" id="99">
-			<visible>!IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
 			<include>FullscreenDimensions</include>
 			<texture>dialogs/DialogBackground.png</texture>
 			<animation effect="fade" end="100" start="0" time="200">Visible</animation>
