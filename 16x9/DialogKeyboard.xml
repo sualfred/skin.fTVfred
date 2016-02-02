@@ -123,9 +123,8 @@
 					<top>515</top>
 					<left>-25</left>
 					<width>918</width>
-					<height>1</height>
-					<colordiffuse>ff7f7f7f</colordiffuse>
-					<texture>dialogs/KeyboardEditLine.png</texture>
+					<height>2</height>
+					<texture border="1">dialogs/KeyboardEditLine2.png</texture>
 				</control>
 				<!-- Keys -->
 				<control type="group">

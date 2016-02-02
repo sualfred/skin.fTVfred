@@ -1,3 +1,7 @@
+2.0.25:
+- Replaced keyboard divider line
+- Fixed view type animation, if previous animation wasn't completed (fast movement issue)
+
 2.0.24:
 - Fixed hidden options button on VideoOSD
 - Added options button to MusicOSD

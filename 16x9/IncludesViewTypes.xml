@@ -98,8 +98,8 @@
 				<onfocus condition="!IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 			</control>
 			<control type="group">
-				<animation center="316,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-				<animation center="316,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="316,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="316,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="316,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>48</top>
@@ -226,8 +226,8 @@
 				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 			</control>
 			<control type="group">
-				<animation center="150,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-				<animation center="150,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="150,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="150,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="150,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>48</top>
@@ -370,8 +370,8 @@
 				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 			</control>
 			<control type="group">
-				<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-				<animation center="250,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>48</top>
@@ -552,8 +552,8 @@
 				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 			</control>
 			<control type="group">
-				<animation center="316,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-				<animation center="316,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="316,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="316,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="316,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>48</top>
@@ -730,8 +730,8 @@
 				<onfocus condition="!IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 			</control>
 			<control type="group">
-				<animation center="316,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-				<animation center="316,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="316,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="316,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="316,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>48</top>
@@ -863,8 +863,8 @@
 		</itemlayout>
 		<focusedlayout height="576" width="436">
 			<control type="group">
-				<animation center="250,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-				<animation center="250,288" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>48</top>
