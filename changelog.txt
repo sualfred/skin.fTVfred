@@ -1,3 +1,9 @@
+2.0.24:
+- Fixed hidden options button on VideoOSD
+- Added options button to MusicOSD
+- Fixed missing song titel in seekbar dialog
+- Fixed textviewer labels
+
 2.0.23:
 - Changed movement logic for the previous commit
 - Improved Pause/Play for ExtendedInfo Xray mode

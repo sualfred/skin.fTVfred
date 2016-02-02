@@ -77,6 +77,18 @@
 					<label>$INFO[VideoPlayer.Title]</label>
 					<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
+				<!--  Song title -->
+				<control type="label">
+					<left>20</left>
+					<top>127</top>
+					<width>1880</width>
+					<height>40</height>
+					<align>center</align>
+					<font>Light26</font>
+					<textcolor>fffe8e8e8</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, / ,]</label>
+				</control>
 				<!-- Pause -->
 				<control type="image">
 					<centerleft>50%</centerleft>

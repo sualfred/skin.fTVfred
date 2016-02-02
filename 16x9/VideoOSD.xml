@@ -263,8 +263,7 @@
 					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>
 				</control>
 				<!--Xray Icon-->
-				<control type="grouplist">
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
+				<control type="grouplist">					
 					<right>92</right>
 					<bottom>40</bottom>
 					<height>40</height>
@@ -279,18 +278,19 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>$LOCALIZE[31240]</label>
+						<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
-						<visible>Skin.HasSetting(HideOSDControls)</visible>
+						<visible>Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture flipy="true">osd/x_ray.png</texture>
-						<visible>!Skin.HasSetting(HideOSDControls)</visible>
+						<visible>!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 					</control>
 					<control type="label">
 						<top>4</top>
