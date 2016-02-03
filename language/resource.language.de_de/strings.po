@@ -986,8 +986,8 @@ msgstr "Ändert die Darstellung der Favouriten. Nützlich falls diese zum anzeig
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
-msgid "View ExtendedInfo"
-msgstr "Zeige ExtendedInfo"
+msgid "View movie info"
+msgstr "Zeige Film Info"
 
 #: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
 msgctxt "#31235"
@@ -1016,8 +1016,13 @@ msgstr "Erstaufführung am"
 
 #: /16x9/VideoOSD.xml:288
 msgctxt "#31240"
-msgid "View cast"
-msgstr "Zeige Darsteller"
+msgid "View X-Rray"
+msgstr "Zeige X-Rray"
+
+#: /16x9/DialogFullScreenInfo.xml:218
+msgctxt "#31241"
+msgid "View actor info"
+msgstr "Zeige Darsteller Info"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

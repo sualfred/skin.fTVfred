@@ -981,7 +981,7 @@ msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
-msgid "View ExtendedInfo"
+msgid "View movie info"
 msgstr ""
 
 #: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
@@ -1011,7 +1011,12 @@ msgstr ""
 
 #: /16x9/VideoOSD.xml:288
 msgctxt "#31240"
-msgid "View cast"
+msgid "View X-Ray"
+msgstr ""
+
+#: /16x9/DialogFullScreenInfo.xml:218
+msgctxt "#31241"
+msgid "View actor info"
 msgstr ""
 
 msgctxt "#31500"

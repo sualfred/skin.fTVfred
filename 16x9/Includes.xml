@@ -472,4 +472,46 @@
 			<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 		</control>
 	</include>
+	<!-- Player Titles -->
+	<include name="PlayerTitles">
+		<control id="99" type="grouplist">
+			<left>20</left>
+			<top>64</top>
+			<width>1880</width>
+			<height>50</height>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<!--  Title -->
+			<control id="99" type="label">
+				<width>auto</width>
+				<height>50</height>
+				<font>Med40</font>
+				<textcolor>ffeaeaea</textcolor>
+				<shadowcolor>ff000000</shadowcolor>
+				<label>$VAR[PlayerBigLabel]</label>
+			</control>
+			<!-- Season/Episode number -->
+			<control id="99" type="label">
+				<width>auto</width>
+				<height>50</height>
+				<font>Med40</font>
+				<textcolor>ffeaeaea</textcolor>
+				<shadowcolor>ff000000</shadowcolor>
+				<label>$VAR[PlayerEpisodeValue]</label>
+			</control>
+		</control>
+		<!--  Small label -->
+		<control id="99" type="label">
+			<left>20</left>
+			<top>127</top>
+			<width>1880</width>
+			<height>40</height>
+			<align>center</align>
+			<font>Light26</font>
+			<textcolor>fffe8e8e8</textcolor>
+			<shadowcolor>ff000000</shadowcolor>
+			<label>$VAR[PlayerSmallLabel]</label>
+		</control>
+	</include>
 </includes>

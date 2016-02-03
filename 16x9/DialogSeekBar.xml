@@ -5,7 +5,7 @@
 	<visible>[Window.IsVisible(visualisation) | VideoPlayer.IsFullscreen] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsActive(script.pseudotv.TVOverlay.xml) + !Window.IsActive(script.pseudotv.live.TVOverlay.xml)</visible>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsActive(videoosd) + !Window.IsActive(musicosd) + !Window.IsActive(subtitlesearch) + !Window.IsVisible(script-nextup-notification-NextUpInfo.xml) + IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsVisible(fullscreeninfo) + !Window.IsActive(videoosd) + !Window.IsActive(musicosd) + !Window.IsActive(subtitlesearch) + !Window.IsVisible(script-nextup-notification-NextUpInfo.xml) + IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<control type="group">
 				<visible>Player.Paused + !Player.Forwarding + !Player.Rewinding</visible>
 				<animation condition="System.IdleTime(4) + !Player.Caching + !Window.IsVisible(fullscreeninfo)" reversible="true" type="Conditional">
@@ -16,79 +16,7 @@
 					<height>210</height>
 					<texture border="1">osd/mask_top.png</texture>
 				</control>
-				<control type="grouplist">
-					<left>20</left>
-					<top>64</top>
-					<width>1880</width>
-					<height>50</height>
-					<align>center</align>
-					<itemgap>0</itemgap>
-					<orientation>horizontal</orientation>
-					<!--  LiveTV title -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[VideoPlayer.ChannelName,, [COLOR=ff696969]|[/COLOR] ]$INFO[VideoPlayer.Title]</label>
-						<visible>VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
-					</control>
-					<!--  Movie title -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[VideoPlayer.Title]</label>
-						<visible>!VideoPlayer.Content(livetv) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
-					</control>
-					<!--  TV Show title -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[VideoPlayer.TVShowTitle]</label>
-						<visible>!VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
-					</control>
-					<!-- Season/Episode number -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$VAR[PlayerEpisodeValue]</label>
-					</control>
-				</control>
-				<!--  Episode title -->
-				<control type="label">
-					<left>20</left>
-					<top>127</top>
-					<width>1880</width>
-					<height>40</height>
-					<align>center</align>
-					<font>Light26</font>
-					<textcolor>fffe8e8e8</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
-				</control>
-				<!--  Song title -->
-				<control type="label">
-					<left>20</left>
-					<top>127</top>
-					<width>1880</width>
-					<height>40</height>
-					<align>center</align>
-					<font>Light26</font>
-					<textcolor>fffe8e8e8</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, / ,]</label>
-				</control>
+				<include>PlayerTitles</include>
 				<!-- Pause -->
 				<control type="image">
 					<centerleft>50%</centerleft>
@@ -97,7 +25,7 @@
 					<height>341</height>
 					<texture>osd/Pause.png</texture>
 					<visible>Player.Paused + !Player.Caching</visible>
-					<animation condition="System.IdleTime(2) + !Window.IsVisible(fullscreeninfo)" reversible="true" type="Conditional">
+					<animation condition="System.IdleTime(2)" reversible="true" type="Conditional">
 						<effect end="0" start="100" time="200" type="fade" />
 					</animation>
 				</control>
@@ -126,6 +54,7 @@
 					<width>1980</width>
 					<height>120</height>
 					<texture>osd/mask.png</texture>
+					<visible>!Window.IsVisible(fullscreeninfo)</visible>
 				</control>
 				<!--  Cache bar -->
 				<control type="progress">
@@ -222,48 +151,6 @@
 					<label>$INFO[System.Time]</label>
 					<visible>!Window.IsVisible(fullscreeninfo)</visible>
 				</control>
-				<!--XRay-->
-				<control type="group">
-					<visible>Window.IsVisible(fullscreeninfo)</visible>
-					<!--Xray Icon-->
-					<control id="99" type="grouplist">
-						<right>92</right>
-						<bottom>40</bottom>
-						<height>40</height>
-						<itemgap>10</itemgap>
-						<align>right</align>
-						<orientation>horizontal</orientation>
-						<usecontrolcoords>true</usecontrolcoords>
-						<control id="99" type="label">
-							<top>4</top>
-							<width>auto</width>
-							<height>30</height>
-							<font>Reg27</font>
-							<textcolor>fff3f3f3</textcolor>
-							<label>$LOCALIZE[31234]</label>
-							<visible>!IsEmpty(VideoPlayer.IMDBNumber)</visible>
-						</control>
-						<control id="99" type="image">
-							<width>40</width>
-							<height>40</height>
-							<texture>osd/x_ray.png</texture>
-							<visible>!IsEmpty(VideoPlayer.IMDBNumber)</visible>
-						</control>
-						<control id="99" type="label">
-							<top>4</top>
-							<width>auto</width>
-							<height>30</height>
-							<font>Reg27</font>
-							<textcolor>fff3f3f3</textcolor>
-							<label>    $LOCALIZE[33063]</label>
-						</control>
-						<control id="99" type="image">
-							<width>40</width>
-							<height>40</height>
-							<texture>osd/options.png</texture>
-						</control>
-					</control>
-				</control>
 			</control>
 			<control type="group">
 				<visible>!Player.Paused + [Player.Seeking | Player.DisplayAfterSeek]</visible>
@@ -272,11 +159,13 @@
 					<height>210</height>
 					<texture border="1">osd/mask_top.png</texture>
 				</control>
+				<include>PlayerTitles</include>
 				<control type="image">
 					<bottom>0</bottom>
 					<width>1980</width>
 					<height>120</height>
-					<texture>osd/mask.png</texture>
+					<texture>osd/mask.png</texture>					
+					<visible>!Window.IsVisible(fullscreeninfo)</visible>
 				</control>
 				<!--  Cache bar -->
 				<control type="progress">
@@ -371,6 +260,7 @@
 					<align>right</align>
 					<textcolor>fff3f3f3</textcolor>
 					<label>$INFO[System.Time]</label>
+					<visible>!Window.IsVisible(fullscreeninfo)</visible>
 				</control>
 			</control>
 			<control type="group">

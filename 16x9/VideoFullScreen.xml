@@ -4,7 +4,7 @@
 	<defaultcontrol>-</defaultcontrol>
 	<controls>
 		<control type="image" id="99">
-			<visible>!IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
+			<visible>Window.IsVisible(fullscreenvideo) + !IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
 			<include>FullscreenDimensions</include>
 			<texture>dialogs/DialogBackground.png</texture>
 			<animation effect="fade" end="100" start="0" time="200">Visible</animation>
@@ -23,70 +23,7 @@
 					<height>210</height>
 					<texture border="1">osd/mask_top.png</texture>
 				</control>
-				<control id="99" type="grouplist">
-					<left>20</left>
-					<top>64</top>
-					<width>1880</width>
-					<height>50</height>
-					<align>center</align>
-					<itemgap>0</itemgap>
-					<orientation>horizontal</orientation>				
-					<!--  Movie title -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[VideoPlayer.Title]</label>
-						<visible>IsEmpty(VideoPlayer.TVShowTitle)</visible>
-					</control>
-					<!--  TV Show title -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[VideoPlayer.TVShowTitle]</label>
-						<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
-					</control>
-					<!-- Season/Episode number -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>50</height>
-						<font>Med40</font>
-						<textcolor>ffeaeaea</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$VAR[PlayerEpisodeValue]</label>
-					</control>
-				</control>
-				<!--  Episode title -->
-				<control id="99" type="label">
-					<left>20</left>
-					<top>127</top>
-					<width>1880</width>
-					<height>40</height>
-					<align>center</align>
-					<font>Light26</font>
-					<textcolor>fffe8e8e8</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>!VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
-				</control>
-				<!--  Channel name -->
-				<control id="99" type="label">
-					<left>20</left>
-					<top>127</top>
-					<width>1880</width>
-					<height>40</height>
-					<align>center</align>
-					<font>Light26</font>
-					<textcolor>fffe8e8e8</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[VideoPlayer.ChannelName]</label>
-					<visible>VideoPlayer.Content(livetv) + !IsEmpty(VideoPlayer.ChannelName)</visible>
-				</control>
+				<include>PlayerTitles</include>
 				<control id="99" type="image">
 					<bottom>0</bottom>
 					<width>1980</width>
@@ -764,6 +701,7 @@
 				<animation condition="System.IdleTime(2)" reversible="true" type="Conditional">
 					<effect type="fade" start="100" end="0" time="200" />
 				</animation>
+				<visible>!Window.IsVisible(fullscreeninfo)</visible>
 			</control>
 			<control type="group" id="99">
 				<visible>Player.Paused + Player.Caching</visible>
