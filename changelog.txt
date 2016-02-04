@@ -1,3 +1,6 @@
+2.0.27:
+- Added Genre thumbs support for movies / tv shows. (Works for DE/EN genre labels)
+
 2.0.26:
 - Finalized Pseudo-Xray feature
 - Fixed player titles 
