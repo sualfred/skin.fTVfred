@@ -22,7 +22,7 @@
 		<value condition="SubString(ListItem.Label,tv) | SubString(ListItem.Label,television) | SubString(ListItem.Label,fernseh)">tvmovie.jpg</value>
 		<value condition="SubString(ListItem.Label,war) | SubString(ListItem.Label,krieg)">war.jpg</value>
 		<value condition="SubString(ListItem.Label,western) | SubString(ListItem.Label,cowboy)">western.jpg</value>
-		<value condition="!StringCompare(ListItem.Label,..)">common/genre_empty.jpg</value>
+		<value condition="!StringCompare(ListItem.Label,..)">DefaultFolder.png</value>
 	</variable>
 	<!-- Genre Widget -->
 	<variable name="VideoGenreThumbPos1">
@@ -46,7 +46,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel1),tv) | SubString(ListItem.Property(InfoLabel1),television) | SubString(ListItem.Property(InfoLabel1),fernseh)">tvmovie.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel1),war) | SubString(ListItem.Property(InfoLabel1),krieg)">war.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel1),western) | SubString(ListItem.Property(InfoLabel1),cowboy)">western.jpg</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel1),..)">common/genre_empty.jpg</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel1),..)">DefaultFolder.png</value>
 	</variable>
 	<variable name="VideoGenreThumbPos2">
 		<value condition="SubString(ListItem.Property(InfoLabel2),action) | SubString(ListItem.Property(InfoLabel2),Aktion)">action.jpg</value>
@@ -69,7 +69,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel2),tv) | SubString(ListItem.Property(InfoLabel2),television) | SubString(ListItem.Property(InfoLabel2),fernseh)">tvmovie.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel2),war) | SubString(ListItem.Property(InfoLabel2),krieg)">war.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel2),western) | SubString(ListItem.Property(InfoLabel2),cowboy)">western.jpg</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel2),..)">common/genre_empty.jpg</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel2),..)">DefaultFolder.png</value>
 	</variable>
 	<variable name="VideoGenreThumbPos3">
 		<value condition="SubString(ListItem.Property(InfoLabel3),action) | SubString(ListItem.Property(InfoLabel3),Aktion)">action.jpg</value>
@@ -92,7 +92,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel3),tv) | SubString(ListItem.Property(InfoLabel3),television) | SubString(ListItem.Property(InfoLabel3),fernseh)">tvmovie.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel3),war) | SubString(ListItem.Property(InfoLabel3),krieg)">war.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel3),western) | SubString(ListItem.Property(InfoLabel3),cowboy)">western.jpg</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel3),..)">common/genre_empty.jpg</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel3),..)">DefaultFolder.png</value>
 	</variable>
 	<variable name="VideoGenreThumbPos4">
 		<value condition="SubString(ListItem.Property(InfoLabel4),action) | SubString(ListItem.Property(InfoLabel4),Aktion)">action.jpg</value>
@@ -115,7 +115,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel4),tv) | SubString(ListItem.Property(InfoLabel4),television) | SubString(ListItem.Property(InfoLabel4),fernseh)">tvmovie.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel4),war) | SubString(ListItem.Property(InfoLabel4),krieg)">war.jpg</value>
 		<value condition="SubString(ListItem.Property(InfoLabel4),western) | SubString(ListItem.Property(InfoLabel4),cowboy)">western.jpg</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel4),..)">common/genre_empty.jpg</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel4),..)">DefaultFolder.png</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>
