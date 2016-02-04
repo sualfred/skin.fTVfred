@@ -3,32 +3,32 @@
 	<variable name="VideoGenreThumb">
 		<value condition="SubString(ListItem.Label,adventure) | SubString(ListItem.Label,Abenteuer)">special://skin/extras/genres/adventure.png</value>
 		<value condition="SubString(ListItem.Label,action)">special://skin/extras/genres/action.png</value>
-		<value condition="SubString(ListItem.Label,sport)">special://skin/extras/genres/sport.png</value>
 		<value condition="SubString(ListItem.Label,animation)">special://skin/extras/genres/animation.png</value>
 		<value condition="SubString(ListItem.Label,horror)">special://skin/extras/genres/horror.png</value>
-		<value condition="SubString(ListItem.Label,noir)">special://skin/extras/genres/film-noir.png</value>
-		<value condition="SubString(ListItem.Label,Love) | SubString(ListItem.Label,romance) | SubString(ListItem.Label,romanze)">special://skin/extras/genres/love.png</value>
-		<value condition="SubString(ListItem.Label,history) | SubString(ListItem.Label,geschichte) | SubString(ListItem.Label,historie)]">special://skin/extras/genres/history.png</value>
+		<value condition="SubString(ListItem.Label,Love) | SubString(ListItem.Label,romance) | SubString(ListItem.Label,romanze) | SubString(ListItem.Label,romantik)">special://skin/extras/genres/love.png</value>
 		<value condition="SubString(ListItem.Label,kids) | SubString(ListItem.Label,children) | SubString(ListItem.Label,kinder) | SubString(ListItem.Label,cartoon) | SubString(ListItem.Label,zeichentrick)">special://skin/extras/genres/kids.png</value>
-		<value condition="SubString(ListItem.Label,thriller)">special://skin/extras/genres/thriller.png</value>
+		<value condition="SubString(ListItem.Label,thriller) | SubString(ListItem.Label,suspense) | SubString(ListItem.Label,spannung)">special://skin/extras/genres/thriller.png</value>
 		<value condition="SubString(ListItem.Label,drama)">special://skin/extras/genres/drama.png</value>
 		<value condition="SubString(ListItem.Label,comedy) | SubString(ListItem.Label,komödie)">special://skin/extras/genres/comedy.png</value>
-		<value condition="SubString(ListItem.Label,musical) | SubString(ListItem.Label,music)">special://skin/extras/genres/musical.png</value>
 		<value condition="SubString(ListItem.Label,mystery) | SubString(ListItem.Label,mysterie)">special://skin/extras/genres/mystery.png</value>
 		<value condition="SubString(ListItem.Label,crime) | SubString(ListItem.Label,krimi)">special://skin/extras/genres/crime.png</value>
 		<value condition="SubString(ListItem.Label,fantasy) | SubString(ListItem.Label,fantasie) | SubString(ListItem.Label,märchen)">special://skin/extras/genres/fantasy.png</value>
+		<value condition="SubString(ListItem.Label,family) | SubString(ListItem.Label,familie)">special://skin/extras/genres/animation.png</value>
+		<value condition="SubString(ListItem.Label,war) | SubString(ListItem.Label,krieg)">special://skin/extras/genres/war.png</value>
+		<value condition="SubString(ListItem.Label,sci-Fi) | SubString(ListItem.Label,scifi) | SubString(ListItem.Label,science fiction) | SubString(ListItem.Label,science-fiction)">special://skin/extras/genres/scifi.png</value>
+		<value condition="SubString(ListItem.Label,western) | SubString(ListItem.Label,cowboy)">special://skin/extras/genres/western.png</value>
+		<value condition="SubString(ListItem.Label,history) | SubString(ListItem.Label,geschichte) | SubString(ListItem.Label,historie)">special://skin/extras/genres/history.png</value>
+		<!-- missing 
+		<value condition="SubString(ListItem.Label,cook) | SubString(ListItem.Label,food) | SubString(ListItem.Label,essen) | SubString(ListItem.Label,kochen)">special://skin/extras/genres/food.png</value>
+		<value condition="SubString(ListItem.Label,short) | SubString(ListItem.Label,kurz)">special://skin/extras/genres/shortmovie.png</value>
+		<value condition="SubString(ListItem.Label,musical) | SubString(ListItem.Label,music)">special://skin/extras/genres/musical.png</value>
 		<value condition="SubString(ListItem.Label,biography) | SubString(ListItem.Label,biographie)">special://skin/extras/genres/biography.png</value>
 		<value condition="SubString(ListItem.Label,docu) | SubString(ListItem.Label,doku)">special://skin/extras/genres/documentation.png</value>
-		<value condition="SubString(ListItem.Label,family) | SubString(ListItem.Label,familie)">special://skin/extras/genres/family.png</value>
-		<value condition="SubString(ListItem.Label,war) | SubString(ListItem.Label,krieg)">special://skin/extras/genres/war.png</value>
-		<value condition="SubString(ListItem.Label,suspense) | SubString(ListItem.Label,spannung)">special://skin/extras/genres/suspense.png</value>
-		<value condition="SubString(ListItem.Label,short) | SubString(ListItem.Label,kurz)">special://skin/extras/genres/shortmovie.png</value>
-		<value condition="SubString(ListItem.Label,western) | SubString(ListItem.Label,cowboy)">special://skin/extras/genres/western.png</value>
 		<value condition="SubString(ListItem.Label,special) | SubString(ListItem.Label,spezial)">special://skin/extras/genres/special-interest.png</value>
-		<value condition="SubString(ListItem.Label,sci-Fi) | SubString(ListItem.Label,scifi) | SubString(ListItem.Label,science fiction) | SubString(ListItem.Label,science-fiction)">special://skin/extras/genres/science-fiction.png</value>
-		<value condition="SubString(ListItem.Label,cook) | SubString(ListItem.Label,food) | SubString(ListItem.Label,essen) | SubString(ListItem.Label,kochen)">special://skin/extras/genres/food.png</value>
 		<value condition="SubString(ListItem.Label,mini)">special://skin/extras/genres/miniseries.png</value>
-		<value condition="!StringCompare(ListItem.Label,..)">special://skin/extras/genres/default.png</value>
+		<value condition="SubString(ListItem.Label,noir)">special://skin/extras/genres/film-noir.png</value>
+		<value condition="SubString(ListItem.Label,sport)">special://skin/extras/genres/sport.png</value>-->
+		<value condition="!StringCompare(ListItem.Label,..)">DefaultFolder.png</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>
@@ -2010,6 +2010,7 @@
 		<value>views/movie_fallback.png</value>
 	</variable>
 	<variable name="SquareImage">
+		<value condition="SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)">$VAR[VideoGenreThumb]</value>
 		<value condition="StringCompare(ListItem.Label,..)">views/folder_back_square.png</value>
 		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/square_fallback.png</value>

@@ -285,6 +285,15 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">common/default_empty.png</texture>
+					<visible>!SubString(Container.FolderPath,videodb://) + !SubString(Container.FolderPath,genres)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<visible>SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -314,7 +323,7 @@
 					<width>480</width>
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>!StringCompare(ListItem.Label,..) + [!SubString(ListItem.Icon,Default) | [SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)]]</visible>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -379,6 +388,15 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">common/default_empty.png</texture>
+					<visible>!SubString(Container.FolderPath,videodb://) + !SubString(Container.FolderPath,genres)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>480</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true">common/default_empty.png</texture>
+					<visible>SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -419,7 +437,7 @@
 					<width>480</width>
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>!StringCompare(ListItem.Label,..) + [!SubString(ListItem.Icon,Default) | [SubString(ListItem.Icon,Default) + SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)]]</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
