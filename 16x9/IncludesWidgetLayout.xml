@@ -29,21 +29,73 @@
 				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/movies/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/tvshows/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+			<!-- Genre -->
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>256</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>205</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -129,21 +181,73 @@
 				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/movies/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/tvshows/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+			<!-- Genre -->
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>256</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>205</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -274,21 +378,73 @@
 				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/movies/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/tvshows/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+			<!-- Genre -->
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>256</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>205</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -335,21 +491,73 @@
 				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/movies/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">special://skin/extras/genres/tvshows/$VAR[VideoGenreThumbPos$PARAM[ID]].jpg</texture>
-				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+			<!-- Genre -->
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">views/poster_fallback.png</texture>
+				</control>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">keep</aspectratio>
+					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>256</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
+				<control type="image">
+					<top>13</top>
+					<left>205</left>
+					<width>30</width>
+					<height>308</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture background="true">views/genre_mask.png</texture>
+				</control>
 			</control>
 			<control type="image">
 				<top>13</top>

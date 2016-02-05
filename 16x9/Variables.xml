@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Genre Library -->
+	<variable name="GenreContent">
+		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>
+		<value condition="SubString(Container.FolderPath,tvshows/genre)">special://skin/extras/genres/shows/</value>
+		<value condition="SubString(ListItem.Property(Path),movies/genre)">special://skin/extras/genres/movies/</value>
+		<value condition="SubString(ListItem.Property(Path),,tvshows/genre)">special://skin/extras/genres/shows/</value>
+	</variable>
 	<variable name="VideoGenreThumb">
 		<value condition="SubString(ListItem.Label,action) | SubString(ListItem.Label,Aktion)">action</value>
 		<value condition="SubString(ListItem.Label,adventure) | SubString(ListItem.Label,Abenteuer)">adventure</value>
@@ -22,7 +28,7 @@
 		<value condition="SubString(ListItem.Label,tv) | SubString(ListItem.Label,television) | SubString(ListItem.Label,fernseh)">tv</value>
 		<value condition="SubString(ListItem.Label,war) | SubString(ListItem.Label,krieg)">war</value>
 		<value condition="SubString(ListItem.Label,western) | SubString(ListItem.Label,cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Label,..)">DefaultFolder</value>
+		<value condition="!StringCompare(ListItem.Label,..)">$INFO[ListItem.Label]</value>
 	</variable>
 	<!-- Genre Widget -->
 	<variable name="VideoGenreThumbPos1">
@@ -46,7 +52,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel1),tv) | SubString(ListItem.Property(InfoLabel1),television) | SubString(ListItem.Property(InfoLabel1),fernseh)">tv</value>
 		<value condition="SubString(ListItem.Property(InfoLabel1),war) | SubString(ListItem.Property(InfoLabel1),krieg)">war</value>
 		<value condition="SubString(ListItem.Property(InfoLabel1),western) | SubString(ListItem.Property(InfoLabel1),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel1),..)">DefaultFolder</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel1),..)">$INFO[ListItem.Property(InfoLabel1)]</value>
 	</variable>
 	<variable name="VideoGenreThumbPos2">
 		<value condition="SubString(ListItem.Property(InfoLabel2),action) | SubString(ListItem.Property(InfoLabel2),Aktion)">action</value>
@@ -69,7 +75,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel2),tv) | SubString(ListItem.Property(InfoLabel2),television) | SubString(ListItem.Property(InfoLabel2),fernseh)">tv</value>
 		<value condition="SubString(ListItem.Property(InfoLabel2),war) | SubString(ListItem.Property(InfoLabel2),krieg)">war</value>
 		<value condition="SubString(ListItem.Property(InfoLabel2),western) | SubString(ListItem.Property(InfoLabel2),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel2),..)">DefaultFolder</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel2),..)">$INFO[ListItem.Property(InfoLabel2)]</value>
 	</variable>
 	<variable name="VideoGenreThumbPos3">
 		<value condition="SubString(ListItem.Property(InfoLabel3),action) | SubString(ListItem.Property(InfoLabel3),Aktion)">action</value>
@@ -92,7 +98,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel3),tv) | SubString(ListItem.Property(InfoLabel3),television) | SubString(ListItem.Property(InfoLabel3),fernseh)">tv</value>
 		<value condition="SubString(ListItem.Property(InfoLabel3),war) | SubString(ListItem.Property(InfoLabel3),krieg)">war</value>
 		<value condition="SubString(ListItem.Property(InfoLabel3),western) | SubString(ListItem.Property(InfoLabel3),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel3),..)">DefaultFolder</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel3),..)">$INFO[ListItem.Property(InfoLabel3)]</value>
 	</variable>
 	<variable name="VideoGenreThumbPos4">
 		<value condition="SubString(ListItem.Property(InfoLabel4),action) | SubString(ListItem.Property(InfoLabel4),Aktion)">action</value>
@@ -115,7 +121,7 @@
 		<value condition="SubString(ListItem.Property(InfoLabel4),tv) | SubString(ListItem.Property(InfoLabel4),television) | SubString(ListItem.Property(InfoLabel4),fernseh)">tv</value>
 		<value condition="SubString(ListItem.Property(InfoLabel4),war) | SubString(ListItem.Property(InfoLabel4),krieg)">war</value>
 		<value condition="SubString(ListItem.Property(InfoLabel4),western) | SubString(ListItem.Property(InfoLabel4),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel4),..)">DefaultFolder</value>
+		<value condition="!StringCompare(ListItem.Property(InfoLabel4),..)">$INFO[ListItem.Property(InfoLabel4)]</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>
@@ -2098,8 +2104,7 @@
 	</variable>
 	<variable name="SquareImage">
 		<value condition="StringCompare(ListItem.Label,..)">views/folder_back_square.png</value>
-		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/$VAR[VideoGenreThumb].jpg</value>
-		<value condition="SubString(Container.FolderPath,tvshows/genre)">special://skin/extras/genres/tvshows/$VAR[VideoGenreThumb].jpg</value>
+		<value condition="SubString(Container.FolderPath,movies/genre) | SubString(Container.FolderPath,tvshows/genre)">$VAR[VideoGenreThumb]</value>
 		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/square_fallback.png</value>
 	</variable>

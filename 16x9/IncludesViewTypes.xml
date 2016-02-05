@@ -279,85 +279,198 @@
 		<itemlayout height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">common/default_empty.png</texture>
+				<!-- Genres -->
+				<control type="group">
+					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>	
+					<!-- Right Poster -->
+					<control type="group">
+						<control type="image">
+							<left>160</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>160</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+						</control>
+					</control>
+					<!-- Middle Poster -->
+					<control type="group">
+						<control type="image">
+							<left>80</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>80</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+						</control>
+						<control type="image">
+							<left>400</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<!-- Left Poster -->
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture border="2">views/season_overlay.png</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>18</left>
+						<top>447</top>
+						<width>446</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture>views/OverlayNF.png</texture>
+					</control>
 				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
-					<visible>Window.IsActive(tvrecordings)</visible>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[SquareImage]</texture>
-					<visible>!Window.IsActive(tvrecordings)</visible>
-				</control>
-				<control type="image">
-					<left>-48</left>
-					<centertop>288</centertop>
-					<width>576</width>
-					<height>576</height>
-					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + [!SubString(ListItem.Icon,Default) | [SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)]]</visible>
-				</control>
-				<control type="image">
-					<left>17</left>
-					<top>419</top>
-					<width>62</width>
-					<height>62</height>
-					<texture>views/equaliser.gif</texture>
-					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
-				</control>
-				<include>OverlayHD</include>
-				<include>OverlayWatched</include>
-				<include name="ParamProgress">
-					<param name="width">480</param>
-				</include>
-				<control type="label">
-					<left>98</left>
-					<top>447</top>
-					<width>366</width>
-					<height>42</height>
-					<font>Bold44</font>
-					<scroll>false</scroll>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>88000000</shadowcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
-				</control>
-				<control type="label">
-					<left>18</left>
-					<top>447</top>
-					<width>446</width>
-					<height>42</height>
-					<font>Bold44</font>
-					<scroll>false</scroll>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>88000000</shadowcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<texture>views/OverlayNF.png</texture>
+				<!-- Common -->
+				<control type="group">
+					<visible>!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">common/default_empty.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
+						<visible>Window.IsActive(tvrecordings)</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">$VAR[SquareImage]</texture>
+						<visible>!Window.IsActive(tvrecordings)</visible>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture border="2">views/season_overlay.png</texture>
+						<visible>!StringCompare(ListItem.Label,..) + [!SubString(ListItem.Icon,Default) | [SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)]]</visible>
+					</control>
+					<control type="image">
+						<left>17</left>
+						<top>419</top>
+						<width>62</width>
+						<height>62</height>
+						<texture>views/equaliser.gif</texture>
+						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+					</control>
+					<include>OverlayHD</include>
+					<include>OverlayWatched</include>
+					<include name="ParamProgress">
+						<param name="width">480</param>
+					</include>
+					<control type="label">
+						<left>98</left>
+						<top>447</top>
+						<width>366</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<left>18</left>
+						<top>447</top>
+						<width>446</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture>views/OverlayNF.png</texture>
+					</control>
 				</control>
 			</control>
 		</itemlayout>
@@ -373,98 +486,230 @@
 				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">common/default_empty.png</texture>
+				<!-- Genres -->
+				<control type="group">
+					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
+					<!-- Right Poster -->
+					<control type="group">
+						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="80,0" start="0,0" time="200" delay="500" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0" start="80,0" time="0" tween="sine">UnFocus</animation>
+						<control type="image">
+							<left>160</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>160</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+						</control>
+					</control>
+					<!-- Middle Poster -->
+					<control type="group">
+						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="40,0" start="0,0" time="200" delay="500" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0" start="40,0" time="0" tween="sine">UnFocus</animation>
+						<control type="image">
+							<left>80</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>80</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+						</control>
+						<control type="image">
+							<left>400</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<!-- Left Poster -->
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66">views/shadow_fo.png</texture>
+						<animation center="0,0" reversible="false" easing="inout" effect="zoom" end="0,0,670,576" start="0,0,576,576" time="200" delay="500" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture border="2">views/season_overlay.png</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>						
+						<animation center="0,0" reversible="false" easing="inout" effect="zoom" end="116.7,100" start="100" time="200" delay="500" tween="sine">Focus</animation>
+					</control>
+					<control type="label">
+						<left>18</left>
+						<top>447</top>
+						<width>446</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture>views/OverlayNF.png</texture>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					</control>
 				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
-					<visible>Window.IsActive(tvrecordings)</visible>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[SquareImage]</texture>
-					<visible>!Window.IsActive(tvrecordings)</visible>
-				</control>
-				<control type="image">
-					<left>-48</left>
-					<centertop>288</centertop>
-					<width>576</width>
-					<height>576</height>
-					<texture border="51">views/shadow_fo.png</texture>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-				</control>
-				<control type="image">
-					<left>-48</left>
-					<centertop>288</centertop>
-					<width>576</width>
-					<height>576</height>
-					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + [!SubString(ListItem.Icon,Default) | [SubString(ListItem.Icon,Default) + SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)]]</visible>
-				</control>
-				<include>OverlayHD</include>
-				<include>OverlayWatched</include>
-				<include name="ParamProgress">
-					<param name="width">480</param>
-				</include>
-				<control type="image">
-					<left>17</left>
-					<top>419</top>
-					<width>62</width>
-					<height>62</height>
-					<texture>views/equaliser.gif</texture>
-					<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
-				</control>
-				<control type="label">
-					<left>98</left>
-					<top>447</top>
-					<width>366</width>
-					<height>42</height>
-					<font>Bold44</font>
-					<scroll>false</scroll>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>88000000</shadowcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
-				</control>
-				<control type="label">
-					<left>18</left>
-					<top>447</top>
-					<width>446</width>
-					<height>42</height>
-					<font>Bold44</font>
-					<scroll>false</scroll>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>88000000</shadowcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<texture>views/OverlayNF.png</texture>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+				<!-- Common -->
+				<control type="group">
+					<visible>!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">common/default_empty.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
+						<visible>Window.IsActive(tvrecordings)</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">$VAR[SquareImage]</texture>
+						<visible>!Window.IsActive(tvrecordings)</visible>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="51">views/shadow_fo.png</texture>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture border="2">views/season_overlay.png</texture>
+						<visible>!StringCompare(ListItem.Label,..) + [!SubString(ListItem.Icon,Default) | [SubString(ListItem.Icon,Default) + SubString(Container.FolderPath,videodb://) + SubString(Container.FolderPath,genres)]]</visible>
+					</control>
+					<include>OverlayHD</include>
+					<include>OverlayWatched</include>
+					<include name="ParamProgress">
+						<param name="width">480</param>
+					</include>
+					<control type="image">
+						<left>17</left>
+						<top>419</top>
+						<width>62</width>
+						<height>62</height>
+						<texture>views/equaliser.gif</texture>
+						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<left>98</left>
+						<top>447</top>
+						<width>366</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<left>18</left>
+						<top>447</top>
+						<width>446</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture>views/OverlayNF.png</texture>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					</control>
 				</control>
 			</control>
 		</focusedlayout>
