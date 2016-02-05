@@ -30,6 +30,29 @@
 		<value condition="SubString(ListItem.Label,western) | SubString(ListItem.Label,cowboy)">western</value>
 		<value condition="!StringCompare(ListItem.Label,..)">$INFO[ListItem.Label]</value>
 	</variable>
+	<variable name="VideoGenreFakeThumb1">
+		<value condition="SubString(ListItem(1).Label,action) | SubString(ListItem(1).Label,Aktion)">action</value>
+		<value condition="SubString(ListItem(1).Label,adventure) | SubString(ListItem(1).Label,Abenteuer)">adventure</value>
+		<value condition="SubString(ListItem(1).Label,animation)">animation</value>
+		<value condition="SubString(ListItem(1).Label,comedy) | SubString(ListItem(1).Label,komödie)">comedy</value>
+		<value condition="SubString(ListItem(1).Label,crime) | SubString(ListItem(1).Label,krimi)">crime</value>
+		<value condition="SubString(ListItem(1).Label,docu) | SubString(ListItem(1).Label,doku)">documentary</value>
+		<value condition="SubString(ListItem(1).Label,family) | SubString(ListItem(1).Label,familie)">family</value>
+		<value condition="SubString(ListItem(1).Label,fantasy) | SubString(ListItem(1).Label,fantasie) | SubString(ListItem(1).Label,märchen)">fantasy</value>
+		<value condition="SubString(ListItem(1).Label,history) | SubString(ListItem(1).Label,geschichte) | SubString(ListItem(1).Label,historie)">history</value>
+		<value condition="SubString(ListItem(1).Label,drama)">drama</value>
+		<value condition="SubString(ListItem(1).Label,horror)">horror</value>
+		<value condition="SubString(ListItem(1).Label,kids) | SubString(ListItem(1).Label,children) | SubString(ListItem(1).Label,kinder) | SubString(ListItem(1).Label,cartoon) | SubString(ListItem(1).Label,zeichentrick) | SubString(ListItem(1).Label,anime)">kids</value>		
+		<value condition="SubString(ListItem(1).Label,Love) | SubString(ListItem(1).Label,romance) | SubString(ListItem(1).Label,romanze) | SubString(ListItem(1).Label,romantik)">love</value>
+		<value condition="SubString(ListItem(1).Label,music) | SubString(ListItem(1).Label,musik) | SubString(ListItem(1).Label,tanz) | SubString(ListItem(1).Label,dance)">music</value>
+		<value condition="SubString(ListItem(1).Label,mystery) | SubString(ListItem(1).Label,mysterie)">mystery</value>
+		<value condition="SubString(ListItem(1).Label,sci-Fi) | SubString(ListItem(1).Label,scifi) | SubString(ListItem(1).Label,science fiction) | SubString(ListItem(1).Label,science-fiction)">scifi</value>
+		<value condition="SubString(ListItem(1).Label,thriller) | SubString(ListItem(1).Label,suspense) | SubString(ListItem(1).Label,spannung)">thriller</value>
+		<value condition="SubString(ListItem(1).Label,tv) | SubString(ListItem(1).Label,television) | SubString(ListItem.Label(1),fernseh)">tv</value>
+		<value condition="SubString(ListItem(1).Label,war) | SubString(ListItem(1).Label,krieg)">war</value>
+		<value condition="SubString(ListItem(1).Label,western) | SubString(ListItem(1).Label,cowboy)">western</value>
+		<value condition="!StringCompare(ListItem(1).Label,..)">$INFO[ListItem(1).Label]</value>
+	</variable>
 	<!-- Genre Widget -->
 	<variable name="VideoGenreThumbPos1">
 		<value condition="SubString(ListItem.Property(InfoLabel1),action) | SubString(ListItem.Property(InfoLabel1),Aktion)">action</value>
