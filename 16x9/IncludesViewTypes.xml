@@ -278,7 +278,8 @@
 	<include name="ViewSquareInfoLayout">
 		<itemlayout height="576" width="436">
 			<control type="group">
-				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>				
+				<animation reversible="false" easing="inout" effect="slide" end="68,0" start="0,0" time="200" delay="500" tween="sine" condition="[SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)] + ![Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious] + StringCompare(ListItem.Position,1)">Conditional</animation>
 				<!-- Genres -->
 				<control type="group">
 					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>	
@@ -491,7 +492,7 @@
 					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
 					<!-- Right Poster -->
 					<control type="group">
-						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="80,0" start="0,0" time="200" delay="500" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="80,0" start="0,0" time="120" delay="500" tween="sine">Focus</animation>
 						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0" start="80,0" time="0" tween="sine">UnFocus</animation>
 						<control type="image">
 							<left>160</left>
@@ -512,7 +513,7 @@
 					</control>
 					<!-- Middle Poster -->
 					<control type="group">
-						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="40,0" start="0,0" time="200" delay="500" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="40,0" start="0,0" time="120" delay="500" tween="sine">Focus</animation>
 						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0" start="40,0" time="0" tween="sine">UnFocus</animation>
 						<control type="image">
 							<left>80</left>
@@ -572,7 +573,7 @@
 						<width>576</width>
 						<height>576</height>
 						<texture border="66">views/shadow_fo.png</texture>
-						<animation center="0,0" reversible="false" easing="inout" effect="zoom" end="0,0,670,576" start="0,0,576,576" time="200" delay="500" tween="sine">Focus</animation>
+						<animation center="0,576" reversible="false" easing="inout" effect="zoom" end="0,0,672,576" start="0,0,576,576" time="120" delay="500" tween="sine">Focus</animation>
 						<animation center="auto" condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
 						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
 					</control>
@@ -587,11 +588,12 @@
 					</control>
 					<control type="image">
 						<top>48</top>
-						<width>480</width>
+						<left>-1</left>
+						<width>482</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>						
-						<animation center="0,0" reversible="false" easing="inout" effect="zoom" end="116.7,100" start="100" time="200" delay="500" tween="sine">Focus</animation>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<animation center="0,0" reversible="false" easing="inout" effect="zoom" end="0,0,562,480" start="0,0,482,480" time="120" delay="500" tween="sine">Focus</animation>
 					</control>
 					<control type="label">
 						<left>18</left>

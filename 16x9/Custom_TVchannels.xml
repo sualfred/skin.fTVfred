@@ -4,10 +4,10 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>	
 	<onunload>ClearProperty(SkipScrollingAnimation,home)</onunload>
-	<onunload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onunload>
-	<onunload>Control.Move(100,1)</onunload>
+	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
+	<onload>Control.Move(100,1)</onload>
 	<!-- workaround animation for focusing the first item -->
-	<animation effect="fade" start="100" end="100" time="1">WindowClose</animation>
+	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 	<controls>		
 		<!-- Fanart -->
 		<control type="group">
@@ -23,7 +23,7 @@
 		</control>
 		<!-- Channels -->
 		<control id="100" type="fixedlist">
-			<animation effect="fade" start="0" end="0" time="0" condition="!IsEmpty(Window(Home).Property(SkipScrollingAnimation))">Conditional</animation>
+			<!--<animation effect="fade" start="0" end="0" time="0" condition="!IsEmpty(Window(Home).Property(SkipScrollingAnimation))">Conditional</animation>-->
 			<left>-238</left>
 			<top>242</top>
 			<width>2200</width>
