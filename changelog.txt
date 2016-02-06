@@ -1,3 +1,7 @@
+2.0.29:
+- Removed automated Artwork Downloader after library update
+- Animated Genre viewtype
+
 2.0.28:
 - Replaced Genre method with a more dynamic mode (TV show poster sets will be added in the next commits)
 - Users can now add their own genre icons, if the stock ones aren't enough -> (skin/extras/genres/movies/My-Genre1.jpg)

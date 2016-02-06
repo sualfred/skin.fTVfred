@@ -98,7 +98,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + SubString(Container.FolderPath,.m3u)]</visible>
+				<visible>IsEmpty(Container.PluginName) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + SubString(Container.FolderPath,.m3u)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -111,122 +111,45 @@
 					<param name="ID">50</param>
 				</include>
 			</control>
-			<!-- Genres -->
-			<control type="group">
-				<visible>false</visible>
-				<visible>[SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)] + !Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious</visible>	
-				<animation effect="zoom" time="0" start="85" end="85" condition="true">Conditional</animation>
-				<animation type="Visible" reversible="false" >
-					<effect type="fade" time="0" start="0" end="100" delay="500" />
-					<effect center="auto" easing="inout" type="slide" end="80,0" start="0,0" time="120" delay="500" tween="sine" />
-				</animation>
-				<left>799</left>
-				<top>335</top>
-				<!-- Right Poster -->
-				<control type="group">
-					<control type="image">
-						<left>160</left>
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">views/poster_fallback.png</texture>
-					</control>
-					<control type="image">
-						<left>160</left>
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$VAR[GenreContent]$VAR[VideoGenreFakeThumb1]3.jpg</texture>
-					</control>
-				</control>
-				<!-- Middle Poster -->
-				<control type="group">
-					<control type="image">
-						<left>80</left>
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">views/poster_fallback.png</texture>
-					</control>
-					<control type="image">
-						<left>80</left>
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$VAR[GenreContent]$VAR[VideoGenreFakeThumb1]2.jpg</texture>
-					</control>
-					<control type="image">
-						<left>400</left>
-						<top>48</top>
-						<width>43</width>
-						<height>480</height>
-						<aspectratio align="center">stretch</aspectratio>
-						<texture background="true">views/genre_mask.png</texture>
-					</control>
-				</control>
-				<!-- Left Poster -->
-				<control type="group">
-					<control type="image">
-						<left>0</left>
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">views/poster_fallback.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true">$VAR[GenreContent]$VAR[VideoGenreFakeThumb1]1.jpg</texture>
-					</control>
-					<control type="image">
-						<left>320</left>
-						<top>48</top>
-						<width>43</width>
-						<height>480</height>
-						<aspectratio align="center">stretch</aspectratio>
-						<texture background="true">views/genre_mask.png</texture>
-					</control>
-				</control>
-				<control type="image">
-					<left>-48</left>
-					<centertop>288</centertop>
-					<width>576</width>
-					<height>576</height>
-					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem(1).Label,..)</visible>
-				</control>
-				<control type="label">
-					<left>18</left>
-					<top>447</top>
-					<width>446</width>
-					<height>42</height>
-					<font>Bold44</font>
-					<scroll>false</scroll>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>88000000</shadowcolor>
-					<label>$INFO[ListItem(1).Label]</label>
-					<visible>!StringCompare(ListItem(1).Label,..)</visible>
-				</control>
-				<control type="image">
-					<top>48</top>
-					<width>480</width>
-					<height>480</height>
-					<texture>views/OverlayNF.png</texture>
-				</control>
+		</control>
+	</include>
+
+	<!-- Gemre Info -->
+	<include name="Viewtype58">
+		<control type="group">
+			<visible>Control.IsVisible(58)</visible>			
+			<control id="58" type="fixedlist">
+				<left>-198</left>
+				<top>242</top>
+				<width>2200</width>
+				<height>576</height>
+				<onback condition="!StringCompare(Container(59).CurrentItem,0)">Control.Move(58,$INFO[Container(59).CurrentItem,-])</onback>
+				<onback condition="!StringCompare(Container(59).CurrentItem,0)">Control.Move(58,1)</onback>
+				<onup>Back</onup>
+				<ondown>1001</ondown>
+				<onleft>Back</onleft>
+				<onright>noop</onright>
+				<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
+				<include>ViewTypeBounceAnimation</include>
+				<defaultcontrol always="true">0</defaultcontrol>
+				<preloaditems>2</preloaditems>
+				<focusposition>1</focusposition>
+				<viewtype label="">list</viewtype>
+				<orientation>horizontal</orientation>
+				<defaultcontrol always="true">0</defaultcontrol>
+				<scrolltime easing="inout" tween="sine">300</scrolltime>
+				<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
+				<include name="ViewOpenAnimation">
+					<param name="pos1">153,10</param>
+					<param name="pos2">457,-174</param>
+					<param name="pos3">457,195</param>
+					<param name="pos4">457,-246</param>
+					<param name="pos5">457,10</param>
+					<param name="pos6">457,168</param>
+				</include>
+				<include name="ViewGenreLayout">
+					<param name="ID">58</param>
+				</include>
 			</control>
 		</control>
 	</include>
@@ -363,7 +286,7 @@
 				<viewtype label="31159">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -400,7 +323,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -437,7 +360,7 @@
 				<viewtype label="31160">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>

@@ -278,120 +278,9 @@
 	<include name="ViewSquareInfoLayout">
 		<itemlayout height="576" width="436">
 			<control type="group">
-				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>				
-				<animation reversible="false" easing="inout" effect="slide" end="68,0" start="0,0" time="200" delay="500" tween="sine" condition="[SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)] + ![Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious] + StringCompare(ListItem.Position,1)">Conditional</animation>
-				<!-- Genres -->
-				<control type="group">
-					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>	
-					<!-- Right Poster -->
-					<control type="group">
-						<control type="image">
-							<left>160</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/poster_fallback.png</texture>
-						</control>
-						<control type="image">
-							<left>160</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
-						</control>
-					</control>
-					<!-- Middle Poster -->
-					<control type="group">
-						<control type="image">
-							<left>80</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/poster_fallback.png</texture>
-						</control>
-						<control type="image">
-							<left>80</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
-						</control>
-						<control type="image">
-							<left>400</left>
-							<top>48</top>
-							<width>43</width>
-							<height>480</height>
-							<aspectratio align="center">stretch</aspectratio>
-							<texture background="true">views/genre_mask.png</texture>
-						</control>
-					</control>
-					<!-- Left Poster -->
-					<control type="group">
-						<control type="image">
-							<left>0</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/poster_fallback.png</texture>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
-						</control>
-						<control type="image">
-							<left>320</left>
-							<top>48</top>
-							<width>43</width>
-							<height>480</height>
-							<aspectratio align="center">stretch</aspectratio>
-							<texture background="true">views/genre_mask.png</texture>
-						</control>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>576</width>
-						<height>576</height>
-						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
-					</control>
-					<control type="label">
-						<left>18</left>
-						<top>447</top>
-						<width>446</width>
-						<height>42</height>
-						<font>Bold44</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture>views/OverlayNF.png</texture>
-					</control>
-				</control>
+				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<!-- Common -->
 				<control type="group">
-					<visible>!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
 					<control type="image">
 						<top>48</top>
 						<width>480</width>
@@ -487,138 +376,8 @@
 				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
-				<!-- Genres -->
-				<control type="group">
-					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
-					<!-- Right Poster -->
-					<control type="group">
-						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="80,0" start="0,0" time="120" delay="500" tween="sine">Focus</animation>
-						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0" start="80,0" time="0" tween="sine">UnFocus</animation>
-						<control type="image">
-							<left>160</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/poster_fallback.png</texture>
-						</control>
-						<control type="image">
-							<left>160</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
-						</control>
-					</control>
-					<!-- Middle Poster -->
-					<control type="group">
-						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="40,0" start="0,0" time="120" delay="500" tween="sine">Focus</animation>
-						<animation reversible="false" center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="slide" end="0" start="40,0" time="0" tween="sine">UnFocus</animation>
-						<control type="image">
-							<left>80</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/poster_fallback.png</texture>
-						</control>
-						<control type="image">
-							<left>80</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
-						</control>
-						<control type="image">
-							<left>400</left>
-							<top>48</top>
-							<width>43</width>
-							<height>480</height>
-							<aspectratio align="center">stretch</aspectratio>
-							<texture background="true">views/genre_mask.png</texture>
-						</control>
-					</control>
-					<!-- Left Poster -->
-					<control type="group">
-						<control type="image">
-							<left>0</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">views/poster_fallback.png</texture>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>48</top>
-							<width>320</width>
-							<height>480</height>
-							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
-						</control>
-						<control type="image">
-							<left>320</left>
-							<top>48</top>
-							<width>43</width>
-							<height>480</height>
-							<aspectratio align="center">stretch</aspectratio>
-							<texture background="true">views/genre_mask.png</texture>
-						</control>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>576</width>
-						<height>576</height>
-						<texture border="66">views/shadow_fo.png</texture>
-						<animation center="0,576" reversible="false" easing="inout" effect="zoom" end="0,0,672,576" start="0,0,576,576" time="120" delay="500" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>576</width>
-						<height>576</height>
-						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<left>-1</left>
-						<width>482</width>
-						<height>480</height>
-						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
-						<animation center="0,0" reversible="false" easing="inout" effect="zoom" end="0,0,562,480" start="0,0,482,480" time="120" delay="500" tween="sine">Focus</animation>
-					</control>
-					<control type="label">
-						<left>18</left>
-						<top>447</top>
-						<width>446</width>
-						<height>42</height>
-						<font>Bold44</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>480</width>
-						<height>480</height>
-						<texture>views/OverlayNF.png</texture>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-					</control>
-				</control>
 				<!-- Common -->
 				<control type="group">
-					<visible>!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
 					<control type="image">
 						<top>48</top>
 						<width>480</width>
@@ -711,6 +470,290 @@
 						<texture>views/OverlayNF.png</texture>
 						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
 						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					</control>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<!--Genre -->
+	<include name="ViewGenreLayout">
+		<itemlayout height="576" width="436">
+			<control type="group">
+				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+				<!-- Genres -->
+				<control type="group">
+					<!-- Right Poster -->
+					<control type="group">
+						<control type="image">
+							<left>160</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>160</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+						</control>
+					</control>
+					<!-- Middle Poster -->
+					<control type="group">
+						<control type="image">
+							<left>80</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>80</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+						</control>
+						<control type="image">
+							<left>400</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<!-- Left Poster -->
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<left>-48</left>
+						<centertop>288</centertop>
+						<width>576</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture border="2">views/season_overlay.png</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>18</left>
+						<top>447</top>
+						<width>446</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<width>480</width>
+						<height>480</height>
+						<texture>views/OverlayNF.png</texture>
+					</control>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="576" width="436">
+			<control type="button">
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onfocus>ClearProperty(TVShowID,home)</onfocus>
+				<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
+				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
+			</control>
+			<control type="group">
+				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="250,288" reversible="false" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<!-- Genres -->
+				<control type="group">
+					<!-- Right Poster -->
+					<control type="group">
+						<animation reversible="false" center="auto" condition="true" easing="inout" effect="slide" end="0,0" start="-40,0" time="300" delay="300" tween="sine">Conditional</animation>
+						<animation reversible="false" center="auto" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="slide" end="0,0" start="-40,0" time="300" delay="300" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="slide" end="-40,0" start="0,0" time="100" tween="sine">UnFocus</animation>
+						<left>200</left>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+						</control>
+					</control>
+					<!-- Middle Poster -->
+					<control type="group">
+						<left>80</left>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<!-- Left Poster -->
+					<control type="group">
+						<animation reversible="false" center="auto" condition="true" easing="inout" effect="slide" end="0,0" start="40,0" time="300" delay="300" tween="sine">Conditional</animation>
+						<animation reversible="false" center="auto" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="slide" end="0,0" start="40,0" time="300" delay="300" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="slide" end="40,0" start="0,0" time="100" tween="sine">UnFocus</animation>
+						<left>-40</left>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">views/poster_fallback.png</texture>
+						</control>
+						<control type="image">
+							<top>48</top>
+							<width>320</width>
+							<height>480</height>
+							<aspectratio align="center">scale</aspectratio>
+							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<top>48</top>
+							<width>43</width>
+							<height>480</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture background="true">views/genre_mask.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<left>-88</left>
+						<centertop>288</centertop>
+						<width>656</width>
+						<height>576</height>
+						<texture border="66">views/shadow_fo.png</texture>
+						<animation type="Conditional" condition="true" reversible="false">
+							<effect center="auto" type="zoom" end="0,0,656,576" start="0,0,556,576" time="300" delay="300" easing="inout" tween="sine" />
+							<effect type="fade" end="100" start="0" time="300" tween="sine" />
+						</animation>
+						<animation type="Focus" condition="Container(58).OnNext | Container(58).OnPrevious" reversible="false">
+							<effect center="auto" type="zoom" end="0,0,656,576" start="0,0,556,576" time="300" delay="300" easing="inout" tween="sine" />
+							<effect type="fade" end="100" start="0" time="300" tween="sine" />
+						</animation>
+						<animation type="UnFocus" condition="Container(58).OnNext | Container(58).OnPrevious" reversible="false">
+							<effect center="auto" type="zoom" end="0,0,576,576" start="0,0,656,576" time="100" easing="inout" tween="sine" />
+							<effect type="fade" end="0" start="100" time="300" tween="sine" />
+						</animation>
+					</control>
+					<control type="image">
+						<left>-88</left>
+						<centertop>288</centertop>
+						<width>656</width>
+						<height>576</height>
+						<texture border="66,66,51,51">views/shadow_nf.png</texture>
+						<animation type="Focus" condition="Control.HasFocus(58) | Container(58).OnNext | Container(58).OnPrevious">
+							<effect center="auto" type="zoom" end="0,0,656,576" start="0,0,576,576" time="0" easing="inout" tween="sine" />
+							<effect center="auto" type="fade" end="0" start="100" time="300" easing="inout" tween="sine" />
+						</animation>
+						<animation type="UnFocus" condition="Control.HasFocus(58) | Container(58).OnNext | Container(58).OnPrevious">
+							<effect center="auto" type="zoom" end="0,0,576,576" start="0,0,656,576" time="300" easing="inout" tween="sine" />
+							<effect center="auto" type="fade" end="100" start="0" time="300" easing="inout" tween="sine" />
+						</animation>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<left>-40</left>
+						<width>560</width>
+						<height>480</height>
+						<texture border="2">views/season_overlay.png</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<animation center="auto" reversible="false" condition="true" easing="inout" effect="zoom" end="0,0,560,480" start="0,0,480,480" time="300" delay="300" tween="sine">Conditional</animation>
+						<animation center="auto" reversible="false" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="zoom" end="0,0,560,480" start="0,0,480,480" time="300" delay="300" tween="sine">Focus</animation>
+						<animation center="auto" reversible="false" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="zoom" end="0,0,480,480" start="0,0,560,480" time="100" tween="sine">UnFocus</animation>
+					</control>
+					<control type="label">
+						<left>-22</left>
+						<top>447</top>
+						<width>446</width>
+						<height>42</height>
+						<font>Bold44</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<animation reversible="false" center="auto" condition="true" easing="inout" effect="slide" end="0,0" start="40,0" time="300" delay="300" tween="sine">Conditional</animation>
+						<animation reversible="false" center="auto" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="slide" end="0,0" start="40,0" time="300" delay="300" tween="sine">Focus</animation>
+						<animation reversible="false" center="auto" condition="Container(58).OnNext | Container(58).OnPrevious" easing="inout" effect="slide" end="40,0" start="0,0" time="100" tween="sine">UnFocus</animation>
+					</control>
+					<control type="image">
+						<top>48</top>
+						<left>-40</left>
+						<width>560</width>
+						<height>480</height>
+						<texture>views/OverlayNF.png</texture>
+						<animation type="Focus" condition="Control.HasFocus(58) | Container(58).OnNext | Container(58).OnPrevious">
+							<effect center="auto" type="zoom" end="0,0,560,480" start="0,0,480,480" time="0" easing="inout" tween="sine" />
+							<effect center="auto" type="fade" end="0" start="100" time="300" easing="inout" tween="sine" />
+						</animation>
+						<animation type="UnFocus" condition="Control.HasFocus(58) | Container(58).OnNext | Container(58).OnPrevious">
+							<effect center="auto" type="zoom" end="0,0,480,480" start="0,0,560,480" time="300" easing="inout" tween="sine" />
+							<effect center="auto" type="fade" end="100" start="0" time="300" easing="inout" tween="sine" />
+						</animation>
 					</control>
 				</control>
 			</control>
