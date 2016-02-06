@@ -1,3 +1,6 @@
+2.0.30:
+- Reverted Genre viewtype. That FireTV animations are simply not possible in Kodi. And I don't like eye cancer....
+
 2.0.29:
 - Removed automated Artwork Downloader after library update
 - Animated Genre viewtype

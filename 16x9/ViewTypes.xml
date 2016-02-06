@@ -98,7 +98,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + SubString(Container.FolderPath,.m3u)]</visible>
+				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + SubString(Container.FolderPath,.m3u)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -109,46 +109,6 @@
 				</include>
 				<include name="ViewSquareInfoLayout">
 					<param name="ID">50</param>
-				</include>
-			</control>
-		</control>
-	</include>
-
-	<!-- Gemre Info -->
-	<include name="Viewtype58">
-		<control type="group">
-			<visible>Control.IsVisible(58)</visible>			
-			<control id="58" type="fixedlist">
-				<left>-198</left>
-				<top>242</top>
-				<width>2200</width>
-				<height>576</height>
-				<onback condition="!StringCompare(Container(59).CurrentItem,0)">Control.Move(58,$INFO[Container(59).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(59).CurrentItem,0)">Control.Move(58,1)</onback>
-				<onup>Back</onup>
-				<ondown>1001</ondown>
-				<onleft>Back</onleft>
-				<onright>noop</onright>
-				<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
-				<include>ViewTypeBounceAnimation</include>
-				<defaultcontrol always="true">0</defaultcontrol>
-				<preloaditems>2</preloaditems>
-				<focusposition>1</focusposition>
-				<viewtype label="">list</viewtype>
-				<orientation>horizontal</orientation>
-				<defaultcontrol always="true">0</defaultcontrol>
-				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
-				<include name="ViewOpenAnimation">
-					<param name="pos1">153,10</param>
-					<param name="pos2">457,-174</param>
-					<param name="pos3">457,195</param>
-					<param name="pos4">457,-246</param>
-					<param name="pos5">457,10</param>
-					<param name="pos6">457,168</param>
-				</include>
-				<include name="ViewGenreLayout">
-					<param name="ID">58</param>
 				</include>
 			</control>
 		</control>
@@ -286,7 +246,7 @@
 				<viewtype label="31159">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)]</visible>
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -323,7 +283,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)]</visible>
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -360,7 +320,7 @@
 				<viewtype label="31160">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)]</visible>
+				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
