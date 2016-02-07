@@ -373,6 +373,7 @@
 			</control>
 			<!-- Widgets -->
 			<include>HomeWidgets</include>
+
 		</control>
 		<!-- Preload widgets -->
 		<control type="button" id="91">
