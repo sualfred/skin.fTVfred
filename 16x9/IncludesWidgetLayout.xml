@@ -56,30 +56,6 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true">views/poster_fallback.png</texture>
 				</control>
-				<control type="image">
-					<left>102</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
-				</control>
-				<control type="image">
-					<left>51</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
-				</control>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -378,40 +354,24 @@
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
+					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
-				</control>
-				<control type="image">
-					<top>13</top>
-					<left>256</left>
-					<width>30</width>
-					<height>308</height>
-					<aspectratio align="center">stretch</aspectratio>
-					<texture background="true">views/genre_mask.png</texture>
-				</control>
-				<control type="image">
-					<top>13</top>
-					<left>205</left>
-					<width>30</width>
-					<height>308</height>
-					<aspectratio align="center">stretch</aspectratio>
-					<texture background="true">views/genre_mask.png</texture>
 				</control>
 			</control>
 			<control type="image">
@@ -491,40 +451,24 @@
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
+					<aspectratio align="center">scale</aspectratio>
 					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
-				</control>
-				<control type="image">
-					<top>13</top>
-					<left>256</left>
-					<width>30</width>
-					<height>308</height>
-					<aspectratio align="center">stretch</aspectratio>
-					<texture background="true">views/genre_mask.png</texture>
-				</control>
-				<control type="image">
-					<top>13</top>
-					<left>205</left>
-					<width>30</width>
-					<height>308</height>
-					<aspectratio align="center">stretch</aspectratio>
-					<texture background="true">views/genre_mask.png</texture>
 				</control>
 			</control>
 			<control type="image">
