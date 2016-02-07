@@ -69,7 +69,7 @@
 		</include>
 		<!-- LiveTV Widget -->
 		<control type="list" id="301">
-			<visible>StringCompare(Container(99).ListItem.Property(ftvWidget),livetv)</visible>
+			<visible>StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + PVR.HasTVChannels</visible>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
 			<left>391</left>

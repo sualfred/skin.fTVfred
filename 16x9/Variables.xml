@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="PVRWidgetReload">
+		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
+		<value>-</value>
+	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreContent">
 		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>
