@@ -1,3 +1,7 @@
+2.0.31:
+- Fixed ugly Genre widgets fadeout/fadein animation
+- Added another PVR widget trigger, hopefully this fixes the empty widget now if the PVR addon takes longer to load for some reasons
+
 2.0.30:
 - Reverted Genre viewtype. That FireTV animations are simply not possible in Kodi. And I don't like eye cancer....
 
