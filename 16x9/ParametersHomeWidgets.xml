@@ -35,41 +35,62 @@
 					<width>1500</width>
 					<height>185</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="views/highlight_mask.png">fanart.jpg</texture>
+					<texture background="true">fanart.jpg</texture>
+				</control>
+				<control type="image">
+					<width>1500</width>
+					<height>185</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true">dialogs/DialogBackground.png</texture>
+					<colordiffuse>aaffffff</colordiffuse>
 				</control>
 				<control type="image">
 					<width>58</width>
 					<height>58</height>
 					<texture>views/OverlayHighlight.png</texture>
 				</control>
-				<control type="label">
-					<left>1013</left>
-					<top>60</top>
-					<width>400</width>
-					<height>28</height>
-					<font>Med28</font>
-					<scroll>false</scroll>
-					<textcolor>ftvgold</textcolor>
-					<shadowcolor>88000000</shadowcolor>
+				<control type="grouplist">
+					<top>20</top>
 					<align>center</align>
-					<label>Now available on fTV</label>
+					<aligny>center</aligny>
+					<width>1200</width>
+					<height>145</height>
+					<orientation>horizontal</orientation>
+					<itemgap>50</itemgap>
+					<control type="image">
+						<width>300</width>
+						<height>145</height>
+						<aspectratio>keep</aspectratio>
+						<texture>logo.png</texture>
+					</control>
+					<control type="grouplist">
+						<height>145</height>
+						<width>auto</width>
+						<aligny>center</aligny>
+						<orientation>vertical</orientation>						
+						<control type="label">
+							<width>400</width>
+							<height>28</height>
+							<font>Med28</font>
+							<scroll>false</scroll>
+							<textcolor>ftvgold</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>Now available on fTV</label>
+						</control>
+						<control type="label">
+							<width>400</width>
+							<height>28</height>
+							<font>Bold32</font>
+							<scroll>false</scroll>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>Ted 2</label>
+						</control>
+					</control>
 				</control>
-				<control type="label">
-					<left>1013</left>
-					<top>78</top>
-					<width>400</width>
-					<height>56</height>
-					<font>Bold32</font>
-					<scroll>false</scroll>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>88000000</shadowcolor>
-					<align>center</align>
-					<aligny>top</aligny>
-					<label>Ted 2</label>
-				</control>
-			</control>-->
-				<!--<control type="group">
-			<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,250" time="220" tween="sine">Conditional</animation>-->
+			</control>
+			<control type="group">
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,250" time="220" tween="sine">Conditional</animation>-->
 				<control id="$PARAM[ID]0" type="fixedlist">
 					<left>419</left>
 					<top>-253</top>
