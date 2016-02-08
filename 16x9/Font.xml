@@ -184,6 +184,11 @@
 			<size>40</size>
 		</font>
 		<font>
+			<name>Med36</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
 			<name>Med32</name>
 			<filename>HelveticaNeue_Med.ttf</filename>
 			<size>32</size>

@@ -371,6 +371,11 @@
 				<animation condition="StringCompare(Container(99).NumItems,2)" effect="slide" end="0,297" time="0">Conditional</animation>
 				<animation condition="StringCompare(Container(99).NumItems,1)" effect="slide" end="0,330" time="0">Conditional</animation>
 			</control>
+			<!-- Recent movies 
+			<control id="80" type="list">
+				<include>HiddenHomeList</include>
+				<content limit="1">special://skin/extras/ads/RandomMovies.xsp</content>
+			</control>-->
 			<!-- Widgets -->
 			<include>HomeWidgets</include>
 

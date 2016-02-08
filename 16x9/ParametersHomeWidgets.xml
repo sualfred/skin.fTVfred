@@ -8,14 +8,17 @@
 		<definition>
 			<include name="Param$PARAM[content]Lists">
 				<param name="ID">$PARAM[ID]</param>
-			</include>			
+			</include>
 			<!--<control type="group">
-				<left>452</left>
-				<top>130</top>
 				<include>HomeWidgetsAnimation</include>
 				<include>WindowHomeFadeAnimation</include>
-				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + [Control.HasFocus($PARAM[ID]0) | !Container($PARAM[ID]0).Row(1)]" easing="inout" effect="slide" start="0,0" end="0,-325" time="220" tween="sine">Conditional</animation>
 				<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
+				<left>452</left>
+				<top>130</top>
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + [Control.HasFocus($PARAM[ID]0) | !Container($PARAM[ID]0).Row(1)]" easing="inout" effect="slide" end="0,-246" time="220" tween="sine">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)" easing="inout" effect="slide" end="0,-144" time="220" tween="sine">Conditional</animation>
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)" easing="inout" effect="slide" end="0,-144" time="220" tween="sine">Conditional</animation>
+				<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,-180" time="220" tween="sine">Conditional</animation>
 				<control type="image">
 					<top>0</top>
 					<left>-48</left>
@@ -25,24 +28,16 @@
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<width>1000</width>
+					<width>1500</width>
 					<height>185</height>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture background="true" diffuse="views/highlight_banner_mask.png">banner.jpg</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true">$INFO[Container(80).ListItem.Art(fanart)]</texture>
 				</control>
 				<control type="image">
 					<width>1500</width>
 					<height>185</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true">fanart.jpg</texture>
-				</control>
-				<control type="image">
-					<width>1500</width>
-					<height>185</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true">dialogs/DialogBackground.png</texture>
-					<colordiffuse>aaffffff</colordiffuse>
+					<texture background="true">views/genre_overlay.png</texture>
 				</control>
 				<control type="image">
 					<width>58</width>
@@ -50,48 +45,48 @@
 					<texture>views/OverlayHighlight.png</texture>
 				</control>
 				<control type="grouplist">
-					<top>20</top>
 					<align>center</align>
 					<aligny>center</aligny>
-					<width>1200</width>
-					<height>145</height>
+					<width>1468</width>
+					<height>185</height>
 					<orientation>horizontal</orientation>
 					<itemgap>50</itemgap>
 					<control type="image">
-						<width>300</width>
-						<height>145</height>
+						<top>5</top>
+						<width>500</width>
+						<height>175</height>
 						<aspectratio>keep</aspectratio>
-						<texture>logo.png</texture>
-					</control>
-					<control type="grouplist">
-						<height>145</height>
-						<width>auto</width>
+						<texture>$INFO[Container(80).ListItem.Art(clearlogo)]</texture>
+					</control>					
+					<control type="textbox">
+						<width>500</width>
+						<height>185</height>
+						<font>Med36</font>
+						<scroll>false</scroll>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<align>center</align>
 						<aligny>center</aligny>
-						<orientation>vertical</orientation>						
-						<control type="label">
-							<width>400</width>
-							<height>28</height>
-							<font>Med28</font>
-							<scroll>false</scroll>
-							<textcolor>ftvgold</textcolor>
-							<shadowcolor>88000000</shadowcolor>
-							<label>Now available on fTV</label>
-						</control>
-						<control type="label">
-							<width>400</width>
-							<height>28</height>
-							<font>Bold32</font>
-							<scroll>false</scroll>
-							<textcolor>ffffffff</textcolor>
-							<shadowcolor>88000000</shadowcolor>
-							<label>Ted 2</label>
-						</control>
+						<label>[LIGHT]New and now included in[/LIGHT] Kodi$INFO[Container(80).ListItem.Label,[CR][B],[/B]]</label>
 					</control>
+				</control>				
+				<control type="image">
+					<width>1500</width>
+					<height>185</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture>views/OverlayNF.png</texture>
+					<visible>Control.HasFocus($PARAM[ID]0)</visible>
+					<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,250" time="220" tween="sine">Conditional</animation>-->
+				<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,250" time="220" tween="sine">Conditional</animation>
+				<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,250" time="220" tween="sine">Conditional</animation>
+				<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,180" time="220" tween="sine">Conditional</animation>-->
 				<control id="$PARAM[ID]0" type="fixedlist">
+					<include>HomeWidgetsAnimation</include>
+					<include>WindowHomeFadeAnimation</include>
+					<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
 					<left>419</left>
 					<top>-253</top>
 					<width>2100</width>
@@ -109,9 +104,6 @@
 					<orientation>vertical</orientation>
 					<defaultcontrol>1</defaultcontrol>
 					<scrolltime easing="inout" tween="sine">300</scrolltime>
-					<include>HomeWidgetsAnimation</include>
-					<include>WindowHomeFadeAnimation</include>
-					<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
 					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,1)" effect="slide" end="-304,-114">Conditional</animation>
 					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2)" effect="slide" end="0,-299">Conditional</animation>
 					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" end="0,-114" time="220" tween="sine">Conditional</animation>
