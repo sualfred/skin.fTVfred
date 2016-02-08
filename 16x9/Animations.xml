@@ -189,10 +189,10 @@
 	</include>
 	<include name="HomeWidgetsFadeAnimation">
 		<animation condition="Container(99).OnNext" reversible="false" type="Visible">
-			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
+			<effect delay="280" easing="in" end="100" start="0" time="100" tween="sine" type="fade" />
 		</animation>
 		<animation condition="Container(99).OnPrevious" reversible="false" type="Visible">
-			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
+			<effect delay="280" easing="in" end="100" start="0" time="100" tween="sine" type="fade" />
 		</animation>
 		<animation reversible="false" type="Hidden">
 			<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />

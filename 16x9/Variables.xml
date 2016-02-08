@@ -4,6 +4,15 @@
 		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
 		<value>-</value>
 	</variable>
+	<!-- Banner -->
+	<variable name="1000-WidgetBanner">
+		<value condition="StringCompare(Skin.String(1000-WidgetAd),NewMovie)">special://skin/extras/ads/NewMovie.xsp</value>
+		<value condition="StringCompare(Skin.String(1000-WidgetAd),NewMovie,RecommendedMovie)">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=1&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+	</variable>
+	<variable name="2000-WidgetBanner">
+		<value condition="StringCompare(Skin.String(2000-WidgetAd),NewMovie)">special://skin/extras/ads/NewMovie.xsp</value>
+		<value condition="StringCompare(Skin.String(2000-WidgetAd),NewMovie,RecommendedMovie)">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=1&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreContent">
 		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>
@@ -845,6 +854,117 @@
 		<value condition="SubString(Skin.String(12000-WidgetList-8),addons://sources/)">label</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-8),musicdb://artists/)">artist</value>
 		<value condition="SubString(Skin.String(12000-WidgetList-8),plugin://plugin.video.youtube/channel)">name</value>
+	</variable>
+	<variable name="WidgetBannerLabel">
+		<value condition="StringCompare(Window(home).Property(SubMenu),1000) + !IsEmpty(Skin.String(1000-WidgetAd-Label))">$INFO[Skin.String(1000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),2000) + !IsEmpty(Skin.String(2000-WidgetAd-Label))">$INFO[Skin.String(2000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),3000) + !IsEmpty(Skin.String(3000-WidgetAd-Label))">$INFO[Skin.String(3000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),4000) + !IsEmpty(Skin.String(4000-WidgetAd-Label))">$INFO[Skin.String(4000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),5000) + !IsEmpty(Skin.String(5000-WidgetAd-Label))">$INFO[Skin.String(5000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),6000) + !IsEmpty(Skin.String(6000-WidgetAd-Label))">$INFO[Skin.String(6000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),7000) + !IsEmpty(Skin.String(7000-WidgetAd-Label))">$INFO[Skin.String(7000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),8000) + !IsEmpty(Skin.String(8000-WidgetAd-Label))">$INFO[Skin.String(8000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),9000) + !IsEmpty(Skin.String(9000-WidgetAd-Label))">$INFO[Skin.String(9000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),10000) + !IsEmpty(Skin.String(10000-WidgetAd-Label))">$INFO[Skin.String(10000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),11000) + !IsEmpty(Skin.String(11000-WidgetAd-Label))">$INFO[Skin.String(11000-WidgetAd-Label)]</value>
+		<value condition="StringCompare(Window(home).Property(SubMenu),12000) + !IsEmpty(Skin.String(11000-WidgetAd-Label))">$INFO[Skin.String(12000-WidgetAd-Label)]</value>
+		<value>$LOCALIZE[16018]</value>
+	</variable>
+	<variable name="1000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="2000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="3000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="4000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="5000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="6000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="7000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="8000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="9000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="10000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="11000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
+	</variable>
+	<variable name="12000-WidgetAd-Text">
+		<value condition="StringCompare(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31244])">$LOCALIZE[31250]</value>
+		<value condition="StringCompare(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31245])">$LOCALIZE[31248]</value>
+		<value condition="StringCompare(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
+		<value condition="StringCompare(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 	</variable>
 	<variable name="WidgetLabel-1">
 		<value condition="StringCompare(Window(home).Property(SubMenu),1000)">$INFO[Skin.String(1000-WidgetLabel-1)]</value>
