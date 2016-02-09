@@ -36,9 +36,8 @@
 					<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Label) + IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)</visible>
 					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + [Control.HasFocus($PARAM[ID]0) | !Container($PARAM[ID]0).Row(1)]" easing="inout" effect="slide" end="0,-247" time="220" tween="sine">Conditional</animation>
 					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + [Control.HasFocus($PARAM[ID]0) | !Container($PARAM[ID]0).Row(1)]" easing="inout" effect="fade" start="100" end="0" time="220" tween="sine">Conditional</animation>
-					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)" easing="inout" effect="slide" end="0,-144" time="220" tween="sine">Conditional</animation>
-					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)" easing="inout" effect="slide" end="0,-144" time="220" tween="sine">Conditional</animation>
 					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,-180" time="220" tween="sine">Conditional</animation>
+					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="fade" start="100" end="0" time="220" tween="sine">Conditional</animation>
 					<control type="group">
 						<width>2100</width>
 						<height>1500</height>

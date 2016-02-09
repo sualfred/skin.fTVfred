@@ -1024,6 +1024,56 @@ msgctxt "#31241"
 msgid "View actor info"
 msgstr "Zeige Darsteller Info"
 
+#: /16x9/Custom_Home_Widgets.xml:720
+msgctxt "#31242"
+msgid "Newest Movie"
+msgstr "Neuester Film"
+
+#: /16x9/Custom_Home_Widgets.xml:722
+msgctxt "#31243"
+msgid "Recommended Movie"
+msgstr "Empfohlener Film"
+
+#: /16x9/Custom_Home_Widgets.xml:724
+msgctxt "#31244"
+msgid "Random Movie"
+msgstr "Zufalls-Film"
+
+#: /16x9/Custom_Home_Widgets.xml:727
+msgctxt "#31245"
+msgid "Newest Show"
+msgstr "Neueste Serie"
+
+#: /16x9/Custom_Home_Widgets.xml:730
+msgctxt "#31246"
+msgid "Recommended Show"
+msgstr "Empfohlene Serie"
+
+#: /16x9/Custom_Home_Widgets.xml:731
+msgctxt "#31247"
+msgid "Random Show"
+msgstr "Zufalls-Serie"
+
+#: /16x9/Variables.xml:874
+msgctxt "#31248"
+msgid "[LIGHT]New and now included in[/LIGHT] Kodi[CR]"
+msgstr "[LIGHT]Neu und jetzt verfügbar in[/LIGHT] Kodi[CR]"
+
+#: /16x9/Variables.xml:875
+msgctxt "#31249"
+msgid "[LIGHT]Suggested you by[/LIGHT] Kodi[CR]"
+msgstr "[LIGHT]Empfohlen von[/LIGHT] Kodi[CR]"
+
+#: /16x9/Variables.xml:876
+msgctxt "#31250"
+msgid "Nothing to watch?[CR][LIGHT]Try [/LIGHT]"
+msgstr "Nichts anzusehen?[CR][LIGHT]Probiers mit [/LIGHT]"
+
+#: /16x9/ParametersHomeWidgets.xml:77
+msgctxt "#31251"
+msgid "[LIGHT]Included in[/LIGHT] Kodi[CR]"
+msgstr "[LIGHT]Enthalten in[/LIGHT] Kodi[CR]"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"
