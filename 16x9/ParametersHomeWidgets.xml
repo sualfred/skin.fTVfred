@@ -125,7 +125,7 @@
 							<control type="image">
 								<width>535</width>
 								<height>165</height>
-								<aspectratio aligny="center" align="center">stretch</aspectratio>
+								<aspectratio aligny="center" align="center">keep</aspectratio>
 								<texture>$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</texture>						
 								<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(clearlogo))</visible>
 							</control>
