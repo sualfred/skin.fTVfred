@@ -187,6 +187,16 @@
 			<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
 		</animation>
 	</include>
+	<include name="HomeWidgetBounceAnimation">
+		<animation condition="Window.IsVisible(1101)" reversible="false" type="Conditional">
+			<effect easing="out" end="0,30" start="0,0" time="60" tween="sine" type="slide" />
+			<effect delay="80" easing="out" end="0,-30" start="0,0" time="120" tween="sine" type="slide" />
+		</animation>
+		<animation condition="Window.IsVisible(1102)" reversible="false" type="Conditional">
+			<effect easing="out" end="0,-30" start="0,0" time="60" tween="sine" type="slide" />
+			<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
+		</animation>
+	</include>
 	<!-- Home menu slide animations -->
 	<include name="HomeMenuSlideAnimation">
 		<animation condition="IntegerGreaterThan(Container(99).NumItems,12)" effect="slide" end="0,50" time="0">Conditional</animation>

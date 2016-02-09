@@ -14,7 +14,8 @@
 				<content limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
 			</control>
 			<control type="group">				
-				<include>WindowHomeFadeAnimation</include>			
+				<include>WindowHomeFadeAnimation</include>
+				<include>HomeWidgetBounceAnimation</include>
 				<animation condition="Control.IsVisible(98) + StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])" reversible="false" type="Conditional">
 					<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 					<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
