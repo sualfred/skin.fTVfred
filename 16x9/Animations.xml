@@ -187,38 +187,6 @@
 			<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
 		</animation>
 	</include>
-	<include name="HomeWidgetsFadeAnimation">
-		<animation condition="Container(99).OnNext" reversible="false" type="Visible">
-			<effect delay="280" easing="in" end="100" start="0" time="100" tween="sine" type="fade" />
-		</animation>
-		<animation condition="Container(99).OnPrevious" reversible="false" type="Visible">
-			<effect delay="280" easing="in" end="100" start="0" time="100" tween="sine" type="fade" />
-		</animation>
-		<animation reversible="false" type="Hidden">
-			<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
-		</animation>
-	</include>
-	<include name="HomeWidgetsSlideAnimation">
-		<animation condition="Container(99).OnNext" reversible="false" type="Visible">
-			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
-			<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
-		</animation>
-		<animation condition="Container(99).OnPrevious" reversible="false" type="Visible">
-			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
-			<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
-		</animation>
-		<animation reversible="false" type="Hidden">
-			<effect center="960,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
-		</animation>
-		<animation condition="Window.IsVisible(1101)" reversible="false" type="Conditional">
-			<effect easing="out" end="0,30" start="0,0" time="60" tween="sine" type="slide" />
-			<effect delay="80" easing="out" end="0,-30" start="0,0" time="120" tween="sine" type="slide" />
-		</animation>
-		<animation condition="Window.IsVisible(1102)" reversible="false" type="Conditional">
-			<effect easing="out" end="0,-30" start="0,0" time="60" tween="sine" type="slide" />
-			<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
-		</animation>
-	</include>
 	<!-- Home menu slide animations -->
 	<include name="HomeMenuSlideAnimation">
 		<animation condition="IntegerGreaterThan(Container(99).NumItems,12)" effect="slide" end="0,50" time="0">Conditional</animation>

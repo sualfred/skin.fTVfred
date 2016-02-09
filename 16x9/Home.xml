@@ -16,6 +16,15 @@
 				<font>-</font>
 				<label>$INFO[Weather.Conditions]</label>
 			</control>
+			<!-- Main menu scroll trigger for widget animations -->
+			<control type="group" id="97">
+				<animation reversible="false" effect="slide" start="0,0" end="-164,0" time="460">Hidden</animation>
+				<visible>Container(99).OnPrevious + !StringCompare(Container(99).ListItem(1).Property(ftvWidget),Container(99).ListItem.Property(ftvWidget))</visible>
+			</control>
+			<control type="group" id="98">
+				<animation reversible="false" effect="slide" start="0,0" end="-164,0" time="460">Hidden</animation>
+				<visible>Container(99).OnNext + !StringCompare(Container(99).ListItem(-1).Property(ftvWidget),Container(99).ListItem.Property(ftvWidget))</visible>
+			</control>
 			<!-- Main list -->
 			<control id="99" type="list">
 				<left>84</left>
@@ -206,6 +215,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 						<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
+						<onfocus>ClearProperty(Fade,Home)</onfocus>
+						<onfocus>SetProperty(Fade,1,home)</onfocus>
 						<onfocus condition="!StringCompare(Container(99).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(MainFocus)</onfocus>
 						<onfocus condition="!StringCompare(Container(99).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(FocusRow)</onfocus>
 						<onfocus condition="!Control.IsVisible(1000) + StringCompare(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onfocus>
