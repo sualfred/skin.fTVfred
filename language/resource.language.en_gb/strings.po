@@ -1069,6 +1069,11 @@ msgctxt "#31251"
 msgid "[LIGHT]Included in[/LIGHT] Kodi[CR]"
 msgstr ""
 
+#: /16x9/ParametersHomeWidgets.xml:113
+msgctxt "#31252"
+msgid "Available in"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

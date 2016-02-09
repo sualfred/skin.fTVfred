@@ -1,3 +1,7 @@
+2.0.32:
+- Finalized Banner feature and animations
+- Fixed useless "add widget" button for the shutdown menu
+
 2.0.31:
 - Fixed ugly Genre widgets fadeout/fadein animation
 - Added another PVR widget trigger, hopefully this fixes the empty widget now if the PVR addon takes longer to load for some reasons

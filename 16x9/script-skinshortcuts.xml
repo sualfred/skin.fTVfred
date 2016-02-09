@@ -256,6 +256,7 @@
 					<label>31509</label>
 					<label2>$VAR[ftvWidgetLabel]</label2>
 					<enable>!StringCompare(Container(211).ListItem.Property(defaultID),settings)</enable>
+					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<!-- Manage widgets -->
 				<control id="998" type="button">
