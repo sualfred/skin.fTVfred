@@ -15,8 +15,9 @@
 				<onback>99</onback>
 				<onright>99</onright>
 				<onleft>99</onleft>
-				<onfocus>Select</onfocus>
-				<onfocus>99</onfocus>
+				<ondown>$PARAM[ID]0</ondown>
+				<onfocus condition="!IsEmpty(Window(home).Property(StartedByBanner))">Select</onfocus>
+				<onfocus condition="IsEmpty(Window(home).Property(StartedByBanner))">down</onfocus>
 				<content limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
 			</control>
 			<control type="group">
@@ -74,7 +75,7 @@
 								<width>1500</width>
 								<height>195</height>
 								<texture>views/OverlayNF.png</texture>
-								<visible>!Control.HasFocus(99)</visible>
+								<visible>!Control.HasFocus(99) + !Control.HasFocus($PARAM[ID]9)</visible>
 								<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
 							</control>
 						</control>
@@ -108,6 +109,8 @@
 					<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
 						<control type="button">
 							<include>HiddenControl</include>
+							<onfocus>ClearProperty(MainMenuFocus,home)</onfocus>
+							<onfocus>ClearProperty(StartedByBanner,home)</onfocus>
 							<onfocus>SetProperty(MainFocus,$INFO[Container(99).ListItem.Property(defaultID)])</onfocus>
 							<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
 							<onfocus condition="IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
@@ -122,8 +125,9 @@
 						</control>
 						<control type="group">
 							<visible>!IsEmpty(ListItem.Property(bannerArt))</visible>
-							<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-							<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+							<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="0" tween="sine" condition="Control.HasFocus($PARAM[ID]9)">Conditional</animation>
+							<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine" condition="!Control.HasFocus($PARAM[ID]9)">Focus</animation>
+							<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine" condition="!Control.HasFocus($PARAM[ID]9)">UnFocus</animation>
 							<top>126</top>
 							<left>33</left>
 							<include name="ParamHomeBannerLayout">
@@ -148,7 +152,7 @@
 								<width>1500</width>
 								<height>195</height>
 								<texture>views/OverlayNF.png</texture>
-								<visible>!Control.HasFocus(99)</visible>
+								<visible>!Control.HasFocus(99) + !Control.HasFocus($PARAM[ID]9)</visible>
 								<animation effect="fade" end="0" start="100" time="0">Focus</animation>
 								<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
 							</control>
@@ -228,6 +232,7 @@
 							<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 							<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 							<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
+							<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 							<onclick>SetFocus($PARAM[ID]9)</onclick>
 						</item>
@@ -237,9 +242,9 @@
 							<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath)</visible>
 							<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 							<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
-							<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
+							<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>							
+							<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
-							<onclick>SetFocus(99)</onclick>
 							<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>
 						</item>
 						<include name="$PARAM[content]">

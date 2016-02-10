@@ -2,6 +2,7 @@
 <window>
 	<!-- fullscreenvideo -->
 	<defaultcontrol>-</defaultcontrol>
+	<onload>ClearProperty(StartedByBanner,home)</onload>
 	<controls>
 		<control type="image" id="99">
 			<visible>Window.IsVisible(fullscreenvideo) + !IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
