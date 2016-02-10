@@ -11,174 +11,75 @@
 			</include>
 			<control id="$PARAM[ID]9" type="list">
 				<include>HiddenHomeList</include>
+				<onup>99</onup>
+				<onback>99</onback>
+				<onright>99</onright>
+				<onleft>99</onleft>
+				<onfocus>Select</onfocus>
+				<onfocus>99</onfocus>
 				<content limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
 			</control>
-			<control type="group">				
-				<include>WindowHomeFadeAnimation</include>
-				<include>HomeWidgetBounceAnimation</include>
-				<animation condition="Control.IsVisible(98) + StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])" reversible="false" type="Conditional">
-					<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
-					<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
-					<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
-				</animation>
-				<animation condition="Control.IsVisible(97) + StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])" reversible="false" type="Conditional">
-					<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
-					<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
-					<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
-				</animation>
-				<animation condition="!StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])" reversible="false" type="Conditional">
-					<effect center="960,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
-					<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
-				</animation>
-				<control type="group">
-					<left>452</left>
-					<top>130</top>
-					<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Label) + IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)</visible>
-					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + [Control.HasFocus($PARAM[ID]0) | !Container($PARAM[ID]0).Row(1)]" easing="inout" effect="slide" end="0,-247" time="220" tween="sine">Conditional</animation>
-					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + [Control.HasFocus($PARAM[ID]0) | !Container($PARAM[ID]0).Row(1)]" easing="inout" effect="fade" start="100" end="0" time="220" tween="sine">Conditional</animation>
-					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,-180" time="220" tween="sine">Conditional</animation>
-					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="fade" start="100" end="0" time="220" tween="sine">Conditional</animation>
-					<control type="group">
-						<width>2100</width>
-						<height>1500</height>
-						<control type="image">
-							<top>0</top>
-							<left>-48</left>
-							<centertop>288</centertop>
-							<width>1616</width>
-							<height>233</height>
-							<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						</control>
-						<control type="image">
-							<width>1500</width>
-							<height>185</height>
-							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" diffuse="views/highlight_banner_mask.png">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</texture>
-						</control>
-						<control type="image">
-							<width>58</width>
-							<height>58</height>
-							<texture>views/OverlayHighlight.png</texture>
-						</control>
-						<control type="image">
-							<top>48</top>
-							<width>90</width>
-							<height>90</height>
-							<texture>views/OverlayHD.png</texture>
-							<visible>IntegerGreaterThan(ListItem.VideoResolution,719)</visible>
-						</control>
-						<control type="grouplist">
-							<top>10</top>
-							<left>40</left>
-							<aligny>center</aligny>
-							<width>1500</width>
-							<height>165</height>
-							<orientation>horizontal</orientation>
-							<itemgap>45</itemgap>
-							<control type="grouplist">
-								<width>250</width>
-								<heigth>165</heigth>
-								<itemgap>0</itemgap>
-								<orientation>vertical</orientation>
-								<control type="label">
-									<height>20</height>
-									<aligny>center</aligny>
-									<label />
-								</control>
-								<control type="textbox">
-									<width>250</width>
-									<height>32</height>
-									<font>Med24</font>
-									<scroll>false</scroll>
-									<textcolor>ffffffff</textcolor>
-									<shadowcolor>88000000</shadowcolor>
-									<align>left</align>
-									<aligny>top</aligny>
-									<label>$LOCALIZE[31251]</label>
-								</control>
-								<control type="grouplist">
-									<width>250</width>
-									<heigth>30</heigth>
-									<itemgap>10</itemgap>
-									<orientation>horizontal</orientation>
-									<visible>IntegerGreaterThan(Container($PARAM[ID]9).ListItem.VideoResolution,719)</visible>
-									<control type="label">
-										<width>auto</width>
-										<height>30</height>
-										<font>Med18</font>
-										<scroll>false</scroll>
-										<textcolor>bbffffff</textcolor>
-										<shadowcolor>88000000</shadowcolor>
-										<align>left</align>
-										<aligny>center</aligny>
-										<label>$LOCALIZE[31252]</label>
-									</control>
-									<control type="image">
-										<width>35</width>
-										<height>32</height>
-										<aspectratio>keep</aspectratio>
-										<colordiffuse>bbffffff</colordiffuse>
-										<texture>views/HD_icon.png</texture>
-									</control>
-								</control>
-							</control>
-							<control type="image">
-								<width>535</width>
-								<height>165</height>
-								<aspectratio aligny="center" align="center">keep</aspectratio>
-								<texture>$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</texture>						
-								<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(clearlogo))</visible>
-							</control>
+			<control type="group">
+				<control id="$PARAM[ID]0" type="fixedlist">
+					<include>HomeWidgetsAnimation</include>
+					<include>HomeWidgetBounceAnimation</include>
+					<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
+					<left>419</left>
+					<top>-253</top>
+					<width>2100</width>
+					<height>1600</height>
+					<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+					<onup>noop</onup>
+					<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+					<ondown>noop</ondown>
+					<onleft>99</onleft>
+					<onright>Select</onright>
+					<onback>99</onback>
+					<movement>1</movement>
+					<focusposition>2</focusposition>
+					<viewtype label="">list</viewtype>
+					<orientation>vertical</orientation>
+					<defaultcontrol>1</defaultcontrol>
+					<scrolltime easing="inout" tween="sine">300</scrolltime>
+					<animation condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + StringCompare(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID])" effect="slide" end="0,-56">Conditional</animation>
+					<animation condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID])" effect="slide" end="0,-113">Conditional</animation>
+					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,1)" effect="slide" end="-304,-114">Conditional</animation>
+					<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2)" effect="slide" end="0,-299">Conditional</animation>
+					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Container($PARAM[ID]0).Row(1) + IsEmpty(Container($PARAM[ID]9).ListItem.Label)" easing="inout" effect="slide" end="0,-114" time="220" tween="sine">Conditional</animation>
+					<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
+					<itemlayout height="370" width="2000">
+						<control type="group">
+							<visible>!IsEmpty(ListItem.Property(bannerArt))</visible>
+							<top>126</top>
+							<left>33</left>
+							<include name="ParamHomeBannerLayout">
+								<param name="ID">$PARAM[ID]</param>
+							</include>
 							<control type="textbox">
-								<width>535</width>
-								<height>165</height>
-								<font>Med28</font>
+								<top>30</top>
+								<left>50</left>
+								<width>605</width>
+								<height>135</height>
+								<font>Med36</font>
 								<scroll>false</scroll>
 								<textcolor>ffffffff</textcolor>
 								<shadowcolor>88000000</shadowcolor>
-								<align>center</align>
+								<align>left</align>
 								<aligny>center</aligny>
-								<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[Container($PARAM[ID]9).ListItem.Label,[B],[/B]]</label>
+								<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),,[CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
+								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 							</control>
-						</control>				
-						<control type="image">
-							<width>1500</width>
-							<height>185</height>
-							<texture>views/OverlayNF.png</texture>
-							<visible>Control.HasFocus($PARAM[ID]0)</visible>
-							<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+							<control type="image">
+								<width>1500</width>
+								<height>195</height>
+								<texture>views/OverlayNF.png</texture>
+								<visible>!Control.HasFocus(99)</visible>
+								<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
+							</control>
 						</control>
-					</control>
-				</control>
-				<control type="group">
-					<animation condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Label) + IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,247" time="220" tween="sine">Conditional</animation>
-					<animation condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Label) + StringCompare(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0) + Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" start="0,0" end="0,247" time="220" tween="sine">Conditional</animation>
-					<animation condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Label) + StringCompare(Container($PARAM[ID]0).NumItems,2) + !Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,180" time="220" tween="sine">Conditional</animation>-->
-					<control id="$PARAM[ID]0" type="fixedlist">
-						<animation reversible="false" effect="fade" start="100" end="100" time="180" tween="sine" easing="inout">Hidden</animation>
-						<visible>!IsEmpty(Window(home).Property(preload)) | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
-						<left>419</left>
-						<top>-253</top>
-						<width>2100</width>
-						<height>1500</height>
-						<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
-						<onup>noop</onup>
-						<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
-						<ondown>noop</ondown>
-						<onleft>99</onleft>
-						<onright>Select</onright>
-						<onback>99</onback>
-						<movement>1</movement>
-						<focusposition>2</focusposition>
-						<viewtype label="">list</viewtype>
-						<orientation>vertical</orientation>
-						<defaultcontrol>1</defaultcontrol>
-						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,1)" effect="slide" end="-304,-114">Conditional</animation>
-						<animation condition="StringCompare(Container($PARAM[ID]0).NumItems,2)" effect="slide" end="0,-299">Conditional</animation>
-						<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + !Container($PARAM[ID]0).Row(1)" easing="inout" effect="slide" end="0,-114" time="220" tween="sine">Conditional</animation>
-						<animation condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
-						<itemlayout height="370" width="2000">
+						<control type="group">
+							<visible>IsEmpty(ListItem.Property(bannerArt))</visible>
 							<control type="group">
 								<left>33</left>
 								<control type="image">
@@ -202,92 +103,149 @@
 							<include>HomeWideEpisodeItemlayout</include>
 							<include>HomeSquareItemlayout</include>
 							<include>HomeSquareInfoItemlayout</include>
-						</itemlayout>
-						<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
-							<control type="button">
-								<include>HiddenControl</include>
-								<onfocus>SetProperty(MainFocus,$INFO[Container(99).ListItem.Property(defaultID)])</onfocus>
-								<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
-								<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
-								<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
-								<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
-								<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
-								<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onfocus>
-								<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onfocus>
-								<onfocus condition="!StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>
-							</control>
-							<control type="group">
-								<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
-								<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
-								<control type="group">
-									<left>33</left>
-									<control type="image">
-										<width>227</width>
-										<height>334</height>
-										<texture border="0,14,11,14">home/home_button_nf.png</texture>
-									</control>
-									<control type="textbox">
-										<top>2</top>
-										<width>254</width>
-										<height>200</height>
-										<font>Bold34</font>
-										<align>left</align>
-										<textcolor>ffdadada</textcolor>
-										<label>$INFO[ListItem.Label]</label>
-										<animation effect="fade" end="0" start="100" time="0">Focus</animation>
-										<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-										<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-									</control>
-									<control type="image">
-										<width>227</width>
-										<height>334</height>
-										<texture border="0,14,11,14">home/home_button_fo.png</texture>
-										<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
-										<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-										<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-										<animation effect="fade" end="100" start="0" time="0">Focus</animation>
-										<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
-									</control>
-									<control type="textbox">
-										<top>2</top>
-										<width>254</width>
-										<height>200</height>
-										<font>Bold34</font>
-										<align>left</align>
-										<textcolor>ff453a18</textcolor>
-										<label>$INFO[ListItem.Label]</label>
-										<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
-										<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-										<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
-										<animation effect="fade" end="100" start="0" time="0">Focus</animation>
-										<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
-										<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-										<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-									</control>
-								</control>
-								<include>HomePosterFocusedlayout</include>
-								<include>HomeWideFocusedlayout</include>
-								<include>HomeWideEpisodeFocusedlayout</include>
-								<include>HomeSquareFocusedlayout</include>
-								<include>HomeSquareInfoFocusedlayout</include>
-							</control>
-						</focusedlayout>
-						<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
-							<control type="group">
-								<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
-								<include>HomePosterFocusedlayout</include>
-								<include>HomeWideFocusedlayout</include>
-								<include>HomeWideEpisodeFocusedlayout</include>
-								<include>HomeSquareFocusedlayout</include>
-								<include>HomeSquareInfoFocusedlayout</include>
-							</control>
-						</focusedlayout>
-						<content>
-							<include name="$PARAM[content]">
+						</control>
+					</itemlayout>
+					<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
+						<control type="button">
+							<include>HiddenControl</include>
+							<onfocus>SetProperty(MainFocus,$INFO[Container(99).ListItem.Property(defaultID)])</onfocus>
+							<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
+							<onfocus condition="IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
+							<onfocus condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2b)</onfocus>
+							<onfocus condition="IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,1_3)</onfocus>
+							<onfocus condition="!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,2_3)</onfocus>
+							<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
+							<onfocus condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
+							<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onfocus>
+							<onfocus condition="StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onfocus>
+							<onfocus condition="!StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !StringCompare(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>
+						</control>
+						<control type="group">
+							<visible>!IsEmpty(ListItem.Property(bannerArt))</visible>
+							<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+							<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+							<top>126</top>
+							<left>33</left>
+							<include name="ParamHomeBannerLayout">
 								<param name="ID">$PARAM[ID]</param>
 							</include>
-						</content>
-					</control>
+							<control type="textbox">
+								<top>30</top>
+								<left>50</left>
+								<width>605</width>
+								<height>135</height>
+								<font>Med36</font>
+								<scroll>false</scroll>
+								<textcolor>ffffffff</textcolor>
+								<shadowcolor>88000000</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),,[CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
+								<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+								<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							</control>
+							<control type="image">
+								<width>1500</width>
+								<height>195</height>
+								<texture>views/OverlayNF.png</texture>
+								<visible>!Control.HasFocus(99)</visible>
+								<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+								<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">UnFocus</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>IsEmpty(ListItem.Property(bannerArt))</visible>
+							<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
+							<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
+							<control type="group">
+								<left>33</left>
+								<control type="image">
+									<width>227</width>
+									<height>334</height>
+									<texture border="0,14,11,14">home/home_button_nf.png</texture>
+								</control>
+								<control type="textbox">
+									<top>2</top>
+									<width>254</width>
+									<height>200</height>
+									<font>Bold34</font>
+									<align>left</align>
+									<textcolor>ffdadada</textcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<animation effect="fade" end="0" start="100" time="0">Focus</animation>
+									<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+									<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+								</control>
+								<control type="image">
+									<width>227</width>
+									<height>334</height>
+									<texture border="0,14,11,14">home/home_button_fo.png</texture>
+									<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+									<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+									<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+								</control>
+								<control type="textbox">
+									<top>2</top>
+									<width>254</width>
+									<height>200</height>
+									<font>Bold34</font>
+									<align>left</align>
+									<textcolor>ff453a18</textcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>!IsEmpty(Window(Home).Property(WidgetHasFocus))</visible>
+									<animation effect="fade" end="100" start="0" time="0" condition="!IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="0" start="100" time="0" condition="IsEmpty(Window(Home).Property(WidgetHasFocus))">Conditional</animation>
+									<animation effect="fade" end="100" start="0" time="0">Focus</animation>
+									<animation effect="fade" end="0" start="100" time="0">UnFocus</animation>
+									<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+									<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+								</control>
+							</control>
+							<include>HomePosterFocusedlayout</include>
+							<include>HomeWideFocusedlayout</include>
+							<include>HomeWideEpisodeFocusedlayout</include>
+							<include>HomeSquareFocusedlayout</include>
+							<include>HomeSquareInfoFocusedlayout</include>
+						</control>
+					</focusedlayout>
+					<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
+						<control type="group">
+							<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
+							<include>HomePosterFocusedlayout</include>
+							<include>HomeWideFocusedlayout</include>
+							<include>HomeWideEpisodeFocusedlayout</include>
+							<include>HomeSquareFocusedlayout</include>
+							<include>HomeSquareInfoFocusedlayout</include>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
+							<label2>AdvertBanner</label2>
+							<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath)</visible>
+							<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
+							<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
+							<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
+							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+							<onclick>SetFocus($PARAM[ID]9)</onclick>
+						</item>
+						<item>
+							<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
+							<label2>AdvertBanner</label2>
+							<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath)</visible>
+							<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
+							<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
+							<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
+							<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+							<onclick>SetFocus(99)</onclick>
+							<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>
+						</item>
+						<include name="$PARAM[content]">
+							<param name="ID">$PARAM[ID]</param>
+						</include>
+					</content>
 				</control>
 			</control>
 		</definition>

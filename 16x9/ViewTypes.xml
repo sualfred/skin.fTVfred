@@ -29,6 +29,7 @@
 					<param name="pos4">512,-246</param>
 					<param name="pos5">512,10</param>
 					<param name="pos6">512,168</param>
+					<param name="pos7">512,140</param>
 				</include>
 				<include name="ViewPosterLayout">
 					<param name="ID">60</param>
@@ -66,6 +67,7 @@
 					<param name="pos4">490,-246</param>
 					<param name="pos5">490,10</param>
 					<param name="pos6">490,168</param>
+					<param name="pos7">490,140</param>
 				</include>
 				<include name="ViewWideLayout">
 					<param name="ID">61</param>
@@ -106,6 +108,7 @@
 					<param name="pos4">497,-246</param>
 					<param name="pos5">497,10</param>
 					<param name="pos6">497,168</param>
+					<param name="pos7">497,140</param>
 				</include>
 				<include name="ViewSquareInfoLayout">
 					<param name="ID">50</param>
@@ -143,6 +146,7 @@
 					<param name="pos4">490,-246</param>
 					<param name="pos5">490,10</param>
 					<param name="pos6">490,168</param>
+					<param name="pos7">490,140</param>
 				</include>
 				<include name="ViewWideLayout">
 					<param name="ID">51</param>
@@ -180,6 +184,7 @@
 					<param name="pos4">490,-246</param>
 					<param name="pos5">490,10</param>
 					<param name="pos6">490,168</param>
+					<param name="pos7">490,140</param>
 				</include>
 				<include name="ViewEpisodeLayout">
 					<param name="ID">52</param>
@@ -217,6 +222,7 @@
 					<param name="pos4">512,-246</param>
 					<param name="pos5">512,10</param>
 					<param name="pos6">512,168</param>
+					<param name="pos7">512,140</param>
 				</include>
 				<include name="ViewPosterLayout">
 					<param name="ID">53</param>
@@ -254,6 +260,7 @@
 					<param name="pos4">490,-246</param>
 					<param name="pos5">490,10</param>
 					<param name="pos6">490,168</param>
+					<param name="pos7">490,140</param>
 				</include>
 				<include name="ViewDefaultWideLayout">
 					<param name="ID">55</param>
@@ -291,6 +298,7 @@
 					<param name="pos4">497,-246</param>
 					<param name="pos5">497,10</param>
 					<param name="pos6">497,168</param>
+					<param name="pos7">497,140</param>
 				</include>
 				<include name="ViewSquareInfoLayout">
 					<param name="ID">56</param>
@@ -328,6 +336,7 @@
 					<param name="pos4">512,-246</param>
 					<param name="pos5">512,10</param>
 					<param name="pos6">512,168</param>
+					<param name="pos7">512,140</param>
 				</include>
 				<include name="ViewPosterLayout">
 					<param name="ID">57</param>
@@ -642,6 +651,7 @@
 				<param name="pos4">497,-246</param>
 				<param name="pos5">497,10</param>
 				<param name="pos6">497,168</param>
+				<param name="pos7">497,140</param>
 			</include>
 			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">208,10</param>
@@ -650,6 +660,7 @@
 				<param name="pos4">512,-246</param>
 				<param name="pos5">512,10</param>
 				<param name="pos6">512,168</param>
+				<param name="pos7">512,140</param>
 			</include>
 			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">186,10</param>
@@ -658,6 +669,7 @@
 				<param name="pos4">490,-246</param>
 				<param name="pos5">490,10</param>
 				<param name="pos6">490,168</param>
+				<param name="pos7">490,140</param>
 			</include>
 			<include name="$PARAM[layout]">
 				<param name="ID">450</param>
@@ -690,6 +702,7 @@
 				<param name="pos4">490,-271</param>
 				<param name="pos5">490,-15</param>
 				<param name="pos6">490,143</param>
+				<param name="pos7">490,115</param>
 			</include>
 			<include name="ViewEpisodeLayout">
 				<param name="ID">50</param>
@@ -722,6 +735,7 @@
 				<param name="pos4">497,-271</param>
 				<param name="pos5">497,-15</param>
 				<param name="pos6">497,143</param>
+				<param name="pos7">497,115</param>
 			</include>
 			<include>ViewMusicPlaylistLayout</include>
 		</control>

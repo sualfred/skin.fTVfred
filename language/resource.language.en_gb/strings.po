@@ -1056,7 +1056,7 @@ msgstr ""
 
 #: /16x9/Variables.xml:875
 msgctxt "#31249"
-msgid "[LIGHT]Suggested you by[/LIGHT] Kodi[CR]"
+msgid "[LIGHT]Because you watched [/LIGHT]"
 msgstr ""
 
 #: /16x9/Variables.xml:876
@@ -1066,7 +1066,7 @@ msgstr ""
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
-msgid "[LIGHT]Included in[/LIGHT] Kodi[CR]"
+msgid "[LIGHT]Included in[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
 msgstr ""
 
 #: /16x9/ParametersHomeWidgets.xml:113

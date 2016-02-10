@@ -1,3 +1,6 @@
+2.0.33:
+- Reworked Banner feature
+
 2.0.32:
 - Finalized Banner feature and animations
 - Fixed useless "add widget" button for the shutdown menu

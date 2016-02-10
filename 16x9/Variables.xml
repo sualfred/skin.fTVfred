@@ -4,15 +4,6 @@
 		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
 		<value>-</value>
 	</variable>
-	<!-- Banner -->
-	<variable name="1000-WidgetBanner">
-		<value condition="StringCompare(Skin.String(1000-WidgetAd),NewMovie)">special://skin/extras/ads/NewMovie.xsp</value>
-		<value condition="StringCompare(Skin.String(1000-WidgetAd),NewMovie,RecommendedMovie)">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=1&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
-	</variable>
-	<variable name="2000-WidgetBanner">
-		<value condition="StringCompare(Skin.String(2000-WidgetAd),NewMovie)">special://skin/extras/ads/NewMovie.xsp</value>
-		<value condition="StringCompare(Skin.String(2000-WidgetAd),NewMovie,RecommendedMovie)">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=1&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
-	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreContent">
 		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>

@@ -8,6 +8,7 @@
 		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
 		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
 		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2b) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos7]" time="540" tween="sine">WindowOpen</animation>
 	</include>
 	<include name="ViewOpenAnimationDialog">
 		<animation reversible="false" condition="IsEmpty(Window(home).Property(FocusRow)) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
@@ -16,6 +17,7 @@
 		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
 		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
 		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2b) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos7]" time="540" tween="sine">WindowOpen</animation>
 	</include>
 	<!--Wide-->
 	<include name="ViewWideLayout">

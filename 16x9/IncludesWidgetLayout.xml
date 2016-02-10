@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Banner Layout -->
+	<include name="ParamHomeBannerLayout">
+		<control type="image">
+			<top>-2</top>
+			<left>-48</left>
+			<centertop>288</centertop>
+			<width>1616</width>
+			<height>243</height>
+			<texture border="66,66,51,51">views/shadow_nf.png</texture>
+		</control>
+		<control type="image">
+			<top>-136</top>
+			<width>1500</width>
+			<height>331</height>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			<texture background="true" diffuse="views/highlight_banner_mask.png">$INFO[ListItem.Property(bannerArt)]</texture>
+		</control>
+		<control type="image">
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayHighlight.png</texture>
+		</control>
+		<control type="image">
+			<top>35</top>
+			<left>550</left>
+			<width>535</width>
+			<height>125</height>
+			<aspectratio aligny="center" align="center">keep</aspectratio>
+			<texture>$INFO[ListItem.Property(bannerLogo)]</texture>
+		</control>
+		<control type="grouplist">
+			<top>-175</top>
+			<left>1200</left>
+			<width>250</width>
+			<heigth>32</heigth>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<control type="label">
+				<width>240</width>
+				<heigth>32</heigth>
+				<font>Med24</font>
+				<align>right</align>
+				<textcolor>ccffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<label>$LOCALIZE[31251]</label>
+			</control>
+		</control>
+		<control type="grouplist">
+			<top>50</top>
+			<left>1200</left>
+			<width>250</width>
+			<heigth>30</heigth>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<visible>IntegerGreaterThan(Container($PARAM[ID]9).ListItem.VideoResolution,719)</visible>
+			<control type="label">
+				<width>200</width>
+				<height>30</height>
+				<font>Med18</font>
+				<scroll>false</scroll>
+				<textcolor>bbffffff</textcolor>
+				<shadowcolor>88000000</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31252]</label>
+			</control>
+			<control type="image">
+				<width>35</width>
+				<height>32</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>bbffffff</colordiffuse>
+				<texture>views/HD_icon.png</texture>
+			</control>
+		</control>
+	</include>
+
 	<!-- Home Square Info Itemlayout -->
 	<include name="ParamHomeSquareInfoItemlayout">
 		<control type="group">

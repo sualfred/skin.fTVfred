@@ -1061,8 +1061,8 @@ msgstr "[LIGHT]Neu und jetzt verfügbar in[/LIGHT] Kodi[CR]"
 
 #: /16x9/Variables.xml:875
 msgctxt "#31249"
-msgid "[LIGHT]Suggested you by[/LIGHT] Kodi[CR]"
-msgstr "[LIGHT]Empfohlen von[/LIGHT] Kodi[CR]"
+msgid "[LIGHT]Because you watched [/LIGHT]"
+msgstr "[LIGHT]Empfohlen wegen [/LIGHT]"
 
 #: /16x9/Variables.xml:876
 msgctxt "#31250"
@@ -1071,8 +1071,8 @@ msgstr "Nichts anzusehen?[CR][LIGHT]Probiers mit [/LIGHT]"
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
-msgid "[LIGHT]Included in[/LIGHT] Kodi[CR]"
-msgstr "[LIGHT]Enthalten in[/LIGHT] Kodi[CR]"
+msgid "[LIGHT]Included in[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
+msgstr "[LIGHT]Enthalten in[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
 
 #: /16x9/ParametersHomeWidgets.xml:113
 msgctxt "#31252"
