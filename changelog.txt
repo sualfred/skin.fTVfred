@@ -1,3 +1,6 @@
+2.0.35:
+- Fixed NextAired 
+
 2.0.34:
 - Fixed Wide view for addons
 - Code cleanup

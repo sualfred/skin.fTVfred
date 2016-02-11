@@ -916,11 +916,11 @@ msgstr ""
 
 msgctxt "#31221"
 msgid "Sorry, no shows are airing at this time."
-msgstr "Sorry, keine Sendezeiten gefunden."
+msgstr ""
 
 msgctxt "#31222"
 msgid "Please try again later."
-msgstr "Bitte später nochmal probieren."
+msgstr ""
 
 #: \16x9\DialogAudioDSPManager.xml:175
 msgctxt "#31223"

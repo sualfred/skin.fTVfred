@@ -53,7 +53,6 @@
 				</control>
 			</control>
 		</control>
-
 		<control type="group">
 			<animation type="WindowOpen">
 				<effect end="0,-1080" start="0,-1080" time="800" type="slide" />
@@ -93,7 +92,7 @@
 				<height>40</height>
 				<onup>Back</onup>
 				<ondown>$INFO[Container(999).ListItem.Property(OnDown)]</ondown>
-				<onleft>noop</onleft>
+				<onleft>Down</onleft>
 				<onright>noop</onright>
 				<focusposition>0</focusposition>
 				<orientation>horizontal</orientation>
@@ -188,7 +187,7 @@
 						<font>Med24</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
-						<label>$VAR[NextAiredShortTime[COLOR ff707070]$LOCALIZE[31534]: [/COLOR]]</label
+						<label>$VAR[NextAiredShortTime[COLOR ff707070]$LOCALIZE[31534]: [/COLOR]]</label>
 					</control>
 				</control>
 				<control type="group">
