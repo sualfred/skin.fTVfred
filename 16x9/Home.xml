@@ -387,107 +387,107 @@
 			</control>
 			<!-- Widgets -->
 			<include>HomeWidgets</include>
-
 		</control>
 		<!-- Preload widgets -->
 		<control type="button" id="91">
 			<include>HiddenControl</include>
-			<visible>!Skin.HasSetting(PreloadDeactivated) + [Container(1001).IsUpdating
-				| Container(1002).IsUpdating
-				| Container(1003).IsUpdating
-				| Container(1004).IsUpdating
-				| Container(1005).IsUpdating
-				| Container(1006).IsUpdating
-				| Container(1007).IsUpdating
-				| Container(1008).IsUpdating
-				| Container(2001).IsUpdating
-				| Container(2002).IsUpdating
-				| Container(2003).IsUpdating
-				| Container(2004).IsUpdating
-				| Container(2005).IsUpdating
-				| Container(2006).IsUpdating
-				| Container(2007).IsUpdating
-				| Container(2008).IsUpdating
-				| Container(3001).IsUpdating
-				| Container(3002).IsUpdating
-				| Container(3003).IsUpdating
-				| Container(3004).IsUpdating
-				| Container(3005).IsUpdating
-				| Container(3006).IsUpdating
-				| Container(3007).IsUpdating
-				| Container(3008).IsUpdating
-				| Container(4001).IsUpdating
-				| Container(4002).IsUpdating
-				| Container(4003).IsUpdating
-				| Container(4004).IsUpdating
-				| Container(4005).IsUpdating
-				| Container(4006).IsUpdating
-				| Container(4007).IsUpdating
-				| Container(4008).IsUpdating
-				| Container(5001).IsUpdating
-				| Container(5002).IsUpdating
-				| Container(5003).IsUpdating
-				| Container(5004).IsUpdating
-				| Container(5005).IsUpdating
-				| Container(5006).IsUpdating
-				| Container(5007).IsUpdating
-				| Container(5008).IsUpdating
-				| Container(6001).IsUpdating
-				| Container(6002).IsUpdating
-				| Container(6003).IsUpdating
-				| Container(6004).IsUpdating
-				| Container(6005).IsUpdating
-				| Container(6006).IsUpdating
-				| Container(6007).IsUpdating
-				| Container(6008).IsUpdating
-				| Container(7001).IsUpdating
-				| Container(7002).IsUpdating
-				| Container(7003).IsUpdating
-				| Container(7004).IsUpdating
-				| Container(7005).IsUpdating
-				| Container(7006).IsUpdating
-				| Container(7007).IsUpdating
-				| Container(7008).IsUpdating
-				| Container(8001).IsUpdating
-				| Container(8002).IsUpdating
-				| Container(8003).IsUpdating
-				| Container(8004).IsUpdating
-				| Container(8005).IsUpdating
-				| Container(8006).IsUpdating
-				| Container(8007).IsUpdating
-				| Container(8008).IsUpdating
-				| Container(9001).IsUpdating
-				| Container(9002).IsUpdating
-				| Container(9003).IsUpdating
-				| Container(9004).IsUpdating
-				| Container(9005).IsUpdating
-				| Container(9006).IsUpdating
-				| Container(9007).IsUpdating
-				| Container(9008).IsUpdating
-				| Container(10001).IsUpdating
-				| Container(10002).IsUpdating
-				| Container(10003).IsUpdating
-				| Container(10004).IsUpdating
-				| Container(10005).IsUpdating
-				| Container(10006).IsUpdating
-				| Container(10007).IsUpdating
-				| Container(10008).IsUpdating
-				| Container(11001).IsUpdating
-				| Container(11002).IsUpdating
-				| Container(11003).IsUpdating
-				| Container(11004).IsUpdating
-				| Container(11005).IsUpdating
-				| Container(11006).IsUpdating
-				| Container(11007).IsUpdating
-				| Container(11008).IsUpdating
-				| Container(12001).IsUpdating
-				| Container(12002).IsUpdating
-				| Container(12003).IsUpdating
-				| Container(12004).IsUpdating
-				| Container(12005).IsUpdating
-				| Container(12006).IsUpdating
-				| Container(12007).IsUpdating
-				| Container(12008).IsUpdating
+			<visible>!Skin.HasSetting(PreloadDeactivated)
+				+ [[Container(1001).IsUpdating + Control.IsVisible(1001)]
+				| [Container(1002).IsUpdating + Control.IsVisible(10021)]
+				| [Container(1003).IsUpdating + Control.IsVisible(1003)]
+				| [Container(1004).IsUpdating + Control.IsVisible(1004)]
+				| [Container(1005).IsUpdating + Control.IsVisible(1005)]
+				| [Container(1006).IsUpdating + Control.IsVisible(1006)]
+				| [Container(1007).IsUpdating + Control.IsVisible(1007)]
+				| [Container(1008).IsUpdating + Control.IsVisible(1008)]
+				| [Container(2001).IsUpdating + Control.IsVisible(2001)]
+				| [Container(2002).IsUpdating + Control.IsVisible(2002)]
+				| [Container(2003).IsUpdating + Control.IsVisible(2003)]
+				| [Container(2004).IsUpdating + Control.IsVisible(2004)]
+				| [Container(2005).IsUpdating + Control.IsVisible(2005)]
+				| [Container(2006).IsUpdating + Control.IsVisible(2006)]
+				| [Container(2007).IsUpdating + Control.IsVisible(2007)]
+				| [Container(2008).IsUpdating + Control.IsVisible(2008)]
+				| [Container(3001).IsUpdating + Control.IsVisible(3001)]
+				| [Container(3002).IsUpdating + Control.IsVisible(3002)]
+				| [Container(3003).IsUpdating + Control.IsVisible(3003)]
+				| [Container(3004).IsUpdating + Control.IsVisible(3004)]
+				| [Container(3005).IsUpdating + Control.IsVisible(3005)]
+				| [Container(3006).IsUpdating + Control.IsVisible(3006)]
+				| [Container(3007).IsUpdating + Control.IsVisible(3007)]
+				| [Container(3008).IsUpdating + Control.IsVisible(3008)]
+				| [Container(4001).IsUpdating + Control.IsVisible(4001)]
+				| [Container(4002).IsUpdating + Control.IsVisible(4002)]
+				| [Container(4003).IsUpdating + Control.IsVisible(4003)]
+				| [Container(4004).IsUpdating + Control.IsVisible(4004)]
+				| [Container(4005).IsUpdating + Control.IsVisible(4005)]
+				| [Container(4006).IsUpdating + Control.IsVisible(4006)]
+				| [Container(4007).IsUpdating + Control.IsVisible(4007)]
+				| [Container(4008).IsUpdating + Control.IsVisible(4008)]
+				| [Container(5001).IsUpdating + Control.IsVisible(5001)]
+				| [Container(5002).IsUpdating + Control.IsVisible(5002)]
+				| [Container(5003).IsUpdating + Control.IsVisible(5003)]
+				| [Container(5004).IsUpdating + Control.IsVisible(5004)]
+				| [Container(5005).IsUpdating + Control.IsVisible(5005)]
+				| [Container(5006).IsUpdating + Control.IsVisible(5006)]
+				| [Container(5007).IsUpdating + Control.IsVisible(5007)]
+				| [Container(5008).IsUpdating + Control.IsVisible(5008)]
+				| [Container(6001).IsUpdating + Control.IsVisible(6001)]
+				| [Container(6002).IsUpdating + Control.IsVisible(6002)]
+				| [Container(6003).IsUpdating + Control.IsVisible(6003)]
+				| [Container(6004).IsUpdating + Control.IsVisible(6004)]
+				| [Container(6005).IsUpdating + Control.IsVisible(6005)]
+				| [Container(6006).IsUpdating + Control.IsVisible(6006)]
+				| [Container(6007).IsUpdating + Control.IsVisible(6007)]
+				| [Container(6008).IsUpdating + Control.IsVisible(6008)]
+				| [Container(7001).IsUpdating + Control.IsVisible(7001)]
+				| [Container(7002).IsUpdating + Control.IsVisible(7002)]
+				| [Container(7003).IsUpdating + Control.IsVisible(7003)]
+				| [Container(7004).IsUpdating + Control.IsVisible(7004)]
+				| [Container(7005).IsUpdating + Control.IsVisible(7005)]
+				| [Container(7006).IsUpdating + Control.IsVisible(7006)]
+				| [Container(7007).IsUpdating + Control.IsVisible(7007)]
+				| [Container(7008).IsUpdating + Control.IsVisible(7008)]
+				| [Container(8001).IsUpdating + Control.IsVisible(8001)]
+				| [Container(8002).IsUpdating + Control.IsVisible(8002)]
+				| [Container(8003).IsUpdating + Control.IsVisible(8003)]
+				| [Container(8004).IsUpdating + Control.IsVisible(8004)]
+				| [Container(8005).IsUpdating + Control.IsVisible(8005)]
+				| [Container(8006).IsUpdating + Control.IsVisible(8006)]
+				| [Container(8007).IsUpdating + Control.IsVisible(8007)]
+				| [Container(8008).IsUpdating + Control.IsVisible(8008)]
+				| [Container(9001).IsUpdating + Control.IsVisible(9001)]
+				| [Container(9002).IsUpdating + Control.IsVisible(9002)]
+				| [Container(9003).IsUpdating + Control.IsVisible(9003)]
+				| [Container(9004).IsUpdating + Control.IsVisible(9004)]
+				| [Container(9005).IsUpdating + Control.IsVisible(9005)]
+				| [Container(9006).IsUpdating + Control.IsVisible(9006)]
+				| [Container(9007).IsUpdating + Control.IsVisible(9007)]
+				| [Container(9008).IsUpdating + Control.IsVisible(9008)]
+				| [Container(10001).IsUpdating + Control.IsVisible(10001)]
+				| [Container(10002).IsUpdating + Control.IsVisible(10002)]
+				| [Container(10003).IsUpdating + Control.IsVisible(10003)]
+				| [Container(10004).IsUpdating + Control.IsVisible(10004)]
+				| [Container(10005).IsUpdating + Control.IsVisible(10005)]
+				| [Container(10006).IsUpdating + Control.IsVisible(10006)]
+				| [Container(10007).IsUpdating + Control.IsVisible(10007)]
+				| [Container(10008).IsUpdating + Control.IsVisible(10008)]
+				| [Container(11001).IsUpdating + Control.IsVisible(11001)]
+				| [Container(11002).IsUpdating + Control.IsVisible(11002)]
+				| [Container(11003).IsUpdating + Control.IsVisible(11003)]
+				| [Container(11004).IsUpdating + Control.IsVisible(11004)]
+				| [Container(11005).IsUpdating + Control.IsVisible(11005)]
+				| [Container(11006).IsUpdating + Control.IsVisible(11006)]
+				| [Container(11007).IsUpdating + Control.IsVisible(11007)]
+				| [Container(11008).IsUpdating + Control.IsVisible(11008)]
+				| [Container(12001).IsUpdating + Control.IsVisible(12001)]
+				| [Container(12002).IsUpdating + Control.IsVisible(12002)]
+				| [Container(12003).IsUpdating + Control.IsVisible(12003)]
+				| [Container(12004).IsUpdating + Control.IsVisible(12004)]
+				| [Container(12005).IsUpdating + Control.IsVisible(12005)]
+				| [Container(12006).IsUpdating + Control.IsVisible(12006)]
+				| [Container(12007).IsUpdating + Control.IsVisible(12007)]
+				| [Container(12008).IsUpdating + Control.IsVisible(12008)]
 				| Container(201).IsUpdating]</visible>
 			</control>
 			<control type="image">
