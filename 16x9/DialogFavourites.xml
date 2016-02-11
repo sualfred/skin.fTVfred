@@ -7,6 +7,7 @@
 	<onload>Control.Move(450,1)</onload>
 	<!-- workaround animation to fix the rare broken WindowOpen animations -->
 	<controls>
+		<include>BackgroundImage</include>
 		<!-- Heading / Current item / Total items -->
 		<control type="group">
 			<animation delay="400" easing="inout" effect="fade" end="100" start="0" time="120" tween="sine" reversible="false">WindowOpen</animation>
