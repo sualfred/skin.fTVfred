@@ -298,7 +298,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -316,7 +316,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
 						</control>
 						<control type="image">
 							<left>400</left>
@@ -342,7 +342,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
 						</control>
 						<control type="image">
 							<left>320</left>
@@ -503,7 +503,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -521,7 +521,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
 						</control>
 						<control type="image">
 							<left>400</left>
@@ -547,7 +547,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
 						</control>
 						<control type="image">
 							<left>320</left>

@@ -140,7 +140,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,3.jpg]</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -148,7 +148,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png" >$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,2.jpg]</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -156,7 +156,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+					<texture>$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,1.jpg]</texture>
 				</control>
 			</control>
 			<control type="image">
@@ -215,7 +215,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="ParamHomeSquareFocusedItemlayout">
+	<include name="ParamHomeSquareInfoFocusedlayout">
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
@@ -276,7 +276,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,3.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -284,7 +285,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png" >$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,2.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -292,7 +294,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+					<texture>$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,1.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -376,19 +379,19 @@
 	<include name="HomeSquareInfoFocusedlayout">
 		<control type="group">
 			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>
-			<include name="ParamHomeSquareFocusedItemlayout">
+			<include name="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeSquareFocusedItemlayout">
+			<include name="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">604</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeSquareFocusedItemlayout">
+			<include name="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">935</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomeSquareFocusedItemlayout">
+			<include name="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">1266</param>
 				<param name="ID">4</param>
 			</include>
@@ -457,7 +460,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,3.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -465,7 +469,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png" >$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,2.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -473,7 +478,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+					<texture>$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,1.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -554,7 +560,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png" background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]3.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,3.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -562,7 +569,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="views/genre_crop_mask.png"  background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]2.jpg</texture>
+					<texture diffuse="views/genre_crop_mask.png" >$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,2.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -570,7 +578,8 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID]]1.jpg</texture>
+					<texture>$VAR[GenreContent]$VAR[VideoGenreThumbPos$PARAM[ID],,1.jpg]</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
 			<control type="image">
