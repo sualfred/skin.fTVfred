@@ -9,7 +9,6 @@
 	<include file="ViewTypes.xml" />
 	<include file="IncludesViewTypes.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
-	<include file="Includes_Keyboard.xml" />
 	<include file="Variables.xml" />
 	<!-- Fullscreen dimensions -->
 	<include name="FullscreenDimensions">

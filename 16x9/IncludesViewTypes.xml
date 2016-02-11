@@ -278,13 +278,11 @@
 	</include>
 	<!--Square Info-->
 	<include name="ViewSquareInfoLayout">
-		<itemlayout height="576" width="436">
+		<itemlayout condition="SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-				<!-- Genres -->
 				<control type="group">
 					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
-					<!-- Right Poster -->
 					<control type="group">
 						<control type="image">
 							<left>160</left>
@@ -303,7 +301,6 @@
 							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
 						</control>
 					</control>
-					<!-- Middle Poster -->
 					<control type="group">
 						<control type="image">
 							<left>80</left>
@@ -330,7 +327,6 @@
 							<texture background="true">views/genre_mask.png</texture>
 						</control>
 					</control>
-					<!-- Left Poster -->
 					<control type="group">
 						<control type="image">
 							<left>0</left>
@@ -390,9 +386,12 @@
 						<texture>views/OverlayNF.png</texture>
 					</control>
 				</control>
-				<!-- Common -->
+			</control>
+		</itemlayout>
+		<itemlayout condition="!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
+			<control type="group">
+				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<control type="group">
-					<visible>!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
 					<control type="image">
 						<top>48</top>
 						<width>480</width>
@@ -476,7 +475,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<focusedlayout height="576" width="436">
+		<focusedlayout condition="SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
 			<control type="button">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
@@ -488,10 +487,7 @@
 				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
-				<!-- Genres -->
 				<control type="group">
-					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
-					<!-- Right Poster -->
 					<control type="group">
 						<control type="image">
 							<left>160</left>
@@ -510,7 +506,6 @@
 							<texture background="true">$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
 						</control>
 					</control>
-					<!-- Middle Poster -->
 					<control type="group">
 						<control type="image">
 							<left>80</left>
@@ -537,7 +532,6 @@
 							<texture background="true">views/genre_mask.png</texture>
 						</control>
 					</control>
-					<!-- Left Poster -->
 					<control type="group">
 						<control type="image">
 							<left>0</left>
@@ -610,9 +604,21 @@
 						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 				</control>
-				<!-- Common -->
-				<control type="group">					
-					<visible>!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
+			</control>
+		</focusedlayout>
+		<focusedlayout condition="!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
+			<control type="button">
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onfocus>ClearProperty(TVShowID,home)</onfocus>
+				<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
+				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
+			</control>
+			<control type="group">
+				<animation center="250,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
+				<animation center="250,288" condition="Control.HasFocus(4000)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
+				<control type="group">
 					<control type="image">
 						<top>48</top>
 						<width>480</width>
