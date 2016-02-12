@@ -86,10 +86,15 @@
 			<control type="image">
 				<width>318</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>318</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<width>318</width>
@@ -222,10 +227,15 @@
 			<control type="image">
 				<width>318</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>318</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<width>318</width>
@@ -406,10 +416,15 @@
 			<control type="image">
 				<width>318</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>318</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<width>318</width>
@@ -506,10 +521,15 @@
 			<control type="image">
 				<width>318</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>318</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true">common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<width>318</width>
@@ -651,10 +671,15 @@
 			<control type="image">
 				<width>215</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>215</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -687,10 +712,15 @@
 			<control type="image">
 				<width>215</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>215</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -784,10 +814,15 @@
 			<control type="image">
 				<width>423</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>423</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 				<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -796,7 +831,6 @@
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -821,7 +855,6 @@
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -855,10 +888,15 @@
 			<control type="image">
 				<width>423</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>423</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 				<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -867,7 +905,6 @@
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -892,7 +929,6 @@
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -964,10 +1000,15 @@
 			<control type="image">
 				<width>423</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>423</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -1000,10 +1041,15 @@
 			<control type="image">
 				<width>423</width>
 				<height>334</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="16,30,16,18" background="true">home/image_shadow_small_nf.png</texture>
+			</control>
+			<control type="image">
+				<width>423</width>
+				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
 				<top>13</top>
