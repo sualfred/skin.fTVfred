@@ -15,7 +15,7 @@
 			<width>1500</width>
 			<height>331</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-			<texture background="true" diffuse="views/highlight_banner_mask.png">$INFO[ListItem.Property(bannerArt)]</texture>
+			<texture diffuse="views/highlight_banner_mask.png">$INFO[ListItem.Property(bannerArt)]</texture>
 		</control>
 		<control type="image">
 			<width>58</width>
@@ -88,7 +88,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
+				<texture>common/default_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -96,7 +96,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
@@ -104,7 +104,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<!-- Genre -->
@@ -116,7 +116,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -124,7 +124,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -132,7 +132,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>102</left>
@@ -224,7 +224,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
+				<texture>common/default_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -232,7 +232,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
@@ -240,7 +240,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<!-- Genre -->
@@ -252,7 +252,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -260,7 +260,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -268,7 +268,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>102</left>
@@ -408,7 +408,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
+				<texture>common/default_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -416,7 +416,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
@@ -424,7 +424,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<!-- Genre -->
@@ -436,7 +436,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -444,7 +444,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -452,7 +452,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>102</left>
@@ -508,7 +508,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/default_empty.png</texture>
+				<texture>common/default_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -516,7 +516,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/square_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<control type="image">
@@ -524,7 +524,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
 			</control>
 			<!-- Genre -->
@@ -536,7 +536,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -544,7 +544,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -552,7 +552,7 @@
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">views/poster_fallback.png</texture>
+					<texture>views/poster_fallback.png</texture>
 				</control>
 				<control type="image">
 					<left>102</left>
@@ -653,7 +653,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/poster_empty.png</texture>
+				<texture>common/poster_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -661,7 +661,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -696,7 +696,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/poster_empty.png</texture>
+				<texture>common/poster_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -704,7 +704,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/poster_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -800,7 +800,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/wide_empty.png</texture>
+				<texture>common/wide_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -808,7 +808,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
 				<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -816,14 +816,14 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<width>423</width>
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
-				<texture background="true" border="2">views/clearlogo_overlay.png</texture>
+				<texture border="2">views/clearlogo_overlay.png</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -832,7 +832,7 @@
 				<width>257</width>
 				<height>101</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
+				<texture>$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -840,7 +840,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -876,7 +876,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/wide_empty.png</texture>
+				<texture>common/wide_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -884,7 +884,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
 				<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -892,14 +892,14 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<width>423</width>
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
-				<texture background="true" border="2">views/clearlogo_overlay.png</texture>
+				<texture border="2">views/clearlogo_overlay.png</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -908,7 +908,7 @@
 				<width>257</width>
 				<height>101</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
+				<texture>$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -916,7 +916,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
@@ -990,7 +990,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/wide_empty.png</texture>
+				<texture>common/wide_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -998,7 +998,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -1033,7 +1033,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">common/wide_empty.png</texture>
+				<texture>common/wide_empty.png</texture>
 				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
 			</control>
 			<control type="image">
@@ -1041,7 +1041,7 @@
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+				<texture fallback="views/episode_fallback.png">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
 			</control>
 			<control type="image">
 				<top>13</top>
