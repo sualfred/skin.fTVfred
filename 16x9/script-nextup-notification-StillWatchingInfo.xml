@@ -165,7 +165,7 @@
 				<width>378</width>
 				<height>295</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[NextUpThumb]</texture>
+				<texture>$VAR[StillWatchingThumb]</texture>
 			</control>
 			<control type="image">
 				<top>70</top>
