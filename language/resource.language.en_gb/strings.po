@@ -1074,6 +1074,16 @@ msgctxt "#31252"
 msgid "Available in"
 msgstr ""
 
+#: /16x9/Custom_Home_Widgets.xml:712
+msgctxt "#31253"
+msgid "Banner"
+msgstr ""
+
+#: /16x9/Custom_Home_Widgets.xml:732
+msgctxt "#31254"
+msgid "Recommended Movie/Show"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

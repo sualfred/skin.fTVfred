@@ -231,7 +231,7 @@
 			<ondown>$PARAM[ID]0</ondown>
 			<onfocus condition="!IsEmpty(Window(home).Property(StartedByBanner))">Select</onfocus>
 			<onfocus condition="IsEmpty(Window(home).Property(StartedByBanner))">down</onfocus>
-			<content limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
+			<content sortby="random" limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
 			<visible>!IsEmpty(Skin.String($PARAM[ID]0-WidgetAd))</visible>
 		</control>
 		<control id="$PARAM[ID]1" type="list">

@@ -73,7 +73,7 @@
 				<height>32</height>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>bbffffff</colordiffuse>
-				<texture>views/HD_icon.png</texture>
+				<texture>views/hd_icon.png</texture>
 			</control>
 		</control>
 	</include>

@@ -1,3 +1,8 @@
+2.0.37:
+- Fixed case sensitivy issue with HD icon for banners
+- Added "Recommended Movie/Show" for the banner
+- Improved Recommended banner contents. Requires latest Skin Helper Service from GitHub
+
 2.0.36:
 - Fixed Favourites dialog
 
