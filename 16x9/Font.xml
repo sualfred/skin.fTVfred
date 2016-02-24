@@ -351,6 +351,12 @@
 	<fontset id="Roboto" unicode="true">
 		<!-- Regular -->
 		<font>
+			<name>invisible</name>
+			<filename>invisible1.ttf</filename>
+			<linespacing>1.15</linespacing>
+			<size>10</size>
+		</font>
+		<font>
 			<name>Reg36Spaced</name>
 			<filename>Roboto-Regular.ttf</filename>
 			<linespacing>1.18</linespacing>
@@ -553,8 +559,8 @@
 		</font>
 		<font>
 			<name>Med24Num</name>
-			<filename>HelveticaNeue_Med.ttf</filename>
-			<size>24</size>
+			<filename>Roboto-Medium.ttf</filename>
+			<size>21</size>
 			<linespacing>1.1</linespacing>
 		</font>
 		<font>
@@ -672,6 +678,12 @@
 	</fontset>
 	<fontset id="Arial" unicode="true">
 		<!-- Regular -->
+		<font>
+			<name>invisible</name>
+			<filename>invisible1.ttf</filename>
+			<linespacing>1.15</linespacing>
+			<size>10</size>
+		</font>
 		<font>
 			<name>Reg36Spaced</name>
 			<filename>Arial.ttf</filename>
