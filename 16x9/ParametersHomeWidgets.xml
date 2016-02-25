@@ -49,13 +49,13 @@
 							<left>50</left>
 							<width>605</width>
 							<height>135</height>
-							<font>Med36</font>
+							<font>Med32</font>
 							<scroll>false</scroll>
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),,[CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
+							<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
 							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 						</control>
@@ -126,13 +126,13 @@
 							<left>50</left>
 							<width>605</width>
 							<height>135</height>
-							<font>Med36</font>
+							<font>Med32</font>
 							<scroll>false</scroll>
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),,[CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
+							<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
 							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 						</control>
