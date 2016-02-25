@@ -66,7 +66,7 @@
 					<width>846</width>
 					<height>432</height>
 					<onup>312</onup>
-					<content limit="9">plugin://script.extendedinfo?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]</content>
+					<content limit="9">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).Index(1)]</content>
 					<width>1068</width>
 					<onup>312</onup>
 					<ondown>noop</ondown>

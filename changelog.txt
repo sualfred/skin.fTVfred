@@ -1,3 +1,7 @@
+2.0.38:
+- Fixed auto completion
+- Added 3D option menu to VideoOSD
+
 2.0.37:
 - Fixed case sensitivy issue with HD icon for banners
 - Added "Recommended Movie/Show" for the banner

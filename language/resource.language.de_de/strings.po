@@ -1089,6 +1089,21 @@ msgctxt "#31254"
 msgid "Recommended Movie/Show"
 msgstr "Empfohlener Film/Serie"
 
+#: /16x9/VideoOSDSettings.xml:146
+msgctxt "#31255"
+msgid "3D enabled"
+msgstr "3D aktiviert"
+
+#: /16x9/VideoOSDSettings.xml:167
+msgctxt "#31256"
+msgid "Watch as 2D"
+msgstr "Als 2D abspielen"
+
+#: /16x9/VideoOSDSettings.xml:181
+msgctxt "#31257"
+msgid "Change mode"
+msgstr "Modus wechseln"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"

@@ -285,7 +285,8 @@
 					<focusedcolor>ffffc04b</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<onclick>SetFocus(200)</onclick>
+					<onclick>SetProperty(Show3DSettings,1,home)</onclick>
+					<onclick>ActivateWindow(123)</onclick>
 					<visible>VideoPlayer.IsStereoscopic</visible>
 				</control>
 				<!-- DVD menu -->
