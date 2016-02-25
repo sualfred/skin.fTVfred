@@ -99,7 +99,7 @@
 		<control type="group">
 			<visible>!IsEmpty(Window(home).Property(Show3DSettings))</visible>
 			<top>825</top>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser) | Window.IsVisible(selectdialog)">Conditional</animation>
 			<!-- Background -->
 			<control type="image">
 				<width>1920</width>
