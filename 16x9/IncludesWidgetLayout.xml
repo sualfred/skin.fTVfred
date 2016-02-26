@@ -164,7 +164,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -303,7 +310,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -487,7 +501,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -587,7 +608,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -668,7 +696,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -711,7 +746,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -848,7 +890,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -924,7 +973,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -1005,7 +1061,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -1048,7 +1111,14 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719)</visible>
+				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			</control>
+			<control type="image">
+				<top>13</top>
+				<width>58</width>
+				<height>58</height>
+				<texture>views/Overlay3D.png</texture>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 			</control>
 			<control type="image">
 				<top>13</top>

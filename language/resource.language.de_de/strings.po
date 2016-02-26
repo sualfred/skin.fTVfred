@@ -1067,7 +1067,7 @@ msgstr "[LIGHT]Empfohlen wegen [/LIGHT]"
 #: /16x9/Variables.xml:876
 msgctxt "#31250"
 msgid "Nothing to watch?[CR][LIGHT]Try [/LIGHT]"
-msgstr "Nichts anzusehen?[CR][LIGHT]Probiers mit [/LIGHT]"
+msgstr "Nichts anzusehen?[CR][LIGHT]Wie wärs mit [/LIGHT]"
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
@@ -1103,6 +1103,11 @@ msgstr "Als 2D abspielen"
 msgctxt "#31257"
 msgid "Change mode"
 msgstr "Modus wechseln"
+
+#: /shortcuts/overrides.xml:31
+msgctxt "#31258"
+msgid "3D Movies"
+msgstr "3D Filme"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

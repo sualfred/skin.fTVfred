@@ -382,6 +382,12 @@
 			<property name="VideoResolution4">$INFO[Container($PARAM[ID]).ListItemPosition(3).VideoResolution]</property>
 			<property name="VideoResolution5">$INFO[Container($PARAM[ID]).ListItemPosition(4).VideoResolution]</property>
 			<property name="VideoResolution6">$INFO[Container($PARAM[ID]).ListItemPosition(5).VideoResolution]</property>
+			<property name="3DOverlay1">$INFO[Container($PARAM[ID]).ListItemPosition(0).StereoscopicMode]</property>
+			<property name="3DOverlay2">$INFO[Container($PARAM[ID]).ListItemPosition(1).StereoscopicMode]</property>
+			<property name="3DOverlay3">$INFO[Container($PARAM[ID]).ListItemPosition(2).StereoscopicMode]</property>
+			<property name="3DOverlay4">$INFO[Container($PARAM[ID]).ListItemPosition(3).StereoscopicMode]</property>
+			<property name="3DOverlay5">$INFO[Container($PARAM[ID]).ListItemPosition(4).StereoscopicMode]</property>
+			<property name="3DOverlay6">$INFO[Container($PARAM[ID]).ListItemPosition(5).StereoscopicMode]</property>
 			<property name="ArtFTV1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(ftv)]</property>
 			<property name="ArtFTV2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(ftv)]</property>
 			<property name="ArtFTV3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(ftv)]</property>
@@ -445,6 +451,12 @@
 			<property name="VideoResolution4">$INFO[Container($PARAM[ID]1).ListItemPosition(3).VideoResolution]</property>
 			<property name="VideoResolution5">$INFO[Container($PARAM[ID]1).ListItemPosition(4).VideoResolution]</property>
 			<property name="VideoResolution6">$INFO[Container($PARAM[ID]1).ListItemPosition(5).VideoResolution]</property>
+			<property name="3DOverlay1">$INFO[Container($PARAM[ID]).ListItemPosition(0).StereoscopicMode]</property>
+			<property name="3DOverlay2">$INFO[Container($PARAM[ID]).ListItemPosition(1).StereoscopicMode]</property>
+			<property name="3DOverlay3">$INFO[Container($PARAM[ID]).ListItemPosition(2).StereoscopicMode]</property>
+			<property name="3DOverlay4">$INFO[Container($PARAM[ID]).ListItemPosition(3).StereoscopicMode]</property>
+			<property name="3DOverlay5">$INFO[Container($PARAM[ID]).ListItemPosition(4).StereoscopicMode]</property>
+			<property name="3DOverlay6">$INFO[Container($PARAM[ID]).ListItemPosition(5).StereoscopicMode]</property>
 			<property name="ArtFTV1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Art(ftv)]</property>
 			<property name="ArtFTV2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Art(ftv)]</property>
 			<property name="ArtFTV3">$INFO[Container($PARAM[ID]1).ListItemPosition(2).Art(ftv)]</property>

@@ -1099,6 +1099,11 @@ msgctxt "#31257"
 msgid "Change mode"
 msgstr ""
 
+#: /shortcuts/overrides.xml:31
+msgctxt "#31258"
+msgid "3D Movies"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr ""

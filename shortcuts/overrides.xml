@@ -27,7 +27,8 @@
 				<shortcut label="31174" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/TopRatedMovies.xsp,return)</shortcut>	
 				<shortcut label="31510" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>	
 				<shortcut label="31515" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerMovies.xsp,return)</shortcut>	
-				<shortcut label="31517" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>	
+				<shortcut label="31517" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>
+				<shortcut label="31258" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/3DMovies.xsp,return)</shortcut>
 			</node>
 			<node label="20343">
 				<shortcut label="31175" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyUpdatedTVShows.xsp,return)</shortcut>

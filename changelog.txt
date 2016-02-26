@@ -1,3 +1,7 @@
+2.0.40:
+- Added 3D overlay flag
+- Added 3D Movies for widgets
+
 2.0.39:
 - Added banners to preload
 - Fixed preloading/onfocus movement if widgetgroup has an banner enabled
