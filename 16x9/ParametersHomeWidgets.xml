@@ -45,10 +45,10 @@
 							<param name="ID">$PARAM[ID]</param>
 						</include>
 						<control type="textbox">
-							<top>30</top>
+							<top>15</top>
 							<left>50</left>
 							<width>605</width>
-							<height>135</height>
+							<height>165</height>
 							<font>Med32</font>
 							<scroll>false</scroll>
 							<textcolor>ffffffff</textcolor>
@@ -122,10 +122,10 @@
 							<param name="ID">$PARAM[ID]</param>
 						</include>
 						<control type="textbox">
-							<top>30</top>
+							<top>15</top>
 							<left>50</left>
 							<width>605</width>
-							<height>135</height>
+							<height>165</height>
 							<font>Med32</font>
 							<scroll>false</scroll>
 							<textcolor>ffffffff</textcolor>
