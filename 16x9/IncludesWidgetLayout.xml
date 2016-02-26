@@ -171,7 +171,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -317,7 +317,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -508,7 +508,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -615,7 +615,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -703,7 +703,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -753,7 +753,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -897,7 +897,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -980,7 +980,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -1068,7 +1068,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
@@ -1118,7 +1118,7 @@
 				<width>58</width>
 				<height>58</height>
 				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 			</control>
 			<control type="image">
 				<top>13</top>
