@@ -2,7 +2,7 @@
 <overrides>		
 	<backgroundBrowse>True</backgroundBrowse>
 	<thumbnail label="16018">DefaultAddonNone.png</thumbnail>
-	<thumbnail label="844">special://skin/extras/default/search.jpg</thumbnail>
+	<thumbnail label="137">special://skin/extras/default/search.jpg</thumbnail>
 	<thumbnail label="33060">special://skin/extras/default/power.jpg</thumbnail>
 	<thumbnail label="31100">special://skin/extras/default/photos.jpg</thumbnail>
 	<thumbnail label="157">special://skin/extras/default/videos.jpg</thumbnail>
