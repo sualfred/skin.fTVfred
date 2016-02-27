@@ -2,21 +2,23 @@
 # Addon Name: fTV
 # Addon id: skin.ftv
 # Addon Provider: Hitcher
+# Translators:
+# Translators:
+# Andrey Bondar, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
+"Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-26 14:34+0100\n"
-"Last-Translator: Andrey Bondar <bondar.a@gmail.com>\n"
-"Language-Team: English (http://www.transifex.com/projects/p/xbmc-main/language/en/)\n"
-"Language: ru\n"
+"PO-Revision-Date: 2016-02-26 21:41+0000\n"
+"Last-Translator: Andrey Bondar\n"
+"Language-Team: Russian (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Poedit 1.8.7\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
 msgctxt "#31100"
 msgid "Photos"
@@ -36,11 +38,11 @@ msgstr ""
 
 msgctxt "#31004"
 msgid "minute"
-msgstr "минута"
+msgstr "мин."
 
 msgctxt "#31005"
 msgid "hour"
-msgstr "час"
+msgstr "ч."
 
 msgctxt "#31006"
 msgid "Starts at"
@@ -48,11 +50,7 @@ msgstr "Начинается в"
 
 msgctxt "#31101"
 msgid "Apps"
-msgstr "Приложения"
-
-msgctxt "#31102"
-msgid "Clear all Bookmarks"
-msgstr "Очистить все закладки"
+msgstr "Программы"
 
 msgctxt "#31103"
 msgid "Artwork Downloader"
@@ -99,8 +97,10 @@ msgid "View add-ons that are currently being downloaded."
 msgstr "Просмотреть дополнения, которые загружаются в настоящее время."
 
 msgctxt "#31020"
-msgid "View all the system add-ons including Dependencies, Orphaned Dependencies, and Running add-ons."
-msgstr "Просмотреть все дополнения системы, включая Зависимости, Потерянные зависимости, и Работающие дополнения."
+msgid ""
+"View all the system add-ons including Dependencies, Orphaned Dependencies, "
+"and Running add-ons."
+msgstr "Просмотреть все дополнения системы, включая зависимости, потерянные зависимости, и работающие дополнения."
 
 msgctxt "#31021"
 msgid "Download add-ons from your installed repos."
@@ -155,16 +155,20 @@ msgid "Widget Type"
 msgstr "Тип виджета"
 
 msgctxt "#31034"
-msgid "Uses a combination of Fanart and Logo to display wide icons.[CR]Alternatively create and add your own as 'ftv' artwork."
+msgid ""
+"Uses a combination of Fanart and Logo to display wide "
+"icons.[CR]Alternatively create and add your own as 'ftv' artwork."
 msgstr ""
 
 msgctxt "#31035"
-msgid "Runs Artwork Downloader in the background to fetch TV Show logos needed for wide icons."
+msgid ""
+"Runs Artwork Downloader in the background to fetch TV Show logos needed for "
+"wide icons."
 msgstr ""
 
 msgctxt "#31036"
 msgid "Displays fanart for your media in the background."
-msgstr ""
+msgstr "Отображать фанарт в качестве фона."
 
 msgctxt "#31024"
 msgid "Widget Name"
@@ -192,7 +196,7 @@ msgstr "Обзор"
 
 msgctxt "#31043"
 msgid "Turn Off Randomise"
-msgstr "Выключить случайное проигрывание"
+msgstr "Выключить - Случайное проигрывание"
 
 msgctxt "#31029"
 msgid "Addon Details"
@@ -200,7 +204,7 @@ msgstr "О дополнении"
 
 msgctxt "#31045"
 msgid "Turn On Randomise"
-msgstr "Включить - Случайное проигрывание"
+msgstr "Включить случайное проигрывание"
 
 msgctxt "#31046"
 msgid "Turn Off Shuffle All"
@@ -212,11 +216,11 @@ msgstr "Запустить сейчас"
 
 msgctxt "#31037"
 msgid "Rollback Addon"
-msgstr ""
+msgstr "Откатить дополнение"
 
 msgctxt "#31041"
 msgid "Debug grid"
-msgstr "Сетка отладки"
+msgstr "Отладочная сетка"
 
 msgctxt "#31042"
 msgid "Debug labels"
@@ -244,7 +248,7 @@ msgstr "Включить - Повторить все"
 
 msgctxt "#31056"
 msgid "Move, copy and delete your files with KODI's built-in file manager."
-msgstr "Перемещение, копирование и удаление файлов с встроенным в Kodi файловым менеджером."
+msgstr "Перемещение, копирование и удаление файлов менеджером файлов Kodi."
 
 msgctxt "#31057"
 msgid "Watch Again"
@@ -280,7 +284,7 @@ msgstr "Настройка главного меню"
 
 msgctxt "#31051"
 msgid "Settings can be accessed from the Shutdown menu or by rebooting XBMC!"
-msgstr "Настройки можно получить из меню выключения или перезагрузке Kodi!"
+msgstr "Настройки доступны через меню выключения Kodi!"
 
 msgctxt "#31062"
 msgid "Choose Thumb"
@@ -364,7 +368,7 @@ msgstr "Меню выключения"
 
 msgctxt "#31086"
 msgid "Sorted by"
-msgstr "Сортировано по"
+msgstr "Отсортировано по"
 
 msgctxt "#31087"
 msgid "Music Files"
@@ -479,55 +483,70 @@ msgid "Customise Shutdown Menu"
 msgstr "Настроить меню выключения"
 
 msgctxt "#31115"
-msgid "Change the skin, set language and region, change file listing options and set up a screensaver."
-msgstr "Настройки обложки, языка и региона, параметры списка файлов и настройки заставки."
+msgid ""
+"Change the skin, set language and region, change file listing options and "
+"set up a screensaver."
+msgstr "Настройка обложки, языка и региона, параметры списка файлов и настройки заставки."
 
 msgctxt "#31116"
 msgid "Manage, browse for, install and modify Add-ons."
-msgstr "Управление дополнениями: установка, настройка."
+msgstr "Управление дополнениями: поиск, установка, настройка."
 
 msgctxt "#31117"
-msgid "Manage your video library, set video playback options, change video listing options and set subtitle fonts."
+msgid ""
+"Manage your video library, set video playback options, change video listing "
+"options and set subtitle fonts."
 msgstr "Управление видео библиотекой, параметры воспроизведения, настройка субтитров и т.д."
 
 msgctxt "#31118"
-msgid "Manage your music library, set music playback options, change music listing options, and setup song submission."
-msgstr "Управление музыкальной библиотеки, параметры воспроизведения музыки, и т.д."
+msgid ""
+"Manage your music library, set music playback options, change music listing "
+"options, and setup song submission."
+msgstr "Управление музыкальной библиотекой, параметры воспроизведения музыки, и т.д."
 
 msgctxt "#31119"
-msgid "Manage your weather addons and set cities to collect weather information."
+msgid ""
+"Manage your weather addons and set cities to collect weather information."
 msgstr "Управление дополнениями для отображения погоды, установка городов для прогноза и т.д."
 
 msgctxt "#31120"
 msgid "Set picture listing options and configure slideshow settings."
-msgstr ""
+msgstr "Параметры списка изображений, настройка слайд-шоу."
 
 msgctxt "#31121"
-msgid "Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable debugging and setup master lock."
-msgstr ""
+msgid ""
+"Setup and calibrate displays, configure audio output, setup remote controls,"
+" set power saving options, enable debugging and setup master lock."
+msgstr "Настройка и калибровка дисплея, настройка вывода аудио, дистанционного управления, параметров энергосбережения, включение отладки и настройка блокировки."
 
 msgctxt "#31122"
-msgid "Setup control of Kodi via UPnP and HTTP, configure file sharing, enable Zeroconf and configure AirPlay."
-msgstr ""
+msgid ""
+"Setup control of Kodi via UPnP and HTTP, configure file sharing, enable "
+"Zeroconf and configure AirPlay."
+msgstr "Настройка управления Kodi по UPnp и HTTP, настройка доступа к файлам, включение Zeroconf и настройка AirPlay."
 
 msgctxt "#31123"
 msgid "Profiles, File Manager, System Information and Settings Level."
 msgstr "Профили, менеджер файлов, информация о системе и т.д"
 
 msgctxt "#31124"
-msgid "Personalise your experience with profiles. Includes enabling login screen, profile creation and management."
+msgid ""
+"Personalise your experience with profiles. Includes enabling login screen, "
+"profile creation and management."
 msgstr ""
 
 msgctxt "#31125"
 msgid "Login"
-msgstr "Логин"
+msgstr "Вход"
 
 msgctxt "#31126"
 msgid "Last login"
 msgstr "Последний вход"
 
 msgctxt "#31127"
-msgid "View your system's information. Includes storage, network, and hardware information."
+msgid ""
+"View your system's information. Includes storage, network, and hardware "
+"information."
 msgstr "Просмотр информации о системе, включая информацию о накопителях, сети и оборудовании."
 
 msgctxt "#31128"
@@ -582,22 +601,6 @@ msgctxt "#31140"
 msgid "Download Subtitles"
 msgstr "Скачать субтитры"
 
-msgctxt "#31141"
-msgid "Jump to"
-msgstr "Перейти к"
-
-msgctxt "#31142"
-msgid "Create New Bookmark Here"
-msgstr ""
-
-msgctxt "#31143"
-msgid "Set Episode Bookmark Here"
-msgstr ""
-
-msgctxt "#31144"
-msgid "Clear all Bookmarks"
-msgstr "Очистить все закладки"
-
 msgctxt "#31145"
 msgid "percent remaining"
 msgstr "осталось процентов"
@@ -608,15 +611,15 @@ msgstr "Специальный"
 
 msgctxt "#31147"
 msgid "minutes"
-msgstr "минуты"
+msgstr "мин."
 
 msgctxt "#31148"
 msgid "hours"
-msgstr "часы"
+msgstr "ч."
 
 msgctxt "#31149"
 msgid "Hide OSD controls"
-msgstr "Скрыть элементы управления OSD"
+msgstr "Скрыть элементы управления экранного меню"
 
 msgctxt "#31150"
 msgid "Hides the Stop, Play, Pause, etc buttons from the music and video OSD."
@@ -644,7 +647,7 @@ msgstr "Версия сборки"
 
 msgctxt "#31156"
 msgid "Capacity"
-msgstr "Количество"
+msgstr ""
 
 msgctxt "#31157"
 msgid "Current Date and Time"
@@ -672,35 +675,35 @@ msgstr "Показать"
 
 msgctxt "#31163"
 msgid "Start Party Mode"
-msgstr "Запустить режим 'Вечеринка'"
+msgstr "Начать 'Вечеринку'"
 
 msgctxt "#31164"
 msgid "Next Up"
-msgstr "Следующая"
+msgstr ""
 
 msgctxt "#31165"
 msgid "Choose Art"
 msgstr ""
 
 msgctxt "#31166"
-msgid "Open Visualiser"
-msgstr "Открыть визуализацию"
+msgid "Open Visualisation"
+msgstr ""
 
 msgctxt "#31167"
 msgid "Recently Added Movies"
-msgstr "Недавно добавленные фильмы"
+msgstr "Последние фильмы"
 
 msgctxt "#31168"
 msgid "Your Movies"
-msgstr "Ваши фильмы"
+msgstr "Фильмы"
 
 msgctxt "#31169"
 msgid "In Progress Movies"
-msgstr "В процессе просмотра"
+msgstr "Просматриваемые фильмы"
 
 msgctxt "#31170"
 msgid "Kids Movies"
-msgstr "Детские фильмы"
+msgstr "Фильмы: Детские"
 
 msgctxt "#31171"
 msgid "Action and Adventure Movies"
@@ -708,11 +711,11 @@ msgstr "Фильмы: Экшен и Приключения"
 
 msgctxt "#31172"
 msgid "Comedy Movies"
-msgstr "Комедии"
+msgstr "Фильмы: Комедии"
 
 msgctxt "#31173"
 msgid "Sci-Fi Movies"
-msgstr "Фантастика"
+msgstr "Фильмы: Фантастика"
 
 msgctxt "#31174"
 msgid "Top Rated Movies"
@@ -720,11 +723,11 @@ msgstr "Лучшие фильмы"
 
 msgctxt "#31175"
 msgid "Recently Updated TV Shows"
-msgstr "Недавно обновленные сериалы"
+msgstr ""
 
 msgctxt "#31176"
 msgid "Your TV Shows"
-msgstr "Ваши сериалы"
+msgstr "Сериалы"
 
 msgctxt "#31177"
 msgid "In Progress TV Shows"
@@ -732,7 +735,7 @@ msgstr "Просматриваемые сериалы"
 
 msgctxt "#31178"
 msgid "Kids TV Shows"
-msgstr "Детские сериалы"
+msgstr "Сериалы: Детские"
 
 msgctxt "#31179"
 msgid "Action and Adventure TV Shows"
@@ -740,11 +743,11 @@ msgstr "Сериалы: Экшен и Приключения"
 
 msgctxt "#31180"
 msgid "Comedy TV Shows"
-msgstr "Комедиийные сериалы"
+msgstr "Сериалы: Комедии"
 
 msgctxt "#31181"
 msgid "Sci-Fi TV Shows"
-msgstr "Фантастические сериалы"
+msgstr "Сериалы: Фантастика"
 
 msgctxt "#31182"
 msgid "Top Rated TV Shows"
@@ -756,19 +759,19 @@ msgstr "Недавно прослушанные альбомы"
 
 msgctxt "#31184"
 msgid "Your Albums"
-msgstr "Ваши альбомы"
+msgstr "Альбомы"
 
 msgctxt "#31185"
 msgid "Recently Added Albums"
-msgstr "Недавно добавленные альбомы"
+msgstr "Последние альбомы"
 
 msgctxt "#31186"
 msgid "Your Artists"
-msgstr "Ваши артисты"
+msgstr "Артисты"
 
 msgctxt "#31187"
 msgid "Your Genres"
-msgstr "Ваши жанры"
+msgstr "Жанры"
 
 msgctxt "#31188"
 msgid "Top Rated Albums"
@@ -780,7 +783,7 @@ msgstr "Лучшие песни"
 
 msgctxt "#31190"
 msgid "Your Songs"
-msgstr "Ваши песни"
+msgstr "Песни"
 
 msgctxt "#31191"
 msgid "Video root"
@@ -788,11 +791,11 @@ msgstr ""
 
 msgctxt "#31192"
 msgid "Your Music Videos"
-msgstr "Ваши музыкальные видео"
+msgstr "Музыкальные видео"
 
 msgctxt "#31193"
 msgid "Your Video Add-ons"
-msgstr "Ваши Видео дополнения"
+msgstr "Видеодополнения"
 
 msgctxt "#31194"
 msgid "Personal Rating"
@@ -800,11 +803,11 @@ msgstr "Индивидуальный рейтинг"
 
 msgctxt "#31195"
 msgid "Your Add-ons"
-msgstr "Ваши дополнения"
+msgstr "Дополнения"
 
 msgctxt "#31196"
 msgid "Your Android Apps"
-msgstr "Ваши приложения для Android"
+msgstr "Приложения Android"
 
 msgctxt "#31197"
 msgid "Widget"
@@ -844,11 +847,11 @@ msgstr "Обновить информацию"
 
 msgctxt "#31206"
 msgid "Enable Auto-Update"
-msgstr "Включить автоматическое обновление"
+msgstr "Включить автообновление"
 
 msgctxt "#31207"
 msgid "Disable Auto-Update"
-msgstr "Отключить автоматическое обновление"
+msgstr "Отключить автообновление"
 
 msgctxt "#31208"
 msgid "Enable Higher Levels"
@@ -860,17 +863,20 @@ msgstr ""
 
 msgctxt "#31210"
 msgid "Set View for all"
-msgstr "Установить вид всех"
+msgstr ""
 
 #: \16x9\SkinSettings.xml:287
 msgctxt "#31211"
 msgid "Preload widgets on startup"
-msgstr "Предварительная загрузка виджетов на старте"
+msgstr "Предварительная загрузка виджетов при запуске"
 
 #: \16x9\Variables.xml:1512
 msgctxt "#31212"
-msgid "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
-msgstr "Активирует предзагрузку виджетов на старте. При отключении, обложка не будет ждать, пока будут загружены все виджеты. Пожалуйста, обратите внимание, что это может вызвать некоторые незначительные глюки анимации при запуске."
+msgid ""
+"Activates the preloading of widgets on startup. By disabling it, the skin "
+"won't wait until all widgets are loaded. Please note that this can cause "
+"some minor animation glitches on startup."
+msgstr ""
 
 #: \16x9\Variables.xml:65
 msgctxt "#31213"
@@ -931,7 +937,7 @@ msgstr "Прямой"
 #: \16x9\Custom_Home_Widgets.xml:188
 msgctxt "#31225"
 msgid "No."
-msgstr ""
+msgstr "Нет."
 
 #: \16x9\IncludesViewTypes.xml:996
 msgctxt "#31226"
@@ -946,7 +952,7 @@ msgstr "Резервное копирование или восстановле�
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"
 msgid "Backup, restore or reset skin configuration."
-msgstr "Резервное копирование и восстановление, сброс настроек обложки."
+msgstr "Резервное копирование, восстановление и сброс настроек обложки."
 
 #: \16x9\SkinSettings.xml:482
 msgctxt "#31229"
@@ -966,17 +972,20 @@ msgstr "Сбросить настройки обложки"
 #: /16x9/SkinSettings.xml:475
 msgctxt "#31232"
 msgid "Set default Favourites layout"
-msgstr "Установить шаблон по умолчанию для Избранное"
+msgstr ""
 
 #: /16x9/Variables.xml:1865
 msgctxt "#31233"
-msgid "Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want them displayed with the poster.[CR]Default is 'Square Info'."
+msgid ""
+"Changes the layout of the favourite items. Useful if you use the favourites "
+"for your favourite movies and you want them displayed with the "
+"poster.[CR]Default is 'Square Info'."
 msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
 msgid "View movie info"
-msgstr "Информация о фильме"
+msgstr "О фильме"
 
 #: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
 msgctxt "#31235"
@@ -1006,12 +1015,12 @@ msgstr "Премьера"
 #: /16x9/VideoOSD.xml:288
 msgctxt "#31240"
 msgid "View X-Ray"
-msgstr "О фильме"
+msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:218
 msgctxt "#31241"
 msgid "View actor info"
-msgstr "Информация об актёре"
+msgstr "О актёре"
 
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
@@ -1031,7 +1040,7 @@ msgstr "Случайный фильм"
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
 msgid "Newest Show"
-msgstr "Новые сериалы"
+msgstr "Новый сериал"
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
@@ -1078,6 +1087,26 @@ msgctxt "#31254"
 msgid "Recommended Movie/Show"
 msgstr "Рекомендуемый Фильм/Сериал"
 
+#: /16x9/VideoOSDSettings.xml:146
+msgctxt "#31255"
+msgid "3D enabled"
+msgstr "3D включено"
+
+#: /16x9/VideoOSDSettings.xml:167
+msgctxt "#31256"
+msgid "Watch as 2D"
+msgstr "Смотреть в 2D"
+
+#: /16x9/VideoOSDSettings.xml:181
+msgctxt "#31257"
+msgid "Change mode"
+msgstr "Изменить режим"
+
+#: /shortcuts/overrides.xml:31
+msgctxt "#31258"
+msgid "3D Movies"
+msgstr "3D фильмы"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Группа Виджетов 1"
@@ -1120,7 +1149,7 @@ msgstr "Установить виджет"
 
 msgctxt "#31510"
 msgid "IMDB Top250 Movies"
-msgstr "Top250 фильмов IMDB"
+msgstr "Фильмы IMDB Top250"
 
 msgctxt "#31511"
 msgid "TuneIn Recents"
@@ -1128,7 +1157,7 @@ msgstr ""
 
 msgctxt "#31512"
 msgid "Audio Add-ons"
-msgstr "Аудио Дополнения"
+msgstr "Аудиодополнения"
 
 msgctxt "#31513"
 msgid "TuneIn Local"
@@ -1140,31 +1169,31 @@ msgstr ""
 
 msgctxt "#31515"
 msgid "Drama and Thriller Movies"
-msgstr "Фильмы: Драма и Триллер"
+msgstr "Фильмы: Триллеры и Драмы"
 
 msgctxt "#31516"
 msgid "Drama and Thriller TV Shows"
-msgstr "Сериалы: Драма и Триллер"
+msgstr "Сериалы: Триллеры и Драмы"
 
 msgctxt "#31517"
 msgid "War and History Movies"
-msgstr "Военные и Исторические фильмы"
+msgstr "Фильмы: Военные и Исторические"
 
 msgctxt "#31518"
 msgid "War and History TV Shows"
-msgstr "Военные и Исторические сериалы"
+msgstr "Сериалы: Военные и Исторические"
 
 msgctxt "#31519"
 msgid "Video Add-ons"
-msgstr "Дополнения - Видео"
+msgstr "Видеодополнения"
 
 msgctxt "#31520"
 msgid "Program Add-ons"
-msgstr "Дополнения - Программы"
+msgstr "Программные дополнения"
 
 msgctxt "#31521"
 msgid "Picture Add-ons"
-msgstr "Дополнения - Изображение"
+msgstr "Фотодополнения"
 
 msgctxt "#31522"
 msgid "New Search"
@@ -1172,18 +1201,20 @@ msgstr "Новый поиск"
 
 msgctxt "#31523"
 msgid "Text Input"
-msgstr "Ввод текста"
+msgstr ""
 
 msgctxt "#31524"
 msgid "Numeric Input"
-msgstr "Цифровой ввод"
+msgstr ""
 
 msgctxt "#31525"
 msgid "Skip Search menu item"
 msgstr "Пропустить пункт меню Поиск"
 
 msgctxt "#31526"
-msgid "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
+msgid ""
+"Enable this, if your first main menu item is 'Search' and you want the next "
+"item focused after Kodi has been started."
 msgstr ""
 
 msgctxt "#31527"
@@ -1223,11 +1254,15 @@ msgid "Warning: No mouse support"
 msgstr "Внимание: Мышь не поддерживается"
 
 msgctxt "#31536"
-msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I do this for you?"
+msgid ""
+"This skin has no mouse support. It's highly recommended to disable mouse "
+"controls in Kodi to prevent issues. Should I do this for you?"
 msgstr ""
 
 msgctxt "#31537"
-msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
+msgid ""
+"This skin has no mouse support. It's highly recommended to disable mouse "
+"controls in Kodi. Otherwise this can cause bugs and errors in some windows."
 msgstr ""
 
 msgctxt "#31538"
@@ -1235,11 +1270,15 @@ msgid "Better fTV experience"
 msgstr ""
 
 msgctxt "#31539"
-msgid "It's recommended to disable 'Show parent folders' and 'Show all items'. Should I do this for you?"
-msgstr "Рекомендуется отключить 'Показывать родительские папки' и 'Показывать все пункты'. Внести эти изменения для вас?"
+msgid ""
+"It's recommended to disable 'Show parent folders' and 'Show all items'. "
+"Should I do this for you?"
+msgstr "Рекомендуется отключить 'Показывать родительские папки' и 'Показывать все объекты'. Внести эти изменения для вас?"
 
 msgctxt "#31540"
-msgid "Still there? Press 'Continue' to watch the next episode, otherwise the playback will be stopped."
+msgid ""
+"Still there? Press 'Continue' to watch the next episode, otherwise the "
+"playback will be stopped."
 msgstr ""
 
 msgctxt "#31541"

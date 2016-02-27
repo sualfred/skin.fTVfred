@@ -7,6 +7,8 @@
 	<thumbnail label="157">special://skin/extras/default/videos.jpg</thumbnail>
 	<thumbnail label="15016">special://skin/extras/default/games.jpg</thumbnail>
 	<thumbnail label="YouTube">special://skin/extras/default/youtube.jpg</thumbnail>
+	<thumbnail label="19021">special://skin/extras/default/radio.jpg</thumbnail>
+	<thumbnail label="427">special://skin/extras/default/disc.jpg</thumbnail>
 	<icon labelID="13009">DefaultQuit.png</icon>
 	<icon labelID="20151">DefaultQuit.png</icon>
 	<icon labelID="13011">DefaultSleep.png</icon>
