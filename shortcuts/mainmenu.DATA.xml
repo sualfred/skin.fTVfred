@@ -5,7 +5,7 @@
 		<label>137</label>
 		<label2>Custom shortcut</label2>
 		<icon />
-		<thumb />
+		<thumb>special://skin/extras/default/search.jpg</thumb>
 		<action>RunScript(script.globalsearch)</action>
 	</shortcut>
 	<shortcut>
@@ -45,7 +45,7 @@
 		<label>10006</label>
 		<label2>Common Shortcut</label2>
 		<icon>DefaultVideo.png</icon>
-		<thumb />
+		<thumb>special://skin/extras/default/videos.jpg</thumb>
 		<action>ActivateWindow(Videos,root)</action>
 	</shortcut>
 	<shortcut>
@@ -68,8 +68,8 @@
 		<defaultID>pictures</defaultID>
 		<label>31100</label>
 		<label2>Common Shortcut</label2>
-		<icon>DefaultPicture.png</icon>
-		<thumb />
+		<icon>DefaultPicture.png</icon>		
+		<thumb>special://skin/extras/default/photos.jpg</thumb>
 		<action>ActivateWindow(Pictures)</action>
 	</shortcut>
 	<shortcut>
@@ -94,7 +94,7 @@
 		<label>13012</label>
 		<label2>Kodi Command</label2>
 		<icon>DefaultShortcut.png</icon>
-		<thumb />
+		<thumb>special://skin/extras/default/power.jpg</thumb>
 		<action>ActivateWindow(ShutdownMenu)</action>
 	</shortcut>
 </shortcuts>

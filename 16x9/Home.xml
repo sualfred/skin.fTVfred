@@ -16,6 +16,17 @@
 				<font>-</font>
 				<label>$INFO[Weather.Conditions]</label>
 			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>$INFO[Container(99).ListItem.Thumb]</texture>
+				<include>VisibleFadeAnimation</include>
+				<fadetime>200</fadetime>
+				<visible>!IsEmpty(Container(99).ListItem.Thumb)</visible>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>special://skin/extras/backgrounds/wp_overlay.png</texture>
+			</control>
 			<!-- Main list -->
 			<control id="99" type="list">
 				<left>84</left>

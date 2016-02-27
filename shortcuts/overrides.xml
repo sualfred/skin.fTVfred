@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<overrides>	
+<overrides>		
+	<backgroundBrowse>True</backgroundBrowse>
+	<thumbnail label="137" >special://skin/extras/default/search.jpg</thumbnail>
+	<thumbnail label="33060">special://skin/extras/default/power.jpg</thumbnail>
+	<thumbnail label="31100">special://skin/extras/default/photos.jpg</thumbnail>
+	<thumbnail label="157">special://skin/extras/default/videos.jpg</thumbnail>
+	<thumbnail label="15016">special://skin/extras/default/games.jpg</thumbnail>
+	<thumbnail label="YouTube">special://skin/extras/default/youtube.jpg</thumbnail>
 	<icon labelID="13009">DefaultQuit.png</icon>
 	<icon labelID="20151">DefaultQuit.png</icon>
 	<icon labelID="13011">DefaultSleep.png</icon>

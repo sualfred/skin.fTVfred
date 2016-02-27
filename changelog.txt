@@ -1,3 +1,6 @@
+2.0.41:
+- Added background support
+
 2.0.40:
 - Added 3D overlay flag
 - Added 3D Movies for widgets
