@@ -31,11 +31,11 @@
 			<left>190</left>
 			<centertop>50%</centertop>
 			<width>1540</width>
-			<height>664</height>
+			<height>748</height>
 			<include>DialogZoomAnimation</include>
 			<control type="image">
 				<width>1540</width>
-				<height>664</height>
+				<height>748</height>
 				<texture>dialogs/skin_shortcuts_back.png</texture>
 			</control>
 			<!-- Heading -->
@@ -65,7 +65,7 @@
 			<control type="list" id="211">
 				<top>60</top>
 				<width>670</width>
-				<height>504</height>
+				<height>588</height>
 				<onleft>noop</onleft>
 				<onright>304</onright>
 				<onup>noop</onup>
@@ -315,7 +315,7 @@
 			</control>
 			<control type="image">
 				<left>670</left>
-				<top>480</top>
+				<top>564</top>
 				<width>870</width>
 				<height>84</height>
 				<texture border="3">settings/button_no_focus.png</texture>

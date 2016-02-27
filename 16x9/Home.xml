@@ -18,10 +18,11 @@
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
+				<aspectratio>scale</aspectratio>
 				<texture>$INFO[Container(99).ListItem.Thumb]</texture>
 				<include>VisibleFadeAnimation</include>
 				<fadetime>200</fadetime>
-				<visible>!IsEmpty(Container(99).ListItem.Thumb)</visible>
+				<visible>!IsEmpty(Container(99).ListItem.Thumb) + !StringCompare(Container(99).ListItem.Thumb,DefaultAddonNone.png)</visible>
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
