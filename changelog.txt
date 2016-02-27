@@ -1,3 +1,7 @@
+2.0.43:
+- Added option to change the thumbnail for the shutdown menu
+- Added "available in 3D" to banners
+
 2.0.42:
 - Fixed skin shortcuts manage dialog dimensions
 - Added "Deactivate" to background settings dialog to get rid of the addon thumbnails

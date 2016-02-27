@@ -285,7 +285,7 @@
 					<visible>SubString(Container(211).ListItem.Property(ftvWidget),widget,left)</visible>
 					<onclick>ActivateWindow(1105)</onclick>
 				</control>
-				<!-- Change action -->
+				<!-- Change background -->
 				<control type="button" id="311">
 					<width>870</width>
 					<height>84</height>
@@ -298,6 +298,20 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
+				</control>
+				<!-- Change thumbnail -->
+				<control type="button" id="306">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>$ADDON[script.skinshortcuts 32026]</label>
+					<visible>!StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<!-- Remove -->
 				<control type="button" id="302">
