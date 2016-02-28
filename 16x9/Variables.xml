@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<includes>
+<includes>	
 	<variable name="PVRWidgetReload">
 		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
 		<value>-</value>
+	</variable>
+	<!-- Vis Animation -->
+	<variable name="VisAnimation">
+		<value condition="Skin.HasSetting(VisAnimation)">$LOCALIZE[16041]</value>
+		<value>$LOCALIZE[351]</value>
+	</variable>
+	<variable name="VisCrossfade">
+		<value condition="Skin.HasSetting(VisCrossfade)">$LOCALIZE[16041]</value>
+		<value>$LOCALIZE[351]</value>
 	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreContent">

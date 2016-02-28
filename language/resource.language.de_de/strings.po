@@ -3,13 +3,14 @@
 # Addon id: skin.ftv
 # Addon Provider: Hitcher
 # Translators:
+# Translators:
 # sualfred <su4lfred@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-26 13:33+0000\n"
+"PO-Revision-Date: 2016-02-28 19:17+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -433,6 +434,11 @@ msgctxt "#31064"
 msgid "Custom background image"
 msgstr "Benutzerdefiniertes Hintergrundbild"
 
+#: /16x9/MusicOSD.xml:269
+msgctxt "#31102"
+msgid "Pan and zoom fanart"
+msgstr "Fanart Zoom Animation"
+
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
 msgstr "Blende 'Mauswarnung' aus"
@@ -599,6 +605,11 @@ msgstr "Deaktiviere Untertitel"
 msgctxt "#31140"
 msgid "Download Subtitles"
 msgstr "Untertitel herunterladen"
+
+#: /16x9/MusicOSD.xml:269
+msgctxt "#31141"
+msgid "Crossfade fanart"
+msgstr "Crossfade Fanart"
 
 msgctxt "#31145"
 msgid "percent remaining"

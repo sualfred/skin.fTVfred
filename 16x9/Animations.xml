@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<!-- Visualisation animation -->
+	<include name="VisAnimation">
+		<animation effect="zoom" start="110" end="130" center="auto" time="14000" pulse="true" condition="Skin.HasSetting(VisAnimation)" reversible="false">Conditional</animation>
+		<animation effect="slide" start="-20,-20" end="40,40" time="15000" pulse="true" condition="Skin.HasSetting(VisAnimation)" reversible="false">Conditional</animation>
+		<animation effect="zoom" end="100" center="auto" time="0" condition="!Skin.HasSetting(VisAnimation)" reversible="false">Conditional</animation>
+		<animation effect="slide" end="0,0" time="0" condition="!Skin.HasSetting(VisAnimation)" reversible="false">Conditional</animation>
+	</include>
 	<!--ViewType bounce animation-->
 	<include name="ViewTypeBounceAnimation">
 		<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">

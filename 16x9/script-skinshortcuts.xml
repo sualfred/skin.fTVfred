@@ -21,8 +21,11 @@
 			<ondown condition="!IsEmpty(Container(211).ListItemNoWrap(1).Label)">Control.Move(211,1)</ondown>
 			<ondown condition="IsEmpty(Container(211).ListItemNoWrap(1).Label)">9001</ondown>
 		</control>
-		<!-- 404 -->
+		<!-- Hidden Buttons -->
 		<control type="button" id="404">
+			<include>HiddenControl</include>
+		</control>
+		<control type="button" id="311">
 			<include>HiddenControl</include>
 		</control>
 		<include>DialogBackgroundImage</include>
@@ -286,7 +289,7 @@
 					<onclick>ActivateWindow(1105)</onclick>
 				</control>
 				<!-- Change background -->
-				<control type="button" id="311">
+				<control type="button" id="999">
 					<width>870</width>
 					<height>84</height>
 					<font>Light32</font>
@@ -297,6 +300,8 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
+					<onclick>SetProperty(LabelOverride,$ADDON[script.skinshortcuts 32045],home)</onclick>
+					<onclick>SendClick(311)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<!-- Change thumbnail -->

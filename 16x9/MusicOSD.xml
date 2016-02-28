@@ -240,6 +240,7 @@
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onclick>ActivateWindow(122)</onclick>
+						<visible>Visualisation.Enabled</visible>
 					</control>
 					<!-- Visualisation settings -->
 					<control type="button" id="11">
@@ -254,6 +255,37 @@
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+						<visible>Visualisation.Enabled</visible>
+					</control>
+					<!-- Pan Zoom -->
+					<control type="togglebutton" id="102">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>left</align>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<label>$LOCALIZE[31141]$VAR[VisCrossfade, : ]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.ToggleSetting(VisCrossfade)</onclick>
+						<visible>Visualisation.Enabled</visible>
+					</control>
+					<!-- Pan Zoom -->
+					<control type="togglebutton" id="101">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>left</align>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<label>$LOCALIZE[31102]$VAR[VisAnimation, : ]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.ToggleSetting(VisAnimation)</onclick>
+						<visible>!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)</visible>
 					</control>
 				</control>
 				<!-- Right Options -->			

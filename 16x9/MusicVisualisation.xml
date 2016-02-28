@@ -5,13 +5,19 @@
 	<defaultcontrol>-</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<controls>
+		<!-- Visualisation -->
+		<control id="2" type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Visualisation.Enabled</visible>
+		</control>
 		<!-- Fanart -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<fadetime>400</fadetime>
 			<colordiffuse>26ffffff</colordiffuse>
-			<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshow))</visible>
+			<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + [!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)]</visible>
 			<texture fallback="special://skin/extras/backgrounds/music_visualiser.jpg" background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<include>VisAnimation</include>
 		</control>
 		<!-- Artist slideshow -->
 		<control type="multiimage">
@@ -22,11 +28,8 @@
 			<timeperimage>10000</timeperimage>
 			<colordiffuse>26ffffff</colordiffuse>
 			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-		</control>
-		<!-- Visualisation -->
-		<control id="2" type="visualisation">
-			<include>FullscreenDimensions</include>
-			<visible>IsEmpty(Visualisation.Enabled)</visible>
+			<include>VisAnimation</include>
+			<visible>!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)</visible>
 		</control>
 		<control type="group">
 			<visible>!Window.IsActive(seekbar) + !Window.IsActive(musicosd) + Player.ShowInfo</visible>
