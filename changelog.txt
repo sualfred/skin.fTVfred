@@ -1,3 +1,8 @@
+2.0.44:
+- Added skin helper PVR thumbs for recordings
+- Fixed button width for addon dialog
+- Updated RU translations
+
 2.0.43:
 - Added option to change the thumbnail for the shutdown menu
 - Added "available in 3D" to banners
