@@ -356,7 +356,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+						<label>$LOCALIZE[590]$VAR[RandomLabel, : ]</label>
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onclick>PlayerControl(Random)</onclick>

@@ -13,6 +13,11 @@
 		<value condition="Skin.HasSetting(VisCrossfade)">$LOCALIZE[16041]</value>
 		<value>$LOCALIZE[351]</value>
 	</variable>
+	<!-- Random music label -->
+	<variable name="RandomLabel">
+		<value condition="StringCompare(Playlist.Random,$LOCALIZE[590])">$LOCALIZE[16041]</value>
+		<value>$LOCALIZE[351]</value>
+	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreContent">
 		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>
