@@ -539,7 +539,7 @@
 			<!-- Splash -->
 			<control type="group">
 				<visible>[Skin.HasSetting(PreloadDeactivated) | Control.IsVisible(91)] + !Control.HasFocus(99)</visible>
-				<animation effect="fade" start="100" end="0" time="500" delay="1500" condition="" reversible="false">Hidden</animation>
+				<animation effect="fade" start="100" end="0" time="120" delay="1700" condition="" reversible="false">Hidden</animation>
 				<control type="image">
 					<width>1920</width>
 					<height>1080</height>

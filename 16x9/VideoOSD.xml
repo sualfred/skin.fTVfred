@@ -394,6 +394,22 @@
 					<onclick>PlayerControl(Record)</onclick>
 					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
 				</control>
+				<!-- Teletext -->
+				<control id="20" type="button">
+					<width>600</width>
+					<height>58</height>
+					<font>Light32</font>
+					<align>right</align>
+					<label>$LOCALIZE[23050]</label>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<focusedcolor>ffffc04b</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(Teletext)</onclick>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
 				<!-- EPG -->
 				<control id="18" type="button">
 					<width>600</width>
