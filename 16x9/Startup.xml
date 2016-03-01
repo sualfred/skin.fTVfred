@@ -24,7 +24,7 @@
 		</control>
 		<!-- trigger -->
 		<control type="button" id="40">
-			<onfocus>SetProperty(preload,1,Home)</onfocus>
+			<onfocus>SetProperty(Preload,1,Home)</onfocus>
 			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">SetFocus(10)</onfocus>
 			<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1)">SetFocus(30)</onfocus>
 			<texturenofocus>-</texturenofocus>
@@ -51,6 +51,9 @@
 		<control type="button" id="30">
 			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
 			<!-- workaround to fill the tv channel list correclty -->
+			<onfocus>SetProperty(WaitForControl,1,Home)</onfocus>
+			<onfocus>AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onfocus>
+			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 			<onfocus condition="System.GetBool(pvrmanager.enabled)">AlarmClock(PVRWidgetWorkaround,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
 			<onfocus condition="!System.GetBool(pvrmanager.enabled)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>

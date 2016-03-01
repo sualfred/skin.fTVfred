@@ -4,6 +4,10 @@
 		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
 		<value>-</value>
 	</variable>
+	<variable name="PreloadLabel">
+		<value condition="Control.IsVisible(91)">$LOCALIZE[31532]</value>
+		<value condition="!Control.IsVisible(91)">$LOCALIZE[31533]</value>
+	</variable>
 	<!-- Vis Animation -->
 	<variable name="VisAnimation">
 		<value condition="Skin.HasSetting(VisAnimation)">$LOCALIZE[16041]</value>
