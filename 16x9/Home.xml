@@ -6,12 +6,11 @@
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
-	<onload condition="Window.Previous(startup)">SetProperty(FadeOutDelay,1,Home)</onload>	
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
 		<control type="group">
 			<!-- Hide elements until  Preloading is done -->
-			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(Preload)) | System.HasAlarm(WaitForPreload) | Control.IsVisible(91)">Conditional</animation>
+			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(Preload)) | System.HasAlarm(WaitForPreload) | [Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))]">Conditional</animation>
 			<!-- Hidden control to load weather conditions -->
 			<control type="label">
 				<font>-</font>
@@ -576,7 +575,6 @@
 				<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(WaitForPreload,Control.SetFocus(99,1),00:01,silent)</onfocus>
 				<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">AlarmClock(WaitForPreload,Control.SetFocus(99,0),00:01,silent)</onfocus>
 				<onfocus>AlarmClock(Preload,ClearProperty(Preload,Home),00:01,silent)</onfocus>
-				<onfocus>AlarmClock(FadeOutDelay,ClearProperty(FadeOutDelay,Home),00:05,silent)</onfocus>
 			</control>
 		</controls>
 	</window>
