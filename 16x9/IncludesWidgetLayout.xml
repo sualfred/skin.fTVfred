@@ -15,7 +15,7 @@
 			<width>1500</width>
 			<height>331</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-			<texture diffuse="views/highlight_banner_mask.png">$INFO[ListItem.Property(bannerArt)]</texture>
+			<texture diffuse="views/highlight_banner_mask.png" background="true">$INFO[ListItem.Property(bannerArt)]</texture>
 		</control>
 		<control type="image">
 			<width>58</width>
