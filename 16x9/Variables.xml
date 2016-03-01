@@ -18,6 +18,10 @@
 		<value condition="StringCompare(Playlist.Random,$LOCALIZE[590])">$LOCALIZE[16041]</value>
 		<value>$LOCALIZE[351]</value>
 	</variable>
+	<!-- Background Value -->
+	<variable name="BackgroundLabel2">
+		<value condition="!StringCompare(Container(211).ListItem.Thumb,DefaultAddonNone.png)">$INFO[Container(211).ListItem.Thumb]</value>
+	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreContent">
 		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>

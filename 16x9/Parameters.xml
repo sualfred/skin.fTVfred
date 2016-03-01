@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Reset Parameters -->
+	<include name="ResetAllWidgets">		
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-1)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-2)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-3)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-4)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-5)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-6)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-7)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetLabel-8)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-1)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-2)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-3)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-4)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-5)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-6)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-7)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAction-8)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-1)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-2)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-3)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-4)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-5)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-6)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-7)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetList-8)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-1)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-2)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-3)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-4)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-5)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-6)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-7)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-8)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetView)</onfocus>
+		<onfocus>Skin.Reset(ftvLabelWidget$PARAM[ID])</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAd)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetAd-Label)</onfocus>
+	</include>
 	<!--Info Dialog Fake List -->
 	<include name="InfoDialogVideoList">		
 		<control type="group">

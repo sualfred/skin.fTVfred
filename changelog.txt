@@ -1,3 +1,7 @@
+2.1.0:
+- Added option to backup/restore custom widget groups
+- Some more minor changes
+
 2.0.46:
 - Added CU Lyrics support
 - Fixed "Random" togglebutton labels

@@ -596,6 +596,21 @@ msgctxt "#31141"
 msgid "Crossfade fanart"
 msgstr ""
 
+#: /16x9/script-skinshortcuts.xml:422
+msgctxt "#31142"
+msgid "Restore menu to skin defaults"
+msgstr ""
+
+#: /16x9/script-skinshortcuts.xml:424
+msgctxt "#31143"
+msgid "Reset all custom widgets"
+msgstr ""
+
+#: /16x9/script-skinshortcuts.xml:426
+msgctxt "#31144"
+msgid "Backup custom widgets"
+msgstr ""
+
 msgctxt "#31145"
 msgid "percent remaining"
 msgstr "percent remaining"
@@ -1103,6 +1118,16 @@ msgstr "Change mode"
 msgctxt "#31258"
 msgid "3D Movies"
 msgstr "3D Movies"
+
+#: /16x9/script-skinshortcuts.xml:428
+msgctxt "#31259"
+msgid "Restore custom widgets backup"
+msgstr ""
+
+#: /16x9/script-skinshortcuts.xml:421
+msgctxt "#31260"
+msgid "Reset / Backup"
+msgstr ""
 
 msgctxt "#31500"
 msgid "Widget Group 1"

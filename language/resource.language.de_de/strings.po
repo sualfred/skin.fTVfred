@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-28 19:17+0000\n"
+"PO-Revision-Date: 2016-03-01 11:11+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -611,6 +611,21 @@ msgctxt "#31141"
 msgid "Crossfade fanart"
 msgstr "Crossfade Fanart"
 
+#: /16x9/script-skinshortcuts.xml:422
+msgctxt "#31142"
+msgid "Restore menu to skin defaults"
+msgstr "Menü auf Skin Standard zurücksetzen"
+
+#: /16x9/script-skinshortcuts.xml:424
+msgctxt "#31143"
+msgid "Reset all custom widgets"
+msgstr "Alle Widget-Gruppen zurücksetzen"
+
+#: /16x9/script-skinshortcuts.xml:426
+msgctxt "#31144"
+msgid "Backup custom widgets"
+msgstr "Widget-Sicherung erstellen"
+
 msgctxt "#31145"
 msgid "percent remaining"
 msgstr "Prozent verbleibend"
@@ -1116,6 +1131,16 @@ msgstr "Modus wechseln"
 msgctxt "#31258"
 msgid "3D Movies"
 msgstr "3D Filme"
+
+#: /16x9/script-skinshortcuts.xml:428
+msgctxt "#31259"
+msgid "Restore custom widgets backup"
+msgstr "Widget-Sicherung wiederherstellen"
+
+#: /16x9/script-skinshortcuts.xml:421
+msgctxt "#31260"
+msgid "Reset / Backup"
+msgstr "Reset / Backup"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

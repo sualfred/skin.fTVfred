@@ -28,6 +28,49 @@
 		<control type="button" id="311">
 			<include>HiddenControl</include>
 		</control>
+		<control type="button" id="308">
+			<include>HiddenControl</include>
+		</control>
+		<control type="button" id="50">
+			<include>HiddenControl</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">1000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">2000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">3000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">4000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">5000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">6000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">7000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">8000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">9000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">10000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">11000</param>
+			</include>
+			<include name="ResetAllWidgets">
+				<param name="ID">12000</param>
+			</include>
+			<onfocus>SetFocus(910)</onfocus>
+		</control>
 		<include>DialogBackgroundImage</include>
 		<!-- Main group -->
 		<control type="group">
@@ -300,6 +343,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
+					<label2>$VAR[BackgroundLabel2]</label2>
 					<onclick>SetProperty(LabelOverride,$ADDON[script.skinshortcuts 32045],home)</onclick>
 					<onclick>SendClick(311)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
@@ -365,7 +409,7 @@
 					<label>$ADDON[script.skinshortcuts 32000]</label>
 				</control>
 				<!-- Reset -->
-				<control type="button" id="308">
+				<control type="button" id="910">
 					<width>320</width>
 					<height>76</height>
 					<align>center</align>
@@ -374,7 +418,16 @@
 					<onup>303</onup>
 					<textoffsetx>23</textoffsetx>
 					<textoffsety>27</textoffsety>
-					<label>$ADDON[script.skinshortcuts 32028]</label>
+					<label>$LOCALIZE[31260]</label>
+					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31144])</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=backup,filter=Widget))</onclick>
+					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31259])</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=restore))</onclick>
+					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31143])</onclick>
+					<onclick>SetProperty(Dialog.3.BuiltIn,SetFocus(50))</onclick>
+					<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31142])</onclick>
+					<onclick>SetProperty(Dialog.4.BuiltIn,SendClick(308))</onclick>
+					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31260])</onclick>
 				</control>
 				<!-- Cancel Button -->
 				<control type="button" id="21">

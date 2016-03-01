@@ -815,6 +815,9 @@
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7])</onclick>
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8])</onclick>
 						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetView])</onclick>
+						<onclick>Skin.Reset(ftvLabelWidget$INFO[Window(home).Property(SubMenu)])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label])</onclick>
 					</control>
 					<!-- OK Button -->
 					<control type="button" id="1003">
