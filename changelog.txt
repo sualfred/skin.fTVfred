@@ -1,3 +1,7 @@
+2.1.2:
+- Replaced loading splash
+- Fixed dialog opening animation
+
 2.1.1:
 - Readded background=true to widgets. Sry lemon device users, but I don't want laggin' on real machines just because somebody is using crap hardware or an buggy Android device and is facing speed impacts.
 

@@ -38,7 +38,8 @@
 				<onup>SetProperty(Movement,1)</onup>
 				<ondown>noop</ondown>
 				<ondown>ClearProperty(Movement)</ondown>
-				<onleft>noop</onleft>
+				<onleft>noop</onleft>				
+				<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 				<!-- workaround to move the focused row after startup -->
@@ -140,7 +141,7 @@
 				<onfocus condition="System.HasAlarm(WaitForPreload) + StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
 				<!--on right-->
 				<onright>ClearProperty(MainMenuFocus,home)</onright>
-				<onright condition="SubString(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>				
+				<onright condition="SubString(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
 				<!-- #1 -->
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + IntegerGreaterThan(Container(1009).NumItems,0) + StringCompare(Container(1000).CurrentItem,1) + !IsEmpty(Skin.String(1000-WidgetAd))">Control.Move(1000,1)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + IntegerGreaterThan(Container(1000).NumItems,1)">SetFocus(1000)</onright>
@@ -539,20 +540,57 @@
 			<!-- Splash -->
 			<control type="group">
 				<visible>[Skin.HasSetting(PreloadDeactivated) | Control.IsVisible(91)] + !Control.HasFocus(99)</visible>
-				<animation effect="fade" start="100" end="0" time="500" delay="1500" condition="" reversible="false">Hidden</animation>
+				<animation type="Hidden">
+					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1700" />
+					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1700" />
+				</animation>
 				<control type="image">
-					<width>1920</width>
-					<height>1080</height>
+					<left>-96</left>
+					<top>-54</top>
+					<width>2112</width>
+					<height>1188</height>
 					<texture background="true">special://skin/extras/backgrounds/loading.jpg</texture>
 				</control>
-				<control type="label">
-					<top>495</top>
-					<font>Light24</font>
-					<textcolor>white</textcolor>
-					<align>center</align>
+				<control type="grouplist">
+					<top>765</top>
 					<width>1920</width>
+					<align>center</align>
+					<left>-10</left>
 					<height>200</height>
-					<label>$VAR[PreloadLabel]</label>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<width>47</width>
+						<height>46</height>
+						<aspectratio>keep</aspectratio>
+						<texture>home/loading_icon.png</texture>
+						<colordiffuse>ffb0b4b7</colordiffuse>
+						<visible>Control.IsVisible(91)</visible>
+					</control>
+					<control type="image">
+						<width>47</width>
+						<height>46</height>
+						<aspectratio>keep</aspectratio>
+						<texture>home/home_icon.png</texture>
+						<colordiffuse>ffb0b4b7</colordiffuse>
+						<visible>!Control.IsVisible(91)</visible>
+					</control>
+					<control type="label">
+						<font>Light32</font>
+						<textcolor>ffb0b4b7</textcolor>
+						<width>auto</width>
+						<height>41</height>
+						<label>$VAR[PreloadLabel]</label>
+					</control>
+				</control>
+				<control type="image">
+					<top>735</top>
+					<left>700</left>
+					<height>100</height>
+					<width>89</width>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>ffffffff</colordiffuse>
+					<texture>dialogs/gradient_animation.png</texture>
+					<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
 				</control>
 			</control>
 			<!-- Check if Preloading is in progress -->
