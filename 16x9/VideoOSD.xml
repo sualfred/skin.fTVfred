@@ -184,6 +184,16 @@
 					<texturenofocus>osd/osd_next_nf.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
+				<!-- Record -->
+				<control type="button" id="307">
+					<width>64</width>
+					<height>64</height>
+					<font>-</font>
+					<texturefocus>osd/osd_rec_fo.png</texturefocus>
+					<texturenofocus>osd/osd_rec_nf.png</texturenofocus>
+					<onclick>PlayerControl(Record)</onclick>
+					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
+				</control>
 			</control>
 			<!-- Options and Cast -->
 			<control type="group">
@@ -378,21 +388,21 @@
 					<onclick>PlayerControl(Next)</onclick>
 					<visible>Window.IsVisible(VideoFullScreen.xml) + system.getbool(videoplayer.autoplaynextitem)</visible>
 				</control>
-				<!-- Recording -->
+				<!-- Teletext -->
 				<control id="17" type="button">
 					<width>600</width>
 					<height>58</height>
 					<font>Light32</font>
 					<align>right</align>
-					<label>$VAR[RecordingLabel]</label>
+					<label>$LOCALIZE[23050]</label>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<focusedcolor>ffffc04b</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>PlayerControl(Record)</onclick>
-					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
+					<onclick>ActivateWindow(Teletext)</onclick>
+					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
 				<!-- EPG -->
 				<control id="18" type="button">
