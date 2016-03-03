@@ -14,9 +14,9 @@
 		</control>
 		<control type="grouplist">
 			<top>765</top>
-			<width>1920</width>
-			<align>center</align>
 			<left>-10</left>
+			<width>1920</width>
+			<align>center</align>			
 			<height>200</height>
 			<orientation>horizontal</orientation>
 			<control type="image">
@@ -33,16 +33,16 @@
 				<height>41</height>
 				<label>$LOCALIZE[31531]</label>
 			</control>
-			<control type="image">
-				<top>735</top>
-				<left>700</left>
-				<height>100</height>
-				<width>89</width>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>ffffffff</colordiffuse>
-				<texture>dialogs/gradient_animation.png</texture>
-				<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
-			</control>
+		</control>
+		<control type="image">
+			<top>735</top>
+			<left>700</left>
+			<height>100</height>
+			<width>89</width>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture>dialogs/gradient_animation.png</texture>
+			<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
 		</control>
 		<!-- trigger -->
 		<control type="button" id="40">
