@@ -566,14 +566,6 @@
 						<colordiffuse>ffb0b4b7</colordiffuse>
 						<visible>Control.IsVisible(91)</visible>
 					</control>
-					<control type="image">
-						<width>47</width>
-						<height>46</height>
-						<aspectratio>keep</aspectratio>
-						<texture>home/home_icon.png</texture>
-						<colordiffuse>ffb0b4b7</colordiffuse>
-						<visible>!Control.IsVisible(91)</visible>
-					</control>
 					<control type="label">
 						<font>Light32</font>
 						<textcolor>ffb0b4b7</textcolor>
