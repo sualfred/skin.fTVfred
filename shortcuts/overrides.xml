@@ -28,6 +28,7 @@
 	<icon labelID="20045">DefaultMastermode.png</icon>
 	<icon labelID="settings">DefaultSettings.png</icon>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
+
 	<ftv-groupings>
 		<node label="fTV">
 			<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
@@ -144,4 +145,7 @@
 	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
 	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>
 	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
+	<propertydefault labelID="movies" property="ftvWidget">widget1</propertydefault>
+	<propertydefault labelID="tvshows" property="ftvWidget">widget2</propertydefault>
+	<propertydefault labelID="music" property="ftvWidget">widget3</propertydefault>
 </overrides>

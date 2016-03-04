@@ -1,3 +1,12 @@
+2.1.4
+- Increased preloading timeout value
+- Fixed preloading issues
+- Added empty content info boxes for widgets/library items/weather
+
+2.1.3:
+- Added preload timeout and improvements
+- Added teletext button for live tv
+
 2.1.2:
 - Replaced loading splash
 - Fixed dialog opening animation

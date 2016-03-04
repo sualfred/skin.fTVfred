@@ -392,4 +392,60 @@
 			</content>
 		</control>
 	</include>
+	<include name="EmptyMessages">
+		<!-- Movies -->
+		<include name="NoContentMessage">
+			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),movies) | SubString(Container(99).ListItem.Property(list),library://video/movies/) | SubString(Container(99).ListItem.Property(list),videodb://movies/)] + !Library.HasContent(Movies) + !Skin.HasSetting(HideMoviesMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Header">$LOCALIZE[31264]</param>
+			<param name="Message">$LOCALIZE[31262]</param>
+			<param name="ShowButton">true</param>
+			<param name="ShowButton2">true</param>
+			<param name="Button">$LOCALIZE[1026]</param>
+			<param name="Action">ActivateWindow(Videos,Files,return)</param>
+			<param name="Action2">Skin.SetBool(HideMoviesMessage)</param>
+		</include>
+		<!-- TVShows -->
+		<include name="NoContentMessage">
+			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),tvshows) | SubString(Container(99).ListItem.Property(DefaultID),library://video/tvshows/) | SubString(Container(99).ListItem.Property(list),videodb://tvshows/)] + !Library.HasContent(TVShows) + !Skin.HasSetting(HideTVShowsMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Header">$LOCALIZE[31264]</param>
+			<param name="Message">$LOCALIZE[31262]</param>
+			<param name="ShowButton">true</param>
+			<param name="ShowButton2">true</param>
+			<param name="Button">$LOCALIZE[1026]</param>
+			<param name="Action">ActivateWindow(Videos,Files,return)</param>
+			<param name="Action2">Skin.SetBool(HideTVShowsMessage)</param>
+		</include>
+		<!-- Music -->
+		<include name="NoContentMessage">
+			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),music) | SubString(Container(99).ListItem.Property(list),library://music/) | SubString(Container(99).ListItem.Property(list),musicdb://)] + !Library.HasContent(Music) + !Skin.HasSetting(HideMusicMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Header">$LOCALIZE[31264]</param>
+			<param name="Message">$LOCALIZE[31262]</param>
+			<param name="ShowButton">true</param>
+			<param name="ShowButton2">true</param>
+			<param name="Button">$LOCALIZE[1026]</param>
+			<param name="Action">ActivateWindow(Music,Files,return)</param>
+			<param name="Action2">Skin.SetBool(HideMusicMessage)</param>
+		</include>
+		<!-- Weather -->
+		<include name="NoContentMessage">
+			<param name="Visible">StringCompare(Container(99).ListItem.Property(ftvWidget),weather) + IsEmpty(Window(Weather).Property(Day0.Outlook))</param>
+			<param name="Header">$LOCALIZE[412]</param>
+			<param name="Message">$LOCALIZE[31119]</param>
+			<param name="ShowButton">true</param>
+			<param name="Button">Weather settings</param>
+			<param name="Action">ActivateWindow(weathersettings)</param>
+		</include>
+		<!-- Empty widgets -->
+		<include name="NoContentMessage">
+			<param name="Visible">[[StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + !IntegerGreaterThan(Container(1000).NumItems,0)] | 	[StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + !IntegerGreaterThan(Container(2000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget3) + !IntegerGreaterThan(Container(3000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget4) + !IntegerGreaterThan(Container(4000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget5) + !IntegerGreaterThan(Container(5000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget6) + !IntegerGreaterThan(Container(6000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget7) + !IntegerGreaterThan(Container(7000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + !IntegerGreaterThan(Container(8000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget9) + !IntegerGreaterThan(Container(9000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget10) + !IntegerGreaterThan(Container(10000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget11) + !IntegerGreaterThan(Container(11000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget12) + !IntegerGreaterThan(Container(12000).NumItems,0)]]</param>
+			<param name="Header">$LOCALIZE[31263]</param>
+			<param name="Message">$LOCALIZE[31266]</param>
+			<param name="ShowButton">true</param>
+			<param name="ShowButton2">true</param>
+			<param name="Button">$LOCALIZE[31265]</param>
+			<param name="Button2">$LOCALIZE[31049]</param>
+			<param name="Action">ActivateWindow(1105)</param>
+			<param name="Action2">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</param>
+		</include>
+	</include>
 </includes>

@@ -22,7 +22,7 @@
 		<label2>Common Shortcut</label2>
 		<icon>DefaultMovies.png</icon>
 		<thumb />
-		<action>ActivateWindow(Videos,MovieTitles,return)</action>
+		<action>ActivateWindow(Videos,videodb://movies/titles,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>tvshows</defaultID>
@@ -30,7 +30,7 @@
 		<label2>Common Shortcut</label2>
 		<icon>DefaultTVShows.png</icon>
 		<thumb />
-		<action>ActivateWindow(Videos,TVShowTitles,return)</action>
+		<action>ActivateWindow(Videos,videodb://tvshows/titles,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>favourites</defaultID>
@@ -55,6 +55,7 @@
 		<icon>DefaultMusicAlbums.png</icon>
 		<thumb />
 		<action>ActivateWindow(Music,root)</action>
+        <visible>true</visible>
 	</shortcut>
 	<shortcut>
 		<defaultID>programs</defaultID>

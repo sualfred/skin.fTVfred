@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-01 11:11+0000\n"
+"PO-Revision-Date: 2016-03-04 16:42+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1141,6 +1141,44 @@ msgstr "Widget-Sicherung wiederherstellen"
 msgctxt "#31260"
 msgid "Reset / Backup"
 msgstr "Reset / Backup"
+
+#: /16x9/ParametersHomeWidgets.xml:9
+msgctxt "#31261"
+msgid "Hide message"
+msgstr "Nicht mehr anzeigen"
+
+#: /16x9/IncludesWidgets.xml:399
+msgctxt "#31262"
+msgid "Your library seems to be empty. Do you want to configure it now?"
+msgstr "Deine Datenbank scheint leer zu sein. Willst du diese jetzt konfigurieren?"
+
+#: /16x9/IncludesWidgets.xml:398
+msgctxt "#31263"
+msgid "No content found"
+msgstr "Kein Inhalt gefunden"
+
+#: /16x9/IncludesWidgets.xml:408
+msgctxt "#31264"
+msgid "Empty library"
+msgstr "Leere Datenbank"
+
+#: /16x9/IncludesWidgets.xml:422
+msgctxt "#31265"
+msgid "Set widget content"
+msgstr "Bearbeite Widget"
+
+#: /16x9/IncludesWidgets.xml:442
+msgctxt "#31266"
+msgid ""
+"The set widget does not return any results. Do you want to configure it now?"
+msgstr "Das gesetzte Widget liefert keine Ergebnisse. Willst du es jetzt konfigurieren?"
+
+#: /16x9/Custom_Home_Widgets.xml:6
+msgctxt "#31267"
+msgid ""
+"It's highly recommended to reload the skin to fill the edited content lists "
+"correctly. Should the skin be reloaded?"
+msgstr "Es ist empfohlen den Skin nach dem Editieren der Inhalte erneut zu laden um alle Elemente korrekt anzeigen zu lassen. Soll der Skin jetzt neu geladen werden?"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

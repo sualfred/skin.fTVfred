@@ -1129,6 +1129,42 @@ msgctxt "#31260"
 msgid "Reset / Backup"
 msgstr ""
 
+#: /16x9/ParametersHomeWidgets.xml:9
+msgctxt "#31261"
+msgid "Hide message"
+msgstr ""
+
+#: /16x9/IncludesWidgets.xml:399
+msgctxt "#31262"
+msgid "Your library seems to be empty. Do you want to configure it now?"
+msgstr ""
+
+#: /16x9/IncludesWidgets.xml:398
+msgctxt "#31263"
+msgid "No content found"
+msgstr ""
+
+#: /16x9/IncludesWidgets.xml:408
+msgctxt "#31264"
+msgid "Empty library"
+msgstr ""
+
+#: /16x9/IncludesWidgets.xml:422
+msgctxt "#31265"
+msgid "Set widget content"
+msgstr ""
+
+#: /16x9/IncludesWidgets.xml:442
+msgctxt "#31266"
+msgid "The set widget does not return any results. Do you want to configure it now?"
+msgstr ""
+
+#: /16x9/Custom_Home_Widgets.xml:6
+msgctxt "#31267"
+msgid ""
+"It's highly recommended to reload the skin to fill the edited content lists correctly. Should the skin be reloaded?"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
