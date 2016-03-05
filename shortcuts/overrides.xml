@@ -30,6 +30,11 @@
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
 	<visibleoverride condition="Library.HasContent(Movies)">ActivateWindow(Videos,Files,return)</visibleoverride>
 	<visibleoverride condition="Library.HasContent(TVShows)">ActivateWindow(Videos,Files,return)</visibleoverride>
+	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
+	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>
+	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
+	<propertydefault labelID="movies" property="ftvWidget">widget1</propertydefault>
+	<propertydefault labelID="tvshows" property="ftvWidget">widget2</propertydefault>
 
 	<ftv-groupings>
 		<node label="fTV">
@@ -144,10 +149,4 @@
 		</node>
 		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>-->
 	</ftv-groupings>
-	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
-	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>
-	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
-	<propertydefault labelID="movies" property="ftvWidget">widget1</propertydefault>
-	<propertydefault labelID="tvshows" property="ftvWidget">widget2</propertydefault>
-	<propertydefault labelID="music" property="ftvWidget">widget3</propertydefault>
 </overrides>
