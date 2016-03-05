@@ -415,6 +415,17 @@
 			<param name="Action">ActivateWindow(Videos,Files,return)</param>
 			<param name="Action2">Skin.SetBool(HideTVShowsMessage)</param>
 		</include>
+		<!-- Videos -->
+		<include name="NoContentMessage">
+			<param name="Visible">StringCompare(Container(99).ListItem.Property(DefaultID),videos) + !Library.HasContent(TVShows) + !Library.HasContent(Movies)+ !Skin.HasSetting(HideVideosMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Header">$LOCALIZE[31264]</param>
+			<param name="Message">$LOCALIZE[31262]</param>
+			<param name="ShowButton">true</param>
+			<param name="ShowButton2">true</param>
+			<param name="Button">$LOCALIZE[1026]</param>
+			<param name="Action">ActivateWindow(Videos,Files,return)</param>
+			<param name="Action2">Skin.SetBool(HideVideosMessage)</param>
+		</include>
 		<!-- Music -->
 		<include name="NoContentMessage">
 			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),music) | SubString(Container(99).ListItem.Property(list),library://music/) | SubString(Container(99).ListItem.Property(list),musicdb://)] + !Library.HasContent(Music) + !Skin.HasSetting(HideMusicMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
