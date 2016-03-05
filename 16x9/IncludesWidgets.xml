@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="HomeWidgets">
+		<!-- Hide elements until  Preloading is done -->
+		<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(Preload))">Conditional</animation>
 		<!-- #1 Widget -->
 		<include name="ParamWidgetInclude">
 			<param name="ID">100</param>

@@ -1,3 +1,10 @@
+2.1.6
+- Added "no content" message to videos
+- Changed override settings
+- Minor adjustments on the preloading
+- Added first-run-check
+- Replaced fanart + icon
+
 2.1.5
 - Improved widgets to display even empty widget rows. Similar to a original FireTV device.
 - More widget fixes

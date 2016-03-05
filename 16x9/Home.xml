@@ -9,8 +9,6 @@
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
 		<control type="group">
-			<!-- Hide elements until  Preloading is done -->
-			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(Preload)) | [Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))]">Conditional</animation>
 			<!-- Hidden control to load weather conditions -->
 			<control type="label">
 				<font>-</font>
@@ -453,10 +451,10 @@
 			</control>
 			<!-- Splash -->
 			<control type="group">
-				<visible>[Skin.HasSetting(PreloadDeactivated) | Control.IsVisible(91)] + !Control.HasFocus(99)</visible>
+				<visible>[Skin.HasSetting(PreloadDeactivated) | Control.IsVisible(91) | !IsEmpty(Window(home).Property(Preload))] + !Control.HasFocus(99)</visible>
 				<animation type="Hidden">
-					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1700" />
-					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1700" />
+					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1750" />
+					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1750" />
 				</animation>
 				<control type="image">
 					<left>-96</left>
@@ -503,9 +501,10 @@
 			<control type="button" id="90">
 				<label>Loop</label>
 				<include>HiddenControl</include>
-				<onfocus>SetProperty(Preload,1,home)</onfocus>
-				<onfocus condition="Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))">SetFocus(93)</onfocus>
-				<onfocus condition="!Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))">SetFocus(94)</onfocus>
+				<onfocus>SetProperty(Preload,1,home)</onfocus>				
+				<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
+				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))">SetFocus(93)</onfocus>
+				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))">SetFocus(94)</onfocus>
 			</control>
 			<!-- Loop trigger -->
 			<control type="button" id="93">
@@ -613,9 +612,9 @@
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
+				<onfocus>ClearProperty(Preload,Home)</onfocus>
 				<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,1)</onfocus>
 				<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,0)</onfocus>
-				<onfocus>AlarmClock(Preload,ClearProperty(Preload,Home),00:01,silent)</onfocus>
 			</control>
 		</controls>
 	</window>

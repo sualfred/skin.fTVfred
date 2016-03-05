@@ -171,25 +171,25 @@
 	</include>
 	<!-- Home Widgets Animation -->
 	<include name="HomeWidgetsAnimation">
-		<animation condition="Container(99).OnNext" reversible="false" type="Visible">
+		<animation condition="IsEmpty(Window(home).Property(Preload)) + Container(99).OnNext" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation condition="Container(99).OnPrevious" reversible="false" type="Visible">
+		<animation condition="IsEmpty(Window(home).Property(Preload)) + Container(99).OnPrevious" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation reversible="false" type="Hidden">
+		<animation condition="IsEmpty(Window(home).Property(Preload))" reversible="false" type="Hidden">
 			<effect center="960,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 			<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
 		</animation>
-		<animation condition="Window.IsVisible(1101)" reversible="false" type="Conditional">
+		<animation condition="IsEmpty(Window(home).Property(Preload)) + Window.IsVisible(1101)" reversible="false" type="Conditional">
 			<effect easing="out" end="0,30" start="0,0" time="60" tween="sine" type="slide" />
 			<effect delay="80" easing="out" end="0,-30" start="0,0" time="120" tween="sine" type="slide" />
 		</animation>
-		<animation condition="Window.IsVisible(1102)" reversible="false" type="Conditional">
+		<animation condition="IsEmpty(Window(home).Property(Preload)) + Window.IsVisible(1102)" reversible="false" type="Conditional">
 			<effect easing="out" end="0,-30" start="0,0" time="60" tween="sine" type="slide" />
 			<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
 		</animation>
