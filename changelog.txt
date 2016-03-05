@@ -1,3 +1,7 @@
+2.1.5
+- Improved widgets to display even empty widget rows. Similar to a original FireTV device.
+- More widget fixes
+
 2.1.4
 - Increased preloading timeout value
 - Fixed preloading issues

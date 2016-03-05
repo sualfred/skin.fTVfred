@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-04 16:42+0000\n"
+"PO-Revision-Date: 2016-03-05 10:57+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1154,8 +1154,8 @@ msgstr "Deine Datenbank scheint leer zu sein. Willst du diese jetzt konfiguriere
 
 #: /16x9/IncludesWidgets.xml:398
 msgctxt "#31263"
-msgid "No content found"
-msgstr "Kein Inhalt gefunden"
+msgid "No content configured"
+msgstr "Kein Inhalt konfiguriert"
 
 #: /16x9/IncludesWidgets.xml:408
 msgctxt "#31264"
@@ -1170,8 +1170,8 @@ msgstr "Bearbeite Widget"
 #: /16x9/IncludesWidgets.xml:442
 msgctxt "#31266"
 msgid ""
-"The set widget does not return any results. Do you want to configure it now?"
-msgstr "Das gesetzte Widget liefert keine Ergebnisse. Willst du es jetzt konfigurieren?"
+"There is no source assigned to this widget. Do you want to configure it now?"
+msgstr "Diesem Widget sind keine Quellen zugeordnet. Willst du es jetzt konfigurieren?"
 
 #: /16x9/Custom_Home_Widgets.xml:6
 msgctxt "#31267"
@@ -1179,6 +1179,11 @@ msgid ""
 "It's highly recommended to reload the skin to fill the edited content lists "
 "correctly. Should the skin be reloaded?"
 msgstr "Es ist empfohlen den Skin nach dem Editieren der Inhalte erneut zu laden um alle Elemente korrekt anzeigen zu lassen. Soll der Skin jetzt neu geladen werden?"
+
+#: /16x9/IncludesWidgetLayout.xml:23
+msgctxt "#31268"
+msgid "There are no results for this widget"
+msgstr "Es gibt keine Ergebnisse für dieses Widget"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

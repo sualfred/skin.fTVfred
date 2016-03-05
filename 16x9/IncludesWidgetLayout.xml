@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Empty Message Layout -->
+	<include name="EmptyInfoLayout">
+		<control type="group">
+			<visible>IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<left>260</left>						
+			<control type="textbox">
+				<width>1150</width>
+				<height>355</height>
+				<font>Bold34</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffdedede</textcolor>
+				<label>$LOCALIZE[31268]</label>
+				<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+				<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="EmptyFocusedLayout">
+		<control type="group">
+			<visible>IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<left>260</left>					
+			<control type="textbox">
+				<width>1150</width>
+				<height>355</height>
+				<font>Bold34</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffdedede</textcolor>
+				<label>$LOCALIZE[31268]</label>
+				<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+				<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+			</control>
+		</control>
+	</include>
+
 	<!-- Banner Layout -->
 	<include name="ParamHomeBannerLayout">
 		<control type="image">
@@ -380,7 +416,7 @@
 	</include>
 	<include name="HomeSquareInfoItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>
+			<visible>[StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))] + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareInfoItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -401,7 +437,7 @@
 	</include>
 	<include name="HomeSquareInfoFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))</visible>
+			<visible>[StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))] + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -639,7 +675,7 @@
 	</include>
 	<include name="HomeSquareItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -660,7 +696,7 @@
 	</include>
 	<include name="HomeSquareFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -784,7 +820,7 @@
 	</include>
 	<include name="HomePosterItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomePosterItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -813,7 +849,7 @@
 	</include>
 	<include name="HomePosterFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomePosterFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1012,7 +1048,7 @@
 	</include>
 	<include name="HomeWideItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1029,7 +1065,7 @@
 	</include>
 	<include name="HomeWideFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1150,7 +1186,7 @@
 	</include>
 	<include name="HomeWideEpisodeItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideEpisodeItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1167,7 +1203,7 @@
 	</include>
 	<include name="HomeWideEpisodeFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549])</visible>
+			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideEpisodeFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>

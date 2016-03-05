@@ -1141,7 +1141,7 @@ msgstr ""
 
 #: /16x9/IncludesWidgets.xml:398
 msgctxt "#31263"
-msgid "No content found"
+msgid "No content configured"
 msgstr ""
 
 #: /16x9/IncludesWidgets.xml:408
@@ -1156,13 +1156,18 @@ msgstr ""
 
 #: /16x9/IncludesWidgets.xml:442
 msgctxt "#31266"
-msgid "The set widget does not return any results. Do you want to configure it now?"
+msgid "There is no source assigned to this widget. Do you want to configure it now?"
 msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:6
 msgctxt "#31267"
 msgid ""
 "It's highly recommended to reload the skin to fill the edited content lists correctly. Should the skin be reloaded?"
+msgstr ""
+
+#: /16x9/IncludesWidgetLayout.xml:23
+msgctxt "#31268"
+msgid "There are no results for this widget"
 msgstr ""
 
 msgctxt "#31500"

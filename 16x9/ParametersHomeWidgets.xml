@@ -189,6 +189,7 @@
 						<include>HomeWideEpisodeItemlayout</include>
 						<include>HomeSquareItemlayout</include>
 						<include>HomeSquareInfoItemlayout</include>
+						<include>EmptyInfoLayout</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="370" width="2000" condition="IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
@@ -297,16 +298,22 @@
 						<include>HomeWideEpisodeFocusedlayout</include>
 						<include>HomeSquareFocusedlayout</include>
 						<include>HomeSquareInfoFocusedlayout</include>
+						<include>EmptyFocusedLayout</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="370" width="2000" condition="!IntegerGreaterThan(Container($PARAM[ID]0).NumItems,1)">
 					<control type="group">
+						<visible>IsEmpty(ListItem.Property(bannerArt))</visible>
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
 						<include>HomePosterFocusedlayout</include>
 						<include>HomeWideFocusedlayout</include>
 						<include>HomeWideEpisodeFocusedlayout</include>
 						<include>HomeSquareFocusedlayout</include>
 						<include>HomeSquareInfoFocusedlayout</include>
+						<control type="group">
+							<animation effect="slide" time="0" start="0,0" end="-37,0" condition="true">Conditional</animation>
+							<include>EmptyFocusedLayout</include>
+						</control>
 					</control>
 				</focusedlayout>
 				<content>
@@ -389,7 +396,7 @@
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
 			<label2>AdvertBanner</label2>
-			<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath)</visible>
+			<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
@@ -400,7 +407,7 @@
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
 			<label2>AdvertBanner</label2>
-			<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath)</visible>
+			<visible>!IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>							
@@ -408,42 +415,42 @@
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 			<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>
 		</item>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]1</param>
 			<param name="POS">1</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]2</param>
 			<param name="POS">2</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]3</param>
 			<param name="POS">3</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]4</param>
 			<param name="POS">4</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]5</param>
 			<param name="POS">5</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]6</param>
 			<param name="POS">6</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]7</param>
 			<param name="POS">7</param>
 		</include>
-		<include name="ParamWidgetContent">
+		<include condition="!IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))" name="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]8</param>
 			<param name="POS">8</param>
@@ -453,7 +460,6 @@
 	<include name="ParamWidgetContent">
 		<item id="$PARAM[POS]">
 			<label>$INFO[Skin.String($PARAM[ListID]0-WidgetLabel-$PARAM[POS])]</label>
-			<visible>!IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)</visible>
 			<property name="WidgetStyle">$INFO[Skin.String($PARAM[ListID]0-WidgetStyle-$PARAM[POS])]</property>
 			<property name="Icon1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Icon]</property>
 			<property name="Icon2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Icon]</property>
@@ -495,7 +501,8 @@
 			<property name="ArtLogo2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(clearlogo)]</property>
 			<property name="ArtLogo3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(clearlogo)]</property>
 			<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
-			<onclick>$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
+			<onclick condition="!IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
+			<onclick condition="IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">noop</onclick>
 		</item>
 	</include>
 	<include name="LivetvWidget">
