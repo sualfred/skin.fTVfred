@@ -10,7 +10,7 @@
 			<top>-54</top>
 			<width>2112</width>
 			<height>1188</height>
-			<texture background="true">special://skin/extras/backgrounds/loading.jpg</texture>
+			<texture>special://skin/extras/backgrounds/loading.jpg</texture>
 		</control>
 		<control type="grouplist">
 			<top>765</top>

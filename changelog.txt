@@ -1,3 +1,6 @@
+2.1.7
+- Fixed preloading "glitching" of the previous commit
+
 2.1.6
 - Added "no content" message to videos
 - Changed override settings

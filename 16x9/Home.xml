@@ -14,6 +14,8 @@
 				<font>-</font>
 				<label>$INFO[Weather.Conditions]</label>
 			</control>
+			<!-- Hide elements until Preloading is done -->
+			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(Preload)) | Control.IsVisible(91)">Conditional</animation>
 			<!-- Background -->
 			<control type="image">
 				<include>FullscreenDimensions</include>
@@ -453,15 +455,15 @@
 			<control type="group">
 				<visible>[Skin.HasSetting(PreloadDeactivated) | Control.IsVisible(91) | !IsEmpty(Window(home).Property(Preload))] + !Control.HasFocus(99)</visible>
 				<animation type="Hidden">
-					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1750" />
-					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1750" />
+					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
+					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
 				</animation>
 				<control type="image">
 					<left>-96</left>
 					<top>-54</top>
 					<width>2112</width>
 					<height>1188</height>
-					<texture background="true">special://skin/extras/backgrounds/loading.jpg</texture>
+					<texture>special://skin/extras/backgrounds/loading.jpg</texture>
 				</control>
 				<control type="grouplist">
 					<top>765</top>
@@ -612,9 +614,9 @@
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
-				<onfocus>ClearProperty(Preload,Home)</onfocus>
 				<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,1)</onfocus>
 				<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,0)</onfocus>
+				<onfocus>ClearProperty(Preload,Home)</onfocus>
 			</control>
 		</controls>
 	</window>
