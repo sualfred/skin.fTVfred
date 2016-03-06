@@ -31,57 +31,8 @@
 				<height>760</height>
 				<texture border="4,7,4,7">views/text_viewer_background.png</texture>
 			</control>
-			<control type="grouplist" id="10">
-				<visible>IsEmpty(Window(home).Property(NoLabel))</visible>
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>788</width>
-				<height>446</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<autoscroll>false</autoscroll>
-				<orientation>vertical</orientation>
-				<itemgap>5</itemgap>
-				<control type="textbox">
-					<width>788</width>
-					<height min="50">auto</height>
-					<align>left</align>
-					<font>Reg36Spaced</font>
-					<autoscroll>false</autoscroll>
-					<textcolor>ffdadada</textcolor>
-					<label>[B][COLOR ffffffff]$INFO[Control.GetLabel(1),,[CR]][/B][/COLOR]</label>
-				</control>
-				<control id="5" type="textbox">
-					<width>788</width>
-					<height>402</height>
-					<align>left</align>
-					<font>Reg36SpacedLight</font>
-					<textcolor>ffdadada</textcolor>
-					<pagecontrol>3000</pagecontrol>
-					<autoscroll>false</autoscroll>
-				</control>
-			</control>
-			<control type="grouplist" id="11">
-				<visible>!IsEmpty(Window(home).Property(NoLabel))</visible>
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>788</width>
-				<height>446</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<autoscroll>false</autoscroll>
-				<orientation>vertical</orientation>
-				<itemgap>5</itemgap>
-				<control id="5" type="textbox">
-					<width>788</width>
-					<height>452</height>
-					<align>left</align>
-					<font>Reg36SpacedLight</font>
-					<textcolor>ffdadada</textcolor>
-					<pagecontrol>3000</pagecontrol>
-					<autoscroll>false</autoscroll>
-				</control>
-			</control>
+			<include condition="!IsEmpty(Window(home).Property(NoLabel))">TextViewerLayout</include>
+			<include condition="IsEmpty(Window(home).Property(NoLabel))">TextViewerLayout2</include>			
 			<!-- Arrow up -->
 			<control type="image">
 				<left>942</left>

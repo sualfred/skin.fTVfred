@@ -68,13 +68,11 @@
 					<left>1394</left>
 					<centertop>50%</centertop>
 					<width>8</width>
-					<height>446</height>
+					<height>352</height>
 					<onup>noop</onup>
 					<ondown>SetFocus(5)</ondown>
 					<onleft>Close</onleft>
 					<onright>Close</onright>
-					<onclick>SetFocus(5)</onclick>
-					<onclick>Select</onclick>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<texturesliderbarfocus border="3">common/Scrollbar.png</texturesliderbarfocus>

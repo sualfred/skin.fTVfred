@@ -520,4 +520,49 @@
 			<label>$VAR[PlayerSmallLabel]</label>
 		</control>
 	</include>
+	<!-- Textviewer Layouts -->
+	<include name="TextViewerLayout">
+		<control id="5" type="textbox">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>788</width>
+			<height>452</height>
+			<align>left</align>
+			<font>Reg36SpacedLight</font>
+			<pagecontrol>3000</pagecontrol>
+			<autoscroll>false</autoscroll>
+			<textcolor>ffdadada</textcolor>
+			<visible>!IsEmpty(Window(home).Property(NoLabel))</visible>
+		</control>
+	</include>
+	<include name="TextViewerLayout2">
+		<control type="grouplist" id="10">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>788</width>
+			<height>446</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<autoscroll>false</autoscroll>
+			<orientation>vertical</orientation>
+			<control type="textbox">
+				<width>788</width>
+				<height min="50">auto</height>
+				<align>left</align>
+				<font>Reg36Spaced</font>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffdadada</textcolor>
+				<label>[B][COLOR ffffffff]$INFO[Control.GetLabel(1),,[CR]][/B][/COLOR]</label>
+			</control>
+			<control id="5" type="textbox">
+				<width>788</width>
+				<height>402</height>
+				<align>left</align>
+				<font>Reg36SpacedLight</font>
+				<textcolor>ffdadada</textcolor>
+				<pagecontrol>3000</pagecontrol>
+				<autoscroll>false</autoscroll>
+			</control>
+		</control>
+	</include>
 </includes>

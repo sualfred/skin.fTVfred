@@ -1,3 +1,7 @@
+2.1.9
+- Fixed textviewer arrows
+- Fixed PVRInfoDialog scrollbar height
+
 2.1.8
 - Fixed cropped textviewer plots
 
