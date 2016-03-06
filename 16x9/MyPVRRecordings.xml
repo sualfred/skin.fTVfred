@@ -223,7 +223,7 @@
                     <pagecontrol>99</pagecontrol>
                     <autoscroll>false</autoscroll>
                     <textcolor>ffbcbcbc</textcolor>
-                    <label>[B]$INFO[ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+                    <label>[B]$INFO[ListItem.Title][/B] $VAR[Plot]</label>
                     <visible>!IsEmpty(ListItem.Title) + !StringCompare(ListItem.Label,..)</visible>
                 </control>
                 <control type="textbox">
@@ -235,7 +235,7 @@
                     <pagecontrol>99</pagecontrol>
                     <autoscroll>false</autoscroll>
                     <textcolor>ffbcbcbc</textcolor>
-                    <label>[B]$INFO[ListItem.Label][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+                    <label>[B]$INFO[ListItem.Label][/B] $VAR[Plot]</label>
                     <visible>IsEmpty(ListItem.Title) + !StringCompare(ListItem.Label,..)</visible>
                 </control>
                 <control id="99" type="scrollbar">
@@ -256,7 +256,7 @@
                     <onleft>50</onleft>
                     <onright>50</onright>
                     <onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-                    <onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[TxTPlot]')</onclick>
+                    <onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</onclick>
                     <visible>Control.IsVisible(99)</visible>
                     <texturefocus>views/more_fo.png</texturefocus>
                     <texturenofocus>views/more_nf.png</texturenofocus>

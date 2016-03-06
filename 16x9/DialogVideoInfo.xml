@@ -286,7 +286,8 @@
 					<height>23</height>
 					<onleft>7000</onleft>
 					<onright>8</onright>
-					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCVAR[VideoInfoLabel]',text='$ESCVAR[TxTPlot]')</onclick>
+  					<onclick>SetProperty(NoLabel,1,home)</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[Plot]')</onclick>
 					<include>DialogVideoInfoAnimation</include>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

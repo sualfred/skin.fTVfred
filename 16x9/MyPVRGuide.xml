@@ -208,7 +208,7 @@
                             <pagecontrol>99</pagecontrol>
                             <autoscroll>false</autoscroll>
                             <textcolor>ffbcbcbc</textcolor>
-                            <label>[B]$INFO[ListItem.Label][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+                            <label>[B]$INFO[ListItem.Label][/B] $VAR[Plot]</label>
                         </control>
                         <control id="99" type="scrollbar">
                             <top>103</top>

@@ -155,7 +155,7 @@
 						<ondown condition="Control.IsVisible(250)">250</ondown>
 						<onleft>7000</onleft>
 						<onright>8</onright>
-						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Window.Property(title)]',text='$ESCINFO[Window.Property(Biography)]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Window.Property(title)]',text='$ESCVAR[PlotWindow.Property(Biography)]')</onclick>
 						<visible>Control.IsVisible(96) + !IsEmpty(Window.Property(Biography))</visible>
 						<include>DialogVideoInfoAnimation</include>
 						<texturefocus>views/more_fo.png</texturefocus>

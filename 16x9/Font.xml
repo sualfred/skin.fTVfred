@@ -15,6 +15,13 @@
 			<size>36</size>
 		</font>
 		<font>
+			<name>Reg36SpacedLight</name>
+			<filename>HelveticaNeue.ttf</filename>
+			<style>lighten</style>
+			<linespacing>1.15</linespacing>
+			<size>36</size>
+		</font>
+		<font>
  			<name>Reg32</name>
  			<filename>HelveticaNeue.ttf</filename>
  			<size>32</size>
@@ -363,6 +370,13 @@
 			<size>36</size>
 		</font>
 		<font>
+			<name>Reg36SpacedLight</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<style>lighten</style>
+			<linespacing>1.18</linespacing>
+			<size>36</size>
+		</font>
+		<font>
 			<name>Reg30Spaced</name>
 			<filename>Roboto-Regular.ttf</filename>
 			<linespacing>1.12</linespacing>
@@ -689,6 +703,14 @@
 			<filename>Arial.ttf</filename>
 			<aspect>0.9</aspect>
 			<linespacing>1.18</linespacing>
+			<size>36</size>
+		</font>
+		<font>
+			<name>Reg36SpacedLight</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<linespacing>1.18</linespacing>
+			<style>lighten</style>
 			<size>36</size>
 		</font>
 		<font>

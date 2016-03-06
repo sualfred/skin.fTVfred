@@ -2670,14 +2670,6 @@
 		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 	</variable>
-	<variable name="TxTPlot">
-		<value condition="Control.IsVisible(100) + !StringCompare(Container(100).ListItem.PlotOutline,Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Tagline,,[CR][CR]]$INFO[Container(100).ListItem.PlotOutline,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
-		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.Tagline,,[CR][CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
-		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Tagline,,[CR][CR]]$INFO[Container(100).ListItem.Plot]</value>
-		<value condition="!StringCompare(ListItem.PlotOutline,ListItem.Plot)">$INFO[ListItem.Tagline,,[CR][CR]]$INFO[ListItem.PlotOutline,, ]$INFO[ListItem.Plot]</value>
-		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,,[CR][CR]]$INFO[ListItem.PlotOutline]</value>
-		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,,[CR][CR]]$INFO[ListItem.Plot]</value>
-	</variable>
 	<variable name="Day0">
 		<value condition="StringCompare(Window(Weather).Property(Day0.Title),$LOCALIZE[11]) | StringCompare(Window(Weather).Property(Day0.Title),$LOCALIZE[41])">$LOCALIZE[41]</value>
 		<value condition="StringCompare(Window(Weather).Property(Day0.Title),$LOCALIZE[12]) | StringCompare(Window(Weather).Property(Day0.Title),$LOCALIZE[42])">$LOCALIZE[42]</value>

@@ -49,7 +49,7 @@
 					<pagecontrol>3000</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffdadada</textcolor>
-					<label>[B][COLOR ffffffff]$INFO[ListItem.Title][CR][/B][/COLOR][LIGHT]$VAR[Plot][/LIGHT]</label>
+					<label>[B][COLOR ffffffff]$INFO[ListItem.Title][CR][/B][/COLOR]$VAR[Plot]</label>
 					<animation condition="true" effect="slide" start="0,0" end="0,-31" time="0">Conditional</animation>
 				</control>
 				<!-- Arrow down -->

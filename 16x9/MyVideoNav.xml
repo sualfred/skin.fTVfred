@@ -447,7 +447,7 @@
 						<pagecontrol>96</pagecontrol>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbcbcbc</textcolor>
-						<label>[B]$INFO[ListItem.Label][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+						<label>[B]$INFO[ListItem.Label][/B] $VAR[Plot]</label>
 					</control>
 					<control id="96" type="scrollbar">
 						<top>145</top>
@@ -467,7 +467,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[TxTPlot]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</onclick>
 						<visible>Control.IsVisible(96)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -485,7 +485,7 @@
 						<pagecontrol>97</pagecontrol>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbcbcbc</textcolor>
-						<label>[B]$INFO[ListItem.TVShowTitle] - $VAR[SeasonValue][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+						<label>[B]$INFO[ListItem.TVShowTitle] - $VAR[SeasonValue][/B] $VAR[Plot]</label>
 					</control>
 					<control id="97" type="scrollbar">
 						<top>103</top>
@@ -505,7 +505,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.TVShowTitle] - $VAR[SeasonValue],text='$ESCVAR[TxTPlot]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.TVShowTitle] - $VAR[SeasonValue],text='$ESCVAR[Plot]')</onclick>
 						<visible>Control.IsVisible(97)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -559,7 +559,7 @@
 						<pagecontrol>98</pagecontrol>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbcbcbc</textcolor>
-						<label>[B]$INFO[ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+						<label>[B]$INFO[ListItem.Title][/B] $VAR[Plot]</label>
 					</control>
 					<control id="98" type="scrollbar">
 						<top>145</top>
@@ -579,7 +579,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Title]',text='$ESCVAR[TxTPlot]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Title]',text='$ESCVAR[Plot]')</onclick>
 						<visible>Control.IsVisible(98)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -705,7 +705,7 @@
 					<pagecontrol>99</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbcbcbc</textcolor>
-					<label>[B]$INFO[ListItem.Label][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+					<label>[B]$INFO[ListItem.Label][/B] $VAR[Plot]</label>
 				</control>
 				<control id="99" type="scrollbar">
 					<top>103</top>
@@ -725,7 +725,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[TxTPlot]')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</onclick>
 					<visible>Control.IsVisible(99)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

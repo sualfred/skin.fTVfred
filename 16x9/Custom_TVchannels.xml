@@ -40,7 +40,7 @@
 			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
 			<include>ViewTypeBounceAnimation</include>
 			<ondown>1001</ondown>
-			<oninfo condition="!IsEmpty(Container(100).ListItem.Plot) | !IsEmpty(Container(100).ListItem.PlotOutline)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[TxTPlot]')</oninfo>
+			<oninfo condition="!IsEmpty(Container(100).ListItem.Plot) | !IsEmpty(Container(100).ListItem.PlotOutline)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[Plot]')</oninfo>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<preloaditems>2</preloaditems>
 			<focusposition>1</focusposition>
@@ -274,7 +274,7 @@
 					<pagecontrol>99</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbcbcbc</textcolor>
-					<label>[B]$INFO[Container(100).ListItem.Title][/B] [LIGHT]$VAR[Plot][/LIGHT]</label>
+					<label>[B]$INFO[Container(100).ListItem.Title][/B] $VAR[Plot]</label>
 				</control>
 				<control id="99" type="scrollbar">
 					<top>103</top>
@@ -293,7 +293,7 @@
 					<ondown>noop</ondown>
 					<onleft>100</onleft>
 					<onright>100</onright>
-					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[TxTPlot]')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[Plot]')</onclick>
 					<visible>Control.IsVisible(99)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
