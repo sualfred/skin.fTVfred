@@ -250,13 +250,13 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>osd/options.png</texture>
+						<texture>osd/select.png</texture>
 						<visible>false</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>osd/options.png</texture>
+						<texture>osd/select.png</texture>
 						<visible>Skin.HasSetting(HideOSDControls)</visible>
 					</control>
 					<control type="image">

@@ -186,7 +186,7 @@
 				<control id="99" type="image">
 					<width>40</width>
 					<height>40</height>
-					<texture>osd/options.png</texture>
+					<texture>osd/select.png</texture>
 				</control>
 			</control>
 			<!--Cast-->

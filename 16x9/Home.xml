@@ -49,6 +49,8 @@
 				<ondown>ClearProperty(Movement)</ondown>
 				<onleft>noop</onleft>				
 				<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
+				<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
+				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 				<!--on right-->

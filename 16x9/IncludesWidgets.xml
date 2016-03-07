@@ -76,6 +76,7 @@
 			<top>252</top>
 			<width>2200</width>
 			<height>576</height>
+			<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<preloaditems>2</preloaditems>
 			<orientation>horizontal</orientation>
@@ -141,6 +142,7 @@
 			<width>2000</width>
 			<height>914</height>
 			<viewtype label="">list</viewtype>
+			<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 			<orientation>horizontal</orientation>
 			<include>WindowHomeFadeAnimation</include>
 			<include>HomeWidgetsAnimation</include>
@@ -304,6 +306,7 @@
 			<focusposition>1</focusposition>
 			<viewtype label="">list</viewtype>
 			<orientation>horizontal</orientation>
+			<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 			<include>WindowHomeFadeAnimation</include>
 			<include>HomeWidgetsAnimation</include>
 			<visible>StringCompare(Container(99).ListItem.Property(defaultID),settings)</visible>

@@ -278,11 +278,10 @@
 	</include>
 	<!--Square Info-->
 	<include name="ViewSquareInfoLayout">
-		<itemlayout condition="SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
+		<itemlayout condition="SubString(Container.FolderPath,movies/genre) | SubString(Container.FolderPath,tvshows/genre) | SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<control type="group">
-					<visible>SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)</visible>
 					<control type="group">
 						<control type="image">
 							<left>160</left>
@@ -298,7 +297,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+							<texture>$VAR[GenreArt3]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -316,7 +315,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+							<texture>$VAR[GenreArt2]</texture>
 						</control>
 						<control type="image">
 							<left>400</left>
@@ -342,7 +341,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+							<texture>$VAR[GenreArt1]</texture>
 						</control>
 						<control type="image">
 							<left>320</left>
@@ -388,7 +387,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<itemlayout condition="!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
+		<itemlayout condition="!SubString(Container.FolderPath,movies/genre) + !SubString(Container.FolderPath,tvshows/genre) + !SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<control type="group">
@@ -475,7 +474,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<focusedlayout condition="SubString(Container($PARAM[ID]).FolderPath,movies/genre) | SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
+		<focusedlayout condition="SubString(Container.FolderPath,movies/genre) | SubString(Container.FolderPath,tvshows/genre) | SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="button">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
@@ -503,7 +502,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]3.jpg</texture>
+							<texture>$VAR[GenreArt3]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -521,7 +520,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]2.jpg</texture>
+							<texture>$VAR[GenreArt2]</texture>
 						</control>
 						<control type="image">
 							<left>400</left>
@@ -547,7 +546,7 @@
 							<width>320</width>
 							<height>480</height>
 							<aspectratio align="center">scale</aspectratio>
-							<texture>$VAR[GenreContent]$VAR[VideoGenreThumb]1.jpg</texture>
+							<texture>$VAR[GenreArt1]</texture>
 						</control>
 						<control type="image">
 							<left>320</left>
@@ -606,7 +605,7 @@
 				</control>
 			</control>
 		</focusedlayout>
-		<focusedlayout condition="!SubString(Container($PARAM[ID]).FolderPath,movies/genre) + !SubString(Container($PARAM[ID]).FolderPath,tvshows/genre)" height="576" width="436">
+		<focusedlayout condition="!SubString(Container.FolderPath,movies/genre) + !SubString(Container.FolderPath,tvshows/genre) + !SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="button">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>

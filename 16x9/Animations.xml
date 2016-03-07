@@ -135,6 +135,12 @@
 		<animation delay="200" easing="inout" effect="fade" end="100" start="0" time="120" tween="sine">Visible</animation>
 		<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 	</include>
+	<!-- Window heading delay animation -->
+	<include name="LabelsDelayFadeAnimation">
+		<animation delay="400" easing="inout" effect="fade" end="100" start="0" time="200" tween="sine">Visible</animation>
+		<animation effect="fade" end="0" start="100" time="0">Hidden</animation>		
+		<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+	</include>
 	<!-- Notification fade animation -->
 	<include name="NotificationAnimation">
 		<animation easing="inout" effect="slide" end="0,0" start="0,-111" time="120" tween="sine">WindowOpen</animation>

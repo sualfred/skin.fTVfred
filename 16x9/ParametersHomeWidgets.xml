@@ -63,6 +63,7 @@
 								<font>MedUpper24</font>
 								<textoffsety>27</textoffsety>
 								<label>$PARAM[Button]</label>
+								<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 								<onclick>SetFocus(99)</onclick>
 								<onclick condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
 								<onclick condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onclick>
@@ -87,6 +88,7 @@
 								<font>MedUpper24</font>
 								<textoffsety>27</textoffsety>
 								<label>$PARAM[Button2]</label>
+								<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 								<onclick>SetFocus(99)</onclick>
 								<onclick>$PARAM[Action2]</onclick>
 								<visible>$PARAM[ShowButton2]</visible>
@@ -114,6 +116,7 @@
 				<top>-253</top>
 				<width>2100</width>
 				<height>1600</height>
+				<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 				<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
 				<onup>noop</onup>
 				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
@@ -197,6 +200,7 @@
 						<include>HiddenControl</include>
 						<onfocus>ClearProperty(MainMenuFocus,home)</onfocus>
 						<onfocus>ClearProperty(StartedByBanner,home)</onfocus>
+						<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 						<onfocus>SetProperty(MainFocus,$INFO[Container(99).ListItem.Property(defaultID)])</onfocus>
 						<onfocus condition="StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,1_2)</onfocus>
 						<onfocus condition="IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + StringCompare(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,2_2)</onfocus>
@@ -328,6 +332,7 @@
 	<include name="ParamFtvWidgetLists">
 		<control id="$PARAM[ID]9" type="list">
 			<include>HiddenHomeList</include>
+			<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 			<onup>99</onup>
 			<onback>99</onback>
 			<onright>99</onright>
@@ -500,6 +505,18 @@
 			<property name="ArtLogo1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(clearlogo)]</property>
 			<property name="ArtLogo2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(clearlogo)]</property>
 			<property name="ArtLogo3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(clearlogo)]</property>
+			<property name="Genre1-1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(poster.1)]</property>
+			<property name="Genre1-2">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(poster.2)]</property>
+			<property name="Genre1-3">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(poster.3)]</property>
+			<property name="Genre2-1">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(poster.1)]</property>
+			<property name="Genre2-2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(poster.2)]</property>
+			<property name="Genre2-3">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(poster.3)]</property>
+			<property name="Genre3-1">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(poster.1)]</property>
+			<property name="Genre3-2">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(poster.2)]</property>
+			<property name="Genre3-3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(poster.3)]</property>
+			<property name="Genre4-1">$INFO[Container($PARAM[ID]).ListItemPosition(4).Art(poster.1)]</property>
+			<property name="Genre4-2">$INFO[Container($PARAM[ID]).ListItemPosition(4).Art(poster.2)]</property>
+			<property name="Genre4-3">$INFO[Container($PARAM[ID]).ListItemPosition(4).Art(poster.3)]</property>
 			<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
 			<onclick condition="!IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
 			<onclick condition="IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">noop</onclick>

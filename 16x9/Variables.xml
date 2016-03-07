@@ -27,150 +27,20 @@
 		<value condition="!StringCompare(Container(211).ListItem.Thumb,DefaultAddonNone.png)">$INFO[Container(211).ListItem.Thumb]</value>
 	</variable>
 	<!-- Genre Library -->
-	<variable name="GenreContent">
-		<value condition="SubString(Container.FolderPath,movies/genre)">special://skin/extras/genres/movies/</value>
-		<value condition="SubString(Container.FolderPath,tvshows/genre)">special://skin/extras/genres/shows/</value>
-		<value condition="SubString(ListItem.Property(Path),movies/genre)">special://skin/extras/genres/movies/</value>
-		<value condition="SubString(ListItem.Property(Path),,tvshows/genre)">special://skin/extras/genres/shows/</value>
+	<variable name="GenreArt1">
+		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
+		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.1)]</value>
 	</variable>
-	<variable name="VideoGenreThumb">
-		<value condition="SubString(ListItem.Label,action) | SubString(ListItem.Label,Aktion)">action</value>
-		<value condition="SubString(ListItem.Label,adventure) | SubString(ListItem.Label,Abenteuer)">adventure</value>
-		<value condition="SubString(ListItem.Label,animation)">animation</value>
-		<value condition="SubString(ListItem.Label,comedy) | SubString(ListItem.Label,komödie)">comedy</value>
-		<value condition="SubString(ListItem.Label,crime) | SubString(ListItem.Label,krimi)">crime</value>
-		<value condition="SubString(ListItem.Label,docu) | SubString(ListItem.Label,doku)">documentary</value>
-		<value condition="SubString(ListItem.Label,family) | SubString(ListItem.Label,familie)">family</value>
-		<value condition="SubString(ListItem.Label,fantasy) | SubString(ListItem.Label,fantasie) | SubString(ListItem.Label,märchen)">fantasy</value>
-		<value condition="SubString(ListItem.Label,history) | SubString(ListItem.Label,geschichte) | SubString(ListItem.Label,historie)">history</value>
-		<value condition="SubString(ListItem.Label,drama)">drama</value>
-		<value condition="SubString(ListItem.Label,horror)">horror</value>
-		<value condition="SubString(ListItem.Label,kids) | SubString(ListItem.Label,children) | SubString(ListItem.Label,kinder) | SubString(ListItem.Label,cartoon) | SubString(ListItem.Label,zeichentrick) | SubString(ListItem.Label,anime)">kids</value>		
-		<value condition="SubString(ListItem.Label,Love) | SubString(ListItem.Label,romance) | SubString(ListItem.Label,romanze) | SubString(ListItem.Label,romantik)">love</value>
-		<value condition="SubString(ListItem.Label,music) | SubString(ListItem.Label,musik) | SubString(ListItem.Label,tanz) | SubString(ListItem.Label,dance)">music</value>
-		<value condition="SubString(ListItem.Label,mystery) | SubString(ListItem.Label,mysterie)">mystery</value>
-		<value condition="SubString(ListItem.Label,sci-Fi) | SubString(ListItem.Label,scifi) | SubString(ListItem.Label,science fiction) | SubString(ListItem.Label,science-fiction)">scifi</value>
-		<value condition="SubString(ListItem.Label,thriller) | SubString(ListItem.Label,suspense) | SubString(ListItem.Label,spannung)">thriller</value>
-		<value condition="SubString(ListItem.Label,tv) | SubString(ListItem.Label,television) | SubString(ListItem.Label,fernseh)">tv</value>
-		<value condition="SubString(ListItem.Label,war) | SubString(ListItem.Label,krieg)">war</value>
-		<value condition="SubString(ListItem.Label,western) | SubString(ListItem.Label,cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Label,..)">$INFO[ListItem.Label]</value>
+	<variable name="GenreArt2">
+		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
+		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.2)]</value>
 	</variable>
-	<variable name="VideoGenreFakeThumb1">
-		<value condition="SubString(ListItem(1).Label,action) | SubString(ListItem(1).Label,Aktion)">action</value>
-		<value condition="SubString(ListItem(1).Label,adventure) | SubString(ListItem(1).Label,Abenteuer)">adventure</value>
-		<value condition="SubString(ListItem(1).Label,animation)">animation</value>
-		<value condition="SubString(ListItem(1).Label,comedy) | SubString(ListItem(1).Label,komödie)">comedy</value>
-		<value condition="SubString(ListItem(1).Label,crime) | SubString(ListItem(1).Label,krimi)">crime</value>
-		<value condition="SubString(ListItem(1).Label,docu) | SubString(ListItem(1).Label,doku)">documentary</value>
-		<value condition="SubString(ListItem(1).Label,family) | SubString(ListItem(1).Label,familie)">family</value>
-		<value condition="SubString(ListItem(1).Label,fantasy) | SubString(ListItem(1).Label,fantasie) | SubString(ListItem(1).Label,märchen)">fantasy</value>
-		<value condition="SubString(ListItem(1).Label,history) | SubString(ListItem(1).Label,geschichte) | SubString(ListItem(1).Label,historie)">history</value>
-		<value condition="SubString(ListItem(1).Label,drama)">drama</value>
-		<value condition="SubString(ListItem(1).Label,horror)">horror</value>
-		<value condition="SubString(ListItem(1).Label,kids) | SubString(ListItem(1).Label,children) | SubString(ListItem(1).Label,kinder) | SubString(ListItem(1).Label,cartoon) | SubString(ListItem(1).Label,zeichentrick) | SubString(ListItem(1).Label,anime)">kids</value>		
-		<value condition="SubString(ListItem(1).Label,Love) | SubString(ListItem(1).Label,romance) | SubString(ListItem(1).Label,romanze) | SubString(ListItem(1).Label,romantik)">love</value>
-		<value condition="SubString(ListItem(1).Label,music) | SubString(ListItem(1).Label,musik) | SubString(ListItem(1).Label,tanz) | SubString(ListItem(1).Label,dance)">music</value>
-		<value condition="SubString(ListItem(1).Label,mystery) | SubString(ListItem(1).Label,mysterie)">mystery</value>
-		<value condition="SubString(ListItem(1).Label,sci-Fi) | SubString(ListItem(1).Label,scifi) | SubString(ListItem(1).Label,science fiction) | SubString(ListItem(1).Label,science-fiction)">scifi</value>
-		<value condition="SubString(ListItem(1).Label,thriller) | SubString(ListItem(1).Label,suspense) | SubString(ListItem(1).Label,spannung)">thriller</value>
-		<value condition="SubString(ListItem(1).Label,tv) | SubString(ListItem(1).Label,television) | SubString(ListItem.Label(1),fernseh)">tv</value>
-		<value condition="SubString(ListItem(1).Label,war) | SubString(ListItem(1).Label,krieg)">war</value>
-		<value condition="SubString(ListItem(1).Label,western) | SubString(ListItem(1).Label,cowboy)">western</value>
-		<value condition="!StringCompare(ListItem(1).Label,..)">$INFO[ListItem(1).Label]</value>
-	</variable>
-	<!-- Genre Widget -->
-	<variable name="VideoGenreThumbPos1">
-		<value condition="SubString(ListItem.Property(InfoLabel1),action) | SubString(ListItem.Property(InfoLabel1),Aktion)">action</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),adventure) | SubString(ListItem.Property(InfoLabel1),Abenteuer)">adventure</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),animation)">animation</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),comedy) | SubString(ListItem.Property(InfoLabel1),komödie)">comedy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),crime) | SubString(ListItem.Property(InfoLabel1),krimi)">crime</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),docu) | SubString(ListItem.Property(InfoLabel1),doku)">documentary</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),family) | SubString(ListItem.Property(InfoLabel1),familie)">family</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),fantasy) | SubString(ListItem.Property(InfoLabel1),fantasie) | SubString(ListItem.Property(InfoLabel1),märchen)">fantasy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),history) | SubString(ListItem.Property(InfoLabel1),geschichte) | SubString(ListItem.Property(InfoLabel1),historie)">history</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),drama)">drama</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),horror)">horror</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),kids) | SubString(ListItem.Property(InfoLabel1),children) | SubString(ListItem.Property(InfoLabel1),kinder) | SubString(ListItem.Property(InfoLabel1),cartoon) | SubString(ListItem.Property(InfoLabel1),zeichentrick) | SubString(ListItem.Property(InfoLabel1),anime)">kids</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),Love) | SubString(ListItem.Property(InfoLabel1),romance) | SubString(ListItem.Property(InfoLabel1),romanze) | SubString(ListItem.Property(InfoLabel1),romantik)">love</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),music) | SubString(ListItem.Property(InfoLabel1),musik) | SubString(ListItem.Property(InfoLabel1),tanz) | SubString(ListItem.Property(InfoLabel1),dance)">music</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),mystery) | SubString(ListItem.Property(InfoLabel1),mysterie)">mystery</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),sci-Fi) | SubString(ListItem.Property(InfoLabel1),scifi) | SubString(ListItem.Property(InfoLabel1),science fiction) | SubString(ListItem.Property(InfoLabel1),science-fiction)">scifi</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),thriller) | SubString(ListItem.Property(InfoLabel1),suspense) | SubString(ListItem.Property(InfoLabel1),spannung)">thriller</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),tv) | SubString(ListItem.Property(InfoLabel1),television) | SubString(ListItem.Property(InfoLabel1),fernseh)">tv</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),war) | SubString(ListItem.Property(InfoLabel1),krieg)">war</value>
-		<value condition="SubString(ListItem.Property(InfoLabel1),western) | SubString(ListItem.Property(InfoLabel1),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel1),..)">$INFO[ListItem.Property(InfoLabel1)]</value>
-	</variable>
-	<variable name="VideoGenreThumbPos2">
-		<value condition="SubString(ListItem.Property(InfoLabel2),action) | SubString(ListItem.Property(InfoLabel2),Aktion)">action</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),adventure) | SubString(ListItem.Property(InfoLabel2),Abenteuer)">adventure</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),animation)">animation</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),comedy) | SubString(ListItem.Property(InfoLabel2),komödie)">comedy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),crime) | SubString(ListItem.Property(InfoLabel2),krimi)">crime</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),docu) | SubString(ListItem.Property(InfoLabel2),doku)">documentary</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),family) | SubString(ListItem.Property(InfoLabel2),familie)">family</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),fantasy) | SubString(ListItem.Property(InfoLabel2),fantasie) | SubString(ListItem.Property(InfoLabel2),märchen)">fantasy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),history) | SubString(ListItem.Property(InfoLabel2),geschichte) | SubString(ListItem.Property(InfoLabel2),historie)">history</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),drama)">drama</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),horror)">horror</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),kids) | SubString(ListItem.Property(InfoLabel2),children) | SubString(ListItem.Property(InfoLabel2),kinder) | SubString(ListItem.Property(InfoLabel2),cartoon) | SubString(ListItem.Property(InfoLabel2),zeichentrick) | SubString(ListItem.Property(InfoLabel2),anime)">kids</value>	
-		<value condition="SubString(ListItem.Property(InfoLabel2),Love) | SubString(ListItem.Property(InfoLabel2),romance) | SubString(ListItem.Property(InfoLabel2),romanze) | SubString(ListItem.Property(InfoLabel2),romantik)">love</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),music) | SubString(ListItem.Property(InfoLabel2),musik) | SubString(ListItem.Property(InfoLabel2),tanz) | SubString(ListItem.Property(InfoLabel2),dance)">music</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),mystery) | SubString(ListItem.Property(InfoLabel2),mysterie)">mystery</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),sci-Fi) | SubString(ListItem.Property(InfoLabel2),scifi) | SubString(ListItem.Property(InfoLabel2),science fiction) | SubString(ListItem.Property(InfoLabel2),science-fiction)">scifi</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),thriller) | SubString(ListItem.Property(InfoLabel2),suspense) | SubString(ListItem.Property(InfoLabel2),spannung)">thriller</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),tv) | SubString(ListItem.Property(InfoLabel2),television) | SubString(ListItem.Property(InfoLabel2),fernseh)">tv</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),war) | SubString(ListItem.Property(InfoLabel2),krieg)">war</value>
-		<value condition="SubString(ListItem.Property(InfoLabel2),western) | SubString(ListItem.Property(InfoLabel2),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel2),..)">$INFO[ListItem.Property(InfoLabel2)]</value>
-	</variable>
-	<variable name="VideoGenreThumbPos3">
-		<value condition="SubString(ListItem.Property(InfoLabel3),action) | SubString(ListItem.Property(InfoLabel3),Aktion)">action</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),adventure) | SubString(ListItem.Property(InfoLabel3),Abenteuer)">adventure</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),animation)">animation</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),comedy) | SubString(ListItem.Property(InfoLabel3),komödie)">comedy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),crime) | SubString(ListItem.Property(InfoLabel3),krimi)">crime</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),docu) | SubString(ListItem.Property(InfoLabel3),doku)">documentary</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),family) | SubString(ListItem.Property(InfoLabel3),familie)">family</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),fantasy) | SubString(ListItem.Property(InfoLabel3),fantasie) | SubString(ListItem.Property(InfoLabel3),märchen)">fantasy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),history) | SubString(ListItem.Property(InfoLabel3),geschichte) | SubString(ListItem.Property(InfoLabel3),historie)">history</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),drama)">drama</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),horror)">horror</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),kids) | SubString(ListItem.Property(InfoLabel3),children) | SubString(ListItem.Property(InfoLabel3),kinder) | SubString(ListItem.Property(InfoLabel3),cartoon) | SubString(ListItem.Property(InfoLabel3),zeichentrick) | SubString(ListItem.Property(InfoLabel3),anime)">kids</value>	
-		<value condition="SubString(ListItem.Property(InfoLabel3),Love) | SubString(ListItem.Property(InfoLabel3),romance) | SubString(ListItem.Property(InfoLabel3),romanze) | SubString(ListItem.Property(InfoLabel3),romantik)">love</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),music) | SubString(ListItem.Property(InfoLabel3),musik) | SubString(ListItem.Property(InfoLabel3),tanz) | SubString(ListItem.Property(InfoLabel3),dance)">music</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),mystery) | SubString(ListItem.Property(InfoLabel3),mysterie)">mystery</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),sci-Fi) | SubString(ListItem.Property(InfoLabel3),scifi) | SubString(ListItem.Property(InfoLabel3),science fiction) | SubString(ListItem.Property(InfoLabel3),science-fiction)">scifi</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),thriller) | SubString(ListItem.Property(InfoLabel3),suspense) | SubString(ListItem.Property(InfoLabel3),spannung)">thriller</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),tv) | SubString(ListItem.Property(InfoLabel3),television) | SubString(ListItem.Property(InfoLabel3),fernseh)">tv</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),war) | SubString(ListItem.Property(InfoLabel3),krieg)">war</value>
-		<value condition="SubString(ListItem.Property(InfoLabel3),western) | SubString(ListItem.Property(InfoLabel3),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel3),..)">$INFO[ListItem.Property(InfoLabel3)]</value>
-	</variable>
-	<variable name="VideoGenreThumbPos4">
-		<value condition="SubString(ListItem.Property(InfoLabel4),action) | SubString(ListItem.Property(InfoLabel4),Aktion)">action</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),adventure) | SubString(ListItem.Property(InfoLabel4),Abenteuer)">adventure</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),animation)">animation</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),comedy) | SubString(ListItem.Property(InfoLabel4),komödie)">comedy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),crime) | SubString(ListItem.Property(InfoLabel4),krimi)">crime</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),docu) | SubString(ListItem.Property(InfoLabel4),doku)">documentary</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),family) | SubString(ListItem.Property(InfoLabel4),familie)">family</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),fantasy) | SubString(ListItem.Property(InfoLabel4),fantasie) | SubString(ListItem.Property(InfoLabel4),märchen)">fantasy</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),history) | SubString(ListItem.Property(InfoLabel4),geschichte) | SubString(ListItem.Property(InfoLabel4),historie)">history</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),drama)">drama</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),horror)">horror</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),kids) | SubString(ListItem.Property(InfoLabel4),children) | SubString(ListItem.Property(InfoLabel4),kinder) | SubString(ListItem.Property(InfoLabel4),cartoon) | SubString(ListItem.Property(InfoLabel4),zeichentrick) | SubString(ListItem.Property(InfoLabel4),anime)">kids</value>	
-		<value condition="SubString(ListItem.Property(InfoLabel4),Love) | SubString(ListItem.Property(InfoLabel4),romance) | SubString(ListItem.Property(InfoLabel4),romanze) | SubString(ListItem.Property(InfoLabel4),romantik)">love</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),music) | SubString(ListItem.Property(InfoLabel4),musik) | SubString(ListItem.Property(InfoLabel4),tanz) | SubString(ListItem.Property(InfoLabel4),dance)">music</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),mystery) | SubString(ListItem.Property(InfoLabel4),mysterie)">mystery</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),sci-Fi) | SubString(ListItem.Property(InfoLabel4),scifi) | SubString(ListItem.Property(InfoLabel4),science fiction) | SubString(ListItem.Property(InfoLabel4),science-fiction)">scifi</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),thriller) | SubString(ListItem.Property(InfoLabel4),suspense) | SubString(ListItem.Property(InfoLabel4),spannung)">thriller</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),tv) | SubString(ListItem.Property(InfoLabel4),television) | SubString(ListItem.Property(InfoLabel4),fernseh)">tv</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),war) | SubString(ListItem.Property(InfoLabel4),krieg)">war</value>
-		<value condition="SubString(ListItem.Property(InfoLabel4),western) | SubString(ListItem.Property(InfoLabel4),cowboy)">western</value>
-		<value condition="!StringCompare(ListItem.Property(InfoLabel4),..)">$INFO[ListItem.Property(InfoLabel4)]</value>
+	<variable name="GenreArt3">
+		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
+		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.3)]</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>
@@ -2203,6 +2073,9 @@
 		<value>$INFO[Player.Duration(mm:ss)]</value>
 	</variable>
 	<variable name="Fanart">
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
+		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
+		<value condition="SubString(Container.FolderPath,tvshow/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="Window.IsActive(1106)">$INFO[Container(100).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
 		<value condition="[Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>

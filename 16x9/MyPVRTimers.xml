@@ -165,7 +165,7 @@
 						<height>100</height>
 						<onup>59</onup>
 						<ondown>3000</ondown>
-						<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
+						<onclick>SetProperty(LabelsDelayFadeAnimation,1,home)</onclick>
 						<onclick>ActivateWindow(tvguide)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31545]</label>

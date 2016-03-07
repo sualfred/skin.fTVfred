@@ -3,7 +3,8 @@
 	<menucontrol>1000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>	
-	<onunload>ClearProperty(SkipScrollingAnimation,home)</onunload>
+	<onunload>ClearProperty(LabelsDelayFadeAnimation,home)</onunload>
+	<onload>ClearProperty(LabelsDelayFadeAnimation,home)</onload>
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
 	<onload>Control.Move(100,1)</onload>
 	<!-- workaround animation for focusing the first item -->
@@ -23,13 +24,12 @@
 		</control>
 		<!-- Channels -->
 		<control id="100" type="fixedlist">
-			<!--<animation effect="fade" start="0" end="0" time="0" condition="!IsEmpty(Window(Home).Property(SkipScrollingAnimation))">Conditional</animation>-->
 			<left>-238</left>
 			<top>242</top>
 			<width>2200</width>
 			<height>576</height>
-			<onup>SetProperty(SkipScrollingAnimation,1,home)</onup>
-			<onback>SetProperty(SkipScrollingAnimation,1,home)</onback>
+			<onup>SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
+			<onback>SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 			<onback condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,$INFO[Container(100).CurrentItem,-])</onback>
 			<onback condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,1)</onback>
 			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,$INFO[Container(100).CurrentItem,-])</onup>
@@ -61,9 +61,8 @@
 		</control>
 		<!-- Page Layout -->
 		<control type="group">
-			<include>VisibleDelayFadeAnimation</include>
-			<visible>IsEmpty(Window(Home).Property(SkipScrollingAnimation))</visible>
-			<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<include>LabelsDelayFadeAnimation</include>
+			<visible>IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
 			<!-- Heading / Current item / Total items -->
 			<control type="grouplist">
 				<left>198</left>
@@ -172,7 +171,7 @@
 						<height>100</height>
 						<onup>100</onup>
 						<ondown>3000</ondown>
-						<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
+						<onclick>SetProperty(LabelsDelayFadeAnimation,1,home)</onclick>
 						<onclick>ActivateWindow(tvguide)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31545]</label>
@@ -188,7 +187,7 @@
 						<height>100</height>
 						<onup>100</onup>
 						<ondown>3000</ondown>
-						<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
+						<onclick>SetProperty(LabelsDelayFadeAnimation,1,home)</onclick>
 						<onclick>ActivateWindow(tvchannels)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31547]</label>
@@ -204,7 +203,7 @@
 						<height>100</height>
 						<onup>100</onup>
 						<ondown>3000</ondown>
-						<onclick>SetProperty(SkipScrollingAnimation,1,home)</onclick>
+						<onclick>SetProperty(LabelsDelayFadeAnimation,1,home)</onclick>
 						<onclick>ActivateWindow(tvrecordings)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31546]</label>
