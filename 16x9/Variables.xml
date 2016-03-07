@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<includes>	
+<includes>
+	<!-- Widget Background Loader -->
+	<variable name="PreloadImage">
+		<value condition="SubString(ListItem.Property(Path),movies/genres)">true</value>
+		<value condition="SubString(ListItem.Property(Path),tvshows/genres)">true</value>
+		<value condition="SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)">true</value>
+		<value condition="!SubString(ListItem.Property(Path),movies/genres) + !SubString(ListItem.Property(Path),tvshows/genres) + !SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres) + [StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))]">true</value>
+		<value condition="!SubString(ListItem.Property(Path),movies/genres) + !SubString(ListItem.Property(Path),tvshows/genres) + !SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres) + StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160])">true</value>
+		<value condition="!SubString(ListItem.Property(Path),movies/genres) + !SubString(ListItem.Property(Path),tvshows/genres) + !SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres) + StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161])">true</value>
+		<value condition="!SubString(ListItem.Property(Path),movies/genres) + !SubString(ListItem.Property(Path),tvshows/genres) + !SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres) + StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159])">true</value>
+		<value condition="!SubString(ListItem.Property(Path),movies/genres) + !SubString(ListItem.Property(Path),tvshows/genres) + !SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres) + StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549])">true</value>
+		<value>false</value>
+	</variable>
 	<variable name="PVRWidgetReload">
 		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
 		<value>-</value>
