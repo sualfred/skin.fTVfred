@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-05 10:57+0000\n"
+"PO-Revision-Date: 2016-03-08 07:29+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1184,6 +1184,11 @@ msgstr "Es ist empfohlen den Skin nach dem Editieren der Inhalte erneut zu laden
 msgctxt "#31268"
 msgid "There are no results for this widget"
 msgstr "Es gibt keine Ergebnisse für dieses Widget"
+
+#: /shortcuts/overrides.xml:55
+msgctxt "#31269"
+msgid "Genres (Plugin based)"
+msgstr "Genres (Plugin basierend)"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
