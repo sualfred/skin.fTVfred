@@ -2075,7 +2075,7 @@
 	<variable name="Fanart">
 		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
 		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
-		<value condition="SubString(Container.FolderPath,tvshow/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
+		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="Window.IsActive(1106)">$INFO[Container(100).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
 		<value condition="[Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
