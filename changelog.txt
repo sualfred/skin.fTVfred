@@ -1,3 +1,8 @@
+2.1.11
+- Repo push
+- Cleanup
+- Minor changes
+
 2.1.10
 - Experimental: Removed current dynamic Genre listing and replaced it with skin helper service (latest GitHub version required) 
 - Experimental: Improved window switch from Home to MyXXXNav (less glitches for addon based content)

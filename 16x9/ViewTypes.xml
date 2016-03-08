@@ -9,8 +9,6 @@
 				<top>242</top>
 				<width>2036</width>
 				<height>576</height>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onback condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,$INFO[Container(60).CurrentItem,-])</onback>
 				<onback condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,1)</onback>
 				<onup condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,$INFO[Container(60).CurrentItem,-])</onup>
@@ -53,8 +51,6 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onback condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,$INFO[Container(61).CurrentItem,-])</onback>
 				<onback condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,1)</onback>
 				<onup condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,$INFO[Container(61).CurrentItem,-])</onup>
@@ -97,8 +93,6 @@
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onback condition="!StringCompare(Container(50).CurrentItem,0)">Control.Move(50,$INFO[Container(50).CurrentItem,-])</onback>
 				<onback condition="!StringCompare(Container(50).CurrentItem,0)">Control.Move(50,1)</onback>
 				<onup>Back</onup>
@@ -140,8 +134,6 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onback condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,$INFO[Container(51).CurrentItem,-])</onback>
 				<onback condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,1)</onback>
 				<onup condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,$INFO[Container(51).CurrentItem,-])</onup>
@@ -184,8 +176,6 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onback condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,$INFO[Container(52).CurrentItem,-])</onback>
 				<onback condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,1)</onback>
 				<onup condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,$INFO[Container(52).CurrentItem,-])</onup>
@@ -228,8 +218,6 @@
 				<top>242</top>
 				<width>2036</width>
 				<height>576</height>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onback condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,$INFO[Container(53).CurrentItem,-])</onback>
 				<onback condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,1)</onback>
 				<onup condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,$INFO[Container(53).CurrentItem,-])</onup>
@@ -276,8 +264,6 @@
 				<onback condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,1)</onback>
 				<onup condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,$INFO[Container(55).CurrentItem,-])</onup>
 				<onup condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,1)</onup>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -320,8 +306,6 @@
 				<onback condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,1)</onback>
 				<onup condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,$INFO[Container(56).CurrentItem,-])</onup>
 				<onup condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,1)</onup>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -364,8 +348,6 @@
 				<onback condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,1)</onback>
 				<onup condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,$INFO[Container(57).CurrentItem,-])</onup>
 				<onup condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,1)</onup>
-				<onup condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
-				<onback condition="Window.Next(home)">SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>

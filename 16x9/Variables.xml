@@ -30,17 +30,17 @@
 	<variable name="GenreArt1">
 		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
 		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
-		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.1)]</value>
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.0)]</value>
 	</variable>
 	<variable name="GenreArt2">
 		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
 		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
-		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.2)]</value>
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.1)]</value>
 	</variable>
 	<variable name="GenreArt3">
 		<value condition="SubString(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
 		<value condition="SubString(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
-		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.3)]</value>
+		<value condition="SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.2)]</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>

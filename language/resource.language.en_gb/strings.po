@@ -1170,6 +1170,11 @@ msgctxt "#31268"
 msgid "There are no results for this widget"
 msgstr ""
 
+#: /shortcuts/overrides.xml:55
+msgctxt "#31269"
+msgid "Genres (Plugin based)"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

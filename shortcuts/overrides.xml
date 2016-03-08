@@ -52,7 +52,8 @@
 				<shortcut label="31515" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerMovies.xsp,return)</shortcut>	
 				<shortcut label="31517" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>
 				<shortcut label="31258" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/3DMovies.xsp,return)</shortcut>
-				<shortcut label="135" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,plugin://script.skin.helper.service/?action=browsegenres&amp;type=movie&amp;limit=1000,return)</shortcut>
+				<shortcut label="135" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,MovieGenres,return)</shortcut>
+				<shortcut label="31269" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,plugin://script.skin.helper.service/?action=browsegenres&amp;type=movie&amp;limit=1000,return)</shortcut>
 			</node>
 			<node label="20343">
 				<shortcut label="31175" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyUpdatedTVShows.xsp,return)</shortcut>
@@ -66,7 +67,8 @@
 				<shortcut label="31516" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerTVShows.xsp,return)</shortcut>	
 				<shortcut label="31518" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryTVShows.xsp,return)</shortcut>	
 				<shortcut label="31510" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/IMDBTop250.xsp,return)</shortcut>
-				<shortcut label="135" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,plugin://script.skin.helper.service/?action=browsegenres&amp;type=tvshow&amp;limit=1000,return)</shortcut>
+				<shortcut label="135" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,videodb://tvshows/genres/,return)</shortcut>
+				<shortcut label="31269" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,plugin://script.skin.helper.service/?action=browsegenres&amp;type=tvshow&amp;limit=1000,return)</shortcut>
 			</node>
 			<node label="2">
 				<shortcut label="31183" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>

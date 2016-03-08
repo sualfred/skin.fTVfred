@@ -702,7 +702,7 @@
 					<ondown>noop</ondown>
 					<align>center</align>
 					<orientation>horizontal</orientation>
-					<!-- Set View Type for all -->
+					<!-- Set Banner -->
 					<control type="button" id="1005">
 						<width>420</width>
 						<height>76</height>
