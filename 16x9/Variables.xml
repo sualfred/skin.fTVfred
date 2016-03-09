@@ -2535,10 +2535,10 @@
 		<value>$INFO[Container.FolderName]</value>
 	</variable>
 	<variable name="Plot">
-		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.Plot]</value>
-		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.PlotOutline]</value>
-		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(100) + !IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
+		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>
+		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.PlotOutline]</value>
 	</variable>
 	<variable name="Day0">
 		<value condition="StringCompare(Window(Weather).Property(Day0.Title),$LOCALIZE[11]) | StringCompare(Window(Weather).Property(Day0.Title),$LOCALIZE[41])">$LOCALIZE[41]</value>
