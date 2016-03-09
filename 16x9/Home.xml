@@ -506,8 +506,8 @@
 				<label>Loop</label>
 				<include>HiddenControl</include>
 				<onfocus>SetProperty(Preload,1,home)</onfocus>
-				<onfocus condition="!System.HasAlarm(PreloadTimeout)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:30,silent)</onfocus>		
-				<onfocus condition="!System.HasAlarm(PreloadTimeout)">SetProperty(PreloadTimout,1,Home)</onfocus>		
+				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout)">SetProperty(PreloadTimout,1,Home)</onfocus>
+				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 				<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
 				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))">SetFocus(93)</onfocus>
 				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))">SetFocus(94)</onfocus>

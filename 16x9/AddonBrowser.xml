@@ -444,7 +444,7 @@
 				<effect easing="inout" end="500,0" start="0,0" time="200" tween="sine" type="slide" />
 			</animation>
 			<control type="group">
-				<animation condition="!IsEmpty(Container.FolderPath) + !SubString(Container.FolderPath,/,right)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
+				<animation condition="[!IsEmpty(Container.FolderPath) + !SubString(Container.FolderPath,/,right)] | StringCompare(Container.FolderPath,addons://outdated/)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
 				<control type="image">
 					<left>78</left>
 					<width>879</width>
@@ -537,7 +537,7 @@
 						<onright>9000</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
 						<onclick>SetProperty(NoLabel,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[Plot]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.Property(Addon.Description)]')</onclick>
 						<include>DialogVideoInfoAnimation</include>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
