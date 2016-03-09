@@ -12,6 +12,10 @@
 		<control id="1" type="label">
 			<font>-</font>
 		</control>
+		<!-- Heading -->
+		<control id="5" type="textbox">
+			<font>-</font>
+		</control>
 		<!-- Background -->
 		<include>DialogTextBackgroundImage</include>
 		<control type="group">
@@ -31,8 +35,32 @@
 				<height>760</height>
 				<texture border="4,7,4,7">views/text_viewer_background.png</texture>
 			</control>
-			<include condition="!IsEmpty(Window(home).Property(NoLabel))">TextViewerLayout</include>
-			<include condition="IsEmpty(Window(home).Property(NoLabel))">TextViewerLayout2</include>			
+			<control id="10" type="textbox">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>788</width>
+				<height>452</height>
+				<align>left</align>
+				<font>Reg36Spaced</font>
+				<pagecontrol>3000</pagecontrol>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffdadada</textcolor>
+				<label>$INFO[Control.GetLabel(5),[LIGHT],[/LIGHT]]</label>
+				<visible>!IsEmpty(Window(home).Property(NoLabel))</visible>
+			</control>
+			<control id="10" type="textbox">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>788</width>
+				<height>452</height>
+				<align>left</align>
+				<font>Reg36Spaced</font>
+				<pagecontrol>3000</pagecontrol>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffdadada</textcolor>
+				<label>$INFO[Control.GetLabel(1),[B],[/B][CR]]$INFO[Control.GetLabel(5),[LIGHT],[/LIGHT]]</label>
+				<visible>IsEmpty(Window(home).Property(NoLabel))</visible>
+			</control>	
 			<!-- Arrow up -->
 			<control type="image">
 				<left>942</left>
@@ -40,7 +68,7 @@
 				<width>36</width>
 				<height>20</height>
 				<texture>views/arrow_up.png</texture>
-				<visible>Container(5).HasPrevious</visible>
+				<visible>Container(10).HasPrevious</visible>
 				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
 				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 			</control>
@@ -51,7 +79,7 @@
 				<width>36</width>
 				<height>20</height>
 				<texture>views/arrow_down.png</texture>
-				<visible>Container(5).HasNext</visible>
+				<visible>Container(10).HasNext</visible>
 				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
 				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 			</control>
