@@ -1,3 +1,8 @@
+2.1.14
+- Repo push
+- Fix for AddonBrowser #2
+- Textviewer changes
+
 2.1.13
 - Repo push
 - Fixed startup preload killer instability when the main menu is going to be build
