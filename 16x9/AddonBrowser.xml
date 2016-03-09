@@ -444,7 +444,7 @@
 				<effect easing="inout" end="500,0" start="0,0" time="200" tween="sine" type="slide" />
 			</animation>
 			<control type="group">
-				<animation condition="[!IsEmpty(Container.FolderPath) + !SubString(Container.FolderPath,/,right)] | StringCompare(Container.FolderPath,addons://outdated/)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
+				<animation condition="!IsEmpty(ListItem.Property(Addon.Version))" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
 				<control type="image">
 					<left>78</left>
 					<width>879</width>
