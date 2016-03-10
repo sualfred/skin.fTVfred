@@ -342,7 +342,7 @@
 		<!-- Preload widgets -->
 		<control type="button" id="91">
 			<include>HiddenControl</include>
-			<visible>!Skin.HasSetting(PreloadDeactivated) + [!IsEmpty(Window(home).Property(PreloadTimout)) | !Window.Previous(startup)]
+			<visible>!Skin.HasSetting(PreloadDeactivated) + !IsEmpty(Window(home).Property(Preload)) + [!IsEmpty(Window(home).Property(PreloadTimout)) | !Window.Previous(startup)]
 				+ [[Container(1001).IsUpdating + Control.IsVisible(1001)]
 				| [Container(1002).IsUpdating + Control.IsVisible(1002)]
 				| [Container(1003).IsUpdating + Control.IsVisible(1003)]
@@ -455,7 +455,7 @@
 			</control>
 			<!-- Splash -->
 			<control type="group">
-				<visible>[Control.IsVisible(91) | !IsEmpty(Window(home).Property(Preload))] + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)</visible>
+				<visible>Control.IsVisible(91) + !IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)</visible>
 				<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
 					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
 					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
@@ -620,6 +620,7 @@
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
 				<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,1)</onfocus>
 				<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,0)</onfocus>
+				<onfocus>SetProperty(PreloadDone,1,Home)</onfocus>
 				<onfocus>ClearProperty(Preload,Home)</onfocus>
 			</control>
 		</controls>

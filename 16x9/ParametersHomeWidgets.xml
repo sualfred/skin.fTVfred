@@ -111,7 +111,7 @@
 			<control id="$PARAM[ID]0" type="fixedlist">
 				<include>HomeWidgetsAnimation</include>
 				<include>HomeWidgetBounceAnimation</include>
-				<visible>[!IsEmpty(Window(home).Property(Preload)) + !Skin.HasSetting(PreloadDeactivated)] | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
+				<visible>[!IsEmpty(Window(home).Property(Preload)) + IsEmpty(Window(home).Property(PreloadDone)) + !Skin.HasSetting(PreloadDeactivated)] | StringCompare(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])</visible>
 				<left>419</left>
 				<top>-253</top>
 				<width>2100</width>
