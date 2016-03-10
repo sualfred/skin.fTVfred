@@ -14,24 +14,17 @@
 		</control>
 		<control type="grouplist">
 			<top>765</top>
-			<left>-10</left>
 			<width>1920</width>
 			<align>center</align>			
 			<height>200</height>
 			<orientation>horizontal</orientation>
-			<control type="image">
-				<width>47</width>
-				<height>46</height>
-				<aspectratio>keep</aspectratio>
-				<texture>home/loading_icon.png</texture>
-				<colordiffuse>ffb0b4b7</colordiffuse>
-			</control>
+			<itemgap>10</itemgap>
 			<control type="label">
 				<font>Light32</font>
 				<textcolor>ffb0b4b7</textcolor>
 				<width>auto</width>
 				<height>41</height>
-				<label>$LOCALIZE[31531]</label>
+				<label>$VAR[version]</label>
 			</control>
 		</control>
 		<control type="image">

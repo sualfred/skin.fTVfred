@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="version">
+		<value condition="SubString(System.BuildVersion,17.,left)">Kodi Krypton</value>
+		<value condition="SubString(System.BuildVersion,16.,left)">Kodi Jarvis</value>
+	</variable>
 	<variable name="PVRWidgetReload">
 		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
 		<value>-</value>
 	</variable>
 	<variable name="PreloadLabel">
-		<value condition="Control.IsVisible(91)">$LOCALIZE[31532]</value>
+		<value condition="Control.IsVisible(91)">$LOCALIZE[31531]</value>
 		<value condition="!Control.IsVisible(91)">$LOCALIZE[31533]</value>
 	</variable>
 	<!-- Vis Animation -->

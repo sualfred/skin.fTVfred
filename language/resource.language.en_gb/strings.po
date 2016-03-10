@@ -1302,8 +1302,8 @@ msgid "'Square Info' for Music / Add-ons"
 msgstr "'Square Info' for Music / Add-ons"
 
 msgctxt "#31531"
-msgid "loading"
-msgstr "loading"
+msgid "loading home"
+msgstr "loading home"
 
 msgctxt "#31532"
 msgid "updating widgets"

@@ -6,6 +6,7 @@
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
+	<onload condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
 		<control type="group">
@@ -471,9 +472,9 @@
 					<top>765</top>
 					<width>1920</width>
 					<align>center</align>
-					<left>-10</left>
 					<height>200</height>
 					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
 					<control type="image">
 						<width>47</width>
 						<height>46</height>
@@ -618,8 +619,7 @@
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
 				<onfocus condition="StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
-				<onfocus condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,1)</onfocus>
-				<onfocus condition="!Skin.HasSetting(SkipSearchItem) | !StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.SetFocus(99,0)</onfocus>
+				<onfocus>SetFocus(99)</onfocus>
 				<onfocus>SetProperty(PreloadDone,1,Home)</onfocus>
 				<onfocus>ClearProperty(Preload,Home)</onfocus>
 			</control>

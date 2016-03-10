@@ -309,6 +309,11 @@
 					<control type="group">
 						<visible>IsEmpty(ListItem.Property(bannerArt))</visible>
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
+						<control type="button">
+							<include>HiddenControl</include>
+							<onfocus>SetFocus(99)</onfocus>
+							<visible>IsEmpty(ListItem.Property(InfoLabel1))</visible>
+						</control>
 						<include>HomePosterFocusedlayout</include>
 						<include>HomeWideFocusedlayout</include>
 						<include>HomeWideEpisodeFocusedlayout</include>
