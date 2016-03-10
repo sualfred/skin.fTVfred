@@ -124,202 +124,207 @@
 	</include>
 
 	<!-- Home Square Info Itemlayout -->
-	<include name="ParamHomeSquareInfoItemlayout">
+	<include name="ParamSquareInfoTemplate">
+		<control type="image">
+			<width>318</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture>common/default_empty.png</texture>
+			<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+		</control>
+		<control type="image">
+			<width>318</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+			<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+		</control>
+		<control type="image">
+			<width>318</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">keep</aspectratio>
+			<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+			<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+		</control>
+		<!-- Genre -->
 		<control type="group">
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<left>$PARAM[left]</left>
+			<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
+				<left>102</left>
+				<width>215</width>
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				<texture>views/poster_fallback.png</texture>
 			</control>
-			<!-- Genre -->
+			<control type="image">
+				<left>51</left>
+				<width>215</width>
+				<height>334</height>
+				<bordersize>0,13,10,13</bordersize>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>views/poster_fallback.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<width>215</width>
+				<height>334</height>
+				<bordersize>0,13,10,13</bordersize>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>views/poster_fallback.png</texture>
+			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+				<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
 				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
-					</control>
-				</control>
-				<control type="group">
+			</control>
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
 					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
 				</control>
-				<control type="group">
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
 					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon$PARAM[ID]),Default) | [SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)]</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			</control>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayHD.png</texture>
+			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay3D.png</texture>
+			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>308</width>
+			<height>308</height>
+			<texture border="2">views/season_overlay.png</texture>
+			<visible>!SubString(ListItem.Property(Icon$PARAM[ID]),Default) | [SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)]</visible>
+		</control>
+		<control type="image">
+			<left>10</left>
+			<top>251</top>
+			<width>40</width>
+			<height>40</height>
+			<texture>views/equaliser.gif</texture>
+			<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+		</control>
+		<control type="label">
+			<left>61</left>
+			<top>269</top>
+			<width>236</width>
+			<height>28</height>
+			<font>Bold28</font>
+			<scroll>false</scroll>
+			<textcolor>ffffffff</textcolor>
+			<shadowcolor>88000000</shadowcolor>
+			<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
+			<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+		</control>
+		<control type="label">
+			<left>11</left>
+			<top>269</top>
+			<width>286</width>
+			<height>28</height>
+			<font>Bold28</font>
+			<scroll>false</scroll>
+			<textcolor>ffffffff</textcolor>
+			<shadowcolor>88000000</shadowcolor>
+			<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
+			<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+		</control>
+	</include>
+	<include name="ParamHomeSquareInfoItemlayout">
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<left>$PARAM[left]</left>
+			<include name="ParamSquareInfoTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -334,198 +339,9 @@
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
-			</control>
-			<!-- Genre -->
-			<control type="group">
-				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-				<control type="image">
-					<left>102</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
-				</control>
-				<control type="image">
-					<left>51</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
-				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
-					</control>
-				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" >http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-				</control>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>308</width>
-				<height>308</height>
-				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(ListItem.Property(Icon$PARAM[ID]),Default) | [SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)]</visible>
-			</control>
-			<control type="image">
-				<left>10</left>
-				<top>251</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>views/equaliser.gif</texture>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			</control>
-			<control type="label">
-				<left>61</left>
-				<top>269</top>
-				<width>236</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
-				<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			</control>
-			<control type="label">
-				<left>11</left>
-				<top>269</top>
-				<width>286</width>
-				<height>28</height>
-				<font>Bold28</font>
-				<scroll>false</scroll>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
-				<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
-				<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			</control>
+			<include name="ParamSquareInfoTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -581,163 +397,169 @@
 	</include>
 
 	<!-- Home Square Itemlayout -->
-	<include name="ParamHomeSquareItemlayout">
+	<include name="ParamSquareTemplate">
+
+		<control type="image">
+			<width>318</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture>common/default_empty.png</texture>
+			<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+		</control>
+		<control type="image">
+			<width>318</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+			<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+		</control>
+		<control type="image">
+			<width>318</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">keep</aspectratio>
+			<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+			<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+		</control>
+		<!-- Genre -->
 		<control type="group">
-			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
+				<left>102</left>
+				<width>215</width>
 				<height>334</height>
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+				<texture>views/poster_fallback.png</texture>
 			</control>
-			<!-- Genre -->
+			<control type="image">
+				<left>51</left>
+				<width>215</width>
+				<height>334</height>
+				<bordersize>0,13,10,13</bordersize>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>views/poster_fallback.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<width>215</width>
+				<height>334</height>
+				<bordersize>0,13,10,13</bordersize>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>views/poster_fallback.png</texture>
+			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+				<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
 				</control>
 				<control type="image">
 					<left>51</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<width>215</width>
 					<height>334</height>
 					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
 				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
-					</control>
-				</control>
-				<control type="group">
+			</control>
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
 					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
 				</control>
-				<control type="group">
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<control type="image">
+					<left>102</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
 					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
+				</control>
+				<control type="image">
+					<left>51</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<width>215</width>
+					<height>334</height>
+					<bordersize>0,13,10,13</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
+					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayHD.png</texture>
+			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay3D.png</texture>
+			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+		</control>
+	</include>
+	<include name="ParamHomeSquareItemlayout">
+		<control type="group">
+			<left>$PARAM[left]</left>
+			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<include name="ParamSquareTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -751,160 +573,10 @@
 	<include name="ParamHomeSquareFocusedlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/default_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
-			</control>
-			<control type="image">
-				<width>318</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
-			</control>
-			<!-- Genre -->
-			<control type="group">
-				<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-				<control type="image">
-					<left>102</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
-				</control>
-				<control type="image">
-					<left>51</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>views/poster_fallback.png</texture>
-				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
-					</control>
-				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					<control type="image">
-						<left>102</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<width>215</width>
-						<height>334</height>
-						<bordersize>0,13,10,13</bordersize>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-						<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
-					</control>
-				</control>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
+			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>			
+			<include name="ParamSquareTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>
 			<control type="image">
 				<top>13</top>
 				<width>308</width>
@@ -960,46 +632,51 @@
 	</include>
 
 	<!-- Home Poster Itemlayout -->
+	<include name="ParamPosterTemplate">
+		<control type="image">
+			<width>215</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture>common/poster_empty.png</texture>
+			<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+		</control>
+		<control type="image">
+			<width>215</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/poster_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayHD.png</texture>
+			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay3D.png</texture>
+			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayWatched.png</texture>
+			<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
+		</control>
+	</include>
 	<include name="ParamHomePosterItemlayout">
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/poster_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/poster_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
-			</control>
+			<include name="ParamPosterTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>			
 			<control type="image">
 				<top>13</top>
 				<width>205</width>
@@ -1013,43 +690,10 @@
 	<include name="ParamHomePosterFocusedlayout">
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<left>$PARAM[left]</left>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/poster_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>215</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/poster_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
-			</control>
+			<left>$PARAM[left]</left>			
+			<include name="ParamPosterTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>	
 			<control type="image">
 				<top>13</top>
 				<width>205</width>
@@ -1121,79 +765,84 @@
 	</include>
 
 	<!-- Home Wide Itemlayout -->
+	<include name="ParamWideTemplate">
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture>common/wide_empty.png</texture>
+			<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+		</control>
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
+			<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
+			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<texture border="2">views/clearlogo_overlay.png</texture>
+			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<left>78</left>
+			<top>193</top>
+			<width>257</width>
+			<height>101</height>
+			<aspectratio align="center" aligny="top">keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
+			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayHD.png</texture>
+			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay3D.png</texture>
+			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayWatched.png</texture>
+			<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
+		</control>
+	</include>
 	<include name="ParamHomeWideItemlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/wide_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<texture border="2">views/clearlogo_overlay.png</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
-			</control>
+			<include name="ParamWideTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>			
 			<control type="image">
 				<top>13</top>
 				<width>413</width>
@@ -1208,75 +857,9 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/wide_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
-				<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<texture border="2">views/clearlogo_overlay.png</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<left>78</left>
-				<top>193</top>
-				<width>257</width>
-				<height>101</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-				<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
-			</control>
+			<include name="ParamWideTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>		
 			<control type="image">
 				<top>13</top>
 				<width>413</width>
@@ -1325,46 +908,51 @@
 	</include>
 
 	<!-- Home Wide Episode Itemlayout -->
+	<include name="ParamWideEpisodeTemplate">
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture>common/wide_empty.png</texture>
+			<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
+		</control>
+		<control type="image">
+			<width>423</width>
+			<height>334</height>
+			<bordersize>0,13,10,13</bordersize>
+			<aspectratio align="center">scale</aspectratio>
+			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayHD.png</texture>
+			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay3D.png</texture>
+			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/OverlayWatched.png</texture>
+			<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
+		</control>
+	</include>
 	<include name="ParamHomeWideEpisodeItemlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/wide_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
-			</control>
+			<include name="ParamWideEpisodeTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>			
 			<control type="image">
 				<top>13</top>
 				<width>413</width>
@@ -1379,42 +967,9 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>common/wide_empty.png</texture>
-				<bordertexture border="16,30,16,18">home/image_shadow_small_nf.png</bordertexture>
-			</control>
-			<control type="image">
-				<width>423</width>
-				<height>334</height>
-				<bordersize>0,13,10,13</bordersize>
-				<aspectratio align="center">scale</aspectratio>
-				<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/Overlay3D.png</texture>
-				<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
-			</control>
-			<control type="image">
-				<top>13</top>
-				<width>58</width>
-				<height>58</height>
-				<texture>views/OverlayWatched.png</texture>
-				<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
-			</control>
+			<include name="ParamWideEpisodeTemplate">
+				<param name="ID">$PARAM[ID]</param>
+			</include>	
 			<control type="image">
 				<top>13</top>
 				<width>413</width>
@@ -1461,5 +1016,5 @@
 			</include>
 		</control>
 	</include>
-	
+
 </includes>
