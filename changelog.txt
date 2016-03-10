@@ -1,3 +1,8 @@
+2.1.15
+- Repo push
+- Fixed issues with deactivated preloading
+- Fixed Genre widget fallbacks
+
 2.1.14
 - Repo push
 - Fix for AddonBrowser #2

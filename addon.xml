@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred"
-	version="2.1.14"
+	version="2.1.15"
 	name="fTV (with Live TV + Mods)"
-	provider-name="Sualfred - Orignal Skin by Hitcher">
+	provider-name="Sualfred (Orignal skin by Hitcher)">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
-		<import addon="script.toolbox" version="1.0.0"/>
+		<import addon="script.toolbox" version="1.1.1"/>
 		<import addon="script.favourites" version="5.0.2"/>
 		<import addon="script.extendedinfo" version="2.0.3"/>
 		<import addon="script.globalsearch" version="3.0.4"/>
 		<import addon="script.skinshortcuts" version="0.4.0"/>
 		<import addon="script.artwork.downloader" version="12.0.29"/>
-		<import addon="script.skin.helper.service" version="1.0.23"/>
+		<import addon="script.skin.helper.service" version="1.0.60"/>
 		<import addon="script.module.autocompletion" version="1.1.2"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
@@ -22,6 +22,6 @@
 		<platform>all</platform>
 		<summary lang="en">Skin based on the Fire TV UI</summary>
 		<disclaimer lang="en">Does not support:[CR]Mouse[CR]Touch[CR]Live TV</disclaimer>
-		<description lang="en">Mod description: Basic fTV skin (by Hitcher) with nearly full PVR functionality, plus changed the widget to behaviour to display them on main menu items of your choide and other new features.[CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).[CR][CR]Special thanks to the following people:[CR]Unfledged[CR]Mesoptier[CR]'Black[CR]marcelveldt</description>
+		<description lang="en">Basic fTV skin (by Hitcher) with nearly full PVR functionality, plus changed a lot of behaviours and added dozens of other features[CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).</description>
 	</extension>
 </addon>

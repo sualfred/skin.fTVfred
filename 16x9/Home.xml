@@ -15,7 +15,7 @@
 				<label>$INFO[Weather.Conditions]</label>
 			</control>
 			<!-- Hide elements until Preloading is done -->
-			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="!IsEmpty(Window(home).Property(Preload)) | Control.IsVisible(91)">Conditional</animation>
+			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="[!IsEmpty(Window(home).Property(Preload)) | Control.IsVisible(91)] + !Skin.HasSetting(PreloadDeactivated)">Conditional</animation>
 			<!-- Background -->
 			<control type="image">
 				<include>FullscreenDimensions</include>
@@ -455,8 +455,8 @@
 			</control>
 			<!-- Splash -->
 			<control type="group">
-				<visible>[Skin.HasSetting(PreloadDeactivated) | Control.IsVisible(91) | !IsEmpty(Window(home).Property(Preload))] + !Control.HasFocus(99)</visible>
-				<animation type="Hidden">
+				<visible>[Control.IsVisible(91) | !IsEmpty(Window(home).Property(Preload))] + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)</visible>
+				<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
 					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
 					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
 				</animation>
@@ -506,11 +506,11 @@
 				<label>Loop</label>
 				<include>HiddenControl</include>
 				<onfocus>SetProperty(Preload,1,home)</onfocus>
-				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout)">SetProperty(PreloadTimout,1,Home)</onfocus>
-				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
+				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
+				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 				<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
-				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))">SetFocus(93)</onfocus>
-				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))">SetFocus(94)</onfocus>
+				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl)) + !Skin.HasSetting(PreloadDeactivated)">SetFocus(93)</onfocus>
+				<onfocus condition="[StringCompare(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
 			</control>
 			<!-- Loop trigger -->
 			<control type="button" id="93">
