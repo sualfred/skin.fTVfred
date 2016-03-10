@@ -398,7 +398,6 @@
 
 	<!-- Home Square Itemlayout -->
 	<include name="ParamSquareTemplate">
-
 		<control type="image">
 			<width>318</width>
 			<height>334</height>

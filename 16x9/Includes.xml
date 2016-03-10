@@ -5,9 +5,9 @@
 	<include file="Parameters.xml" />
 	<include file="ParametersHomeWidgets.xml" />
 	<include file="IncludesWidgetLayout.xml" />
-	<include file="IncludesWidgets.xml" />
+	<include file="Widgets.xml" />
 	<include file="ViewTypes.xml" />
-	<include file="IncludesViewTypes.xml" />
+	<include file="IncludesViewTypeLayout.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Variables.xml" />
 	<!-- Fullscreen dimensions -->
