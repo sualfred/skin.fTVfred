@@ -81,6 +81,7 @@
 				<shortcut label="31190" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Songs.xsp,return)</shortcut>
 			</node>
 			<node label="24001">
+				<shortcut label="Android Apps" icon="ftv_icon.png" condition="SubString(System.KernelVersion,Android)">ActivateWindow(Programs,androidapp://sources/apps,return)</shortcut>
 				<shortcut label="31512" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,addons://sources/audio/,return)</shortcut>	
 				<shortcut label="31520" type="program" icon="ftv_icon.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>	
 				<shortcut label="31519" type="video" icon="ftv_icon.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>	
