@@ -1317,8 +1317,8 @@ msgid "'Square Info' for Music / Add-ons"
 msgstr "'Quadrat Info' für Music / Add-ons"
 
 msgctxt "#31531"
-msgid "loading"
-msgstr "loading"
+msgid "loading home"
+msgstr "lade Startseite"
 
 msgctxt "#31532"
 msgid "updating widgets"

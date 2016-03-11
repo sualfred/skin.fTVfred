@@ -1,3 +1,10 @@
+2.1.16
+- Repo push
+- Disable widget updating splash right after the startup so a widget update/skin reload won't trigger it anymore
+- Removed skin helper service PVR thumbs as requested (too many issues with virtual folders)
+- Fixed missing Favourite group for the widget setup dialog
+- Cleanup and minor changes
+
 2.1.15
 - Repo push
 - Fixed issues with deactivated preloading

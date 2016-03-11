@@ -476,9 +476,9 @@
 					<orientation>horizontal</orientation>
 					<itemgap>10</itemgap>
 					<control type="image">
-						<width>47</width>
+						<width>40</width>
 						<height>46</height>
-						<aspectratio>keep</aspectratio>
+						<aspectratio aligny="center">keep</aspectratio>
 						<texture>home/loading_icon.png</texture>
 						<colordiffuse>ffb0b4b7</colordiffuse>
 						<visible>Control.IsVisible(91)</visible>

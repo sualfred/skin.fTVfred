@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-27 22:34+0000\n"
-"Last-Translator: Andrey Bondar\n"
+"PO-Revision-Date: 2016-03-11 07:23+0000\n"
+"Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -435,6 +435,11 @@ msgctxt "#31064"
 msgid "Custom background image"
 msgstr "Пользовательское фоновое изображение"
 
+#: /16x9/MusicOSD.xml:269
+msgctxt "#31102"
+msgid "Pan and zoom fanart"
+msgstr "Панорамирование и масштабирование фанарта"
+
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
 msgstr "Скрыть предупреждение о поддержке 'Мыши'"
@@ -601,6 +606,26 @@ msgstr "Выключить субтитры"
 msgctxt "#31140"
 msgid "Download Subtitles"
 msgstr "Скачать субтитры"
+
+#: /16x9/MusicOSD.xml:269
+msgctxt "#31141"
+msgid "Crossfade fanart"
+msgstr "Плавный переход фанарта"
+
+#: /16x9/script-skinshortcuts.xml:422
+msgctxt "#31142"
+msgid "Restore menu to skin defaults"
+msgstr "Восстановить меню обложки по умолчанию"
+
+#: /16x9/script-skinshortcuts.xml:424
+msgctxt "#31143"
+msgid "Reset all custom widgets"
+msgstr "Сброс всех пользовательских виджетов"
+
+#: /16x9/script-skinshortcuts.xml:426
+msgctxt "#31144"
+msgid "Backup custom widgets"
+msgstr "Резервное копирование пользовательских виджетов"
 
 msgctxt "#31145"
 msgid "percent remaining"
@@ -1108,6 +1133,64 @@ msgctxt "#31258"
 msgid "3D Movies"
 msgstr "3D фильмы"
 
+#: /16x9/script-skinshortcuts.xml:428
+msgctxt "#31259"
+msgid "Restore custom widgets backup"
+msgstr "Восстановить резервную копию пользовательских виджетов"
+
+#: /16x9/script-skinshortcuts.xml:421
+msgctxt "#31260"
+msgid "Reset / Backup"
+msgstr "Сброс / Бэкап"
+
+#: /16x9/ParametersHomeWidgets.xml:9
+msgctxt "#31261"
+msgid "Hide message"
+msgstr "Скрыть сообщение"
+
+#: /16x9/IncludesWidgets.xml:399
+msgctxt "#31262"
+msgid "Your library seems to be empty. Do you want to configure it now?"
+msgstr "Ваша библиотека пуста, хотите настроить её сейчас?"
+
+#: /16x9/IncludesWidgets.xml:398
+msgctxt "#31263"
+msgid "No content configured"
+msgstr "Нет содержимого"
+
+#: /16x9/IncludesWidgets.xml:408
+msgctxt "#31264"
+msgid "Empty library"
+msgstr "Библиотека пуста"
+
+#: /16x9/IncludesWidgets.xml:422
+msgctxt "#31265"
+msgid "Set widget content"
+msgstr "Установить виджет"
+
+#: /16x9/IncludesWidgets.xml:442
+msgctxt "#31266"
+msgid ""
+"There is no source assigned to this widget. Do you want to configure it now?"
+msgstr "Не назначены источники содержимого виджета, хотите настроить сейчас?"
+
+#: /16x9/Custom_Home_Widgets.xml:6
+msgctxt "#31267"
+msgid ""
+"It's highly recommended to reload the skin to fill the edited content lists "
+"correctly. Should the skin be reloaded?"
+msgstr "Рекомендуется перезагрузить обложку после изменения виджетов. Перезагрузить?"
+
+#: /16x9/IncludesWidgetLayout.xml:23
+msgctxt "#31268"
+msgid "There are no results for this widget"
+msgstr "Нет результатов для этого виджета"
+
+#: /shortcuts/overrides.xml:55
+msgctxt "#31269"
+msgid "Genres (Plugin based)"
+msgstr "Жанры"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Группа Виджетов 1"
@@ -1154,7 +1237,7 @@ msgstr "Фильмы IMDB Top250"
 
 msgctxt "#31511"
 msgid "TuneIn Recents"
-msgstr ""
+msgstr "Недавние TuneIn станции"
 
 msgctxt "#31512"
 msgid "Audio Add-ons"
@@ -1162,11 +1245,11 @@ msgstr "Аудиодополнения"
 
 msgctxt "#31513"
 msgid "TuneIn Local"
-msgstr ""
+msgstr "Местные TuneIn станции"
 
 msgctxt "#31514"
 msgid "TuneIn Favourites"
-msgstr ""
+msgstr "Избранные TuneIn тстанции"
 
 msgctxt "#31515"
 msgid "Drama and Thriller Movies"
@@ -1235,8 +1318,8 @@ msgid "'Square Info' for Music / Add-ons"
 msgstr "'Квадрат с информацией' для Музыки / Дополнений"
 
 msgctxt "#31531"
-msgid "loading"
-msgstr "загрузка"
+msgid "loading home"
+msgstr ""
 
 msgctxt "#31532"
 msgid "updating widgets"
@@ -1280,7 +1363,7 @@ msgctxt "#31540"
 msgid ""
 "Still there? Press 'Continue' to watch the next episode, otherwise the "
 "playback will be stopped."
-msgstr ""
+msgstr "Еще? Нажмите «Продолжить», чтобы смотреть следующий эпизод или воспроизведение будет остановлено."
 
 msgctxt "#31541"
 msgid "Continue"
