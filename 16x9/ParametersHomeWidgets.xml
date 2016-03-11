@@ -124,6 +124,9 @@
 				<onleft>99</onleft>
 				<onright>Select</onright>
 				<onback>99</onback>
+				<oninfo>SetProperty(SubMenu,$PARAM[ID]0,home)</oninfo>
+				<oninfo>SetFocus(99)</oninfo>
+				<oninfo>ActivateWindow(1105)</oninfo>
 				<movement>1</movement>
 				<focusposition>2</focusposition>
 				<viewtype label="">list</viewtype>
