@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">30</defaultcontrol>
 	<onload>Skin.SetString($INFO[Window(home).Property(SubMenu),WidgetMenu-],$INFO[Window(home).Property(WidgetMenu)])</onload>
 	<onunload>ClearProperty(SubMenu,Home)</onunload>
-	<onunload condition="Window.IsVisible(home) + !Window.IsVisible(script-skinshortcuts.xml)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[20183],text=$LOCALIZE[31267],yesaction=XBMC.ReloadSkin,noaction=SetFocus(99),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onunload>
+	<!--<onunload condition="Window.IsVisible(home) + !Window.IsVisible(script-skinshortcuts.xml)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[20183],text=$LOCALIZE[31267],yesaction=XBMC.ReloadSkin,noaction=SetFocus(99),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onunload>-->
 	<controls>
 		<!-- List 200 Control -->
 		<control type="button" id="20">
