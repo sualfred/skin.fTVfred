@@ -151,6 +151,9 @@
 				<content>addon-image</content>
 			</node>
 		</node>
+		<node label="32006">
+			<content>favourite</content>
+		</node>
 		<shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>-->
 	</ftv-groupings>
 </overrides>
