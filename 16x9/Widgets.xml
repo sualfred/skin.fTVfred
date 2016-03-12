@@ -460,6 +460,7 @@
 			<param name="Button2">$LOCALIZE[31049]</param>
 			<param name="Action">ActivateWindow(1105)</param>
 			<param name="Action2">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</param>
+			<param name="CurrenItem">$INFO[Container(99).CurrenItem]</param>
 		</include>
 	</include>
 </includes>

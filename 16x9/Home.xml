@@ -6,7 +6,11 @@
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
-	<onload condition="Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
+	<onload condition="IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
+	<onload condition="!IsEmpty(Window(home).Property(CurrentItem)) + !IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
+	<onload condition="!IsEmpty(Window(home).Property(CurrentItem)) + !IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,$INFO[Window(home).Property(CurrentItem)])</onload>
+	<onload>ClearProperty(CurrentItem,home)</onload>
+	<onload>ClearProperty(ReloadTriggered,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
 		<control type="group">

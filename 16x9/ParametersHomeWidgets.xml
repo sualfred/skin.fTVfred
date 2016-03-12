@@ -64,6 +64,7 @@
 								<textoffsety>27</textoffsety>
 								<label>$PARAM[Button]</label>
 								<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
+								<onclick>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onclick>
 								<onclick>SetFocus(99)</onclick>
 								<onclick condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
 								<onclick condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onclick>
@@ -125,8 +126,11 @@
 				<onright>Select</onright>
 				<onback>99</onback>
 				<oninfo>SetProperty(SubMenu,$PARAM[ID]0,home)</oninfo>
+				<oninfo>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</oninfo>
+				<oninfo>SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget$PARAM[ID]0],home)</oninfo>
 				<oninfo>SetFocus(99)</oninfo>
-				<oninfo>ActivateWindow(1105)</oninfo>
+				<!--<oninfo>ActivateWindow(1105)</oninfo>-->
+				<oninfo>ActivateWindow(1149)</oninfo>
 				<movement>1</movement>
 				<focusposition>2</focusposition>
 				<viewtype label="">list</viewtype>

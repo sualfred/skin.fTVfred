@@ -2,7 +2,7 @@
 <window>
 	<!-- script-skinshortcuts -->
 	<defaultcontrol always="true">10</defaultcontrol>
-	<!--<onunload condition="Window.IsVisible(home)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[20183],text=$LOCALIZE[31267],yesaction=XBMC.ReloadSkin,noaction=SetFocus(99),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onunload>-->
+	<onunload condition="Window.IsVisible(home)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[20183],text=$LOCALIZE[31267],yesaction=ClearProperty(PreloadDone,home)||SetProperty(Preload,1,home)||SetProperty(ReloadTriggered,1,home)||XBMC.ReloadSkin,noaction=SetFocus(99),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onunload>
 	<controls>
 		<!-- Move down -->
 		<control type="button" id="304">
