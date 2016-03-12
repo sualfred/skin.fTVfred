@@ -1,3 +1,8 @@
+2.1.17
+- Repo push
+- Added context menu for widgets (press Info button)
+- Added "Android Apps" and "Favourites" to widget  sources
+
 2.1.16
 - Repo push
 - Disable widget updating splash right after the startup so a widget update/skin reload won't trigger it anymore
