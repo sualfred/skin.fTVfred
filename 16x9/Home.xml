@@ -3,14 +3,18 @@
 	<!-- home -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90</defaultcontrol>
-	<onload>ClearProperty(BounceRight,Home)</onload>
+	<!-- Preload properties -->
 	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
-	<onload condition="IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
+	<!-- Main menu focus position properties -->
+	<onload condition="IsEmpty(Window(home).Property(PreloadDone)) + IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + StringCompare(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
 	<onload condition="!IsEmpty(Window(home).Property(CurrentItem)) + !IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
 	<onload condition="!IsEmpty(Window(home).Property(CurrentItem)) + !IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,$INFO[Window(home).Property(CurrentItem)])</onload>
+	<!-- Clear properties -->
 	<onload>ClearProperty(CurrentItem,home)</onload>
 	<onload>ClearProperty(ReloadTriggered,home)</onload>
+	<onload>ClearProperty(BounceRight,Home)</onload>
+	<!-- Build menu -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
 		<control type="group">
@@ -48,6 +52,10 @@
 				<top>111</top>
 				<width>284</width>
 				<height>942</height>
+				<include>WindowHomeFadeAnimation</include>
+				<include>HomeMenuSlideAnimation</include>
+				<orientation>vertical</orientation>
+				<scrolltime easing="out" tween="sine">180</scrolltime>
 				<onup>noop</onup>
 				<onup>SetProperty(Movement,1)</onup>
 				<ondown>noop</ondown>
@@ -58,6 +66,33 @@
 				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
+				<!-- Fake context menu -->
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(SubMenu,9000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget1000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget2000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget3000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget4000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget5000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget6000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget7000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget8000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget9000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget10000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget11000],home)</oninfo>
+				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget12000],home)</oninfo>
+				<oninfo condition="SubString(Container(99).ListItem.Property(ftvWidget),widget,left)">SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</oninfo>
+				<oninfo condition="SubString(Container(99).ListItem.Property(ftvWidget),widget,left)">ActivateWindow(1149)</oninfo>
 				<!--on right-->
 				<onright condition="!IsEmpty(Container(99).ListItem.Property(ftvWidget)) | StringCompare(Container(99).ListItem.Property(defaultID),settings)">ClearProperty(MainMenuFocus,home)</onright>
 				<onright condition="SubString(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
@@ -141,10 +176,6 @@
 				<onright condition="StringCompare(Container(99).ListItem.Property(ftvWidget),weather) + !IsEmpty(Window(Weather).Property(Day0.Outlook))">ActivateWindow(weather)</onright>
 				<onright condition="StringCompare(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
 				<onright condition="Control.IsVisible(999)">SetFocus(9991)</onright>
-				<orientation>vertical</orientation>
-				<scrolltime easing="out" tween="sine">180</scrolltime>
-				<include>WindowHomeFadeAnimation</include>
-				<include>HomeMenuSlideAnimation</include>
 				<itemlayout height="74" width="284">
 					<control type="label">
 						<width>284</width>
@@ -456,176 +487,177 @@
 				| [Container(12007).IsUpdating + Control.IsVisible(12007)]
 				| [Container(12008).IsUpdating + Control.IsVisible(12008)]
 				| [Container(12009).IsUpdating + Control.IsVisible(12009)]
-				| Container(201).IsUpdating]</visible>
+				| Container(201).IsUpdating]
+			</visible>
+		</control>
+		<!-- Splash -->
+		<control type="group">
+			<visible>Control.IsVisible(91) + !IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)</visible>
+			<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
+				<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
+				<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
+			</animation>
+			<control type="image">
+				<left>-96</left>
+				<top>-54</top>
+				<width>2112</width>
+				<height>1188</height>
+				<texture>special://skin/extras/backgrounds/loading.jpg</texture>
 			</control>
-			<!-- Splash -->
-			<control type="group">
-				<visible>Control.IsVisible(91) + !IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)</visible>
-				<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
-					<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
-					<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
-				</animation>
+			<control type="grouplist">
+				<top>765</top>
+				<width>1920</width>
+				<align>center</align>
+				<height>200</height>
+				<orientation>horizontal</orientation>
+				<itemgap>10</itemgap>
 				<control type="image">
-					<left>-96</left>
-					<top>-54</top>
-					<width>2112</width>
-					<height>1188</height>
-					<texture>special://skin/extras/backgrounds/loading.jpg</texture>
+					<width>40</width>
+					<height>46</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture>home/loading_icon.png</texture>
+					<colordiffuse>ffb0b4b7</colordiffuse>
+					<visible>Control.IsVisible(91)</visible>
 				</control>
-				<control type="grouplist">
-					<top>765</top>
-					<width>1920</width>
-					<align>center</align>
-					<height>200</height>
-					<orientation>horizontal</orientation>
-					<itemgap>10</itemgap>
-					<control type="image">
-						<width>40</width>
-						<height>46</height>
-						<aspectratio aligny="center">keep</aspectratio>
-						<texture>home/loading_icon.png</texture>
-						<colordiffuse>ffb0b4b7</colordiffuse>
-						<visible>Control.IsVisible(91)</visible>
-					</control>
-					<control type="label">
-						<font>Light32</font>
-						<textcolor>ffb0b4b7</textcolor>
-						<width>auto</width>
-						<height>41</height>
-						<label>$VAR[PreloadLabel]</label>
-					</control>
-				</control>
-				<control type="image">
-					<top>735</top>
-					<left>700</left>
-					<height>100</height>
-					<width>89</width>
-					<aspectratio>keep</aspectratio>
-					<colordiffuse>ffffffff</colordiffuse>
-					<texture>dialogs/gradient_animation.png</texture>
-					<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
+				<control type="label">
+					<font>Light32</font>
+					<textcolor>ffb0b4b7</textcolor>
+					<width>auto</width>
+					<height>41</height>
+					<label>$VAR[PreloadLabel]</label>
 				</control>
 			</control>
-			<!-- Check if Preloading is in progress -->
-			<control type="button" id="90">
-				<label>Loop</label>
-				<include>HiddenControl</include>
-				<onfocus>SetProperty(Preload,1,home)</onfocus>
-				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
-				<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
-				<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
-				<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl)) + !Skin.HasSetting(PreloadDeactivated)">SetFocus(93)</onfocus>
-				<onfocus condition="[StringCompare(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
+			<control type="image">
+				<top>735</top>
+				<left>700</left>
+				<height>100</height>
+				<width>89</width>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture>dialogs/gradient_animation.png</texture>
+				<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
 			</control>
-			<!-- Loop trigger -->
-			<control type="button" id="93">
-				<label>Loop</label>
-				<include>HiddenControl</include>
-				<onfocus>SetFocus(90)</onfocus>
-			</control>
-			<!-- Ready to focus -->
-			<control type="button" id="94">
-				<label>Loop stopped</label>
-				<include>HiddenControl</include>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,5)">Control.Move(1000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,6)">Control.Move(1000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,7)">Control.Move(1000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,8)">Control.Move(1000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(1000).CurrentItem,9)">Control.Move(1000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,2)">Control.Move(2000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,3)">Control.Move(2000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,4)">Control.Move(2000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,5)">Control.Move(2000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,6)">Control.Move(2000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,7)">Control.Move(2000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,8)">Control.Move(2000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(2000).CurrentItem,9)">Control.Move(2000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,2)">Control.Move(3000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,3)">Control.Move(3000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,4)">Control.Move(3000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,5)">Control.Move(3000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,6)">Control.Move(3000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,7)">Control.Move(3000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,8)">Control.Move(3000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(3000).CurrentItem,9)">Control.Move(3000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,2)">Control.Move(4000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,3)">Control.Move(4000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,4)">Control.Move(4000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,5)">Control.Move(4000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,6)">Control.Move(4000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,7)">Control.Move(4000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,8)">Control.Move(4000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(4000).CurrentItem,9)">Control.Move(4000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,2)">Control.Move(5000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,3)">Control.Move(5000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,4)">Control.Move(5000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,5)">Control.Move(5000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,6)">Control.Move(5000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,7)">Control.Move(5000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,8)">Control.Move(5000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(5000).CurrentItem,9)">Control.Move(5000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,2)">Control.Move(6000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,3)">Control.Move(6000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,4)">Control.Move(6000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,5)">Control.Move(6000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,6)">Control.Move(6000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,7)">Control.Move(6000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,8)">Control.Move(6000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(6000).CurrentItem,9)">Control.Move(6000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,2)">Control.Move(7000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,3)">Control.Move(7000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,4)">Control.Move(7000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,5)">Control.Move(7000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,6)">Control.Move(7000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,7)">Control.Move(7000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,8)">Control.Move(7000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(7000).CurrentItem,9)">Control.Move(7000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,2)">Control.Move(8000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,3)">Control.Move(8000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,4)">Control.Move(8000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,5)">Control.Move(8000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(8000).CurrentItem,9)">Control.Move(8000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,2)">Control.Move(9000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,3)">Control.Move(9000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,4)">Control.Move(9000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,5)">Control.Move(9000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,6)">Control.Move(9000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,7)">Control.Move(9000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,8)">Control.Move(9000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(9000).CurrentItem,9)">Control.Move(9000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,2)">Control.Move(10000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,3)">Control.Move(10000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,4)">Control.Move(10000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,5)">Control.Move(10000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,6)">Control.Move(10000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,7)">Control.Move(10000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,8)">Control.Move(10000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(10000).CurrentItem,9)">Control.Move(10000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,2)">Control.Move(11000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,3)">Control.Move(11000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,4)">Control.Move(11000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,5)">Control.Move(11000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,6)">Control.Move(11000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,7)">Control.Move(11000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,8)">Control.Move(11000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(11000).CurrentItem,9)">Control.Move(11000,-8)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,2)">Control.Move(12000,-1)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,3)">Control.Move(12000,-2)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,4)">Control.Move(12000,-3)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,5)">Control.Move(12000,-4)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,6)">Control.Move(12000,-5)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
-				<onfocus condition="StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
-				<onfocus>SetFocus(99)</onfocus>
-				<onfocus>SetProperty(PreloadDone,1,Home)</onfocus>
-				<onfocus>ClearProperty(Preload,Home)</onfocus>
-			</control>
-		</controls>
-	</window>
+		</control>
+		<!-- Check if Preloading is in progress -->
+		<control type="button" id="90">
+			<label>Loop</label>
+			<include>HiddenControl</include>
+			<onfocus>SetProperty(Preload,1,home)</onfocus>
+			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
+			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
+			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
+			<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl)) + !Skin.HasSetting(PreloadDeactivated)">SetFocus(93)</onfocus>
+			<onfocus condition="[StringCompare(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
+		</control>
+		<!-- Loop trigger -->
+		<control type="button" id="93">
+			<label>Loop</label>
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(90)</onfocus>
+		</control>
+		<!-- Ready to focus -->
+		<control type="button" id="94">
+			<label>Loop stopped</label>
+			<include>HiddenControl</include>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,5)">Control.Move(1000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,6)">Control.Move(1000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,7)">Control.Move(1000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,8)">Control.Move(1000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(1000).CurrentItem,9)">Control.Move(1000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,2)">Control.Move(2000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,3)">Control.Move(2000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,4)">Control.Move(2000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,5)">Control.Move(2000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,6)">Control.Move(2000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,7)">Control.Move(2000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,8)">Control.Move(2000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(2000).CurrentItem,9)">Control.Move(2000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,2)">Control.Move(3000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,3)">Control.Move(3000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,4)">Control.Move(3000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,5)">Control.Move(3000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,6)">Control.Move(3000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,7)">Control.Move(3000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,8)">Control.Move(3000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(3000).CurrentItem,9)">Control.Move(3000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,2)">Control.Move(4000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,3)">Control.Move(4000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,4)">Control.Move(4000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,5)">Control.Move(4000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,6)">Control.Move(4000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,7)">Control.Move(4000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,8)">Control.Move(4000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(4000).CurrentItem,9)">Control.Move(4000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,2)">Control.Move(5000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,3)">Control.Move(5000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,4)">Control.Move(5000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,5)">Control.Move(5000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,6)">Control.Move(5000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,7)">Control.Move(5000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,8)">Control.Move(5000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(5000).CurrentItem,9)">Control.Move(5000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,2)">Control.Move(6000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,3)">Control.Move(6000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,4)">Control.Move(6000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,5)">Control.Move(6000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,6)">Control.Move(6000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,7)">Control.Move(6000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,8)">Control.Move(6000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(6000).CurrentItem,9)">Control.Move(6000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,2)">Control.Move(7000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,3)">Control.Move(7000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,4)">Control.Move(7000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,5)">Control.Move(7000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,6)">Control.Move(7000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,7)">Control.Move(7000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,8)">Control.Move(7000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(7000).CurrentItem,9)">Control.Move(7000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,2)">Control.Move(8000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,3)">Control.Move(8000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,4)">Control.Move(8000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,5)">Control.Move(8000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(8000).CurrentItem,9)">Control.Move(8000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,2)">Control.Move(9000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,3)">Control.Move(9000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,4)">Control.Move(9000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,5)">Control.Move(9000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,6)">Control.Move(9000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,7)">Control.Move(9000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,8)">Control.Move(9000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(9000).CurrentItem,9)">Control.Move(9000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,2)">Control.Move(10000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,3)">Control.Move(10000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,4)">Control.Move(10000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,5)">Control.Move(10000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,6)">Control.Move(10000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,7)">Control.Move(10000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,8)">Control.Move(10000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(10000).CurrentItem,9)">Control.Move(10000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,2)">Control.Move(11000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,3)">Control.Move(11000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,4)">Control.Move(11000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,5)">Control.Move(11000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,6)">Control.Move(11000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,7)">Control.Move(11000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,8)">Control.Move(11000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(11000).CurrentItem,9)">Control.Move(11000,-8)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,2)">Control.Move(12000,-1)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,3)">Control.Move(12000,-2)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,4)">Control.Move(12000,-3)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,5)">Control.Move(12000,-4)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,6)">Control.Move(12000,-5)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
+			<onfocus condition="StringCompare(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
+			<onfocus>SetFocus(99)</onfocus>
+			<onfocus>SetProperty(PreloadDone,1,Home)</onfocus>
+			<onfocus>ClearProperty(Preload,Home)</onfocus>
+		</control>
+	</controls>
+</window>

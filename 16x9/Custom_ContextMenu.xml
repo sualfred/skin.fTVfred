@@ -11,7 +11,7 @@
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
 			<width>500</width>
-			<height>154</height>
+			<height>152</height>
 			<!-- Dialog background image -->
 			<control type="image">
 				<width>100%</width>
