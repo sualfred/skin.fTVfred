@@ -2,6 +2,8 @@
 <window type="dialog" id="1149">
 	<!-- custom contextmenu -->
 	<defaultcontrol always="true">11</defaultcontrol>
+	<onunload>ClearProperty(ItemHasWidget,home)</onunload>
+	<onunload>SetFocus(99)</onunload>
 	<controls>
 		<!-- Background -->
 		<include>DialogBackgroundImage</include>
@@ -54,6 +56,21 @@
 					<label>$LOCALIZE[31508] $INFO[Window(home).Property(WidgetGroupLabel)]</label>
 					<onclick>Close</onclick>
 					<onclick>ActivateWindow(1105)</onclick>
+					<visible>!IsEmpty(Window(home).Property(ItemHasWidget))</visible>
+				</control>
+				<control type="button" id="13">
+					<left>-5</left>
+					<width>500</width>				
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>MedUpper24</font>
+					<textoffsety>27</textoffsety>
+					<textoffsetx>27</textoffsetx>
+					<label>$LOCALIZE[31509]</label>
+					<onclick>Close</onclick>
+					<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+					<visible>IsEmpty(Window(home).Property(ItemHasWidget))</visible>
 				</control>
 			</control>
 		</control>

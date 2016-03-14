@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<!-- home -->
+	<menucontrol>5000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol>90</defaultcontrol>
+	<defaultcontrol always="true">90</defaultcontrol>
 	<!-- Preload properties -->
 	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
@@ -12,16 +13,48 @@
 	<onload condition="!IsEmpty(Window(home).Property(CurrentItem)) + !IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,$INFO[Window(home).Property(CurrentItem)])</onload>
 	<!-- Clear properties -->
 	<onload>ClearProperty(CurrentItem,home)</onload>
+	<onload>ClearProperty(ItemHasWidget,home)</onload>
 	<onload>ClearProperty(ReloadTriggered,home)</onload>
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<!-- Build menu -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
-		<control type="group">
+		<control type="group">			
 			<!-- Hidden control to load weather conditions -->
 			<control type="label">
 				<font>-</font>
 				<label>$INFO[Weather.Conditions]</label>
+			</control>
+			<!-- Fake context menu -->
+			<control type="button" id="5000">
+				<include>HiddenControl</include>
+				<onfocus>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onfocus>
+				<onfocus condition="SubString(Container(99).ListItem.Property(ftvWidget),widget,left)">SetProperty(ItemHasWidget,1,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(SubMenu,9000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget1000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget2000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget3000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget4000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget5000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget6000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget7000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget8000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget9000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget10000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget11000],home)</onfocus>
+				<onfocus condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget12000],home)</onfocus>
+				<onfocus>ActivateWindow(1149)</onfocus>
 			</control>
 			<!-- Hide elements until Preloading is done -->
 			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="[!IsEmpty(Window(home).Property(Preload)) | Control.IsVisible(91)] + !Skin.HasSetting(PreloadDeactivated)">Conditional</animation>
@@ -66,33 +99,7 @@
 				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
-				<!-- Fake context menu -->
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(SubMenu,9000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget1000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget2000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget3000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget4000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget5000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget6000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget7000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget8000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget9000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget10000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget11000],home)</oninfo>
-				<oninfo condition="StringCompare(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget12000],home)</oninfo>
-				<oninfo condition="SubString(Container(99).ListItem.Property(ftvWidget),widget,left)">SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</oninfo>
-				<oninfo condition="SubString(Container(99).ListItem.Property(ftvWidget),widget,left)">ActivateWindow(1149)</oninfo>
+				<oninfo>SetFocus(5000)</oninfo>
 				<!--on right-->
 				<onright condition="!IsEmpty(Container(99).ListItem.Property(ftvWidget)) | StringCompare(Container(99).ListItem.Property(defaultID),settings)">ClearProperty(MainMenuFocus,home)</onright>
 				<onright condition="SubString(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
