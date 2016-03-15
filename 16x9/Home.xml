@@ -387,7 +387,7 @@
 		<control type="button" id="91">
 			<include>HiddenControl</include>
 			<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + [!String.IsEmpty(Window(home).Property(PreloadTimout)) | !Window.Previous(startup)]
-				+ [[[Container(1001).IsUpdating + Control.IsVisible(1001)]
+				+ [[Container(1001).IsUpdating + Control.IsVisible(1001)]
 				| [Container(1002).IsUpdating + Control.IsVisible(1002)]
 				| [Container(1003).IsUpdating + Control.IsVisible(1003)]
 				| [Container(1004).IsUpdating + Control.IsVisible(1004)]
@@ -496,7 +496,6 @@
 				| [Container(12008).IsUpdating + Control.IsVisible(12008)]
 				| [Container(12009).IsUpdating + Control.IsVisible(12009)]
 				| Container(201).IsUpdating]
-				| !String.IsEmpty(Window(home).Property(WaitForControl))]
 			</visible>
 		</control>
 		<!-- Splash -->
@@ -526,7 +525,7 @@
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture>home/loading_icon.png</texture>
 					<colordiffuse>ffb0b4b7</colordiffuse>
-					<visible>Control.IsVisible(91)</visible>
+					<visible>Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))</visible>
 				</control>
 				<control type="label">
 					<font>Light32</font>
@@ -555,8 +554,8 @@
 			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
 			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
-			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) + !Skin.HasSetting(PreloadDeactivated)">SetFocus(93)</onfocus>
-			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91)] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated) + [Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))]">SetFocus(93)</onfocus>
+			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + String.IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
 		</control>
 		<!-- Loop trigger -->
 		<control type="button" id="93">
