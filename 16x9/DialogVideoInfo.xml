@@ -23,6 +23,10 @@
 			<textcolor>ffbbbbbb</textcolor>
 			<label>$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
 		</control>
+		<!-- Hidden Button -->
+		<control id="7" type="button">
+			<include>HiddenControl</include>
+		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
@@ -286,7 +290,7 @@
 					<height>23</height>
 					<onleft>7000</onleft>
 					<onright>8</onright>
-  					<onclick>SetProperty(NoLabel,1,home)</onclick>
+					<onclick>SetProperty(NoLabel,1,home)</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[Plot]')</onclick>
 					<include>DialogVideoInfoAnimation</include>
 					<texturefocus>views/more_fo.png</texturefocus>
@@ -396,18 +400,18 @@
 				<include>DialogVideoInfoAnimation</include>
 				<defaultcontrol always="true">9001</defaultcontrol>
 				<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
-				<!-- Dummy to always set focus to first visible button -->
+				!-- Dummy to always set focus to first visible button -->
 				<control id="9001" type="button">
 					<width>0</width>
 					<height>0</height>
 					<label>-</label>
 					<onfocus>Right</onfocus>
 					<include>NoTextures</include>
-					<visible>!Control.HasFocus(8) + !Control.HasFocus(1003) + !Control.HasFocus(6) + !Control.HasFocus(10) + !Control.HasFocus(20) + !Control.HasFocus(21) + !Control.HasFocus(7)</visible>
+					<visible>!Control.HasFocus(8) + !Control.HasFocus(1003) + !Control.HasFocus(6) + !Control.HasFocus(10) + !Control.HasFocus(20) + !Control.HasFocus(21) + !Control.HasFocus(1002)</visible>
 				</control>
 				<!-- Play/Browse Button -->
 				<control id="8" type="togglebutton">
-					<width min="104" max="224">auto</width>
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -425,11 +429,32 @@
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
 					<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
-					<usealttexture>Container.Content(TVShows) | String.IsEqual(Container.Content,seasons)</usealttexture>
+					<usealttexture>Container.Content(TVShows) | StringCompare(Container.Content,seasons)</usealttexture>
+				</control>
+				<!-- User Rating Button -->
+				<control id="1002" type="button">
+					<width min="124" max="244">auto</width>
+					<wrapmultiline>true</wrapmultiline>
+					<height>116</height>
+					<onup condition="!Control.IsVisible(96)">Close</onup>
+					<onup condition="Control.IsVisible(96)">3002</onup>
+					<ondown condition="Control.IsVisible(5000)">5000</ondown>
+					<ondown condition="Control.IsVisible(50)">50</ondown>
+					<onclick>SetProperty(SetUserRating,video,home)</onclick>
+					<onclick>SetProperty(UserRatingIcon,$INFO[ListItem.Icon],home)</onclick>
+					<onclick>SendClick(7)</onclick>
+					<font>Med24</font>
+					<label>[CAPITALIZE]$LOCALIZE[31270][/CAPITALIZE][CR][COLOR=00ffffff]$LOCALIZE[31271][/COLOR]</label>
+					<textoffsetx>28</textoffsetx>
+					<textcolor>ffdadada</textcolor>
+					<focusedcolor>ff222222</focusedcolor>
+					<visible>Control.IsEnabled(7)</visible>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 				<!-- Trailer button -->
 				<control id="1003" type="button">
-					<width min="104" max="224">auto</width>
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -443,13 +468,13 @@
 					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
-					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
 					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 				<!-- Refresh Button -->
 				<control id="6" type="button">
-					<width min="104" max="224">auto</width>
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -467,7 +492,7 @@
 				</control>
 				<!-- Get Thumb Button -->
 				<control id="10" type="button">
-					<width min="104" max="224">auto</width>
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -485,7 +510,7 @@
 				</control>
 				<!-- Artwork Downloader Button -->
 				<control id="20" type="button">
-					<width min="104" max="224">auto</width>
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -505,7 +530,7 @@
 				</control>
 				<!-- Cinema Experience Button -->
 				<control id="21" type="button">
-					<width min="104" max="224">auto</width>
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -523,23 +548,40 @@
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
 				</control>
-				<!-- User Rating Button -->
-				<control id="7" type="button">
-					<width min="104" max="224">auto</width>
+			</control>
+			<!-- Dummy Button grouplist -->
+			<control type="grouplist">
+				<left>-12</left>
+				<top>409</top>
+				<width>1620</width>
+				<height>116</height>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<include>DialogVideoInfoAnimation</include>
+				<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
+				<!-- Play/Browse Button -->
+				<control type="button">
+					<width min="124" max="244">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
-					<onup condition="!Control.IsVisible(96)">Close</onup>
-					<onup condition="Control.IsVisible(96)">3002</onup>
-					<ondown condition="Control.IsVisible(5000)">5000</ondown>
-					<ondown condition="Control.IsVisible(50)">50</ondown>
 					<font>Med24</font>
-					<label>[CAPITALIZE]$LOCALIZE[31194][/CAPITALIZE]</label>
+					<label>$INFO[Control.GetLabel(8)]</label>
 					<textoffsetx>28</textoffsetx>
-					<textcolor>ffdadada</textcolor>
-					<focusedcolor>ff222222</focusedcolor>
+					<textcolor>00ffffff</textcolor>
+					<focusedcolor>00ffffff</focusedcolor>
+					<visible>Control.IsVisible(8)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<!-- User Rating Button -->
+				<control type="image">
+					<left>29</left>
+					<top>65</top>
+					<width>115</width>
+					<height>22</height>
 					<visible>Control.IsEnabled(7)</visible>
-					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+					<texture>$VAR[UserRatingButton]</texture>
 				</control>
 			</control>
 		</control>
