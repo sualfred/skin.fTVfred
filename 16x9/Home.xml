@@ -3,7 +3,7 @@
 	<!-- home -->
 	<menucontrol>5000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">90</defaultcontrol>
+	<defaultcontrol>90</defaultcontrol>
 	<!-- Preload properties -->
 	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
 	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
@@ -27,6 +27,7 @@
 			</control>
 			<!-- Fake context menu -->
 			<control type="button" id="5000">
+				<visible>String.IsEmpty(Window(home).Property(ReloadTriggered))</visible>
 				<include>HiddenControl</include>
 				<onfocus>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onfocus>
 				<onfocus condition="String.StartsWith(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(ItemHasWidget,1,home)</onfocus>
@@ -386,7 +387,7 @@
 		<control type="button" id="91">
 			<include>HiddenControl</include>
 			<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + [!String.IsEmpty(Window(home).Property(PreloadTimout)) | !Window.Previous(startup)]
-				+ [[Container(1001).IsUpdating + Control.IsVisible(1001)]
+				+ [[[Container(1001).IsUpdating + Control.IsVisible(1001)]
 				| [Container(1002).IsUpdating + Control.IsVisible(1002)]
 				| [Container(1003).IsUpdating + Control.IsVisible(1003)]
 				| [Container(1004).IsUpdating + Control.IsVisible(1004)]
@@ -495,11 +496,12 @@
 				| [Container(12008).IsUpdating + Control.IsVisible(12008)]
 				| [Container(12009).IsUpdating + Control.IsVisible(12009)]
 				| Container(201).IsUpdating]
+				| !String.IsEmpty(Window(home).Property(WaitForControl))]
 			</visible>
 		</control>
 		<!-- Splash -->
 		<control type="group">
-			<visible>Control.IsVisible(91) + !String.IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)</visible>
+			<visible>[Control.IsVisible(91) + !String.IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)] | [!String.IsEmpty(Window(home).Property(WaitForControl)) + !Control.HasFocus(99)]</visible>
 			<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
 				<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
 				<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
@@ -553,8 +555,8 @@
 			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
 			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
-			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl)) + !Skin.HasSetting(PreloadDeactivated)">SetFocus(93)</onfocus>
-			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + String.IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + Control.IsVisible(91) + !Skin.HasSetting(PreloadDeactivated)">SetFocus(93)</onfocus>
+			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91)] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
 		</control>
 		<!-- Loop trigger -->
 		<control type="button" id="93">

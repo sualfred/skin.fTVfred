@@ -19,6 +19,37 @@
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
+			<!-- FTV labels -->
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>Preload Timout on</label>
+				<visible>!String.IsEmpty(Window(home).Property(PreloadTimout))</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>Preload true</label>
+				<visible>!String.IsEmpty(Window(home).Property(Preload))</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>PreloadDone true</label>
+				<visible>!String.IsEmpty(Window(home).Property(PreloadDone))</visible>
+			</control>
 			<!-- Window labels -->
 			<control type="label">
 				<width>780</width>

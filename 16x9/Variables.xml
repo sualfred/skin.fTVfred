@@ -10,7 +10,7 @@
 	</variable>
 	<variable name="PreloadLabel">
 		<value condition="Control.IsVisible(91)">$LOCALIZE[31531]</value>
-		<value condition="!Control.IsVisible(91)">$LOCALIZE[31533]</value>
+		<value>$LOCALIZE[31533]</value>
 	</variable>
 	<variable name="InfoImage">
 		<value condition="String.IsEqual(Window(home).Property(SetUserRating),video) + !String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
