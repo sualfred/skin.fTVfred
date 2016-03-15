@@ -9,6 +9,11 @@
 			<size>10</size>
 		</font>
 		<font>
+ 			<name>Reg37</name>
+ 			<filename>HelveticaNeue.ttf</filename>
+ 			<size>37</size>
+ 		</font>
+		<font>
 			<name>Reg36Spaced</name>
 			<filename>HelveticaNeue.ttf</filename>
 			<linespacing>1.15</linespacing>
@@ -142,6 +147,11 @@
 			<name>Light24</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>24</size>
+		</font>
+		<font>
+			<name>Light23</name>
+			<filename>HelveticaNeue_Lt.ttf</filename>
+			<size>23</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
@@ -364,6 +374,11 @@
 			<size>10</size>
 		</font>
 		<font>
+			<name>Reg37</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>37</size>
+		</font>
+		<font>
 			<name>Reg36Spaced</name>
 			<filename>Roboto-Regular.ttf</filename>
 			<linespacing>1.18</linespacing>
@@ -492,6 +507,11 @@
 			<name>Light24</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>24</size>
+		</font>
+		<font>
+			<name>Light23</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>23</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
@@ -699,6 +719,12 @@
 			<size>10</size>
 		</font>
 		<font>
+			<name>Reg37</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>37</size>
+		</font>
+		<font>
 			<name>Reg36Spaced</name>
 			<filename>Arial.ttf</filename>
 			<aspect>0.9</aspect>
@@ -868,6 +894,13 @@
 			<aspect>0.9</aspect>
 			<style>lighten</style>
 			<size>24</size>
+		</font>
+		<font>
+			<name>Light23</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>23</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>

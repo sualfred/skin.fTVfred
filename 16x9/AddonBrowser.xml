@@ -578,31 +578,8 @@
 						<font>Med24</font>
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
-						<label>24063</label>
+						<label>10004</label>
 						<visible>Control.IsEnabled(5)</visible>
-					</control>
-					<control id="6" type="radiobutton">
-						<width>360</width>
-						<height>76</height>
-						<onleft>51</onleft>
-						<onright>noop</onright>
-						<onup>noop</onup>
-						<ondown>noop</ondown>
-						<aligny>top</aligny>
-						<font>Med24</font>
-						<textoffsetx>23</textoffsetx>
-						<textoffsety>27</textoffsety>
-						<radiowidth>94</radiowidth>
-						<radioheight>40</radioheight>
-						<radioposx>235</radioposx>
-						<label>25000</label>
-						<texturefocus border="8">dialogs/DialogButtonFO.png</texturefocus>
-						<texturenofocus border="8">dialogs/DialogButtonNF.png</texturenofocus>
-						<textureradioonfocus>-</textureradioonfocus>
-						<textureradioonnofocus>-</textureradioonnofocus>
-						<textureradioofffocus>-</textureradioofffocus>
-						<textureradiooffnofocus>-</textureradiooffnofocus>
-						<visible>Control.IsEnabled(6)</visible>
 					</control>
 					<control id="7" type="radiobutton">
 						<width>360</width>

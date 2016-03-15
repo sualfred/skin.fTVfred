@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!--  -->
+	<defaultcontrol always="true">10</defaultcontrol>
+	<controls>
+		<!-- Background -->
+		<include>DialogBackgroundImage</include>
+		<!-- Background -->
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>816</width>
+			<height>298</height>
+			<texture border="2">dialogs/DialogConfirm.png</texture>
+			<animation easing="inout" effect="fade" end="100" start="0" time="60" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="fade" end="0" start="100" time="60" tween="sine">WindowClose</animation>
+		</control>
+		<!-- Main group -->
+		<control type="grouplist">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>816</width>
+			<height>528</height>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<orientation>vertical</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<animation easing="inout" effect="fade" end="100" start="0" time="60" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="fade" end="0" start="100" time="60" tween="sine">WindowClose</animation>
+			<!-- Heading -->
+			<control type="group">
+				<width>816</width>
+				<height>97</height>
+				<control type="image">
+					<width>816</width>
+					<height>97</height>
+					<texture border="2">dialogs/DialogConfirm.png</texture>
+				</control>
+				<control id="1" type="label">
+					<left>50</left>
+					<top>41</top>
+					<width>716</width>
+					<height>38</height>
+					<font>Bold38</font>
+					<textcolor>ffdadada</textcolor>
+				</control>
+			</control>
+			<!-- Details -->
+			<control id="9" type="textbox">
+				<left>50</left>
+				<width>716</width>
+				<height min="35" max="210">auto</height>
+				<font>Light28</font>
+				<textcolor>ff9d9d9d</textcolor>
+				<autoscroll>False</autoscroll>
+			</control>
+			<!--  Progress -->
+			<control id="20" type="progress">
+				<left>50</left>
+				<top>27</top>
+				<width>716</width>
+				<height>9</height>
+				<reveal>true</reveal>
+				<info>System.Progressbar</info>
+				<texturebg border="4">dialogs/progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="4">dialogs/progress_bar.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>Window.IsVisible(progressdialog)</visible>
+			</control>
+			<!-- Button grouplist -->
+			<control type="group">
+				<width>816</width>
+				<height>166</height>
+				<control type="image">
+					<width>816</width>
+					<height>166</height>
+					<texture flipy="true" border="2">dialogs/DialogConfirm.png</texture>
+				</control>
+				<control type="grouplist">
+					<centerleft>50%</centerleft>
+					<bottom>50</bottom>
+					<width>100%</width>
+					<height>76</height>
+					<itemgap>0</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<!-- Cancel -->
+					<control id="10" type="button">
+						<include condition="Control.IsVisible(12)">Width242</include>
+						<include condition="!Control.IsVisible(12)">Width358</include>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<font>MedUpper24</font>
+						<textoffsety>27</textoffsety>
+					</control>
+					<!-- Yes -->
+					<control id="11" type="button">
+						<include condition="Control.IsVisible(12)">Width242</include>
+						<include condition="!Control.IsVisible(12)">Width358</include>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<font>MedUpper24</font>
+						<textoffsety>27</textoffsety>
+					</control>
+					<!-- Custom -->
+					<control id="12" type="button">
+						<include condition="Control.IsVisible(12)">Width242</include>
+						<include condition="!Control.IsVisible(12)">Width358</include>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<font>MedUpper24</font>
+						<textoffsety>27</textoffsety>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- Dialog Settings -->
+	<defaultcontrol always="true">5</defaultcontrol>
+	<onunload>ClearProperty(Show3DSettings,home)</onunload>
+	<controls>
+		<include condition="!Window.IsVisible(osdaudiosettings) + !Window.IsVisible(osdvideosettings)">IncludesDialogSettings</include>
+		<include condition="Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings)">IncludesOSDSettings</include>
+	</controls>
+</window>
