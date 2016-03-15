@@ -51,7 +51,7 @@
 		</control>
 		<!-- Fanart -->
 		<control type="group">
-			<visible>IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<colordiffuse>26ffffff</colordiffuse>
@@ -87,7 +87,7 @@
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[31026]</label>
 				<include>NoTextures</include>
-				<animation condition="!IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
 			<control id="7001" type="button">
 				<top>573</top>
@@ -96,15 +96,15 @@
 				<onup>7000</onup>
 				<ondown>noop</ondown>
 				<onleft>Close</onleft>
-				<onright condition="!IsEmpty(Container(150).ListItem.Label)">150</onright>
-				<onright condition="IsEmpty(Container(150).ListItem.Label)">9001</onright>
+				<onright condition="!String.IsEmpty(Container(150).ListItem.Label)">150</onright>
+				<onright condition="String.IsEmpty(Container(150).ListItem.Label)">9001</onright>
 				<onfocus>SetProperty(Similar,1,home)</onfocus>
 				<font>Light35</font>
 				<textcolor>ffdadada</textcolor>
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[31070]</label>
 				<include>NoTextures</include>
-				<animation condition="IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
 		</control>
 		<control type="group">
@@ -141,7 +141,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffbebebe</textcolor>
 					<label>$INFO[Window.Property(year)]</label>
-					<visible>!IsEmpty(Window.Property(year))</visible>
+					<visible>!String.IsEmpty(Window.Property(year))</visible>
 				</control>
 				<control type="label">
 					<top>-6</top>
@@ -151,7 +151,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffbebebe</textcolor>
 					<label>$VAR[ExtendedDuration] </label>
-					<visible>!IsEmpty(Window.Property(Duration))</visible>
+					<visible>!String.IsEmpty(Window.Property(Duration))</visible>
 				</control>
 				<control type="image">
 					<top>3</top>
@@ -159,7 +159,7 @@
 					<height>23</height>
 					<colordiffuse>ffdadada</colordiffuse>
 					<texture>rating/cc.png</texture>
-					<visible>!IsEmpty(Window.Property(SubtitleLanguage))</visible>
+					<visible>!String.IsEmpty(Window.Property(SubtitleLanguage))</visible>
 				</control>
 			</control>
 			<!-- Star rating / Votes / Rating -->
@@ -177,14 +177,14 @@
 					<width>48</width>
 					<height>23</height>
 					<texture>views/imdb.png</texture>
-					<visible>!IsEmpty(Window.Property(rating)) + !Container.Content(tvshows)</visible>
+					<visible>!String.IsEmpty(Window.Property(rating)) + !Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
 					<top>3</top>
 					<width>47</width>
 					<height>23</height>
 					<texture>views/tvdb.png</texture>
-					<visible>!IsEmpty(Window.Property(rating)) + Container.Content(tvshows)</visible>
+					<visible>!String.IsEmpty(Window.Property(rating)) + Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
 					<top>-13</top>
@@ -194,7 +194,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffbcbcbc</textcolor>
 					<label>$INFO[Window.Property(rating),,/10]</label>
-					<visible>!IsEmpty(Window.Property(rating))</visible>
+					<visible>!String.IsEmpty(Window.Property(rating))</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -203,8 +203,8 @@
 				<height>1400</height>
 				<itemgap>0</itemgap>
 				<onup>noop</onup>
-				<ondown condition="IsEmpty(Window(home).Property(Similar))">1000</ondown>
-				<ondown condition="!IsEmpty(Window(home).Property(Similar))">150</ondown>
+				<ondown condition="String.IsEmpty(Window(home).Property(Similar))">1000</ondown>
+				<ondown condition="!String.IsEmpty(Window(home).Property(Similar))">150</ondown>
 				<onleft>7000</onleft>
 				<orientation>vertical</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
@@ -219,7 +219,7 @@
 					<textcolor>ffbbbbbb</textcolor>
 					<label>$INFO[Window.Property(Plot)]</label>
 					<include>DialogVideoInfoAnimation</include>
-					<visible>!IsEmpty(Window.Property(Plot))</visible>
+					<visible>!String.IsEmpty(Window.Property(Plot))</visible>
 				</control>
 				<!-- More button -->
 				<control id="3002" type="button">
@@ -248,7 +248,7 @@
 					<include>DialogVideoInfoAnimation</include>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!IsEmpty(Container(1000).ListItemNoWrap(0).Label)</visible>
+					<visible>!String.IsEmpty(Container(1000).ListItemNoWrap(0).Label)</visible>
 					<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="label">
@@ -267,7 +267,7 @@
 						<aligny>bottom</aligny>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(home).Property(ExActor1)]$INFO[Window(home).Property(ExActor2),$COMMA ]$INFO[Window(home).Property(ExActor3),$COMMA ]</label>
-						<visible>!IsEmpty(Window(home).Property(ExActor1))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(ExActor1))</visible>
 					</control>
 					<control type="label">
 						<top>-1</top>
@@ -277,7 +277,7 @@
 						<aligny>bottom</aligny>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Container(1000).ListItemNoWrap(0).Label]$INFO[Container(1000).ListItemNoWrap(1).Label,$COMMA ]$INFO[Container(1000).ListItemNoWrap(2).Label,$COMMA ]</label>
-						<visible>IsEmpty(Window(home).Property(ExActor1))</visible>
+						<visible>String.IsEmpty(Window(home).Property(ExActor1))</visible>
 					</control>
 				</control>
 				<!-- Director -->
@@ -288,7 +288,7 @@
 					<include>DialogVideoInfoAnimation</include>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!IsEmpty(Window.Property(director))</visible>
+					<visible>!String.IsEmpty(Window.Property(director))</visible>
 					<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="label">
@@ -317,7 +317,7 @@
 					<include>DialogVideoInfoAnimation</include>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!IsEmpty(Window.Property(premiered))</visible>
+					<visible>!String.IsEmpty(Window.Property(premiered))</visible>
 					<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="label">
@@ -346,7 +346,7 @@
 					<include>DialogVideoInfoAnimation</include>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!IsEmpty(Window.Property(omdb.Awards))</visible>
+					<visible>!String.IsEmpty(Window.Property(omdb.Awards))</visible>
 					<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="label">
@@ -375,7 +375,7 @@
 					<include>DialogVideoInfoAnimation</include>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!IsEmpty(Window.Property(revenue)) + !IsEmpty(Window.Property(budget))</visible>
+					<visible>!String.IsEmpty(Window.Property(revenue)) + !String.IsEmpty(Window.Property(budget))</visible>
 					<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1000) + !Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="label">
@@ -410,7 +410,7 @@
 				<font>Med32</font>
 				<textcolor>ff717171</textcolor>
 				<label>$LOCALIZE[31076]</label>
-				<visible>IsEmpty(Window(home).Property(Similar)) + !IsEmpty(Container(1000).ListItem.Label) + !Control.HasFocus(1000)</visible>
+				<visible>String.IsEmpty(Window(home).Property(Similar)) + !String.IsEmpty(Container(1000).ListItem.Label) + !Control.HasFocus(1000)</visible>
 				<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
 				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 			</control>
@@ -432,7 +432,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Window(home).Property(Similar))</visible>
+				<visible>String.IsEmpty(Window(home).Property(Similar))</visible>
 				<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
@@ -470,7 +470,7 @@
 							<width>320</width>
 							<height>480</height>
 							<texture border="2">views/season_overlay.png</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<left>18</left>
@@ -507,9 +507,9 @@
 					<control type="button">
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
-						<onfocus condition="IsEmpty(Window(home).Property(ExActor1))">SetProperty(ExActor1,$INFO[Container(1000).ListItemNoWrap(0).Label],home)</onfocus>
-						<onfocus condition="IsEmpty(Window(home).Property(ExActor2))">SetProperty(ExActor2,$INFO[Container(1000).ListItemNoWrap(1).Label],home)</onfocus>
-						<onfocus condition="IsEmpty(Window(home).Property(ExActor3))">SetProperty(ExActor3,$INFO[Container(1000).ListItemNoWrap(2).Label],home)</onfocus>
+						<onfocus condition="String.IsEmpty(Window(home).Property(ExActor1))">SetProperty(ExActor1,$INFO[Container(1000).ListItemNoWrap(0).Label],home)</onfocus>
+						<onfocus condition="String.IsEmpty(Window(home).Property(ExActor2))">SetProperty(ExActor2,$INFO[Container(1000).ListItemNoWrap(1).Label],home)</onfocus>
+						<onfocus condition="String.IsEmpty(Window(home).Property(ExActor3))">SetProperty(ExActor3,$INFO[Container(1000).ListItemNoWrap(2).Label],home)</onfocus>
 					</control>
 					<control type="group">
 						<animation center="150,288" reversible="false" condition="Control.HasFocus(1000) + [Container(1000).OnNext | Container(1000).OnPrevious]" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
@@ -552,7 +552,7 @@
 							<width>320</width>
 							<height>480</height>
 							<texture border="2">views/season_overlay.png</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							<animation center="auto" condition="Control.HasFocus(1000)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
 							<animation center="auto" condition="Control.HasFocus(1000)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 						</control>
@@ -597,7 +597,7 @@
 			<control type="group">
 				<left>1030</left>
 				<top>-319</top>
-				<visible>IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(1000) + !IsEmpty(Container(1000).ListItem.Label)</visible>
+				<visible>String.IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(1000) + !String.IsEmpty(Container(1000).ListItem.Label)</visible>
 				<animation center="480,1022" condition="!Control.HasFocus(1000)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<include name="InfoDialogCastList">
@@ -634,7 +634,7 @@
 				<font>Med32</font>
 				<textcolor>ff717171</textcolor>
 				<label>$LOCALIZE[31077]</label>
-				<visible>!IsEmpty(Window(home).Property(Similar)) + !IsEmpty(Container(150).ListItem.Label) + !Control.HasFocus(150)</visible>
+				<visible>!String.IsEmpty(Window(home).Property(Similar)) + !String.IsEmpty(Container(150).ListItem.Label) + !Control.HasFocus(150)</visible>
 				<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
 				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 			</control>
@@ -647,7 +647,7 @@
 				<font>Med54</font>
 				<textcolor>ffbebebe</textcolor>
 				<label>$LOCALIZE[31078]</label>
-				<visible>!IsEmpty(Window(home).Property(Similar)) + IsEmpty(Container(150).ListItem.Label)</visible>
+				<visible>!String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Container(150).ListItem.Label)</visible>
 				<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
 				<animation condition="Control.HasFocus(150)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(150)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
@@ -670,7 +670,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>!IsEmpty(Window(home).Property(Similar))</visible>
+				<visible>!String.IsEmpty(Window(home).Property(Similar))</visible>
 				<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
@@ -712,7 +712,7 @@
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>80000000</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>IsEmpty(ListItem.Art(poster))</visible>
+							<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 						</control>
 						<control type="image">
 							<top>48</top>
@@ -771,7 +771,7 @@
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>80000000</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>IsEmpty(ListItem.Art(poster))</visible>
+							<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 						</control>
 						<control type="image">
 							<top>48</top>
@@ -788,7 +788,7 @@
 			<control type="group">
 				<left>1030</left>
 				<top>-319</top>
-				<visible>!IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(150) + !IsEmpty(Container(150).ListItem.Label)</visible>
+				<visible>!String.IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(150) + !String.IsEmpty(Container(150).ListItem.Label)</visible>
 				<animation center="480,1022" condition="!Control.HasFocus(150)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<include name="InfoDialogVideoList">

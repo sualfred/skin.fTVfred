@@ -46,7 +46,7 @@
                     <aligny>bottom</aligny>
                     <textcolor>ffdadada</textcolor>
                     <label>$INFO[Container.CurrentItem]</label>
-                    <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+                    <visible>Integer.IsGreater(Container.NumItems,0)</visible>
                 </control>
                 <control type="label">
                     <top>14</top>
@@ -56,7 +56,7 @@
                     <aligny>bottom</aligny>
                     <textcolor>ff505050</textcolor>
                     <label>|</label>
-                    <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+                    <visible>Integer.IsGreater(Container.NumItems,0)</visible>
                 </control>
                 <control type="label">
                     <top>15</top>
@@ -66,7 +66,7 @@
                     <aligny>bottom</aligny>
                     <textcolor>ff505050</textcolor>
                     <label>$INFO[Container.NumItems]</label>
-                    <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+                    <visible>Integer.IsGreater(Container.NumItems,0)</visible>
                 </control>
             </control>
             <!-- Sort method -->
@@ -183,7 +183,7 @@
                         <aligny>bottom</aligny>
                         <textcolor>ffFFC24B</textcolor>
                         <label>$INFO[ListItem.ChannelName]</label>
-                        <visible>!IsEmpty(ListItem.ChannelName)</visible>
+                        <visible>!String.IsEmpty(ListItem.ChannelName)</visible>
                     </control>
                     <control type="label">
                         <width>auto</width>
@@ -192,7 +192,7 @@
                         <aligny>bottom</aligny>
                         <textcolor>ffbebebe</textcolor>
                         <label>$VAR[Duration]</label>
-                        <visible>!IsEmpty(ListItem.Duration)</visible>
+                        <visible>!String.IsEmpty(ListItem.Duration)</visible>
                     </control>
                     <control type="label">
                         <width>auto</width>
@@ -201,7 +201,7 @@
                         <aligny>bottom</aligny>
                         <textcolor>ffbebebe</textcolor>
                         <label>[COLOR ff707070]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.Date]</label>
-                        <visible>!IsEmpty(ListItem.Date)</visible>
+                        <visible>!String.IsEmpty(ListItem.Date)</visible>
                     </control>
                     <control type="label">
                         <width>auto</width>
@@ -210,7 +210,7 @@
                         <aligny>bottom</aligny>
                         <textcolor>ffbebebe</textcolor>
                         <label>$INFO[ListItem.Genre]</label>
-                        <visible>!StringCompare(ListItem.Genre,$LOCALIZE[19499])</visible>
+                        <visible>!String.IsEqual(ListItem.Genre,$LOCALIZE[19499])</visible>
                     </control>
                 </control>
                 <!-- Details -->
@@ -224,7 +224,7 @@
                     <autoscroll>false</autoscroll>
                     <textcolor>ffbcbcbc</textcolor>
                     <label>[B]$INFO[ListItem.Title][/B] $VAR[Plot]</label>
-                    <visible>!IsEmpty(ListItem.Title) + !StringCompare(ListItem.Label,..)</visible>
+                    <visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Label,..)</visible>
                 </control>
                 <control type="textbox">
                     <top>143</top>
@@ -236,7 +236,7 @@
                     <autoscroll>false</autoscroll>
                     <textcolor>ffbcbcbc</textcolor>
                     <label>[B]$INFO[ListItem.Label][/B] $VAR[Plot]</label>
-                    <visible>IsEmpty(ListItem.Title) + !StringCompare(ListItem.Label,..)</visible>
+                    <visible>String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Label,..)</visible>
                 </control>
                 <control id="99" type="scrollbar">
                     <top>103</top>
@@ -379,7 +379,7 @@
                     <width>640</width>
                     <height>60</height>
                     <texture border="2">dialogs/OptionsBackgroundHeading.png</texture>
-                    <visible>Control.IsEnabled(14) + IsEmpty(Container.PluginName)</visible>
+                    <visible>Control.IsEnabled(14) + String.IsEmpty(Container.PluginName)</visible>
                 </control>
                 <control type="label" id="5025">
                     <left>40</left>
@@ -389,7 +389,7 @@
                     <font>Bold30</font>
                     <textcolor>ffdadada</textcolor>
                     <label>$LOCALIZE[31162]:</label>
-                    <visible>Control.IsEnabled(14) + IsEmpty(Container.PluginName)</visible>
+                    <visible>Control.IsEnabled(14) + String.IsEmpty(Container.PluginName)</visible>
                 </control>
                 <control type="togglebutton" id="14">
                     <height>110</height>
@@ -408,7 +408,7 @@
                     <alttexturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</alttexturefocus>
                     <alttexturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</alttexturenofocus>
                     <usealttexture>System.Setting(hidewatched)</usealttexture>
-                    <visible>Control.IsEnabled(14) + IsEmpty(Container.PluginName)</visible>
+                    <visible>Control.IsEnabled(14) + String.IsEmpty(Container.PluginName)</visible>
                 </control>
                 <control type="image" id="5005">
                     <width>640</width>

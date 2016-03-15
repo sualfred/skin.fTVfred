@@ -96,7 +96,7 @@
 			<control type="group">
 				<left>523</left>
 				<top>289</top>
-				<visible>!StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -135,7 +135,7 @@
 			<control type="group">
 				<left>823</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -174,7 +174,7 @@
 			<control type="group">
 				<left>1123</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -213,7 +213,7 @@
 			<control type="group">
 				<left>1423</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -252,7 +252,7 @@
 			<control type="group">
 				<left>1723</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(weathersettings) + !Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !StringCompare(Window(settings).Property(SettingsCurrentItem),9)</visible>
+				<visible>!Window.IsVisible(weathersettings) + !Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -363,7 +363,7 @@
 					<scrolltime>0</scrolltime>
 					<orientation>vertical</orientation>
 					<viewtype label="535">list</viewtype>
-					<visible>IsEmpty(Container.FolderPath)</visible>
+					<visible>String.IsEmpty(Container.FolderPath)</visible>
 					<itemlayout height="120" width="638">
 						<control type="image">
 							<width>638</width>
@@ -444,7 +444,7 @@
 				<effect easing="inout" end="500,0" start="0,0" time="200" tween="sine" type="slide" />
 			</animation>
 			<control type="group">
-				<animation condition="!IsEmpty(ListItem.Property(Addon.Version)) | Control.IsVisible(96)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
+				<animation condition="!String.IsEmpty(ListItem.Property(Addon.Version)) | Control.IsVisible(96)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
 				<control type="image">
 					<left>78</left>
 					<width>879</width>
@@ -464,7 +464,7 @@
 						<width>112</width>
 						<height>112</height>
 						<texture>$INFO[Container(51).ListItem.Icon]</texture>
-						<visible>!SubString(Container(51).ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(Container(51).ListItem.Icon,Default)</visible>
 					</control>
 					<control type="label">
 						<left>124</left>
@@ -474,7 +474,7 @@
 						<font>Bold30</font>
 						<textcolor>ffdadada</textcolor>
 						<label>$INFO[Container(51).ListItem.Label]</label>
-						<visible>!SubString(Container(51).ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(Container(51).ListItem.Icon,Default)</visible>
 					</control>
 					<control type="label">
 						<left>124</left>
@@ -645,7 +645,7 @@
 						<font>Med24</font>
 						<label>16041</label>
 						<textcolor>ff000000</textcolor>
-						<visible>Control.IsVisible(6) + Control.HasFocus(6) + SubString(Control.GetLabel(6),*)</visible>
+						<visible>Control.IsVisible(6) + Control.HasFocus(6) + String.Contains(Control.GetLabel(6),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -656,7 +656,7 @@
 						<font>Med24</font>
 						<label>16041</label>
 						<textcolor>ff505153</textcolor>
-						<visible>Control.IsVisible(6) + !Control.HasFocus(6) + SubString(Control.GetLabel(6),*)</visible>
+						<visible>Control.IsVisible(6) + !Control.HasFocus(6) + String.Contains(Control.GetLabel(6),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -667,7 +667,7 @@
 						<font>Med24</font>
 						<label>351</label>
 						<textcolor>ff000000</textcolor>
-						<visible>Control.IsVisible(6) + Control.HasFocus(6) + !SubString(Control.GetLabel(6),*)</visible>
+						<visible>Control.IsVisible(6) + Control.HasFocus(6) + !String.Contains(Control.GetLabel(6),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -678,7 +678,7 @@
 						<font>Med24</font>
 						<label>351</label>
 						<textcolor>ff505153</textcolor>
-						<visible>Control.IsVisible(6) + !Control.HasFocus(6) + !SubString(Control.GetLabel(6),*)</visible>
+						<visible>Control.IsVisible(6) + !Control.HasFocus(6) + !String.Contains(Control.GetLabel(6),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -689,7 +689,7 @@
 						<font>Med24</font>
 						<label>16041</label>
 						<textcolor>ff000000</textcolor>
-						<visible>Control.IsVisible(7) + Control.HasFocus(7) + SubString(Control.GetLabel(7),*)</visible>
+						<visible>Control.IsVisible(7) + Control.HasFocus(7) + String.Contains(Control.GetLabel(7),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -700,7 +700,7 @@
 						<font>Med24</font>
 						<label>16041</label>
 						<textcolor>ff505153</textcolor>
-						<visible>Control.IsVisible(7) + !Control.HasFocus(7) + SubString(Control.GetLabel(7),*)</visible>
+						<visible>Control.IsVisible(7) + !Control.HasFocus(7) + String.Contains(Control.GetLabel(7),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -711,7 +711,7 @@
 						<font>Med24</font>
 						<label>351</label>
 						<textcolor>ff000000</textcolor>
-						<visible>Control.IsVisible(7) + Control.HasFocus(7) + !SubString(Control.GetLabel(7),*)</visible>
+						<visible>Control.IsVisible(7) + Control.HasFocus(7) + !String.Contains(Control.GetLabel(7),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -722,7 +722,7 @@
 						<font>Med24</font>
 						<label>351</label>
 						<textcolor>ff505153</textcolor>
-						<visible>Control.IsVisible(7) + !Control.HasFocus(7) + !SubString(Control.GetLabel(7),*)</visible>
+						<visible>Control.IsVisible(7) + !Control.HasFocus(7) + !String.Contains(Control.GetLabel(7),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -733,7 +733,7 @@
 						<font>Med24</font>
 						<label>16041</label>
 						<textcolor>ff000000</textcolor>
-						<visible>Control.IsVisible(8) + Control.HasFocus(8) + SubString(Control.GetLabel(8),*)</visible>
+						<visible>Control.IsVisible(8) + Control.HasFocus(8) + String.Contains(Control.GetLabel(8),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -744,7 +744,7 @@
 						<font>Med24</font>
 						<label>16041</label>
 						<textcolor>ff505153</textcolor>
-						<visible>Control.IsVisible(8) + !Control.HasFocus(8) + SubString(Control.GetLabel(8),*)</visible>
+						<visible>Control.IsVisible(8) + !Control.HasFocus(8) + String.Contains(Control.GetLabel(8),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -755,7 +755,7 @@
 						<font>Med24</font>
 						<label>351</label>
 						<textcolor>ff000000</textcolor>
-						<visible>Control.IsVisible(8) + Control.HasFocus(8) + !SubString(Control.GetLabel(8),*)</visible>
+						<visible>Control.IsVisible(8) + Control.HasFocus(8) + !String.Contains(Control.GetLabel(8),*)</visible>
 					</control>
 					<control type="label">
 						<bottom>6</bottom>
@@ -766,7 +766,7 @@
 						<font>Med24</font>
 						<label>351</label>
 						<textcolor>ff505153</textcolor>
-						<visible>Control.IsVisible(8) + !Control.HasFocus(8) + !SubString(Control.GetLabel(8),*)</visible>
+						<visible>Control.IsVisible(8) + !Control.HasFocus(8) + !String.Contains(Control.GetLabel(8),*)</visible>
 					</control>
 				</control>
 			</control>
@@ -780,7 +780,7 @@
 				<width>40</width>
 				<height>480</height>
 				<texture>settings/shadow.png</texture>
-				<visible>!SubString(Container.FolderPath,/,right)</visible>
+				<visible>!String.EndsWith(Container.FolderPath,/)</visible>
 				<animation easing="inout" effect="fade" end="100" start="0" time="0" tween="sine">VisibleChange</animation>
 			</control>
 			<control type="label">
@@ -818,8 +818,8 @@
 				<focusposition>1</focusposition>
 				<orientation>vertical</orientation>
 				<viewtype label="535">list</viewtype>
-				<visible>!IsEmpty(Container.FolderPath)</visible>
-				<animation condition="StringCompare(Container(51).NumItems,0) | StringCompare(Container(51).NumItems,1) | [StringCompare(Container(51).NumItems,2) + !Container(51).HasParent]" effect="slide" end="0,-140">Conditional</animation>
+				<visible>!String.IsEmpty(Container.FolderPath)</visible>
+				<animation condition="String.IsEqual(Container(51).NumItems,0) | String.IsEqual(Container(51).NumItems,1) | [String.IsEqual(Container(51).NumItems,2) + !Container(51).HasParent]" effect="slide" end="0,-140">Conditional</animation>
 				<itemlayout height="140" width="558">
 					<control type="image">
 						<width>558</width>

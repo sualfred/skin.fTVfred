@@ -40,7 +40,7 @@
                             <aligny>bottom</aligny>
                             <textcolor>ffdadada</textcolor>
                             <label>$INFO[Container.Position]</label>
-                            <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+                            <visible>Integer.IsGreater(Container.NumItems,0)</visible>
                         </control>
                         <control type="label">
                             <top>14</top>
@@ -50,7 +50,7 @@
                             <aligny>bottom</aligny>
                             <textcolor>ff505050</textcolor>
                             <label>|</label>
-                            <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+                            <visible>Integer.IsGreater(Container.NumItems,0)</visible>
                         </control>
                         <control type="label">
                             <top>15</top>
@@ -60,7 +60,7 @@
                             <aligny>bottom</aligny>
                             <textcolor>ff505050</textcolor>
                             <label>$INFO[Container.NumItems]</label>
-                            <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+                            <visible>Integer.IsGreater(Container.NumItems,0)</visible>
                         </control>
                     </control>
                     <!-- Time -->
@@ -127,7 +127,7 @@
                             <focusedcolor>ff222222</focusedcolor>
                             <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
                             <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-                            <visible>!StringCompare(ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         </control>
                         <control id="32" type="button">
                             <width min="104" max="224">auto</width>
@@ -143,7 +143,7 @@
                             <focusedcolor>ff222222</focusedcolor>
                             <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
                             <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-                            <visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(Container(59).ListItem.Label,..)</visible>
                         </control>
                         <control id="34" type="button">
                             <width min="104" max="224">auto</width>
@@ -159,7 +159,7 @@
                             <focusedcolor>ff222222</focusedcolor>
                             <texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
                             <texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-                            <visible>!StringCompare(Container(59).ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(Container(59).ListItem.Label,..)</visible>
                         </control>
                     </control>
                     <!-- title plot section -->
@@ -195,7 +195,7 @@
                                 <aligny>bottom</aligny>
                                 <textcolor>ffbebebe</textcolor>
                                 <label>$INFO[ListItem.Genre]</label>
-                                <visible>!StringCompare(ListItem.Genre,$LOCALIZE[19499])</visible>
+                                <visible>!String.IsEqual(ListItem.Genre,$LOCALIZE[19499])</visible>
                             </control>
                         </control>
                         <!-- Details -->

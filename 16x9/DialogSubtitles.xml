@@ -24,7 +24,7 @@
 				<textcolor>ffeaeaea</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
 				<label>$INFO[VideoPlayer.Title]</label>
-				<visible>IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				<visible>String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 			</control>
 			<!--  TV Show title -->
 			<control type="label">
@@ -34,7 +34,7 @@
 				<textcolor>ffeaeaea</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 			</control>
 			<!-- Season/Episode number -->
 			<control type="label">
@@ -57,7 +57,7 @@
 			<textcolor>fffe8e8e8</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 			<label>$INFO[VideoPlayer.Title]</label>
-			<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+			<visible>!String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 		</control>
 		<control type="group">
 			<top>655</top>

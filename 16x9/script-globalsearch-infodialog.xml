@@ -82,20 +82,20 @@
 					<width>90</width>
 					<height>90</height>
 					<texture>views/OverlayHD.png</texture>
-					<visible>IntegerGreaterThan(Container(100).ListItem.Property(VideoResolution),719)</visible>
+					<visible>Integer.IsGreater(Container(100).ListItem.Property(VideoResolution),719)</visible>
 				</control>
 				<control type="image">
 					<width>90</width>
 					<height>90</height>
 					<texture>views/OverlayWatched.png</texture>
-					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
+					<visible>Integer.IsGreater(Container(100).ListItem.Property(Playcount),0)</visible>
 				</control>
 				<control type="image">
 					<top>480</top>
 					<width>320</width>
 					<height>8</height>
 					<texture border="2">views/ProgressBar.png</texture>
-					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
+					<visible>Integer.IsGreater(Container(100).ListItem.Property(Playcount),0)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -111,20 +111,20 @@
 					<width>90</width>
 					<height>90</height>
 					<texture>views/OverlayHD.png</texture>
-					<visible>IntegerGreaterThan(Container(100).ListItem.Property(VideoResolution),719)</visible>
+					<visible>Integer.IsGreater(Container(100).ListItem.Property(VideoResolution),719)</visible>
 				</control>
 				<control type="image">
 					<width>90</width>
 					<height>90</height>
 					<texture>views/OverlayWatched.png</texture>
-					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
+					<visible>Integer.IsGreater(Container(100).ListItem.Property(Playcount),0)</visible>
 				</control>
 				<control type="image">
 					<top>336</top>
 					<width>336</width>
 					<height>8</height>
 					<texture border="2">views/ProgressBar.png</texture>
-					<visible>IntegerGreaterThan(Container(100).ListItem.Property(Playcount),0)</visible>
+					<visible>Integer.IsGreater(Container(100).ListItem.Property(Playcount),0)</visible>
 				</control>
 			</control>
 		</control>
@@ -159,7 +159,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffbebebe</textcolor>
 					<label>$INFO[Container(100).ListItem.Property(Year)]</label>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Year))</visible>
 				</control>
 				<control type="label">
 					<top>-6</top>
@@ -169,7 +169,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffbebebe</textcolor>
 					<label>$VAR[SearchDuration] </label>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Duration))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Duration))</visible>
 				</control>
 			</control>
 			<!-- Star rating / Votes / Rating -->
@@ -185,21 +185,21 @@
 					<height>24</height>
 					<texture>$INFO[Container(100).ListItem.Property(UserRating),rating/rating,.png]</texture>
 					<aspectratio align="left">keep</aspectratio>
-					<visible>!IsEmpty(Container(100).ListItem.Property(UserRating))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(UserRating))</visible>
 				</control>
 				<control type="image">
 					<top>4</top>
 					<width>48</width>
 					<height>23</height>
 					<texture>views/imdb.png</texture>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Rating)) + [Control.IsVisible(110)]</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Rating)) + [Control.IsVisible(110)]</visible>
 				</control>
 				<control type="image">
 					<top>3</top>
 					<width>47</width>
 					<height>23</height>
 					<texture>views/tvdb.png</texture>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Rating)) + [Control.IsVisible(120) | Control.IsVisible(140)]</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Rating)) + [Control.IsVisible(120) | Control.IsVisible(140)]</visible>
 				</control>
 				<control type="label">
 					<top>-13</top>
@@ -209,7 +209,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffbcbcbc</textcolor>
 					<label>$INFO[Container(100).ListItem.Property(Rating),,/10]</label>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Rating))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Rating))</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -231,7 +231,7 @@
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
 					<label>$VAR[SearchPlot]</label>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Plot)) | !IsEmpty(Container(100).ListItem.Property(Plotoutline))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Plot)) | !String.IsEmpty(Container(100).ListItem.Property(Plotoutline))</visible>
 				</control>
 				<control id="3003" type="button">
 					<onfocus>Close</onfocus>
@@ -257,7 +257,7 @@
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
-				<visible>!IsEmpty(Container(100).ListItem.Property(Director))</visible>
+				<visible>!String.IsEmpty(Container(100).ListItem.Property(Director))</visible>
 				<control type="label">
 					<width>auto</width>
 					<height>24</height>
@@ -284,7 +284,7 @@
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
-				<visible>!IsEmpty(Container(100).ListItem.Property(Writer))</visible>
+				<visible>!String.IsEmpty(Container(100).ListItem.Property(Writer))</visible>
 				<control type="label">
 					<width>auto</width>
 					<height>24</height>
@@ -328,7 +328,7 @@
 				<!-- Formed -->
 				<control type="group">
 					<height>36</height>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
@@ -342,7 +342,7 @@
 				<!-- Year -->
 				<control type="group">
 					<height>36</height>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Year))</visible>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
@@ -356,7 +356,7 @@
 				<!-- Genre -->
 				<control type="group">
 					<height>36</height>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Genre)) + !IsEmpty(Container(100).ListItem.Property(Artist_Genre))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Genre)) + !String.IsEmpty(Container(100).ListItem.Property(Artist_Genre))</visible>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
@@ -370,7 +370,7 @@
 				<!-- Active -->
 				<control type="group">
 					<height>36</height>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Artist_YearsActive))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_YearsActive))</visible>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
@@ -384,7 +384,7 @@
 				<!-- Artist -->
 				<control type="group">
 					<height>36</height>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Artist))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist))</visible>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
@@ -419,7 +419,7 @@
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
 					<label>$VAR[SearchPlot]</label>
-					<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Description)) | !IsEmpty(Container(100).ListItem.Property(Album_Description))</visible>
+					<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Description)) | !String.IsEmpty(Container(100).ListItem.Property(Album_Description))</visible>
 				</control>
 				<control id="3003" type="button">
 					<onfocus>SetFocus(9001)</onfocus>
@@ -510,7 +510,7 @@
 				<width>761</width>
 				<height>470</height>
 				<texture border="66,66,51,51">views/shadow_nf.png</texture>
-				<visible>!IsEmpty(Container(100).ListItem.Property(Fanart))</visible>
+				<visible>!String.IsEmpty(Container(100).ListItem.Property(Fanart))</visible>
 			</control>
 			<control type="image">
 				<top>504</top>

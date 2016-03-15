@@ -98,8 +98,8 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(450).NumItems,0) | StringCompare(Container(450).NumItems,1) | [StringCompare(Container(450).NumItems,2) + !Container(450).HasParent]" effect="slide" end="0,-168">Conditional</animation>
-				<animation condition="[StringCompare(Container(450).NumItems,2) + Container(450).HasParent] | StringCompare(Container(450).NumItems,3) | [StringCompare(Container(450).NumItems,4) + !Container(450).HasParent]" effect="slide" end="0,-84">Conditional</animation>
+				<animation condition="String.IsEqual(Container(450).NumItems,0) | String.IsEqual(Container(450).NumItems,1) | [String.IsEqual(Container(450).NumItems,2) + !Container(450).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+				<animation condition="[String.IsEqual(Container(450).NumItems,2) + Container(450).HasParent] | String.IsEqual(Container(450).NumItems,3) | [String.IsEqual(Container(450).NumItems,4) + !Container(450).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 				<itemlayout height="84" width="937">
 					<control type="image">
 						<width>937</width>
@@ -169,7 +169,7 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>1</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(451).NumItems,0) | StringCompare(Container(451).NumItems,1) | [StringCompare(Container(451).NumItems,2) + !Container(451).HasParent]" effect="slide" end="0,-140">Conditional</animation>
+				<animation condition="String.IsEqual(Container(451).NumItems,0) | String.IsEqual(Container(451).NumItems,1) | [String.IsEqual(Container(451).NumItems,2) + !Container(451).HasParent]" effect="slide" end="0,-140">Conditional</animation>
 				<itemlayout height="140" width="458">
 					<control type="image">
 						<width>458</width>
@@ -236,7 +236,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture colordiffuse="00ffffff">$INFO[Container(451).ListItem.Icon]</texture>
 				<bordertexture>common/default_empty.png</bordertexture>
-				<visible>!SubString(Control.GetLabel(416),*)</visible>
+				<visible>!String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="image">
 				<left>498</left>
@@ -247,7 +247,7 @@
 				<bordersize>0,0,13,17</bordersize>
 				<texture>$INFO[Container(451).ListItem.Icon]</texture>
 				<bordertexture border="14,18,14,18">dialogs/shadow.png</bordertexture>
-				<visible>!SubString(Control.GetLabel(416),*)</visible>
+				<visible>!String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="image">
 				<left>498</left>
@@ -257,7 +257,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture colordiffuse="00ffffff">$INFO[Container(451).ListItem.Icon]</texture>
 				<bordertexture>common/default_empty.png</bordertexture>
-				<visible>SubString(Control.GetLabel(416),*)</visible>
+				<visible>String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="image">
 				<left>498</left>
@@ -268,7 +268,7 @@
 				<bordersize>0,0,13,17</bordersize>
 				<texture flipx="true">$INFO[Container(451).ListItem.Icon]</texture>
 				<bordertexture border="14,18,14,18">dialogs/shadow.png</bordertexture>
-				<visible>SubString(Control.GetLabel(416),*)</visible>
+				<visible>String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control id="9000" type="grouplist">
 				<left>962</left>
@@ -354,7 +354,7 @@
 				<font>Med24</font>
 				<label>16041</label>
 				<textcolor>ff000000</textcolor>
-				<visible>Control.IsVisible(416) + Control.HasFocus(416) + SubString(Control.GetLabel(416),*)</visible>
+				<visible>Control.IsVisible(416) + Control.HasFocus(416) + String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="label">
 				<left>1023</left>
@@ -366,7 +366,7 @@
 				<font>Med24</font>
 				<label>16041</label>
 				<textcolor>ff505153</textcolor>
-				<visible>Control.IsVisible(416) + !Control.HasFocus(416) + SubString(Control.GetLabel(416),*)</visible>
+				<visible>Control.IsVisible(416) + !Control.HasFocus(416) + String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="label">
 				<left>1023</left>
@@ -378,7 +378,7 @@
 				<font>Med24</font>
 				<label>351</label>
 				<textcolor>ff000000</textcolor>
-				<visible>Control.IsVisible(416) + Control.HasFocus(416) + !SubString(Control.GetLabel(416),*)</visible>
+				<visible>Control.IsVisible(416) + Control.HasFocus(416) + !String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="label">
 				<left>1023</left>
@@ -390,7 +390,7 @@
 				<font>Med24</font>
 				<label>351</label>
 				<textcolor>ff505153</textcolor>
-				<visible>Control.IsVisible(416) + !Control.HasFocus(416) + !SubString(Control.GetLabel(416),*)</visible>
+				<visible>Control.IsVisible(416) + !Control.HasFocus(416) + !String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 		</control>
 	</controls>

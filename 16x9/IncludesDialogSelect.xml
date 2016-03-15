@@ -82,8 +82,8 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(3).NumItems,0) | StringCompare(Container(3).NumItems,1) | [StringCompare(Container(3).NumItems,2) + !Container(3).HasParent]" effect="slide" end="0,-168">Conditional</animation>
-				<animation condition="[StringCompare(Container(3).NumItems,2) + Container(3).HasParent] | StringCompare(Container(3).NumItems,3) | [StringCompare(Container(3).NumItems,4) + !Container(3).HasParent]" effect="slide" end="0,-84">Conditional</animation>
+				<animation condition="String.IsEqual(Container(3).NumItems,0) | String.IsEqual(Container(3).NumItems,1) | [String.IsEqual(Container(3).NumItems,2) + !Container(3).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+				<animation condition="[String.IsEqual(Container(3).NumItems,2) + Container(3).HasParent] | String.IsEqual(Container(3).NumItems,3) | [String.IsEqual(Container(3).NumItems,4) + !Container(3).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 				<itemlayout height="84" width="958">
 					<control type="image">
 						<width>958</width>
@@ -208,7 +208,7 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>1</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(6).NumItems,0) | StringCompare(Container(6).NumItems,1) | [StringCompare(Container(6).NumItems,2) + !Container(6).HasParent]" effect="slide" end="0,-140">Conditional</animation>
+				<animation condition="String.IsEqual(Container(6).NumItems,0) | String.IsEqual(Container(6).NumItems,1) | [String.IsEqual(Container(6).NumItems,2) + !Container(6).HasParent]" effect="slide" end="0,-140">Conditional</animation>
 				<itemlayout height="140" width="858">
 					<control type="image">
 						<width>858</width>
@@ -352,8 +352,8 @@
 			<include>HiddenControl</include>
 		</control>
 		<control id="21" type="button">
-			<onleft condition="!IsEmpty(Container(3).ListItemNoWrap(-1).Label)">Control.Move(3,-1)</onleft>
-			<onright condition="!IsEmpty(Container(3).ListItemNoWrap(1).Label)">Control.Move(3,1)</onright>
+			<onleft condition="!String.IsEmpty(Container(3).ListItemNoWrap(-1).Label)">Control.Move(3,-1)</onleft>
+			<onright condition="!String.IsEmpty(Container(3).ListItemNoWrap(1).Label)">Control.Move(3,1)</onright>
 			<onup>noop</onup>
 			<ondown>20</ondown>
 			<include>HiddenControl</include>
@@ -365,8 +365,8 @@
 			<include>DialogAnimation</include>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<include condition="StringCompare(Window(home).Property(SetUserRating),music)">Width770</include>
-			<include condition="StringCompare(Window(home).Property(SetUserRating),video)">Width673</include>
+			<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width770</include>
+			<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width673</include>
 			<height>323</height>
 			<!-- Background -->
 			<control type="image">
@@ -379,8 +379,8 @@
 			<control type="label">
 				<left>-21</left>
 				<top>-26</top>
-				<include condition="StringCompare(Window(home).Property(SetUserRating),music)">Width812</include>
-				<include condition="StringCompare(Window(home).Property(SetUserRating),video)">Width715</include>
+				<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width812</include>
+				<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width715</include>
 				<height>34</height>
 				<font>Light23</font>
 				<label>$LOCALIZE[31278]</label>
@@ -389,22 +389,22 @@
 			<control type="image">
 				<left>-21</left>
 				<top>20</top>
-				<include condition="StringCompare(Window(home).Property(SetUserRating),music)">Width812</include>
-				<include condition="StringCompare(Window(home).Property(SetUserRating),video)">Width715</include>
+				<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width812</include>
+				<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width715</include>
 				<height>1</height>
 				<texture>rating/dialog_select/line.png</texture>
 			</control>
 			<control type="image">
 				<left>-21</left>
 				<top>50</top>
-				<include condition="StringCompare(Window(home).Property(SetUserRating),music)">Width292</include>
-				<include condition="StringCompare(Window(home).Property(SetUserRating),video)">Width195</include>
+				<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width292</include>
+				<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width195</include>
 				<height>292</height>
 				<texture>$VAR[InfoImage]</texture>
 				<aspectratio aligny="center">scale</aspectratio>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="-97" condition="StringCompare(Window(home).Property(SetUserRating),video)">Conditional</animation>
+				<animation effect="slide" end="-97" condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Conditional</animation>
 				<control type="label">
 					<left>301</left>
 					<top>69</top>

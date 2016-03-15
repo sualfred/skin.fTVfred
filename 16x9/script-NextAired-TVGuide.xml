@@ -19,7 +19,7 @@
 				<fadetime>400</fadetime>
 				<colordiffuse>26ffffff</colordiffuse>
 				<texture background="true">$VAR[NextAiredFanart]</texture>
-				<visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
 			</control>
 			<!-- No results -->
 			<control type="group">

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- videoosd -->
-	<onload condition="IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(304)</onload>
-	<onload condition="IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(400)</onload>
-	<onload condition="!IsEmpty(Window(home).Property(ShowOptions)) + VideoPlayer.Content(livetv)">SetFocus(19)</onload>
-	<onload condition="!IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onload>
-	<onload condition="!IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(304)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(400)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(ShowOptions)) + VideoPlayer.Content(livetv)">SetFocus(19)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onload>
 	<onunload>ClearProperty(ShowOptions,home)</onunload>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) +  IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) +  String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<control type="image">
 				<width>1920</width>
 				<height>210</height>
@@ -20,14 +20,14 @@
 				<width>1920</width>
 				<height>720</height>
 				<texture border="1">osd/mask_bottom.png</texture>
-				<visible>!IsEmpty(Window(home).Property(ShowOptions))</visible>
+				<visible>!String.IsEmpty(Window(home).Property(ShowOptions))</visible>
 			</control>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>IsEmpty(Window(home).Property(ShowOptions))</visible>
+				<visible>String.IsEmpty(Window(home).Property(ShowOptions))</visible>
 			</control>
 			<include>PlayerTitles</include>
 			<!-- Pause -->
@@ -76,7 +76,7 @@
 					<font>Light27</font>
 					<textcolor>ff696969</textcolor>
 					<label>/</label>
-					<visible>!IsEmpty(Player.Time) + !IsEmpty(Player.Duration)</visible>
+					<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
 				</control>
 				<!--  Total length -->
 				<control type="label">
@@ -95,7 +95,7 @@
 					<font>Bold28</font>
 					<textcolor>ffebebeb</textcolor>
 					<label>[B]HD[/B]</label>
-					<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+					<visible>Integer.IsGreater(VideoPlayer.VideoResolution,719)</visible>
 				</control>
 				<!--  Resolution label -->
 				<control type="label">
@@ -282,7 +282,7 @@
 				<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
 				<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
 				<orientation>vertical</orientation>
-				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + ControlGroup(100).HasFocus + !IsEmpty(Window(home).Property(ShowOptions))</visible>
+				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + ControlGroup(100).HasFocus + !String.IsEmpty(Window(home).Property(ShowOptions))</visible>
 				<!-- 3D mode -->
 				<control id="10" type="button">
 					<width>600</width>

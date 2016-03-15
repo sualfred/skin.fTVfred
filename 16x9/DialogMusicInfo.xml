@@ -67,7 +67,7 @@
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[31026]</label>
 				<include>NoTextures</include>
-				<animation condition="!IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
 			<control id="7001" type="button">
 				<top>429</top>
@@ -84,7 +84,7 @@
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[33029]</label>
 				<include>NoTextures</include>
-				<animation condition="IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
 		</control>
 		<control type="group">
@@ -111,7 +111,7 @@
 				<!-- Composer -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !IsEmpty(ListItem.Property(Role.Composer))</visible>
+					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.Composer))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -127,7 +127,7 @@
 				<!-- Conductor -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !IsEmpty(ListItem.Property(Role.Conductor))</visible>
+					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -143,7 +143,7 @@
 				<!-- Engineer -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !IsEmpty(ListItem.Property(Role.Engineer))</visible>
+					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.Engineer))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -159,7 +159,7 @@
 				<!-- DJMixer -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !IsEmpty(ListItem.Property(Role.DJMixer))</visible>
+					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.DJMixer))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -175,7 +175,7 @@
 				<!-- Formed -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Artists) + !IsEmpty(ListItem.Property(Artist_Formed))</visible>
+					<visible>Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -191,7 +191,7 @@
 				<!-- Year -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Albums) + !IsEmpty(ListItem.Year)</visible>
+					<visible>Container.Content(Albums) + !String.IsEmpty(ListItem.Year)</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -222,7 +222,7 @@
 				<!-- Active -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Artists) + !IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+					<visible>Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -238,7 +238,7 @@
 				<!-- Artist -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Albums) + !IsEmpty(ListItem.Artist)</visible>
+					<visible>Container.Content(Albums) + !String.IsEmpty(ListItem.Artist)</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -266,7 +266,7 @@
 						<height>24</height>
 						<texture>$INFO[ListItem.UserRating,rating/rating,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
-						<visible>!IsEmpty(ListItem.UserRating)</visible>
+						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
 					<control type="label">
 						<top>-13</top>
@@ -276,12 +276,12 @@
 						<aligny>bottom</aligny>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[ListItem.Rating,,/10]</label>
-						<visible>!IsEmpty(ListItem.Rating)</visible>
+						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="!IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<!-- Button grouplist -->
 				<control id="9000" type="grouplist">
 					<left>-12</left>
@@ -405,7 +405,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="!IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation effect="fade" end="100" start="0" time="200" delay="800">WindowOpen</animation>
 				<!-- Fanart -->
 				<control type="image">
@@ -414,7 +414,7 @@
 					<width>761</width>
 					<height>470</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<visible>!IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<control type="image">
 					<top>504</top>
@@ -424,7 +424,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<!-- Description -->
 				<control type="label">
 					<top>235</top>
@@ -469,7 +469,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>132</label>
-					<visible>Container.Content(artists) + !IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>Container.Content(artists) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 				</control>
 				<!-- Tracks -->
 				<control type="label">
@@ -481,7 +481,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>182</label>
-					<visible>Container.Content(albums) + !IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>Container.Content(albums) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 				</control>
 				<control type="list" id="50">
 					<left>900</left>

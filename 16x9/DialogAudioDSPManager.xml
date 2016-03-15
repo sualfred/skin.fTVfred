@@ -34,9 +34,9 @@
 				<width>422</width>
 				<height>565</height>
 				<onleft>noop</onleft>
-				<onright condition="IntegerGreaterThan(Container(21).NumItems,0)">21</onright>
-				<onright condition="!IntegerGreaterThan(Container(21).NumItems,0) + IntegerGreaterThan(Container(20).NumItems,0)">20</onright>
-				<onright condition="!IntegerGreaterThan(Container(21).NumItems,0) + !IntegerGreaterThan(Container(20).NumItems,0)">9001</onright>
+				<onright condition="Integer.IsGreater(Container(21).NumItems,0)">21</onright>
+				<onright condition="!Integer.IsGreater(Container(21).NumItems,0) + Integer.IsGreater(Container(20).NumItems,0)">20</onright>
+				<onright condition="!Integer.IsGreater(Container(21).NumItems,0) + !Integer.IsGreater(Container(20).NumItems,0)">9001</onright>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
 				<scrolltime>0</scrolltime>
@@ -161,7 +161,7 @@
 				<!-- No active mode -->
 				<control type="group">
 					<top>60</top>
-					<visible>!IntegerGreaterThan(Container(21).NumItems,0)</visible>
+					<visible>!Integer.IsGreater(Container(21).NumItems,0)</visible>
 					<control type="image">
 						<width>958</width>
 						<height>84</height>
@@ -282,7 +282,7 @@
 				<!-- no available modes -->
 				<control type="group">
 					<top>60</top>
-					<visible>!IntegerGreaterThan(Container(20).NumItems,0)</visible>
+					<visible>!Integer.IsGreater(Container(20).NumItems,0)</visible>
 					<control type="image">
 						<width>958</width>
 						<height>84</height>

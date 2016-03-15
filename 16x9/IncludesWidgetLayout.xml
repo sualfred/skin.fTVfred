@@ -3,7 +3,7 @@
 	<!-- Empty Message Layout -->
 	<include name="EmptyInfoLayout">
 		<control type="group">
-			<visible>IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<left>260</left>						
 			<control type="textbox">
 				<width>1150</width>
@@ -20,7 +20,7 @@
 	</include>
 	<include name="EmptyFocusedLayout">
 		<control type="group">
-			<visible>IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<left>260</left>					
 			<control type="textbox">
 				<width>1150</width>
@@ -92,7 +92,7 @@
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<align>right</align>
-			<visible>IntegerGreaterThan(Container($PARAM[ID]9).ListItem.VideoResolution,719) | !StringCompare(Container($PARAM[ID]9).ListItem.StereoscopicMode,mono)</visible>
+			<visible>Integer.IsGreater(Container($PARAM[ID]9).ListItem.VideoResolution,719) | !String.IsEqual(Container($PARAM[ID]9).ListItem.StereoscopicMode,mono)</visible>
 			<control type="label">
 				<width>200</width>
 				<height>30</height>
@@ -110,7 +110,7 @@
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>bbffffff</colordiffuse>
 				<texture>views/hd_icon.png</texture>
-				<visible>IntegerGreaterThan(Container($PARAM[ID]9).ListItem.VideoResolution,719) + [StringCompare(Container($PARAM[ID]9).ListItem.StereoscopicMode,mono) | IsEmpty(Container($PARAM[ID]9).ListItem.StereoscopicMode)]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[ID]9).ListItem.VideoResolution,719) + [String.IsEqual(Container($PARAM[ID]9).ListItem.StereoscopicMode,mono) | String.IsEmpty(Container($PARAM[ID]9).ListItem.StereoscopicMode)]</visible>
 			</control>
 			<control type="image">
 				<width>35</width>
@@ -118,7 +118,7 @@
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>bbffffff</colordiffuse>
 				<texture>views/3d_icon.png</texture>
-				<visible>!StringCompare(Container($PARAM[ID]9).ListItem.StereoscopicMode,mono) + !IsEmpty(Container($PARAM[ID]9).ListItem.StereoscopicMode)</visible>
+				<visible>!String.IsEqual(Container($PARAM[ID]9).ListItem.StereoscopicMode,mono) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.StereoscopicMode)</visible>
 			</control>
 		</control>
 	</include>
@@ -139,7 +139,7 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
 			<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+			<visible>!String.Contains(ListItem.Property(Path),pvr://channels)</visible>
 		</control>
 		<control type="image">
 			<width>318</width>
@@ -147,11 +147,11 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">keep</aspectratio>
 			<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+			<visible>String.Contains(ListItem.Property(Path),pvr://channels)</visible>
 		</control>
 		<!-- Genre -->
 		<control type="group">
-			<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+			<visible>String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres) | String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 			<control type="image">
 				<left>102</left>
 				<width>215</width>
@@ -177,7 +177,7 @@
 				<texture>views/poster_fallback.png</texture>
 			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+				<visible>String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
@@ -204,7 +204,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
@@ -212,7 +212,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -221,7 +221,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -230,11 +230,11 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				</control>
 			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
@@ -242,7 +242,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -251,7 +251,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -260,7 +260,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
 		</control>
@@ -269,21 +269,21 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/Overlay3D.png</texture>
-			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+			<visible>!String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !String.IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>308</width>
 			<height>308</height>
 			<texture border="2">views/season_overlay.png</texture>
-			<visible>!SubString(ListItem.Property(Icon$PARAM[ID]),Default) | [SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)]</visible>
+			<visible>!String.Contains(ListItem.Property(Icon$PARAM[ID]),Default) | [String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres) | String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)]</visible>
 		</control>
 		<control type="image">
 			<left>10</left>
@@ -291,7 +291,7 @@
 			<width>40</width>
 			<height>40</height>
 			<texture>views/equaliser.gif</texture>
-			<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 		</control>
 		<control type="label">
 			<left>61</left>
@@ -303,7 +303,7 @@
 			<textcolor>ffffffff</textcolor>
 			<shadowcolor>88000000</shadowcolor>
 			<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
-			<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 		</control>
 		<control type="label">
 			<left>11</left>
@@ -315,12 +315,12 @@
 			<textcolor>ffffffff</textcolor>
 			<shadowcolor>88000000</shadowcolor>
 			<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
-			<visible>!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 		</control>
 	</include>
 	<include name="ParamHomeSquareInfoItemlayout">
 		<control type="group">
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
 			<include name="ParamSquareInfoTemplate">
 				<param name="ID">$PARAM[ID]</param>
@@ -337,7 +337,7 @@
 	</include>
 	<include name="ParamHomeSquareInfoFocusedlayout">
 		<control type="group">
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
 			<include name="ParamSquareInfoTemplate">
 				<param name="ID">$PARAM[ID]</param>
@@ -355,7 +355,7 @@
 	</include>
 	<include name="HomeSquareInfoItemlayout">
 		<control type="group">
-			<visible>[StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))] + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareInfoItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -376,7 +376,7 @@
 	</include>
 	<include name="HomeSquareInfoFocusedlayout">
 		<control type="group">
-			<visible>[StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | IsEmpty(ListItem.Property(WidgetStyle))] + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -412,7 +412,7 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
 			<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>!SubString(ListItem.Property(Path),pvr://channels)</visible>
+			<visible>!String.Contains(ListItem.Property(Path),pvr://channels)</visible>
 		</control>
 		<control type="image">
 			<width>318</width>
@@ -420,11 +420,11 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">keep</aspectratio>
 			<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>SubString(ListItem.Property(Path),pvr://channels)</visible>
+			<visible>String.Contains(ListItem.Property(Path),pvr://channels)</visible>
 		</control>
 		<!-- Genre -->
 		<control type="group">
-			<visible>SubString(ListItem.Property(Path),movies/genres) | SubString(ListItem.Property(Path),tvshows/genres) | SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+			<visible>String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres) | String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 			<control type="image">
 				<left>102</left>
 				<width>215</width>
@@ -450,7 +450,7 @@
 				<texture>views/poster_fallback.png</texture>
 			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+				<visible>String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
@@ -477,7 +477,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+				<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
@@ -485,7 +485,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -494,7 +494,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -503,11 +503,11 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),movies/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
 				</control>
 			</control>
 			<control type="group">
-				<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+				<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				<control type="image">
 					<left>102</left>
 					<width>215</width>
@@ -515,7 +515,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.2&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>51</left>
@@ -524,7 +524,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.1&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -533,7 +533,7 @@
 					<bordersize>0,13,10,13</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/poster_fallback.png">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Property(InfoLabel$PARAM[ID])]&amp;type=poster.0&amp;fallback=DefaultGenre.png</texture>
-					<visible>SubString(ListItem.Property(Path),tvshows/genres)</visible>
+					<visible>String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 				</control>
 			</control>
 		</control>
@@ -542,20 +542,20 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/Overlay3D.png</texture>
-			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+			<visible>!String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !String.IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 		</control>
 	</include>
 	<include name="ParamHomeSquareItemlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<include name="ParamSquareTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
@@ -572,7 +572,7 @@
 	<include name="ParamHomeSquareFocusedlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>			
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>			
 			<include name="ParamSquareTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
@@ -589,7 +589,7 @@
 	</include>
 	<include name="HomeSquareItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -610,7 +610,7 @@
 	</include>
 	<include name="HomeSquareFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeSquareFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -652,26 +652,26 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/Overlay3D.png</texture>
-			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+			<visible>!String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !String.IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayWatched.png</texture>
-			<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
+			<visible>String.IsEqual(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
 		</control>
 	</include>
 	<include name="ParamHomePosterItemlayout">
 		<control type="group">
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
 			<include name="ParamPosterTemplate">
 				<param name="ID">$PARAM[ID]</param>
@@ -688,7 +688,7 @@
 	</include>
 	<include name="ParamHomePosterFocusedlayout">
 		<control type="group">
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>			
 			<include name="ParamPosterTemplate">
 				<param name="ID">$PARAM[ID]</param>
@@ -706,7 +706,7 @@
 	</include>
 	<include name="HomePosterItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomePosterItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -735,7 +735,7 @@
 	</include>
 	<include name="HomePosterFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomePosterFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -779,7 +779,7 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
 			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFTV$PARAM[ID])]</texture>
-			<visible>!IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(ArtFTV$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<width>423</width>
@@ -787,14 +787,14 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
 			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(ArtFanart$PARAM[ID])]</texture>
-			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
+			<visible>String.IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !String.IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<width>423</width>
 			<height>334</height>
 			<bordersize>0,13,10,13</bordersize>
 			<texture border="2">views/clearlogo_overlay.png</texture>
-			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
+			<visible>String.IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !String.IsEmpty(ListItem.Property(ArtFanart$PARAM[ID])) + !String.IsEmpty(ListItem.Property(ArtLogo$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<left>78</left>
@@ -803,7 +803,7 @@
 			<height>101</height>
 			<aspectratio align="center" aligny="top">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
-			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
+			<visible>String.IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !String.IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<width>423</width>
@@ -811,34 +811,34 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
 			<texture fallback="views/episode_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
+			<visible>String.IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + String.IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/Overlay3D.png</texture>
-			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+			<visible>!String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !String.IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayWatched.png</texture>
-			<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
+			<visible>String.IsEqual(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
 		</control>
 	</include>
 	<include name="ParamHomeWideItemlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<include name="ParamWideTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>			
@@ -855,7 +855,7 @@
 	<include name="ParamHomeWideFocusedlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<include name="ParamWideTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>		
@@ -873,7 +873,7 @@
 	</include>
 	<include name="HomeWideItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -890,7 +890,7 @@
 	</include>
 	<include name="HomeWideFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -928,27 +928,27 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>IntegerGreaterThan(ListItem.Property(VideoResolution$PARAM[ID]),719) + !SubString(ListItem.Property(Path),pvr://channels) + StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/Overlay3D.png</texture>
-			<visible>!StringCompare(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
+			<visible>!String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono) + !String.IsEmpty(ListItem.Property(3DOverlay$PARAM[ID]))</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayWatched.png</texture>
-			<visible>StringCompare(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
+			<visible>String.IsEqual(ListItem.Property(Overlay$PARAM[ID]),OverlayWatched.png)</visible>
 		</control>
 	</include>
 	<include name="ParamHomeWideEpisodeItemlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<include name="ParamWideEpisodeTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>			
@@ -965,7 +965,7 @@
 	<include name="ParamHomeWideEpisodeFocusedlayout">
 		<control type="group">
 			<left>$PARAM[left]</left>
-			<visible>!IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<include name="ParamWideEpisodeTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>	
@@ -983,7 +983,7 @@
 	</include>
 	<include name="HomeWideEpisodeItemlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideEpisodeItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1000,7 +1000,7 @@
 	</include>
 	<include name="HomeWideEpisodeFocusedlayout">
 		<control type="group">
-			<visible>StringCompare(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include name="ParamHomeWideEpisodeFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>

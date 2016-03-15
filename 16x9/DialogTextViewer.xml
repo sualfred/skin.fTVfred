@@ -3,8 +3,8 @@
 	<!-- textviewer -->
 	<zorder>2</zorder>
 	<defaultcontrol always="true">3000</defaultcontrol>
-	<onunload condition="!IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(50)</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(SearchOpenTextViewer))">$VAR[SearchSetFocus]</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(50)</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(SearchOpenTextViewer))">$VAR[SearchSetFocus]</onunload>
 	<onunload>ClearProperty(OpenTextViewer,home)</onunload>
 	<onunload>ClearProperty(NoLabel,home)</onunload>
 	<controls>
@@ -46,7 +46,7 @@
 				<autoscroll>false</autoscroll>
 				<textcolor>ffdadada</textcolor>
 				<label>$INFO[Control.GetLabel(5),[LIGHT],[/LIGHT]]</label>
-				<visible>!IsEmpty(Window(home).Property(NoLabel))</visible>
+				<visible>!String.IsEmpty(Window(home).Property(NoLabel))</visible>
 			</control>
 			<control id="10" type="textbox">
 				<centerleft>50%</centerleft>
@@ -59,7 +59,7 @@
 				<autoscroll>false</autoscroll>
 				<textcolor>ffdadada</textcolor>
 				<label>$INFO[Control.GetLabel(1),[B],[/B][CR]]$INFO[Control.GetLabel(5),[LIGHT],[/LIGHT]]</label>
-				<visible>IsEmpty(Window(home).Property(NoLabel))</visible>
+				<visible>String.IsEmpty(Window(home).Property(NoLabel))</visible>
 			</control>	
 			<!-- Arrow up -->
 			<control type="image">

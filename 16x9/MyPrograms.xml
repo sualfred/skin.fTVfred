@@ -18,7 +18,7 @@
 		<include>Viewtype57</include>
 		<control type="group">
 			<include>LabelsDelayFadeAnimation</include>
-			<visible>IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
 			<!-- Heading / Current item / Total items -->
 			<control type="grouplist">
 				<left>198</left>
@@ -44,7 +44,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[Container.CurrentItem]</label>
-					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				</control>
 				<control type="label">
 					<top>14</top>
@@ -54,7 +54,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
 					<label>|</label>
-					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				</control>
 				<control type="label">
 					<top>15</top>
@@ -64,7 +64,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
 					<label>$INFO[Container.NumItems]</label>
-					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				</control>
 			</control>
 			<!-- Sort method -->
@@ -190,7 +190,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
 			<!-- Background -->		
 			<control type="image">
 				<include>FullscreenDimensions</include>
@@ -228,11 +228,11 @@
 						<width>-8</width>
 						<height>0</height>
 						<label>-</label>
-						<onfocus condition="!IsEmpty(Container.PluginName)">SetFocus(5022)</onfocus>
-						<onfocus condition="IsEmpty(Container.PluginName) + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
-						<onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(4)</onfocus>
-						<onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
-						<onfocus condition="IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
+						<onfocus condition="!String.IsEmpty(Container.PluginName)">SetFocus(5022)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(4)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(5004) + !Control.HasFocus(4) + !Control.HasFocus(19) + !Control.HasFocus(5011) + !Control.HasFocus(5013)</visible>
 					</control>
@@ -240,7 +240,7 @@
 						<width>640</width>
 						<height>60</height>
 						<texture border="2">dialogs/OptionsBackgroundHeading.png</texture>
-						<visible>!IsEmpty(Container.PluginName)</visible>
+						<visible>!String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control type="label" id="5021">
 						<left>40</left>
@@ -250,7 +250,7 @@
 						<font>Bold30</font>
 						<textcolor>ffdadada</textcolor>
 						<label>$LOCALIZE[582]:</label>
-						<visible>!IsEmpty(Container.PluginName)</visible>
+						<visible>!String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control type="button" id="5022">
 						<height>110</height>
@@ -266,7 +266,7 @@
 						<focusedcolor>ffffaf37</focusedcolor>
 						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
 						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
-						<visible>!IsEmpty(Container.PluginName)</visible>
+						<visible>!String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control type="image" id="5002">
 						<width>640</width>

@@ -9,10 +9,10 @@
 				<top>242</top>
 				<width>2036</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,$INFO[Container(60).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,1)</onback>
-				<onup condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,$INFO[Container(60).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(60).CurrentItem,0)">Control.Move(60,1)</onup>
+				<onback condition="!String.IsEqual(Container(60).CurrentItem,0)">Control.Move(60,$INFO[Container(60).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(60).CurrentItem,0)">Control.Move(60,1)</onback>
+				<onup condition="!String.IsEqual(Container(60).CurrentItem,0)">Control.Move(60,$INFO[Container(60).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(60).CurrentItem,0)">Control.Move(60,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -25,7 +25,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>StringCompare(Window(Home).Property(ForceViewType),poster) + IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]</visible>
+				<visible>String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
@@ -51,10 +51,10 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,$INFO[Container(61).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,1)</onback>
-				<onup condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,$INFO[Container(61).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(61).CurrentItem,0)">Control.Move(61,1)</onup>
+				<onback condition="!String.IsEqual(Container(61).CurrentItem,0)">Control.Move(61,$INFO[Container(61).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(61).CurrentItem,0)">Control.Move(61,1)</onback>
+				<onup condition="!String.IsEqual(Container(61).CurrentItem,0)">Control.Move(61,$INFO[Container(61).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(61).CurrentItem,0)">Control.Move(61,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -67,7 +67,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>StringCompare(Window(Home).Property(ForceViewType),wide) + IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(artists)]</visible>
+				<visible>String.IsEqual(Window(Home).Property(ForceViewType),wide) + String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(artists)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -93,8 +93,8 @@
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(50).CurrentItem,0)">Control.Move(50,$INFO[Container(50).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(50).CurrentItem,0)">Control.Move(50,1)</onback>
+				<onback condition="!String.IsEqual(Container(50).CurrentItem,0)">Control.Move(50,$INFO[Container(50).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(50).CurrentItem,0)">Control.Move(50,1)</onback>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -108,7 +108,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[IsEmpty(Container.PluginName) | SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)] + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + SubString(Container.FolderPath,.m3u)]</visible>
+				<visible>[String.IsEmpty(Container.PluginName) | String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)] + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + String.Contains(Container.FolderPath,.m3u)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -134,10 +134,10 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,$INFO[Container(51).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,1)</onback>
-				<onup condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,$INFO[Container(51).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(51).CurrentItem,0)">Control.Move(51,1)</onup>
+				<onback condition="!String.IsEqual(Container(51).CurrentItem,0)">Control.Move(51,$INFO[Container(51).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(51).CurrentItem,0)">Control.Move(51,1)</onback>
+				<onup condition="!String.IsEqual(Container(51).CurrentItem,0)">Control.Move(51,$INFO[Container(51).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(51).CurrentItem,0)">Control.Move(51,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -150,7 +150,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[[!StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)] + IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [[Skin.HasSetting(WideMovieArt) + [Container.Content(movies) | Container.Content(sets)]] | [Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>[[!String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)] + String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [[Skin.HasSetting(WideMovieArt) + [Container.Content(movies) | Container.Content(sets)]] | [Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -176,10 +176,10 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,$INFO[Container(52).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,1)</onback>
-				<onup condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,$INFO[Container(52).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(52).CurrentItem,0)">Control.Move(52,1)</onup>
+				<onback condition="!String.IsEqual(Container(52).CurrentItem,0)">Control.Move(52,$INFO[Container(52).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(52).CurrentItem,0)">Control.Move(52,1)</onback>
+				<onup condition="!String.IsEqual(Container(52).CurrentItem,0)">Control.Move(52,$INFO[Container(52).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(52).CurrentItem,0)">Control.Move(52,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -192,7 +192,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(episodes) | [Container.Content(files) + SubString(Container.FolderPath,.m3u)]]</visible>
+				<visible>String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(episodes) | [Container.Content(files) + String.Contains(Container.FolderPath,.m3u)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -218,10 +218,10 @@
 				<top>242</top>
 				<width>2036</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,$INFO[Container(53).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,1)</onback>
-				<onup condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,$INFO[Container(53).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(53).CurrentItem,0)">Control.Move(53,1)</onup>
+				<onback condition="!String.IsEqual(Container(53).CurrentItem,0)">Control.Move(53,$INFO[Container(53).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(53).CurrentItem,0)">Control.Move(53,1)</onback>
+				<onup condition="!String.IsEqual(Container(53).CurrentItem,0)">Control.Move(53,$INFO[Container(53).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(53).CurrentItem,0)">Control.Move(53,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -234,7 +234,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
@@ -260,10 +260,10 @@
 				<top>242</top>
 				<width>2344</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,$INFO[Container(55).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,1)</onback>
-				<onup condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,$INFO[Container(55).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(55).CurrentItem,0)">Control.Move(55,1)</onup>
+				<onback condition="!String.IsEqual(Container(55).CurrentItem,0)">Control.Move(55,$INFO[Container(55).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(55).CurrentItem,0)">Control.Move(55,1)</onback>
+				<onup condition="!String.IsEqual(Container(55).CurrentItem,0)">Control.Move(55,$INFO[Container(55).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(55).CurrentItem,0)">Control.Move(55,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -276,7 +276,7 @@
 				<viewtype label="31159">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -302,10 +302,10 @@
 				<top>242</top>
 				<width>2200</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,$INFO[Container(56).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,1)</onback>
-				<onup condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,$INFO[Container(56).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(56).CurrentItem,0)">Control.Move(56,1)</onup>
+				<onback condition="!String.IsEqual(Container(56).CurrentItem,0)">Control.Move(56,$INFO[Container(56).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(56).CurrentItem,0)">Control.Move(56,1)</onback>
+				<onup condition="!String.IsEqual(Container(56).CurrentItem,0)">Control.Move(56,$INFO[Container(56).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(56).CurrentItem,0)">Control.Move(56,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -318,7 +318,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -344,10 +344,10 @@
 				<top>242</top>
 				<width>2036</width>
 				<height>576</height>
-				<onback condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,$INFO[Container(57).CurrentItem,-])</onback>
-				<onback condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,1)</onback>
-				<onup condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,$INFO[Container(57).CurrentItem,-])</onup>
-				<onup condition="!StringCompare(Container(57).CurrentItem,0)">Control.Move(57,1)</onup>
+				<onback condition="!String.IsEqual(Container(57).CurrentItem,0)">Control.Move(57,$INFO[Container(57).CurrentItem,-])</onback>
+				<onback condition="!String.IsEqual(Container(57).CurrentItem,0)">Control.Move(57,1)</onback>
+				<onup condition="!String.IsEqual(Container(57).CurrentItem,0)">Control.Move(57,$INFO[Container(57).CurrentItem,-])</onup>
+				<onup condition="!String.IsEqual(Container(57).CurrentItem,0)">Control.Move(57,1)</onup>
 				<onup>Back</onup>
 				<ondown>1001</ondown>
 				<onleft>Back</onleft>
@@ -360,7 +360,7 @@
 				<viewtype label="31160">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
@@ -437,7 +437,7 @@
 				<viewtype label="535">list</viewtype>
 				<scrolltime>0</scrolltime>
 				<visible>Container.Content(songs)</visible>
-				<animation condition="[!system.getbool(filelists.showparentdiritems) + StringCompare(Container(54).CurrentItem,1)] | [system.getbool(filelists.showparentdiritems) + StringCompare(Container(54).CurrentItem,0)]" effect="slide" end="0,-101" start="0,0">Conditional</animation>
+				<animation condition="[!system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,1)] | [system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,0)]" effect="slide" end="0,-101" start="0,0">Conditional</animation>
 				<itemlayout height="101" width="1000">
 					<control type="label">
 						<width>68</width>
@@ -454,7 +454,7 @@
 						<font>Light32</font>
 						<textcolor>ffd8d8d8</textcolor>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Title)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -463,7 +463,7 @@
 						<font>Light32</font>
 						<textcolor>ffd8d8d8</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>StringCompare(ListItem.Label,..) | IsEmpty(ListItem.Title)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -482,7 +482,7 @@
 						<font>Light28</font>
 						<textcolor>ff636466</textcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<visible>!StringCompare(ListItem.AlbumArtist,ListItem.Artist)</visible>
+						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="101" width="1000">
@@ -503,7 +503,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Title)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -513,7 +513,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>StringCompare(ListItem.Label,..) | IsEmpty(ListItem.Title)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -534,7 +534,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<visible>!StringCompare(ListItem.AlbumArtist,ListItem.Artist)</visible>
+						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -571,7 +571,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<enabled>!StringCompare(ListItem.Label,..)</enabled>
+						<enabled>!String.IsEqual(ListItem.Label,..)</enabled>
 					</control>
 					<control id="2003" type="button">
 						<top>110</top>
@@ -618,14 +618,14 @@
 						<onright>50</onright>
 						<onup>2003</onup>
 						<ondown>noop</ondown>
-						<onclick condition="!StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
+						<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
 						<font>Med24</font>						
 						<wrapmultiline>true</wrapmultiline>
 						<label>$LOCALIZE[31088]</label>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<visible>!StringCompare(Playlist.Length(music),0)</visible>
+						<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
@@ -676,7 +676,7 @@
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>ViewTypeBounceAnimation</include>			
-			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + [StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewOpenAnimationDialog">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + [String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | String.IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewOpenAnimationDialog">
 				<param name="pos1">193,10</param>
 				<param name="pos2">497,-174</param>
 				<param name="pos3">497,195</param>
@@ -685,7 +685,7 @@
 				<param name="pos6">497,168</param>
 				<param name="pos7">497,140</param>
 			</include>
-			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Window(Home).Property(ForceViewType),poster) + !StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewOpenAnimationDialog">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">208,10</param>
 				<param name="pos2">512,-174</param>
 				<param name="pos3">512,195</param>
@@ -694,7 +694,7 @@
 				<param name="pos6">512,168</param>
 				<param name="pos7">512,140</param>
 			</include>
-			<include condition="[!IsEmpty(Window(Home).Property(WidgetHasFocus)) + !StringCompare(Window(Home).Property(ForceViewType),poster) + StringCompare(Window(Home).Property(ForceViewType),wide)] | [IsEmpty(Window(Home).Property(WidgetHasFocus)) + StringCompare(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewOpenAnimationDialog">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">186,10</param>
 				<param name="pos2">490,-174</param>
 				<param name="pos3">490,195</param>

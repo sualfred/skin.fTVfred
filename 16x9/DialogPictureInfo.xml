@@ -40,8 +40,8 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(5).NumItems,0) | StringCompare(Container(5).NumItems,1) | [StringCompare(Container(5).NumItems,2) + !Container(5).HasParent]" effect="slide" end="0,-168">Conditional</animation>
-				<animation condition="[StringCompare(Container(5).NumItems,2) + Container(5).HasParent] | StringCompare(Container(5).NumItems,3) | [StringCompare(Container(5).NumItems,4) + !Container(5).HasParent]" effect="slide" end="0,-84">Conditional</animation>
+				<animation condition="String.IsEqual(Container(5).NumItems,0) | String.IsEqual(Container(5).NumItems,1) | [String.IsEqual(Container(5).NumItems,2) + !Container(5).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+				<animation condition="[String.IsEqual(Container(5).NumItems,2) + Container(5).HasParent] | String.IsEqual(Container(5).NumItems,3) | [String.IsEqual(Container(5).NumItems,4) + !Container(5).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 				<itemlayout height="84" width="937">
 					<control type="image">
 						<width>937</width>

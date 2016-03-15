@@ -3,11 +3,11 @@
 	<!-- weather -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>
-	<onunload condition="StringCompare(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onunload>
-	<onunload condition="StringCompare(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onunload>
-	<onunload condition="StringCompare(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onunload>
-	<onunload condition="StringCompare(Container(1000).CurrentItem,5)">Control.Move(1000,-4)</onunload>
-	<onunload condition="StringCompare(Container(1000).CurrentItem,6)">Control.Move(1000,-5)</onunload>
+	<onunload condition="String.IsEqual(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onunload>
+	<onunload condition="String.IsEqual(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onunload>
+	<onunload condition="String.IsEqual(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onunload>
+	<onunload condition="String.IsEqual(Container(1000).CurrentItem,5)">Control.Move(1000,-4)</onunload>
+	<onunload condition="String.IsEqual(Container(1000).CurrentItem,6)">Control.Move(1000,-5)</onunload>
 	<controls>
 		<control type="group">
 			<left>128</left>
@@ -49,7 +49,7 @@
 					<textcolor>ffffffff</textcolor>
 				</control>
 				<control type="group">
-					<animation condition="IsEmpty(Window(Weather).Property(Current.Temperature))" effect="fade" end="0" start="100">Conditional</animation>
+					<animation condition="String.IsEmpty(Window(Weather).Property(Current.Temperature))" effect="fade" end="0" start="100">Conditional</animation>
 					<control type="image">
 						<top>129</top>
 						<width>128</width>
@@ -145,7 +145,7 @@
 							<font>Light32</font>
 							<label>$INFO[Window(Weather).Property(Today.Sunrise),[B]$LOCALIZE[33027][/B] ]    $INFO[Window(Weather).Property(Today.Sunset),[B]$LOCALIZE[33028][/B] ]</label>
 							<textcolor>ffffffff</textcolor>
-							<visible>!Control.HasFocus(1000) | StringCompare(Container(1000).CurrentItem,1)</visible>
+							<visible>!Control.HasFocus(1000) | String.IsEqual(Container(1000).CurrentItem,1)</visible>
 						</control>
 						<control type="label">
 							<width>1102</width>
@@ -153,7 +153,7 @@
 							<font>Light32</font>
 							<label>$INFO[Window(Weather).Property(Current.Wind),[B]$LOCALIZE[383][/B] ]</label>
 							<textcolor>ffffffff</textcolor>
-							<visible>!Control.HasFocus(1000) | StringCompare(Container(1000).CurrentItem,1)</visible>
+							<visible>!Control.HasFocus(1000) | String.IsEqual(Container(1000).CurrentItem,1)</visible>
 						</control>
 					</control>
 					<!-- white borders -->
@@ -169,35 +169,35 @@
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>
-							<visible>IntegerGreaterThan(Container(1000).NumItems,1)</visible>	
+							<visible>Integer.IsGreater(Container(1000).NumItems,1)</visible>	
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
-							<visible>IntegerGreaterThan(Container(1000).NumItems,2)</visible>
+							<visible>Integer.IsGreater(Container(1000).NumItems,2)</visible>
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
-							<visible>IntegerGreaterThan(Container(1000).NumItems,3)</visible>
+							<visible>Integer.IsGreater(Container(1000).NumItems,3)</visible>
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
-							<visible>IntegerGreaterThan(Container(1000).NumItems,4)</visible>
+							<visible>Integer.IsGreater(Container(1000).NumItems,4)</visible>
 						</control>
 						<control type="image">
 							<width>8</width>
 							<height>144</height>
 							<colordiffuse>55ffffff</colordiffuse>
 							<texture border="3,0,0,0">common/WhiteLine.png</texture>	
-							<visible>IntegerGreaterThan(Container(1000).NumItems,5)</visible>
+							<visible>Integer.IsGreater(Container(1000).NumItems,5)</visible>
 						</control>
 					</control>
 					<!-- weekly forecast -->
@@ -294,42 +294,42 @@
 								<label>$VAR[Day0]</label>
 								<label2>$INFO[Window(Weather).Property(Day0.LowTemp),,°]  $INFO[Window(Weather).Property(Day0.HighTemp),,°]</label2>
 								<icon>$INFO[Window(Weather).Property(Day0.FanartCode),weather/icons/,.png]</icon>
-								<visible>!IsEmpty(Window(Weather).Property(Day0.Outlook))</visible>
+								<visible>!String.IsEmpty(Window(Weather).Property(Day0.Outlook))</visible>
 							</item>
 							<item>
 								<onclick>noop</onclick>
 								<label>$VAR[Day1]</label>
 								<label2>$INFO[Window(Weather).Property(Day1.LowTemp),,°]  $INFO[Window(Weather).Property(Day1.HighTemp),,°]</label2>
 								<icon>$INFO[Window(Weather).Property(Day1.FanartCode),weather/icons/,.png]</icon>
-								<visible>!IsEmpty(Window(Weather).Property(Day1.Outlook))</visible>
+								<visible>!String.IsEmpty(Window(Weather).Property(Day1.Outlook))</visible>
 							</item>
 							<item>
 								<onclick>noop</onclick>
 								<label>$VAR[Day2]</label>
 								<label2>$INFO[Window(Weather).Property(Day2.LowTemp),,°]  $INFO[Window(Weather).Property(Day2.HighTemp),,°]</label2>
 								<icon>$INFO[Window(Weather).Property(Day2.FanartCode),weather/icons/,.png]</icon>
-								<visible>!IsEmpty(Window(Weather).Property(Day2.Outlook))</visible>
+								<visible>!String.IsEmpty(Window(Weather).Property(Day2.Outlook))</visible>
 							</item>
 							<item>
 								<onclick>noop</onclick>
 								<label>$VAR[Day3]</label>
 								<label2>$INFO[Window(Weather).Property(Day3.LowTemp),,°]  $INFO[Window(Weather).Property(Day3.HighTemp),,°]</label2>
 								<icon>$INFO[Window(Weather).Property(Day3.FanartCode),weather/icons/,.png]</icon>
-								<visible>!IsEmpty(Window(Weather).Property(Day3.Outlook))</visible>
+								<visible>!String.IsEmpty(Window(Weather).Property(Day3.Outlook))</visible>
 							</item>
 							<item>
 								<onclick>noop</onclick>
 								<label>$VAR[Day4]</label>
 								<label2>$INFO[Window(Weather).Property(Day4.LowTemp),,°]  $INFO[Window(Weather).Property(Day4.HighTemp),,°]</label2>
 								<icon>$INFO[Window(Weather).Property(Day4.FanartCode),weather/icons/,.png]</icon>
-								<visible>!IsEmpty(Window(Weather).Property(Day4.Outlook))</visible>
+								<visible>!String.IsEmpty(Window(Weather).Property(Day4.Outlook))</visible>
 							</item>
 							<item>
 								<onclick>noop</onclick>
 								<label>$VAR[Day5]</label>
 								<label2>$INFO[Window(Weather).Property(Day5.LowTemp),,°]  $INFO[Window(Weather).Property(Day5.HighTemp),,°]</label2>
 								<icon>$INFO[Window(Weather).Property(Day5.FanartCode),weather/icons/,.png]</icon>
-								<visible>!IsEmpty(Window(Weather).Property(Day5.Outlook))</visible>
+								<visible>!String.IsEmpty(Window(Weather).Property(Day5.Outlook))</visible>
 							</item>
 						</content>
 					</control>
@@ -374,7 +374,7 @@
 			<height>84</height>
 			<texture>common/busy.png</texture>
 			<animation center="auto" condition="true" effect="rotate" end="-360" loop="true" reversible="false" time="1120">Conditional</animation>
-			<visible>StringCompare(Weather.Location,$LOCALIZE[503])</visible>
+			<visible>String.IsEqual(Weather.Location,$LOCALIZE[503])</visible>
 		</control>
 	</controls>
 </window>

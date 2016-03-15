@@ -18,14 +18,14 @@
 				<width>980</width>
 				<height>700</height>
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
-				<visible>!IsEmpty(Window(Home).Property(DisableSuggestions)) | !IntegerGreaterThan(Container(9091).NumItems,0)</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(DisableSuggestions)) | !Integer.IsGreater(Container(9091).NumItems,0)</visible>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<width>980</width>
 				<height>1145</height>
 				<texture border="32">dialogs/DialogMessageBackground.png</texture>
-				<visible>IsEmpty(Window(Home).Property(DisableSuggestions)) + IntegerGreaterThan(Container(9091).NumItems,0)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions)) + Integer.IsGreater(Container(9091).NumItems,0)</visible>
 			</control>
 			<!-- Control group -->
 			<control type="group">
@@ -60,7 +60,7 @@
 				</control>
 				<!-- auto completion -->
 				<control type="list" id="9091">
-					<visible>IsEmpty(Window(Home).Property(DisableSuggestions))</visible>
+					<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions))</visible>
 					<left>7</left>
 					<top>607</top>
 					<width>846</width>
@@ -111,7 +111,7 @@
 					<height>48</height>
 					<onup>4000</onup>
 					<onright>300</onright>
-					<ondown condition="IntegerGreaterThan(Container(9091).NumItems,0)">9091</ondown>
+					<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
 					<onclick>300</onclick>
 					<font>Light39</font>
 					<textcolor>ffdadada</textcolor>
@@ -188,13 +188,13 @@
 						<height>44</height>
 						<itemgap>12</itemgap>
 						<onup>8</onup>
-						<ondown condition="IntegerGreaterThan(Container(9091).NumItems,0)">9091</ondown>
+						<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
 						<onleft>312</onleft>
 						<align>right</align>
 						<orientation>horizontal</orientation>
 						<control id="300" type="button">
 							<onup>8</onup>
-							<ondown condition="IntegerGreaterThan(Container(9091).NumItems,0)">9091</ondown>
+							<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
 							<include name="BottomControlButtons">
 								<param name="name">enter</param>
 							</include>

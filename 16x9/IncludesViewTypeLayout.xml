@@ -2,22 +2,22 @@
 <includes>
 	<!-- View WindowOpen Animations -->
 	<include name="ViewOpenAnimation">
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos2]" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos3]" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
-		<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2b) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos7]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos2]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos3]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
+		<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_2b) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos7]" time="540" tween="sine">WindowOpen</animation>
 	</include>
 	<include name="ViewOpenAnimationDialog">
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos2]" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos3]" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
-		<animation reversible="false" condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2b) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos7]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEmpty(Window(home).Property(FocusRow)) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos1]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),1_2) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos2]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_2) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos3]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),1_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos4]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos5]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),3_3) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos6]" time="540" tween="sine">WindowOpen</animation>
+		<animation reversible="false" condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_2b) + Window.IsVisible(home)" easing="inout" effect="slide" end="0,0" start="$PARAM[pos7]" time="540" tween="sine">WindowOpen</animation>
 	</include>
 	<!--Wide-->
 	<include name="ViewWideLayout">
@@ -43,7 +43,7 @@
 					<width>640</width>
 					<height>480</height>
 					<texture border="2">views/clearlogo_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Art(ftv)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + String.IsEmpty(ListItem.Art(ftv)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>119</left>
@@ -52,7 +52,7 @@
 					<height>155</height>
 					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Art(ftv))</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + String.IsEmpty(ListItem.Art(ftv))</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
@@ -68,7 +68,7 @@
 					<width>640</width>
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
-					<visible>[Container.Content(artists) | Container.Content(seasons)] + !StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>[Container.Content(artists) | Container.Content(seasons)] + !String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
 					<left>18</left>
@@ -79,7 +79,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[SeasonValue]</label>
-					<visible>[Container.Content(artists) | Container.Content(seasons)] + !StringCompare(ListItem.Label,..)</visible>
+					<visible>[Container.Content(artists) | Container.Content(seasons)] + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -97,7 +97,7 @@
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>						
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.UserRating],home)</onfocus>
-				<onfocus condition="!IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
+				<onfocus condition="!String.IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 			</control>
 			<control type="group">
 				<animation center="316,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
@@ -122,7 +122,7 @@
 					<width>640</width>
 					<height>480</height>
 					<texture border="2">views/clearlogo_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Art(ftv)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + String.IsEmpty(ListItem.Art(ftv)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>119</left>
@@ -131,7 +131,7 @@
 					<height>155</height>
 					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					<visible>!StringCompare(ListItem.Label,..) + IsEmpty(ListItem.Art(ftv))</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + String.IsEmpty(ListItem.Art(ftv))</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
@@ -158,7 +158,7 @@
 					<width>640</width>
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
-					<visible>[Container.Content(artists) | Container.Content(seasons)] + !StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>[Container.Content(artists) | Container.Content(seasons)] + !String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
 					<left>18</left>
@@ -169,7 +169,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[SeasonValue]</label>
-					<visible>[Container.Content(artists) | Container.Content(seasons)] + !StringCompare(ListItem.Label,..)</visible>
+					<visible>[Container.Content(artists) | Container.Content(seasons)] + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -278,7 +278,7 @@
 	</include>
 	<!--Square Info-->
 	<include name="ViewSquareInfoLayout">
-		<itemlayout condition="SubString(Container.FolderPath,movies/genre) | SubString(Container.FolderPath,tvshows/genre) | SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
+		<itemlayout condition="String.Contains(Container.FolderPath,movies/genre) | String.Contains(Container.FolderPath,tvshows/genre) | String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<control type="group">
@@ -364,7 +364,7 @@
 						<width>480</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -376,7 +376,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -387,7 +387,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<itemlayout condition="!SubString(Container.FolderPath,movies/genre) + !SubString(Container.FolderPath,tvshows/genre) + !SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
+		<itemlayout condition="!String.Contains(Container.FolderPath,movies/genre) + !String.Contains(Container.FolderPath,tvshows/genre) + !String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="group">
 				<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 				<control type="group">
@@ -426,7 +426,7 @@
 						<width>480</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<control type="image">
 						<left>17</left>
@@ -434,7 +434,7 @@
 						<width>62</width>
 						<height>62</height>
 						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
 					</control>
 					<include>OverlayHD</include>
 					<include>OverlayWatched</include>
@@ -451,7 +451,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -463,7 +463,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + [!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -474,7 +474,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<focusedlayout condition="SubString(Container.FolderPath,movies/genre) | SubString(Container.FolderPath,tvshows/genre) | SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
+		<focusedlayout condition="String.Contains(Container.FolderPath,movies/genre) | String.Contains(Container.FolderPath,tvshows/genre) | String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="button">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
@@ -580,7 +580,7 @@
 						<width>480</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -592,7 +592,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -605,7 +605,7 @@
 				</control>
 			</control>
 		</focusedlayout>
-		<focusedlayout condition="!SubString(Container.FolderPath,movies/genre) + !SubString(Container.FolderPath,tvshows/genre) + !SubString(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
+		<focusedlayout condition="!String.Contains(Container.FolderPath,movies/genre) + !String.Contains(Container.FolderPath,tvshows/genre) + !String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)" height="576" width="436">
 			<control type="button">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
@@ -664,7 +664,7 @@
 						<width>480</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<include>OverlayHD</include>
 					<include>OverlayWatched</include>
@@ -677,7 +677,7 @@
 						<width>62</width>
 						<height>62</height>
 						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
 					</control>
 					<control type="label">
 						<left>98</left>
@@ -689,7 +689,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -701,7 +701,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..) + [!Player.Playing | !StringCompare(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + [!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -741,7 +741,7 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture>views/episode_fallback.png</texture>
-					<visible>Skin.HasSetting(HideUnwatchedThumbs) + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(HideUnwatchedThumbs) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>119</left>
@@ -755,7 +755,7 @@
 					<top>48</top>
 					<width>640</width>
 					<height>480</height>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
 				<include>OverlayHD</include>
@@ -779,7 +779,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[EpisodeValue]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -794,7 +794,7 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>SetProperty(ContentEpisodes,1,home)</onfocus>
-				<onfocus condition="!IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
+				<onfocus condition="!String.IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 			</control>
 			<control type="group">
@@ -821,7 +821,7 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture>views/episode_fallback.png</texture>
-					<visible>Skin.HasSetting(HideUnwatchedThumbs) + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(HideUnwatchedThumbs) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>119</left>
@@ -835,7 +835,7 @@
 					<top>48</top>
 					<width>640</width>
 					<height>480</height>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
 				<include>OverlayHD</include>
@@ -870,7 +870,7 @@
 					<textcolor>ffffc448</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[PercentRemaining]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
@@ -884,7 +884,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[EpisodeValue]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="0,-21" start="0,0" time="0">UnFocus</animation>
 				</control>
@@ -938,7 +938,7 @@
 					<top>48</top>
 					<width>640</width>
 					<height>480</height>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
 				<control type="label">
@@ -950,7 +950,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
@@ -973,7 +973,7 @@
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.UserRating],home)</onfocus>
-				<onfocus condition="!IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
+				<onfocus condition="!String.IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 			</control>
 			<control type="group">
 				<animation center="316,288" reversible="false" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
@@ -1024,7 +1024,7 @@
 					<top>48</top>
 					<width>640</width>
 					<height>480</height>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
 				<control type="label">
@@ -1037,7 +1037,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
@@ -1084,7 +1084,7 @@
 					<top>48</top>
 					<width>480</width>
 					<height>480</height>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
 				<control type="label">
@@ -1097,7 +1097,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[EpisodeValue]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>					
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>					
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1147,7 +1147,7 @@
 					<top>48</top>
 					<width>480</width>
 					<height>480</height>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
 				<control type="label">
@@ -1159,7 +1159,7 @@
 					<textcolor>ffffc448</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$LOCALIZE[31226]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
@@ -1173,7 +1173,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="0,-21" start="0,0" time="0">UnFocus</animation>
 				</control>
@@ -1189,7 +1189,7 @@
 					<info>ListItem.Progress</info>
 					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
 					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-					<visible>!IsEmpty(ListItem.StartTime) + !IsEmpty(ListItem.EndTime)</visible>
+					<visible>!String.IsEmpty(ListItem.StartTime) + !String.IsEmpty(ListItem.EndTime)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1420,7 +1420,7 @@
 		<itemlayout height="70" width="1850">
 			<!-- Button layouts -->
 			<control type="group">					
-				<visible>IsEmpty(ListItem.Date)</visible>
+				<visible>String.IsEmpty(ListItem.Date)</visible>
 				<control type="label">
 					<width>285</width>
 					<aligny>center</aligny>
@@ -1431,7 +1431,7 @@
 			</control>
 			<!-- Results layout -->
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Date)</visible>					
+				<visible>!String.IsEmpty(ListItem.Date)</visible>					
 				<control type="image">
 					<top>10</top>
 					<bottom>10</bottom>
@@ -1522,7 +1522,7 @@
 		<focusedlayout height="70" width="1850">
 			<!-- Button layouts -->
 			<control type="group">					
-				<visible>IsEmpty(ListItem.Date)</visible>
+				<visible>String.IsEmpty(ListItem.Date)</visible>
 				<control type="label">
 					<width>285</width>
 					<aligny>center</aligny>
@@ -1542,7 +1542,7 @@
 			</control>
 			<!-- Results layout -->
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Date)</visible>					
+				<visible>!String.IsEmpty(ListItem.Date)</visible>					
 				<control type="image">
 					<top>10</top>
 					<bottom>10</bottom>
@@ -1689,7 +1689,7 @@
 					<width>480</width>
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -1697,7 +1697,7 @@
 					<width>62</width>
 					<height>62</height>
 					<texture>views/equaliser.gif</texture>
-					<visible>Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>98</left>
@@ -1709,8 +1709,8 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
-					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
+					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>18</left>
@@ -1722,8 +1722,8 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!StringCompare(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
-					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<visible>!String.IsEqual(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>98</left>
@@ -1735,7 +1735,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Artist]</label>
-					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Artist) + Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>18</left>
@@ -1747,7 +1747,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Artist]</label>
-					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Artist) + [[Player.HasAudio + !Player.Playing] | !String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1791,7 +1791,7 @@
 					<width>480</width>
 					<height>480</height>
 					<texture border="2">views/season_overlay.png</texture>
-					<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -1799,7 +1799,7 @@
 					<width>62</width>
 					<height>62</height>
 					<texture>views/playlist_play.png</texture>
-					<visible>!StringCompare(MusicPlayer.Title,ListItem.Title) | [!Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<visible>!String.IsEqual(MusicPlayer.Title,ListItem.Title) | [!Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
 				</control>
 				<control type="label">
@@ -1812,8 +1812,8 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
-					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
 				</control>
 				<control type="label">
@@ -1826,7 +1826,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Artist]</label>
-					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Artist)</visible>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
 				</control>
 				<control type="label">
@@ -1839,8 +1839,8 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!StringCompare(ListItem.Label,..) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
-					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
+					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
 				</control>
 				<control type="label">
@@ -1854,8 +1854,8 @@
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
 					<visible>Control.HasFocus(50)</visible>
-					<visible>!StringCompare(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
-					<animation condition="!IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
+					<visible>!String.IsEqual(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
 				</control>
 				<control type="image">
@@ -1864,7 +1864,7 @@
 					<width>62</width>
 					<height>62</height>
 					<texture>views/equaliser.gif</texture>
-					<visible>Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>98</left>
@@ -1876,7 +1876,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Artist]</label>
-					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + Player.Playing + StringCompare(MusicPlayer.Title,ListItem.Title)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Artist) + Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
 				</control>
 				<control type="label">
@@ -1890,7 +1890,7 @@
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Artist]</label>
 					<visible>Control.HasFocus(50)</visible>
-					<visible>!StringCompare(ListItem.Label,..) + !IsEmpty(ListItem.Artist) + [[Player.HasAudio + !Player.Playing] | !StringCompare(MusicPlayer.Title,ListItem.Title)]</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Artist) + [[Player.HasAudio + !Player.Playing] | !String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">Focus</animation>
 				</control>
 				<control type="image">

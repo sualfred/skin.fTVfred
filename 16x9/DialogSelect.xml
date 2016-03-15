@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- selectdialog -->
-	<onload condition="IsEmpty(Window(home).Property(SetUserRating))">SetFocus(3)</onload>
-	<onload condition="!IsEmpty(Window(home).Property(SetUserRating))">SetFocus(21)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(SetUserRating))">SetFocus(3)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(SetUserRating))">SetFocus(21)</onload>
 	<onunload>ClearProperty(SetUserRating,home)</onunload>
 	<onunload>ClearProperty(UserRatingIcon,home)</onunload>
 	<controls>
-		<include condition="IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectDefault</include>
-		<include condition="!IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectSpecial</include>
+		<include condition="String.IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectDefault</include>
+		<include condition="!String.IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectSpecial</include>
 	</controls>
 </window>

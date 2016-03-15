@@ -4,7 +4,6 @@ A lot of you were begging Hitcher to implement LiveTV to his awesome fTV skin. S
 Original fTV skin by Hitcher: http://forum.kodi.tv/showthread.php?tid=207475
 
 #Important:
-- Made for Jarvis (Kodi 16)
 - Not compatible to Hitcher's official repo version, sorry
 - The skin has its own skin ID. So you can keep both, Hitchers fTV and my mod. Just take care of different skin folder names.
 - I did not take care of PVR based radio. Hello? We are in 2015. Use the internet radio addons ;)

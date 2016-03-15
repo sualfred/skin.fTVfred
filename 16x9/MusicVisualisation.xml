@@ -15,7 +15,7 @@
 			<include>FullscreenDimensions</include>
 			<fadetime>400</fadetime>
 			<colordiffuse>26ffffff</colordiffuse>
-			<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + [!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)]</visible>
+			<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + [!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)]</visible>
 			<texture fallback="special://skin/extras/backgrounds/music_visualiser.jpg" background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 			<include>VisAnimation</include>
 		</control>
@@ -137,21 +137,21 @@
 						<width>26</width>
 						<height>22</height>
 						<texture>osd/visualistion_shuffle.png</texture>
-						<visible>StringCompare(Playlist.Random,$LOCALIZE[590])</visible>
+						<visible>String.IsEqual(Playlist.Random,$LOCALIZE[590])</visible>
 					</control>
 					<control type="image">
 						<top>5</top>
 						<width>30</width>
 						<height>22</height>
 						<texture>osd/visualistion_repeat.png</texture>
-						<visible>StringCompare(Playlist.Repeat,$LOCALIZE[593])</visible>
+						<visible>String.IsEqual(Playlist.Repeat,$LOCALIZE[593])</visible>
 					</control>
 					<control type="image">
 						<top>5</top>
 						<width>42</width>
 						<height>22</height>
 						<texture>osd/visualistion_repeat_1.png</texture>
-						<visible>StringCompare(Playlist.Repeat,$LOCALIZE[592])</visible>
+						<visible>String.IsEqual(Playlist.Repeat,$LOCALIZE[592])</visible>
 					</control>
 				</control>
 			</control>

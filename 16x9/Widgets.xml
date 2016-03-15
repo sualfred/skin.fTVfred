@@ -69,7 +69,7 @@
 		</include>
 		<!-- LiveTV Widget -->
 		<control type="list" id="301">
-			<visible>StringCompare(Container(99).ListItem.Property(ftvWidget),livetv) + PVR.HasTVChannels</visible>
+			<visible>String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + PVR.HasTVChannels</visible>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
 			<left>391</left>
@@ -146,7 +146,7 @@
 			<orientation>horizontal</orientation>
 			<include>WindowHomeFadeAnimation</include>
 			<include>HomeWidgetsAnimation</include>
-			<visible>StringCompare(Container(99).ListItem.Property(ftvWidget),weather)</visible>
+			<visible>String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather)</visible>
 			<itemlayout height="914" width="299">
 				<control type="image">
 					<width>299</width>
@@ -257,7 +257,7 @@
 					<icon>$INFO[Window(Weather).Property(Day0.FanartCode),weather/icons/,.png]</icon>
 					<property name="Fanart">$INFO[Window(Weather).Property(Day0.FanartCode),weather/home/,.jpg]</property>
 					<property name="Outlook">$INFO[Window(Weather).Property(Day0.Outlook)]</property>
-					<visible>!IsEmpty(Window(Weather).Property(Day0.Outlook))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Day0.Outlook))</visible>
 				</item>
 				<item>
 					<onclick>noop</onclick>
@@ -266,7 +266,7 @@
 					<icon>$INFO[Window(Weather).Property(Day1.FanartCode),weather/icons/,.png]</icon>
 					<property name="Fanart">$INFO[Window(Weather).Property(Day1.FanartCode),weather/home/,.jpg]</property>
 					<property name="Outlook">$INFO[Window(Weather).Property(Day1.Outlook)]</property>
-					<visible>!IsEmpty(Window(Weather).Property(Day1.Outlook))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Day1.Outlook))</visible>
 				</item>
 				<item>
 					<onclick>noop</onclick>
@@ -275,7 +275,7 @@
 					<icon>$INFO[Window(Weather).Property(Day2.FanartCode),weather/icons/,.png]</icon>
 					<property name="Fanart">$INFO[Window(Weather).Property(Day2.FanartCode),weather/home/,.jpg]</property>
 					<property name="Outlook">$INFO[Window(Weather).Property(Day2.Outlook)]</property>
-					<visible>!IsEmpty(Window(Weather).Property(Day2.Outlook))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Day2.Outlook))</visible>
 				</item>
 				<item>
 					<onclick>noop</onclick>
@@ -284,7 +284,7 @@
 					<icon>$INFO[Window(Weather).Property(Day3.FanartCode),weather/icons/,.png]</icon>
 					<property name="Fanart">$INFO[Window(Weather).Property(Day3.FanartCode),weather/home/,.jpg]</property>
 					<property name="Outlook">$INFO[Window(Weather).Property(Day3.Outlook)]</property>
-					<visible>!IsEmpty(Window(Weather).Property(Day3.Outlook))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Day3.Outlook))</visible>
 				</item>
 				<item>
 					<onclick>noop</onclick>
@@ -293,7 +293,7 @@
 					<icon>$INFO[Window(Weather).Property(Day4.FanartCode),weather/icons/,.png]</icon>
 					<property name="Fanart">$INFO[Window(Weather).Property(Day4.FanartCode),weather/home/,.jpg]</property>
 					<property name="Outlook">$INFO[Window(Weather).Property(Day4.Outlook)]</property>
-					<visible>!IsEmpty(Window(Weather).Property(Day4.Outlook))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Day4.Outlook))</visible>
 				</item>
 			</content>
 		</control>
@@ -309,7 +309,7 @@
 			<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 			<include>WindowHomeFadeAnimation</include>
 			<include>HomeWidgetsAnimation</include>
-			<visible>StringCompare(Container(99).ListItem.Property(defaultID),settings)</visible>
+			<visible>String.IsEqual(Container(99).ListItem.Property(defaultID),settings)</visible>
 			<itemlayout height="497" width="300">
 				<control type="group">
 					<animation center="134,240" condition="True" effect="zoom" end="84.5" start="84.5">Conditional</animation>
@@ -398,7 +398,7 @@
 	<include name="EmptyMessages">
 		<!-- Movies -->
 		<include name="NoContentMessage">
-			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),movies) | SubString(Container(99).ListItem.Property(list),library://video/movies/) | SubString(Container(99).ListItem.Property(list),videodb://movies/)] + !Library.HasContent(Movies) + !Skin.HasSetting(HideMoviesMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Visible">[String.IsEqual(Container(99).ListItem.Property(DefaultID),movies) | String.Contains(Container(99).ListItem.Property(list),library://video/movies/) | String.Contains(Container(99).ListItem.Property(list),videodb://movies/)] + !Library.HasContent(Movies) + !Skin.HasSetting(HideMoviesMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
 			<param name="ShowButton">true</param>
@@ -409,7 +409,7 @@
 		</include>
 		<!-- TVShows -->
 		<include name="NoContentMessage">
-			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),tvshows) | SubString(Container(99).ListItem.Property(DefaultID),library://video/tvshows/) | SubString(Container(99).ListItem.Property(list),videodb://tvshows/)] + !Library.HasContent(TVShows) + !Skin.HasSetting(HideTVShowsMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Visible">[String.IsEqual(Container(99).ListItem.Property(DefaultID),tvshows) | String.Contains(Container(99).ListItem.Property(DefaultID),library://video/tvshows/) | String.Contains(Container(99).ListItem.Property(list),videodb://tvshows/)] + !Library.HasContent(TVShows) + !Skin.HasSetting(HideTVShowsMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
 			<param name="ShowButton">true</param>
@@ -420,7 +420,7 @@
 		</include>
 		<!-- Videos -->
 		<include name="NoContentMessage">
-			<param name="Visible">StringCompare(Container(99).ListItem.Property(DefaultID),videos) + !Library.HasContent(TVShows) + !Library.HasContent(Movies)+ !Skin.HasSetting(HideVideosMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Visible">String.IsEqual(Container(99).ListItem.Property(DefaultID),videos) + !Library.HasContent(TVShows) + !Library.HasContent(Movies)+ !Skin.HasSetting(HideVideosMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
 			<param name="ShowButton">true</param>
@@ -431,7 +431,7 @@
 		</include>
 		<!-- Music -->
 		<include name="NoContentMessage">
-			<param name="Visible">[StringCompare(Container(99).ListItem.Property(DefaultID),music) | SubString(Container(99).ListItem.Property(list),library://music/) | SubString(Container(99).ListItem.Property(list),musicdb://)] + !Library.HasContent(Music) + !Skin.HasSetting(HideMusicMessage) + IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
+			<param name="Visible">[String.IsEqual(Container(99).ListItem.Property(DefaultID),music) | String.Contains(Container(99).ListItem.Property(list),library://music/) | String.Contains(Container(99).ListItem.Property(list),musicdb://)] + !Library.HasContent(Music) + !Skin.HasSetting(HideMusicMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
 			<param name="ShowButton">true</param>
@@ -442,7 +442,7 @@
 		</include>
 		<!-- Weather -->
 		<include name="NoContentMessage">
-			<param name="Visible">StringCompare(Container(99).ListItem.Property(ftvWidget),weather) + IsEmpty(Window(Weather).Property(Day0.Outlook))</param>
+			<param name="Visible">String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather) + String.IsEmpty(Window(Weather).Property(Day0.Outlook))</param>
 			<param name="Header">$LOCALIZE[412]</param>
 			<param name="Message">$LOCALIZE[31119]</param>
 			<param name="ShowButton">true</param>
@@ -451,7 +451,7 @@
 		</include>
 		<!-- Empty widgets -->
 		<include name="NoContentMessage">
-			<param name="Visible">[[StringCompare(Container(99).ListItem.Property(ftvWidget),widget1) + !IntegerGreaterThan(Container(1000).NumItems,0)] | 	[StringCompare(Container(99).ListItem.Property(ftvWidget),widget2) + !IntegerGreaterThan(Container(2000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget3) + !IntegerGreaterThan(Container(3000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget4) + !IntegerGreaterThan(Container(4000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget5) + !IntegerGreaterThan(Container(5000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget6) + !IntegerGreaterThan(Container(6000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget7) + !IntegerGreaterThan(Container(7000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget8) + !IntegerGreaterThan(Container(8000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget9) + !IntegerGreaterThan(Container(9000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget10) + !IntegerGreaterThan(Container(10000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget11) + !IntegerGreaterThan(Container(11000).NumItems,0)] | [StringCompare(Container(99).ListItem.Property(ftvWidget),widget12) + !IntegerGreaterThan(Container(12000).NumItems,0)]]</param>
+			<param name="Visible">[[String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,0)] | 	[String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,0)]]</param>
 			<param name="Header">$LOCALIZE[31263]</param>
 			<param name="Message">$LOCALIZE[31266]</param>
 			<param name="ShowButton">true</param>

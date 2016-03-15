@@ -391,8 +391,8 @@
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
 				<visible>ControlGroup(100).HasFocus(102)</visible>
-				<animation condition="StringCompare(Container(2).NumItems,0) | StringCompare(Container(2).NumItems,1) | [StringCompare(Container(2).NumItems,2) + !Container(2).HasParent]" effect="slide" end="0,-168">Conditional</animation>
-				<animation condition="[StringCompare(Container(2).NumItems,2) + Container(2).HasParent] | StringCompare(Container(2).NumItems,3) | [StringCompare(Container(2).NumItems,4) + !Container(2).HasParent]" effect="slide" end="0,-84">Conditional</animation>
+				<animation condition="String.IsEqual(Container(2).NumItems,0) | String.IsEqual(Container(2).NumItems,1) | [String.IsEqual(Container(2).NumItems,2) + !Container(2).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+				<animation condition="[String.IsEqual(Container(2).NumItems,2) + Container(2).HasParent] | String.IsEqual(Container(2).NumItems,3) | [String.IsEqual(Container(2).NumItems,4) + !Container(2).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 				<itemlayout height="84" width="958">
 					<control type="image">
 						<width>958</width>

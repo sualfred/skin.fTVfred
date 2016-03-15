@@ -10,22 +10,22 @@
 			<include>HiddenControl</include>
 			<onleft>noop</onleft>
 			<onright>30</onright>
-			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(21)</onup>
-			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(21)</ondown>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(21)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(21)</ondown>
 			<onclick>SetFocus(200)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(20)</onclick>
@@ -35,22 +35,22 @@
 			<include>HiddenControl</include>
 			<onleft>20</onleft>
 			<onright>40</onright>
-			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(31)</onup>
-			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(31)</ondown>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(31)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(31)</ondown>
 			<onclick>SetFocus(300)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(30)</onclick>
@@ -60,22 +60,22 @@
 			<include>HiddenControl</include>
 			<onleft>30</onleft>
 			<onright>50</onright>
-			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(41)</onup>
-			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(41)</ondown>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(41)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(41)</ondown>
 			<onclick>SetFocus(400)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(40)</onclick>
@@ -85,22 +85,22 @@
 			<include>HiddenControl</include>
 			<onleft>40</onleft>
 			<onright>60</onright>
-			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(51)</onup>
-			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(51)</ondown>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(51)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(51)</ondown>
 			<onclick>SetFocus(500)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(50)</onclick>
@@ -110,22 +110,22 @@
 			<include>HiddenControl</include>
 			<onleft>50</onleft>
 			<onright>noop</onright>
-			<onup condition="StringCompare(Container(100).CurrentItem,1)">noop</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
-			<onup condition="!StringCompare(Container(100).CurrentItem,1)">SetFocus(61)</onup>
-			<ondown condition="StringCompare(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
-			<ondown condition="!StringCompare(Container(100).CurrentItem,8)">SetFocus(61)</ondown>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(61)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(61)</ondown>
 			<onclick>SetFocus(600)</onclick>
 			<onclick>Select</onclick>
 			<onclick>SetFocus(60)</onclick>
@@ -317,7 +317,7 @@
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>420</width>
@@ -325,7 +325,7 @@
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>IsEmpty(ListItem.Label)</visible>
+							<visible>String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="84" width="420">
@@ -335,7 +335,7 @@
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(20) + !IsEmpty(ListItem.Label)</visible>
+							<visible>Control.HasFocus(20) + !String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>420</width>
@@ -343,7 +343,7 @@
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(20) + !IsEmpty(ListItem.Label)</visible>
+							<visible>!Control.HasFocus(20) + !String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>420</width>
@@ -351,7 +351,7 @@
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>Control.HasFocus(20) + IsEmpty(ListItem.Label)</visible>
+							<visible>Control.HasFocus(20) + String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>420</width>
@@ -359,7 +359,7 @@
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>!Control.HasFocus(20) + IsEmpty(ListItem.Label)</visible>
+							<visible>!Control.HasFocus(20) + String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</focusedlayout>
 					<content>
@@ -403,7 +403,7 @@
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>820</width>
@@ -411,7 +411,7 @@
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>IsEmpty(ListItem.Label)</visible>
+							<visible>String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="84" width="820">
@@ -422,7 +422,7 @@
 							<scroll>true</scroll>
 							<textcolor>ffffaf37</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(30) + !IsEmpty(ListItem.Label)</visible>
+							<visible>Control.HasFocus(30) + !String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>820</width>
@@ -430,7 +430,7 @@
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(30) + !IsEmpty(ListItem.Label)</visible>
+							<visible>!Control.HasFocus(30) + !String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>820</width>
@@ -438,7 +438,7 @@
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>Control.HasFocus(30) + IsEmpty(ListItem.Label)</visible>
+							<visible>Control.HasFocus(30) + String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>820</width>
@@ -446,7 +446,7 @@
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>!Control.HasFocus(30) + IsEmpty(ListItem.Label)</visible>
+							<visible>!Control.HasFocus(30) + String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</focusedlayout>
 					<content>
@@ -490,7 +490,7 @@
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>180</width>
@@ -498,7 +498,7 @@
 							<font>Light32</font>
 							<textcolor>ff505153</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>IsEmpty(ListItem.Label)</visible>
+							<visible>String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="84" width="180">
@@ -509,7 +509,7 @@
 							<scroll>true</scroll>
 							<textcolor>ffffaf37</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(40) + !IsEmpty(ListItem.Label)</visible>
+							<visible>Control.HasFocus(40) + !String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>180</width>
@@ -517,7 +517,7 @@
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(40) + !IsEmpty(ListItem.Label)</visible>
+							<visible>!Control.HasFocus(40) + !String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>180</width>
@@ -525,7 +525,7 @@
 							<font>Light32</font>
 							<textcolor>ffffaf37</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>Control.HasFocus(40) + IsEmpty(ListItem.Label)</visible>
+							<visible>Control.HasFocus(40) + String.IsEmpty(ListItem.Label)</visible>
 						</control>
 						<control type="label">
 							<width>180</width>
@@ -533,7 +533,7 @@
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>!Control.HasFocus(40) + IsEmpty(ListItem.Label)</visible>
+							<visible>!Control.HasFocus(40) + String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</focusedlayout>
 					<content>
@@ -588,40 +588,40 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include condition="StringCompare(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">1000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">2000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">3000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">4000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">5000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">6000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">7000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">8000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">9000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">10000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">11000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">12000</param>
 						</include>
 					</content>
@@ -651,40 +651,40 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include condition="StringCompare(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">1000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">2000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">3000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">4000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">5000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">6000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">7000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">8000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">9000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">10000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">11000</param>
 						</include>
-						<include condition="StringCompare(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">12000</param>
 						</include>
 					</content>

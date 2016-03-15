@@ -40,8 +40,8 @@
 		<!-- trigger -->
 		<control type="button" id="40">
 			<onfocus>SetProperty(Preload,1,Home)</onfocus>
-			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">SetFocus(10)</onfocus>
-			<onfocus condition="StringCompare(Skin.String(QuestionsAsked),1)">SetFocus(30)</onfocus>
+			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(10)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(30)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>
@@ -64,7 +64,7 @@
 		</control>
 		<!-- switch to home -->
 		<control type="button" id="30">
-			<onfocus condition="!StringCompare(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
+			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
 			<!-- workaround to fill the tv channel list correclty -->
 			<onfocus>SetProperty(WaitForControl,1,Home)</onfocus>
 			<onfocus>AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onfocus>

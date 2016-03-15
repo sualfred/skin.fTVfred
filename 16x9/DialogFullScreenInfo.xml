@@ -9,21 +9,21 @@
 		<!--Xray Control -->
 		<control type="button" id="101">
 			<include>HiddenControl</include>
-			<onleft condition="!StringCompare(Container(100).CurrentItem,1)">Control.Move(100,-1)</onleft>
-			<onright condition="!StringCompare(Container(100).Position,3)">Control.Move(100,1)</onright>
-			<onright condition="!Window.IsVisible(1103) + StringCompare(Container(100).Position,3)">SetProperty(BounceRight,1,Home)</onright>
+			<onleft condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onleft>
+			<onright condition="!String.IsEqual(Container(100).Position,3)">Control.Move(100,1)</onright>
+			<onright condition="!Window.IsVisible(1103) + String.IsEqual(Container(100).Position,3)">SetProperty(BounceRight,1,Home)</onright>
 			<ondown>close</ondown>
 			<onclick>SetProperty(ShowOptions,1,home)</onclick>
 			<onclick>Dialog.Close(fullscreeninfo,true)</onclick>
 			<onclick>ActivateWindow(VideoOSD)</onclick>
-			<onup condition="IntegerGreaterThan(Container(100).NumItems,0)">SetProperty(ShowXRay,true,home)</onup>
-			<onup condition="IntegerGreaterThan(Container(100).NumItems,0)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(100).ListItem.Label])</onup>
-			<ondown condition="!IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</ondown>
-			<ondown condition="!IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</ondown>
+			<onup condition="Integer.IsGreater(Container(100).NumItems,0)">SetProperty(ShowXRay,true,home)</onup>
+			<onup condition="Integer.IsGreater(Container(100).NumItems,0)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(100).ListItem.Label])</onup>
+			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber)">SetProperty(ShowXRay,true,home)</ondown>
+			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</ondown>
 		</control>
 		<!--Fullscreen Info-->
 		<control type="group">
-			<visible>!Window.IsActive(videoosd) + IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsActive(videoosd) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 			<control type="image">
 				<width>1980</width>
@@ -100,7 +100,7 @@
 					<font>Light27</font>
 					<textcolor>ff696969</textcolor>
 					<label>/</label>
-					<visible>!IsEmpty(Player.Time) + !IsEmpty(Player.Duration)</visible>
+					<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
 				</control>
 				<!--  Total length -->
 				<control type="label">
@@ -119,7 +119,7 @@
 					<font>Bold28</font>
 					<textcolor>ffebebeb</textcolor>
 					<label>[B]HD[/B]</label>
-					<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+					<visible>Integer.IsGreater(VideoPlayer.VideoResolution,719)</visible>
 				</control>
 				<!--  Resolution label -->
 				<control type="label">
@@ -135,7 +135,7 @@
 		</control>
 		<!--XRay-->
 		<control type="group">
-			<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(videobookmarks) + IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(videobookmarks) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!--Xray Icon-->
 			<control id="99" type="grouplist">
 				<right>92</right>
@@ -152,13 +152,13 @@
 					<font>Reg27</font>
 					<textcolor>fff3f3f3</textcolor>
 					<label>$LOCALIZE[31241]</label>
-					<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container(100).NumItems,0)</visible>
 				</control>
 				<control id="99" type="image">
 					<width>40</width>
 					<height>40</height>
 					<texture>osd/x_ray.png</texture>
-					<visible>IntegerGreaterThan(Container(100).NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container(100).NumItems,0)</visible>
 				</control>
 				<control id="99" type="label">
 					<top>4</top>
@@ -167,13 +167,13 @@
 					<font>Reg27</font>
 					<textcolor>fff3f3f3</textcolor>
 					<label>    $LOCALIZE[31234]</label>
-					<visible>!IsEmpty(VideoPlayer.IMDBNumber)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.IMDBNumber)</visible>
 				</control>
 				<control id="99" type="image">
 					<width>40</width>
 					<height>40</height>
 					<texture flipy="true">osd/x_ray.png</texture>
-					<visible>!IsEmpty(VideoPlayer.IMDBNumber)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.IMDBNumber)</visible>
 				</control>
 				<control id="99" type="label">
 					<top>4</top>
@@ -192,7 +192,7 @@
 			<!--Cast-->
 			<control type="group">
 				<animation effect="fade" time="0" start="100" end="0" condition="Container(100).IsUpdating">Conditional</animation>
-				<visible>IsEmpty(Window(home).Property(ShowXRay))</visible>
+				<visible>String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 				<control id="100" type="fixedlist">
 					<width>1920</width>
 					<left>0</left>

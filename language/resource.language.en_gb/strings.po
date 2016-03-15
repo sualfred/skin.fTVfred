@@ -1175,6 +1175,61 @@ msgctxt "#31269"
 msgid "Genres (Plugin based)"
 msgstr ""
 
+#: /16x9/DialogMusicInfo.xml:333
+msgctxt "#31270"
+msgid "Your Rating"
+msgstr ""
+
+#: /16x9/DialogMusicInfo.xml:333
+msgctxt "#31271"
+msgid "YourRating"
+msgstr ""
+
+#: /16x9/Variables.xml:21
+msgctxt "#31272"
+msgid "Not rated"
+msgstr ""
+
+#: /16x9/Variables.xml:16
+msgctxt "#31273"
+msgid "I hate it"
+msgstr ""
+
+#: /16x9/Variables.xml:17
+msgctxt "#31274"
+msgid "I don't like it"
+msgstr ""
+
+#: /16x9/Variables.xml:18
+msgctxt "#31275"
+msgid "It's okay"
+msgstr ""
+
+#: /16x9/Variables.xml:19
+msgctxt "#31276"
+msgid "I like it"
+msgstr ""
+
+#: /16x9/Variables.xml:20
+msgctxt "#31277"
+msgid "I love it"
+msgstr ""
+
+#: /16x9/IncludesDialogSelect.xml:384
+msgctxt "#31278"
+msgid "This is your own personal rating and is not shared publicly"
+msgstr ""
+
+#: /16x9/IncludesDialogSelect.xml:412
+msgctxt "#31279"
+msgid "Select your rating"
+msgstr ""
+
+#: /16x9/IncludesDialogSelect.xml:447
+msgctxt "#31280"
+msgid "Submit"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

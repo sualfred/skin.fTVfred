@@ -17,14 +17,14 @@
 				<width>1920</width>
 				<height>720</height>
 				<texture border="1">osd/mask_bottom.png</texture>
-				<visible>!IsEmpty(Window(home).Property(ShowOptions)) + ![Player.Forwarding | Player.Rewinding]</visible>
+				<visible>!String.IsEmpty(Window(home).Property(ShowOptions)) + ![Player.Forwarding | Player.Rewinding]</visible>
 			</control>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>IsEmpty(Window(home).Property(ShowOptions)) | [Player.Forwarding | Player.Rewinding]</visible>
+				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | [Player.Forwarding | Player.Rewinding]</visible>
 			</control>			
 			<include>PlayerTitles</include>		
 			<!-- Pause -->
@@ -73,7 +73,7 @@
 					<font>Light27</font>
 					<textcolor>ff696969</textcolor>
 					<label>/</label>
-					<visible>!IsEmpty(Player.Time) + !IsEmpty(Player.Duration)</visible>
+					<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
 				</control>
 				<!--  Total length -->
 				<control type="label">
@@ -199,7 +199,7 @@
 			</control>
 			<!-- Options -->
 			<control type="group">
-				<visible allowhiddenfocus="true">!Player.Forwarding + !Player.Rewinding + !IsEmpty(Window(home).Property(ShowOptions))</visible>
+				<visible allowhiddenfocus="true">!Player.Forwarding + !Player.Rewinding + !String.IsEmpty(Window(home).Property(ShowOptions))</visible>
 				<!-- Left Options -->
 				<control id="100" type="grouplist">
 					<left>92</left>
@@ -315,8 +315,8 @@
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onclick>Close</onclick>
-						<onclick condition="IsEmpty(Skin.String(LyricAddon))">Skin.SetAddon(LyricAddon,xbmc.python.lyrics)</onclick>
-						<onclick condition="!IsEmpty(Skin.String(LyricAddon))">XBMC.RunScript($INFO[Skin.String(LyricAddon)])</onclick>
+						<onclick condition="String.IsEmpty(Skin.String(LyricAddon))">Skin.SetAddon(LyricAddon,xbmc.python.lyrics)</onclick>
+						<onclick condition="!String.IsEmpty(Skin.String(LyricAddon))">XBMC.RunScript($INFO[Skin.String(LyricAddon)])</onclick>
 					</control>
 					<!-- Playlist -->
 					<control type="button" id="10">

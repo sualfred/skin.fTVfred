@@ -5,7 +5,7 @@
 	<visible>[Window.IsVisible(visualisation) | VideoPlayer.IsFullscreen] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsActive(script.pseudotv.TVOverlay.xml) + !Window.IsActive(script.pseudotv.live.TVOverlay.xml)</visible>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsVisible(fullscreeninfo) + !Window.IsActive(videoosd) + !Window.IsActive(musicosd) + !Window.IsActive(subtitlesearch) + !Window.IsVisible(script-nextup-notification-NextUpInfo.xml) + IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsVisible(fullscreeninfo) + !Window.IsActive(videoosd) + !Window.IsActive(musicosd) + !Window.IsActive(subtitlesearch) + !Window.IsVisible(script-nextup-notification-NextUpInfo.xml) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<control type="group">
 				<visible>Player.Paused + !Player.Forwarding + !Player.Rewinding</visible>
 				<animation condition="System.IdleTime(4) + !Player.Caching + !Window.IsVisible(fullscreeninfo)" reversible="true" type="Conditional">
@@ -107,7 +107,7 @@
 						<font>Light27</font>
 						<textcolor>ff696969</textcolor>
 						<label>/</label>
-						<visible>!IsEmpty(Player.Time) + !IsEmpty(Player.Duration)</visible>
+						<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
 					</control>
 					<!--  Total length -->
 					<control type="label">
@@ -126,7 +126,7 @@
 						<font>Bold28</font>
 						<textcolor>ffebebeb</textcolor>
 						<label>[B]HD[/B]</label>
-						<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+						<visible>Integer.IsGreater(VideoPlayer.VideoResolution,719)</visible>
 					</control>
 					<!--  Resolution label -->
 					<control type="label">
@@ -217,7 +217,7 @@
 						<height>34</height>
 						<font>Light27</font>
 						<textcolor>ff696969</textcolor>
-						<visible>!IsEmpty(Player.Time) + !IsEmpty(Player.Duration)</visible>
+						<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
 						<label>/</label>
 					</control>
 					<!--  Total length -->
@@ -237,7 +237,7 @@
 						<font>Bold28</font>
 						<textcolor>ffebebeb</textcolor>
 						<label>[B]HD[/B]</label>
-						<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+						<visible>Integer.IsGreater(VideoPlayer.VideoResolution,719)</visible>
 					</control>
 					<!--  Resolution label -->
 					<control type="label">

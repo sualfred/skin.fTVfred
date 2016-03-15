@@ -13,15 +13,15 @@
 			<height>1</height>
 			<width>1</width>
 			<onup>Close</onup>			
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),movies)">SetFocus(111)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),tvshows)">SetFocus(121)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),seasons)">SetFocus(131)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),episodes)">SetFocus(141)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),musicvideos)">SetFocus(151)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),artists)">SetFocus(161)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),albums)">SetFocus(171)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),songs)">SetFocus(181)</ondown>
-			<ondown condition="StringCompare(Window(home).Property(CategoryFocus),actors)">SetFocus(219)</ondown>			
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),movies)">SetFocus(111)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),tvshows)">SetFocus(121)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),seasons)">SetFocus(131)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),episodes)">SetFocus(141)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),musicvideos)">SetFocus(151)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),artists)">SetFocus(161)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),albums)">SetFocus(171)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),songs)">SetFocus(181)</ondown>
+			<ondown condition="String.IsEqual(Window(home).Property(CategoryFocus),actors)">SetFocus(219)</ondown>			
 			<ondown>ClearProperty(CategoryFocus,home)</ondown>
 			<onclick>Close</onclick>
 			<onclick>RunScript(script.globalsearch)</onclick>
@@ -232,7 +232,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
+					<visible>String.IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
 					<animation delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 					<!-- Search Result -->
 					<control type="grouplist">
@@ -259,7 +259,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ffdadada</textcolor>
 							<label>$VAR[GlobalSearchCurrentItem]</label>
-							<visible>!IsEmpty(Window(home).Property(Category))</visible>
+							<visible>!String.IsEmpty(Window(home).Property(Category))</visible>
 						</control>
 						<control type="label">
 							<top>14</top>
@@ -269,7 +269,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ff505050</textcolor>
 							<label>|</label>
-							<visible>!IsEmpty(Window(home).Property(Category))</visible>
+							<visible>!String.IsEmpty(Window(home).Property(Category))</visible>
 						</control>
 						<control type="label">
 							<top>15</top>
@@ -279,7 +279,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ff505050</textcolor>
 							<label>$VAR[GlobalSearchNumItems]</label>
-							<visible>!IsEmpty(Window(home).Property(Category))</visible>
+							<visible>!String.IsEmpty(Window(home).Property(Category))</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -386,7 +386,7 @@
 						<control type="group">
 							<left>196</left>
 							<top>782</top>
-							<visible>!ControlGroup(999).HasFocus + !Control.HasFocus(300) + IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
+							<visible>!ControlGroup(999).HasFocus + !Control.HasFocus(300) + String.IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
 							<include>VisibleFadeAnimation</include>
 							<!-- Controls -->
 							<control id="1000" type="grouplist">
@@ -430,7 +430,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffbebebe</textcolor>
 									<label>$INFO[Container(111).ListItem.Property(Year),,[COLOR 00ffffff]/[/COLOR]]</label>
-									<visible>Control.IsVisible(111) + !IsEmpty(Container(111).ListItem.Property(Year))</visible>
+									<visible>Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Year))</visible>
 								</control>
 								<control type="label">
 									<width>auto</width>
@@ -439,7 +439,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffbebebe</textcolor>
 									<label>$INFO[Container(121).ListItem.Property(Year),,[COLOR 00ffffff]/[/COLOR]]</label>
-									<visible>Control.IsVisible(121) + !IsEmpty(Container(121).ListItem.Property(Year))</visible>
+									<visible>Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(Year))</visible>
 								</control>
 								<control type="label">
 									<width>auto</width>
@@ -448,7 +448,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffbebebe</textcolor>
 									<label>$INFO[Container(211).ListItem.Property(Year),,[COLOR 00ffffff]/[/COLOR]]</label>
-									<visible>Control.IsVisible(211) + !IsEmpty(Container(211).ListItem.Property(Year))</visible>
+									<visible>Control.IsVisible(211) + !String.IsEmpty(Container(211).ListItem.Property(Year))</visible>
 								</control>
 								<control type="label">
 									<width>auto</width>
@@ -457,7 +457,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffbebebe</textcolor>
 									<label>$INFO[Container(141).ListItem.Property(Duration),, $LOCALIZE[31147]]</label>
-									<visible>Control.IsVisible(141) + !IsEmpty(Container(141).ListItem.Property(Duration)) + IntegerGreaterThan(Container(141).ListItem.Property(Duration),1)</visible>
+									<visible>Control.IsVisible(141) + !String.IsEmpty(Container(141).ListItem.Property(Duration)) + Integer.IsGreater(Container(141).ListItem.Property(Duration),1)</visible>
 								</control>
 								<control type="image">
 									<top>2</top>
@@ -465,7 +465,7 @@
 									<height>24</height>
 									<texture>$INFO[Container(111).ListItem.Property(UserRating),rating/rating,.png]</texture>
 									<aspectratio align="left">keep</aspectratio>
-									<visible>Control.IsVisible(111) + !IsEmpty(Container(111).ListItem.Property(UserRating))</visible>
+									<visible>Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(UserRating))</visible>
 								</control>
 								<control type="image">
 									<top>2</top>
@@ -473,7 +473,7 @@
 									<height>24</height>
 									<texture>$INFO[Container(121).ListItem.Property(UserRating),rating/rating,.png]</texture>
 									<aspectratio align="left">keep</aspectratio>
-									<visible>Control.IsVisible(121) + !IsEmpty(Container(121).ListItem.Property(UserRating))</visible>
+									<visible>Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(UserRating))</visible>
 								</control>
 								<control type="image">
 									<top>2</top>
@@ -481,21 +481,21 @@
 									<height>24</height>
 									<texture>$INFO[Container(211).ListItem.Property(UserRating),rating/rating,.png]</texture>
 									<aspectratio align="left">keep</aspectratio>
-									<visible>Control.IsVisible(211) + !IsEmpty(Container(211).ListItem.Property(UserRating))</visible>
+									<visible>Control.IsVisible(211) + !String.IsEmpty(Container(211).ListItem.Property(UserRating))</visible>
 								</control>
 								<control type="image">
 									<top>3</top>
 									<width>48</width>
 									<height>23</height>
 									<texture>views/imdb.png</texture>
-									<visible>[Control.IsVisible(111) + !IsEmpty(Container(111).ListItem.Property(Rating))] | [Control.IsVisible(211) + !IsEmpty(Container(211).ListItem.Property(Rating))]</visible>
+									<visible>[Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Rating))] | [Control.IsVisible(211) + !String.IsEmpty(Container(211).ListItem.Property(Rating))]</visible>
 								</control>
 								<control type="image">
 									<top>3</top>
 									<width>47</width>
 									<height>23</height>
 									<texture>views/tvdb.png</texture>
-									<visible>[Control.IsVisible(121) + !IsEmpty(Container(121).ListItem.Property(Rating))] | [Control.IsVisible(141) + !IsEmpty(Container(141).ListItem.Property(Rating))]</visible>
+									<visible>[Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(Rating))] | [Control.IsVisible(141) + !String.IsEmpty(Container(141).ListItem.Property(Rating))]</visible>
 								</control>
 								<control type="label">
 									<top>-8</top>
@@ -505,7 +505,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffdadada</textcolor>
 									<label>$INFO[Container(111).ListItem.Property(Rating),,/10]</label>
-									<visible>Control.IsVisible(111) + !IsEmpty(Container(111).ListItem.Property(Rating))</visible>
+									<visible>Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Rating))</visible>
 								</control>
 								<control type="label">
 									<top>-8</top>
@@ -515,7 +515,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffdadada</textcolor>
 									<label>$INFO[Container(121).ListItem.Property(Rating),,/10]</label>
-									<visible>Control.IsVisible(121) + !IsEmpty(Container(121).ListItem.Property(Rating))</visible>
+									<visible>Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(Rating))</visible>
 								</control>
 								<control type="label">
 									<top>-8</top>
@@ -525,7 +525,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffdadada</textcolor>
 									<label>$INFO[Container(211).ListItem.Property(Rating),,/10]</label>
-									<visible>Control.IsVisible(211) + !IsEmpty(Container(211).ListItem.Property(Rating))</visible>
+									<visible>Control.IsVisible(211) + !String.IsEmpty(Container(211).ListItem.Property(Rating))</visible>
 								</control>
 								<control type="label">
 									<top>-8</top>
@@ -535,7 +535,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffdadada</textcolor>
 									<label>$INFO[Container(141).ListItem.Property(Rating),,/10]</label>
-									<visible>Control.IsVisible(141) + !IsEmpty(Container(141).ListItem.Property(Rating))</visible>
+									<visible>Control.IsVisible(141) + !String.IsEmpty(Container(141).ListItem.Property(Rating))</visible>
 								</control>
 								<control type="label">
 									<width>auto</width>
@@ -544,7 +544,7 @@
 									<aligny>bottom</aligny>
 									<textcolor>ffbebebe</textcolor>
 									<label>[COLOR ff707070]$LOCALIZE[31152]: [/COLOR]$INFO[Container(141).ListItem.Property(Premiered)]</label>
-									<visible>Control.IsVisible(141) + !IsEmpty(Container(141).ListItem.Property(Premiered))</visible>
+									<visible>Control.IsVisible(141) + !String.IsEmpty(Container(141).ListItem.Property(Premiered))</visible>
 								</control>
 							</control>
 							<control type="group">
@@ -643,7 +643,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(111) | Control.HasFocus(115) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),movies)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(111) | Control.HasFocus(115) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),movies)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -671,14 +671,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -712,14 +712,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -771,7 +771,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(121) | Control.HasFocus(125) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),tvshows)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(121) | Control.HasFocus(125) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),tvshows)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -799,14 +799,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -840,14 +840,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -899,7 +899,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(131) | Control.HasFocus(135) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),seasons)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(131) | Control.HasFocus(135) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),seasons)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -927,14 +927,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -968,14 +968,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1028,7 +1028,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(141) | Control.HasFocus(145) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),episodes)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(141) | Control.HasFocus(145) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),episodes)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1056,14 +1056,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
@@ -1113,14 +1113,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
@@ -1171,7 +1171,7 @@
 										<textcolor>ffffc448</textcolor>
 										<shadowcolor>88000000</shadowcolor>
 										<label>$LOCALIZE[31060]</label>
-										<visible>!StringCompare(ListItem.Label,..)</visible>
+										<visible>!String.IsEqual(ListItem.Label,..)</visible>
 										<animation condition="Control.HasFocus(141) | Container(141).OnNext | Container(141).OnPrevious" delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">Focus</animation>
 										<animation condition="Container(141).OnNext | Container(141).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 									</control>
@@ -1221,7 +1221,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(151) | Control.HasFocus(155) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),musicvideos)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(151) | Control.HasFocus(155) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),musicvideos)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1249,14 +1249,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1290,14 +1290,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1350,7 +1350,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(161) | Control.HasFocus(165) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),artists)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(161) | Control.HasFocus(165) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),artists)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1451,7 +1451,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(171) | Control.HasFocus(175) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),albums)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(171) | Control.HasFocus(175) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),albums)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1552,7 +1552,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(181) | Control.HasFocus(185) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),songs)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(181) | Control.HasFocus(185) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),songs)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1653,7 +1653,7 @@
 						<viewtype label="">list</viewtype>
 						<orientation>horizontal</orientation>
 						<scrolltime easing="inout" tween="sine">300</scrolltime>
-						<visible allowhiddenfocus="true">Control.HasFocus(211) | Control.HasFocus(215) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + StringCompare(Window(home).Property(Category),actors)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(211) | Control.HasFocus(215) | [[ControlGroup(1000).HasFocus | Control.HasFocus(3000) | Control.HasFocus(300)] + String.IsEqual(Window(home).Property(Category),actors)]</visible>
 						<animation reversible="false" type="Hidden">
 							<effect center="357,540" easing="out" end="98" start="100" time="180" tween="linear" type="zoom" />
 							<effect easing="out" end="0" start="100" time="180" tween="linear" type="fade" />
@@ -1681,14 +1681,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1722,14 +1722,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1811,14 +1811,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1852,14 +1852,14 @@
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayHD.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(VideoResolution),719)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(VideoResolution),719)</visible>
 								</control>
 								<control type="image">
 									<top>48</top>
 									<width>90</width>
 									<height>90</height>
 									<texture>views/OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
 									<left>-48</left>
@@ -1896,7 +1896,7 @@
 		</control>
 		<!-- busydialog -->
 		<control type="group">
-			<visible>!IsEmpty(Control.GetLabel(190))</visible>
+			<visible>!String.IsEmpty(Control.GetLabel(190))</visible>
 			<!-- Background -->
 			<include>BackgroundImage</include>
 			<!-- Busy -->

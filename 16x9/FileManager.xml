@@ -64,10 +64,10 @@
 					<scrolltime>0</scrolltime>
 					<focusposition>4</focusposition>
 					<orientation>vertical</orientation>
-					<animation condition="StringCompare(Container(20).NumItems,0) | StringCompare(Container(20).NumItems,1) | [StringCompare(Container(20).NumItems,2) + !Container(20).HasParent]" effect="slide" end="0,-336">Conditional</animation>
-					<animation condition="[StringCompare(Container(20).NumItems,2) + Container(20).HasParent] | StringCompare(Container(20).NumItems,3) | [StringCompare(Container(20).NumItems,4) + !Container(20).HasParent]" effect="slide" end="0,-252">Conditional</animation>
-					<animation condition="[StringCompare(Container(20).NumItems,4) + Container(20).HasParent] | StringCompare(Container(20).NumItems,5) | [StringCompare(Container(20).NumItems,6) + !Container(20).HasParent]" effect="slide" end="0,-168">Conditional</animation>
-					<animation condition="[StringCompare(Container(20).NumItems,6) + Container(20).HasParent] | StringCompare(Container(20).NumItems,7) | [StringCompare(Container(20).NumItems,8) + !Container(20).HasParent]" effect="slide" end="0,-84">Conditional</animation>
+					<animation condition="String.IsEqual(Container(20).NumItems,0) | String.IsEqual(Container(20).NumItems,1) | [String.IsEqual(Container(20).NumItems,2) + !Container(20).HasParent]" effect="slide" end="0,-336">Conditional</animation>
+					<animation condition="[String.IsEqual(Container(20).NumItems,2) + Container(20).HasParent] | String.IsEqual(Container(20).NumItems,3) | [String.IsEqual(Container(20).NumItems,4) + !Container(20).HasParent]" effect="slide" end="0,-252">Conditional</animation>
+					<animation condition="[String.IsEqual(Container(20).NumItems,4) + Container(20).HasParent] | String.IsEqual(Container(20).NumItems,5) | [String.IsEqual(Container(20).NumItems,6) + !Container(20).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+					<animation condition="[String.IsEqual(Container(20).NumItems,6) + Container(20).HasParent] | String.IsEqual(Container(20).NumItems,7) | [String.IsEqual(Container(20).NumItems,8) + !Container(20).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 					<itemlayout height="84" width="825">
 						<control type="image">
 							<width>825</width>
@@ -200,10 +200,10 @@
 					<scrolltime>0</scrolltime>
 					<focusposition>4</focusposition>
 					<orientation>vertical</orientation>
-					<animation condition="StringCompare(Container(21).NumItems,0) | StringCompare(Container(21).NumItems,1) | [StringCompare(Container(21).NumItems,2) + !Container(21).HasParent]" effect="slide" end="0,-336">Conditional</animation>
-					<animation condition="[StringCompare(Container(21).NumItems,2) + Container(21).HasParent] | StringCompare(Container(21).NumItems,3) | [StringCompare(Container(21).NumItems,4) + !Container(21).HasParent]" effect="slide" end="0,-252">Conditional</animation>
-					<animation condition="[StringCompare(Container(21).NumItems,4) + Container(21).HasParent] | StringCompare(Container(21).NumItems,5) | [StringCompare(Container(21).NumItems,6) + !Container(21).HasParent]" effect="slide" end="0,-168">Conditional</animation>
-					<animation condition="[StringCompare(Container(21).NumItems,6) + Container(21).HasParent] | StringCompare(Container(21).NumItems,7) | [StringCompare(Container(21).NumItems,8) + !Container(21).HasParent]" effect="slide" end="0,-84">Conditional</animation>
+					<animation condition="String.IsEqual(Container(21).NumItems,0) | String.IsEqual(Container(21).NumItems,1) | [String.IsEqual(Container(21).NumItems,2) + !Container(21).HasParent]" effect="slide" end="0,-336">Conditional</animation>
+					<animation condition="[String.IsEqual(Container(21).NumItems,2) + Container(21).HasParent] | String.IsEqual(Container(21).NumItems,3) | [String.IsEqual(Container(21).NumItems,4) + !Container(21).HasParent]" effect="slide" end="0,-252">Conditional</animation>
+					<animation condition="[String.IsEqual(Container(21).NumItems,4) + Container(21).HasParent] | String.IsEqual(Container(21).NumItems,5) | [String.IsEqual(Container(21).NumItems,6) + !Container(21).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+					<animation condition="[String.IsEqual(Container(21).NumItems,6) + Container(21).HasParent] | String.IsEqual(Container(21).NumItems,7) | [String.IsEqual(Container(21).NumItems,8) + !Container(21).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 					<itemlayout height="84" width="825">
 						<control type="image">
 							<width>825</width>

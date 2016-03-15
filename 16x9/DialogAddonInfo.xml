@@ -2,7 +2,7 @@
 <window>
 	<!-- addoninformation -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	<onload condition="!SubString(Control.GetLabel(13),*) | IsEmpty(Skin.String(AutoUpdate))">Skin.SetString(AutoUpdate,off)</onload>
+	<onload condition="!String.Contains(Control.GetLabel(13),*) | String.IsEmpty(Skin.String(AutoUpdate))">Skin.SetString(AutoUpdate,off)</onload>
 	<onunload>ClearProperty(AddonDetails,home)</onunload>
 	<onunload>SetFocus(50)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
@@ -77,7 +77,7 @@
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[31026]</label>
 				<include>NoTextures</include>
-				<animation condition="!IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
 			<control id="7001" type="button">
 				<top>429</top>
@@ -94,7 +94,7 @@
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[31029]</label>
 				<include>NoTextures</include>
-				<animation condition="IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
 		</control>
 		<control type="group">
@@ -171,7 +171,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="!IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<!-- Summary -->
 				<control type="textbox">
 					<top>235</top>
@@ -232,8 +232,8 @@
 						<onclick>SetFocus(13)</onclick>
 						<onclick>Select</onclick>
 						<onclick>SetFocus(20)</onclick>
-						<onclick condition="SubString(Skin.String(AutoUpdate),off)">Skin.SetString(AutoUpdate,on)</onclick>
-						<onclick condition="SubString(Skin.String(AutoUpdate),on)">Skin.SetString(AutoUpdate,off)</onclick>
+						<onclick condition="String.Contains(Skin.String(AutoUpdate),off)">Skin.SetString(AutoUpdate,on)</onclick>
+						<onclick condition="String.Contains(Skin.String(AutoUpdate),on)">Skin.SetString(AutoUpdate,off)</onclick>
 						<font>Med24</font>
 						<label>$VAR[AutoUpdate]</label>
 						<textoffsetx>28</textoffsetx>
@@ -323,7 +323,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="!IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation effect="fade" end="100" start="0" time="200" delay="800">WindowOpen</animation>
 				<!-- Fanart -->
 				<control type="image">
@@ -332,7 +332,7 @@
 					<width>761</width>
 					<height>470</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<visible>!IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<control type="image">
 					<top>504</top>
@@ -342,7 +342,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<animation condition="IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(AddonDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<!-- Description -->
 				<control type="label">
 					<top>235</top>
@@ -352,7 +352,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>21821</label>
-					<visible>!IsEmpty(ListItem.Property(Addon.Description))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Addon.Description))</visible>
 				</control>
 				<control type="textbox">
 					<top>291</top>
@@ -393,7 +393,7 @@
 						<autoscroll>false</autoscroll>
 						<textcolor>ff8f8f8f</textcolor>
 						<label>[COLOR ffdadada]$LOCALIZE[24000] ID[/COLOR][CR]$INFO[ListItem.Property(Addon.ID)]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.ID))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.ID))</visible>
 					</control>
 					<control type="textbox">
 						<width>470</width>
@@ -403,7 +403,7 @@
 						<autoscroll>false</autoscroll>
 						<textcolor>ff8f8f8f</textcolor>
 						<label>[COLOR ffdadada]$LOCALIZE[126][/COLOR][CR]$INFO[ListItem.Property(Addon.Status)]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.Status))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.Status))</visible>
 					</control>
 					<control type="textbox">
 						<width>470</width>
@@ -413,7 +413,7 @@
 						<autoscroll>false</autoscroll>
 						<textcolor>ff8f8f8f</textcolor>
 						<label>[COLOR ffdadada]$LOCALIZE[24098][/COLOR][CR]$INFO[ListItem.Property(Addon.Broken)]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.Broken))</visible>
 					</control>
 					<control type="textbox">
 						<width>470</width>
@@ -423,7 +423,7 @@
 						<autoscroll>false</autoscroll>
 						<textcolor>ff8f8f8f</textcolor>
 						<label>[COLOR ffdadada]$LOCALIZE[24052][/COLOR][CR]$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
 					</control>
 				</control>
 			</control>

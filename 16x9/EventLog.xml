@@ -4,7 +4,7 @@
 	<menucontrol>5000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">570</defaultcontrol>
-	<onload condition="!SubString(Control.GetLabel(22),*) | IsEmpty(Skin.String(HigherLevels))">Skin.SetString(HigherLevels,off)</onload>
+	<onload condition="!String.Contains(Control.GetLabel(22),*) | String.IsEmpty(Skin.String(HigherLevels))">Skin.SetString(HigherLevels,off)</onload>
 	<onload condition="Window.Previous(home) + system.getbool(filelists.showparentdiritems)">Control.Move(570,1)</onload>
 	<onunload condition="Window.Next(home)">Control.Move(570,$INFO[Container.CurrentItem,-])</onunload>
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move(570,1)</onunload>
@@ -36,12 +36,12 @@
 				<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 				<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 			</animation>
-			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
-			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
-			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
-			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
-			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
-			<animation condition="IsEmpty(Window(home).Property(MainMenuFocus)) + StringCompare(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEmpty(Window(home).Property(FocusRow)) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="193,10" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),1_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-175" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_2) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,195" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),1_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,-246" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),2_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,10" time="540" tween="sine">WindowOpen</animation>
+			<animation condition="String.IsEmpty(Window(home).Property(MainMenuFocus)) + String.IsEqual(Window(home).Property(FocusRow),3_3) + Window.Previous(home)" easing="inout" effect="slide" end="0,0" start="497,168" time="540" tween="sine">WindowOpen</animation>
 			<itemlayout height="576" width="436">
 				<control type="group">
 					<animation center="250,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -64,7 +64,7 @@
 						<width>480</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -76,7 +76,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -121,7 +121,7 @@
 						<width>480</width>
 						<height>480</height>
 						<texture border="2">views/season_overlay.png</texture>
-						<visible>!StringCompare(ListItem.Label,..) + !SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -133,7 +133,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -173,7 +173,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[Container.CurrentItem]</label>
-					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				</control>
 				<control type="label">
 					<top>14</top>
@@ -183,7 +183,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
 					<label>|</label>
-					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				</control>
 				<control type="label">
 					<top>15</top>
@@ -193,7 +193,7 @@
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
 					<label>$INFO[Container.NumItems]</label>
-					<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				</control>
 			</control>
 			<!-- Sort method -->
@@ -272,8 +272,8 @@
 						<onclick>SetFocus(22)</onclick>
 						<onclick>Select</onclick>
 						<onclick>SetFocus(30)</onclick>
-						<onclick condition="SubString(Skin.String(HigherLevels),off)">Skin.SetString(HigherLevels,on)</onclick>
-						<onclick condition="SubString(Skin.String(HigherLevels),on)">Skin.SetString(HigherLevels,off)</onclick>
+						<onclick condition="String.Contains(Skin.String(HigherLevels),off)">Skin.SetString(HigherLevels,on)</onclick>
+						<onclick condition="String.Contains(Skin.String(HigherLevels),on)">Skin.SetString(HigherLevels,off)</onclick>
 						<font>Med24</font>
 						<label>$VAR[HigherLevels]</label>
 						<textoffsetx>28</textoffsetx>

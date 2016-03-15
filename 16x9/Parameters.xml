@@ -4,7 +4,7 @@
 	<include name="InfoDialogVideoList">		
 		<control type="group">
 			<left>$PARAM[Left]</left>
-			<visible>!IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label)</visible>
+			<visible>!String.IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label)</visible>
 			<control type="image">
 				<top>48</top>
 				<width>320</width>
@@ -45,14 +45,14 @@
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>80000000</shadowcolor>
 				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label]</label>
-				<visible>IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon)</visible>
+				<visible>String.IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon)</visible>
 			</control>
 		</control>
 	</include>
 	<include name="InfoDialogCastList">
 		<control type="group">
 			<left>$PARAM[Left]</left>
-			<visible>!IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label)</visible>
+			<visible>!String.IsEmpty(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label)</visible>
 			<control type="image">
 				<top>48</top>
 				<width>320</width>
@@ -79,7 +79,7 @@
 				<width>320</width>
 				<height>480</height>
 				<texture border="2">views/season_overlay.png</texture>
-				<visible>!SubString(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]),Default)</visible>
+				<visible>!String.Contains(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]),Default)</visible>
 			</control>
 			<control type="label">
 				<left>18</left>
@@ -136,7 +136,7 @@
 			<width>$PARAM[width]</width>
 			<height>12</height>
 			<texture border="2">views/ProgressBar.png</texture>
-			<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+			<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
 		</control>
 	</include>
 	<!-- Reset Parameters -->
@@ -355,7 +355,7 @@
 			<onclick>SetFocus($PARAM[ItemID])</onclick>
 			<label>$INFO[Window(home).Property(NextAired.$PARAM[ItemID].Weekday)]</label>
 			<property name="OnDown">SetFocus($PARAM[ItemID])</property>
-			<visible>!StringCompare(Window(Home).Property(NextAired.$PARAM[ItemID].Weekday),) + !IsEmpty(Container($PARAM[ItemID]).ListItem.Label)</visible>
+			<visible>!String.IsEqual(Window(Home).Property(NextAired.$PARAM[ItemID].Weekday),) + !String.IsEmpty(Container($PARAM[ItemID]).ListItem.Label)</visible>
 		</item>
 	</include>
 	<include name="NextAiredLists">

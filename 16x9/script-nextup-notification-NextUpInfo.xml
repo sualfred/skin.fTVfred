@@ -89,14 +89,14 @@
 				<height>295</height>
 				<aspectratio align="center">scale</aspectratio>
 				<texture>views/episode_fallback.png</texture>
-				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !IntegerGreaterThan(Control.GetLabel(3018),0)</visible>
+				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !Integer.IsGreater(Control.GetLabel(3018),0)</visible>
 			</control>
 			<control type="image">
 				<top>70</top>
 				<width>90</width>
 				<height>90</height>
 				<texture>views/OverlayHD.png</texture>
-				<visible>IntegerGreaterThan(Control.GetLabel(3011),709)</visible>
+				<visible>Integer.IsGreater(Control.GetLabel(3011),709)</visible>
 			</control>
 			<!-- Next episode countdown -->
 			<control type="image">
