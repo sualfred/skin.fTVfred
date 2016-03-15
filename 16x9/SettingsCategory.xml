@@ -572,34 +572,34 @@
 				<height>436</height>
 				<font>Med24</font>
 				<aligny>top</aligny>
- 				<pagecontrol>96</pagecontrol>
- 				<autoscroll>false</autoscroll>
-  				<textcolor>ffdadada</textcolor>
- 				<label>$INFO[Control.GetLabel(6)]</label>
- 			</control>
- 			<control id="96" type="scrollbar">
- 				<top>22</top>
- 				<width>420</width>
- 				<height>436</height>
- 				<showonepage>false</showonepage>
- 				<orientation>vertical</orientation>
- 			</control>
- 			<!-- More button -->
- 			<control id="3000" type="button">
- 				<left>1380</left>
- 				<top>424</top>
- 				<width>37</width>
- 				<height>23</height>
- 				<onup>noop</onup>
- 				<ondown>noop</ondown>
- 				<onleft>5</onleft>
- 				<onright>noop</onright>
+				<pagecontrol>96</pagecontrol>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffdadada</textcolor>
+				<label>$INFO[Control.GetLabel(6)]</label>
+			</control>
+			<control id="96" type="scrollbar">
+				<top>22</top>
+				<width>420</width>
+				<height>436</height>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<!-- More button -->
+			<control id="3000" type="button">
+				<left>1380</left>
+				<top>424</top>
+				<width>37</width>
+				<height>23</height>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onleft>5</onleft>
+				<onright>noop</onright>
 				<onclick>SetProperty(NoLabel,1,home)</onclick>
- 				<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[Control.GetLabel(6)]')</onclick>
- 				<visible>Control.IsVisible(96)</visible>
- 				<texturefocus>views/more_fo.png</texturefocus>
- 				<texturenofocus>views/more_nf.png</texturenofocus>
-  			</control>
+				<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[Control.GetLabel(6)]')</onclick>
+				<visible>Control.IsVisible(96)</visible>
+				<texturefocus>views/more_fo.png</texturefocus>
+				<texturenofocus>views/more_nf.png</texturenofocus>
+			</control>
 		</control>
 		<control id="7" type="button">
 			<width>958</width>
@@ -637,6 +637,7 @@
 			<font>Light32</font>
 			<textoffsetx>40</textoffsetx>
 			<textcolor>ff505153</textcolor>
+			<textwidth>490</textwidth>
 			<focusedcolor>ffffaf37</focusedcolor>
 			<selectedcolor2>ffffffff</selectedcolor2>
 			<texturefocus border="3">settings/button_focus.png</texturefocus>

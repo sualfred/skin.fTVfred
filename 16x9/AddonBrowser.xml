@@ -592,6 +592,7 @@
 						<font>Med24</font>
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
+						<textwidth>240</textwidth>
 						<radiowidth>94</radiowidth>
 						<radioheight>40</radioheight>
 						<radioposx>235</radioposx>
@@ -615,6 +616,7 @@
 						<font>Med24</font>
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
+						<textwidth>240</textwidth>
 						<radiowidth>94</radiowidth>
 						<radioheight>40</radioheight>
 						<radioposx>235</radioposx>
@@ -843,6 +845,21 @@
 						<textcolor>ff505153</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
+					<control type="group">
+						<visible>SubString(ListItem.Label2,$LOCALIZE[13413])</visible>
+						<control type="image">
+							<top>132</top>
+							<width>558</width>
+							<height>8</height>
+							<texture border="2">views/ProgressBack.png</texture>
+						</control>
+						<control type="image">
+							<top>132</top>
+							<width>558</width>
+							<height>8</height>
+							<texture border="2">$VAR[AddonInstallPercentage]</texture>
+						</control>
+					</control>
 				</itemlayout>
 				<focusedlayout height="140" width="558">
 					<control type="image">
@@ -877,6 +894,21 @@
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="group">
+						<visible>SubString(ListItem.Label2,$LOCALIZE[13413])</visible>
+						<control type="image">
+							<top>132</top>
+							<width>558</width>
+							<height>8</height>
+							<texture border="2">views/ProgressBack.png</texture>
+						</control>
+						<control type="image">
+							<top>132</top>
+							<width>558</width>
+							<height>8</height>
+							<texture border="2">$VAR[AddonInstallPercentage]</texture>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>
