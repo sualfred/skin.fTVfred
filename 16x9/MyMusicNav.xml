@@ -10,6 +10,7 @@
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onunload>	
 	<onunload>ClearProperty(ForceViewType,home)</onunload>
 	<views>61,54,50,56,55,57,58</views>
+	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 	<controls>
 		<control id="2" type="button">
 			<include>HiddenControl</include>

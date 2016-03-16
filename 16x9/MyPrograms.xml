@@ -9,6 +9,7 @@
 	<onunload condition="Window.Next(home)">Control.Move($VAR[ContainerID],$INFO[Container.CurrentItem,-])</onunload>
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onunload>
 	<views>56,55,57,58</views>
+	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 	<controls>
 		<!-- Fanart -->
 		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
