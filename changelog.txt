@@ -1,3 +1,7 @@
+2.2.1
+- Repo push
+- Fixed preload again
+
 2.2.0
 - Repo push
 - Fixed small issues
