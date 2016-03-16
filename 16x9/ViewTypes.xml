@@ -382,7 +382,7 @@
 		<control type="group">
 			<include>DialogAnimation</include>
 			<visible>Control.IsVisible(58)</visible>
-			<control id="98" type="button">
+			<control id="581" type="button">
 				<onfocus>Control.Move(58,-1)</onfocus>
 				<onfocus>SetFocus(58)</onfocus>
 				<onfocus>Right</onfocus>
@@ -391,7 +391,7 @@
 				<onfocus>Right</onfocus>
 				<include>HiddenControl</include>
 			</control>
-			<control id="99" type="button">
+			<control id="582" type="button">
 				<onfocus>SetFocus(58)</onfocus>
 				<onfocus>Left</onfocus>
 				<onfocus>Left</onfocus>
@@ -407,11 +407,11 @@
 				<height>882</height>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
-				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(97)</onleft>
-				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(98)</onleft>
+				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(583)</onleft>
+				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
 				<onleft>noop</onleft>
-				<onright condition="String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(97)</onright>
-				<onright condition="!String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(99)</onright>
+				<onright condition="String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(583)</onright>
+				<onright condition="!String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
 				<onright>noop</onright>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<orientation>vertical</orientation>
@@ -551,7 +551,7 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$VAR[WideImage]</texture>
 				</control>
-				<control id="97" type="button">
+				<control id="583" type="button">
 					<width min="104" max="249">auto</width>
 					<wrapmultiline>false</wrapmultiline>					
 					<left>-13</left>
