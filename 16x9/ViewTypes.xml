@@ -25,7 +25,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]</visible>
+				<visible>String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
@@ -67,7 +67,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>String.IsEqual(Window(Home).Property(ForceViewType),wide) + String.String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(artists)]</visible>
+				<visible>String.IsEqual(Window(Home).Property(ForceViewType),wide) + String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(artists)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -108,7 +108,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[String.String.IsEmpty(Container.PluginName) | String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)] + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + String.Contains(Container.FolderPath,.m3u)]</visible>
+				<visible>[String.IsEmpty(Container.PluginName) | String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)] + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + ![Container.Content(files) + String.Contains(Container.FolderPath,.m3u)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -150,7 +150,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[[!String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)] + String.String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [[Skin.HasSetting(WideMovieArt) + [Container.Content(movies) | Container.Content(sets)]] | [Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>[[!String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)] + String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [[Skin.HasSetting(WideMovieArt) + [Container.Content(movies) | Container.Content(sets)]] | [Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -192,7 +192,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>String.String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(episodes) | [Container.Content(files) + String.Contains(Container.FolderPath,.m3u)]]</visible>
+				<visible>String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(episodes) | [Container.Content(files) + String.Contains(Container.FolderPath,.m3u)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -234,7 +234,7 @@
 				<viewtype label="">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>String.String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
+				<visible>String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + [Container.Content(movies) | Container.Content(sets) | [!Skin.HasSetting(WideTVShowArt) + Container.Content(tvshows)] | [!Skin.HasSetting(WideSeasonArt) + Container.Content(seasons)]]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
@@ -276,7 +276,7 @@
 				<viewtype label="31159">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -318,7 +318,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -360,7 +360,7 @@
 				<viewtype label="31160">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
+				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs)]</visible>
 				<include name="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>
@@ -414,7 +414,7 @@
 				<orientation>vertical</orientation>
 				<viewtype label="31281">panel</viewtype>
 				<scrolltime easing="inout" tween="sine">200</scrolltime>
-				<visible>!String.String.IsEmpty(Container.PluginName)</visible>
+				<visible>!String.IsEmpty(Container.PluginName)</visible>
 				<itemlayout height="240" width="240">
 					<control type="image">
 						<left>20</left>
@@ -636,7 +636,7 @@
 						<font>Light32</font>
 						<textcolor>ffd8d8d8</textcolor>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + !String.String.IsEmpty(ListItem.Title)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -645,7 +645,7 @@
 						<font>Light32</font>
 						<textcolor>ffd8d8d8</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>String.IsEqual(ListItem.Label,..) | String.String.IsEmpty(ListItem.Title)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -685,7 +685,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + !String.String.IsEmpty(ListItem.Title)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -695,7 +695,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>String.IsEqual(ListItem.Label,..) | String.String.IsEmpty(ListItem.Title)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -858,7 +858,7 @@
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
 			<include>ViewTypeBounceAnimation</include>			
-			<include condition="[!String.String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + [String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | String.String.IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewOpenAnimationDialog">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + [String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | String.IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewOpenAnimationDialog">
 				<param name="pos1">193,10</param>
 				<param name="pos2">497,-174</param>
 				<param name="pos3">497,195</param>
@@ -867,7 +867,7 @@
 				<param name="pos6">497,168</param>
 				<param name="pos7">497,140</param>
 			</include>
-			<include condition="[!String.String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewOpenAnimationDialog">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">208,10</param>
 				<param name="pos2">512,-174</param>
 				<param name="pos3">512,195</param>
@@ -876,7 +876,7 @@
 				<param name="pos6">512,168</param>
 				<param name="pos7">512,140</param>
 			</include>
-			<include condition="[!String.String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewOpenAnimationDialog">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewOpenAnimationDialog">
 				<param name="pos1">186,10</param>
 				<param name="pos2">490,-174</param>
 				<param name="pos3">490,195</param>
