@@ -138,6 +138,12 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>Light32Spaced</name>
+			<filename>HelveticaNeue_Lt.ttf</filename>
+			<size>32</size>
+			<linespacing>1.12</linespacing>
+		</font>
+		<font>
 			<name>Light31</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>31</size>
@@ -168,6 +174,12 @@
 			<name>Light26</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>26</size>
+		</font>
+		<font>
+			<name>Light26Spaced</name>
+			<filename>HelveticaNeue_Lt.ttf</filename>
+			<size>26</size>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>Light24</name>
@@ -529,6 +541,12 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>Light32Spaced</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>32</size>
+			<linespacing>1.12</linespacing>
+		</font>
+		<font>
 			<name>Light31</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>31</size>
@@ -559,6 +577,12 @@
 			<name>Light26</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>26</size>
+		</font>
+		<font>
+			<name>Light26Spaced</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>26</size>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>Light24</name>
@@ -947,6 +971,14 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>Light32Spaced</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>32</size>
+			<linespacing>1.12</linespacing>
+		</font>
+		<font>
 			<name>Light31</name>
 			<filename>Arial.ttf</filename>
 			<aspect>0.9</aspect>
@@ -989,6 +1021,14 @@
 			<aspect>0.9</aspect>
 			<style>lighten</style>
 			<size>26</size>
+		</font>
+		<font>
+			<name>Light26Spaced</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>26</size>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>Light24</name>

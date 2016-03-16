@@ -407,10 +407,13 @@
 				<height>882</height>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
+				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(97)</onleft>
 				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(98)</onleft>
 				<onleft>noop</onleft>
+				<onright condition="String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(97)</onright>
 				<onright condition="!String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(99)</onright>
 				<onright>noop</onright>
+				<defaultcontrol always="true">0</defaultcontrol>
 				<orientation>vertical</orientation>
 				<viewtype label="31281">panel</viewtype>
 				<scrolltime easing="inout" tween="sine">200</scrolltime>
@@ -422,7 +425,7 @@
 						<width>200</width>
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="views/DefaultAddon.png">common/default_empty.png</texture>
+						<texture>common/default_empty.png</texture>
 					</control>
 					<control type="image">
 						<left>20</left>
@@ -430,7 +433,7 @@
 						<width>200</width>
 						<height>200</height>
 						<aspectratio>scale</aspectratio>
-						<texture fallback="views/DefaultAddon.png" background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="group">
 						<visible>String.Contains(ListItem.Label2,$LOCALIZE[13413])</visible>
@@ -453,19 +456,21 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="views/DefaultAddon.png">common/default_empty.png</texture>
+							<texture>common/default_empty.png</texture>
 						</control>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>scale</aspectratio>
-							<texture fallback="views/DefaultAddon.png" background="true">$INFO[Listitem.Icon]</texture>
+							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
 					</control>
 				</focusedlayout>
 			</control>
 			<!-- Heading / Current item / Total items -->
 			<control type="grouplist">
+				<include>LabelsDelayFadeAnimation</include>
+				<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
 				<left>110</left>
 				<top>100</top>
 				<height>80</height>
@@ -546,14 +551,34 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$VAR[WideImage]</texture>
 				</control>
+				<control id="97" type="button">
+					<width min="104" max="249">auto</width>
+					<wrapmultiline>false</wrapmultiline>					
+					<left>-13</left>
+					<top>408</top>
+					<height>100</height>
+					<onup>58</onup>
+					<ondown>96</ondown>
+					<onleft>58</onleft>
+					<onright>58</onright>
+					<onclick>SetFocus(5001)</onclick>
+					<font>Med24</font>
+					<label>$LOCALIZE[31089]</label>
+					<textoffsetx>28</textoffsetx>
+					<textcolor>ffdadada</textcolor>
+					<focusedcolor>ff222222</focusedcolor>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+				</control>
 				<control type="textbox">
-					<top>448</top>
-					<width>472</width>
-					<height>288</height>
-					<font>Light32Spaced</font>
-					<autoscroll>false</autoscroll>
+					<top>553</top>
+					<width>432</width>
+					<height>270</height>
+					<pagecontrol>60</pagecontrol>
+					<font>Light26Spaced</font>
+					<autoscroll delay="10000" time="3000" repeat="10000">!Control.HasFocus(13)</autoscroll>
 					<textcolor>ffb1b2b3</textcolor>
-					<label>$VAR[Plot]</label>
+					<label>$INFO[ListItem.Plot]</label>
 				</control>
 			</control>
 		</control>
