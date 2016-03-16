@@ -9,7 +9,7 @@
 	<onload condition="!String.Contains(Control.GetLabel(9),*) | String.IsEmpty(Skin.String(PicturesRandom))">Skin.SetString(PicturesRandom,off)</onload>
 	<onunload condition="Window.Next(home)">Control.Move($VAR[ContainerID],$INFO[Container.CurrentItem,-])</onunload>
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onunload>
-	<views>57,56,55</views>
+	<views>57,56,55,58</views>
 	<controls>
 		<control id="2" type="button">
 			<include>HiddenControl</include>
@@ -25,9 +25,10 @@
 		<include>Viewtype55</include>
 		<include>Viewtype56</include>
 		<include>Viewtype57</include>
+		<include>Viewtype58</include>
 		<control type="group">
 			<include>LabelsDelayFadeAnimation</include>
-			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation)) + !Control.IsVisible(58)</visible>
 			<!-- Heading / Current item / Total items -->
 			<control type="grouplist">
 				<left>198</left>

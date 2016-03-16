@@ -232,6 +232,11 @@
 			<size>36</size>
 		</font>
 		<font>
+			<name>Med34</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
 			<name>Med32</name>
 			<filename>HelveticaNeue_Med.ttf</filename>
 			<size>32</size>
@@ -611,6 +616,16 @@
 			<name>Med40</name>
 			<filename>Roboto-Medium.ttf</filename>
 			<size>40</size>
+		</font>
+		<font>
+			<name>Med36</name>
+			<filename>Roboto-Medium.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>Med34</name>
+			<filename>Roboto-Medium.ttf</filename>
+			<size>34</size>
 		</font>
 		<font>
 			<name>Med32</name>
@@ -1048,6 +1063,20 @@
 			<aspect>0.9</aspect>
 			<style>bold</style>
 			<size>40</size>
+		</font>
+		<font>
+			<name>Med36</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>bold</style>
+			<size>36</size>
+		</font>
+		<font>
+			<name>Med34</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>bold</style>
+			<size>34</size>
 		</font>
 		<font>
 			<name>Med32</name>

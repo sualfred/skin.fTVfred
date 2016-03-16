@@ -1230,6 +1230,11 @@ msgctxt "#31280"
 msgid "Submit"
 msgstr ""
 
+#: /16x9/ViewTypes.xml:415
+msgctxt "#31281"
+msgid "Panel"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
