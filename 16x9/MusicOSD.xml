@@ -361,6 +361,20 @@
 						<texturenofocus>-</texturenofocus>
 						<onclick>PlayerControl(Random)</onclick>
 					</control>
+					<control type="button" id="201">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<label>$LOCALIZE[31194]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>SetProperty(SetUserRating,music,home)</onclick>
+						<onclick>setrating</onclick>
+					</control>
 				</control>
 			</control>
 		</control>

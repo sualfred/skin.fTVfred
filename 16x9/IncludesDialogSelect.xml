@@ -365,8 +365,7 @@
 			<include>DialogAnimation</include>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width770</include>
-			<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width673</include>
+			<width>$PARAM[DialogWidth]</width>
 			<height>323</height>
 			<!-- Background -->
 			<control type="image">
@@ -379,8 +378,7 @@
 			<control type="label">
 				<left>-21</left>
 				<top>-26</top>
-				<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width812</include>
-				<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width715</include>
+				<width>$PARAM[LabelWidth]</width>
 				<height>34</height>
 				<font>Light23</font>
 				<label>$LOCALIZE[31278]</label>
@@ -389,16 +387,14 @@
 			<control type="image">
 				<left>-21</left>
 				<top>20</top>
-				<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width812</include>
-				<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width715</include>
+				<width>$PARAM[LabelWidth]</width>
 				<height>1</height>
 				<texture>rating/dialog_select/line.png</texture>
 			</control>
 			<control type="image">
 				<left>-21</left>
 				<top>50</top>
-				<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)">Width292</include>
-				<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)">Width195</include>
+				<width>$PARAM[IconWidth]</width>
 				<height>292</height>
 				<texture>$VAR[InfoImage]</texture>
 				<aspectratio aligny="center">scale</aspectratio>

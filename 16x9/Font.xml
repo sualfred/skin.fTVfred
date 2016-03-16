@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fonts>
 	<fontset id="Default" unicode="true">
+		<!-- OSD -->
+		<font>
+			<name>OSD40</name>
+			<filename>Amazon-Ember-Regular.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>OSD35</name>
+			<filename>Amazon-Ember-Light.ttf</filename>
+			<size>35</size>
+		</font>
+		<font>
+			<name>OSD32</name>
+			<filename>Amazon-Ember-Light.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>OSD31</name>
+			<filename>Amazon-Ember-Light.ttf</filename>
+			<size>31</size>
+		</font>
+		<font>
+			<name>OSD20</name>
+			<filename>Amazon-Ember-Light.ttf</filename>
+			<size>20</size>
+		</font>
 		<!-- Regular -->
 		<font>
 			<name>invisible</name>
@@ -366,6 +392,32 @@
 		</font>
 	</fontset>
 	<fontset id="Roboto" unicode="true">
+		<!-- OSD -->
+		<font>
+			<name>OSD40</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>OSD35</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>35</size>
+		</font>
+		<font>
+			<name>OSD32</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>OSD31</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>31</size>
+		</font>
+		<font>
+			<name>OSD20</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>20</size>
+		</font>
 		<!-- Regular -->
 		<font>
 			<name>invisible</name>
@@ -711,6 +763,41 @@
 		</font>
 	</fontset>
 	<fontset id="Arial" unicode="true">
+		<!-- OSD -->
+		<font>
+			<name>OSD40</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>40</size>
+		</font>
+		<font>
+			<name>OSD35</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>35</size>
+		</font>
+		<font>
+			<name>OSD32</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>32</size>
+		</font>
+		<font>
+			<name>OSD31</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>31</size>
+		</font>
+		<font>
+			<name>OSD20</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>20</size>
+		</font>
 		<!-- Regular -->
 		<font>
 			<name>invisible</name>

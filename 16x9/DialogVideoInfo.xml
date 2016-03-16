@@ -433,7 +433,7 @@
 				</control>
 				<!-- User Rating Button -->
 				<control id="1002" type="button">
-					<width min="124" max="244">auto</width>
+					<width min="124" max="254">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>

@@ -7,6 +7,15 @@
 	<onunload>ClearProperty(UserRatingIcon,home)</onunload>
 	<controls>
 		<include condition="String.IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectDefault</include>
-		<include condition="!String.IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectSpecial</include>
+		<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)" name="IncludeDialogSelectSpecial">
+			<param name="DialogWidth">770</param>
+			<param name="LabelWidth">812</param>
+			<param name="IconWidth">292</param>
+		</include>
+		<include condition="String.IsEqual(Window(home).Property(SetUserRating),video)" name="IncludeDialogSelectSpecial">
+			<param name="DialogWidth">673</param>
+			<param name="LabelWidth">715</param>
+			<param name="IconWidth">195</param>
+		</include>
 	</controls>
 </window>
