@@ -9,8 +9,8 @@
 		<value>-</value>
 	</variable>
 	<variable name="PreloadLabel">
-		<value condition="Control.IsVisible(91)">$LOCALIZE[31531]</value>
-		<value condition="!Control.IsVisible(91)">$LOCALIZE[31533]</value>
+		<value condition="Control.IsVisible(91) | !IsEmpty(Window(home).Property(WaitForControl))">$LOCALIZE[31531]</value>
+		<value>$LOCALIZE[31533]</value>
 	</variable>
 	<!-- Vis Animation -->
 	<variable name="VisAnimation">
