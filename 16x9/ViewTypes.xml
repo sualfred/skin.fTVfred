@@ -574,11 +574,27 @@
 					<top>553</top>
 					<width>432</width>
 					<height>270</height>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>584</pagecontrol>
 					<font>Light26Spaced</font>
-					<autoscroll delay="10000" time="3000" repeat="10000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<textcolor>ffb1b2b3</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
+				</control>
+				<control id="584" type="scrollbar">
+					<top>145</top>
+					<width>1192</width>
+					<height>88</height>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<!-- More button -->
+				<control type="image">
+					<left>452</left>
+					<top>794</top>
+					<width>37</width>
+					<height>23</height>
+					<texture>views/more_nf.png</texture>
+					<visible>Control.IsVisible(584)</visible>
 				</control>
 			</control>
 		</control>
