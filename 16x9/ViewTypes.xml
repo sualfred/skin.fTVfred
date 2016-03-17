@@ -407,7 +407,7 @@
 				<height>882</height>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
-				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(583)</onleft>
+				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">back</onleft>
 				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
 				<onleft>noop</onleft>
 				<onright condition="String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(583)</onright>
@@ -435,15 +435,17 @@
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 					</control>
-					<control type="group">
-						<visible>String.Contains(ListItem.Label2,$LOCALIZE[13413])</visible>
-						<control type="image">
-							<left>20</left>
-							<top>213</top>
-							<width>200</width>
-							<height>7</height>
-							<texture border="2">views/ProgressBack.png</texture>
-						</control>
+					<control type="label">
+						<top>190</top>
+						<width>240</width>
+						<height>22</height>
+						<font>Bold22</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>88000000</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.IsEqual(ListItem.Label,..) + String.Contains(ListItem.Icon,Default)</visible>						
+						<animation center="120,120" easing="inout" effect="zoom" end="85" start="85" time="0" tween="linear" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="240" width="240">
@@ -463,6 +465,17 @@
 							<height>240</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
+						</control>
+						<control type="label">
+							<top>190</top>
+							<width>240</width>
+							<height>22</height>
+							<font>Bold22</font>
+							<textoffsetx>10</textoffsetx>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEqual(ListItem.Label,..) + String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -594,7 +607,7 @@
 					<width>37</width>
 					<height>23</height>
 					<texture>views/more_nf.png</texture>
-					<visible>Control.IsVisible(584)</visible>
+					<visible>Control.IsVisible(584) + !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>
 		</control>
