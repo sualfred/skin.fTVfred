@@ -256,6 +256,16 @@
 					<label>$INFO[ListItem.Rating,,/10]</label>
 					<visible>!String.IsEmpty(ListItem.Rating)</visible>
 				</control>
+				<control type="label">
+					<top>-13</top>
+					<width>auto</width>
+					<height>34</height>
+					<font>Bold30</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff717171</textcolor>
+					<label>[LIGHT]$INFO[ListItem.Votes,(,)][/LIGHT]</label>
+					<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes)</visible>
+				</control>
 			</control>
 			<control type="grouplist">
 				<top>156</top>

@@ -1235,6 +1235,21 @@ msgctxt "#31281"
 msgid "Panel"
 msgstr ""
 
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:190
+msgctxt "#31282"
+msgid "My Account"
+msgstr ""
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:123
+msgctxt "#31283"
+msgid "Next page"
+msgstr ""
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:135
+msgctxt "#31284"
+msgid "Previous page"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
