@@ -1250,6 +1250,16 @@ msgctxt "#31284"
 msgid "Previous page"
 msgstr ""
 
+#: /16x9/Widgets.xml:449
+msgctxt "#31285"
+msgid "Weather settings"
+msgstr ""
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:134
+msgctxt "#31286"
+msgid "ExtendedInfo Script"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

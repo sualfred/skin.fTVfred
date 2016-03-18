@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-16 13:06+0000\n"
+"PO-Revision-Date: 2016-03-18 18:15+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1244,6 +1244,36 @@ msgstr "Vergebe deine Bewertung"
 msgctxt "#31280"
 msgid "Submit"
 msgstr "Bewerten"
+
+#: /16x9/ViewTypes.xml:415
+msgctxt "#31281"
+msgid "Panel"
+msgstr "Panel"
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:190
+msgctxt "#31282"
+msgid "My Account"
+msgstr "Mein Account"
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:123
+msgctxt "#31283"
+msgid "Next page"
+msgstr "Nächste Seite"
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:135
+msgctxt "#31284"
+msgid "Previous page"
+msgstr "Vorherige Seite"
+
+#: /16x9/Widgets.xml:449
+msgctxt "#31285"
+msgid "Weather settings"
+msgstr "Wetter-Einstellungen"
+
+#: /16x9/script-ExtendedInfo Script-VideoList.xml:134
+msgctxt "#31286"
+msgid "ExtendedInfo Script"
+msgstr "ExtendedInfo Script"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

@@ -20,7 +20,10 @@
 		<control id="850" type="list" />
 		<control id="950" type="list" />
 		<control id="1050" type="list" />
-		<control id="1150" type="list" />
+		<control id="1150" type="list">
+			<onfocus>select</onfocus>
+			<include>HiddenHomeList</include>
+		</control>
 		<control id="1250" type="list" />
 		<control id="1350" type="list" />
 		<!-- Hidden Plot -->
@@ -79,21 +82,54 @@
 				<onup>noop</onup>
 				<onright condition="!Control.IsVisible(96)">1000</onright>
 				<onright condition="Control.IsVisible(96)">3002</onright>
-				<ondown>7001</ondown>
+				<ondown condition="Control.IsVisible(7002)">7002</ondown>
+				<ondown condition="!Control.IsVisible(7002)">7001</ondown>
 				<onleft>Close</onleft>
 				<onfocus>ClearProperty(Similar,home)</onfocus>
+				<onfocus>ClearProperty(Trailer,home)</onfocus>
 				<font>Light35</font>
 				<textcolor>ffdadada</textcolor>
 				<focusedcolor>ffffc24b</focusedcolor>
 				<label>$LOCALIZE[31026]</label>
 				<include>NoTextures</include>
-				<animation condition="!String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | !String.IsEmpty(Window(home).Property(Trailer))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 			</control>
-			<control id="7001" type="button">
+			<control id="7002" type="button">
 				<top>573</top>
 				<width>480</width>
 				<height>35</height>
 				<onup>7000</onup>
+				<ondown>7001</ondown>
+				<onleft>Close</onleft>
+				<onclick>SetProperty(Dialog.1.Label,$INFO[Container(1150).ListItemPosition(0).Label])</onclick>
+				<onclick>SetProperty(Dialog.1.BuiltIn,Control.SetFocus(1150,0))</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(1).Label)">SetProperty(Dialog.2.Label,$INFO[Container(1150).ListItemPosition(1).Label])</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(1).Label)">SetProperty(Dialog.2.BuiltIn,Control.SetFocus(1150,1))</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(2).Label)">SetProperty(Dialog.3.Label,$INFO[Container(1150).ListItemPosition(2).Label])</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(2).Label)">SetProperty(Dialog.3.BuiltIn,Control.SetFocus(1150,2))</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(3).Label)">SetProperty(Dialog.4.Label,$INFO[Container(1150).ListItemPosition(3).Label])</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(3).Label)">SetProperty(Dialog.4.BuiltIn,Control.SetFocus(1150,3))</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(4).Label)">SetProperty(Dialog.5.Label,$INFO[Container(1150).ListItemPosition(4).Label])</onclick>
+				<onclick condition="!String.IsEmpty(Container(1150).ListItemPosition(4).Label)">SetProperty(Dialog.5.BuiltIn,Control.SetFocus(1150,4))</onclick>
+				<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31075])</onclick>
+				<onright>up</onright>
+				<onright>right</onright>
+				<onfocus>SetProperty(Trailer,1,home)</onfocus>
+				<onfocus>ClearProperty(Similar,home)</onfocus>
+				<font>Light35</font>
+				<textcolor>ffdadada</textcolor>
+				<focusedcolor>ffffc24b</focusedcolor>
+				<label>$LOCALIZE[31075]</label>
+				<include>NoTextures</include>				
+				<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | String.IsEmpty(Window(home).Property(Trailer))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+				<visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
+			</control>
+			<control id="7001" type="button">
+				<top>629</top>
+				<width>480</width>
+				<height>35</height>
+				<onup condition="Control.IsVisible(7002)">7002</onup>
+				<onup condition="!Control.IsVisible(7002)">7001</onup>
 				<ondown>noop</ondown>
 				<onleft>Close</onleft>
 				<onright condition="!String.IsEmpty(Container(150).ListItem.Label)">150</onright>
@@ -176,15 +212,8 @@
 					<top>4</top>
 					<width>48</width>
 					<height>23</height>
-					<texture>views/imdb.png</texture>
-					<visible>!String.IsEmpty(Window.Property(rating)) + !Container.Content(tvshows)</visible>
-				</control>
-				<control type="image">
-					<top>3</top>
-					<width>47</width>
-					<height>23</height>
-					<texture>views/tvdb.png</texture>
-					<visible>!String.IsEmpty(Window.Property(rating)) + Container.Content(tvshows)</visible>
+					<texture>views/tmdb.png</texture>
+					<visible>!String.IsEmpty(Window.Property(rating))</visible>
 				</control>
 				<control type="label">
 					<top>-13</top>

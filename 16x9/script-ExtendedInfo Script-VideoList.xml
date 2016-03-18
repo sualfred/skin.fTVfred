@@ -1,366 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<onload condition="IsEmpty(Window(home).Property(WindowColor))">SetProperty(WindowColor,FFFFFFFF,home)</onload>
 	<views>500</views>
-	<onunload>ClearProperty(WindowColor,home)</onunload>
 	<defaultcontrol always="true">500</defaultcontrol>
+	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 	<controls>
+		<!--Background -->
 		<include>BackgroundImage</include>
 		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
+		<!-- Hidden controls -->		
+		<control type="button" id="600">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(500)</onfocus>
+		</control>
+		<control type="button" id="700">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(500)</onfocus>
+		</control>
+		<control id="581" type="button">
+			<onfocus>Control.Move(500,-1)</onfocus>
+			<onfocus>SetFocus(500)</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<include>HiddenControl</include>
+		</control>
+		<control id="582" type="button">
+			<onfocus>SetFocus(500)</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Control.Move(500,1)</onfocus>
+			<include>HiddenControl</include>
+		</control>
+		<!-- No results -->
+		<control type="group">
+			<visible>!Integer.IsGreater(Container(500).NumItems,0)</visible>
+			<animation delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<top>385</top>
+				<width>1490</width>
+				<height>310</height>
+				<texture>dialogs/empty_search.png</texture>
+			</control>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<top>473</top>
+				<control type="label">
+					<height>32</height>
+					<font>Bold32</font>
+					<align>center</align>
+					<textcolor>ffdadada</textcolor>
+					<label>$LOCALIZE[31111]</label>
+				</control>
+				<control type="label">
+					<top>34</top>
+					<height>32</height>
+					<font>Reg22</font>
+					<align>center</align>
+					<textcolor>ff717171</textcolor>
+					<label>$LOCALIZE[31112]</label>
+				</control>
+			</control>
+		</control>
+		<!-- List -->
+		<control id="500" type="panel">
+			<left>92</left>
+			<top>258</top>
+			<width>1300</width>
+			<height>882</height>
+			<onup>999</onup>
+			<ondown>noop</ondown>
+			<onleft condition="String.IsEmpty(Container(500).ListItemNoWrap(-1).Label)">700</onleft>
+			<onleft condition="!String.IsEmpty(Container(500).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
+			<onleft>noop</onleft>
+			<onright condition="!String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
+			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">PageUp</onright>
+			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(600)</onright>
+			<onright>noop</onright>
+			<oninfo>SetProperty(OpenTextViewer,1,home)</oninfo>
+			<oninfo>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</oninfo>				
+			<defaultcontrol always="true">0</defaultcontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="31281">panel</viewtype>
+			<scrolltime easing="inout" tween="sine">200</scrolltime>
+			<itemlayout height="240" width="172">
+				<control type="group">
+					<left>5</left>
+					<width>160</width>
+					<height>240</height>
+					<animation center="85,120" easing="inout" effect="zoom" end="85" start="85" time="120" tween="linear" condition="true">Conditional</animation>
+					<control type="image">
+						<width>160</width>
+						<height>240</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>common/poster_empty.png</texture>
+					</control>
+					<control type="image">
+						<width>160</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="image">
+						<width>160</width>
+						<height>240</height>
+						<texture>views/OverlayNF.png</texture>
+						<visible>!Control.HasFocus(500)</visible>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout height="240" width="172">
+				<control type="group">
+					<left>5</left>
+					<width>160</width>
+					<height>240</height>
+					<animation center="85,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
+					<animation center="85,120" condition="Container(58).OnNext | Container(58).OnPrevious | Control.HasFocus(58)" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
+					<control type="image">
+						<width>160</width>
+						<height>240</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>common/poster_empty.png</texture>
+					</control>
+					<control type="image">
+						<width>160</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="image">
+						<width>160</width>
+						<height>240</height>
+						<texture>views/OverlayNF.png</texture>
+						<visible>!Control.HasFocus(500)</visible>
+					</control>
+				</control>
+			</focusedlayout>
+		</control>
 		<!-- Layout -->
 		<control type="group">
-			<control type="group">
-				<animation effect="slide" time="200" start="0,0" end="400,0" condition="ControlGroup(9000).HasFocus" tween="sine" easing="out">Conditional</animation>
-				<control type="button" id="600">
-					<include>HiddenControl</include>
-					<onfocus>SetFocus(500)</onfocus>
+			<include>LabelsDelayFadeAnimation</include>
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
+			<!-- Heading / Current item / Total items -->
+			<control type="grouplist">
+				<left>110</left>
+				<top>100</top>
+				<height>80</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<width>auto</width>
+					<height>60</height>
+					<font>Med48</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>$LOCALIZE[31286] </label>
 				</control>
-				<control type="button" id="700">
-					<include>HiddenControl</include>
-					<onfocus>SetFocus(500)</onfocus>
-				</control>
-				<control id="581" type="button">
-					<onfocus>Control.Move(500,-1)</onfocus>
-					<onfocus>SetFocus(500)</onfocus>
-					<onfocus>Right</onfocus>
-					<onfocus>Right</onfocus>
-					<onfocus>Right</onfocus>
-					<onfocus>Right</onfocus>
-					<onfocus>Right</onfocus>
-					<onfocus>Right</onfocus>
-					<include>HiddenControl</include>
-				</control>
-				<control id="582" type="button">
-					<onfocus>SetFocus(500)</onfocus>
-					<onfocus>Left</onfocus>
-					<onfocus>Left</onfocus>
-					<onfocus>Left</onfocus>
-					<onfocus>Left</onfocus>
-					<onfocus>Left</onfocus>
-					<onfocus>Left</onfocus>
-					<onfocus>Control.Move(500,1)</onfocus>
-					<include>HiddenControl</include>
-				</control>
-				<control id="500" type="panel">
-					<left>92</left>
-					<top>258</top>
-					<width>1300</width>
-					<height>882</height>
-					<onup>999</onup>
-					<ondown>noop</ondown>
-					<onleft condition="String.IsEmpty(Container(500).ListItemNoWrap(-1).Label)">700</onleft>
-					<onleft condition="!String.IsEmpty(Container(500).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
-					<onleft>noop</onleft>
-					<onright condition="!String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
-					<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">PageUp</onright>
-					<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(600)</onright>
-					<onright>noop</onright>
-					<oninfo>select</oninfo>					
-					<defaultcontrol always="true">0</defaultcontrol>
-					<orientation>vertical</orientation>
-					<viewtype label="31281">panel</viewtype>
-					<scrolltime easing="inout" tween="sine">200</scrolltime>
-					<itemlayout height="240" width="172">
-						<control type="group">
-							<left>5</left>
-							<width>160</width>
-							<height>240</height>
-							<animation center="85,120" easing="inout" effect="zoom" end="85" start="85" time="120" tween="linear" condition="true">Conditional</animation>
-							<control type="image">
-								<width>160</width>
-								<height>240</height>
-								<aspectratio>stretch</aspectratio>
-								<texture>common/poster_empty.png</texture>
-							</control>
-							<control type="image">
-								<width>160</width>
-								<height>240</height>
-								<aspectratio>scale</aspectratio>
-								<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
-							</control>
-							<control type="image">
-								<width>160</width>
-								<height>240</height>
-								<texture>views/OverlayNF.png</texture>
-								<visible>!Control.HasFocus(500)</visible>
-							</control>
-						</control>
-					</itemlayout>
-					<focusedlayout height="240" width="172">
-						<control type="group">
-							<left>5</left>
-							<width>160</width>
-							<height>240</height>
-							<animation center="85,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
-							<animation center="85,120" condition="Container(58).OnNext | Container(58).OnPrevious | Control.HasFocus(58)" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
-							<control type="image">
-								<width>160</width>
-								<height>240</height>
-								<aspectratio>stretch</aspectratio>
-								<texture>common/poster_empty.png</texture>
-							</control>
-							<control type="image">
-								<width>160</width>
-								<height>240</height>
-								<aspectratio>scale</aspectratio>
-								<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
-							</control>
-							<control type="image">
-								<width>160</width>
-								<height>240</height>
-								<texture>views/OverlayNF.png</texture>
-								<visible>!Control.HasFocus(500)</visible>
-							</control>
-						</control>
-					</focusedlayout>
-				</control>
-
-
-				<!--Xray Icon-->
-				<control type="grouplist">
-					<left>92</left>
-					<width>1205</width>
-					<bottom>40</bottom>
-					<height>40</height>
-					<itemgap>10</itemgap>
-					<align>center</align>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<control type="label">
-						<width>auto</width>					
-						<height>40</height>
-						<font>Reg22</font>
-						<align>left</align>
-						<textcolor>$VAR[ExtendendIconColor]</textcolor>
-						<label>$LOCALIZE[31284]</label>
-						<visible>!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
-					</control>
-					<control type="image">
-						<width>40</width>
-						<height>40</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture colordiffuse="$VAR[ExtendendIconColor]">views/button_left.png</texture>
-						<visible>!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
-					</control>
-					<control type="label">
-						<font>invisible</font>
-						<label>spacer</label>
-						<width>50</width>
-						<visible>[!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)] + [!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)]</visible>
-					</control>
-					<control type="label">
-						<width>auto</width>					
-						<height>40</height>
-						<font>Reg22</font>
-						<align>left</align>
-						<textcolor>$VAR[ExtendendIconColor]</textcolor>
-						<label>$LOCALIZE[31283]</label>
-						<visible>!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
-					</control>
-					<control type="image">
-						<width>40</width>
-						<height>40</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture colordiffuse="$VAR[ExtendendIconColor]">views/button_right.png</texture>
-						<visible>!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
-					</control>
-				</control>
-
-				<!-- Heading / Current item / Total items -->
-				<control type="grouplist">
-					<include>LabelsDelayFadeAnimation</include>
-					<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
-					<left>110</left>
-					<top>100</top>
-					<height>80</height>
-					<itemgap>10</itemgap>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<control type="label">
-						<width>auto</width>
-						<height>60</height>
-						<font>Med48</font>
-						<aligny>bottom</aligny>
-						<textcolor>ffdadada</textcolor>
-						<label>ExtendendInfo  </label>
-					</control>
-					<control type="label">
-						<top>15</top>
-						<width>auto</width>
-						<height>60</height>
-						<font>Med32</font>
-						<aligny>bottom</aligny>
-						<textcolor>ffdadada</textcolor>
-						<label>$INFO[Window.Property(CurrentPage)]</label>
-						<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
-					</control>
-					<control type="label">
-						<top>14</top>
-						<width>auto</width>
-						<height>60</height>
-						<font>Light36</font>
-						<aligny>bottom</aligny>
-						<textcolor>ff505050</textcolor>
-						<label>|</label>
-						<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
-					</control>
-					<control type="label">
-						<top>15</top>
-						<width>auto</width>
-						<height>60</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>ff505050</textcolor>
-						<label>$INFO[Window.Property(TotalPages)]</label>
-						<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
-					</control>
-				</control>
-
-				<!-- Menu -->
-				<control type="grouplist" id="999">
-					<left>110</left>
-					<top>178</top>
-					<height>40</height>
-					<itemgap>47</itemgap>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<ondown>500</ondown>
-					<onleft>noop</onleft>
-					<onright>noop</onright>
-					<include>VisibleDelayFadeAnimation</include>
-					<control type="button" id="6000">
-						<width>auto</width>
-						<height>40</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
-						<label>$LOCALIZE[137]</label>
-					</control>
-					<control type="button" id="7000">
-						<width>auto</width>
-						<height>40</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
-						<label>$LOCALIZE[31282]</label>
-					</control>
-					<control type="button" id="5007">
-						<width>auto</width>
-						<height>40</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
-						<label>$LOCALIZE[467]:</label>
-						<label2>$INFO[Window.Property(Type)]</label2>
-					</control>
-					<control type="button" id="992">
-						<width>auto</width>
-						<height>40</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
-						<label>$LOCALIZE[31092]</label>
-						<onclick>SetFocus(4000)</onclick>
-					</control>
-					<control type="button" id="993">
-						<width>auto</width>
-						<height>40</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
-						<label>$LOCALIZE[31093]</label>
-						<onclick>SetFocus(5000)</onclick>
-					</control>
-					<control type="button" id="5005">
-						<width>auto</width>
-						<height>40</height>
-						<font>Light32</font>
-						<aligny>bottom</aligny>
-						<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
-						<label>Clear filter</label>
-						<visible>!String.IsEmpty(Window.Property(Filter_Label))</visible>
-					</control>
-				</control>
-
-				<!-- Separator -->
 				<control type="image">
-					<left>1313</left>
-					<top>80</top>
-					<width>8</width>
-					<height>1000</height>
-					<texture>views/line.png</texture>
+					<top>5</top>
+					<width>145</width>
+					<height>50</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<aspectratio align="left">keep</aspectratio>
+					<texture colordiffuse="ffdadada">views/tmbd_ghosticon.png</texture>
 				</control>
-				<!-- Details -->
-				<control type="group">
-					<left>1354</left>
-					<top>268</top>
-					<control type="label">
-						<width>472</width>
-						<height>38</height>
-						<font>Med28</font>
-						<scroll>true</scroll>
-						<textcolor>ffdadada</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<top>50</top>
-						<width>472</width>
-						<height>30</height>
-						<font>Light26</font>
-						<textcolor>ff6a6c70</textcolor>
-						<label>$INFO[ListItem.Year,, ]$INFO[ListItem.Genre]</label>
-					</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Med32</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>$INFO[Window.Property(CurrentPage)]</label>
+					<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
+				</control>
+				<control type="label">
+					<top>14</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Light36</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff505050</textcolor>
+					<label>|</label>
+					<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff505050</textcolor>
+					<label>$INFO[Window.Property(TotalPages)]</label>
+					<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
+				</control>
+			</control>
+			<!-- Menu -->
+			<control type="grouplist" id="999">
+				<left>110</left>
+				<top>178</top>
+				<height>40</height>
+				<itemgap>47</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<ondown>500</ondown>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<control type="button" id="6000">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[137]</label>
+				</control>
+				<control type="button" id="7000">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[31282]</label>
+				</control>
+				<control type="button" id="5007">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[467]:</label>
+					<label2>$INFO[Window.Property(Type)]</label2>
+				</control>
+				<control type="button" id="992">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[31092]</label>
+					<onclick>SetFocus(4000)</onclick>
+				</control>
+				<control type="button" id="993">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[31093]</label>
+					<onclick>SetFocus(5000)</onclick>
+				</control>
+				<control type="button" id="5005">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>Clear filter</label>
+					<visible>!String.IsEmpty(Window.Property(Filter_Label))</visible>
+				</control>
+			</control>
+			<!-- Separator -->
+			<control type="image">
+				<visible>Integer.IsGreater(Container(500).NumItems,0)</visible>
+				<left>1313</left>
+				<top>80</top>
+				<width>8</width>
+				<height>1000</height>
+				<texture>views/line.png</texture>
+			</control>
+			<!-- Details -->
+			<control type="group">
+				<left>1354</left>
+				<top>268</top>
+				<control type="label">
+					<width>472</width>
+					<height>38</height>
+					<font>Med32</font>
+					<scroll>true</scroll>
+					<textcolor>ffdadada</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<top>43</top>
+					<width>auto</width>
+					<height>32</height>
+					<font>Light28</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffbebebe</textcolor>
+					<label>$INFO[ListItem.Year]</label>
+				</control>
+				<!-- Star rating / Votes / Rating -->
+				<control type="grouplist">
+					<top>80</top>
+					<height>40</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
 					<control type="image">
-						<top>128</top>
-						<width>472</width>
-						<height>266</height>
+						<top>2</top>
+						<width>147</width>
+						<height>24</height>
+						<texture>$VAR[ExtendedRating]</texture>
 						<aspectratio align="left">keep</aspectratio>
-						<texture background="true" fallback="views/episode_fallback.png">$VAR[ExtendedVideosImage]</texture>
 					</control>
-					<control type="textbox">
-						<top>453</top>
-						<width>432</width>
-						<height>340</height>
-						<pagecontrol>584</pagecontrol>
-						<font>Light26Spaced</font>
-						<autoscroll>false</autoscroll>
-						<textcolor>ffb1b2b3</textcolor>
-						<label>$INFO[ListItem.Plot]</label>
-					</control>
-					<control id="584" type="scrollbar">
-						<top>145</top>
-						<width>1192</width>
-						<height>88</height>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
-					</control>
-					<!-- More button -->
 					<control type="image">
-						<left>437</left>
-						<top>764</top>
-						<width>37</width>
+						<top>3</top>
+						<width>48</width>
 						<height>23</height>
-						<texture>views/more_nf.png</texture>
-						<visible>Control.IsVisible(584) + !String.IsEmpty(ListItem.Plot)</visible>
+						<texture>views/tmdb.png</texture>
+						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
+					<control type="label">
+						<top>-10</top>
+						<width>auto</width>
+						<height>34</height>
+						<font>Bold26</font>
+						<aligny>bottom</aligny>
+						<textcolor>ffbcbcbc</textcolor>
+						<label>$INFO[ListItem.Rating,,/10]</label>
+					</control>
+				</control>
+				<control type="image">
+					<top>148</top>
+					<width>472</width>
+					<height>266</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$VAR[ExtendedVideosImage]</texture>
+				</control>
+				<control type="textbox">
+					<top>453</top>
+					<width>432</width>
+					<height>340</height>
+					<pagecontrol>584</pagecontrol>
+					<font>Light26Spaced</font>
+					<autoscroll>false</autoscroll>
+					<textcolor>ffb1b2b3</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+				<control id="584" type="scrollbar">
+					<top>145</top>
+					<width>1192</width>
+					<height>88</height>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<!-- More button -->
+				<control type="image">
+					<left>437</left>
+					<top>764</top>
+					<width>37</width>
+					<height>23</height>
+					<texture>views/more_nf.png</texture>
+					<visible>Control.IsVisible(584) + !String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+			</control>				
+			<!-- Icon -->
+			<control type="grouplist">
+				<left>92</left>
+				<width>1205</width>
+				<bottom>40</bottom>
+				<height>40</height>
+				<itemgap>10</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<width>auto</width>					
+					<height>40</height>
+					<font>Reg22</font>
+					<align>left</align>
+					<textcolor>$VAR[ExtendendIconColor]</textcolor>
+					<label>$LOCALIZE[31284]</label>
+					<visible>!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture colordiffuse="$VAR[ExtendendIconColor]">views/button_left.png</texture>
+					<visible>!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+				<control type="label">
+					<font>invisible</font>
+					<label>spacer</label>
+					<width>50</width>
+					<visible>[!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)] + [!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)]</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>					
+					<height>40</height>
+					<font>Reg22</font>
+					<align>left</align>
+					<textcolor>$VAR[ExtendendIconColor]</textcolor>
+					<label>$LOCALIZE[31283]</label>
+					<visible>!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture colordiffuse="$VAR[ExtendendIconColor]">views/button_right.png</texture>
+					<visible>!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
 				</control>
 			</control>
 		</control>

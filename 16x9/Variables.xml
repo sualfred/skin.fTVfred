@@ -8,6 +8,18 @@
 		<value condition="Control.HasFocus(500)">ff8e8b90</value>
 		<value>ff505559</value>
 	</variable>
+	<variable name="ExtendedRating">
+		<value condition="String.StartsWith(ListItem.Rating,10)">rating/dialog_select/fo_10.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,1)">rating/dialog_select/fo_1.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,2)">rating/dialog_select/fo_2.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,3)">rating/dialog_select/fo_3.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,4)">rating/dialog_select/fo_4.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,5)">rating/dialog_select/fo_5.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,6)">rating/dialog_select/fo_6.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,7)">rating/dialog_select/fo_7.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,8)">rating/dialog_select/fo_8.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,9)">rating/dialog_select/fo_9.png</value>
+	</variable>
 	<variable name="version">
 		<value condition="String.StartsWith(System.BuildVersion,17.)">Kodi Krypton</value>
 		<value condition="String.StartsWith(System.BuildVersion,16.)">Kodi Jarvis</value>
@@ -2245,7 +2257,6 @@
 		<value>$INFO[Player.Duration(mm:ss)]</value>
 	</variable>
 	<variable name="Fanart">
-		<value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$INFO[ListItem.Property(Fanart_small)]</value>
 		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://movies/genres/)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
@@ -2302,7 +2313,7 @@
 	<variable name="ExtendedVideosImage">
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_wide.png</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value>views/episode_fallback.png</value>
+		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="WideImage">
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_wide.png</value>

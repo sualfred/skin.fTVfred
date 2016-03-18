@@ -446,7 +446,7 @@
 			<param name="Header">$LOCALIZE[412]</param>
 			<param name="Message">$LOCALIZE[31119]</param>
 			<param name="ShowButton">true</param>
-			<param name="Button">Weather settings</param>
+			<param name="Button">$LOCALIZE[31285]</param>
 			<param name="Action">ActivateWindow(weathersettings)</param>
 		</include>
 		<!-- Empty widgets -->
