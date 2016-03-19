@@ -121,7 +121,7 @@
 					<width>160</width>
 					<height>240</height>
 					<animation center="85,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
-					<animation center="85,120" condition="Container(58).OnNext | Container(58).OnPrevious | Control.HasFocus(58)" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
+					<animation center="85,120" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
 					<control type="image">
 						<width>160</width>
 						<height>240</height>
