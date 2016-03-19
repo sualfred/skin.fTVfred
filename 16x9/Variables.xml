@@ -9,16 +9,30 @@
 		<value>ff505559</value>
 	</variable>
 	<variable name="ExtendedRating">
-		<value condition="String.StartsWith(ListItem.Rating,10)">rating/dialog_select/fo_10.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,1)">rating/dialog_select/fo_1.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,2)">rating/dialog_select/fo_2.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,3)">rating/dialog_select/fo_3.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,4)">rating/dialog_select/fo_4.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,5)">rating/dialog_select/fo_5.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,6)">rating/dialog_select/fo_6.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,7)">rating/dialog_select/fo_7.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,8)">rating/dialog_select/fo_8.png</value>
-		<value condition="String.StartsWith(ListItem.Rating,9)">rating/dialog_select/fo_9.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,10)">rating/rating10.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,1)">rating/rating1.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,2)">rating/rating2.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,3)">rating/rating3.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,4)">rating/rating4.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,5)">rating/rating5.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,6)">rating/rating6.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,7)">rating/rating7.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,8)">rating/rating8.png</value>
+		<value condition="String.StartsWith(ListItem.Rating,9)">rating/rating9.png</value>
+		<value>rating/rating0.png</value>
+	</variable>
+	<variable name="ExtendedRating2">
+		<value condition="String.StartsWith(Window.Property(rating),10)">rating/rating10.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),1)">rating/rating1.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),2)">rating/rating2.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),3)">rating/rating3.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),4)">rating/rating4.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),5)">rating/rating5.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),6)">rating/rating6.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),7)">rating/rating7.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),8)">rating/rating8.png</value>
+		<value condition="String.StartsWith(Window.Property(rating),9)">rating/rating9.png</value>
+		<value>rating/rating0.png</value>
 	</variable>
 	<variable name="version">
 		<value condition="String.StartsWith(System.BuildVersion,17.)">Kodi Krypton</value>

@@ -207,7 +207,15 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<visible>!Control.HasFocus(1000) + !Control.HasFocus(150)</visible>
 				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
-				<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
+				<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>				
+				<control type="image">
+					<top>2</top>
+					<width>147</width>
+					<height>24</height>
+					<texture>$VAR[ExtendedRating2]</texture>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>!String.IsEmpty(Window.Property(rating))</visible>
+				</control>
 				<control type="image">
 					<top>4</top>
 					<width>48</width>

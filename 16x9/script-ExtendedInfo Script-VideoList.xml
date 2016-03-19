@@ -373,8 +373,8 @@
 				</control>
 				<!-- More button -->
 				<control type="image">
-					<left>437</left>
-					<top>764</top>
+					<left>435</left>
+					<top>763</top>
 					<width>37</width>
 					<height>23</height>
 					<texture>views/more_nf.png</texture>
