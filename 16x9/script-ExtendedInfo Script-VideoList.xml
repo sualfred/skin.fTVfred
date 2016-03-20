@@ -351,7 +351,7 @@
 					<width>472</width>
 					<height>266</height>
 					<aspectratio align="left">keep</aspectratio>
-					<texture background="true">$VAR[ExtendedVideosImage]</texture>
+					<texture background="true">$VAR[PanelImage]</texture>
 				</control>
 				<control type="textbox">
 					<top>453</top>

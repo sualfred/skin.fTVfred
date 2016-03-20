@@ -403,10 +403,9 @@
 			<control id="58" type="panel">
 				<left>92</left>
 				<top>218</top>
-				<width>1200</width>
+				<width>1250</width>
 				<height>882</height>
 				<onup>noop</onup>
-				<ondown>noop</ondown>
 				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">back</onleft>
 				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
 				<onleft>noop</onleft>
@@ -418,7 +417,7 @@
 				<viewtype label="31281">panel</viewtype>
 				<scrolltime easing="inout" tween="sine">200</scrolltime>
 				<visible>!String.IsEmpty(Container.PluginName)</visible>
-				<itemlayout height="240" width="240">
+				<itemlayout condition="!Container.Content(movies) + !Container.Content(tvshows)" height="240" width="240">
 					<control type="image">
 						<left>20</left>
 						<top>20</top>
@@ -447,13 +446,21 @@
 						<visible>!String.IsEqual(ListItem.Label,..) + String.Contains(ListItem.Icon,Default)</visible>						
 						<animation center="120,120" easing="inout" effect="zoom" end="85" start="85" time="0" tween="linear" condition="true">Conditional</animation>
 					</control>
+					<control type="image">
+						<left>20</left>
+						<top>20</top>
+						<width>200</width>
+						<height>200</height>
+						<texture>views/OverlayNF.png</texture>
+						<visible>!Control.HasFocus(58)</visible>
+					</control>
 				</itemlayout>
-				<focusedlayout height="240" width="240">
+				<focusedlayout condition="!Container.Content(movies) + !Container.Content(tvshows)" height="240" width="240">
 					<control type="group">
 						<width>240</width>
 						<height>240</height>
 						<animation center="120,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
-						<animation center="120,120" condition="Container(58).OnNext | Container(58).OnPrevious | Control.HasFocus(58)" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
+						<animation center="120,120" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
@@ -476,6 +483,65 @@
 							<shadowcolor>88000000</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!String.IsEqual(ListItem.Label,..) + String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<texture>views/OverlayNF.png</texture>
+							<visible>!Control.HasFocus(58)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout condition="Container.Content(movies) | Container.Content(tvshows)" height="240" width="172">
+					<control type="group">
+						<left>5</left>
+						<width>160</width>
+						<height>240</height>
+						<animation center="85,120" easing="inout" effect="zoom" end="85" start="85" time="120" tween="linear" condition="true">Conditional</animation>
+						<control type="image">
+							<width>160</width>
+							<height>240</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>common/poster_empty.png</texture>
+						</control>
+						<control type="image">
+							<width>160</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="views/poster_fallback.png">$VAR[PosterImage]</texture>
+						</control>
+						<control type="image">
+							<width>160</width>
+							<height>240</height>
+							<texture>views/OverlayNF.png</texture>
+							<visible>!Control.HasFocus(58)</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="Container.Content(movies) | Container.Content(tvshows)" height="240" width="172">
+					<control type="group">
+						<left>5</left>
+						<width>160</width>
+						<height>240</height>
+						<animation center="85,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
+						<animation center="85,120" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
+						<control type="image">
+							<width>160</width>
+							<height>240</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>common/poster_empty.png</texture>
+						</control>
+						<control type="image">
+							<width>160</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="views/poster_fallback.png">$VAR[PosterImage]</texture>
+						</control>
+						<control type="image">
+							<width>160</width>
+							<height>240</height>
+							<texture>views/OverlayNF.png</texture>
+							<visible>!Control.HasFocus(58)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -536,6 +602,7 @@
 				<width>8</width>
 				<height>1000</height>
 				<texture>views/line.png</texture>
+				<animation effect="slide" time="0" start="0,0" end="3,0" condition="Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
 			</control>
 			<!-- Details -->
 			<control type="group">
@@ -562,7 +629,7 @@
 					<width>472</width>
 					<height>266</height>
 					<aspectratio align="left">keep</aspectratio>
-					<texture background="true">$VAR[WideImage]</texture>
+					<texture background="true">$VAR[PanelImage]</texture>
 				</control>
 				<control id="583" type="button">
 					<width min="104" max="249">auto</width>

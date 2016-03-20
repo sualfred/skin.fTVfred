@@ -2324,8 +2324,9 @@
 		<value condition="Control.IsVisible(58)">58</value>
 		<value>50</value>
 	</variable>
-	<variable name="ExtendedVideosImage">
-		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_wide.png</value>
+	<variable name="PanelImage">
+		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_square.png</value>
+		<value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -2348,6 +2349,7 @@
 	</variable>
 	<variable name="PosterImage">
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_poster.png</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/movie_fallback.png</value>
 	</variable>
