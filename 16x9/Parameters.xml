@@ -192,7 +192,7 @@
 		<item>
 			<label>$VAR[WidgetAction-$PARAM[Pos]]</label>
 			<label2>31201</label2>
-			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;grouping=ftv&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-$PARAM[Pos]&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-$PARAM[Pos]&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-$PARAM[Pos]&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-$PARAM[Pos])</onclick>
+			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;custom=true&amp;grouping=ftv&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]-WidgetLabel-$PARAM[Pos]&amp;skinAction=$INFO[Window(home).Property(SubMenu)]-WidgetAction-$PARAM[Pos]&amp;skinList=$INFO[Window(home).Property(SubMenu)]-WidgetList-$PARAM[Pos]&amp;skinType=$INFO[Window(home).Property(SubMenu)]-WidgetType-$PARAM[Pos])</onclick>
 		</item>
 	</include>
 	<!-- Widget Layout Include -->
