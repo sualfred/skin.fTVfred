@@ -216,43 +216,43 @@
 	</include>
 	<!-- Widget Move Down Include -->
 	<include name="ParamWidgetMoveDownInclude">
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">1</param>
 			<param name="TempPos">2</param>
 			<param name="Move">1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">2</param>
 			<param name="TempPos">3</param>
 			<param name="Move">1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">3</param>
 			<param name="TempPos">4</param>
 			<param name="Move">1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">4</param>
 			<param name="TempPos">5</param>
 			<param name="Move">1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">5</param>
 			<param name="TempPos">6</param>
 			<param name="Move">1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">6</param>
 			<param name="TempPos">7</param>
 			<param name="Move">1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">7</param>
 			<param name="TempPos">8</param>
@@ -269,43 +269,43 @@
 			<label>noop</label>
 			<onclick>noop</onclick>
 		</item>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">2</param>
 			<param name="TempPos">1</param>
 			<param name="Move">-1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">3</param>
 			<param name="TempPos">2</param>
 			<param name="Move">-1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">4</param>
 			<param name="TempPos">3</param>
 			<param name="Move">-1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">5</param>
 			<param name="TempPos">4</param>
 			<param name="Move">-1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">6</param>
 			<param name="TempPos">5</param>
 			<param name="Move">-1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">7</param>
 			<param name="TempPos">6</param>
 			<param name="Move">-1</param>
 		</include>
-		<include name="ParamWidgetMoveFunction">
+		<include content="ParamWidgetMoveFunction">
 			<param name="SubMenu">$PARAM[SubMenu]</param>
 			<param name="Pos">8</param>
 			<param name="TempPos">7</param>

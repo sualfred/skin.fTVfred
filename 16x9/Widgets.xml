@@ -7,62 +7,62 @@
 			<param name="widget">widget1</param>
 		</include>
 		<!-- #2 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">200</param>
 			<param name="widget">widget2</param>
 		</include>
 		<!-- #3 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">300</param>
 			<param name="widget">widget3</param>
 		</include>
 		<!-- #4 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">400</param>
 			<param name="widget">widget4</param>
 		</include>
 		<!-- #5 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">500</param>
 			<param name="widget">widget5</param>
 		</include>
 		<!-- #6 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">600</param>
 			<param name="widget">widget6</param>
 		</include>
 		<!-- #7 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">700</param>
 			<param name="widget">widget7</param>
 		</include>
 		<!-- #8 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">800</param>
 			<param name="widget">widget8</param>
 		</include>
 		<!-- #9 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">900</param>
 			<param name="widget">widget9</param>
 		</include>
 		<!-- #10 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">1000</param>
 			<param name="widget">widget10</param>
 		</include>
 		<!-- #11 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">1100</param>
 			<param name="widget">widget11</param>
 		</include>
 		<!-- #12 Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">1200</param>
 			<param name="widget">widget12</param>
 		</include>
 		<!-- Favourites Widget -->
-		<include name="ParamWidgetInclude">
+		<include content="ParamWidgetInclude">
 			<param name="ID">20</param>
 			<param name="widget">favourites</param>
 			<param name="content">FavouritesWidget</param>
@@ -397,7 +397,7 @@
 	</include>
 	<include name="EmptyMessages">
 		<!-- Movies -->
-		<include name="NoContentMessage">
+		<include content="NoContentMessage">
 			<param name="Visible">[String.IsEqual(Container(99).ListItem.Property(DefaultID),movies) | String.Contains(Container(99).ListItem.Property(list),library://video/movies/) | String.Contains(Container(99).ListItem.Property(list),videodb://movies/)] + !Library.HasContent(Movies) + !Skin.HasSetting(HideMoviesMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
@@ -408,7 +408,7 @@
 			<param name="Action2">Skin.SetBool(HideMoviesMessage)</param>
 		</include>
 		<!-- TVShows -->
-		<include name="NoContentMessage">
+		<include content="NoContentMessage">
 			<param name="Visible">[String.IsEqual(Container(99).ListItem.Property(DefaultID),tvshows) | String.Contains(Container(99).ListItem.Property(DefaultID),library://video/tvshows/) | String.Contains(Container(99).ListItem.Property(list),videodb://tvshows/)] + !Library.HasContent(TVShows) + !Skin.HasSetting(HideTVShowsMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
@@ -419,7 +419,7 @@
 			<param name="Action2">Skin.SetBool(HideTVShowsMessage)</param>
 		</include>
 		<!-- Videos -->
-		<include name="NoContentMessage">
+		<include content="NoContentMessage">
 			<param name="Visible">String.IsEqual(Container(99).ListItem.Property(DefaultID),videos) + !Library.HasContent(TVShows) + !Library.HasContent(Movies)+ !Skin.HasSetting(HideVideosMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
@@ -430,7 +430,7 @@
 			<param name="Action2">Skin.SetBool(HideVideosMessage)</param>
 		</include>
 		<!-- Music -->
-		<include name="NoContentMessage">
+		<include content="NoContentMessage">
 			<param name="Visible">[String.IsEqual(Container(99).ListItem.Property(DefaultID),music) | String.Contains(Container(99).ListItem.Property(list),library://music/) | String.Contains(Container(99).ListItem.Property(list),musicdb://)] + !Library.HasContent(Music) + !Skin.HasSetting(HideMusicMessage) + String.IsEmpty(Container(99).ListItem.Property(ftvWidget))</param>
 			<param name="Header">$LOCALIZE[31264]</param>
 			<param name="Message">$LOCALIZE[31262]</param>
@@ -441,7 +441,7 @@
 			<param name="Action2">Skin.SetBool(HideMusicMessage)</param>
 		</include>
 		<!-- Weather -->
-		<include name="NoContentMessage">
+		<include content="NoContentMessage">
 			<param name="Visible">String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather) + String.IsEmpty(Window(Weather).Property(Day0.Outlook))</param>
 			<param name="Header">$LOCALIZE[412]</param>
 			<param name="Message">$LOCALIZE[31119]</param>
@@ -450,7 +450,7 @@
 			<param name="Action">ActivateWindow(weathersettings)</param>
 		</include>
 		<!-- Empty widgets -->
-		<include name="NoContentMessage">
+		<include content="NoContentMessage">
 			<param name="Visible">[[String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,0)] | 	[String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,0)] | [String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,0)]]</param>
 			<param name="Header">$LOCALIZE[31263]</param>
 			<param name="Message">$LOCALIZE[31266]</param>

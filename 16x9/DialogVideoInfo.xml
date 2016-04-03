@@ -790,27 +790,27 @@
 				<visible>String.IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(50) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 				<animation center="480,1022" condition="!Control.HasFocus(50)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-				<include name="InfoDialogCastList">
+				<include content="InfoDialogCastList">
 					<param name="Left">0</param>
 					<param name="ID">50</param>
 					<param name="POS">1</param>
 				</include>
-				<include name="InfoDialogCastList">
+				<include content="InfoDialogCastList">
 					<param name="Left">352</param>
 					<param name="ID">50</param>
 					<param name="POS">2</param>
 				</include>
-				<include name="InfoDialogCastList">
+				<include content="InfoDialogCastList">
 					<param name="Left">705</param>
 					<param name="ID">50</param>
 					<param name="POS">3</param>
 				</include>
-				<include name="InfoDialogCastList">
+				<include content="InfoDialogCastList">
 					<param name="Left">1058</param>
 					<param name="ID">50</param>
 					<param name="POS">4</param>
 				</include>
-				<include name="InfoDialogCastList">
+				<include content="InfoDialogCastList">
 					<param name="Left">1411</param>
 					<param name="ID">50</param>
 					<param name="POS">5</param>
@@ -981,27 +981,27 @@
 				<visible>!String.IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(5000) + !String.IsEmpty(Container(5000).ListItem.Label)</visible>
 				<animation center="480,1022" condition="!Control.HasFocus(5000)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-				<include name="InfoDialogVideoList">
+				<include content="InfoDialogVideoList">
 					<param name="Left">0</param>
 					<param name="ID">5000</param>
 					<param name="POS">1</param>
 				</include>
-				<include name="InfoDialogVideoList">
+				<include content="InfoDialogVideoList">
 					<param name="Left">352</param>
 					<param name="ID">5000</param>
 					<param name="POS">2</param>
 				</include>
-				<include name="InfoDialogVideoList">
+				<include content="InfoDialogVideoList">
 					<param name="Left">705</param>
 					<param name="ID">5000</param>
 					<param name="POS">3</param>
 				</include>
-				<include name="InfoDialogVideoList">
+				<include content="InfoDialogVideoList">
 					<param name="Left">1058</param>
 					<param name="ID">5000</param>
 					<param name="POS">4</param>
 				</include>
-				<include name="InfoDialogVideoList">
+				<include content="InfoDialogVideoList">
 					<param name="Left">1411</param>
 					<param name="ID">5000</param>
 					<param name="POS">5</param>

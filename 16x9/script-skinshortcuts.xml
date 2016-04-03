@@ -37,37 +37,37 @@
 			<include name="ResetAllWidgets">
 				<param name="ID">1000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">2000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">3000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">4000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">5000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">6000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">7000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">8000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">9000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">10000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">11000</param>
 			</include>
-			<include name="ResetAllWidgets">
+			<include content="ResetAllWidgets">
 				<param name="ID">12000</param>
 			</include>
 			<onfocus>SetFocus(910)</onfocus>

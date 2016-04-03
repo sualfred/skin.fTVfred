@@ -138,19 +138,19 @@
 						<onleft>8000</onleft>
 						<onright>8000</onright>
 						<orientation>vertical</orientation>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">inputtype</param>
 							<param name="ID">309</param>
 						</include>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">symbols</param>
 							<param name="ID">304</param>
 						</include>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">shift</param>
 							<param name="ID">302</param>
 						</include>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">space</param>
 							<param name="ID">32</param>
 						</include>
@@ -164,19 +164,19 @@
 						<onleft>8001</onleft>
 						<onright>8001</onright>
 						<orientation>vertical</orientation>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">cancel</param>
 							<param name="ID">301</param>
 						</include>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">ip</param>
 							<param name="ID">307</param>
 						</include>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">capslock</param>
 							<param name="ID">303</param>
 						</include>
-						<include name="KeyboardControlButtons">
+						<include content="KeyboardControlButtons">
 							<param name="name">backspace</param>
 							<param name="ID">8</param>
 						</include>
@@ -195,7 +195,7 @@
 						<control id="300" type="button">
 							<onup>8</onup>
 							<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
-							<include name="BottomControlButtons">
+							<include content="BottomControlButtons">
 								<param name="name">enter</param>
 							</include>
 						</control>

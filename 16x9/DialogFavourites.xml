@@ -76,7 +76,7 @@
 		</control>
 		<!-- Square -->
 		<control type="group">
-			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + [String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | String.IsEmpty(Skin.String(FavouritesLayout))]]" name="ViewFavourites">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + [String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31203]) | String.IsEmpty(Skin.String(FavouritesLayout))]]" content="ViewFavourites">
 				<param name="left">-238</param>
 				<param name="width">2200</param>
 				<param name="layout">ViewSquareInfoLayout</param>
@@ -84,7 +84,7 @@
 		</control>
 		<!-- Poster -->
 		<control type="group">
-			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" name="ViewFavourites">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Window(Home).Property(ForceViewType),poster) + !String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31160])]" content="ViewFavourites">
 				<param name="left">-102</param>
 				<param name="width">2036</param>
 				<param name="layout">ViewPosterLayout</param>
@@ -92,7 +92,7 @@
 		</control>
 		<!--Wide-->
 		<control type="group">
-			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" name="ViewFavourites">
+			<include condition="[!String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + !String.IsEqual(Window(Home).Property(ForceViewType),poster) + String.IsEqual(Window(Home).Property(ForceViewType),wide)] | [String.IsEmpty(Window(Home).Property(WidgetHasFocus)) + String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31159])]" content="ViewFavourites">
 				<param name="left">-374</param>
 				<param name="width">2344</param>
 				<param name="layout">ViewDefaultWideLayout</param>

@@ -138,25 +138,25 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="200" />
 					</include>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="201" />
 					</include>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="202" />
 					</include>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="203" />
 					</include>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="204" />
 					</include>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="205" />
 					</include>
-					<include name="NextAiredItems">
+					<include content="NextAiredItems">
 						<param name="ItemID" value="206" />
 					</include>
 				</content>
@@ -207,25 +207,25 @@
 		</control>
 		<!-- Lists group -->
 		<control type="group" id="9999">
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="200" />
 			</include>
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="201" />
 			</include>
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="202" />
 			</include>
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="203" />
 			</include>
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="204" />
 			</include>
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="205" />
 			</include>
-			<include name="NextAiredLists">
+			<include content="NextAiredLists">
 				<param name="ListID" value="206" />
 			</include>
 		</control>

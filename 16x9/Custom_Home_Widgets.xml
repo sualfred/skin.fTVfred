@@ -363,28 +363,28 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include name="ParamWidgetLabel">
+						<include content="ParamWidgetLabel">
 							<param name="Pos">1</param>
 						</include>
-						<include name="ParamWidgetLabel">
+						<include content="ParamWidgetLabel">
 							<param name="Pos">2</param>
 						</include>
-						<include name="ParamWidgetLabel">
-							<param name="Pos">3</param>
+						<include content="ParamWidgetLabel">
+							<param content="Pos">3</param>
 						</include>
-						<include name="ParamWidgetLabel">
-							<param name="Pos">4</param>
+						<include content="ParamWidgetLabel">
+							<param content="Pos">4</param>
 						</include>
-						<include name="ParamWidgetLabel">
+						<include content="ParamWidgetLabel">
 							<param name="Pos">5</param>
 						</include>
-						<include name="ParamWidgetLabel">
+						<include content="ParamWidgetLabel">
 							<param name="Pos">6</param>
 						</include>
-						<include name="ParamWidgetLabel">
+						<include content="ParamWidgetLabel">
 							<param name="Pos">7</param>
 						</include>
-						<include name="ParamWidgetLabel">
+						<include content="ParamWidgetLabel">
 							<param name="Pos">8</param>
 						</include>
 					</content>
@@ -450,28 +450,28 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">1</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">2</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">3</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">4</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">5</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">6</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">7</param>
 						</include>
-						<include name="ParamWidgetPath">
+						<include content="ParamWidgetPath">
 							<param name="Pos">8</param>
 						</include>
 					</content>
@@ -537,28 +537,28 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">1</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">2</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">3</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">4</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">5</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">6</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">7</param>
 						</include>
-						<include name="ParamWidgetLayout">
+						<include content="ParamWidgetLayout">
 							<param name="Pos">8</param>
 						</include>
 					</content>
@@ -588,40 +588,40 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">1000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">2000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">3000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">4000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">5000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">6000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">7000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">8000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">9000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">10000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">11000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveDownInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" content="ParamWidgetMoveDownInclude">
 							<param name="SubMenu">12000</param>
 						</include>
 					</content>
@@ -651,40 +651,40 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">1000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">2000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">3000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">4000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">5000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">6000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">7000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">8000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">9000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">10000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">11000</param>
 						</include>
-						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" name="ParamWidgetMoveUpInclude">
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" content="ParamWidgetMoveUpInclude">
 							<param name="SubMenu">12000</param>
 						</include>
 					</content>

@@ -106,7 +106,7 @@
 		<param name="widget"/>
 		<param name="content" default="FtvWidget"/>
 		<definition>
-			<include name="Param$PARAM[content]Lists">
+			<include content="Param$PARAM[content]Lists">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
 			<control id="$PARAM[ID]0" type="fixedlist">
@@ -145,7 +145,7 @@
 						<visible>!String.IsEmpty(ListItem.Property(bannerArt))</visible>
 						<top>126</top>
 						<left>33</left>
-						<include name="ParamHomeBannerLayout">
+						<include content="ParamHomeBannerLayout">
 							<param name="ID">$PARAM[ID]</param>
 						</include>
 						<control type="textbox">
@@ -224,7 +224,7 @@
 						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine" condition="!Control.HasFocus($PARAM[ID]9)">UnFocus</animation>
 						<top>126</top>
 						<left>33</left>
-						<include name="ParamHomeBannerLayout">
+						<include content="ParamHomeBannerLayout">
 							<param name="ID">$PARAM[ID]</param>
 						</include>
 						<control type="textbox">
@@ -330,7 +330,7 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<include name="$PARAM[content]">
+					<include content="$PARAM[content]">
 						<param name="ID">$PARAM[ID]</param>
 					</include>
 				</content>
@@ -429,42 +429,42 @@
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 			<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>
 		</item>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]1</param>
 			<param name="POS">1</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]2</param>
 			<param name="POS">2</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]3</param>
 			<param name="POS">3</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]4</param>
 			<param name="POS">4</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]5</param>
 			<param name="POS">5</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]6</param>
 			<param name="POS">6</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]7</param>
 			<param name="POS">7</param>
 		</include>
-		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))" name="ParamWidgetContent">
+		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))" content="ParamWidgetContent">
 			<param name="ListID">$PARAM[ID]</param>
 			<param name="ID">$PARAM[ID]8</param>
 			<param name="POS">8</param>

@@ -322,7 +322,7 @@
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
-			<include name="ParamSquareInfoTemplate">
+			<include content="ParamSquareInfoTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
 			<control type="image">
@@ -339,7 +339,7 @@
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
-			<include name="ParamSquareInfoTemplate">
+			<include content="ParamSquareInfoTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
 			<control type="image">
@@ -356,19 +356,19 @@
 	<include name="HomeSquareInfoItemlayout">
 		<control type="group">
 			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeSquareInfoItemlayout">
+			<include content="ParamHomeSquareInfoItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeSquareInfoItemlayout">
+			<include content="ParamHomeSquareInfoItemlayout">
 				<param name="left">604</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeSquareInfoItemlayout">
+			<include content="ParamHomeSquareInfoItemlayout">
 				<param name="left">935</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomeSquareInfoItemlayout">
+			<include content="ParamHomeSquareInfoItemlayout">
 				<param name="left">1266</param>
 				<param name="ID">4</param>
 			</include>
@@ -377,19 +377,19 @@
 	<include name="HomeSquareInfoFocusedlayout">
 		<control type="group">
 			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeSquareInfoFocusedlayout">
+			<include content="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeSquareInfoFocusedlayout">
+			<include content="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">604</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeSquareInfoFocusedlayout">
+			<include content="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">935</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomeSquareInfoFocusedlayout">
+			<include content="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">1266</param>
 				<param name="ID">4</param>
 			</include>
@@ -556,7 +556,7 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<include name="ParamSquareTemplate">
+			<include content="ParamSquareTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
 			<control type="image">
@@ -573,7 +573,7 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>			
-			<include name="ParamSquareTemplate">
+			<include content="ParamSquareTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>
 			<control type="image">
@@ -590,19 +590,19 @@
 	<include name="HomeSquareItemlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeSquareItemlayout">
+			<include content="ParamHomeSquareItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeSquareItemlayout">
+			<include content="ParamHomeSquareItemlayout">
 				<param name="left">604</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeSquareItemlayout">
+			<include content="ParamHomeSquareItemlayout">
 				<param name="left">935</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomeSquareItemlayout">
+			<include content="ParamHomeSquareItemlayout">
 				<param name="left">1266</param>
 				<param name="ID">4</param>
 			</include>
@@ -611,19 +611,19 @@
 	<include name="HomeSquareFocusedlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeSquareFocusedlayout">
+			<include content="ParamHomeSquareFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeSquareFocusedlayout">
+			<include content="ParamHomeSquareFocusedlayout">
 				<param name="left">604</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeSquareFocusedlayout">
+			<include content="ParamHomeSquareFocusedlayout">
 				<param name="left">935</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomeSquareFocusedlayout">
+			<include content="ParamHomeSquareFocusedlayout">
 				<param name="left">1266</param>
 				<param name="ID">4</param>
 			</include>
@@ -673,7 +673,7 @@
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>
-			<include name="ParamPosterTemplate">
+			<include content="ParamPosterTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>			
 			<control type="image">
@@ -690,7 +690,7 @@
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
 			<left>$PARAM[left]</left>			
-			<include name="ParamPosterTemplate">
+			<include content="ParamPosterTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>	
 			<control type="image">
@@ -707,27 +707,27 @@
 	<include name="HomePosterItemlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomePosterItemlayout">
+			<include content="ParamHomePosterItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomePosterItemlayout">
+			<include content="ParamHomePosterItemlayout">
 				<param name="left">501</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomePosterItemlayout">
+			<include content="ParamHomePosterItemlayout">
 				<param name="left">729</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomePosterItemlayout">
+			<include content="ParamHomePosterItemlayout">
 				<param name="left">957</param>
 				<param name="ID">4</param>
 			</include>
-			<include name="ParamHomePosterItemlayout">
+			<include content="ParamHomePosterItemlayout">
 				<param name="left">1185</param>
 				<param name="ID">5</param>
 			</include>
-			<include name="ParamHomePosterItemlayout">
+			<include content="ParamHomePosterItemlayout">
 				<param name="left">1413</param>
 				<param name="ID">6</param>
 			</include>
@@ -736,27 +736,27 @@
 	<include name="HomePosterFocusedlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomePosterFocusedlayout">
+			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomePosterFocusedlayout">
+			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">501</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomePosterFocusedlayout">
+			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">729</param>
 				<param name="ID">3</param>
 			</include>
-			<include name="ParamHomePosterFocusedlayout">
+			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">957</param>
 				<param name="ID">4</param>
 			</include>
-			<include name="ParamHomePosterFocusedlayout">
+			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">1185</param>
 				<param name="ID">5</param>
 			</include>
-			<include name="ParamHomePosterFocusedlayout">
+			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">1413</param>
 				<param name="ID">6</param>
 			</include>
@@ -839,7 +839,7 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<include name="ParamWideTemplate">
+			<include content="ParamWideTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>			
 			<control type="image">
@@ -856,7 +856,7 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<include name="ParamWideTemplate">
+			<include content="ParamWideTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>		
 			<control type="image">
@@ -874,15 +874,15 @@
 	<include name="HomeWideItemlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeWideItemlayout">
+			<include content="ParamHomeWideItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeWideItemlayout">
+			<include content="ParamHomeWideItemlayout">
 				<param name="left">707</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeWideItemlayout">
+			<include content="ParamHomeWideItemlayout">
 				<param name="left">1141</param>
 				<param name="ID">3</param>
 			</include>
@@ -891,15 +891,15 @@
 	<include name="HomeWideFocusedlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeWideFocusedlayout">
+			<include content="ParamHomeWideFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeWideFocusedlayout">
+			<include content="ParamHomeWideFocusedlayout">
 				<param name="left">707</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeWideFocusedlayout">
+			<include content="ParamHomeWideFocusedlayout">
 				<param name="left">1141</param>
 				<param name="ID">3</param>
 			</include>
@@ -949,7 +949,7 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<include name="ParamWideEpisodeTemplate">
+			<include content="ParamWideEpisodeTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>			
 			<control type="image">
@@ -966,7 +966,7 @@
 		<control type="group">
 			<left>$PARAM[left]</left>
 			<visible>!String.IsEmpty(ListItem.Property(InfoLabel$PARAM[ID]))</visible>
-			<include name="ParamWideEpisodeTemplate">
+			<include content="ParamWideEpisodeTemplate">
 				<param name="ID">$PARAM[ID]</param>
 			</include>	
 			<control type="image">
@@ -984,15 +984,15 @@
 	<include name="HomeWideEpisodeItemlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeWideEpisodeItemlayout">
+			<include content="ParamHomeWideEpisodeItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeWideEpisodeItemlayout">
+			<include content="ParamHomeWideEpisodeItemlayout">
 				<param name="left">707</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeWideEpisodeItemlayout">
+			<include content="ParamHomeWideEpisodeItemlayout">
 				<param name="left">1141</param>
 				<param name="ID">3</param>
 			</include>
@@ -1001,15 +1001,15 @@
 	<include name="HomeWideEpisodeFocusedlayout">
 		<control type="group">
 			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<include name="ParamHomeWideEpisodeFocusedlayout">
+			<include content="ParamHomeWideEpisodeFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
 			</include>
-			<include name="ParamHomeWideEpisodeFocusedlayout">
+			<include content="ParamHomeWideEpisodeFocusedlayout">
 				<param name="left">707</param>
 				<param name="ID">2</param>
 			</include>
-			<include name="ParamHomeWideEpisodeFocusedlayout">
+			<include content="ParamHomeWideEpisodeFocusedlayout">
 				<param name="left">1141</param>
 				<param name="ID">3</param>
 			</include>

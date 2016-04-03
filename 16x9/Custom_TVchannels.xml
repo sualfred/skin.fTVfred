@@ -46,7 +46,7 @@
 			<focusposition>1</focusposition>
 			<orientation>horizontal</orientation>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>		
-			<include name="ViewOpenAnimation">
+			<include content="ViewOpenAnimation">
 				<param name="pos1">193,10</param>
 				<param name="pos2">497,-174</param>
 				<param name="pos3">497,195</param>
@@ -54,7 +54,7 @@
 				<param name="pos5">497,10</param>
 				<param name="pos6">497,168</param>
 			</include>
-			<include name="ViewPVRLayout">
+			<include content="ViewPVRLayout">
 				<param name="ID">100</param>
 			</include>
 			<content>pvr://channels/tv/all channels/</content>

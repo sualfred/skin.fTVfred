@@ -88,7 +88,7 @@
 						<orientation>horizontal</orientation>
 						<control id="21" type="button">
 							<onup>11</onup>
-							<include name="BottomControlButtons">
+							<include content="BottomControlButtons">
 								<param name="name">enter</param>
 							</include>
 						</control>
@@ -179,7 +179,7 @@
 							<control id="20" type="button">
 								<ondown>21</ondown>
 								<label>12310</label>
-								<include name="BottomControlButtons">
+								<include content="BottomControlButtons">
 									<param name="name">previous</param>
 								</include>
 							</control>
@@ -187,7 +187,7 @@
 							<control id="22" type="button">
 								<ondown>21</ondown>
 								<label>12310</label>
-								<include name="BottomControlButtons">
+								<include content="BottomControlButtons">
 									<param name="name">next</param>
 								</include>
 							</control>
@@ -195,7 +195,7 @@
 							<control id="23" type="button">
 								<ondown>21</ondown>
 								<label>12310</label>
-								<include name="BottomControlButtons">
+								<include content="BottomControlButtons">
 									<param name="name">backspace</param>
 								</include>
 							</control>
@@ -203,7 +203,7 @@
 							<control id="301" type="button">
 								<ondown>21</ondown>
 								<label>12310</label>
-								<include name="BottomControlButtons">
+								<include content="BottomControlButtons">
 									<param name="name">cancel</param>
 								</include>
 							</control>
