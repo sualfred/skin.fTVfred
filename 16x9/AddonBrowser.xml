@@ -361,9 +361,10 @@
 					<onup>noop</onup>
 					<ondown>noop</ondown>
 					<scrolltime>0</scrolltime>
+					<defaultcontrol>0</defaultcontrol>
 					<orientation>vertical</orientation>
 					<viewtype label="535">list</viewtype>
-					<visible>String.IsEmpty(Container.FolderPath)</visible>
+					<visible>String.IsEmpty(Container.FolderPath) | String.IsEqual(Container.FolderPath,addons://)</visible>
 					<itemlayout height="120" width="638">
 						<control type="image">
 							<width>638</width>
@@ -444,7 +445,7 @@
 				<effect easing="inout" end="500,0" start="0,0" time="200" tween="sine" type="slide" />
 			</animation>
 			<control type="group">
-				<animation condition="[!String.IsEmpty(ListItem.Property(Addon.Version)) | Control.IsVisible(96)] + !String.IsEqual(Container.FolderPath,addons://)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
+				<animation condition="!String.IsEmpty(ListItem.Property(Addon.Version)) | Control.IsVisible(96)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
 				<control type="image">
 					<left>78</left>
 					<width>879</width>
@@ -815,6 +816,7 @@
 				<onup>noop</onup>
 				<ondown>noop</ondown>
 				<onback>SetFocus(50)</onback>
+				<defaultcontrol>0</defaultcontrol>
 				<movement>1</movement>
 				<scrolltime>0</scrolltime>
 				<focusposition>1</focusposition>
