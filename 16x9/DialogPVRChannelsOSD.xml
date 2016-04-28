@@ -45,7 +45,7 @@
 							<top>12</top>
 							<width>117</width>
 							<height>117</height>
-							<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="pvr/fallback_icon.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="progress">
@@ -53,9 +53,9 @@
 							<top>136</top>
 							<width>117</width>
 							<height>6</height>
-							<texturebg border="4">osd/progress_back.png</texturebg>
+							<texturebg border="2">views/ProgressBack.png</texturebg>
 							<lefttexture>-</lefttexture>
-							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<midtexture border="2">views/ProgressBar.png</midtexture>
 							<righttexture>-</righttexture>
 							<overlaytexture>-</overlaytexture>
 							<info>ListItem.Progress</info>
@@ -140,7 +140,7 @@
 							<top>12</top>
 							<width>117</width>
 							<height>117</height>
-							<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="pvr/fallback_icon.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="progress">
@@ -148,9 +148,9 @@
 							<top>136</top>
 							<width>117</width>
 							<height>6</height>
-							<texturebg border="4">osd/progress_back.png</texturebg>
+							<texturebg border="2">views/ProgressBack.png</texturebg>
 							<lefttexture>-</lefttexture>
-							<midtexture border="4">osd/progress_bar.png</midtexture>
+							<midtexture border="2">views/ProgressBar.png</midtexture>
 							<righttexture>-</righttexture>
 							<overlaytexture>-</overlaytexture>
 							<info>ListItem.Progress</info>
@@ -290,7 +290,7 @@
 					<top>15</top>
 					<width>auto</width>
 					<height>60</height>
-					<font>Med32</font>
+					<font>Light32</font>
 					<align>right</align>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
