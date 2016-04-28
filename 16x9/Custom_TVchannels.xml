@@ -40,7 +40,6 @@
 			<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
 			<include>ViewTypeBounceAnimation</include>
 			<ondown>1001</ondown>
-			<oninfo condition="!String.IsEmpty(Container(100).ListItem.Plot) | !String.IsEmpty(Container(100).ListItem.PlotOutline)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[Plot]')</oninfo>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<preloaditems>2</preloaditems>
 			<focusposition>1</focusposition>

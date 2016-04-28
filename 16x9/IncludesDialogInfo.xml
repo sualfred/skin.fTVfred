@@ -1075,7 +1075,6 @@
 					<autoscroll>false</autoscroll>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[ListItem.Label,[B],[/B][CR]]$VAR[Plot,[LIGHT],[/LIGHT]]</label>
-					<visible>Window.IsVisible(1106)</visible>
 				</control>	
 				<!-- Arrow up -->
 				<control type="image">

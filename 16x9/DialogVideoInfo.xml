@@ -11,7 +11,7 @@
 	<!--<onunload>SetFocus(50)</onunload>-->
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>		
-		<include condition="!Window.IsActive(1106)">IncludeDialogInfoDefault</include>
-		<include condition="Window.IsActive(1106)">IncludeDialogInfoSpecial</include>
+		<include condition="!String.IsEmpty(ListItem.DBType)">IncludeDialogInfoDefault</include>
+		<include condition="String.IsEmpty(ListItem.DBType)">IncludeDialogInfoSpecial</include>
 	</controls>
 </window>
