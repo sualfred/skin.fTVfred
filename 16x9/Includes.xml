@@ -12,6 +12,7 @@
 	<include file="Variables.xml" />
 	<include file="IncludesDialogSettings.xml" />
 	<include file="IncludesDialogSelect.xml" />
+	<include file="IncludesDialogInfo.xml" />
 	<!-- Widths -->
 	<include name="Width242">
 		<width>242</width>
