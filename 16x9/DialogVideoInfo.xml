@@ -230,21 +230,21 @@
 					<height>24</height>
 					<texture>$INFO[Window(home).Property(TVShowRating),rating/rating,.png]</texture>
 					<aspectratio align="left">keep</aspectratio>
-					<visible>!String.IsEmpty(Window(home).Property(TVShowRating)) + String.IsEmpty(ListItem.Rating) + !Container.Content(episodes)</visible>
+					<visible>!String.IsEmpty(Window(home).Property(TVShowRating)) + String.IsEmpty(ListItem.Rating) + !String.IsEqual(ListItem.DBType,episode)</visible>
 				</control>
 				<control type="image">
 					<top>4</top>
 					<width>48</width>
 					<height>23</height>
 					<texture>views/imdb.png</texture>
-					<visible>!String.IsEmpty(ListItem.Rating) + Container.Content(movies)</visible>
+					<visible>!String.IsEmpty(ListItem.Rating) + String.IsEqual(ListItem.DBType,movie)</visible>
 				</control>
 				<control type="image">
 					<top>3</top>
 					<width>47</width>
 					<height>23</height>
 					<texture>views/tvdb.png</texture>
-					<visible>!String.IsEmpty(ListItem.Rating) + !Container.Content(movies)</visible>
+					<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEqual(ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
 					<top>-13</top>
@@ -376,7 +376,7 @@
 				<include>DialogVideoInfoAnimation</include>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
-				<visible>String.IsEmpty(ListItem.Director) + Container.Content(tvshows) + !String.IsEmpty(Window(Home).Property(NextAired.NextDay))</visible>
+				<visible>String.IsEmpty(ListItem.Director) + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.NextDay))</visible>
 				<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(50) + !Control.HasFocus(5000)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 				<control type="label">
@@ -439,7 +439,7 @@
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
 					<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
-					<usealttexture>Container.Content(TVShows) | StringCompare(Container.Content,seasons)</usealttexture>
+					<usealttexture>String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,seasons)</usealttexture>
 				</control>
 				<!-- User Rating Button -->
 				<control id="1002" type="button">
@@ -527,8 +527,8 @@
 					<onup condition="Control.IsVisible(96)">3002</onup>
 					<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					<ondown condition="Control.IsVisible(50)">50</ondown>
-					<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 					<font>Med24</font>
 					<label>Artwork Downloader</label>
 					<textoffsetx>28</textoffsetx>
@@ -536,7 +536,7 @@
 					<focusedcolor>ff222222</focusedcolor>
 					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 				</control>
 				<!-- Cinema Experience Button -->
 				<control id="21" type="button">
@@ -556,7 +556,7 @@
 					<focusedcolor>ff222222</focusedcolor>
 					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-					<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
+					<visible>System.HasAddon(script.cinema.experience) + String.IsEqual(ListItem.DBType,movie)</visible>
 				</control>
 			</control>
 			<!-- Dummy Button grouplist -->
