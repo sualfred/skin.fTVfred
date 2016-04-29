@@ -2741,6 +2741,7 @@
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.PlotOutline]</value>
+		<value>$LOCALIZE[195]</value>
 	</variable>
 	<variable name="Day0">
 		<value condition="String.IsEqual(Window(Weather).Property(Day0.Title),$LOCALIZE[11]) | String.IsEqual(Window(Weather).Property(Day0.Title),$LOCALIZE[41])">$LOCALIZE[41]</value>

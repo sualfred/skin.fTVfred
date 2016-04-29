@@ -481,6 +481,12 @@
 			<property name="Icon4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Icon]</property>
 			<property name="Icon5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Icon]</property>
 			<property name="Icon6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Icon]</property>
+			<property name="Poster1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Art(poster)]</property>
+			<property name="Poster2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Art(poster)]</property>
+			<property name="Poster3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Art(poster)]</property>
+			<property name="Poster4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Art(poster)]</property>
+			<property name="Poster5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Art(poster)]</property>
+			<property name="Poster6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Art(poster)]</property>
 			<property name="InfoLabel1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Label]</property>
 			<property name="InfoLabel2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Label]</property>
 			<property name="InfoLabel3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Label]</property>

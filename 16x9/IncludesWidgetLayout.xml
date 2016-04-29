@@ -645,7 +645,7 @@
 			<height>334</height>
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
-			<texture fallback="views/poster_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
+			<texture fallback="views/poster_fallback.png" background="true">$INFO[ListItem.Property(Poster$PARAM[ID])]</texture>
 		</control>
 		<control type="image">
 			<top>13</top>
