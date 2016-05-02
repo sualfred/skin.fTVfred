@@ -48,7 +48,7 @@
 					<font>Light32</font>
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
-					<label>$NUMBER[7]</label>
+					<label>$NUMBER[8]</label>
 				</control>
 			</control>
 			<control type="group">

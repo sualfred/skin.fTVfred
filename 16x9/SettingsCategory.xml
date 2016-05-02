@@ -4,8 +4,8 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<onload>ClearProperty(SettingHeading,home)</onload>
 	<onload>ClearProperty(SettingInfo,home)</onload>
-	<onload condition="!String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)">SetFocus(3)</onload>
-	<onload condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)">SetFocus(9001)</onload>
+	<onload condition="!String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">SetFocus(3)</onload>
+	<onload condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">SetFocus(9001)</onload>
 	<controls>
 		<control id="6" type="label">
 			<font>-</font>
@@ -51,10 +51,9 @@
 				<font>Light32</font>
 				<aligny>bottom</aligny>
 				<textcolor>ff505050</textcolor>
-				<label>$NUMBER[7]</label>
+				<label>$NUMBER[8]</label>
 			</control>
 		</control>
-		<!-- -1 -->
 		<control type="group">
 			<left>-28</left>
 			<top>289</top>
@@ -103,7 +102,7 @@
 			<control type="group">
 				<left>523</left>
 				<top>289</top>
-				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),7)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),8)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -143,7 +142,7 @@
 			<control type="group">
 				<left>823</left>
 				<top>289</top>
-				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),6)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),7)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -183,7 +182,7 @@
 			<control type="group">
 				<left>1123</left>
 				<top>289</top>
-				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),5)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),6)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -223,7 +222,7 @@
 			<control type="group">
 				<left>1423</left>
 				<top>289</top>
-				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),4)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),5)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -263,7 +262,7 @@
 			<control type="group">
 				<left>1723</left>
 				<top>289</top>
-				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),3)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),4)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -359,7 +358,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)</visible>
+				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)</visible>
 				<animation reversible="false" type="WindowOpen">
 					<effect delay="200" easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>
@@ -399,7 +398,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)</visible>
+				<visible>String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)</visible>
 				<animation condition="!Window.Previous(systeminfo) + !Window.Previous(profiles)" reversible="false" type="WindowOpen">
 					<effect delay="200" easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>

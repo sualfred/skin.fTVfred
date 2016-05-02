@@ -360,7 +360,7 @@
 						<ondown>noop</ondown>
 						<onleft>Back</onleft>
 						<onright>1000</onright>
-						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+						<onclick>ActivateWindow(settings)</onclick>
 						<texturefocus border="3">common/button_fo.png</texturefocus>
 						<texturenofocus border="3">common/button_nf.png</texturenofocus>
 					</control>

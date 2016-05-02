@@ -154,7 +154,6 @@
 							<width>605</width>
 							<height>165</height>
 							<font>Med32</font>
-							<scroll>false</scroll>
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<align>left</align>
@@ -233,7 +232,6 @@
 							<width>605</width>
 							<height>165</height>
 							<font>Med32</font>
-							<scroll>false</scroll>
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<align>left</align>

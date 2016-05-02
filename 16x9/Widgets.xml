@@ -447,7 +447,7 @@
 			<param name="Message">$LOCALIZE[31119]</param>
 			<param name="ShowButton">true</param>
 			<param name="Button">$LOCALIZE[31285]</param>
-			<param name="Action">ActivateWindow(weathersettings)</param>
+			<param name="Action">ActivateWindow(settings)</param>
 		</include>
 		<!-- Empty widgets -->
 		<include content="NoContentMessage">
