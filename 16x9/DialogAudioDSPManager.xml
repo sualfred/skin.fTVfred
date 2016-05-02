@@ -51,7 +51,7 @@
 						<width>422</width>
 						<height>113</height>
 						<font>Light32</font>
-						<textwidth>422</textwidth>
+						<textwidth>350</textwidth>
 						<textoffsetx>40</textoffsetx>
 						<textcolor>ff505153</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -67,7 +67,7 @@
 						<width>422</width>
 						<height>113</height>
 						<font>Light32</font>
-						<textwidth>422</textwidth>
+						<textwidth>350</textwidth>
 						<textoffsetx>40</textoffsetx>
 						<textcolor>ffffaf37</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -77,7 +77,7 @@
 						<width>422</width>
 						<height>113</height>
 						<font>Light32</font>
-						<textwidth>422</textwidth>
+						<textwidth>350</textwidth>
 						<textoffsetx>40</textoffsetx>
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
