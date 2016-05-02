@@ -4,8 +4,8 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<onload>ClearProperty(SettingHeading,home)</onload>
 	<onload>ClearProperty(SettingInfo,home)</onload>
-	<onload condition="!String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)">SetFocus(3)</onload>
-	<onload condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)">SetFocus(9001)</onload>
+	<onload condition="!String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)">SetFocus(3)</onload>
+	<onload condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)">SetFocus(9001)</onload>
 	<controls>
 		<control id="6" type="label">
 			<font>-</font>
@@ -51,13 +51,14 @@
 				<font>Light32</font>
 				<aligny>bottom</aligny>
 				<textcolor>ff505050</textcolor>
-				<label>$NUMBER[10]</label>
+				<label>$NUMBER[7]</label>
 			</control>
 		</control>
+		<!-- -1 -->
 		<control type="group">
 			<left>-28</left>
 			<top>289</top>
-			<visible>!Window.IsVisible(appearancesettings)</visible>
+			<visible>!Window.IsVisible(InterfaceSettings)</visible>
 			<animation condition="!Window.Previous(systeminfo) + !Window.Previous(profiles)" easing="inout" effect="slide" end="0,0" start="-49,0" time="125" tween="sine">WindowOpen</animation>
 			<animation condition="!Window.Next(systeminfo) + !Window.Next(profiles)" easing="inout" effect="slide" end="-49,0" start="0,0" time="125" tween="sine">WindowClose</animation>
 			<control type="group">
@@ -98,10 +99,11 @@
 		<control type="group">
 			<animation easing="inout" effect="slide" end="589,0" start="0,0" time="125" tween="sine">WindowOpen</animation>
 			<animation easing="inout" effect="slide" end="0,0" start="589,0" time="125" tween="sine">WindowClose</animation>
+			<!-- 1 -->
 			<control type="group">
 				<left>523</left>
 				<top>289</top>
-				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),7)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -136,11 +138,12 @@
 						<texture>views/OverlayNF.png</texture>
 					</control>
 				</control>
-			</control>
+			</control>			
+			<!-- 2 -->
 			<control type="group">
 				<left>823</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),6)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -175,11 +178,12 @@
 						<texture>views/OverlayNF.png</texture>
 					</control>
 				</control>
-			</control>
+			</control>			
+			<!-- 3 -->
 			<control type="group">
 				<left>1123</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),5)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -214,11 +218,12 @@
 						<texture>views/OverlayNF.png</texture>
 					</control>
 				</control>
-			</control>
+			</control>			
+			<!-- 4 -->
 			<control type="group">
 				<left>1423</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),4)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -253,11 +258,12 @@
 						<texture>views/OverlayNF.png</texture>
 					</control>
 				</control>
-			</control>
+			</control>			
+			<!-- 5 -->
 			<control type="group">
 				<left>1723</left>
 				<top>289</top>
-				<visible>!Window.IsVisible(weathersettings) + !Window.IsVisible(picturessettings) + !Window.IsVisible(systemsettings) + !Window.IsVisible(servicesettings) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>Integer.IsLess(Window(settings).Property(SettingsCurrentItem),3)</visible>
 				<control type="group">
 					<width>333</width>
 					<height>497</height>
@@ -294,6 +300,7 @@
 				</control>
 			</control>
 		</control>
+		<!-- Active settings category -->
 		<control type="group">
 			<left>223</left>
 			<top>289</top>
@@ -352,7 +359,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)</visible>
 				<animation reversible="false" type="WindowOpen">
 					<effect delay="200" easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>
@@ -392,7 +399,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(Window(settings).Property(SettingsCurrentItem),10)</visible>
+				<visible>String.IsEqual(Window(settings).Property(SettingsCurrentItem),7)</visible>
 				<animation condition="!Window.Previous(systeminfo) + !Window.Previous(profiles)" reversible="false" type="WindowOpen">
 					<effect delay="200" easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>

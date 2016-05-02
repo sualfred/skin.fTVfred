@@ -492,20 +492,12 @@ msgid "Manage, browse for, install and modify Add-ons."
 msgstr "Manage, browse for, install and modify Add-ons."
 
 msgctxt "#31117"
-msgid "Manage your video library, set video playback options, change video listing options and set subtitle fonts."
-msgstr "Manage your video library, set video playback options, change video listing options and set subtitle fonts."
+msgid "Manage your media library, set database options, change media listing options and set subtitle fonts."
+msgstr "Manage your media library, set database options, change media listing options and set subtitle fonts."
 
 msgctxt "#31118"
-msgid "Manage your music library, set music playback options, change music listing options, and setup song submission."
-msgstr "Manage your music library, set music playback options, change music listing options, and setup song submission."
-
-msgctxt "#31119"
-msgid "Manage your weather addons and set cities to collect weather information."
-msgstr "Manage your weather addons and set cities to collect weather information."
-
-msgctxt "#31120"
-msgid "Set picture listing options and configure slideshow settings."
-msgstr "Set picture listing options and configure slideshow settings."
+msgid "Manage your player settings, set media playback options, change the behaviour how supported media files will be handled."
+msgstr "Manage your player settings, set media playback options, change the behaviour how supported media files will be handled"
 
 msgctxt "#31121"
 msgid ""
