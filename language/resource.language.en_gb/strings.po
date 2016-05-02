@@ -492,8 +492,8 @@ msgid "Manage, browse for, install and modify Add-ons."
 msgstr "Manage, browse for, install and modify Add-ons."
 
 msgctxt "#31117"
-msgid "Manage your media library, set database options, change media listing options and set subtitle fonts."
-msgstr "Manage your media library, set database options, change media listing options and set subtitle fonts."
+msgid "Manage your media library, set database options, change media listing options."
+msgstr "Manage your media library, set database options, change media listing options."
 
 msgctxt "#31118"
 msgid "Manage your player settings, set media playback options, change the behaviour how supported media files will be handled."
