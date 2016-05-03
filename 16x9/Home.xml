@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<!-- home -->
-	<menucontrol>5000</menucontrol>
+	<menucontrol>333</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90</defaultcontrol>
 	<!-- Preload properties -->
@@ -26,7 +26,7 @@
 				<label>$INFO[Weather.Conditions]</label>
 			</control>
 			<!-- Fake context menu -->
-			<control type="button" id="5000">
+			<control type="button" id="333">
 				<visible>String.IsEmpty(Window(home).Property(ReloadTriggered))</visible>
 				<include>HiddenControl</include>
 				<onfocus>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onfocus>
