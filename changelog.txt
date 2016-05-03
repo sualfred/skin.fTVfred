@@ -1,3 +1,7 @@
+2.2.2
+!This is the last update for the Jarvis version!
+- Quick fix for widget group 5
+ 
 2.2.1
 - Repo push
 - Fixed preload again
