@@ -19,21 +19,26 @@
 		</control>
 	</include>
 	<include name="EmptyFocusedLayout">
-		<control type="group">
-			<visible>String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
-			<left>260</left>					
-			<control type="textbox">
-				<width>1150</width>
-				<height>355</height>
-				<font>Bold34</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>ffdedede</textcolor>
-				<label>$LOCALIZE[31268]</label>
-				<animation condition="true" effect="slide" end="-108,-26" time="0">Conditional</animation>
-				<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+		<param name="left" default="260"/>
+		<param name="top" default="0"/>
+		<definition>
+			<control type="group">
+				<visible>String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+				<top>$PARAM[top]</top>
+				<left>$PARAM[left]</left>
+				<control type="textbox">
+					<width>1150</width>
+					<height>355</height>
+					<font>Bold34</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>ffdedede</textcolor>
+					<label>$LOCALIZE[31268]</label>
+					<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+					<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+				</control>
 			</control>
-		</control>
+		</definition>
 	</include>
 
 	<!-- Banner Layout -->

@@ -304,7 +304,7 @@
 						<include>HomeWideEpisodeFocusedlayout</include>
 						<include>HomeSquareFocusedlayout</include>
 						<include>HomeSquareInfoFocusedlayout</include>
-						<include>EmptyFocusedLayout</include>
+						<include content="EmptyFocusedLayout" />
 					</control>
 				</focusedlayout>
 				<focusedlayout height="370" width="2000" condition="!Integer.IsGreater(Container($PARAM[ID]0).NumItems,1)">
@@ -321,10 +321,10 @@
 						<include>HomeWideEpisodeFocusedlayout</include>
 						<include>HomeSquareFocusedlayout</include>
 						<include>HomeSquareInfoFocusedlayout</include>
-						<control type="group">
-							<animation effect="slide" time="0" start="0,0" end="-37,0" condition="true">Conditional</animation>
-							<include>EmptyFocusedLayout</include>
-						</control>
+						<include content="EmptyFocusedLayout">
+							<param name="top">-78</param>
+							<param name="left">-8</param>
+						</include>
 					</control>
 				</focusedlayout>
 				<content>
