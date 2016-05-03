@@ -30,7 +30,7 @@
 				<aligny>center</aligny>
 				<textcolor>ffdedede</textcolor>
 				<label>$LOCALIZE[31268]</label>
-				<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+				<animation condition="true" effect="slide" end="-108,-26" time="0">Conditional</animation>
 				<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 			</control>
 		</control>
