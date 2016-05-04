@@ -374,7 +374,7 @@
 				<height>32</height>
 				<font>Bold30</font>
 				<textcolor>ff717171</textcolor>
-				<label>$INFO[Window.Property(title),Titles with ]</label>
+				<label>$INFO[Window.Property(title),$LOCALIZE[31204] ]</label>
 				<visible>!String.IsEmpty(Window(home).Property(StarredInTV)) + !String.IsEmpty(Container(250).ListItem.Label) + !Control.HasFocus(250)</visible>
 				<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
 				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
