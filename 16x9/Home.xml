@@ -100,7 +100,7 @@
 				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
-				<oninfo>SetFocus(5000)</oninfo>
+				<oninfo>SetFocus(333)</oninfo>
 				<!--on right-->
 				<onright condition="!String.IsEmpty(Container(99).ListItem.Property(ftvWidget)) | String.IsEqual(Container(99).ListItem.Property(defaultID),settings)">ClearProperty(MainMenuFocus,home)</onright>
 				<onright condition="String.Contains(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
