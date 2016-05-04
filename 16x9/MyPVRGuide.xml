@@ -216,7 +216,22 @@
                             <height>126</height>
                             <showonepage>false</showonepage>
                             <orientation>vertical</orientation>
-                        </control>                    
+                        </control>
+                        <!-- More button -->
+                        <control id="3000" type="button">
+                            <left>1194</left>
+                            <top>192</top>
+                            <width>37</width>
+                            <height>23</height>
+                            <onup>100</onup>
+                            <ondown>noop</ondown>
+                            <onleft>100</onleft>
+                            <onright>100</onright>
+                            <onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[Container.ListItem.Title],text='$ESCVAR[Plot]')</onclick>
+                            <texturefocus>views/more_fo.png</texturefocus>
+                            <texturenofocus>views/more_nf.png</texturenofocus>
+                            <visible>!Window.IsVisible(textviewer) + Control.IsVisible(99)</visible>
+                        </control>
                         <!-- More button -->
                         <control type="image">
                             <left>1194</left>
@@ -224,7 +239,7 @@
                             <width>37</width>
                             <height>23</height>
                             <texture>views/more_nf.png</texture>
-                            <visible>Control.IsVisible(99)</visible>
+                            <visible>Window.IsVisible(textviewer)</visible>
                         </control>
                     </control>
                 </control>

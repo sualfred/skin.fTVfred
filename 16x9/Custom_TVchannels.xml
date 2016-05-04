@@ -28,6 +28,7 @@
 			<top>242</top>
 			<width>2200</width>
 			<height>576</height>
+			<oninfo condition="!String.IsEmpty(Container(100).ListItem.Plot) | !String.IsEmpty(Container(100).ListItem.PlotOutline)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[Plot]')</oninfo>
 			<onup>SetProperty(LabelsDelayFadeAnimation,1,home)</onup>
 			<onback>SetProperty(LabelsDelayFadeAnimation,1,home)</onback>
 			<onback condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,$INFO[Container(100).CurrentItem,-])</onback>
@@ -292,10 +293,9 @@
 					<onleft>100</onleft>
 					<onright>100</onright>
 					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[Plot]')</onclick>
-					<visible>Control.IsVisible(99)</visible>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
-					<visible>!Window.IsVisible(textviewer)</visible>
+					<visible>!Window.IsVisible(textviewer) + Control.IsVisible(99)</visible>
 				</control>
 				<!-- More button -->
 				<control type="image">

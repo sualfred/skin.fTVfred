@@ -323,7 +323,7 @@
 						<include>HomeSquareInfoFocusedlayout</include>
 						<include content="EmptyFocusedLayout">
 							<param name="top">0</param>
-							<param name="left">260</param>
+							<param name="left">223</param>
 						</include>
 					</control>
 				</focusedlayout>
