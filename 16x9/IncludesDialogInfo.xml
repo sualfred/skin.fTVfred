@@ -422,7 +422,7 @@
 						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<label>$VAR[VideoInfoButton8]</label>
-						<altlabel>Browse[CR]TV Show</altlabel>
+						<altlabel>$LOCALIZE[31074]</altlabel>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
