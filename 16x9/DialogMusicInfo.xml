@@ -433,7 +433,7 @@
 					<align>left</align>
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
-					<label>$VAR[MusicInfoHeading]</label>
+					<label>$VAR[MusicInfoLabel]</label>
 				</control>
 				<!-- Info -->
 				<control type="textbox">
