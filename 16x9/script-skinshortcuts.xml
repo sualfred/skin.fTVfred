@@ -452,8 +452,8 @@
 					<textoffsetx>23</textoffsetx>
 					<textoffsety>27</textoffsety>
 					<label>186</label>
-					<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=5&amp;group=mainmenu|shutdown)</onback>
-					<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
+					<onback condition="!Window.IsVisible(home)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=5&amp;group=mainmenu|shutdown)</onback>
+					<onclick condition="!Window.IsVisible(home)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
 					<onclick>Close</onclick>
 				</control>
 			</control>
