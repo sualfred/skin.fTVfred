@@ -119,7 +119,6 @@
 								<width>60</width>
 								<height>30</height>
 								<font>Light30Spaced</font>
-								<align>right</align>
 								<textcolor>ff636364</textcolor>
 								<label> | $INFO[Container(5).NumItems]</label>
 							</control>
