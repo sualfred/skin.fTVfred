@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<controls>
-
-
-		
+	<controls>		
 		<!-- Background -->
 		<include>DialogTextBackgroundImage</include>
-
+		<!-- Dialog -->
 		<control type="group">
 			<animation reversible="true" type="WindowOpen">
 				<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
@@ -93,7 +90,7 @@
 							<width>100</width>
 							<height>547</height>
 							<texture flipx="true">dialogs/controller_bars.png</texture>
-							<colordiffuse>ffffaf37</colordiffuse>					
+							<colordiffuse>$VAR[LeftControllerImg]</colordiffuse>
 						</control>
 					</control>
 					<!-- Controller image -->
@@ -155,7 +152,7 @@
 							<width>100</width>
 							<height>547</height>
 							<texture>dialogs/controller_bars.png</texture>
-							<colordiffuse>ffffaf37</colordiffuse>
+							<colordiffuse>$VAR[RightControllerImg]</colordiffuse>
 						</control>
 					</control>
 				</control>

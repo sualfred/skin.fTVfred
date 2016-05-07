@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="LeftControllerImg">
+		<value condition="!ControlGroup(3).HasFocus">ff5b6064</value>
+		<value>ffffaf37</value>
+	</variable>
+	<variable name="RightControllerImg">
+		<value condition="!ControlGroup(5).HasFocus">ff5b6064</value>
+		<value>ffffaf37</value>
+	</variable>
 	<variable name="ExtendendMenuColor">
 		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value>ff505559</value>
