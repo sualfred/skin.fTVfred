@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+
+
+		
+		<!-- Background -->
+		<include>DialogTextBackgroundImage</include>
+
+		<control type="group">
+			<animation reversible="true" type="WindowOpen">
+				<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
+				<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
+			</animation>
+			<animation reversible="true" type="WindowClose">
+				<effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
+				<effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
+			</animation>
+			<control type="group">
+				<centertop>50%</centertop>
+				<width>1920</width>
+				<height>884</height>
+				<!-- Plot background -->
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>1573</width>
+					<height>884</height>
+					<texture border="4,7,4,7">views/text_viewer_background.png</texture>
+				</control>
+				<!-- Headline -->
+				<control type="label">
+					<top>40</top>
+					<height>38</height>
+					<font>Bold38</font>
+					<align>center</align>
+					<textcolor>ffdadada</textcolor>
+					<label>$LOCALIZE[35058]</label>
+				</control>
+				<control type="group" id="1000">
+					<top>50</top>
+					<centerleft>50%</centerleft>
+					<width>1573</width>
+					<!-- Profiles -->
+					<control type="group">
+						<control type="grouplist">
+							<top>95</top>
+							<width>360</width>
+							<height>30</height>
+							<align>right</align>
+							<orientation>horizontal</orientation>
+							<control type="label">
+								<width max="280">auto</width>
+								<height>30</height>
+								<font>Med30</font>
+								<label>[CAPITALIZE]$LOCALIZE[13200][/CAPITALIZE]</label>
+								<textcolor>ffdadada</textcolor>
+							</control>
+							<control type="label">
+								<width>60</width>
+								<height>30</height>
+								<font>Light30Spaced</font>
+								<textcolor>ff636364</textcolor>
+								<label> | $INFO[Container(3).NumItems]</label>
+							</control>
+						</control>
+						<control type="grouplist" id="3">
+							<top>140</top>
+							<width>360</width>
+							<height>490</height>
+							<onleft>noop</onleft>
+							<onright>5</onright>
+							<onup>noop</onup>
+							<ondown>2000</ondown>
+							<itemgap>0</itemgap>
+						</control>
+						<control type="button" id="10">
+							<width>360</width>
+							<height>70</height>
+							<font>Light30</font>
+							<textcolor>ff5b6064</textcolor>
+							<focusedcolor>ffffc24b</focusedcolor>
+							<selectedcolor>ffffffff</selectedcolor>
+							<textoffsetx>40</textoffsetx>
+							<texturenofocus>-</texturenofocus>
+							<texturefocus>-</texturefocus>
+							<align>right</align>
+						</control>
+						<control type="image">
+							<top>112</top>
+							<left>364</left>
+							<width>100</width>
+							<height>547</height>
+							<texture flipx="true">dialogs/controller_bars.png</texture>
+							<colordiffuse>ffffaf37</colordiffuse>					
+						</control>
+					</control>
+					<!-- Controller image -->
+					<control type="gamecontroller" id="31">
+						<centerleft>50%</centerleft>
+						<top>195</top>
+						<width>547</width>
+						<height>343</height>
+					</control>					
+					<!-- Buttons -->
+					<control type="group">
+						<control type="grouplist">
+							<right>-20</right>
+							<top>95</top>
+							<width>360</width>
+							<height>30</height>
+							<orientation>horizontal</orientation>
+							<control type="label">
+								<width max="280">auto</width>
+								<height>30</height>
+								<font>Med30</font>
+								<label>$LOCALIZE[35059]</label>
+								<textcolor>ffdadada</textcolor>>
+							</control>
+							<control type="label">
+								<width>60</width>
+								<height>30</height>
+								<font>Light30Spaced</font>
+								<align>right</align>
+								<textcolor>ff636364</textcolor>
+								<label> | $INFO[Container(5).NumItems]</label>
+							</control>
+						</control>
+						<control type="grouplist" id="5">
+							<right>-40</right>
+							<top>140</top>
+							<width>400</width>
+							<height>490</height>
+							<onleft>3</onleft>
+							<onright>noop</onright>
+							<onup>noop</onup>
+							<ondown>2000</ondown>
+							<itemgap>0</itemgap>
+						</control>
+						<control type="button" id="7">
+							<width>400</width>
+							<height>70</height>
+							<font>Light30</font>
+							<textcolor>ff5b6064</textcolor>
+							<focusedcolor>ffffc24b</focusedcolor>
+							<selectedcolor>ffffffff</selectedcolor>
+							<textoffsetx>40</textoffsetx>
+							<texturenofocus>-</texturenofocus>
+							<texturefocus>-</texturefocus>
+						</control>
+						<control type="image">
+							<top>112</top>
+							<right>364</right>
+							<width>100</width>
+							<height>547</height>
+							<texture>dialogs/controller_bars.png</texture>
+							<colordiffuse>ffffaf37</colordiffuse>
+						</control>
+					</control>
+				</control>
+				<!-- Button grouplist -->
+				<control type="grouplist" id="2000">
+					<centerleft>50%</centerleft>
+					<bottom>40</bottom>
+					<width>1540</width>
+					<height>76</height>
+					<itemgap>0</itemgap>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>1000</onup>
+					<ondown>noop</ondown>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<control type="button" id="20">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>21452</label>
+					</control>
+					<control type="button" id="18">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>186</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
