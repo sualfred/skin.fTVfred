@@ -3,11 +3,8 @@
 	<!-- mediasource -->
 	<defaultcontrol always="true">5</defaultcontrol>
 	<controls>
-
-		
 		<!-- Background -->
 		<include>DialogTextBackgroundImage</include>
-
 		<control type="group">
 			<animation reversible="true" type="WindowOpen">
 				<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
@@ -118,10 +115,10 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<font>Med24</font>
-						<onup>SetFocus(3000)</onup>
-						<onup>PageUp(3000)</onup>
-						<ondown>SetFocus(3000)</ondown>
-						<ondown>PageDown(3000)</ondown>
+						<onup condition="Container(3001).HasPrevious">SetFocus(3000)</onup>
+						<onup condition="Container(3001).HasPrevious">PageUp(3000)</onup>
+						<ondown condition="Container(3001).HasNext">SetFocus(3000)</ondown>
+						<ondown condition="Container(3001).HasNext">PageDown(3000)</ondown>
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
 						<label>$LOCALIZE[222]</label>
@@ -134,8 +131,10 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<font>Med24</font>
-						<onup>PageUp(3000)</onup>
-						<ondown>PageDown(3000)</ondown>
+						<onup condition="Container(3001).HasPrevious">SetFocus(3000)</onup>
+						<onup condition="Container(3001).HasPrevious">PageUp(3000)</onup>
+						<ondown condition="Container(3001).HasNext">SetFocus(3000)</ondown>
+						<ondown condition="Container(3001).HasNext">PageDown(3000)</ondown>
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
 						<label>-</label>
