@@ -3,12 +3,10 @@
 	<!-- home -->
 	<menucontrol>333</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol>90</defaultcontrol>
+	<defaultcontrol>89</defaultcontrol>
 	<!-- Preload properties -->
 	<onload condition="Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))">SetProperty(Preload,1,Home)</onload>
 	<onload>SetProperty(PreloadTimeout,1,Home)</onload>
-	<onload condition="!System.HasAlarm(PreloadTimeout)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:10,silent)</onload>
-	<onload condition="!System.HasAlarm(WaitForControl)">AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onload>
 	<!-- Main menu focus position properties -->
 	<onload condition="String.IsEmpty(Window(home).Property(PreloadDone)) + String.IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + String.IsEqual(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
@@ -549,6 +547,12 @@
 			</control>
 		</control>
 		<!-- Check if Preloading is in progress -->
+		<control type="button" id="89">
+			<include>HiddenControl</include>			
+			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:10,silent)</onfocus>
+			<onfocus>AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onfocus>
+			<onfocus>SetFocus(90)</onfocus>
+		</control>
 		<control type="button" id="90">
 			<label>Loop</label>
 			<include>HiddenControl</include>
