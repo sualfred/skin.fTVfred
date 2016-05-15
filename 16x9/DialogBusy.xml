@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- busydialog -->
+	<onunload condition="Window.IsVisible(home)">SetFocus(90)</onunload>
 	<controls>
-		<!-- Background -->
-		<include>DialogBackgroundImage</include>
-		<!-- Busy -->
-		<control type="image">
-			<centerleft>50%</centerleft>
-			<centertop>50%</centertop>
-			<width>94</width>
-			<height>94</height>
-			<texture>common/spinner_outer.png</texture>
-			<animation effect="rotate" end="-360" center="auto" time="1120" loop="true" reversible="false" condition="true">Conditional</animation>
-		</control>
-		<control type="image">
-			<centerleft>50%</centerleft>
-			<centertop>50%</centertop>
-			<width>94</width>
-			<height>94</height>
-			<texture>common/spinner_inner.png</texture>
-			<animation effect="rotate" end="360" center="auto" time="1680" loop="true" reversible="false" condition="true">Conditional</animation>
+		<control type="group">
+			<visible>!Window.IsVisible(home)</visible>
+			<!-- Background -->
+			<include>DialogBackgroundImage</include>
+			<!-- Busy -->
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>94</width>
+				<height>94</height>
+				<texture>common/spinner_outer.png</texture>
+				<animation effect="rotate" end="-360" center="auto" time="1120" loop="true" reversible="false" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>94</width>
+				<height>94</height>
+				<texture>common/spinner_inner.png</texture>
+				<animation effect="rotate" end="360" center="auto" time="1680" loop="true" reversible="false" condition="true">Conditional</animation>
+			</control>
 		</control>
 	</controls>
 </window>
