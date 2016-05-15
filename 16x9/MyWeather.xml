@@ -2,7 +2,7 @@
 <window>
 	<!-- weather -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol always="true">1000</defaultcontrol>
 	<onunload condition="String.IsEqual(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onunload>
 	<onunload condition="String.IsEqual(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onunload>
 	<onunload condition="String.IsEqual(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onunload>
@@ -341,7 +341,7 @@
 						<width>160</width>
 						<height>64</height>
 						<align>center</align>
-						<label>35500</label>
+						<label>$LOCALIZE[31119]</label>
 						<onup>Back</onup>
 						<ondown>101</ondown>
 						<onleft>Back</onleft>

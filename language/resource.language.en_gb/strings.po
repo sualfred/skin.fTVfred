@@ -151,12 +151,8 @@ msgid "Widget Type"
 msgstr "Widget Type"
 
 msgctxt "#31034"
-msgid ""
-"Uses a combination of Fanart and Logo to display wide icons.[CR]Alternatively create and add your own as 'ftv' "
-"artwork."
-msgstr ""
-"Uses a combination of Fanart and Logo to display wide icons.[CR]Alternatively create and add your own as 'ftv' "
-"artwork."
+msgid "Uses a combination of Fanart and Logo to display wide icons.[CR]Alternatively create and add your own as 'ftv' artwork."
+msgstr "Uses a combination of Fanart and Logo to display wide icons.[CR]Alternatively create and add your own as 'ftv' artwork."
 
 msgctxt "#31035"
 msgid "Runs Artwork Downloader in the background to fetch TV Show logos needed for wide icons."
@@ -499,13 +495,14 @@ msgctxt "#31118"
 msgid "Manage your player settings, set media playback options, change the behaviour how supported media files will be handled."
 msgstr "Manage your player settings, set media playback options, change the behaviour how supported media files will be handled"
 
-msgctxt "#31121"
-msgid ""
-"Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable "
-"debugging and setup master lock."
+#: /16x9/MyWeather.xml
+msgctxt "#31119"
+msgid "Location"
 msgstr ""
-"Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable "
-"debugging and setup master lock."
+
+msgctxt "#31121"
+msgid "Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable debugging and setup master lock."
+msgstr "Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable debugging and setup master lock."
 
 msgctxt "#31122"
 msgid "Setup control of Kodi via UPnP and HTTP, configure file sharing, enable Zeroconf and configure AirPlay."
@@ -874,12 +871,8 @@ msgstr "Preload widgets on startup"
 
 #: \16x9\Variables.xml:1512
 msgctxt "#31212"
-msgid ""
-"Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. "
-"Please note that this can cause some minor animation glitches on startup."
-msgstr ""
-"Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. "
-"Please note that this can cause some minor animation glitches on startup."
+msgid "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
+msgstr "Activates the preloading of widgets on startup. By disabling it, the skin won't wait until all widgets are loaded. Please note that this can cause some minor animation glitches on startup."
 
 #: \16x9\Variables.xml:65
 msgctxt "#31213"
@@ -979,12 +972,8 @@ msgstr "Set default Favourites layout"
 
 #: /16x9/Variables.xml:1865
 msgctxt "#31233"
-msgid ""
-"Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want "
-"them displayed with the poster.[CR]Default is 'Square Info'."
-msgstr ""
-"Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want "
-"them displayed with the poster.[CR]Default is 'Square Info'."
+msgid "Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want them displayed with the poster.[CR]Default is 'Square Info'."
+msgstr "Changes the layout of the favourite items. Useful if you use the favourites for your favourite movies and you want them displayed with the poster.[CR]Default is 'Square Info'."
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
@@ -1153,8 +1142,7 @@ msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:6
 msgctxt "#31267"
-msgid ""
-"It's highly recommended to reload the skin to fill the edited content lists correctly. Should the skin be reloaded?"
+msgid "It's highly recommended to reload the skin to fill the edited content lists correctly. Should the skin be reloaded?"
 msgstr ""
 
 #: /16x9/IncludesWidgetLayout.xml:23
@@ -1357,10 +1345,8 @@ msgid "Skip Search menu item"
 msgstr "Skip Search menu item"
 
 msgctxt "#31526"
-msgid ""
-"Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
-msgstr ""
-"Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
+msgid "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
+msgstr "Enable this, if your first main menu item is 'Search' and you want the next item focused after Kodi has been started."
 
 msgctxt "#31527"
 msgid "'Wide' for TV Shows / Movies / Sets / Artists"
@@ -1399,20 +1385,12 @@ msgid "Warning: No mouse support"
 msgstr "Warning: No mouse support"
 
 msgctxt "#31536"
-msgid ""
-"This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I "
-"do this for you?"
-msgstr ""
-"This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I "
-"do this for you?"
+msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I do this for you?"
+msgstr "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi to prevent issues. Should I do this for you?"
 
 msgctxt "#31537"
-msgid ""
-"This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause "
-"bugs and errors in some windows."
-msgstr ""
-"This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause "
-"bugs and errors in some windows."
+msgid "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
+msgstr "This skin has no mouse support. It's highly recommended to disable mouse controls in Kodi. Otherwise this can cause bugs and errors in some windows."
 
 msgctxt "#31538"
 msgid "Better fTV experience"

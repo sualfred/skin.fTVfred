@@ -2832,8 +2832,7 @@
 		<value condition="String.IsEqual(Window(Weather).Property(Day5.Title),$LOCALIZE[17]) | String.IsEqual(Window(Weather).Property(Day5.Title),$LOCALIZE[47])">$LOCALIZE[17]</value>
 	</variable>
 	<variable name="WeatherFanartCodeBack">
-		<value condition="!Control.HasFocus(1000)">$INFO[Window(Weather).Property(Current.FanartCode),weather/background/,.jpg]</value>
-		<value condition="String.IsEqual(Container(1000).CurrentItem,1)">$INFO[Window(Weather).Property(Day0.FanartCode),weather/background/,.jpg]</value>
+		<value condition="String.IsEqual(Container(1000).CurrentItem,1) | !Control.HasFocus(1000)">$INFO[Window(Weather).Property(Day0.FanartCode),weather/background/,.jpg]</value>
 		<value condition="String.IsEqual(Container(1000).CurrentItem,2)">$INFO[Window(Weather).Property(Day1.FanartCode),weather/background/,.jpg]</value>
 		<value condition="String.IsEqual(Container(1000).CurrentItem,3)">$INFO[Window(Weather).Property(Day2.FanartCode),weather/background/,.jpg]</value>
 		<value condition="String.IsEqual(Container(1000).CurrentItem,4)">$INFO[Window(Weather).Property(Day3.FanartCode),weather/background/,.jpg]</value>
