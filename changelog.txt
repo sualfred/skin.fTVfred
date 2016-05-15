@@ -1,3 +1,6 @@
+3.0.2:
+- preload timeout fixes
+
 3.0.1:
 Krypton repo release
 - Renamed skin ID. Please create and import an backup of the Jarvis Krypton version.

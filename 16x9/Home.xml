@@ -551,8 +551,8 @@
 			<label>Loop</label>
 			<include>HiddenControl</include>
 			<onfocus>SetProperty(Preload,1,home)</onfocus>
-			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
-			<onfocus condition="!Window.Previous(startup) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
+			<onfocus condition="!Window.Previous(startup) + !Window.Previous(busydialog) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
+			<onfocus condition="!Window.Previous(startup) + !Window.Previous(busydialog) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
 			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated) + [Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))]">SetFocus(93)</onfocus>
 			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + String.IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
