@@ -27,8 +27,18 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>Preload Timout on</label>
-				<visible>!String.IsEmpty(Window(home).Property(PreloadTimout))</visible>
+				<label>Preload Timeout on</label>
+				<visible>!String.IsEmpty(Window(home).Property(PreloadTimeout))</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>WaitForControl on</label>
+				<visible>!String.IsEmpty(Window(home).Property(WaitForControl))</visible>
 			</control>
 			<control type="label">
 				<width>780</width>

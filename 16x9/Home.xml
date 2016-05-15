@@ -5,8 +5,10 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90</defaultcontrol>
 	<!-- Preload properties -->
-	<onload condition="Window.Previous(startup)">SetProperty(Preload,1,Home)</onload>
-	<onload condition="Window.Previous(startup)">SetProperty(PreloadTimout,1,Home)</onload>
+	<onload condition="Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))">SetProperty(Preload,1,Home)</onload>
+	<onload>SetProperty(PreloadTimeout,1,Home)</onload>
+	<onload condition="!System.HasAlarm(PreloadTimeout)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:10,silent)</onload>
+	<onload condition="!System.HasAlarm(WaitForControl)">AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onload>
 	<!-- Main menu focus position properties -->
 	<onload condition="String.IsEmpty(Window(home).Property(PreloadDone)) + String.IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + String.IsEqual(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
@@ -386,7 +388,7 @@
 		<!-- Preload widgets -->
 		<control type="button" id="91">
 			<include>HiddenControl</include>
-			<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + [!String.IsEmpty(Window(home).Property(PreloadTimout)) | !Window.Previous(startup)]
+			<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + !String.IsEmpty(Window(home).Property(PreloadTimeout))
 				+ [[Container(1001).IsUpdating + Control.IsVisible(1001)]
 				| [Container(1002).IsUpdating + Control.IsVisible(1002)]
 				| [Container(1003).IsUpdating + Control.IsVisible(1003)]
@@ -500,7 +502,7 @@
 		</control>
 		<!-- Splash -->
 		<control type="group">
-			<visible>[Control.IsVisible(91) + !String.IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated)] | [!String.IsEmpty(Window(home).Property(WaitForControl)) + !Control.HasFocus(99)]</visible>
+			<visible>[Control.IsVisible(91) + !String.IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(PreloadTimeout))] | [!String.IsEmpty(Window(home).Property(WaitForControl)) + !Control.HasFocus(99)]</visible>
 			<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
 				<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
 				<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
@@ -551,8 +553,6 @@
 			<label>Loop</label>
 			<include>HiddenControl</include>
 			<onfocus>SetProperty(Preload,1,home)</onfocus>
-			<onfocus condition="!Window.Previous(startup) + !Window.Previous(busydialog) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(PreloadTimout,1,Home)</onfocus>
-			<onfocus condition="!Window.Previous(startup) + !Window.Previous(busydialog) + System.IdleTime(10) + !System.HasAlarm(PreloadTimeout) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:20,silent)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
 			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated) + [Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))]">SetFocus(93)</onfocus>
 			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + String.IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>

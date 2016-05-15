@@ -67,7 +67,7 @@
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
 			<onfocus>SetProperty(WaitForControl,1,Home)</onfocus>
 			<onfocus>AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onfocus>
-			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimout),00:30,silent)</onfocus>
+			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:30,silent)</onfocus>
 			<onfocus>AlarmClock(StartupWindow,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
