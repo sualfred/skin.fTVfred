@@ -64,6 +64,7 @@
 								<textoffsety>27</textoffsety>
 								<label>$PARAM[Button]</label>
 								<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
+								<onfocus>$PARAM[Focus]</onfocus>
 								<onclick>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onclick>
 								<onclick>SetFocus(99)</onclick>
 								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
