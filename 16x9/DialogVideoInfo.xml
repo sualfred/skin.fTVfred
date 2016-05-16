@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- movieinformation -->
-	<defaultcontrol always="true">8</defaultcontrol>
+	<defaultcontrol always="true">1004</defaultcontrol>
 	<onload>Control.Move(5000,$INFO[Container(5000).CurrentItem,-])</onload>
 	<onload>Control.Move(5000,1)</onload>
 	<onload>Control.Move(50,$INFO[Container(50).CurrentItem,-])</onload>

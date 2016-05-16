@@ -19,6 +19,12 @@
 			<control id="7" type="button">
 				<include>HiddenControl</include>
 			</control>
+			<control id="8" type="togglebutton">
+				<include>HiddenControl</include>
+				<label>$VAR[VideoInfoButton8]</label>
+				<onfocus>Select</onfocus>
+				<onfocus>1004</onfocus>
+			</control>
 			<!-- Hidden scrollbar -->
 			<control id="96" type="scrollbar">
 				<left>-1200</left>
@@ -409,11 +415,11 @@
 						<label>-</label>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
-						<visible>!Control.HasFocus(8) + !Control.HasFocus(1003) + !Control.HasFocus(6) + !Control.HasFocus(10) + !Control.HasFocus(20) + !Control.HasFocus(21) + !Control.HasFocus(1002)</visible>
+						<visible>!Control.HasFocus(1004) + !Control.HasFocus(1003) + !Control.HasFocus(6) + !Control.HasFocus(10) + !Control.HasFocus(20) + !Control.HasFocus(21) + !Control.HasFocus(1002)</visible>
 					</control>
 					<!-- Play/Browse Button -->
-					<control id="8" type="togglebutton">
-						<width min="124" max="244">auto</width>
+					<control id="1004" type="button">
+						<width min="124" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -421,17 +427,14 @@
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
-						<label>$VAR[VideoInfoButton8]</label>
-						<altlabel>$LOCALIZE[31074]</altlabel>
+						<label>$INFO[Control.GetLabel(8)]</label>
+						<onclick>SetFocus(8)</onclick>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>Control.IsVisible(8)</visible>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
-						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
-						<usealttexture>String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,seasons)</usealttexture>
 					</control>
 					<!-- User Rating Button -->
 					<control id="1002" type="button">
@@ -564,7 +567,7 @@
 					<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
 					<!-- Play/Browse Button -->
 					<control type="button">
-						<width min="124" max="244">auto</width>
+						<width min="124" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<font>Med24</font>

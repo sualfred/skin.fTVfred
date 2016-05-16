@@ -2371,9 +2371,10 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="VideoInfoButton8">
-		<value condition="ListItem.IsResumable">$LOCALIZE[13404]</value>
-		<value condition="Integer.IsGreater(ListItem.PlayCount,0)">$LOCALIZE[31057]</value>
-		<value>$LOCALIZE[31109]</value>
+		<value condition="!String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season) + ListItem.IsResumable">$LOCALIZE[13404]</value>
+		<value condition="!String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season) + Integer.IsGreater(ListItem.PlayCount,0)">$LOCALIZE[31057]</value>
+		<value condition="!String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)">$LOCALIZE[31109]</value>
+		<value>$LOCALIZE[31074]</value>
 	</variable>
 	<variable name="VideoType">
 		<value condition="Container.Content(movies)">$LOCALIZE[20338]</value>
