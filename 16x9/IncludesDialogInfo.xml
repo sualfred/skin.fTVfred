@@ -270,7 +270,7 @@
 					<width>2800</width>
 					<height>1400</height>
 					<itemgap>0</itemgap>
-					<ondown>8</ondown>
+					<ondown>1004</ondown>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="slide" end="0,-91" start="0,0" time="200">Conditional</animation>
@@ -297,7 +297,7 @@
 						<width>37</width>
 						<height>23</height>
 						<onleft>7000</onleft>
-						<onright>8</onright>
+						<onright>1004</onright>
 						<onclick>SetProperty(NoLabel,1,home)</onclick>
 						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[Plot]')</onclick>
 						<include>DialogVideoInfoAnimation</include>
