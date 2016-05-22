@@ -17,7 +17,7 @@
 			<pagecontrol>96</pagecontrol>
 			<autoscroll>false</autoscroll>
 			<textcolor>ffa4a4a4</textcolor>
-			<label>$INFO[ListItem.Property(Addon.Description)]</label>
+			<label>$INFO[ListItem.AddonDescription]</label>
 		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
@@ -110,7 +110,7 @@
 				<scroll>true</scroll>
 				<textcolor>ffdadada</textcolor>
 				<scrollspeed>100</scrollspeed>
-				<label>$INFO[ListItem.Property(Addon.Name)]</label>
+				<label>$INFO[ListItem.AddonName]</label>
 				<include>DialogVideoInfoAnimation</include>
 			</control>
 			<!-- Type -->
@@ -128,7 +128,7 @@
 					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[B]$LOCALIZE[146][/B] [LIGHT]$INFO[ListItem.Property(Addon.Type)][/LIGHT]</label>
+					<label>[B]$LOCALIZE[146][/B] [LIGHT]$INFO[ListItem.AddonType][/LIGHT]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 			</control>
@@ -147,7 +147,7 @@
 					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[B]$LOCALIZE[24051][/B] [LIGHT]$INFO[ListItem.Property(Addon.Version)][/LIGHT]</label>
+					<label>[B]$LOCALIZE[24051][/B] [LIGHT]$INFO[ListItem.AddonVersion][/LIGHT]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 			</control>
@@ -166,7 +166,7 @@
 					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[B]$LOCALIZE[31151]:[/B] [LIGHT]$INFO[ListItem.Property(Addon.Creator)][/LIGHT]</label>
+					<label>[B]$LOCALIZE[31151]:[/B] [LIGHT]$INFO[ListItem.AddonCreator][/LIGHT]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 			</control>
@@ -181,7 +181,7 @@
 					<font>Light30</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+					<label>$INFO[ListItem.AddonSummary]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 				<!-- Button grouplist -->
@@ -352,7 +352,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>21821</label>
-					<visible>!String.IsEmpty(ListItem.Property(Addon.Description))</visible>
+					<visible>!String.IsEmpty(ListItem.AddonDescription)</visible>
 				</control>
 				<control type="textbox">
 					<top>291</top>
@@ -362,7 +362,7 @@
 					<font>Light30</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffa4a4a4</textcolor>
-					<label>$INFO[ListItem.Property(Addon.Description)]</label>
+					<label>$INFO[ListItem.AddonDescription]</label>
 				</control>
 				<!-- More button -->
 				<control id="3002" type="button">
@@ -373,7 +373,7 @@
 					<onleft>7001</onleft>
 					<onright>50</onright>
 					<onclick>SetProperty(NoLabel,1,home)</onclick>
-					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.Property(Addon.Description)]')</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.AddonDescription]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
 					<visible>Control.IsVisible(96)</visible>
@@ -412,8 +412,8 @@
 						<font>Light30</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ff8f8f8f</textcolor>
-						<label>[COLOR ffdadada]$LOCALIZE[24098][/COLOR][CR]$INFO[ListItem.Property(Addon.Broken)]</label>
-						<visible>!String.IsEmpty(ListItem.Property(Addon.Broken))</visible>
+						<label>[COLOR ffdadada]$LOCALIZE[24098][/COLOR][CR]$INFO[ListItem.AddonBroken]</label>
+						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 					<control type="textbox">
 						<width>470</width>
@@ -422,8 +422,8 @@
 						<font>Light30</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ff8f8f8f</textcolor>
-						<label>[COLOR ffdadada]$LOCALIZE[24052][/COLOR][CR]$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-						<visible>!String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<label>[COLOR ffdadada]$LOCALIZE[24052][/COLOR][CR]$INFO[ListItem.AddonDisclaimer]</label>
+						<visible>!String.IsEmpty(ListItem.AddonDisclaimer)</visible>
 					</control>
 				</control>
 			</control>

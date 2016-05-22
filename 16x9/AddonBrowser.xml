@@ -445,7 +445,7 @@
 				<effect easing="inout" end="500,0" start="0,0" time="200" tween="sine" type="slide" />
 			</animation>
 			<control type="group">
-				<animation condition="[!String.IsEmpty(ListItem.Property(Addon.Version)) | Control.IsVisible(96)] + !String.IsEqual(Container.FolderPath,addons://)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
+				<animation condition="[!String.IsEmpty(ListItem.AddonVersion) | Control.IsVisible(96)] + !String.IsEqual(Container.FolderPath,addons://)" delay="200" easing="inout" effect="slide" end="480,0" reversible="true" start="0,0" time="400" tween="sine">Conditional</animation>
 				<control type="image">
 					<left>78</left>
 					<width>879</width>
@@ -484,7 +484,7 @@
 						<height>32</height>
 						<font>Light32</font>
 						<textcolor>ffd5d5d5</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Version)]</label>
+						<label>$INFO[ListItem.AddonVersion]</label>
 					</control>
 					<control type="label">
 						<top>146</top>
@@ -500,7 +500,7 @@
 						<height>30</height>
 						<font>Light30Spaced</font>
 						<textcolor>ffd5d5d5</textcolor>
-						<label fallback="1446">$INFO[ListItem.Property(Addon.Creator)]</label>
+						<label fallback="1446">$INFO[ListItem.AddonCreator]</label>
 					</control>
 					<control type="label">
 						<top>226</top>
@@ -518,7 +518,7 @@
 						<textcolor>ffd5d5d5</textcolor>
 						<pagecontrol>96</pagecontrol>
 						<autoscroll>false</autoscroll>
-						<label fallback="161">$INFO[ListItem.Property(Addon.Description)]</label>
+						<label fallback="161">$INFO[ListItem.AddonDescription]</label>
 					</control>
 					<!-- Hidden scrollbar -->
 					<control id="96" type="scrollbar">
@@ -538,7 +538,7 @@
 						<onright>9000</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
 						<onclick>SetProperty(NoLabel,1,home)</onclick>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.Property(Addon.Description)]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCINFO[ListItem.AddonDescription]')</onclick>
 						<include>DialogVideoInfoAnimation</include>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
