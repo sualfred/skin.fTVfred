@@ -140,6 +140,7 @@
 		<texturesliderbar border="4">osd/progress_back.png</texturesliderbar>
 		<textureslidernib border="4">osd/progress_cache.png</textureslidernib>
 		<textureslidernibfocus border="4">osd/progress_bar.png</textureslidernibfocus>
+		<orientation>horizontal</orientation>
 	</default>
 	<default type="progress">
 		<height>44</height>

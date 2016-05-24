@@ -288,6 +288,7 @@
 					<bottom>105</bottom>
 					<width>1735</width>
 					<height>11</height>
+					<orientation>horizontal</orientation>
 					<texturesliderbar border="4" colordiffuse="00ffffff">osd/progress_back.png</texturesliderbar>
 					<textureslidernib>osd/osd_seek_bar.png</textureslidernib>
 					<textureslidernibfocus>osd/osd_seek_bar.png</textureslidernibfocus>

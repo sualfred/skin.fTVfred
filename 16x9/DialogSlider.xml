@@ -58,6 +58,7 @@
 				<top>104</top>
 				<width>552</width>
 				<height>11</height>
+				<orientation>horizontal</orientation>
 				<texturesliderbar border="4">osd/progress_back.png</texturesliderbar>
 				<textureslidernib border="4">osd/progress_cache.png</textureslidernib>
 				<textureslidernibfocus border="4">osd/progress_bar.png</textureslidernibfocus>
