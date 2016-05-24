@@ -14,8 +14,6 @@
 			<centertop>50%</centertop>
 			<width>500</width>
 			<height>228</height>
-			<width>100%</width>
-			<height>100%</height>
 			<include>MessageBackground</include>
 			<visible>!String.IsEmpty(Window(home).Property(ItemHasWidget))</visible>
 		</control>
@@ -25,8 +23,6 @@
 			<centertop>50%</centertop>
 			<width>500</width>
 			<height>152</height>
-			<width>100%</width>
-			<height>100%</height>
 			<include>MessageBackground</include>
 			<visible>String.IsEmpty(Window(home).Property(ItemHasWidget))</visible>
 		</control>

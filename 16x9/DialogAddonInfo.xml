@@ -117,7 +117,6 @@
 			<control type="group">
 				<top>57</top>
 				<height>36</height>
-				<itemgap>20</itemgap>
 				<include>DialogVideoInfoAnimation</include>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
@@ -136,7 +135,6 @@
 			<control type="group">
 				<top>97</top>
 				<height>36</height>
-				<itemgap>20</itemgap>
 				<include>DialogVideoInfoAnimation</include>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
@@ -155,7 +153,6 @@
 			<control type="group">
 				<top>137</top>
 				<height>36</height>
-				<itemgap>20</itemgap>
 				<include>DialogVideoInfoAnimation</include>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>

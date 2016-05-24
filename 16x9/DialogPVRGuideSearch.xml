@@ -133,7 +133,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 					<label>515</label>
 				</control>
 				<!-- Include unknown Genres -->
@@ -218,7 +218,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 					<label>19130</label>
 				</control>
 				<!-- Max Duration -->
@@ -234,7 +234,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 					<label>19131</label>
 				</control>
 				<!-- Start time -->
@@ -297,7 +297,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 					<label>19141</label>
 				</control>
 				<!-- Channels -->
@@ -313,7 +313,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 					<label>19148</label>
 				</control>
 				<!-- Ignore Recordings -->

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>    
     <menucontrol>1000</menucontrol>
-    <allowoverlay>yes</allowoverlay>
+    <allowoverlay>true</allowoverlay>
     <backgroundcolor>0xff12161b</backgroundcolor>
     <defaultcontrol always="true">10</defaultcontrol>
     <views>10</views>

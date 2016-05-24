@@ -196,7 +196,6 @@
 				<control id="100" type="fixedlist">
 					<width>1920</width>
 					<left>0</left>
-					<left>-350</left>
 					<bottom>136</bottom>
 					<height>128</height>
 					<onleft>noop</onleft>

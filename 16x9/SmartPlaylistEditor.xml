@@ -47,7 +47,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 				</control>
 				<!-- Name Button -->
 				<control type="edit" id="12">
@@ -216,7 +216,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 				</control>
 				<!-- Default spin control -->
 				<control type="spincontrolex" id="17">
@@ -235,7 +235,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 				</control>
 				<!-- Default spin control -->
 				<control type="spincontrolex" id="18">
@@ -254,7 +254,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 				</control>
 				<!-- Default toggle -->
 				<control type="togglebutton" id="19">
@@ -295,7 +295,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>yes</reverse>
+					<reverse>true</reverse>
 				</control>
 				<!-- Default radio button -->
 				<control type="radiobutton" id="24">

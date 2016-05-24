@@ -113,7 +113,7 @@
 				<texturefocus border="3">settings/button_focus.png</texturefocus>
 				<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 				<aligny>center</aligny>
-				<reverse>yes</reverse>
+				<reverse>true</reverse>
 			</control>
 			<!-- Default label -->
 			<control id="7" type="label">

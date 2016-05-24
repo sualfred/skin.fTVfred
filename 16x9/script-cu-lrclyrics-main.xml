@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<allowoverlay>yes</allowoverlay>
+	<allowoverlay>true</allowoverlay>
 	<visible>Window.IsActive(Visualisation) + Player.HasAudio + !Player.IsInternetStream</visible>
 	<onload condition="Window.IsVisible(MusicOSD)">Dialog.Close(MusicOSD)</onload>
 	<onload condition="Player.IsInternetStream">Dialog.Close</onload>

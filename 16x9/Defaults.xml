@@ -91,7 +91,7 @@
 		<texturedownfocus>dialogs/SpinDownFO.png</texturedownfocus>
 		<textureupdisabled>dialogs/SpinUpDisabled.png</textureupdisabled>
 		<texturedowndisabled>dialogs/SpinDownDisabled.png</texturedowndisabled>
-		<reverse>yes</reverse>
+		<reverse>true</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="spincontrol">
@@ -112,7 +112,7 @@
 		<texturedownfocus>dialogs/SpinDownFO.png</texturedownfocus>
 		<textureupdisabled>dialogs/SpinUpDisabled.png</textureupdisabled>
 		<texturedowndisabled>dialogs/SpinDownDisabled.png</texturedowndisabled>
-		<reverse>yes</reverse>
+		<reverse>true</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="sliderex">
@@ -165,7 +165,7 @@
 		<disabledcolor>DisabledColor</disabledcolor>
 		<invalidcolor>DisabledColor</invalidcolor>
 		<texturefocus>-</texturefocus>
-		<pulseonselect>no</pulseonselect>
+		<pulseonselect>false</pulseonselect>
 		<hinttext>...</hinttext>
 	</default>
 </includes>
