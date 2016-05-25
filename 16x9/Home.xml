@@ -19,7 +19,16 @@
 	<!-- Build menu -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
-		<control type="group">			
+		<control type="group">		
+			<!-- Hidden controls to get sure that the widget animations are going to be triggered -->
+			<control type="group" id="31">
+				<animation reversible="false" effect="slide" end="0,0" time="250">Hidden</animation>
+				<visible>Container(99).OnPrevious</visible>
+			</control>
+			<control type="group" id="32">
+				<animation reversible="false" effect="slide" end="0,0" time="250">Hidden</animation>
+				<visible>Container(99).OnNext</visible>					
+			</control>
 			<!-- Hidden control to load weather conditions -->
 			<control type="label">
 				<font>-</font>

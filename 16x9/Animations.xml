@@ -177,12 +177,12 @@
 	</include>
 	<!-- Home Widgets Animation -->
 	<include name="HomeWidgetsAnimation">
-		<animation condition="String.IsEmpty(Window(home).Property(Preload)) + Container(99).OnNext" reversible="false" type="Visible">
+		<animation condition="String.IsEmpty(Window(home).Property(Preload)) + Control.IsVisible(32)" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation condition="String.IsEmpty(Window(home).Property(Preload)) + Container(99).OnPrevious" reversible="false" type="Visible">
+		<animation condition="String.IsEmpty(Window(home).Property(Preload)) + Control.IsVisible(31)" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
@@ -202,12 +202,12 @@
 	</include>
 	<!-- Home Message Widget Animation -->
 	<include name="HomeMessageAnimation">
-		<animation condition="Container(99).OnNext" reversible="false" type="Visible">
+		<animation condition="Control.IsVisible(32)" reversible="false" type="Visible">
 			<effect center="1133,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation condition="Container(99).OnPrevious" reversible="false" type="Visible">
+		<animation condition="Control.IsVisible(31)" reversible="false" type="Visible">
 			<effect center="1133,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
