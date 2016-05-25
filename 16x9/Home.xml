@@ -558,7 +558,7 @@
 		<!-- Check if Preloading is in progress -->
 		<control type="button" id="89">
 			<include>HiddenControl</include>			
-			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:10,silent)</onfocus>
+			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:20,silent)</onfocus>
 			<onfocus>AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onfocus>
 			<onfocus>SetFocus(90)</onfocus>
 		</control>
