@@ -1,3 +1,7 @@
+3.0.5:
+- Reverted previous busy dialog fix because it's not needed anymore
+- Cleanup & repo push
+
 3.0.4:
 - fixed addon info labels
 

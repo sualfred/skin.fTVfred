@@ -35,7 +35,6 @@
 	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
 	<propertydefault labelID="movies" property="ftvWidget">widget1</propertydefault>
 	<propertydefault labelID="tvshows" property="ftvWidget">widget2</propertydefault>
-
 	<ftv-groupings>
 		<node label="fTV">
 			<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
