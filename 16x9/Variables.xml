@@ -2719,7 +2719,7 @@
 	</variable>
 	<variable name="MusicNavLabel2">
 		<value condition="!String.IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
-		<value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
+		<value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEqual(ListItem.Label,ListItem.Artist)">$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="Plot">
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
