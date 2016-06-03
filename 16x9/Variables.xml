@@ -1427,7 +1427,7 @@
 	<variable name="SearchPlot">
 		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Artist_Description))">$INFO[Container(100).ListItem.Property(Artist_Description)]</value>
 		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Album_Description))">$INFO[Container(100).ListItem.Property(Album_Description)]</value>
-		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Plotoutline))">$INFO[Container(100).ListItem.Property(Plotoutline)]</value>
+		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Plotoutline))">$INFO[Container(100).ListItem.Property("Plot"outline)]</value>
 		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Plot))">$INFO[Container(100).ListItem.Property(Plot)]</value>
 		<value condition="Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Plotoutline))">$INFO[Container(111).ListItem.Property(Plotoutline)]</value>
 		<value condition="Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Plot))">$INFO[Container(111).ListItem.Property(Plot)]</value>
@@ -2716,6 +2716,10 @@
 		<value condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(skinsettings) | Window.IsVisible(systeminfo) | Window.IsVisible(addonbrowser) | Window.IsVisible(profiles) | Window.IsVisible(filemanager)]">$LOCALIZE[5]</value>
 		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>		
 		<value>$INFO[Container.FolderName]</value>
+	</variable>
+	<variable name="MusicNavLabel2">
+		<value condition="!String.IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
+		<value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="Plot">
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
