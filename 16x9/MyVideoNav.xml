@@ -788,7 +788,7 @@
 						<width>640</width>
 						<height>60</height>
 						<texture border="2">dialogs/OptionsBackgroundHeading.png</texture>
-						<visible>!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)</visible>
+						<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | Container.Content(files)</visible>
 					</control>
 					<control type="label" id="5021">
 						<left>40</left>
@@ -798,7 +798,7 @@
 						<font>Bold30</font>
 						<textcolor>ffdadada</textcolor>
 						<label>$LOCALIZE[582]:</label>
-						<visible>!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)</visible>
+						<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | Container.Content(files)</visible>
 					</control>
 					<control type="button" id="5022">
 						<height>110</height>
@@ -814,7 +814,7 @@
 						<focusedcolor>ffffaf37</focusedcolor>
 						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
 						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
-						<visible>!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)</visible>
+						<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | Container.Content(files)</visible>
 					</control>
 					<control type="image" id="5002">
 						<width>640</width>
