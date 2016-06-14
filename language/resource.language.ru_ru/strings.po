@@ -1013,27 +1013,27 @@ msgctxt "#31234"
 msgid "View movie info"
 msgstr "О фильме"
 
-#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
+#: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
 msgid "Awards"
 msgstr "Награды"
 
-#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:346
+#: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:346
 msgctxt "#31236"
 msgid "budget"
 msgstr "бюджет"
 
-#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:346
+#: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:346
 msgctxt "#31237"
 msgid "grossed"
 msgstr "собрал"
 
-#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:366
+#: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31238"
 msgid "Budget and revenue"
 msgstr "Бюджет и доход"
 
-#: /16x9/script-ExtendedInfo Script-DialogVideoInfo.xml:331
+#: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:331
 msgctxt "#31239"
 msgid "Premiered on"
 msgstr "Премьера"

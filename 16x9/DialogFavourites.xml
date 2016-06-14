@@ -3,7 +3,7 @@
 	<!-- favourites -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">450</defaultcontrol>
-	<onload>SetProperty(MainMenuFocus,1,home)</onload>
+	<!--onload>SetProperty(MainMenuFocus,1,home)</onload>-->
 	<onload>Control.Move(450,$INFO[Container(450).CurrentItem,-])</onload>
 	<onload>Control.Move(450,1)</onload>
 	<!-- workaround animation to fix the rare broken WindowOpen animations -->

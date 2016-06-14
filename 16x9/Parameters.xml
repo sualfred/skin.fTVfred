@@ -18,7 +18,7 @@
 				<height>480</height>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/movie_fallback.png">$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon]</texture>
-				<visible>[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+				<visible>[Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
 			</control>
 			<control type="image">
 				<top>48</top>
@@ -26,7 +26,7 @@
 				<height>480</height>
 				<aspectratio align="center">scale</aspectratio>
 				<texture background="true" fallback="views/movie_fallback.png">$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Art(poster)]</texture>
-				<visible>![Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+				<visible>![Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
 			</control>
 			<control type="image">
 				<left>-48</left>
@@ -101,7 +101,7 @@
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>80000000</shadowcolor>
 				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Property(character),$LOCALIZE[20347] ,]</label>
-				<visible>[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+				<visible>[Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
 			</control>
 			<control type="label">
 				<left>18</left>
@@ -113,7 +113,7 @@
 				<textcolor>ffffffff</textcolor>
 				<shadowcolor>80000000</shadowcolor>
 				<label>$INFO[Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Label2,$LOCALIZE[20347] ,]</label>
-				<visible>![Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+				<visible>![Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
 			</control>
 		</control>
 	</include>

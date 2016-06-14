@@ -789,8 +789,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>script-ExtendedInfo Script-DialogInfo.xml</label>
-				<visible>Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+				<label>script-script.extendedinfo-DialogInfo.xml</label>
+				<visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
 			</control>
 			<control type="label">
 				<width>780</width>
@@ -799,8 +799,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>script-ExtendedInfo Script-DialogVideoInfo.xml</label>
-				<visible>Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+				<label>script-script.extendedinfo-DialogVideoInfo.xml</label>
+				<visible>Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
 			</control>
 			<control type="label">
 				<width>780</width>

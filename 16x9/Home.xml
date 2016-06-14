@@ -212,6 +212,7 @@
 						<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 						<onfocus>ClearProperty(Fade,Home)</onfocus>
 						<onfocus>SetProperty(Fade,1,home)</onfocus>
+						<onfocus condition="String.Contains(Container(99).ListItem.Property(path),favourites) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),favourites) + Integer.IsGreater(Container(201).NumItems,0)">ClearProperty(MainMenuFocus)</onfocus>
 						<onfocus condition="!String.IsEqual(Container(99).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(MainFocus)</onfocus>
 						<onfocus condition="!String.IsEqual(Container(99).ListItem.Property(defaultID),Window(home).Property(MainFocus))">ClearProperty(FocusRow)</onfocus>
 						<onfocus condition="!Control.IsVisible(1000) + String.IsEqual(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onfocus>

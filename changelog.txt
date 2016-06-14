@@ -1,3 +1,7 @@
+3.0.6:
+- Fixed ExtendedInfo layouts and conditions (newest version required)
+- Minor fixes
+
 3.0.5:
 - Reverted previous busy dialog fix because it's not needed anymore
 - Added a more secure check that widget animations are going to be triggered, even if there is an delay of other conditions

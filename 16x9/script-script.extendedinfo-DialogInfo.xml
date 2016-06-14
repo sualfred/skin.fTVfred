@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- script-ExtendedInfo Script-DialogInfo.xml -->
+	<!-- script-script.extendedinfo-DialogInfo.xml -->
 	<defaultcontrol always="true">7000</defaultcontrol>
 	<onload condition="Window.IsVisible(fullscreenvideo)">SetProperty(ShowXRay,true,home)</onload>
 	<onunload>ClearProperty(StarredInTV,home)</onunload>
