@@ -79,6 +79,8 @@
 			<onleft>noop</onleft>
 			<onright condition="!String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
 			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">PageUp</onright>
+			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">PageUp</onright>
+			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">PageUp</onright>
 			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(600)</onright>
 			<onright>noop</onright>
 			<oninfo>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</oninfo>				
