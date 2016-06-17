@@ -418,41 +418,39 @@
 				<scrolltime easing="inout" tween="sine">200</scrolltime>
 				<visible>!String.IsEmpty(Container.PluginName)</visible>
 				<itemlayout condition="!Container.Content(movies) + !Container.Content(tvshows)" height="240" width="240">
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>200</width>
-						<height>200</height>
-						<aspectratio>keep</aspectratio>
-						<texture>common/default_empty.png</texture>
-					</control>
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>200</width>
-						<height>200</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
-					</control>
-					<control type="label">
-						<top>190</top>
+					<control type="group">
 						<width>240</width>
-						<height>22</height>
-						<font>Bold22</font>
-						<textoffsetx>10</textoffsetx>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + String.Contains(ListItem.Icon,Default)</visible>						
-						<animation center="120,120" easing="inout" effect="zoom" end="85" start="85" time="0" tween="linear" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>200</width>
-						<height>200</height>
-						<texture>views/OverlayNF.png</texture>
-						<visible>!Control.HasFocus(58)</visible>
+						<height>240</height>
+						<animation center="120,120" easing="inout" effect="zoom" end="85" start="85" time="120" tween="linear" condition="true">Conditional</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>common/default_empty.png</texture>
+						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<top>190</top>
+							<width>240</width>
+							<height>22</height>
+							<font>Bold22</font>
+							<textoffsetx>10</textoffsetx>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEqual(ListItem.Label,..) + String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<texture>views/OverlayNF.png</texture>
+							<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Content(movies) + !Container.Content(tvshows)" height="240" width="240">
@@ -464,14 +462,14 @@
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>stretch</aspectratio>
 							<texture>common/default_empty.png</texture>
 						</control>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[Listitem.Icon]</texture>
+							<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<top>190</top>
@@ -482,13 +480,13 @@
 							<textcolor>ffffffff</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEqual(ListItem.Label,..) + String.Contains(ListItem.Icon,Default)</visible>
+							<visible>!String.IsEqual(ListItem.Label,..) + String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
 							<texture>views/OverlayNF.png</texture>
-							<visible>!Control.HasFocus(58)</visible>
+							<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -514,7 +512,7 @@
 							<width>160</width>
 							<height>240</height>
 							<texture>views/OverlayNF.png</texture>
-							<visible>!Control.HasFocus(58)</visible>
+							<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -541,7 +539,7 @@
 							<width>160</width>
 							<height>240</height>
 							<texture>views/OverlayNF.png</texture>
-							<visible>!Control.HasFocus(58)</visible>
+							<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
 						</control>
 					</control>
 				</focusedlayout>

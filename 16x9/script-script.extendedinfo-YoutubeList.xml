@@ -97,13 +97,13 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>common/poster_empty.png</texture>
+						<texture>common/default_empty.png</texture>
 					</control>
 					<control type="image">
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
+						<texture background="true" fallback="views/square_fallback.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="image">
 						<width>240</width>
@@ -123,13 +123,13 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>common/poster_empty.png</texture>
+						<texture>common/default_empty.png</texture>
 					</control>
 					<control type="image">
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>scale</aspectratio>
-						<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
+						<texture background="true" fallback="views/square_fallback.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="image">
 						<width>240</width>
