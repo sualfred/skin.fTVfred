@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<views>500</views>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<onload>ClearProperty(LabelsDelayFadeAnimation,home)</onload>
+	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
+	<controls>
+		<!--Background -->
+		<include>BackgroundImage</include>
+		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
+		<!-- Hidden controls -->		
+		<control type="button" id="600">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(500)</onfocus>
+		</control>
+		<control type="button" id="700">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(500)</onfocus>
+		</control>
+		<control id="581" type="button">
+			<onfocus>Control.Move(500,-1)</onfocus>
+			<onfocus>SetFocus(500)</onfocus>			
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<onfocus>Right</onfocus>
+			<include>HiddenControl</include>
+		</control>
+		<control id="582" type="button">
+			<onfocus>SetFocus(500)</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Left</onfocus>
+			<onfocus>Control.Move(500,1)</onfocus>
+			<include>HiddenControl</include>
+		</control>
+		<!-- No results -->
+		<control type="group">
+			<visible>!Integer.IsGreater(Container(500).NumItems,0)</visible>
+			<animation delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<top>385</top>
+				<width>1490</width>
+				<height>310</height>
+				<texture>dialogs/empty_search.png</texture>
+			</control>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<top>473</top>
+				<control type="label">
+					<height>32</height>
+					<font>Bold32</font>
+					<align>center</align>
+					<textcolor>ffdadada</textcolor>
+					<label>$LOCALIZE[31111]</label>
+				</control>
+				<control type="label">
+					<top>34</top>
+					<height>32</height>
+					<font>Reg22</font>
+					<align>center</align>
+					<textcolor>ff717171</textcolor>
+					<label>$LOCALIZE[31112]</label>
+				</control>
+			</control>
+		</control>
+		<!-- List -->
+		<control id="500" type="panel">
+			<left>92</left>
+			<top>258</top>
+			<width>1300</width>
+			<height>882</height>
+			<onup>999</onup>
+			<ondown>noop</ondown>
+			<onleft condition="String.IsEmpty(Container(500).ListItemNoWrap(-1).Label)">700</onleft>
+			<onleft condition="!String.IsEmpty(Container(500).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
+			<onleft>noop</onleft>
+			<onright condition="!String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
+			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">PageUp</onright>
+			<onright condition="String.IsEmpty(Container(500).ListItemNoWrap(1).Label)">SetFocus(600)</onright>
+			<onright>noop</onright>
+			<oninfo>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</oninfo>				
+			<defaultcontrol always="true">0</defaultcontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="31281">panel</viewtype>
+			<scrolltime easing="inout" tween="sine">200</scrolltime>
+			<itemlayout height="240" width="240">
+				<control type="group">
+					<width>240</width>
+					<height>240</height>
+					<animation center="120,120" easing="inout" effect="zoom" end="85" start="85" time="120" tween="linear" condition="true">Conditional</animation>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>common/poster_empty.png</texture>
+					</control>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<texture>views/OverlayNF.png</texture>
+						<visible>!Control.HasFocus(500) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout height="240" width="240">
+				<control type="group">
+					<width>240</width>
+					<height>240</height>
+					<animation center="120,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
+					<animation center="120,120" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>common/poster_empty.png</texture>
+					</control>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" fallback="views/poster_fallback.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<texture>views/OverlayNF.png</texture>
+						<visible>!Control.HasFocus(500) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
+					</control>
+				</control>
+			</focusedlayout>
+		</control>
+		<!-- Layout -->
+		<control type="group">
+			<include>LabelsDelayFadeAnimation</include>
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
+			<!-- Heading / Current item / Total items -->
+			<control type="grouplist">
+				<left>110</left>
+				<top>100</top>
+				<height>80</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<width>auto</width>
+					<height>60</height>
+					<font>Med48</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>$LOCALIZE[31286] </label>
+				</control>
+				<control type="image">
+					<top>5</top>
+					<width>145</width>
+					<height>50</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<aspectratio align="left">keep</aspectratio>
+					<texture colordiffuse="ffdadada">views/yt_ghosticon.png</texture>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Med32</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffdadada</textcolor>
+					<label>$INFO[Window.Property(CurrentPage)]</label>
+					<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
+				</control>
+				<control type="label">
+					<top>14</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Light36</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff505050</textcolor>
+					<label>|</label>
+					<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
+				</control>
+				<control type="label">
+					<top>15</top>
+					<width>auto</width>
+					<height>60</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>ff505050</textcolor>
+					<label>$INFO[Window.Property(TotalPages)]</label>
+					<visible>IntegerGreaterThan(Window.Property(TotalPages),0)</visible>
+				</control>
+			</control>
+			<!-- Menu -->
+			<control type="grouplist" id="999">
+				<left>110</left>
+				<top>178</top>
+				<height>40</height>
+				<itemgap>47</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<ondown>500</ondown>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<control type="button" id="6000">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[137]</label>
+				</control>
+				<control type="button" id="7000">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[31282]</label>
+				</control>
+				<control type="button" id="5007">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[467]:</label>
+					<label2>$INFO[Window.Property(Type)]</label2>
+				</control>
+				<control type="button" id="992">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[31092]</label>
+					<onclick>SetFocus(4000)</onclick>
+				</control>
+				<control type="button" id="993">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>$LOCALIZE[31093]</label>
+					<onclick>SetFocus(5000)</onclick>
+				</control>
+				<control type="button" id="5005">
+					<width>auto</width>
+					<height>40</height>
+					<font>Light32</font>
+					<aligny>bottom</aligny>
+					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<label>Clear filter</label>
+					<visible>!String.IsEmpty(Window.Property(Filter_Label))</visible>
+				</control>
+			</control>
+			<!-- Separator -->
+			<control type="image">
+				<visible>Integer.IsGreater(Container(500).NumItems,0)</visible>
+				<left>1313</left>
+				<top>80</top>
+				<width>8</width>
+				<height>1000</height>
+				<texture>views/line.png</texture>
+			</control>
+			<!-- Details -->
+			<control type="group">
+				<left>1354</left>
+				<top>268</top>
+				<control type="label">
+					<width>472</width>
+					<height>38</height>
+					<font>Med32</font>
+					<scroll>true</scroll>
+					<textcolor>ffdadada</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<top>43</top>
+					<width>auto</width>
+					<height>32</height>
+					<font>Light28</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffbebebe</textcolor>
+					<label>$INFO[ListItem.Year]</label>
+				</control>
+				<!-- Star rating / Votes / Rating -->
+				<control type="grouplist">
+					<top>80</top>
+					<height>40</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="image">
+						<top>2</top>
+						<width>147</width>
+						<height>24</height>
+						<texture>$VAR[ExtendedRating]</texture>
+						<aspectratio align="left">keep</aspectratio>
+					</control>
+					<control type="label">
+						<top>-10</top>
+						<width>auto</width>
+						<height>34</height>
+						<font>Bold26</font>
+						<aligny>bottom</aligny>
+						<textcolor>ffbcbcbc</textcolor>
+						<label>$INFO[ListItem.Rating,,/10]</label>
+					</control>
+				</control>
+				<control type="image">
+					<top>148</top>
+					<width>472</width>
+					<height>266</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$VAR[PanelImage]</texture>
+				</control>
+				<control type="textbox">
+					<top>453</top>
+					<width>432</width>
+					<height>340</height>
+					<pagecontrol>584</pagecontrol>
+					<font>Light26Spaced</font>
+					<autoscroll>false</autoscroll>
+					<textcolor>ffb1b2b3</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+				<control id="584" type="scrollbar">
+					<top>145</top>
+					<width>1192</width>
+					<height>88</height>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<!-- More button -->
+				<control type="image">
+					<left>435</left>
+					<top>763</top>
+					<width>37</width>
+					<height>23</height>
+					<texture>views/more_nf.png</texture>
+					<visible>Control.IsVisible(584) + !String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+			</control>				
+			<!-- Icon -->
+			<control type="grouplist">
+				<visible>!Container(500).HasNext</visible>
+				<animation delay="100" easing="inout" effect="fade" end="100" start="0" time="200" tween="sine" condition="!Container(500).HasNext">Conditional</animation>
+				<left>92</left>
+				<width>1205</width>
+				<bottom>40</bottom>
+				<height>40</height>
+				<itemgap>10</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<width>auto</width>					
+					<height>40</height>
+					<font>Reg22</font>
+					<align>left</align>
+					<textcolor>$VAR[ExtendendIconColor]</textcolor>
+					<label>$LOCALIZE[31284]</label>
+					<visible>!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture colordiffuse="$VAR[ExtendendIconColor]">views/button_left.png</texture>
+					<visible>!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+				<control type="label">
+					<font>invisible</font>
+					<label>spacer</label>
+					<width>50</width>
+					<visible>[!Integer.IsEqual(Window.Property(CurrentPage),1) + Integer.IsGreater(Window.Property(TotalPages),1)] + [!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)]</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>					
+					<height>40</height>
+					<font>Reg22</font>
+					<align>left</align>
+					<textcolor>$VAR[ExtendendIconColor]</textcolor>
+					<label>$LOCALIZE[31283]</label>
+					<visible>!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture colordiffuse="$VAR[ExtendendIconColor]">views/button_right.png</texture>
+					<visible>!String.IsEqual(Window.Property(CurrentPage),Window.Property(TotalPages)) + Integer.IsGreater(Window.Property(TotalPages),1)</visible>
+				</control>
+			</control>
+		</control>
+		<!-- Options -->
+		<control type="group">
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation))</visible>
+			<!-- Background -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>dialogs/DialogBackground.png</texture>
+				<visible>ControlGroup(5000).HasFocus | ControlGroup(4000).HasFocus</visible>
+				<animation effect="fade" end="100" start="0" time="120" tween="sine" easing="inout">Visible</animation>
+				<animation delay="100" effect="fade" end="0" start="100" time="200" tween="sine" easing="inout">Hidden</animation>
+			</control>
+			<!-- Sort by -->
+			<control type="group">
+				<visible>ControlGroup(4000).HasFocus</visible>
+				<animation reversible="true" type="Visible">
+					<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
+					<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
+				</animation>
+				<animation reversible="true" type="Hidden">
+					<effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
+					<effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
+				</animation>
+				<control type="grouplist" id="4000">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>560</width>
+					<height>900</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>999</onleft>
+					<onright>999</onright>
+					<itemgap>0</itemgap>
+					<align>center</align>
+					<orientation>vertical</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<defaultcontrol always="true">5001</defaultcontrol>
+					<control type="button">
+						<label>$LOCALIZE[31092]</label>
+						<textoffsetx>40</textoffsetx>
+						<width>560</width>
+						<height>60</height>
+						<font>Bold30</font>
+						<textcolor>ffdadada</textcolor>
+						<disabledcolor>ffdadada</disabledcolor>
+						<texturenofocus border="2">dialogs/OptionsBackgroundHeading.png</texturenofocus>
+						<enable>false</enable>
+					</control>
+					<control type="button" id="5001">
+						<label>$LOCALIZE[31092]</label>
+						<label2>$INFO[Window.Property(Sort_Label)]</label2>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5004">
+						<label>$LOCALIZE[21429]</label>
+						<label2>$INFO[Window.Property(Order_Label)]</label2>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>				
+					<control type="image" id="4090">
+						<width>560</width>
+						<height>110</height>
+						<texture border="2">dialogs/OptionsBackgroundButtonDone.png</texture>
+					</control>
+					<control type="button" id="4091">
+						<centerleft>50%</centerleft>
+						<top>-97</top>
+						<bottom>0</bottom>
+						<width>412</width>
+						<height>84</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<onback>50</onback>
+						<onclick>SetFocus(999)</onclick>
+						<font>Med24</font>
+						<label>20177</label>
+						<textoffsety>27</textoffsety>
+					</control>
+				</control>
+			</control>
+			<!-- Filter by -->
+			<control type="group">
+				<visible>ControlGroup(5000).HasFocus</visible>
+				<animation reversible="true" type="Visible">
+					<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
+					<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
+				</animation>
+				<animation reversible="true" type="Hidden">
+					<effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
+					<effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
+				</animation>
+				<control type="grouplist" id="5000">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>560</width>
+					<height>900</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>999</onleft>
+					<onright>999</onright>
+					<itemgap>0</itemgap>
+					<align>center</align>
+					<orientation>vertical</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<defaultcontrol always="true">5002</defaultcontrol>
+					<control type="button">
+						<label>$ADDON[script.extendedinfo 32023]</label>
+						<textoffsetx>40</textoffsetx>
+						<width>560</width>
+						<height>60</height>
+						<font>Bold30</font>
+						<textcolor>ffdadada</textcolor>
+						<disabledcolor>ffdadada</disabledcolor>
+						<texturenofocus border="2">dialogs/OptionsBackgroundHeading.png</texturenofocus>
+						<enable>false</enable>
+					</control>
+					<control type="button" id="5002">
+						<label>$LOCALIZE[515]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5003">
+						<label>$LOCALIZE[172]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5006">
+						<label>$ADDON[script.extendedinfo 32127]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5008">
+						<label>$ADDON[script.extendedinfo 32126]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5009">
+						<label>$ADDON[script.extendedinfo 32114]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5010">
+						<label>$LOCALIZE[572]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>
+					<control type="button" id="5012">
+						<label>$ADDON[script.extendedinfo 32111]</label>
+						<height>100</height>
+						<width>560</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>560</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
+						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
+					</control>	
+					<control type="image" id="5090">
+						<width>560</width>
+						<height>110</height>
+						<texture border="2">dialogs/OptionsBackgroundButtonDone.png</texture>
+					</control>
+					<control type="button" id="5091">
+						<centerleft>50%</centerleft>
+						<top>-97</top>
+						<bottom>0</bottom>
+						<width>412</width>
+						<height>84</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<onback>50</onback>
+						<onclick>SetFocus(999)</onclick>
+						<font>Med24</font>
+						<label>20177</label>
+						<textoffsety>27</textoffsety>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
