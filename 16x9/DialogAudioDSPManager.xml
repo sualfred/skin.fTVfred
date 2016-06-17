@@ -382,6 +382,12 @@
 					<label>14070</label>
 				</control>
 			</control>
+			<control type="image">
+				<left>422</left>
+				<width>40</width>
+				<height>625</height>
+				<texture border="0,20,0,0">settings/shadow.png</texture>
+			</control>
 		</control>
 	</controls>
 </window>
