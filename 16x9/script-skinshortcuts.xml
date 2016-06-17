@@ -462,7 +462,7 @@
 				<top>60</top>
 				<width>40</width>
 				<height>588</height>
-				<texture border="0,20,0,0">settings/shadow.png</texture>
+				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 		</control>
 	</controls>

@@ -269,14 +269,14 @@
 				<left>513</left>
 				<width>40</width>
 				<height>504</height>
-				<texture border="0,20,0,0">settings/shadow.png</texture>
+				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 			<control type="image">
 				<top>60</top>
 				<left>1026</left>
 				<width>40</width>
 				<height>504</height>
-				<texture border="0,20,0,0">settings/shadow.png</texture>
+				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 		</control>
 	</controls>

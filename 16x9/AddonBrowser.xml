@@ -325,7 +325,7 @@
 				<left>-359</left>
 				<width>40</width>
 				<height>480</height>
-				<texture flipx="true">settings/shadow.png</texture>
+				<texture flipx="true">common/shadow.png</texture>
 				<animation reversible="false" type="WindowOpen">
 					<effect easing="inout" end="100" start="0" time="125" tween="sine" type="fade" />
 				</animation>
@@ -406,7 +406,7 @@
 				<control type="image">
 					<width>40</width>
 					<height>480</height>
-					<texture>settings/shadow.png</texture>
+					<texture>common/shadow.png</texture>
 				</control>
 			</control>
 		</control>
@@ -782,7 +782,7 @@
 				<left>558</left>
 				<width>40</width>
 				<height>480</height>
-				<texture>settings/shadow.png</texture>
+				<texture>common/shadow.png</texture>
 				<visible>!String.EndsWith(Container.FolderPath,/)</visible>
 				<animation easing="inout" effect="fade" end="100" start="0" time="0" tween="sine">VisibleChange</animation>
 			</control>

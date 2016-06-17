@@ -114,6 +114,13 @@
 							<width>550</width>
 							<height>84</height>
 							<texture border="3">settings/button_focus.png</texture>
+							<visible>Control.HasFocus(10)</visible>
+						</control>
+						<control type="image">
+							<width>550</width>
+							<height>84</height>
+							<texture border="3">settings/button_no_focus.png</texture>
+							<visible>!Control.HasFocus(10)</visible>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -326,7 +333,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 				</control>
 			</control>
-
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">
 				<bottom>3</bottom>
@@ -361,6 +367,20 @@
 					<textoffsety>27</textoffsety>
 					<label>186</label>
 				</control>
+			</control>
+			<control type="image">
+				<left>510</left>
+				<top>312</top>
+				<width>40</width>
+				<height>252</height>
+				<texture flipx="true" border="0,20,0,0">common/shadow.png</texture>
+			</control>
+			<control type="image">
+				<left>770</left>
+				<top>60</top>
+				<width>40</width>
+				<height>504</height>
+				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 		</control>
 	</controls>

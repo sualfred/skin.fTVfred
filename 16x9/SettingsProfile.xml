@@ -122,7 +122,7 @@
 				<left>-359</left>
 				<width>40</width>
 				<height>480</height>
-				<texture flipx="true">settings/shadow.png</texture>
+				<texture flipx="true">common/shadow.png</texture>
 			</control>
 			<control type="group">
 				<control type="image">
@@ -154,7 +154,7 @@
 				<control type="image">
 					<width>40</width>
 					<height>480</height>
-					<texture>settings/shadow.png</texture>
+					<texture>common/shadow.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -230,7 +230,7 @@
 				<control type="image">
 					<width>40</width>
 					<height>480</height>
-					<texture>settings/shadow.png</texture>
+					<texture>common/shadow.png</texture>
 				</control>
 			</control>
 		</control>
