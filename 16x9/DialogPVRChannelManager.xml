@@ -14,7 +14,7 @@
 			<control type="image">
 				<width>1540</width>
 				<height>664</height>
-				<texture>dialogs/skin_shortcuts_back.png</texture>
+				<texture>dialogs/pvrchannelmanager_back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label" id="500">
@@ -262,7 +262,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19204</label>
 				</control>
-
 			</control>
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">
@@ -325,6 +324,13 @@
 					<textoffsety>27</textoffsety>
 					<label>19205</label>
 				</control>
+			</control>
+			<control type="image">
+				<top>60</top>
+				<left>670</left>
+				<width>40</width>
+				<height>504</height>
+				<texture border="0,20,0,0">settings/shadow.png</texture>
 			</control>
 		</control>
 	</controls>

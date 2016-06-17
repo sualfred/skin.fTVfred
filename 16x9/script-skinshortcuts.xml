@@ -456,6 +456,13 @@
 					<onclick condition="!Window.IsVisible(home)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
 					<onclick>Close</onclick>
 				</control>
+			</control>			
+			<control type="image">
+				<left>670</left>
+				<top>60</top>
+				<width>40</width>
+				<height>588</height>
+				<texture border="0,20,0,0">settings/shadow.png</texture>
 			</control>
 		</control>
 	</controls>

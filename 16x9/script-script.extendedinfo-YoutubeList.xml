@@ -283,7 +283,7 @@
 			<!-- Separator -->
 			<control type="image">
 				<visible>Integer.IsGreater(Container(500).NumItems,0)</visible>
-				<left>1313</left>
+				<left>1311</left>
 				<top>80</top>
 				<width>8</width>
 				<height>1000</height>
