@@ -308,6 +308,7 @@
 						<height>116</height>
 						<onup>Close</onup>
 						<ondown condition="Control.IsVisible(50)">50</ondown>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCINFO[ListItem.AddonNews]')</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31050]</label>
 						<textoffsetx>28</textoffsetx>
