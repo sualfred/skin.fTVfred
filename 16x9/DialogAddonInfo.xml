@@ -310,13 +310,13 @@
 						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCINFO[ListItem.AddonNews]')</onclick>
 						<font>Med24</font>
-						<label>$LOCALIZE[31050]</label>
+						<label>$LOCALIZE[24054]</label>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>Control.IsEnabled(10)</visible>
+						<visible>!String.IsEmpty(ListItem.AddonNews)</visible>
 					</control>
 				</control>
 			</control>

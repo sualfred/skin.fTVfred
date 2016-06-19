@@ -222,17 +222,6 @@
 					<texturefocus>-</texturefocus>
 					<label>$LOCALIZE[137]</label>
 				</control>
-				<control type="button" id="7000">
-					<width>auto</width>
-					<height>40</height>
-					<font>Light32</font>
-					<aligny>bottom</aligny>
-					<textcolor>$VAR[ExtendendMenuColor]</textcolor>
-					<focusedcolor>ffffc24b</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>-</texturefocus>
-					<label>$LOCALIZE[31282]</label>
-				</control>
 				<control type="button" id="5007">
 					<width>auto</width>
 					<height>40</height>

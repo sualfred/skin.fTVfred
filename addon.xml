@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.0.7"
+	version="3.0.8"
 	name="fTV Fred Edition"
 	provider-name="Sualfred (Orignal skin by Hitcher)">
 	<requires>
@@ -23,5 +23,36 @@
 		<summary lang="en">Skin based on the Fire TV UI</summary>
 		<disclaimer lang="en">Does not support:[CR]Mouse[CR]Touch[CR]Live TV</disclaimer>
 		<description lang="en">Basic fTV skin (by Hitcher) with nearly full PVR functionality, plus changed a lot of behaviours and added dozens of other features[CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).</description>
+		<news>Changelog:
+
+[B]3.0.8[/B]
+- Krypton work
+
+[B]3.0.7[/B]
+- Added ExtendedInfo YouTube Browser
+- Dialog tweaks
+- Cleanup
+
+[B]3.0.6[/B]
+- Fixed ExtendedInfo layouts and conditions (newest version required)
+- Minor fixes
+
+[B]3.0.5[/B]
+- Reverted previous busy dialog fix because it's not needed anymore
+- Added a more secure check that widget animations are going to be triggered, even if there is an delay of other conditions
+
+[B]3.0.4[/B]
+- fixed addon info labels
+
+[B]3.0.3[/B]
+- repo push
+
+[B]3.0.2[/B]
+- preload timeout fixes
+
+[B]3.0.1[/B]
+Krypton repo release
+- Renamed skin ID. Please create and import an backup of the Jarvis Krypton version.
+		</news>
 	</extension>
 </addon>
