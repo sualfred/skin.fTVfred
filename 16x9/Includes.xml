@@ -277,30 +277,57 @@
 	<include name="AudioCodec">
 		<control type="image">
 			<top>3</top>
-			<width>55</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-			<visible>!String.IsEmpty(ListItem.AudioCodec) + !String.Contains(ListItem.AudioCodec,dtshd) + !String.Contains(ListItem.AudioCodec,flac) + !String.Contains(ListItem.AudioCodec,truehd)</visible>
+			<texture>flags/mono.png</texture>
+			<visible>Integer.IsEqual(ListItem.AudioChannels,1)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>81</width>
+			<width>84</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-			<visible>!String.IsEmpty(ListItem.AudioCodec) + String.Contains(ListItem.AudioCodec,dtshd)</visible>
+			<texture>flags/stereo.png</texture>
+			<visible>Integer.IsEqual(ListItem.AudioChannels,2)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>62</width>
+			<width>53</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-			<visible>!String.IsEmpty(ListItem.AudioCodec) + String.Contains(ListItem.AudioCodec,flac)</visible>
+			<texture>flags/dts.png</texture>
+			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + !String.Contains(ListItem.AudioCodec,dtshd) + [String.Contains(ListItem.AudioCodec,dca) | String.Contains(ListItem.AudioCodec,dts)]</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>78</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flags/dtshd.png</texture>
+			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + String.Contains(ListItem.AudioCodec,dtshd)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>75</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flags/dolby.png</texture>
+			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + String.Contains(ListItem.AudioCodec,ac3) + !String.Contains(ListItem.AudioCodec,eac3)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>84</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flags/dolbyplus.png</texture>
+			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + String.Contains(ListItem.AudioCodec,eac3)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
@@ -308,8 +335,17 @@
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-			<visible>!String.IsEmpty(ListItem.AudioCodec) + String.Contains(ListItem.AudioCodec,truehd)</visible>
+			<texture>flags/truehd.png</texture>
+			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + String.Contains(ListItem.AudioCodec,truehd)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>90</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flags/multich.png</texture>
+			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + !String.Contains(ListItem.AudioCodec,ac3) + !String.Contains(ListItem.AudioCodec,truehd) + !String.Contains(ListItem.AudioCodec,dts) + !String.Contains(ListItem.AudioCodec,dca)</visible>
 		</control>
 	</include>
 	<!-- TV Ratings -->
