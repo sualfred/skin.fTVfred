@@ -196,13 +196,15 @@
 						<width>35</width>
 						<height>23</height>
 						<colordiffuse>ffdadada</colordiffuse>
-						<texture>flags/cc.png</texture>
+						<aspectratio>keep</aspectratio>
+						<texture align="left">flags/cc.png</texture>
 						<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 					</control>
 					<include>Rating_TV</include>
 					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
+					<include>AudioCodec</include>
 				</control>
 				<!-- Star rating / Rating -->
 				<control type="grouplist">
