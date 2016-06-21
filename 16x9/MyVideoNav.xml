@@ -393,7 +393,6 @@
 						<label>$INFO[ListItem.Year,,[COLOR 00ffffff]/[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Year)</visible>
 					</control>
-					<include>AudioCodec</include>
 					<include>Rating_TV</include>
 					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
@@ -407,6 +406,7 @@
 						<texture align="center">flags/cc.png</texture>
 						<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 					</control>
+					<include>AudioCodec</include>
 					<control type="image">
 						<top>2</top>
 						<width>147</width>

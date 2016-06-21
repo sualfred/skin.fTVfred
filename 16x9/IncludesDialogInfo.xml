@@ -191,6 +191,10 @@
 						<label>$VAR[Duration] </label>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
+					<include>Rating_TV</include>
+					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
+					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
+					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
 					<control type="image">
 						<top>3</top>
 						<width>35</width>
@@ -200,10 +204,6 @@
 						<texture align="left">flags/cc.png</texture>
 						<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 					</control>
-					<include>Rating_TV</include>
-					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
-					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
-					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
 					<include>AudioCodec</include>
 				</control>
 				<!-- Star rating / Rating -->

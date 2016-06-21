@@ -102,11 +102,10 @@
 		<value condition="Control.HasFocus(1002)">rating/user_rating/none_fo.png</value>
 	</variable>
 	<variable name="VolumeIcon">
+		<value condition="Player.Muted">dialogs/notification_volume_mute.png</value>
 		<value condition="Integer.IsGreater(player.volume,75)">dialogs/notification_volume.png</value>
 		<value condition="Integer.IsGreater(player.volume,25)">dialogs/notification_volume_mid.png</value>
-		<value condition="!Integer.IsGreater(player.volume,25) + !Player.Muted">dialogs/notification_volume_min.png</value>
-		<!--<value condition="!Player.Muted">dialogs/notification_volume.png</value>-->
-		<value>dialogs/notification_volume_mute.png</value>
+		<value condition="!Integer.IsGreater(player.volume,25)">dialogs/notification_volume_min.png</value>
 	</variable>
 	<variable name="VolumeDetails">
 		<value condition="!Player.Muted">$INFO[Control.GetLabel(404),,%]</value>
