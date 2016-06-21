@@ -4,6 +4,7 @@
 	<controls>
 		<!-- Main group -->
 		<control type="group">
+			<animation easing="inout" effect="slide" end="0,-191" start="0,0" time="120" delay="5000" tween="sine" condition="Player.Muted">Conditional</animation>
 			<include>NotificationAnimation</include>
 			<centerleft>50%</centerleft>
 			<top>26</top>
