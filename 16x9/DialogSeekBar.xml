@@ -25,9 +25,6 @@
 					<height>341</height>
 					<texture>osd/Pause.png</texture>
 					<visible>Player.Paused + !Player.Caching</visible>
-					<animation condition="System.IdleTime(2)" reversible="true" type="Conditional">
-						<effect end="0" start="100" time="200" type="fade" />
-					</animation>
 				</control>
 				<control type="group">
 					<visible>Player.Caching</visible>
