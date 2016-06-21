@@ -16,22 +16,22 @@
 			<width>1437</width>
 			<height>480</height>
 			<visible>Control.IsVisible(3)</visible>
-			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)] + Control.IsVisible(5)" effect="slide" end="-43,-11">Conditional</animation>
-			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)] + !Control.IsVisible(5)" effect="slide" end="-283,-11">Conditional</animation>
-			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)]" reversible="false" type="WindowOpen">
+			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)] + Control.IsVisible(5) + String.IsEmpty(Window(home).Property(ForceDefaultLayout))" effect="slide" end="-43,-11">Conditional</animation>
+			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)] + !Control.IsVisible(5) + String.IsEmpty(Window(home).Property(ForceDefaultLayout))" effect="slide" end="-283,-11">Conditional</animation>
+			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)] + String.IsEmpty(Window(home).Property(ForceDefaultLayout))" reversible="false" type="WindowOpen">
 				<effect end="100" start="0" time="200" type="fade" />
 				<effect easing="inout" end="0,0" start="500,0" time="200" tween="sine" type="slide" />
 			</animation>
-			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)]" reversible="false" type="WindowClose">
+			<animation condition="[Window.IsVisible(settingscategory.xml) | Window.IsVisible(addonbrowser)] + String.IsEmpty(Window(home).Property(ForceDefaultLayout))" reversible="false" type="WindowClose">
 				<effect end="0" start="100" time="125" type="fade" />
 				<effect easing="inout" end="500,0" start="0,0" time="125" tween="sine" type="slide" />
 			</animation>
-			<animation condition="!Window.IsVisible(settingscategory.xml) + !Window.IsVisible(addonbrowser)" reversible="false" type="WindowOpen">
+			<animation condition="[!Window.IsVisible(settingscategory.xml) + !Window.IsVisible(addonbrowser)] | !String.IsEmpty(Window(home).Property(ForceDefaultLayout))" reversible="false" type="WindowOpen">
 				<effect end="100" start="0" time="200" type="fade" />
 				<effect easing="inout" end="0,0" start="0,-40" time="200" tween="sine" type="slide" />
 				<effect center="auto" easing="inout" end="100" start="84.5" time="200" tween="sine" type="zoom" />
 			</animation>
-			<animation condition="!Window.IsVisible(settingscategory.xml) + !Window.IsVisible(addonbrowser)" reversible="false" type="WindowClose">
+			<animation condition="[!Window.IsVisible(settingscategory.xml) + !Window.IsVisible(addonbrowser)] | !String.IsEmpty(Window(home).Property(ForceDefaultLayout))" reversible="false" type="WindowClose">
 				<effect end="0" start="100" time="125" type="fade" />
 			</animation>
 			<animation condition="!Control.IsVisible(5)" reversible="false" type="Conditional">

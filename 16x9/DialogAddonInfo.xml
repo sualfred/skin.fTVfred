@@ -29,6 +29,10 @@
 			<orientation>vertical</orientation>
 		</control>
 		<!-- Hidden Button -->
+		<control id="12" type="button">
+			<include>HiddenControl</include>
+			<visible>Control.IsEnabled(12)</visible>
+		</control>
 		<control id="13" type="radiobutton">
 			<include>HiddenControl</include>
 			<visible>Control.IsEnabled(13)</visible>
@@ -240,11 +244,13 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<!-- Launch Addon Button -->
-					<control id="12" type="button">
+					<control id="9002" type="button">
 						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
+						<onclick>SetProperty(ForceDefaultLayout,1,home)</onclick>
+						<onclick>SendClick(12)</onclick>
 						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<label>$LOCALIZE[31033]</label>
