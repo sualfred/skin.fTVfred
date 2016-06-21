@@ -273,61 +273,107 @@
 			<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,g) + !String.Contains(ListItem.Mpaa,pg)</visible>
 		</control>
 	</include>
+	<!-- AudioCodec -->
+	<include name="AudioCodec">
+		<control type="image">
+			<top>3</top>
+			<width>55</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.AudioCodec) + !String.Contains(ListItem.AudioCodec,dtshd) + !String.Contains(ListItem.AudioCodec,flac) + !String.Contains(ListItem.AudioCodec,truehd)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>81</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.AudioCodec) + String.Contains(ListItem.AudioCodec,dtshd)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>62</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.AudioCodec) + String.Contains(ListItem.AudioCodec,flac)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>89</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.AudioCodec) + String.Contains(ListItem.AudioCodec,truehd)</visible>
+		</control>
+	</include>
 	<!-- TV Ratings -->
 	<include name="Rating_TV">
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/14.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,14)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/g.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,g) + !String.Contains(ListItem.Mpaa,pg)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/pg.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,pg)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/ma.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,ma)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/nr.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,nr)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/y.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y) + !String.Contains(ListItem.Mpaa,y7)</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>69</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
 			<texture>rating/tv/y7.png</texture>
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y7)</visible>
 		</control>

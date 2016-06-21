@@ -196,7 +196,7 @@
 						<width>35</width>
 						<height>23</height>
 						<colordiffuse>ffdadada</colordiffuse>
-						<texture>rating/cc.png</texture>
+						<texture>flags/cc.png</texture>
 						<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 					</control>
 					<include>Rating_TV</include>
