@@ -500,6 +500,11 @@ msgctxt "#31119"
 msgid "Location"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31120"
+msgid "Select Movie Rating Provider"
+msgstr ""
+
 msgctxt "#31121"
 msgid "Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable debugging and setup master lock."
 msgstr "Setup and calibrate displays, configure audio output, setup remote controls, set power saving options, enable debugging and setup master lock."
@@ -1238,6 +1243,21 @@ msgstr ""
 #: /16x9/script-script.extendedinfo-VideoList.xml:134
 msgctxt "#31286"
 msgid "ExtendedInfo Script"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31287"
+msgid "Select TV Show Rating Provider"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31288"
+msgid "Select the rating provider of your configured movie scraper."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31289"
+msgid "Select the rating provider of your configured TV show scraper."
 msgstr ""
 
 msgctxt "#31500"

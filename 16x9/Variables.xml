@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="MovieRatingProvider">
+		<value condition="String.IsEqual(Skin.String(MovieRatingProvider),other)">views/ratingbadge.png</value>
+		<value condition="String.IsEqual(Skin.String(MovieRatingProvider),tmdb)">views/tmdb.png</value>
+		<value>views/imdb.png</value>
+	</variable>
+	<variable name="MovieRatingProviderLabel">
+		<value condition="String.IsEqual(Skin.String(MovieRatingProvider),other)">$LOCALIZE[14224]</value>
+		<value condition="String.IsEqual(Skin.String(MovieRatingProvider),tmdb)">TMDb</value>
+		<value>IMDb</value>
+	</variable>
+	<variable name="TVShowRatingProvider">
+		<value condition="String.IsEqual(Skin.String(TVShowRatingProvider),other)">views/ratingbadge.png</value>
+		<value condition="String.IsEqual(Skin.String(TVShowRatingProvider),tmdb)">views/tmdb.png</value>
+		<value condition="String.IsEqual(Skin.String(TVShowRatingProvider),imdb)">views/imdb.png</value>
+		<value>views/tvdb.png</value>
+	</variable>
+	<variable name="TVShowRatingProviderLabel">
+		<value condition="String.IsEqual(Skin.String(TVShowRatingProvider),other)">$LOCALIZE[14224]</value>
+		<value condition="String.IsEqual(Skin.String(TVShowRatingProvider),tmdb)">TMDb</value>
+		<value condition="String.IsEqual(Skin.String(TVShowRatingProvider),imdb)">IMDb</value>
+		<value>TVDB</value>
+	</variable>
 	<variable name="LeftControllerImg">
 		<value condition="!ControlGroup(3).HasFocus">ff5b6064</value>
 		<value>ffffaf37</value>
@@ -2244,6 +2266,8 @@
 		<value condition="ControlGroup(9).HasFocus(22)">$LOCALIZE[31040]</value>
 		<value condition="ControlGroup(9).HasFocus(23)">$LOCALIZE[31228]</value>
 		<value condition="ControlGroup(9).HasFocus(24)">$LOCALIZE[31233]</value>
+		<value condition="ControlGroup(9).HasFocus(25)">$LOCALIZE[31288]</value>
+		<value condition="ControlGroup(9).HasFocus(26)">$LOCALIZE[31289]</value>
 	</variable>
 	<variable name="AlbumArtistName">
 		<value condition="!String.IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>
