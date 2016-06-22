@@ -277,7 +277,7 @@
 	<include name="AudioCodec">
 		<control type="image">
 			<top>3</top>
-			<width>69</width>
+			<width>59</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -286,7 +286,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>84</width>
+			<width>74</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -295,7 +295,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>53</width>
+			<width>43</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -304,7 +304,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>78</width>
+			<width>68</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -313,7 +313,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>75</width>
+			<width>65</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -322,7 +322,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>84</width>
+			<width>74</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -331,7 +331,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>89</width>
+			<width>79</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -340,7 +340,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>90</width>
+			<width>80</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
