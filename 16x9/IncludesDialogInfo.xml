@@ -1079,7 +1079,7 @@
 					<pagecontrol>8</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffdadada</textcolor>
-					<label>$INFO[ListItem.Label,[B],[/B][CR]]$VAR[Plot,[LIGHT],[/LIGHT]]</label>
+					<label>$INFO[ListItem.Label,[B],[/B][CR]]$VAR[DialogPlot,[LIGHT],[/LIGHT]]</label>
 				</control>	
 				<!-- Arrow up -->
 				<control type="image">

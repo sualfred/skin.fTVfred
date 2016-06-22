@@ -2752,6 +2752,12 @@
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.PlotOutline]</value>
+	</variable>
+	<variable name="DialogPlot">
+		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>
+		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.PlotOutline]</value>
 		<value>$LOCALIZE[195]</value>
 	</variable>
 	<variable name="Day0">
