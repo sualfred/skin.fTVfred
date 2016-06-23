@@ -1158,7 +1158,7 @@
 					<font>Med28</font>
 					<textcolor>ffffc448</textcolor>
 					<shadowcolor>88000000</shadowcolor>
-					<label>$LOCALIZE[31226]</label>
+					<label>$VAR[TuneInLabel]</label>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>

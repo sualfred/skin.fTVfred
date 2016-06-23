@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="TuneInLabel">
+		<value condition="Window.IsVisible(pvrosdchannels)">$LOCALIZE[19165]</value>
+		<value>$LOCALIZE[31226]</value>
+	</variable>
 	<variable name="MovieRatingProvider">
 		<value condition="String.IsEqual(Skin.String(MovieRatingProvider),other)">views/ratingbadge.png</value>
 		<value condition="String.IsEqual(Skin.String(MovieRatingProvider),tmdb)">views/tmdb.png</value>
@@ -285,6 +289,10 @@
 		<value condition="String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31159])">$LOCALIZE[31159]</value>
 		<value condition="String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31160])">$LOCALIZE[31160]</value>
 		<value>$LOCALIZE[31203]</value>
+	</variable>
+	<variable name="PVRChannelsOSDLayout">
+		<value condition="!String.IsEmpty(Skin.String(PVRChannelsOSDLayout))">$LOCALIZE[31291]</value>
+		<value>$LOCALIZE[31290]</value>
 	</variable>
 	<variable name="ftvWidgetLabel">
 		<value condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),livetv)">$VAR[ftvLabelTV]</value>
@@ -2268,6 +2276,7 @@
 		<value condition="ControlGroup(9).HasFocus(24)">$LOCALIZE[31233]</value>
 		<value condition="ControlGroup(9).HasFocus(25)">$LOCALIZE[31288]</value>
 		<value condition="ControlGroup(9).HasFocus(26)">$LOCALIZE[31289]</value>
+		<value condition="ControlGroup(9).HasFocus(27)">$LOCALIZE[31293]</value>
 	</variable>
 	<variable name="AlbumArtistName">
 		<value condition="!String.IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>
@@ -2748,12 +2757,16 @@
 		<value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEqual(ListItem.Label,ListItem.Artist)">$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="Plot">
+		<value condition="Control.IsVisible(11) + !String.IsEmpty(Container(11).ListItem.Plot)">$INFO[Container(11).ListItem.EpisodeName,,[CR]]$INFO[Container(11).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(11) + !String.IsEmpty(Container(11).ListItem.PlotOutline)">$INFO[Container(11).ListItem.EpisodeName,,[CR]]$INFO[Container(11).ListItem.PlotOutline]</value>
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.PlotOutline]</value>
 	</variable>
 	<variable name="DialogPlot">
+		<value condition="Control.IsVisible(11) + !String.IsEmpty(Container(11).ListItem.Plot)">$INFO[Container(11).ListItem.EpisodeName,,[CR]]$INFO[Container(11).ListItem.Plot]</value>
+		<value condition="Control.IsVisible(11) + !String.IsEmpty(Container(11).ListItem.PlotOutline)">$INFO[Container(11).ListItem.EpisodeName,,[CR]]$INFO[Container(11).ListItem.PlotOutline]</value>
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>

@@ -13,6 +13,10 @@
 			<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 			<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 		</animation>
+		<animation condition="Window.IsVisible(1108)" reversible="false" type="Conditional">
+			<effect easing="out" end="20,0" start="0,0" time="60" tween="sine" type="slide" />
+			<effect delay="80" easing="out" end="-20,0" start="0,0" time="120" tween="sine" type="slide" />
+		</animation>
 	</include>
 	<!-- PVR Fake Progress Animation -->	
 	<include name="FakeProgressAnimation">

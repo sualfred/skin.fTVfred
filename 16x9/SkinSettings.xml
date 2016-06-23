@@ -530,6 +530,24 @@
 					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(FavouritesLayout,$LOCALIZE[31160]))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 				</control>
+				<control id="27" type="button">
+					<width>958</width>
+					<height>84</height>
+					<font>Light32</font>
+					<label>$LOCALIZE[31292]</label>
+					<label2>$VAR[PVRChannelsOSDLayout]</label2>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>SetProperty(Dialog.NumItems,2)</onclick>
+					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[571] - $LOCALIZE[31290])</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(PVRChannelsOSDLayout))</onclick>
+					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31291])</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(PVRChannelsOSDLayout,vertical))</onclick>
+					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31292])</onclick>
+				</control>
 				<control id="23" type="button">
 					<width>958</width>
 					<height>84</height>

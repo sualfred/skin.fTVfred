@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-22 09:30+0000\n"
+"PO-Revision-Date: 2016-06-23 10:03+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1290,6 +1290,27 @@ msgstr "Wähle die Herkunft der Film-Bewertungen deines konfiguriertem Scrapers.
 msgctxt "#31289"
 msgid "Select the rating provider of your configured TV show scraper."
 msgstr "Wähle die Herkunft der Serien-Bewertungen deines konfiguriertem Scrapers."
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31290"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31291"
+msgid "Vertical"
+msgstr "Vertikal"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31292"
+msgid "Set PVR Channels OSD Layout"
+msgstr "Setze TV Kanal OSD Ansicht "
+
+#: /16x9/Variables.xml
+msgctxt "#31293"
+msgid ""
+"Changes the OSD layout of the Live TV channels.[CR]Default is 'Horizontal'."
+msgstr "Ändert die Darstellung des OSD Layouts der TV Kanäle während der Wiedergabe.[CR]Standard ist 'Horizontal'."
 
 msgctxt "#31500"
 msgid "Widget Group 1"

@@ -1260,6 +1260,26 @@ msgctxt "#31289"
 msgid "Select the rating provider of your configured TV show scraper."
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31290"
+msgid "Horizontal"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31291"
+msgid "Vertical"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31292"
+msgid "Set PVR Channels OSD Layout"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31293"
+msgid "Changes the OSD layout of the Live TV channels.[CR]Default is 'Horizontal'."
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
