@@ -2736,15 +2736,7 @@
 		<value condition="Container.Content(sets)">$LOCALIZE[20434]</value>
 		<value condition="Container.Content(tags)">$LOCALIZE[20459]</value>
 		<value condition="Window.IsVisible(tvguide)">$LOCALIZE[4]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(10)">$INFO[Control.GetLabel(31)]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(11)">$INFO[Container.FolderName]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(12)">$INFO[Container.FolderName]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(13)">$LOCALIZE[19163]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(14)">$LOCALIZE[19040]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(15)">$INFO[Control.GetLabel(31)]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(16)">$INFO[Control.GetLabel(31)]</value>
-		<value condition="Window.IsVisible(pvr) + Control.IsVisible(17)">$LOCALIZE[137]</value>
-		<value condition="[Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)]">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(music)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(videolibrary)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(programs)">$LOCALIZE[0]</value>

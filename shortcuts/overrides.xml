@@ -70,24 +70,24 @@
 				<shortcut label="31269" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,plugin://script.skin.helper.service/?action=browsegenres&amp;type=tvshow&amp;limit=1000,return)</shortcut>
 			</node>
 			<node label="2">
-				<shortcut label="31183" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
-				<shortcut label="31184" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Albums.xsp,return)</shortcut>
-				<shortcut label="31185" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
-				<shortcut label="31186" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Artists.xsp,return)</shortcut>
-				<shortcut label="31187" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://genres/,return)</shortcut>
-				<shortcut label="31188" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/albums/,return)</shortcut>
-				<shortcut label="31189" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,musicdb://top100/songs/,return)</shortcut>
-				<shortcut label="31190" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,special://skin/extras/music/Songs.xsp,return)</shortcut>
+				<shortcut label="31183" type="music" icon="ftv_icon.png">ActivateWindow(Music,musicdb://recentlyplayedalbums/,return)</shortcut>
+				<shortcut label="31184" type="music" icon="ftv_icon.png">ActivateWindow(Music,special://skin/extras/music/Albums.xsp,return)</shortcut>
+				<shortcut label="31185" type="music" icon="ftv_icon.png">ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</shortcut>
+				<shortcut label="31186" type="music" icon="ftv_icon.png">ActivateWindow(Music,special://skin/extras/music/Artists.xsp,return)</shortcut>
+				<shortcut label="31187" type="music" icon="ftv_icon.png">ActivateWindow(Music,musicdb://genres/,return)</shortcut>
+				<shortcut label="31188" type="music" icon="ftv_icon.png">ActivateWindow(Music,musicdb://top100/albums/,return)</shortcut>
+				<shortcut label="31189" type="music" icon="ftv_icon.png">ActivateWindow(Music,musicdb://top100/songs/,return)</shortcut>
+				<shortcut label="31190" type="music" icon="ftv_icon.png">ActivateWindow(Music,special://skin/extras/music/Songs.xsp,return)</shortcut>
 			</node>
 			<node label="24001">
 				<shortcut label="31196" icon="ftv_icon.png" condition="System.Platform.Android">ActivateWindow(Programs,androidapp://sources/apps,return)</shortcut>
-				<shortcut label="31512" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,addons://sources/audio/,return)</shortcut>	
+				<shortcut label="31512" type="music" icon="ftv_icon.png">ActivateWindow(Music,addons://sources/audio/,return)</shortcut>	
 				<shortcut label="31520" type="program" icon="ftv_icon.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>	
 				<shortcut label="31519" type="video" icon="ftv_icon.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>	
 				<shortcut label="31521" type="pictures" icon="ftv_icon.png">ActivateWindow(Pictures,addons://sources/image/,return)</shortcut>	
-				<shortcut label="31511" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
-				<shortcut label="31514" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?id=presets&amp;path=browse)</shortcut>
-				<shortcut label="31513" type="music" icon="ftv_icon.png">ActivateWindow(MusicLibrary,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
+				<shortcut label="31511" type="music" icon="ftv_icon.png">ActivateWindow(Music,plugin://plugin.audio.tuneinradio/?path=recents,return)</shortcut>	
+				<shortcut label="31514" type="music" icon="ftv_icon.png">ActivateWindow(Music,plugin://plugin.audio.tuneinradio/?id=presets&amp;path=browse)</shortcut>
+				<shortcut label="31513" type="music" icon="ftv_icon.png">ActivateWindow(Music,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
 			</node>
 			<node label="19020">
 				<shortcut label="19217" type="livetv" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/1,return)</shortcut>
@@ -122,7 +122,7 @@
 				<content>playlist-audio</content>
 			</node>
 			<node label="32011">
-				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(Music,Addons,return)</shortcut>
 				<content>addon-audio</content>
 			</node>
 			<node label="32075">
@@ -143,7 +143,7 @@
 				<content>addon-video</content>
 			</node>
 			<node label="32011">
-				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(Music,Addons,return)</shortcut>
 				<content>addon-audio</content>
 			</node>
 			<node label="32012">

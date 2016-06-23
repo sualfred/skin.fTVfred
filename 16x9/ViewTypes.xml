@@ -882,7 +882,7 @@
 						<onright>2004</onright>
 						<onup>2002</onup>
 						<ondown>2005</ondown>
-						<onclick>ReplaceWindow(MusicFiles)</onclick>
+						<onclick>ReplaceWindow(music,sources://music,enter)</onclick>
 						<font>Med24</font>						
 						<wrapmultiline>true</wrapmultiline>
 						<label>$LOCALIZE[31087]</label>
