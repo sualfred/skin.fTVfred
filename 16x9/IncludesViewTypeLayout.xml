@@ -1157,6 +1157,7 @@
 					<height>28</height>
 					<font>Med28</font>
 					<textcolor>ffffc448</textcolor>
+					<selectedcolor>ffffc448</selectedcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[TuneInLabel]</label>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
