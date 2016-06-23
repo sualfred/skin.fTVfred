@@ -15,6 +15,9 @@
 		<control id="26" type="button">
 			<include>HiddenControl</include>
 		</control>
+		<control id="22" type="button">
+			<include>HiddenControl</include>
+		</control>
 		<!-- Fanart -->
 		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
 		<!-- List -->
@@ -211,7 +214,7 @@
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
-					<control id="22" type="button">
+					<control id="1005" type="button">
 						<width min="104" max="224">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<width>151</width>
@@ -219,6 +222,8 @@
 						<onup>50</onup>
 						<font>Med24</font>
 						<label>$LOCALIZE[31095]</label>
+						<onclick>SendClick(22)</onclick>
+						<onclick>back</onclick>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
