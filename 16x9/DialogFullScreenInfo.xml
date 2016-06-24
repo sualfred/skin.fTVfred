@@ -10,6 +10,7 @@
 		<control type="button" id="101">
 			<include>HiddenControl</include>
 			<onleft condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onleft>
+			<onleft condition="!Window.IsVisible(1108) + String.IsEqual(Container(100).CurrentItem,1)">SetProperty(BounceLeft,1,Home)</onleft>
 			<onright condition="!String.IsEqual(Container(100).Position,3)">Control.Move(100,1)</onright>
 			<onright condition="!Window.IsVisible(1103) + String.IsEqual(Container(100).Position,3)">SetProperty(BounceRight,1,Home)</onright>
 			<ondown>close</ondown>
