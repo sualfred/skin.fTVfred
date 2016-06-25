@@ -370,10 +370,10 @@
 							<param name="Pos">2</param>
 						</include>
 						<include content="ParamWidgetLabel">
-							<param content="Pos">3</param>
+							<param name="Pos">3</param>
 						</include>
 						<include content="ParamWidgetLabel">
-							<param content="Pos">4</param>
+							<param name="Pos">4</param>
 						</include>
 						<include content="ParamWidgetLabel">
 							<param name="Pos">5</param>
