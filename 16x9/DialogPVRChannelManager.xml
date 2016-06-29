@@ -92,7 +92,6 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-
 				<!-- Channel activated -->
 				<control type="radiobutton" id="7">
 					<radiowidth>125</radiowidth>
@@ -117,7 +116,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19074</label>
 				</control>
-
 				<!-- Channel name -->
 				<control type="edit" id="8">
 					<width>870</width>
@@ -131,7 +129,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19201</label>
 				</control>
-
 				<!-- Channel logo button -->
 				<control type="button" id="9">
 					<width>870</width>
@@ -145,17 +142,16 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19202</label>
 				</control>
-
 				<!-- Current channel logo -->
 				<control type="image" id="10">
 					<top>-84</top>
-					<left>710</left>
+					<right>20</right>
 					<height>84</height>
-					<aspectratio>keep</aspectratio>
+					<width max="150">auto</width>
+					<aspectratio align="right">keep</aspectratio>
 					<bordersize>10</bordersize>
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>
-
 				<!-- EPG activated -->
 				<control type="radiobutton" id="12">
 					<radiowidth>125</radiowidth>
@@ -181,7 +177,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19074</label>
 				</control>
-
 				<!-- EPG source -->
 				<control type="spincontrolex" id="13">
 					<width>870</width>
@@ -195,7 +190,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19200</label>
 				</control>
-
 				<!-- Parental locked -->
 				<control type="radiobutton" id="14">
 					<radiowidth>125</radiowidth>
@@ -220,7 +214,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19267</label>
 				</control>
-
 				<!-- Edit channel button -->
 				<control type="button" id="31">
 					<width>870</width>
@@ -234,7 +227,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19203</label>
 				</control>
-
 				<!-- Delete channel button -->
 				<control type="button" id="32">
 					<width>870</width>
@@ -248,7 +240,6 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>19211</label>
 				</control>
-
 				<!-- New channel button -->
 				<control type="button" id="33">
 					<width>870</width>
