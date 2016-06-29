@@ -83,7 +83,7 @@
 			<control type="image">
 				<width>1540</width>
 				<height>748</height>
-				<texture>dialogs/skin_shortcuts_back.png</texture>
+				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label" id="500">
@@ -456,7 +456,7 @@
 					<onclick condition="!Window.IsVisible(home)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onclick>
 					<onclick>Close</onclick>
 				</control>
-			</control>			
+			</control>
 			<control type="image">
 				<left>670</left>
 				<top>60</top>

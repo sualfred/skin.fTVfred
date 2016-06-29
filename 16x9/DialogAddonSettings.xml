@@ -194,6 +194,13 @@
 					<visible>Control.IsEnabled(10)</visible>
 				</control>
 			</control>
+			<control type="image">
+				<left>422</left>
+				<top>60</top>
+				<width>40</width>
+				<height>504</height>
+				<texture border="0,20,0,0">common/shadow.png</texture>
+			</control>
 		</control>
 	</controls>
 </window>

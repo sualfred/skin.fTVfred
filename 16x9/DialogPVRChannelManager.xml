@@ -14,7 +14,7 @@
 			<control type="image">
 				<width>1540</width>
 				<height>664</height>
-				<texture>dialogs/pvrchannelmanager_back.png</texture>
+				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label" id="500">

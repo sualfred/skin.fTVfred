@@ -14,7 +14,7 @@
 			<control type="image">
 				<width>1540</width>
 				<height>648</height>
-				<texture>dialogs/smart_playlist_editor_back.png</texture>
+				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label" id="2">
