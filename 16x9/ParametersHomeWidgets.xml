@@ -12,88 +12,98 @@
 		<param name="Action" default="noop" />
 		<param name="Action2" default="noop" />
 		<definition>
-			<control type="group" id="999">
+			<control type="group">
 				<visible>$PARAM[Visible] + !String.IsEqual(Container(99).ListItem.Property(defaultID),settings)</visible>
-				<include>HomeMessageAnimation</include>
-				<control type="group">
-					<left>345</left>
-					<control type="image">
-						<centerleft>50%</centerleft>
-						<top>385</top>
-						<width>1490</width>
-						<height>310</height>
-						<texture>dialogs/empty_search.png</texture>
-					</control>
+				<include>HomeMessageAnimation</include>				
+				<control type="image">
+					<left>418</left>				
+					<top>-50</top>
+					<width>1600</width>
+					<height>1200</height>
+					<texture>special://skin/extras/backgrounds/default.png</texture>
+					<colordiffuse>ccffffff</colordiffuse>
+				</control>
+				<control type="group" id="999">
 					<control type="group">
-						<centerleft>50%</centerleft>
-						<top>453</top>
-						<control type="label">
-							<height>32</height>
-							<font>Bold32</font>
-							<align>center</align>
-							<textcolor>ffdadada</textcolor>
-							<label>$PARAM[Header]</label>
-						</control>
-						<control type="label">
-							<top>34</top>
-							<height>32</height>
-							<font>Reg22</font>
-							<align>center</align>
-							<textcolor>ff717171</textcolor>
-							<label>$PARAM[Message]</label>
-						</control>				
-						<!-- OK -->
-						<control type="grouplist" id="9990">
-							<top>106</top>
-							<height>76</height>
+						<left>345</left>
+						<control type="image">
 							<centerleft>50%</centerleft>
-							<align>center</align>
-							<onleft>99</onleft>
-							<onright>noop</onright>
-							<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
-							<onup>noop</onup>
-							<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
-							<ondown>noop</ondown>
-							<orientation>horizontal</orientation>
-							<control id="9991" type="button">
-								<width>363</width>
-								<height>76</height>
+							<top>385</top>
+							<width>1490</width>
+							<height>310</height>
+							<texture>dialogs/empty_search.png</texture>
+						</control>
+						<control type="group">
+							<centerleft>50%</centerleft>
+							<top>453</top>
+							<control type="label">
+								<height>32</height>
+								<font>Bold32</font>
 								<align>center</align>
-								<aligny>top</aligny>
-								<font>MedUpper24</font>
-								<textoffsety>27</textoffsety>
-								<label>$PARAM[Button]</label>
-								<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
-								<onfocus>$PARAM[Focus]</onfocus>
-								<onclick>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onclick>
-								<onclick>SetFocus(99)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(SubMenu,9000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</onclick>
-								<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</onclick>
-								<onclick>$PARAM[Action]</onclick>
-								<visible>$PARAM[ShowButton]</visible>
+								<textcolor>ffdadada</textcolor>
+								<label>$PARAM[Header]</label>
 							</control>
-							<control id="9992" type="button">
-								<width>363</width>
-								<height>76</height>
+							<control type="label">
+								<top>34</top>
+								<height>32</height>
+								<font>Reg22</font>
 								<align>center</align>
-								<aligny>top</aligny>
-								<font>MedUpper24</font>
-								<textoffsety>27</textoffsety>
-								<label>$PARAM[Button2]</label>
-								<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
-								<onclick>SetFocus(99)</onclick>
-								<onclick>$PARAM[Action2]</onclick>
-								<visible>$PARAM[ShowButton2]</visible>
+								<textcolor>ff717171</textcolor>
+								<label>$PARAM[Message]</label>
+							</control>				
+							<!-- OK -->
+							<control type="grouplist" id="9990">
+								<top>106</top>
+								<height>76</height>
+								<centerleft>50%</centerleft>
+								<align>center</align>
+								<onleft>99</onleft>
+								<onright>noop</onright>
+								<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+								<onup>noop</onup>
+								<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+								<ondown>noop</ondown>
+								<orientation>horizontal</orientation>
+								<control id="9991" type="button">
+									<width>363</width>
+									<height>76</height>
+									<align>center</align>
+									<aligny>top</aligny>
+									<font>MedUpper24</font>
+									<textoffsety>27</textoffsety>
+									<label>$PARAM[Button]</label>
+									<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
+									<onfocus>$PARAM[Focus]</onfocus>
+									<onclick>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onclick>
+									<onclick>SetFocus(99)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4)">SetProperty(SubMenu,4000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5)">SetProperty(SubMenu,5000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6)">SetProperty(SubMenu,6000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7)">SetProperty(SubMenu,7000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8)">SetProperty(SubMenu,8000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9)">SetProperty(SubMenu,9000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</onclick>
+									<onclick condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</onclick>
+									<onclick>$PARAM[Action]</onclick>
+									<visible>$PARAM[ShowButton]</visible>
+								</control>
+								<control id="9992" type="button">
+									<width>363</width>
+									<height>76</height>
+									<align>center</align>
+									<aligny>top</aligny>
+									<font>MedUpper24</font>
+									<textoffsety>27</textoffsety>
+									<label>$PARAM[Button2]</label>
+									<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
+									<onclick>SetFocus(99)</onclick>
+									<onclick>$PARAM[Action2]</onclick>
+									<visible>$PARAM[ShowButton2]</visible>
+								</control>
 							</control>
 						</control>
 					</control>

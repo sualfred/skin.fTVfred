@@ -80,14 +80,6 @@
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>special://skin/extras/backgrounds/wp_overlay.png</texture>
-			</control>			
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<texture>special://skin/extras/backgrounds/default.png</texture>
-				<colordiffuse>ccffffff</colordiffuse>
-				<visible>!String.IsEmpty(Container(99).ListItem.Thumb) + Control.IsVisible(999)</visible>
-				<animation effect="fade" end="100" start="0" time="180">Visible</animation>
-				<animation effect="fade" end="0" start="100" time="180">Hidden</animation>
 			</control>
 			<!-- Main list -->
 			<control id="99" type="list">
