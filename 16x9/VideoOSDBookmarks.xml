@@ -21,10 +21,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime easing="inout" tween="sine">300</scrolltime>
-			<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
-				<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
-				<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
-			</animation>
+			<include>ViewTypeBounceAnimation</include>
 			<itemlayout height="576" width="572">
 				<control type="group">
 					<animation center="316,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
@@ -134,6 +131,15 @@
 				</control>
 			</focusedlayout>
 		</control>
+		<control type="image">
+			<top>290</top>
+			<left>196</left>
+			<width>640</width>
+			<height>480</height>
+			<aspectratio align="center">scale</aspectratio>
+			<texture>views/episode_fallback.png</texture>
+			<visible>!Integer.IsGreater(Container(11).NumItems,0)</visible>
+		</control>
 		<control type="group">
 			<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 			<!-- Heading / Current item / Total items -->
@@ -183,6 +189,20 @@
 					<label>$INFO[Container(11).NumItems]</label>
 					<visible>Integer.IsGreater(Container(11).NumItems,0)</visible>
 				</control>
+			</control>
+			<!-- No bookmarks available -->			
+			<control type="label">
+				<left>198</left>
+				<top>206</top>
+				<width max="1610">auto</width>
+				<height>64</height>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
+				<font>Med32</font>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffbebebe</textcolor>
+				<label>$LOCALIZE[31294]</label>
+				<visible>!Integer.IsGreater(Container(11).NumItems,0)</visible>
 			</control>
 			<!-- Lower group -->
 			<control type="group">

@@ -1280,6 +1280,11 @@ msgctxt "#31293"
 msgid "Changes the OSD layout of the Live TV channels.[CR]Default is 'Horizontal'."
 msgstr ""
 
+#: /16x9/VideoOSDBookmarks.xml
+msgctxt "#31294"
+msgid "No boomarks available"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
