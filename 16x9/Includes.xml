@@ -609,7 +609,7 @@
 			<width>1880</width>
 			<height>40</height>
 			<align>center</align>
-			<font>Light26</font>
+			<font>Light36</font>
 			<textcolor>fffe8e8e8</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 			<label>$VAR[PlayerSmallLabel]</label>
