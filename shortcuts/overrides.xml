@@ -51,7 +51,7 @@
 				<shortcut label="31515" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/DramaThrillerMovies.xsp,return)</shortcut>	
 				<shortcut label="31517" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/WarHistoryMovies.xsp,return)</shortcut>
 				<shortcut label="31258" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/3DMovies.xsp,return)</shortcut>
-				<shortcut label="135" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,MovieGenres,return)</shortcut>
+				<shortcut label="135" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,videodb://movies/genres/,return)</shortcut>
 				<shortcut label="31269" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,plugin://script.skin.helper.service/?action=browsegenres&amp;type=movie&amp;limit=1000,return)</shortcut>
 			</node>
 			<node label="20343">
