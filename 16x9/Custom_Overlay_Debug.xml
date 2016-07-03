@@ -11,7 +11,6 @@
 			<colordiffuse>88ffffff</colordiffuse>
 			<visible>Skin.HasSetting(DebugGrid)</visible>
 		</control>
-		<!-- Window/Dialog debug -->
 		<control type="grouplist">
 			<left>15</left>
 			<top>15</top>
@@ -864,7 +863,7 @@
 				<visible>Window.IsVisible(script-nextup-notification-StillWatchingInfo.xml)</visible>
 			</control>
 		</control>
-		<!-- Controls debug -->
+		<!-- Controls & codec debug -->
 		<control type="grouplist">
 			<right>15</right>
 			<top>15</top>
@@ -872,6 +871,107 @@
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
+			<!-- Process labels -->
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(videodecoder),[COLOR fffffc00]Video Decoder - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(deintmethod),[COLOR fffffc00]Deinterlace Method - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(pixformat),[COLOR fffffc00]Pixel Format - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(videowidth),[COLOR fffffc00]Width - [/COLOR]]$INFO[Player.Process(videoheight),[COLOR fffffc00] Height - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(videofps),[COLOR fffffc00]Video FPS - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(videodar),[COLOR fffffc00]Video AR - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>Hardware decoding</label>
+				<visible>Player.Process(videohwdecoder)</visible>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(audiochannels),[COLOR fffffc00]Audio Channels - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(audiodecoder),[COLOR fffffc00]Audio Decoder - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(audiosamplerate),[COLOR fffffc00]Audio Sample Rate - [/COLOR]]</label>
+			</control>
+			<control type="label">
+				<top>15</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[Player.Process(audiobitspersample),[COLOR fffffc00]Audio Bits/Sample - [/COLOR]]</label>
+			</control>
 			<!-- Control label -->
 			<control type="label">
 				<top>15</top>
@@ -881,6 +981,7 @@
 				<font>font13</font>
 				<align>right</align>
 				<label>$INFO[System.CurrentControl,[COLOR FF00FF00]Current control - [/COLOR]]$INFO[System.CurrentControlID, (ID=,)]</label>
+				<visible>Skin.HasSetting(DebugInfo)</visible>
 			</control>
 			<!-- Folder label -->
 			<control type="label">
@@ -891,6 +992,7 @@
 				<font>font13</font>
 				<align>right</align>
 				<label>$INFO[Container.FolderName,[COLOR FF00FF00]Folder name - [/COLOR]]</label>
+				<visible>Skin.HasSetting(DebugInfo)</visible>
 			</control>
 			<!-- Path label -->
 			<control type="label">
@@ -902,6 +1004,7 @@
 				<align>right</align>
 				<scroll>true</scroll>
 				<label>$INFO[Container.FolderPath,[COLOR FF00FF00]Folder path - [/COLOR]]</label>
+				<visible>Skin.HasSetting(DebugInfo)</visible>
 			</control>
 			<!-- Content label -->
 			<control type="label">
@@ -912,6 +1015,7 @@
 				<font>font13</font>
 				<align>right</align>
 				<label>$INFO[Container.Content,[COLOR FF00FF00]Content - [/COLOR]]</label>
+				<visible>Skin.HasSetting(DebugInfo)</visible>
 			</control>
 		</control>
 	</controls>
