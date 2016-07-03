@@ -1,0 +1,50 @@
+Changelog:
+
+3.1.0
+- Fixed widget config dialog
+- Replaced some textures with scaleable ones
+- Cleanup
+
+3.0.10
+- New PVR channels OSD
+- Fixed other minor issues
+
+3.0.9
+- Reworked IMDb/TMDb/TVDb icons
+- Added option to choose, which rating provider is used for movies/tv shows
+- Added minimalistic audio channel / codec flags for movies and episodes
+- Fixed "no information found" plot issue
+- Removed "My account" of ExtendedInfo YouTube Browser
+- Fixed Select Dialog glitch for rare scenarios
+- Hide "muted" information after a few seconds
+- Removed fadeout of paused icon
+
+3.0.8
+- Krypton work
+
+3.0.7
+- Added ExtendedInfo YouTube Browser
+- Dialog tweaks
+- Cleanup
+
+3.0.6
+- Fixed ExtendedInfo layouts and conditions (newest version required)
+- Minor fixes
+
+3.0.5
+- Reverted previous busy dialog fix because it's not needed anymore
+- Added a more secure check that widget animations are going to be triggered, even if there is an delay of other conditions
+
+3.0.4
+- fixed addon info labels
+
+3.0.3
+- repo push
+
+3.0.2
+- preload timeout fixes
+
+3.0.1
+Krypton repo release
+- Renamed skin ID. Please create and import an backup of the Jarvis Krypton version.
+		

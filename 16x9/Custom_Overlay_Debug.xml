@@ -27,7 +27,7 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[ListItem.Mpaa]</label>
+				<label>$INFO[player_process.videofps]</label>
 				<visible>false</visible>
 			</control>
 			<!-- FTV labels -->

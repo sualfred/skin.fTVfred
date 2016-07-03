@@ -4,7 +4,10 @@
 	<defaultcontrol always="true">1001</defaultcontrol>
 	<controls>
 		<!-- Background -->
-		<include>DialogBackgroundImage</include>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>dialogs/DialogBackground.png</texture>
+		</control>
 		<control type="fixedlist" id="11">
 			<left>-374</left>
 			<top>242</top>
