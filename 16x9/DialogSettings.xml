@@ -3,6 +3,7 @@
 	<!-- Dialog Settings -->
 	<defaultcontrol always="true">5</defaultcontrol>
 	<onunload>ClearProperty(Show3DSettings,home)</onunload>
+	<onunload>ClearProperty(ShowSubtitleSettings,home)</onunload>
 	<controls>
 		<include condition="!Window.IsVisible(osdaudiosettings) + !Window.IsVisible(osdvideosettings)">IncludesDialogSettings</include>
 		<include condition="Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings)">IncludesOSDSettings</include>
