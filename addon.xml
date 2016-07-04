@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.0"
+	version="3.1.1"
 	name="fTV Fred Edition"
 	provider-name="Sualfred (Orignal skin by Hitcher)">
 	<requires>
@@ -31,6 +31,7 @@
 - Fixed skin provided widget path for movie genres
 - Fixed minor "no content configured" widget message animation glitch
 - Fixed some overlay animation glitches for addon based contents
+- Added media processing infos
 
 See changelog.txt for more details.</news>
 	</extension>

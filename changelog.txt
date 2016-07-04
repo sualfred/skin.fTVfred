@@ -1,5 +1,13 @@
 Changelog:
 
+3.1.1
+- Improved boomarks dialog
+- Increased font size of video player titles
+- Fixed skin provided widget path for movie genres
+- Fixed minor "no content configured" widget message animation glitch
+- Fixed some overlay animation glitches for addon based contents
+- Added media processing infos
+
 3.1.0
 - Fixed widget config dialog
 - Replaced some textures with scaleable ones
