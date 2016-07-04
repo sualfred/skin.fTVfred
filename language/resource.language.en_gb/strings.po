@@ -1297,7 +1297,7 @@ msgstr ""
 
 #: /16x9/IncludesDialogSettings.xml
 msgctxt "#31297"
-msgid "Media Processing Info"
+msgid "Media processing info"
 msgstr ""
 
 msgctxt "#31500"
