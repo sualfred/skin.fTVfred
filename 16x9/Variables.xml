@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="videohwdecoder">
+		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[31295]</value>
+		<value>$LOCALIZE[31296]</value>
+	</variable>
 	<variable name="TuneInLabel">
 		<value condition="Window.IsVisible(pvrosdchannels)">$LOCALIZE[19165]</value>
 		<value>$LOCALIZE[31226]</value>

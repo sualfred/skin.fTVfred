@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-23 10:03+0000\n"
+"PO-Revision-Date: 2016-07-04 12:22+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1311,6 +1311,26 @@ msgctxt "#31293"
 msgid ""
 "Changes the OSD layout of the Live TV channels.[CR]Default is 'Horizontal'."
 msgstr "Ändert die Darstellung des OSD Layouts der TV Kanäle während der Wiedergabe.[CR]Standard ist 'Horizontal'."
+
+#: /16x9/VideoOSDBookmarks.xml
+msgctxt "#31294"
+msgid "No boomarks available"
+msgstr "Keine Kapitel verfügbar"
+
+#: /16x9/Variables.xml
+msgctxt "#31295"
+msgid "Hardware decoding is active"
+msgstr "Hardware Decoding aktiv"
+
+#: /16x9/Variables.xml
+msgctxt "#31296"
+msgid "Hardware decoding is inactive"
+msgstr "Hardware Decoding inaktiv"
+
+#: /16x9/IncludesDialogSettings.xml
+msgctxt "#31297"
+msgid "Media Processing Info"
+msgstr "Media Processing Info"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
