@@ -548,7 +548,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Offset</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[31302]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>SubtitleDelay</onclick>
@@ -563,7 +564,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Pos.</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[31301]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>subtitlealign</onclick>
@@ -578,7 +580,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Shift[CR]Up</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[31299]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>SubtitleShiftUp</onclick>
@@ -593,7 +596,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Shift[CR]Down</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[31300]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>SubtitleShiftDown</onclick>
@@ -634,7 +638,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Size</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[289]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>SetProperty(Dialog.NumItems,5)</onclick>
@@ -660,7 +665,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Style</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[736]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
@@ -684,7 +690,8 @@
 							<align>center</align>
 							<texturefocus>common/ghost_button_fo.png</texturefocus>
 							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<label>Color</label>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[737]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>SetProperty(Dialog.NumItems,8)</onclick>

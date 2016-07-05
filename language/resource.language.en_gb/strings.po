@@ -1305,6 +1305,26 @@ msgctxt "#31298"
 msgid "Subtitle styling"
 msgstr ""
 
+#: /16x9/VideoOSD.xml
+msgctxt "#31299"
+msgid "Shift[CR]Up"
+msgstr ""
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31300"
+msgid "Shift[CR]Down"
+msgstr ""
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31301"
+msgid "Pos."
+msgstr ""
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31302"
+msgid "Offset"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

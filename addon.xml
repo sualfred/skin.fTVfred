@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.1"
+	version="3.1.2"
 	name="fTV Fred Edition"
 	provider-name="Sualfred (Orignal skin by Hitcher)">
 	<requires>
@@ -27,7 +27,10 @@
 
 [B]3.1.2[/B]
 - Redesigned "3D Options" and "Subtitle Options" OSD
+- Added subtitle styling options to VideoOSD
 - Added "no subtitle service" check to the subtitle download dialog
+- Added 720p label to VideoPlayer
+- Other minor adjustmens
 
 See changelog.txt for more details.</news>
 	</extension>
