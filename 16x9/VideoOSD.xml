@@ -469,7 +469,7 @@
 						<onleft>noop</onleft>
 						<onright>400</onright>
 						<onup>noop</onup>
-						<ondown>noop</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control id="501" type="button">
@@ -536,7 +536,7 @@
 						<onleft>SetFocus(500)</onleft>
 						<onright>noop</onright>
 						<onup>noop</onup>
-						<ondown>noop</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control type="button" id="401">
@@ -635,7 +635,7 @@
 						<onleft>noop</onleft>
 						<onright>400</onright>
 						<onup>noop</onup>
-						<ondown>noop</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control id="601" type="togglebutton">
