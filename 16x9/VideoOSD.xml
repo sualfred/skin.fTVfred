@@ -467,7 +467,7 @@
 						<itemgap>10</itemgap>
 						<onback>SetFocus(12)</onback>
 						<onleft>noop</onleft>
-						<onright>400</onright>
+						<onright condition="VideoPlayer.SubtitlesEnabled">400</onright>
 						<onup>noop</onup>
 						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
 						<orientation>vertical</orientation>
@@ -637,6 +637,7 @@
 							<label>Size</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>SetProperty(Dialog.NumItems,5)</onclick>
 							<onclick>SetProperty(Dialog.1.Label,Medium - $LOCALIZE[571])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=28)||ReloadSkin())</onclick>
 							<onclick>SetProperty(Dialog.2.Label,Tiny)</onclick>
@@ -662,6 +663,7 @@
 							<label>Style</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>SetProperty(Dialog.NumItems,4)</onclick>
 							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[630])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.style,value=0)||ReloadSkin())</onclick>
 							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[739])</onclick>
@@ -685,6 +687,7 @@
 							<label>Color</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>SetProperty(Dialog.NumItems,8)</onclick>
 							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[743])</onclick>
 							<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=0)||ReloadSkin())</onclick>
 							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[742])</onclick>
