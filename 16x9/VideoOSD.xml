@@ -482,7 +482,7 @@
 							<label>$LOCALIZE[248] ($INFO[VideoPlayer.SubtitlesLanguage])</label>
 							<onclick>CycleSubtitle</onclick>
 							<onback>SetFocus(12)</onback>
-							<enable>VideoPlayer.SubtitlesEnabled</enable>
+							<enable>VideoPlayer.SubtitlesEnabled + VideoPlayer.HasSubtitles</enable>
 						</control>
 						<control id="502" type="togglebutton">
 							<width>300</width>
@@ -498,7 +498,7 @@
 							<usealttexture>VideoPlayer.SubtitlesEnabled</usealttexture>
 							<onclick>ShowSubtitles</onclick>
 							<onback>SetFocus(12)</onback>
-							<visible>VideoPlayer.HasSubtitles</visible>
+							<enable>VideoPlayer.HasSubtitles</enable>
 						</control>
 						<control id="503" type="button">
 							<width>300</width>

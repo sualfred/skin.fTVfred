@@ -134,14 +134,24 @@
 				</control>
 			</focusedlayout>
 		</control>
-		<control type="image">
-			<top>290</top>
-			<left>196</left>
-			<width>640</width>
-			<height>480</height>
-			<aspectratio align="center">scale</aspectratio>
-			<texture>views/episode_fallback.png</texture>
+		<control type="group">
 			<visible>!Integer.IsGreater(Container(11).NumItems,0)</visible>
+			<control type="image">
+				<top>290</top>
+				<left>196</left>
+				<width>640</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			</control>
+			<control type="image">
+				<top>290</top>
+				<left>196</left>
+				<width>640</width>
+				<height>480</height>
+				<aspectratio align="center">scale</aspectratio>
+				<texture>views/episode_fallback.png</texture>
+			</control>
 		</control>
 		<control type="group">
 			<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
