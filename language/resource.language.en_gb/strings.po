@@ -1087,8 +1087,8 @@ msgstr "Recommended Movie/Show"
 
 #: /16x9/VideoOSDSettings.xml:146
 msgctxt "#31255"
-msgid "3D enabled"
-msgstr "3D enabled"
+msgid "3D"
+msgstr "3D"
 
 #: /16x9/VideoOSDSettings.xml:167
 msgctxt "#31256"

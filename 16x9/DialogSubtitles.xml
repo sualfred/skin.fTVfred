@@ -2,63 +2,15 @@
 <window>
 	<!-- subtitlesearch -->
 	<defaultcontrol>150</defaultcontrol>
+	<onload condition="!Integer.IsGreater(Container(150).NumItems,0)">RunScript(script.toolbox,info=okdialog,header=$LOCALIZE[257],text=$LOCALIZE[24114])</onload>
+	<onload condition="!Integer.IsGreater(Container(150).NumItems,0)">close</onload>
 	<controls>
 		<control type="image">
 			<width>1980</width>
 			<height>210</height>
 			<texture border="1">osd/mask_top.png</texture>
 		</control>
-		<control type="grouplist">
-			<left>20</left>
-			<top>64</top>
-			<width>1880</width>
-			<height>50</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<!--  Movie title -->
-			<control type="label">
-				<width>auto</width>
-				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffeaeaea</textcolor>
-				<shadowcolor>ff000000</shadowcolor>
-				<label>$INFO[VideoPlayer.Title]</label>
-				<visible>String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
-			</control>
-			<!--  TV Show title -->
-			<control type="label">
-				<width>auto</width>
-				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffeaeaea</textcolor>
-				<shadowcolor>ff000000</shadowcolor>
-				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<visible>!String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
-			</control>
-			<!-- Season/Episode number -->
-			<control type="label">
-				<width>auto</width>
-				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffeaeaea</textcolor>
-				<shadowcolor>ff000000</shadowcolor>
-				<label>$VAR[PlayerEpisodeValue]</label>
-			</control>
-		</control>
-		<!--  Episode title -->
-		<control type="label">
-			<left>20</left>
-			<top>127</top>
-			<width>1880</width>
-			<height>40</height>
-			<align>center</align>
-			<font>Light26</font>
-			<textcolor>fffe8e8e8</textcolor>
-			<shadowcolor>ff000000</shadowcolor>
-			<label>$INFO[VideoPlayer.Title]</label>
-			<visible>!String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
-		</control>
+		<include>PlayerTitles</include>
 		<control type="group">
 			<top>655</top>
 			<!-- Background -->

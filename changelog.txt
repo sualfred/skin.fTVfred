@@ -1,5 +1,9 @@
 Changelog:
 
+3.1.2
+- Redesigned "3D Options" and "Subtitle Options" OSD
+- Added "no subtitle service" check to the subtitle download dialog
+
 3.1.1
 - Improved boomarks dialog
 - Increased font size of video player titles
