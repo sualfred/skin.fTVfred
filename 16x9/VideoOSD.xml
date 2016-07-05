@@ -440,7 +440,7 @@
 			<control type="group" id="200">
 				<visible allowhiddenfocus="true">ControlGroup(200).HasFocus</visible>
 				<top>635</top>
-				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(selectdialog)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(selectdialog)">Conditional</animation>
 				<!-- Background -->
 				<control type="image">
 					<bottom>120</bottom>
@@ -512,13 +512,14 @@
 							<onclick>Dialog.Close(VideoOSD)</onclick>
 							<onclick>ActivateWindow(SubtitleSearch)</onclick>
 							<onback>SetFocus(12)</onback>
+							<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
 						</control>
 					</control>
 				</control>
-				<!-- Right Grouplist -->
+				<!-- Middle Grouplist -->
 				<control type="group">
 					<bottom>130</bottom>
-					<right>92</right>
+					<centerleft>50%</centerleft>
 					<width>402</width>
 					<height>140</height>
 					<control type="label">
@@ -534,7 +535,7 @@
 						<itemgap>14</itemgap>
 						<onback>SetFocus(12)</onback>
 						<onleft>SetFocus(500)</onleft>
-						<onright>noop</onright>
+						<onright>SetFocus(450)</onright>
 						<onup>noop</onup>
 						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
 						<orientation>horizontal</orientation>
@@ -599,6 +600,111 @@
 							<onback>SetFocus(12)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>					
+					</control>
+				</control>
+				<!-- Right Grouplist -->
+				<control type="group">
+					<bottom>130</bottom>
+					<right>92</right>
+					<width>298</width>
+					<height>140</height>
+					<control type="label">
+						<height>36</height>
+						<font>Bold30</font>
+						<label>Subtitle styling</label>
+						<textcolor>ffdadada</textcolor>
+					</control>
+					<control type="grouplist" id="450">
+						<width>402</width>
+						<bottom>0</bottom>
+						<height>90</height>
+						<itemgap>14</itemgap>
+						<onback>SetFocus(12)</onback>
+						<onleft>SetFocus(400)</onleft>
+						<onright>noop</onright>
+						<onup>noop</onup>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
+						<orientation>horizontal</orientation>
+						<scrolltime tween="sine" easing="out">240</scrolltime>
+						<control type="button" id="451">
+							<width>90</width>
+							<height>90</height>
+							<font>Reg22</font>
+							<textoffsetx>5</textoffsetx>
+							<align>center</align>
+							<texturefocus>common/ghost_button_fo.png</texturefocus>
+							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
+							<label>Size</label>
+							<focusedcolor>ffffaf37</focusedcolor>
+							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>SetProperty(Dialog.1.Label,Medium - $LOCALIZE[571])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=28)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.2.Label,Tiny)</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=18)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.3.Label,Small)</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=24)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.4.Label,Big)</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=32)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.5.Label,Bigger)</onclick>
+							<onclick>SetProperty(Dialog.5.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=38)||ReloadSkin())</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[36186])</onclick>
+							<onback>SetFocus(12)</onback>
+							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
+						</control>
+						<control type="button" id="452">
+							<width>90</width>
+							<height>90</height>
+							<font>Reg22</font>
+							<textoffsetx>5</textoffsetx>
+							<align>center</align>
+							<texturefocus>common/ghost_button_fo.png</texturefocus>
+							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
+							<label>Style</label>
+							<focusedcolor>ffffaf37</focusedcolor>
+							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[630])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.style,value=0)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[739])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.style,value=1)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[740])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.style,value=2)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[741])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.style,value=3)||ReloadSkin())</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[36187])</onclick>
+							<onback>SetFocus(12)</onback>
+							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
+						</control>
+						<control type="button" id="453">
+							<width>90</width>
+							<height>90</height>
+							<font>Reg22</font>
+							<textoffsetx>5</textoffsetx>
+							<align>center</align>
+							<texturefocus>common/ghost_button_fo.png</texturefocus>
+							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
+							<label>Color</label>
+							<focusedcolor>ffffaf37</focusedcolor>
+							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[743])</onclick>
+							<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=0)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[742])</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=1)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[762])</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=2)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[763])</onclick>
+							<onclick>SetProperty(Dialog.4.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=3)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.5.Label,$LOCALIZE[764])</onclick>
+							<onclick>SetProperty(Dialog.5.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=4)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.6.Label,$LOCALIZE[765])</onclick>
+							<onclick>SetProperty(Dialog.6.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=5)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.7.Label,$LOCALIZE[766])</onclick>
+							<onclick>SetProperty(Dialog.7.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=6)||ReloadSkin())</onclick>
+							<onclick>SetProperty(Dialog.8.Label,$LOCALIZE[767])</onclick>
+							<onclick>SetProperty(Dialog.8.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=7)||ReloadSkin())</onclick>
+							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[36188])</onclick>
+							<onback>SetFocus(12)</onback>
+							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
+						</control>
 					</control>
 				</control>
 			</control>
