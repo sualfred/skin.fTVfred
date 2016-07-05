@@ -611,7 +611,7 @@
 					<control type="label">
 						<height>36</height>
 						<font>Bold30</font>
-						<label>Subtitle styling</label>
+						<label>$LOCALIZE[31298]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
 					<control type="grouplist" id="450">

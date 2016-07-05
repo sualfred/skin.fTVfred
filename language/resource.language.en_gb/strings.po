@@ -1300,6 +1300,11 @@ msgctxt "#31297"
 msgid "Media processing info"
 msgstr ""
 
+#: /16x9/VideoOSD.xml
+msgctxt "#31298"
+msgid "Subtitle styling"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

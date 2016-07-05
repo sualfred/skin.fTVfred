@@ -2,7 +2,9 @@ Changelog:
 
 3.1.2
 - Redesigned "3D Options" and "Subtitle Options" OSD
+- Added subtitle styling options to VideoOSD
 - Added "no subtitle service" check to the subtitle download dialog
+- Added 720p label to VideoPlayer
 
 3.1.1
 - Improved boomarks dialog
