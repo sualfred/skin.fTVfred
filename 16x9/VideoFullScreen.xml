@@ -603,80 +603,8 @@
 							<top>18</top>
 							<width>115</width>
 							<height>33</height>
-							<texture>osd/rwx2.png</texture>
-							<visible>Player.Rewinding2x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/rwx4.png</texture>
-							<visible>Player.Rewinding4x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/rwx8.png</texture>
-							<visible>Player.Rewinding8x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/rwx16.png</texture>
-							<visible>Player.Rewinding16x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/rwx32.png</texture>
-							<visible>Player.Rewinding32x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/ffx2.png</texture>
-							<visible>Player.Forwarding2x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/ffx4.png</texture>
-							<visible>Player.Forwarding4x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/ffx8.png</texture>
-							<visible>Player.Forwarding8x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/ffx16.png</texture>
-							<visible>Player.Forwarding16x</visible>
-						</control>
-						<control id="2" type="image">
-							<left>20</left>
-							<top>18</top>
-							<width>115</width>
-							<height>33</height>
-							<texture>osd/ffx32.png</texture>
-							<visible>Player.Forwarding32x</visible>
+							<texture>$VAR[FastForwardRewind]</texture>
+							<visible>Player.Forwarding | Player.Rewinding</visible>
 						</control>
 						<control id="2" type="label">
 							<top>17</top>
