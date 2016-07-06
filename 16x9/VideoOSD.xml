@@ -569,6 +569,7 @@
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
 							<onclick>subtitlealign</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<onback>SetFocus(12)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
