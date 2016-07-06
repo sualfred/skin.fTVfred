@@ -1325,6 +1325,11 @@ msgctxt "#31302"
 msgid "Offset"
 msgstr ""
 
+#: /16x9/VideoOSD.xml
+msgctxt "#31303"
+msgid "Apply"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
