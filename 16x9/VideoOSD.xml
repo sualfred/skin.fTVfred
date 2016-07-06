@@ -18,7 +18,7 @@
 			<onup>SubtitleShiftUp</onup>
 			<ondown>SubtitleShiftDown</ondown>
 			<onclick>SetFocus(200)</onclick>
-			<onback>SetFocus(200)</onback>
+			<onback>SetFocus(12)</onback>
 		</control>
 		<!-- Shift button -->
 		<control type="button" id="202">
@@ -27,7 +27,7 @@
 			<onleft>SubtitleDelayMinus</onleft>
 			<onright>SubtitleDelayPlus</onright>
 			<onclick>SetFocus(200)</onclick>
-			<onback>SetFocus(200)</onback>
+			<onback>SetFocus(12)</onback>
 		</control>
 		<!-- OSD -->
 		<control type="group">
