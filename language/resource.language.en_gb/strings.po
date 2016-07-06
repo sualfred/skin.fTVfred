@@ -1340,6 +1340,16 @@ msgctxt "#31305"
 msgid "Shift [B]DOWN[/B]"
 msgstr ""
 
+#: /16x9/VideoOSD.xml
+msgctxt "#31306"
+msgid "Offset minus [B]LEFT[/B]"
+msgstr ""
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31307"
+msgid "Offset plus [B]RIGHT[/B]"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

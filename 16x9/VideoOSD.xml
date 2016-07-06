@@ -20,6 +20,15 @@
 			<onclick>SetFocus(200)</onclick>
 			<onback>SetFocus(200)</onback>
 		</control>
+		<!-- Shift button -->
+		<control type="button" id="202">
+			<include>HiddenControl</include>
+			<visible allowhiddenfocus="true">Control.HasFocus(202)</visible>
+			<onleft>SubtitleDelayMinus</onleft>
+			<onright>SubtitleDelayPlus</onright>
+			<onclick>SetFocus(200)</onclick>
+			<onback>SetFocus(200)</onback>
+		</control>
 		<!-- OSD -->
 		<control type="group">
 			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
@@ -139,7 +148,7 @@
 				<align>center</align>
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">204</defaultcontrol>
-				<visible>!Skin.HasSetting(HideOSDControls) + !Control.HasFocus(201)</visible>
+				<visible>!Skin.HasSetting(HideOSDControls) + !Control.HasFocus(201) + !Control.HasFocus(202)</visible>
 				<!-- Skip Back -->
 				<control type="button" id="301">
 					<width>64</width>
@@ -224,7 +233,7 @@
 				</control>
 				<!--Xray Icon-->
 				<control type="grouplist">
-					<visible>!Control.HasFocus(201)</visible>
+					<visible>!Control.HasFocus(201) + !Control.HasFocus(202)</visible>
 					<right>92</right>
 					<bottom>40</bottom>
 					<height>40</height>
@@ -274,9 +283,9 @@
 						<visible>!Skin.HasSetting(HideOSDControls)</visible>
 					</control>
 				</control>
-				<!--Shift Icon-->
+				<!--Shift Offset -->
 				<control type="grouplist">
-					<visible>Control.HasFocus(201)</visible>
+					<visible>Control.HasFocus(201) | Control.HasFocus(202)</visible>
 					<onup>SubtitleShiftUp</onup>
 					<ondown>SubtitleShiftDown</ondown>
 					<onback>SetFocus(200)</onback>
@@ -287,6 +296,7 @@
 					<align>right</align>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
+					<!-- Shift -->
 					<control type="label">
 						<top>4</top>
 						<width>auto</width>
@@ -294,11 +304,13 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>$LOCALIZE[31304]</label>
+						<visible>Control.HasFocus(201)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
+						<visible>Control.HasFocus(201)</visible>
 					</control>
 					<control type="label">
 						<top>4</top>
@@ -307,11 +319,30 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>    $LOCALIZE[31305]</label>
+						<visible>Control.HasFocus(201)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture flipy="true">osd/x_ray.png</texture>
+						<visible>Control.HasFocus(201)</visible>
+					</control>
+					<!-- Offset -->
+					<control type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>$LOCALIZE[31306]</label>
+						<visible>Control.HasFocus(202)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/x_ray.png</texture>
+						<animation effect="rotate" end="90" center="auto" time="0" condition="true">Conditional</animation>
+						<visible>Control.HasFocus(202)</visible>
 					</control>
 					<control type="label">
 						<top>4</top>
@@ -319,8 +350,25 @@
 						<height>30</height>
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
-						<label>    $LOCALIZE[33061]</label>
+						<label>    $LOCALIZE[31307]</label>
+						<visible>Control.HasFocus(202)</visible>
 					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/x_ray.png</texture>
+						<animation effect="rotate" end="-90" center="auto" time="0" condition="true">Conditional</animation>
+						<visible>Control.HasFocus(202)</visible>
+					</control>
+					<!-- menu -->
+					<control type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>    $LOCALIZE[33061]</label>
+					</control>					
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
@@ -613,7 +661,7 @@
 							<label>$LOCALIZE[31302]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
-							<onclick>SubtitleDelay</onclick>
+							<onclick>SetFocus(202)</onclick>
 							<onback>SetFocus(12)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>

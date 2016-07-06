@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-06 10:03+0000\n"
+"PO-Revision-Date: 2016-07-06 10:20+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1371,6 +1371,16 @@ msgstr "Schiebe nach [B]OBEN[/B]"
 msgctxt "#31305"
 msgid "Shift [B]DOWN[/B]"
 msgstr "Schiebe nach [B]UNTEN[/B]"
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31306"
+msgid "Offset minus [B]LEFT[/B]"
+msgstr "Offset minus [B]LINKS[/B]"
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31307"
+msgid "Offset plus [B]RIGHT[/B]"
+msgstr "Offset plus [B]RECHTS[/B]"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
