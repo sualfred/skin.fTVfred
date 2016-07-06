@@ -25,12 +25,10 @@
 		<description lang="en">Basic fTV skin (by Hitcher) with nearly full PVR functionality, plus changed a lot of behaviours and added dozens of other features[CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).</description>
 		<news>Changelog:
 
-[B]3.1.2[/B]
-- Redesigned "3D Options" and "Subtitle Options" OSD
-- Added subtitle styling options to VideoOSD
-- Added "no subtitle service" check to the subtitle download dialog
-- Added 720p label to VideoPlayer
-- Other minor adjustmens
+[B]3.1.3[/B]
+- Added apply button to subtitle OSD
+- Changed method of Offset and Shift buttons in the subtitle OSD
+- Added CPU load info to media processing OSD
 
 See changelog.txt for more details.</news>
 	</extension>

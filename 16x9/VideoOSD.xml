@@ -157,6 +157,7 @@
 					<texturefocus>osd/osd_prev_fo.png</texturefocus>
 					<texturenofocus>osd/osd_prev_nf.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!-- Rewind -->
 				<control type="button" id="302">
@@ -166,6 +167,7 @@
 					<texturefocus>osd/osd_rw_fo.png</texturefocus>
 					<texturenofocus>osd/osd_rw_nf.png</texturenofocus>
 					<onclick>PlayerControl(Rewind)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!-- Stop -->
 				<control type="button" id="303">
@@ -175,6 +177,7 @@
 					<texturefocus>osd/osd_stop_fo.png</texturefocus>
 					<texturenofocus>osd/osd_stop_nf.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!-- Play/Pause -->
 				<control type="togglebutton" id="304">
@@ -187,6 +190,7 @@
 					<alttexturefocus>osd/osd_play_fo.png</alttexturefocus>
 					<alttexturenofocus>osd/osd_play_nf.png</alttexturenofocus>
 					<onclick>PlayerControl(Play)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!-- Fast Forward -->
 				<control type="button" id="305">
@@ -196,6 +200,7 @@
 					<texturefocus>osd/osd_ff_fo.png</texturefocus>
 					<texturenofocus>osd/osd_ff_nf.png</texturenofocus>
 					<onclick>PlayerControl(Forward)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!-- Next -->
 				<control type="button" id="306">
@@ -205,6 +210,7 @@
 					<texturefocus>osd/osd_next_fo.png</texturefocus>
 					<texturenofocus>osd/osd_next_nf.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!-- Record -->
 				<control type="button" id="307">
@@ -214,6 +220,7 @@
 					<texturefocus>osd/osd_rec_fo.png</texturefocus>
 					<texturenofocus>osd/osd_rec_nf.png</texturenofocus>
 					<onclick>PlayerControl(Record)</onclick>
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
 				</control>
 			</control>
@@ -229,7 +236,8 @@
 					<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
 					<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
 					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
-					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>
+					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>					
+					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
 				</control>
 				<!--Xray Icon-->
 				<control type="grouplist">
@@ -385,7 +393,7 @@
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<onup>noop</onup>
-				<onleft>noop</onleft>
+				<onleft>noop</onleft>				
 				<onright>noop</onright>				
 				<ondown>ClearProperty(ShowOptions,home)</ondown>
 				<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
@@ -435,6 +443,7 @@
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onclick>SetFocus(200)</onclick>
+					<onclick>ClearProperty(ShowOptions,home)</onclick>
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<!-- Bookmarks -->

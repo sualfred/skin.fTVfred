@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="CPUload">
+		<value condition="String.IsEqual(System.CpuUsage,1%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,2%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,3%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,4%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,5%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,6%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,7%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,8%)">$INFO[System.CpuUsage,0]</value>
+		<value condition="String.IsEqual(System.CpuUsage,9%)">$INFO[System.CpuUsage,0]</value>
+		<value>$INFO[System.CpuUsage]</value>
+	</variable>
 	<variable name="FastForwardRewind">
 		<value condition="Player.Forwarding2x">osd/ffx2.png</value>
 		<value condition="Player.Forwarding4x">osd/ffx4.png</value>
