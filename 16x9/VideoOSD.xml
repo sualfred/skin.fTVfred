@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- videoosd -->
+	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),subtitlealign)">SetFocus(402)</onload>
 	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),apply)">SetFocus(454)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(304)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(400)</onload>
@@ -10,6 +11,16 @@
 	<onunload>ClearProperty(ShowOptions,home)</onunload>
 	<onload>ClearProperty(ForceFocus,home)</onload>
 	<controls>
+		<!-- Shift button -->
+		<control type="button" id="201">
+			<include>HiddenControl</include>
+			<visible allowhiddenfocus="true">Control.HasFocus(201)</visible>
+			<onup>SubtitleShiftUp</onup>
+			<ondown>SubtitleShiftDown</ondown>
+			<onclick>SetFocus(200)</onclick>
+			<onback>SetFocus(200)</onback>
+		</control>
+		<!-- OSD -->
 		<control type="group">
 			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<control type="image">
@@ -128,7 +139,7 @@
 				<align>center</align>
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">204</defaultcontrol>
-				<visible>!Skin.HasSetting(HideOSDControls)</visible>
+				<visible>!Skin.HasSetting(HideOSDControls) + !Control.HasFocus(201)</visible>
 				<!-- Skip Back -->
 				<control type="button" id="301">
 					<width>64</width>
@@ -212,7 +223,8 @@
 					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>
 				</control>
 				<!--Xray Icon-->
-				<control type="grouplist">					
+				<control type="grouplist">
+					<visible>!Control.HasFocus(201)</visible>
 					<right>92</right>
 					<bottom>40</bottom>
 					<height>40</height>
@@ -253,12 +265,6 @@
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/select.png</texture>
-						<visible>false</visible>
-					</control>
-					<control type="image">
-						<width>40</width>
-						<height>40</height>
-						<texture>osd/select.png</texture>
 						<visible>Skin.HasSetting(HideOSDControls)</visible>
 					</control>
 					<control type="image">
@@ -266,6 +272,59 @@
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
 						<visible>!Skin.HasSetting(HideOSDControls)</visible>
+					</control>
+				</control>
+				<!--Shift Icon-->
+				<control type="grouplist">
+					<visible>Control.HasFocus(201)</visible>
+					<onup>SubtitleShiftUp</onup>
+					<ondown>SubtitleShiftDown</ondown>
+					<onback>SetFocus(200)</onback>
+					<right>92</right>
+					<bottom>40</bottom>
+					<height>40</height>
+					<itemgap>10</itemgap>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>$LOCALIZE[31304]</label>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/x_ray.png</texture>
+					</control>
+					<control type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>    $LOCALIZE[31305]</label>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture flipy="true">osd/x_ray.png</texture>
+					</control>
+					<control type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>    $LOCALIZE[33061]</label>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture flipy="true">osd/select.png</texture>
 					</control>
 				</control>
 			</control>
@@ -522,7 +581,7 @@
 				<control type="group">
 					<bottom>130</bottom>
 					<centerleft>50%</centerleft>
-					<width>402</width>
+					<width>298</width>
 					<height>140</height>
 					<control type="label">
 						<height>36</height>
@@ -589,26 +648,10 @@
 							<label>$LOCALIZE[31299]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
-							<onclick>SubtitleShiftUp</onclick>
+							<onclick>SetFocus(201)</onclick>
 							<onback>SetFocus(12)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
-						</control>
-						<control type="button" id="404">
-							<width>90</width>
-							<height>90</height>
-							<font>Reg22</font>
-							<textoffsetx>5</textoffsetx>
-							<align>center</align>
-							<texturefocus>common/ghost_button_fo.png</texturefocus>
-							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
-							<wrapmultiline>true</wrapmultiline>
-							<label>$LOCALIZE[31300]</label>
-							<focusedcolor>ffffaf37</focusedcolor>
-							<disabledcolor>44ffffff</disabledcolor>
-							<onclick>SubtitleShiftDown</onclick>
-							<onback>SetFocus(12)</onback>
-							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
-						</control>					
+						</control>				
 					</control>
 				</control>
 				<!-- Right Grouplist -->

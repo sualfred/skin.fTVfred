@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-05 16:30+0000\n"
+"PO-Revision-Date: 2016-07-06 10:03+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1339,8 +1339,8 @@ msgstr "Untertitelstil"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31299"
-msgid "Shift[CR]Up"
-msgstr "Nach[CR]oben"
+msgid "Shift"
+msgstr "Shift"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31300"
@@ -1349,13 +1349,28 @@ msgstr "Nach[CR]unten"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31301"
-msgid "Pos."
-msgstr "Pos."
+msgid "Mode"
+msgstr "Modus"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31302"
 msgid "Offset"
 msgstr "Offset"
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31303"
+msgid "Apply"
+msgstr "Apply"
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31304"
+msgid "Shift [B]UP[/B]"
+msgstr "Schiebe nach [B]OBEN[/B]"
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31305"
+msgid "Shift [B]DOWN[/B]"
+msgstr "Schiebe nach [B]UNTEN[/B]"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

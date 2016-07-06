@@ -1307,7 +1307,7 @@ msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31299"
-msgid "Shift[CR]Up"
+msgid "Shift"
 msgstr ""
 
 #: /16x9/VideoOSD.xml
@@ -1317,7 +1317,7 @@ msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31301"
-msgid "Pos."
+msgid "Mode"
 msgstr ""
 
 #: /16x9/VideoOSD.xml
@@ -1328,6 +1328,16 @@ msgstr ""
 #: /16x9/VideoOSD.xml
 msgctxt "#31303"
 msgid "Apply"
+msgstr ""
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31304"
+msgid "Shift [B]UP[/B]"
+msgstr ""
+
+#: /16x9/VideoOSD.xml
+msgctxt "#31305"
+msgid "Shift [B]DOWN[/B]"
 msgstr ""
 
 msgctxt "#31500"
