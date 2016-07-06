@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- videoosd -->
-	<onload condition="!String.IsEmpty(Window(home).Property(ForceFocus))">AlarmClock(Play,Play,00:01,silent)</onload>
-	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),subtitlealign)">SetFocus(402)</onload>
-	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),size)">SetFocus(451)</onload>
-	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),style)">SetFocus(452)</onload>
-	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),color)">SetFocus(453)</onload>
 	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),apply)">SetFocus(454)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(304)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(400)</onload>
