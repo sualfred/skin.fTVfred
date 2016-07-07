@@ -62,7 +62,7 @@
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>[[ControlGroup(200).HasFocus | ControlGroup(210).HasFocus] + String.IsEmpty(Window(home).Property(ShowOptions))] | Control.HasFocus(999) | ControlGroup(300).HasFocus</visible>
+				<visible>[[ControlGroup(200).HasFocus | ControlGroup(210).HasFocus] + String.IsEmpty(Window(home).Property(ShowOptions))] | Control.HasFocus(999) | ControlGroup(300).HasFocus | Control.HasFocus(201) | Control.HasFocus(202)</visible>
 			</control>
 			<include>PlayerTitles</include>
 			<!-- Pause -->
