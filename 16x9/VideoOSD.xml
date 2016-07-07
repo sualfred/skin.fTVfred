@@ -4,7 +4,7 @@
 	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),subtitlealign)">SetFocus(402)</onload>
 	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),apply)">SetFocus(454)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(304)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(400)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(999)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + VideoPlayer.Content(livetv)">SetFocus(19)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onload>
@@ -30,7 +30,7 @@
 			<onback>SetFocus(12)</onback>
 		</control>
 		<!-- Options HiddenControl -->
-		<control type="button" id="400">
+		<control type="button" id="999">
 			<visible>Skin.HasSetting(HideOSDControls)</visible>
 			<include>HiddenControl</include>
 			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
@@ -54,14 +54,15 @@
 				<width>1920</width>
 				<height>720</height>
 				<texture border="1">osd/mask_bottom.png</texture>
-				<visible>[!ControlGroup(200).HasFocus + !ControlGroup(210).HasFocus] + [!String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(100).HasFocus]</visible>
+				<visible>[!ControlGroup(200).HasFocus + !ControlGroup(210).HasFocus] + [!String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(100).HasFocus] +  !Control.HasFocus(999) + !ControlGroup(300).HasFocus</visible>
+				<animation effect="fade" start="0" end="100" time="0" delay="10">WindowOpen</animation>
 			</control>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>[ControlGroup(200).HasFocus | ControlGroup(210).HasFocus] + String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(100).HasFocus</visible>
+				<visible>[[ControlGroup(200).HasFocus | ControlGroup(210).HasFocus] + String.IsEmpty(Window(home).Property(ShowOptions))] | Control.HasFocus(999) | ControlGroup(300).HasFocus</visible>
 			</control>
 			<include>PlayerTitles</include>
 			<!-- Pause -->
@@ -396,10 +397,11 @@
 				<onleft>noop</onleft>				
 				<onright>noop</onright>				
 				<ondown>ClearProperty(ShowOptions,home)</ondown>
-				<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
+				<ondown condition="Skin.HasSetting(HideOSDControls)">999</ondown>
 				<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
 				<orientation>vertical</orientation>
-				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + [ControlGroup(100).HasFocus | !String.IsEmpty(Window(home).Property(ShowOptions))]</visible>
+				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + !Control.HasFocus(999) + !Control.HasFocus(304) + [ControlGroup(100).HasFocus | !String.IsEmpty(Window(home).Property(ShowOptions))]</visible>
+				<animation effect="fade" start="0" end="100" time="0" delay="10">WindowOpen</animation>
 				<!-- 3D mode -->
 				<control id="10" type="button">
 					<width>600</width>
@@ -413,6 +415,7 @@
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onclick>SetFocus(210)</onclick>
+					<onclick>ClearProperty(ShowOptions,home)</onclick>
 					<visible>VideoPlayer.IsStereoscopic</visible>
 				</control>
 				<!-- DVD menu -->
@@ -584,10 +587,11 @@
 						<width>805</width>
 						<itemgap>10</itemgap>
 						<onback>SetFocus(12)</onback>
-						<onleft>noop</onleft>
 						<onright condition="VideoPlayer.SubtitlesEnabled">400</onright>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
+						<onleft>SetFocus(12)</onleft>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control id="501" type="button">
@@ -655,7 +659,8 @@
 						<onleft>SetFocus(500)</onleft>
 						<onright>SetFocus(450)</onright>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control type="button" id="401">
@@ -730,9 +735,10 @@
 						<itemgap>14</itemgap>
 						<onback>SetFocus(12)</onback>
 						<onleft>SetFocus(400)</onleft>
-						<onright>noop</onright>
+						<onright>SetFocus(12)</onright>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control type="button" id="451">
@@ -870,11 +876,12 @@
 						<height>320</height>
 						<width>805</width>
 						<itemgap>10</itemgap>
-						<onback>SetFocus(12)</onback>
-						<onleft>noop</onleft>
+						<onback>SetFocus(10)</onback>
+						<onleft>SetFocus(10)</onleft>
 						<onright>400</onright>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<control id="601" type="togglebutton">
