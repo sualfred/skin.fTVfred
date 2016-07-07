@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- videoosd -->
-	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),subtitlealign)">SetFocus(402)</onload>
-	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),apply)">SetFocus(454)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(304)</onload>
+	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),subtitlealign)">SetFocus(212)</onload>
+	<onload condition="String.IsEqual(Window(home).Property(ForceFocus),apply)">SetFocus(224)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + !Skin.HasSetting(HideOSDControls)">SetFocus(504)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + String.IsEmpty(Window(home).Property(ShowOptions)) + Skin.HasSetting(HideOSDControls)">SetFocus(999)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + VideoPlayer.Content(livetv)">SetFocus(19)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onload>
-	<onunload>ClearProperty(ShowOptions,home)</onunload>
+	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + VideoPlayer.Content(livetv)">SetFocus(110)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(107)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ForceFocus)) + !String.IsEmpty(Window(home).Property(ShowOptions)) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(106)</onload>
 	<onload>ClearProperty(ForceFocus,home)</onload>
+	<onunload>ClearProperty(ShowOptions,home)</onunload>
 	<controls>
-		<!-- Shift button -->
-		<control type="button" id="201">
-			<include>HiddenControl</include>
-			<visible allowhiddenfocus="true">Control.HasFocus(201)</visible>
-			<onup>SubtitleShiftUp</onup>
-			<ondown>SubtitleShiftDown</ondown>
-			<onclick>SetFocus(200)</onclick>
-			<onback>SetFocus(12)</onback>
-		</control>
-		<!-- Shift button -->
-		<control type="button" id="202">
-			<include>HiddenControl</include>
-			<visible allowhiddenfocus="true">Control.HasFocus(202)</visible>
-			<onleft>SubtitleDelayMinus</onleft>
-			<onright>SubtitleDelayPlus</onright>
-			<onclick>SetFocus(200)</onclick>
-			<onback>SetFocus(12)</onback>
-		</control>
 		<!-- Options HiddenControl -->
 		<control type="button" id="999">
 			<visible>Skin.HasSetting(HideOSDControls)</visible>
@@ -36,14 +18,31 @@
 			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
 			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
 			<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
-			<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
-			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
-			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>					
+			<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(110)</onclick>
+			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(107)</onclick>
+			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(106)</onclick>					
 			<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+		</control>
+		<!-- Shift HiddenControl -->
+		<control type="button" id="998">
+			<include>HiddenControl</include>
+			<onup>SubtitleShiftUp</onup>
+			<ondown>SubtitleShiftDown</ondown>
+			<onclick>SetFocus(200)</onclick>
+			<onback>SetFocus(12)</onback>
+		</control>
+		<!-- Offset HiddenControl -->
+		<control type="button" id="997">
+			<include>HiddenControl</include>
+			<onleft>SubtitleDelayMinus</onleft>
+			<onright>SubtitleDelayPlus</onright>
+			<onclick>SetFocus(200)</onclick>
+			<onback>SetFocus(12)</onback>
 		</control>
 		<!-- OSD -->
 		<control type="group">
 			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<!-- Masks -->
 			<control type="image">
 				<width>1920</width>
 				<height>210</height>
@@ -54,7 +53,7 @@
 				<width>1920</width>
 				<height>720</height>
 				<texture border="1">osd/mask_bottom.png</texture>
-				<visible>[!ControlGroup(200).HasFocus + !ControlGroup(210).HasFocus] + [!String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(100).HasFocus] +  !Control.HasFocus(999) + !ControlGroup(300).HasFocus</visible>
+				<visible>[!String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(100).HasFocus] + !ControlGroup(2000).HasFocus + !ControlGroup(3000).HasFocus + !ControlGroup(5000).HasFocus + !Control.HasFocus(999)</visible>
 				<animation effect="fade" start="0" end="100" time="0" delay="10">WindowOpen</animation>
 			</control>
 			<control type="image">
@@ -62,7 +61,7 @@
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>[[ControlGroup(200).HasFocus | ControlGroup(210).HasFocus] + String.IsEmpty(Window(home).Property(ShowOptions))] | Control.HasFocus(999) | ControlGroup(300).HasFocus | Control.HasFocus(201) | Control.HasFocus(202)</visible>
+				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | Control.HasFocus(999) | ControlGroup(2000).HasFocus | ControlGroup(3000).HasFocus | ControlGroup(5000).HasFocus | Control.HasFocus(998) | Control.HasFocus(997)</visible>
 			</control>
 			<include>PlayerTitles</include>
 			<!-- Pause -->
@@ -75,7 +74,7 @@
 				<visible>Player.Paused</visible>
 			</control>
 			<!--  Progress bar -->
-			<control id="99" type="progress">
+			<control type="progress">
 				<left>92</left>
 				<bottom>93</bottom>
 				<width>1735</width>
@@ -88,6 +87,7 @@
 				<righttexture>-</righttexture>
 				<overlaytexture>-</overlaytexture>
 			</control>
+			<!-- Duration labels -->
 			<control type="grouplist">
 				<left>92</left>
 				<bottom>38</bottom>
@@ -142,107 +142,13 @@
 					<textcolor>ffebebeb</textcolor>
 					<label>$VAR[PlayerResolution]</label>
 				</control>
-			</control>
-			<!-- Player controls -->
-			<control id="300" type="grouplist">
-				<centerleft>50%</centerleft>
-				<bottom>26</bottom>
-				<width>800</width>
-				<height>64</height>
-				<onup condition="!Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onup>
-				<onup condition="!Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onup>
-				<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onup>
-				<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onup>
-				<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
-				<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
-				<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</ondown>
-				<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</ondown>
-				<itemgap>0</itemgap>
-				<align>center</align>
-				<orientation>horizontal</orientation>
-				<defaultcontrol always="true">204</defaultcontrol>
-				<visible>!Skin.HasSetting(HideOSDControls) + !Control.HasFocus(201) + !Control.HasFocus(202)</visible>
-				<!-- Skip Back -->
-				<control type="button" id="301">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_prev_fo.png</texturefocus>
-					<texturenofocus>osd/osd_prev_nf.png</texturenofocus>
-					<onclick>PlayerControl(Previous)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
-				<!-- Rewind -->
-				<control type="button" id="302">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_rw_fo.png</texturefocus>
-					<texturenofocus>osd/osd_rw_nf.png</texturenofocus>
-					<onclick>PlayerControl(Rewind)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
-				<!-- Stop -->
-				<control type="button" id="303">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_stop_fo.png</texturefocus>
-					<texturenofocus>osd/osd_stop_nf.png</texturenofocus>
-					<onclick>PlayerControl(Stop)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
-				<!-- Play/Pause -->
-				<control type="togglebutton" id="304">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_pause_fo.png</texturefocus>
-					<texturenofocus>osd/osd_pause_nf.png</texturenofocus>
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturefocus>osd/osd_play_fo.png</alttexturefocus>
-					<alttexturenofocus>osd/osd_play_nf.png</alttexturenofocus>
-					<onclick>PlayerControl(Play)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
-				<!-- Fast Forward -->
-				<control type="button" id="305">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_ff_fo.png</texturefocus>
-					<texturenofocus>osd/osd_ff_nf.png</texturenofocus>
-					<onclick>PlayerControl(Forward)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
-				<!-- Next -->
-				<control type="button" id="306">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_next_fo.png</texturefocus>
-					<texturenofocus>osd/osd_next_nf.png</texturenofocus>
-					<onclick>PlayerControl(Next)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
-				<!-- Record -->
-				<control type="button" id="307">
-					<width>64</width>
-					<height>64</height>
-					<font>-</font>
-					<texturefocus>osd/osd_rec_fo.png</texturefocus>
-					<texturenofocus>osd/osd_rec_nf.png</texturenofocus>
-					<onclick>PlayerControl(Record)</onclick>
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
-				</control>
-			</control>
+			</control>			
 			<!-- Options and Cast -->
 			<control type="group">
-				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding</visible>
+				<visible>!Control.IsVisible(2000) + !Control.IsVisible(3000) + !Player.Forwarding + !Player.Rewinding</visible>
 				<!--Xray Icon-->
 				<control type="grouplist">
-					<visible>!Control.HasFocus(201) + !Control.HasFocus(202)</visible>
+					<visible>!Control.HasFocus(998) + !Control.HasFocus(997)</visible>
 					<right>92</right>
 					<bottom>40</bottom>
 					<height>40</height>
@@ -294,7 +200,7 @@
 				</control>
 				<!--Shift Offset -->
 				<control type="grouplist">
-					<visible>Control.HasFocus(201) | Control.HasFocus(202)</visible>
+					<visible>Control.HasFocus(998) | Control.HasFocus(997)</visible>
 					<onup>SubtitleShiftUp</onup>
 					<ondown>SubtitleShiftDown</ondown>
 					<onback>SetFocus(200)</onback>
@@ -313,13 +219,13 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>$LOCALIZE[31304]</label>
-						<visible>Control.HasFocus(201)</visible>
+						<visible>Control.HasFocus(998)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
-						<visible>Control.HasFocus(201)</visible>
+						<visible>Control.HasFocus(998)</visible>
 					</control>
 					<control type="label">
 						<top>4</top>
@@ -328,13 +234,13 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>    $LOCALIZE[31305]</label>
-						<visible>Control.HasFocus(201)</visible>
+						<visible>Control.HasFocus(998)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture flipy="true">osd/x_ray.png</texture>
-						<visible>Control.HasFocus(201)</visible>
+						<visible>Control.HasFocus(998)</visible>
 					</control>
 					<!-- Offset -->
 					<control type="label">
@@ -344,14 +250,14 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>$LOCALIZE[31306]</label>
-						<visible>Control.HasFocus(202)</visible>
+						<visible>Control.HasFocus(997)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
 						<animation effect="rotate" end="90" center="auto" time="0" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(202)</visible>
+						<visible>Control.HasFocus(997)</visible>
 					</control>
 					<control type="label">
 						<top>4</top>
@@ -360,14 +266,14 @@
 						<font>Reg27</font>
 						<textcolor>fff3f3f3</textcolor>
 						<label>    $LOCALIZE[31307]</label>
-						<visible>Control.HasFocus(202)</visible>
+						<visible>Control.HasFocus(997)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture>osd/x_ray.png</texture>
 						<animation effect="rotate" end="-90" center="auto" time="0" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(202)</visible>
+						<visible>Control.HasFocus(997)</visible>
 					</control>
 					<!-- menu -->
 					<control type="label">
@@ -386,182 +292,184 @@
 				</control>
 			</control>
 			<!-- Options -->
-			<control id="100" type="grouplist">
-				<right>92</right>
-				<bottom>128</bottom>
-				<width>600</width>
-				<height>600</height>
-				<align>right</align>
-				<itemgap>0</itemgap>
-				<onup>noop</onup>
-				<onleft>noop</onleft>				
-				<onright>noop</onright>				
-				<ondown>ClearProperty(ShowOptions,home)</ondown>
-				<ondown condition="Skin.HasSetting(HideOSDControls)">999</ondown>
-				<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
-				<orientation>vertical</orientation>
-				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + !Control.HasFocus(999) + !Control.HasFocus(304) + [ControlGroup(100).HasFocus | !String.IsEmpty(Window(home).Property(ShowOptions))]</visible>
-				<animation effect="fade" start="0" end="100" time="0" delay="10">WindowOpen</animation>
-				<!-- 3D mode -->
-				<control id="10" type="button">
+			<control type="group" id="1000">
+				<control type="grouplist" id="100">
+					<right>92</right>
+					<bottom>128</bottom>
 					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
+					<height>600</height>
 					<align>right</align>
-					<label>$LOCALIZE[31153]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>SetFocus(210)</onclick>
-					<onclick>ClearProperty(ShowOptions,home)</onclick>
-					<visible>VideoPlayer.IsStereoscopic</visible>
-				</control>
-				<!-- DVD menu -->
-				<control id="11" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$LOCALIZE[31136]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>PlayerControl(ShowVideoMenu)</onclick>
-					<visible>VideoPlayer.HasMenu</visible>
-				</control>
-				<!-- Subtitles -->
-				<control id="12" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>287</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>SetFocus(200)</onclick>
-					<onclick>ClearProperty(ShowOptions,home)</onclick>
-					<visible>!VideoPlayer.Content(livetv)</visible>
-				</control>
-				<!-- Bookmarks -->
-				<control id="13" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>298</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>ActivateWindow(125)</onclick>
-					<onclick>Close</onclick>
-					<visible>!VideoPlayer.Content(livetv)</visible>
-				</control>
-				<!-- Video Settings -->
-				<control id="14" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$LOCALIZE[31137]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>ActivateWindow(123)</onclick>
-				</control>
-				<!-- Audio Settings -->
-				<control id="15" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$LOCALIZE[31000]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>ActivateWindow(124)</onclick>
-				</control>
-				<!-- Next Video -->
-				<control id="16" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$VAR[NextVideo]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>PlayerControl(Next)</onclick>
-					<visible>Window.IsVisible(VideoFullScreen.xml) + system.getbool(videoplayer.autoplaynextitem)</visible>
-				</control>
-				<!-- Teletext -->
-				<control id="17" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$LOCALIZE[23050]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(Teletext)</onclick>
-					<visible>VideoPlayer.Content(livetv)</visible>
-				</control>
-				<!-- EPG -->
-				<control id="18" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$LOCALIZE[4]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(tvguide)</onclick>
-					<visible>VideoPlayer.Content(livetv)</visible>
-				</control>
-				<!-- Channels -->
-				<control id="19" type="button">
-					<width>600</width>
-					<height>58</height>
-					<font>Light32</font>
-					<align>right</align>
-					<label>$LOCALIZE[19023]</label>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<focusedcolor>ffffc04b</focusedcolor>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(pvrosdchannels)</onclick>
-					<visible>VideoPlayer.Content(livetv)</visible>
+					<itemgap>0</itemgap>
+					<onup>noop</onup>
+					<onleft>noop</onleft>				
+					<onright>noop</onright>				
+					<ondown>ClearProperty(ShowOptions,home)</ondown>
+					<ondown condition="Skin.HasSetting(HideOSDControls)">999</ondown>
+					<ondown condition="!Skin.HasSetting(HideOSDControls)">504</ondown>
+					<orientation>vertical</orientation>
+					<visible>!Control.IsVisible(2000) + !Control.IsVisible(3000) + !Player.Forwarding + !Player.Rewinding + !Control.HasFocus(999) + !Control.HasFocus(504) + [ControlGroup(100).HasFocus | !String.IsEmpty(Window(home).Property(ShowOptions))]</visible>
+					<animation effect="fade" start="0" end="100" time="0" delay="10">WindowOpen</animation>
+					<!-- 3D mode -->
+					<control id="101" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[31153]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>SetFocus(300)</onclick>
+						<onclick>ClearProperty(ShowOptions,home)</onclick>
+						<visible>VideoPlayer.IsStereoscopic</visible>
+					</control>
+					<!-- DVD menu -->
+					<control id="102" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[31136]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+						<visible>VideoPlayer.HasMenu</visible>
+					</control>
+					<!-- Subtitles -->
+					<control id="103" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>287</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>SetFocus(200)</onclick>
+						<onclick>ClearProperty(ShowOptions,home)</onclick>
+						<visible>!VideoPlayer.Content(livetv)</visible>
+					</control>
+					<!-- Bookmarks -->
+					<control id="104" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>298</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>ActivateWindow(125)</onclick>
+						<onclick>Close</onclick>
+						<visible>!VideoPlayer.Content(livetv)</visible>
+					</control>
+					<!-- Video Settings -->
+					<control id="105" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[31137]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>ActivateWindow(123)</onclick>
+					</control>
+					<!-- Audio Settings -->
+					<control id="106" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[31000]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>ActivateWindow(124)</onclick>
+					</control>
+					<!-- Next Video -->
+					<control id="107" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$VAR[NextVideo]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>PlayerControl(Next)</onclick>
+						<visible>Window.IsVisible(VideoFullScreen.xml) + system.getbool(videoplayer.autoplaynextitem)</visible>
+					</control>
+					<!-- Teletext -->
+					<control id="108" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[23050]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<onclick>ActivateWindow(Teletext)</onclick>
+						<visible>VideoPlayer.Content(livetv)</visible>
+					</control>
+					<!-- EPG -->
+					<control id="109" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[4]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<onclick>ActivateWindow(tvguide)</onclick>
+						<visible>VideoPlayer.Content(livetv)</visible>
+					</control>
+					<!-- Channels -->
+					<control id="110" type="button">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<label>$LOCALIZE[19023]</label>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<onclick>ActivateWindow(pvrosdchannels)</onclick>
+						<visible>VideoPlayer.Content(livetv)</visible>
+					</control>
 				</control>
 			</control>
 			<!-- Subtitles -->
-			<control type="group" id="200">
-				<visible allowhiddenfocus="true">ControlGroup(200).HasFocus</visible>
-				<top>635</top>
+			<control type="group" id="2000">
+				<visible allowhiddenfocus="true">ControlGroup(2000).HasFocus</visible>
 				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(selectdialog)">Conditional</animation>
+				<top>635</top>
 				<!-- Background -->
 				<control type="image">
 					<bottom>120</bottom>
@@ -580,21 +488,21 @@
 						<label>$LOCALIZE[287]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
-					<control type="grouplist" id="500">
+					<control type="grouplist" id="200">
 						<left>81</left>
 						<bottom>0</bottom>
 						<height>320</height>
 						<width>805</width>
 						<itemgap>10</itemgap>
-						<onback>SetFocus(12)</onback>
-						<onright condition="VideoPlayer.SubtitlesEnabled">400</onright>
+						<onleft>SetFocus(103)</onleft>
+						<onback>SetFocus(103)</onback>
+						<onright condition="VideoPlayer.SubtitlesEnabled">211</onright>
 						<onup>noop</onup>
-						<onleft>SetFocus(12)</onleft>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(504)</ondown>
 						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
-						<control id="501" type="button">
+						<control id="201" type="button">
 							<width>300</width>
 							<height>58</height>
 							<font>Reg22</font>
@@ -603,10 +511,10 @@
 							<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
 							<label>$LOCALIZE[248] ($INFO[VideoPlayer.SubtitlesLanguage])</label>
 							<onclick>CycleSubtitle</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.SubtitlesEnabled + VideoPlayer.HasSubtitles</enable>
 						</control>
-						<control id="502" type="togglebutton">
+						<control id="202" type="togglebutton">
 							<width>300</width>
 							<height>58</height>
 							<font>Reg22</font>
@@ -619,10 +527,10 @@
 							<alttexturenofocus border="13,5,6,8">views/button_nf.png</alttexturenofocus>
 							<usealttexture>VideoPlayer.SubtitlesEnabled</usealttexture>
 							<onclick>ShowSubtitles</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles</enable>
 						</control>
-						<control id="503" type="button">
+						<control id="203" type="button">
 							<width>300</width>
 							<height>58</height>
 							<font>Reg22</font>
@@ -633,8 +541,7 @@
 							<onclick>Close</onclick>
 							<onclick>Dialog.Close(VideoOSD)</onclick>
 							<onclick>ActivateWindow(SubtitleSearch)</onclick>
-							<onback>SetFocus(12)</onback>
-							<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(300)</ondown>
+							<onback>SetFocus(103)</onback>
 						</control>
 					</control>
 				</control>
@@ -650,20 +557,20 @@
 						<label>$LOCALIZE[274]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
-					<control type="grouplist" id="400">
+					<control type="grouplist" id="210">
 						<width>402</width>
 						<bottom>0</bottom>
 						<height>90</height>
 						<itemgap>14</itemgap>
-						<onback>SetFocus(12)</onback>
-						<onleft>SetFocus(500)</onleft>
-						<onright>SetFocus(450)</onright>
+						<onback>SetFocus(103)</onback>
+						<onleft>SetFocus(200)</onleft>
+						<onright>SetFocus(221)</onright>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(504)</ondown>
 						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
-						<control type="button" id="401">
+						<control type="button" id="211">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -675,11 +582,11 @@
 							<label>$LOCALIZE[31302]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
-							<onclick>SetFocus(202)</onclick>
-							<onback>SetFocus(12)</onback>
+							<onclick>SetFocus(997)</onclick>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
-						<control type="button" id="402">
+						<control type="button" id="212">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -694,11 +601,11 @@
 							<onclick>SetProperty(ForceFocus,subtitlealign,home)</onclick>
 							<onclick>subtitlealign</onclick>
 							<onclick>ReloadSkin()</onclick>
-							<onclick>ActivateWindowAndFocus(videoosd)</onclick>
-							<onback>SetFocus(12)</onback>
+							<onclick>ActivateWindow(videoosd)</onclick>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
-						<control type="button" id="403">
+						<control type="button" id="213">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -710,8 +617,8 @@
 							<label>$LOCALIZE[31299]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
-							<onclick>SetFocus(201)</onclick>
-							<onback>SetFocus(12)</onback>
+							<onclick>SetFocus(998)</onclick>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>				
 					</control>
@@ -728,20 +635,20 @@
 						<label>$LOCALIZE[31298]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
-					<control type="grouplist" id="450">
+					<control type="grouplist" id="220">
 						<width>402</width>
 						<bottom>0</bottom>
 						<height>90</height>
 						<itemgap>14</itemgap>
-						<onback>SetFocus(12)</onback>
-						<onleft>SetFocus(400)</onleft>
-						<onright>SetFocus(12)</onright>
+						<onback>SetFocus(103)</onback>
+						<onright>SetFocus(103)</onright>
+						<onleft>SetFocus(213)</onleft>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(504)</ondown>
 						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
-						<control type="button" id="451">
+						<control type="button" id="221">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -765,10 +672,10 @@
 							<onclick>SetProperty(Dialog.5.Label,Bigger)</onclick>
 							<onclick>SetProperty(Dialog.5.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.height,value=38))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[36186])</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
-						<control type="button" id="452">
+						<control type="button" id="222">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -790,10 +697,10 @@
 							<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[741])</onclick>
 							<onclick>SetProperty(Dialog.4.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.style,value=3))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[36187])</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
-						<control type="button" id="453">
+						<control type="button" id="223">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -823,10 +730,10 @@
 							<onclick>SetProperty(Dialog.8.Label,$LOCALIZE[767])</onclick>
 							<onclick>SetProperty(Dialog.8.BuiltIn,RunScript(script.skin.helper.service,action=setkodisetting,setting=subtitles.color,value=7))</onclick>
 							<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[36188])</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(103)</onback>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
-						<control type="button" id="454">
+						<control type="button" id="224">
 							<width>90</width>
 							<height>90</height>
 							<font>Reg22</font>
@@ -838,20 +745,20 @@
 							<label>$LOCALIZE[31303]</label>
 							<focusedcolor>ffffaf37</focusedcolor>
 							<disabledcolor>44ffffff</disabledcolor>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(103)</onback>
 							<onclick>SetProperty(ForceFocus,apply,home)</onclick>
 							<onclick>ReloadSkin()</onclick>
-							<onclick>ActivateWindowAndFocus(videoosd)</onclick>
+							<onclick>ActivateWindow(videoosd)</onclick>
 							<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						</control>
 					</control>
 				</control>
 			</control>
 			<!-- 3D Options -->
-			<control type="group" id="210">
-				<visible allowhiddenfocus="true">ControlGroup(210).HasFocus</visible>
-				<top>635</top>
+			<control type="group" id="3000">
+				<visible allowhiddenfocus="true">ControlGroup(3000).HasFocus</visible>
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(selectdialog)">Conditional</animation>
+				<top>635</top>
 				<!-- Background -->
 				<control type="image">
 					<bottom>120</bottom>
@@ -870,21 +777,20 @@
 						<label>$LOCALIZE[31153]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
-					<control type="grouplist" id="600">
+					<control type="grouplist" id="300">
 						<left>81</left>
 						<bottom>0</bottom>
 						<height>320</height>
 						<width>805</width>
 						<itemgap>10</itemgap>
-						<onback>SetFocus(10)</onback>
-						<onleft>SetFocus(10)</onleft>
-						<onright>400</onright>
+						<onback>SetFocus(101)</onback>
+						<onleft>SetFocus(101)</onleft>
 						<onup>noop</onup>
-						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(504)</ondown>
 						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(999)</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
-						<control id="601" type="togglebutton">
+						<control id="301" type="togglebutton">
 							<width>300</width>
 							<height>58</height>
 							<font>Reg22</font>
@@ -897,9 +803,9 @@
 							<alttexturenofocus border="13,5,6,8">views/button_nf.png</alttexturenofocus>
 							<usealttexture>Integer.IsGreater(System.StereoscopicMode,0)</usealttexture>
 							<onclick>ToggleStereoMode</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(101)</onback>
 						</control>
-						<control id="602" type="togglebutton">
+						<control id="302" type="togglebutton">
 							<width>300</width>
 							<height>58</height>
 							<font>Reg22</font>
@@ -912,9 +818,9 @@
 							<alttexturenofocus border="13,5,6,8">views/button_nf.png</alttexturenofocus>
 							<usealttexture>String.IsEqual(System.StereoscopicMode,9)</usealttexture>
 							<onclick>StereoModeToMono</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(101)</onback>
 						</control>
-						<control id="603" type="button">
+						<control id="303" type="button">
 							<width>300</width>
 							<height>58</height>
 							<font>Reg22</font>
@@ -923,8 +829,104 @@
 							<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
 							<label>$LOCALIZE[31257]</label>
 							<onclick>StereoMode</onclick>
-							<onback>SetFocus(12)</onback>
+							<onback>SetFocus(101)</onback>
 						</control>
+					</control>
+				</control>
+			</control>
+			<!-- Player controls -->
+			<control type="group" id="5000">
+				<control type="grouplist" id="500">
+					<centerleft>50%</centerleft>
+					<bottom>26</bottom>
+					<width>800</width>
+					<height>64</height>
+					<onup condition="!Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onup>
+					<onup condition="!Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(110)</onup>
+					<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(107)</onup>
+					<onup condition="!Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(106)</onup>
+					<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
+					<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
+					<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</ondown>
+					<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</ondown>
+					<itemgap>0</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<defaultcontrol always="true">504</defaultcontrol>
+					<visible>!Skin.HasSetting(HideOSDControls) + !Control.HasFocus(998) + !Control.HasFocus(997)</visible>
+					<!-- Skip Back -->
+					<control type="button" id="501">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_prev_fo.png</texturefocus>
+						<texturenofocus>osd/osd_prev_nf.png</texturenofocus>
+						<onclick>PlayerControl(Previous)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+					</control>
+					<!-- Rewind -->
+					<control type="button" id="502">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_rw_fo.png</texturefocus>
+						<texturenofocus>osd/osd_rw_nf.png</texturenofocus>
+						<onclick>PlayerControl(Rewind)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+					</control>
+					<!-- Stop -->
+					<control type="button" id="503">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_stop_fo.png</texturefocus>
+						<texturenofocus>osd/osd_stop_nf.png</texturenofocus>
+						<onclick>PlayerControl(Stop)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+					</control>
+					<!-- Play/Pause -->
+					<control type="togglebutton" id="504">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_pause_fo.png</texturefocus>
+						<texturenofocus>osd/osd_pause_nf.png</texturenofocus>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<alttexturefocus>osd/osd_play_fo.png</alttexturefocus>
+						<alttexturenofocus>osd/osd_play_nf.png</alttexturenofocus>
+						<onclick>PlayerControl(Play)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+					</control>
+					<!-- Fast Forward -->
+					<control type="button" id="505">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_ff_fo.png</texturefocus>
+						<texturenofocus>osd/osd_ff_nf.png</texturenofocus>
+						<onclick>PlayerControl(Forward)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+					</control>
+					<!-- Next -->
+					<control type="button" id="506">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_next_fo.png</texturefocus>
+						<texturenofocus>osd/osd_next_nf.png</texturenofocus>
+						<onclick>PlayerControl(Next)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+					</control>
+					<!-- Record -->
+					<control type="button" id="507">
+						<width>64</width>
+						<height>64</height>
+						<font>-</font>
+						<texturefocus>osd/osd_rec_fo.png</texturefocus>
+						<texturenofocus>osd/osd_rec_nf.png</texturenofocus>
+						<onclick>PlayerControl(Record)</onclick>
+						<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+						<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
 					</control>
 				</control>
 			</control>
