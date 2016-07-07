@@ -29,6 +29,18 @@
 			<onclick>SetFocus(200)</onclick>
 			<onback>SetFocus(12)</onback>
 		</control>
+		<!-- Options HiddenControl -->
+		<control type="button" id="400">
+			<visible>Skin.HasSetting(HideOSDControls)</visible>
+			<include>HiddenControl</include>
+			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
+			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
+			<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
+			<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
+			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
+			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>					
+			<onfocus>ClearProperty(ShowOptions,home)</onfocus>
+		</control>
 		<!-- OSD -->
 		<control type="group">
 			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
@@ -42,14 +54,14 @@
 				<width>1920</width>
 				<height>720</height>
 				<texture border="1">osd/mask_bottom.png</texture>
-				<visible>!String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(200).HasFocus + !ControlGroup(210).HasFocus</visible>
+				<visible>[!ControlGroup(200).HasFocus + !ControlGroup(210).HasFocus] + [!String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(100).HasFocus]</visible>
 			</control>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(200).HasFocus | ControlGroup(210).HasFocus</visible>
+				<visible>[ControlGroup(200).HasFocus | ControlGroup(210).HasFocus] + String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(100).HasFocus</visible>
 			</control>
 			<include>PlayerTitles</include>
 			<!-- Pause -->
@@ -227,18 +239,6 @@
 			<!-- Options and Cast -->
 			<control type="group">
 				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding</visible>
-				<!-- Options HiddenControl -->
-				<control type="button" id="400">
-					<visible>Skin.HasSetting(HideOSDControls)</visible>
-					<include>HiddenControl</include>
-					<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
-					<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
-					<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
-					<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(19)</onclick>
-					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(16)</onclick>
-					<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + !system.getbool(videoplayer.autoplaynextitem)">SetFocus(15)</onclick>					
-					<onfocus>ClearProperty(ShowOptions,home)</onfocus>
-				</control>
 				<!--Xray Icon-->
 				<control type="grouplist">
 					<visible>!Control.HasFocus(201) + !Control.HasFocus(202)</visible>
@@ -399,7 +399,7 @@
 				<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
 				<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
 				<orientation>vertical</orientation>
-				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + ControlGroup(100).HasFocus + !String.IsEmpty(Window(home).Property(ShowOptions))</visible>
+				<visible>!Control.IsVisible(200) + !Player.Forwarding + !Player.Rewinding + [ControlGroup(100).HasFocus | !String.IsEmpty(Window(home).Property(ShowOptions))]</visible>
 				<!-- 3D mode -->
 				<control id="10" type="button">
 					<width>600</width>
