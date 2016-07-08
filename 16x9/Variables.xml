@@ -514,6 +514,9 @@
 		<value condition="!String.IsEmpty(Control.GetLabel(3005))">$INFO[Control.GetLabel(3005)]</value>
 		<value>views/episode_fallback.png</value>
 	</variable>
+	<variable name="NextUpThumbPVR">
+		<value>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.NextTitle]&amp;channel=$INFO[VideoPlayer.ChannelName]&amp;type=fanart</value>
+	</variable>
 	<variable name="StillWatchingThumb">
 		<value condition="!String.IsEmpty(Control.GetLabel(4002)) + [!Skin.HasSetting(HideUnwatchedThumbs) | [Skin.HasSetting(HideUnwatchedThumbs) + Integer.IsGreater(Control.GetLabel(4018),0)]]">$INFO[Control.GetLabel(4002)]</value>
 		<value condition="!String.IsEmpty(Control.GetLabel(4007)) + [String.IsEmpty(Control.GetLabel(4002)) | [Skin.HasSetting(HideUnwatchedThumbs) + !Integer.IsGreater(Control.GetLabel(4018),0)]]">$INFO[Control.GetLabel(4007)]</value>
@@ -2305,6 +2308,7 @@
 		<value condition="ControlGroup(9).HasFocus(25)">$LOCALIZE[31288]</value>
 		<value condition="ControlGroup(9).HasFocus(26)">$LOCALIZE[31289]</value>
 		<value condition="ControlGroup(9).HasFocus(27)">$LOCALIZE[31293]</value>
+		<value condition="ControlGroup(9).HasFocus(28)">$LOCALIZE[31308]</value>
 	</variable>
 	<variable name="AlbumArtistName">
 		<value condition="!String.IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>

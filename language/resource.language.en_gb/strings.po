@@ -1350,6 +1350,16 @@ msgctxt "#31307"
 msgid "Offset [B]PLUS[/B]"
 msgstr ""
 
+#: /16x9/Variables.xml
+msgctxt "#31308"
+msgid "Enables the video fullscreen NextUp popup notification for LiveTV playback.[CR]Enabled by default."
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31309"
+msgid "Live TV NextUp Popup"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

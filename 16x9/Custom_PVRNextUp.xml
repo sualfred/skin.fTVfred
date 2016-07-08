@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1109" type="dialog">
+	<defaultcontrol always="true">3012</defaultcontrol>
+	<onload>Dialog.Close(fullscreeninfo,true)</onload>
+	<visible>Window.IsActive(fullscreenvideo) + VideoPlayer.Content(livetv) + !Skin.HasSetting(PVRNextUpDisabled) + [Integer.IsGreater(Player.Duration(mm),05) | Integer.IsGreater(Player.Duration(hh),00)]</visible>
+	<controls>
+		<control type="group">
+			<animation effect="fade" end="100" start="0" time="200" condition="!Window.IsVisible(videoosd) + Window.IsVisible(fullscreenvideo) + Integer.IsEqual(Player.TimeRemaining(hh),00) + Integer.IsEqual(Player.TimeRemaining(mm),00) + Integer.IsLessOrEqual(Player.TimeRemaining(ss),30)">Conditional</animation>
+			<left>1422</left>
+			<top>523</top>
+			<width>378</width>			
+			<!--  Next up label -->
+			<control type="label">
+				<width>auto</width>
+				<height>50</height>
+				<font>Med40</font>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>ff080808</shadowcolor>
+				<label>31164</label>
+			</control>
+			<!-- Next episode thumb -->
+			<control type="image">
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
+				<texture>common/wide_empty.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
+				<texture>views/episode_fallback.png</texture>
+				<visible>String.IsEmpty(VideoPlayer.Cover)</visible>
+			</control>
+			<control type="image">
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+				<visible>!String.IsEmpty(VideoPlayer.Cover)</visible>
+			</control>
+			<control type="image">
+				<top>70</top>
+				<width>378</width>
+				<height>295</height>
+				<aspectratio>scale</aspectratio>
+				<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.NextTitle]&amp;channel=$INFO[VideoPlayer.ChannelName]&amp;type=fanart</texture>
+			</control>
+			<control type="image">
+				<top>365</top>
+				<width>378</width>
+				<height>68</height>
+				<texture>osd/nextup/background.png</texture>
+			</control>
+			<!--  Next episode label -->
+			<control type="label">
+				<top>379</top>
+				<width>378</width>
+				<height>40</height>
+				<font>Light28</font>
+				<align>center</align>
+				<textoffsetx>5</textoffsetx>
+				<scroll>true</scroll>
+				<textcolor>ff000000</textcolor>				
+				<label>$INFO[VideoPlayer.NextTitle]</label>
+			</control>
+		</control>
+	</controls>
+</window>
