@@ -1,5 +1,11 @@
 Changelog:
 
+3.1.4
+- Added pseudo NextUp for Live TV
+- Fixed focus issue in widget group editing dialog
+- Added scrolling to media processing CPU load line for multicore values
+- Cleanup skinshortcuts overrides
+
 3.1.3
 - VideoOSD rework/cleanup
 - Added apply button to subtitle OSD
