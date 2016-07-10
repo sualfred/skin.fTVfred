@@ -296,6 +296,7 @@
 					<textcolor>44ffffff</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<align>right</align>
+					<scroll>true</scroll>
 					<label>$VAR[CPUload,$LOCALIZE[13271] , - ]$VAR[videohwdecoder]</label>
 				</control>
 				<control type="label">
