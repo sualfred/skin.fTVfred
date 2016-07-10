@@ -4,7 +4,6 @@
 	<defaultcontrol>3</defaultcontrol>
 	<onload condition="!Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(SetUserRating))">SetFocus(3)</onload>
 	<onload condition="!Window.IsVisible(1105) + !String.IsEmpty(Window(home).Property(SetUserRating))">SetFocus(21)</onload>
-	<onload condition="Window.IsVisible(1105)">SetFocus(30)</onload>
 	<onunload>ClearProperty(SetUserRating,home)</onunload>
 	<onunload>ClearProperty(UserRatingIcon,home)</onunload>
 	<onunload>ClearProperty(ForceDefaultLayout,home)</onunload>
