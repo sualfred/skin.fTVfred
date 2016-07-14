@@ -4,7 +4,7 @@
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
 	<controls>
 		<control type="group">
-			<animation effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<animation effect="fade" end="100" start="0" time="200" delay="50">WindowOpen</animation>
 			<animation effect="fade" end="0" start="0" time="0">WindowClose</animation>
 			<left>1422</left>
 			<top>523</top>
