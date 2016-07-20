@@ -350,7 +350,7 @@
 					<visible>!String.IsEmpty(Container(50).ListItem.Icon)</visible>
 				</control>
 				<control type="image">
-					<left>637</left>
+					<left>640</left>
 					<top>456</top>
 					<width>761</width>
 					<height>470</height>
@@ -358,7 +358,7 @@
 					<visible>!String.IsEmpty(Container(50).ListItem(1).Icon)</visible>
 				</control>
 				<control type="image">
-					<left>685</left>
+					<left>688</left>
 					<top>504</top>
 					<width>665</width>
 					<height>374</height>
