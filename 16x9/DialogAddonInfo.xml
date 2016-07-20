@@ -6,7 +6,7 @@
 	<onunload>ClearProperty(AddonDetails,home)</onunload>
 	<onunload>SetFocus(50)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
-	<controls>
+	<controls>		
 		<!-- Hidden Description -->
 		<control type="textbox">
 			<left>-1200</left>
@@ -36,6 +36,10 @@
 		<control id="13" type="radiobutton">
 			<include>HiddenControl</include>
 			<visible>Control.IsEnabled(13)</visible>
+		</control>
+		<!-- Hidden List -->
+		<control id="50" type="list">
+			<include>HiddenHomeList</include>
 		</control>
 		<!-- Background -->
 		<include>BackgroundImage</include>
@@ -213,7 +217,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<label>$LOCALIZE[31022]</label>
 						<textoffsetx>28</textoffsetx>
@@ -229,7 +232,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<onclick>SetFocus(13)</onclick>
 						<onclick>Select</onclick>
 						<onclick>SetFocus(20)</onclick>
@@ -251,7 +253,6 @@
 						<onup>Close</onup>
 						<onclick>SetProperty(ForceDefaultLayout,1,home)</onclick>
 						<onclick>SendClick(12)</onclick>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<label>$LOCALIZE[31033]</label>
 						<textoffsetx>28</textoffsetx>
@@ -267,7 +268,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
@@ -281,8 +281,7 @@
 						<width min="104" max="244">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
-						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
+						<onup>Close</onup>						
 						<font>Med24</font>
 						<label>24020</label>
 						<textoffsetx>28</textoffsetx>
@@ -298,7 +297,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
@@ -313,7 +311,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCINFO[ListItem.AddonNews]')</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[24054]</label>
@@ -336,13 +333,37 @@
 					<width>761</width>
 					<height>470</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>!String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(Container(50).ListItem.Icon)</visible>
 				</control>
 				<control type="image">
 					<top>504</top>
 					<width>665</width>
 					<height>374</height>
 					<texture>$INFO[ListItem.Art(fanart)]</texture>
+					<visible>String.IsEmpty(Container(50).ListItem.Icon)</visible>
+				</control>
+				<control type="image">
+					<top>504</top>
+					<width>665</width>
+					<height>374</height>
+					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+					<visible>!String.IsEmpty(Container(50).ListItem.Icon)</visible>
+				</control>
+				<control type="image">
+					<left>637</left>
+					<top>456</top>
+					<width>761</width>
+					<height>470</height>
+					<texture border="66,66,51,51">views/shadow_nf.png</texture>
+					<visible>!String.IsEmpty(Container(50).ListItem(1).Icon)</visible>
+				</control>
+				<control type="image">
+					<left>685</left>
+					<top>504</top>
+					<width>665</width>
+					<height>374</height>
+					<texture>$INFO[Container(50).ListItem(1).Icon]</texture>
+					<visible>!String.IsEmpty(Container(50).ListItem(1).Icon)</visible>
 				</control>
 			</control>
 			<control type="group">

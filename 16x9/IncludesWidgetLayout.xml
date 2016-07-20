@@ -274,7 +274,14 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay4K.png</texture>
+			<visible>Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
@@ -547,7 +554,14 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay4K.png</texture>
+			<visible>Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
@@ -657,7 +671,14 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay4K.png</texture>
+			<visible>Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
@@ -823,7 +844,14 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay4K.png</texture>
+			<visible>Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
@@ -933,7 +961,14 @@
 			<width>58</width>
 			<height>58</height>
 			<texture>views/OverlayHD.png</texture>
-			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+			<visible>Integer.IsGreater(ListItem.Property(VideoResolution$PARAM[ID]),719) + !Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
+		</control>
+		<control type="image">
+			<top>13</top>
+			<width>58</width>
+			<height>58</height>
+			<texture>views/Overlay4K.png</texture>
+			<visible>Integer.IsEqual(ListItem.Property(VideoResolution$PARAM[ID]),4K) + !String.Contains(ListItem.Property(Path),pvr://channels) + String.IsEqual(ListItem.Property(3DOverlay$PARAM[ID]),mono)</visible>
 		</control>
 		<control type="image">
 			<top>13</top>
