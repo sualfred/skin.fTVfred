@@ -1,5 +1,13 @@
 Changelog:
 
+3.1.5
+- Krypton work
+- Added screenshot support to addon info dialog
+- Added 4k corner badge for widgets and views
+- Added delay to pseudo NextUp for TV playback
+- Added and forced poster view for actors videonode
+- Replaced icon and fanart
+
 3.1.4
 - Added pseudo NextUp for Live TV
 - Fixed focus issue in widget group editing dialog
