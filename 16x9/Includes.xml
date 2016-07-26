@@ -415,6 +415,53 @@
 			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y7)</visible>
 		</control>
 	</include>
+	<include name="Rating_TV_FSK">
+		<control type="image">
+			<top>3</top>
+			<width>35</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/0.png</texture>
+			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,0)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>35</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/6.png</texture>
+			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,6) + !String.EndsWith(ListItem.Mpaa,16)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>35</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/12.png</texture>
+			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,12)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>35</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/16.png</texture>
+			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,16)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>35</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/18.png</texture>
+			<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,18)</visible>
+		</control>
+	</include>
 	<!-- TV Episode Ratings -->
 	<include name="Rating_TV_Episodes">
 		<control type="image">
@@ -472,6 +519,61 @@
 			<colordiffuse>ffdadada</colordiffuse>
 			<texture>rating/tv/y7.png</texture>
 			<visible>!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y7)</visible>
+		</control>
+	</include>
+	<include name="Rating_TV_FSK_Episodes">
+		<control type="image">
+			<top>3</top>
+			<width>25</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<texture>rating/tv/14.png</texture>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,14)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>25</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/0.png</texture>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,0)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>25</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/6.png</texture>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,6) + !String.EndsWith(ListItem.Mpaa,16)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>25</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/12.png</texture>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,12)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>25</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/16.png</texture>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,16)</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>25</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>rating/fsk/18.png</texture>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,18)</visible>
 		</control>
 	</include>
 	<!-- Small Keyboard buttons -->

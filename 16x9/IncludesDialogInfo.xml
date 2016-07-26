@@ -191,7 +191,8 @@
 						<label>$VAR[Duration] </label>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
-					<include>Rating_TV</include>
+					<include condition="!String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_TV</include>
+					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_TV_FSK</include>
 					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
