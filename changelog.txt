@@ -1,5 +1,11 @@
 Changelog:
 
+3.1.6
+- Added support for TV show FSK rating
+- Fixed missing episode rating icon in video info dialog
+- Fixed rare Live TV pseudo NextUp issue
+- Code improvements
+
 3.1.5
 - Krypton work
 - Added screenshot support to addon info dialog

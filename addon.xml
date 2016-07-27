@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.5a"
+	version="3.1.6"
 	name="fTV Fred Edition"
 	provider-name="Sualfred (Orignal skin by Hitcher)">
 	<requires>
@@ -31,13 +31,11 @@
         </assets>
 		<news>Changelog:
 
-[B]3.1.5[/B]
-- Krypton work
-- Added screenshot support to addon info dialog
-- Added 4k corner badge for widgets and views
-- Added delay to pseudo NextUp for TV playback
-- Added and forced poster view for actors videonode
-- Replaced icon and fanart
+[B]3.1.6[/B]
+- Added support for TV show FSK rating
+- Fixed missing episode rating icon in video info dialog
+- Fixed rare Live TV pseudo NextUp issue
+- Code improvements
 
 See changelog.txt for more details.</news>
 	</extension>
