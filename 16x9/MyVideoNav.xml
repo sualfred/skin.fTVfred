@@ -392,8 +392,7 @@
 						<label>$INFO[ListItem.Year,,[COLOR 00ffffff]/[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Year)</visible>
 					</control>
-					<include condition="!String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_TV</include>
-					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_TV_FSK</include>
+					<include>Rating_TV</include>
 					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
@@ -563,8 +562,7 @@
 						<label>[COLOR ff707070]$LOCALIZE[31152]: [/COLOR]$INFO[ListItem.Premiered]</label>
 						<visible>!String.IsEmpty(ListItem.Premiered) + !String.IsEqual(System.Language,English)</visible>
 					</control>
-					<include condition="!String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_TV_Episodes</include>
-					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_TV_FSK_Episodes</include>
+					<include>Rating_TV</include>
 					<include>AudioCodec</include>
 				</control>
 				<control type="group">
