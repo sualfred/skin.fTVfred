@@ -9,7 +9,7 @@
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y) + !String.Contains(ListItem.Mpaa,y7)">rating/tv/y.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y7)">rating/tv/y7.png</value>
 	</variable>	
-	<variable name="Rating_TV_FSK">
+	<variable name="Rating_FSK">
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,0)">rating/fsk/0.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,6) + !String.EndsWith(ListItem.Mpaa,16)">rating/fsk/6.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.EndsWith(ListItem.Mpaa,12)">rating/fsk/12.png</value>
