@@ -123,7 +123,7 @@
 						<font>Bold28</font>
 						<textcolor>ffebebeb</textcolor>
 						<label>[B]HD[/B]</label>
-						<visible>Integer.IsGreater(VideoPlayer.VideoResolution,719)</visible>
+						<visible>Integer.IsGreater(VideoPlayer.VideoResolution,710)</visible>
 					</control>
 					<!--  Resolution label -->
 					<control type="label">
@@ -234,7 +234,7 @@
 						<font>Bold28</font>
 						<textcolor>ffebebeb</textcolor>
 						<label>[B]HD[/B]</label>
-						<visible>Integer.IsGreater(VideoPlayer.VideoResolution,719)</visible>
+						<visible>Integer.IsGreater(VideoPlayer.VideoResolution,710)</visible>
 					</control>
 					<!--  Resolution label -->
 					<control type="label">

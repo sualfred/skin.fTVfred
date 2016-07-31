@@ -407,6 +407,11 @@
 			<size>24</size>
 		</font>
 		<font>
+			<name>Bold23</name>
+			<filename>HelveticaNeue_Bold.ttf</filename>
+			<size>23</size>
+		</font>
+		<font>
 			<name>Bold22</name>
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>22</size>
@@ -808,6 +813,11 @@
 			<name>Bold24Num</name>
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>24</size>
+		</font>
+		<font>
+			<name>Bold23</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<size>23</size>
 		</font>
 		<font>
 			<name>Bold22</name>
@@ -1332,6 +1342,13 @@
 			<name>Bold24Num</name>
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>24</size>
+		</font>
+		<font>
+			<name>Bold23</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>bold</style>
+			<size>23</size>
 		</font>
 		<font>
 			<name>Bold22</name>

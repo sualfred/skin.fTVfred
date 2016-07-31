@@ -2381,6 +2381,11 @@
 		<value condition="String.IsEqual(VideoPlayer.VideoResolution,1080)">1080p</value>
 		<value condition="String.IsEqual(VideoPlayer.VideoResolution,4K)">4K</value>
 	</variable>
+	<variable name="ListItemResolution">
+		<value condition="[Integer.IsGreater(ListItem.VideoResolution,710) + !Integer.IsGreater(ListItem.VideoResolution,730)]">720p</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,1080)">1080p</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">4K</value>
+	</variable>
 	<variable name="MoreSettingsInfo">
 		<value condition="Control.HasFocus(9002)">$LOCALIZE[31056]</value>
 		<value condition="Control.HasFocus(9003)">$LOCALIZE[31124]</value>
