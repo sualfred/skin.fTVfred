@@ -13,12 +13,6 @@
 		<!-- Pause -->
 		<control type="group">			
 			<visible>Window.IsVisible(fullscreenvideo) + Player.Paused + !Player.Caching + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
-			<control type="image">
-				<width>1980</width>
-				<height>210</height>
-				<texture border="1">osd/mask_top.png</texture>
-			</control>
-			<include>PlayerTitles</include>
 			<control type="image" id="99">
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
