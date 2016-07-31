@@ -1330,7 +1330,7 @@ msgstr "Hardware Decoding inaktiv"
 #: /16x9/IncludesDialogSettings.xml
 msgctxt "#31297"
 msgid "Media processing info"
-msgstr "Meida Processing Info"
+msgstr "Media Processing Info"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31298"
