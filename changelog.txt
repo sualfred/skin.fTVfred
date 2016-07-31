@@ -1,5 +1,10 @@
 Changelog:
 
+3.1.7
+- Added resolution info flags for videos
+- Added process info dialog
+- Some other minor fixes
+
 3.1.6
 - Added support for TV show FSK rating
 - Fixed missing episode rating icon in video info dialog
