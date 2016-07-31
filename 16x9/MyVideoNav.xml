@@ -415,17 +415,10 @@
 					<include content="Spacer">
 						<param name="visible" value="!String.IsEmpty(ListItem.AudioChannels)" />
 					</include>
-					<!--  Resolution label -->
-					<control type="label">
-						<top>-7</top>
-						<width>auto</width>
-						<height>24</height>
-						<aligny>bottom</aligny>
-						<font>Bold23</font>
-						<textcolor>ffbebebe</textcolor>
-						<label>[B]HD[/B] $VAR[ListItemResolution]  </label>
-						<visible>Integer.IsGreater(ListItem.VideoResolution,710)</visible>
-					</control>
+					<include>ListItemResolution</include>
+					<include content="Spacer">
+						<param name="visible" value="Integer.IsGreater(ListItem.VideoResolution,710)" />
+					</include>
 					<control type="image">
 						<top>2</top>
 						<width>147</width>
@@ -575,17 +568,7 @@
 					</control>
 					<include>Rating_TV</include>
 					<include>AudioCodec</include>
-					<!--  Resolution label -->
-					<control type="label">
-						<top>-7</top>
-						<width>auto</width>
-						<height>24</height>
-						<aligny>bottom</aligny>
-						<font>Bold23</font>
-						<textcolor>ffbebebe</textcolor>
-						<label>[B]HD[/B] $VAR[ListItemResolution]</label>
-						<visible>Integer.IsGreater(ListItem.VideoResolution,710)</visible>
-					</control>
+					<include>ListItemResolution</include>
 				</control>
 				<control type="group">
 					<visible>Container.Content(episodes)</visible>

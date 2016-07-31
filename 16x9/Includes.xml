@@ -190,7 +190,7 @@
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<texture>$VAR[Rating_FSK]</texture>
-			<visible>String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Mpaa)</visible>
+			<visible>String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Mpaa) + $EXP[Rating_FSK]</visible>
 		</control>
 	</include>
 	<!-- MPAA Ratings -->
@@ -317,6 +317,19 @@
 			<aspectratio align="left">keep</aspectratio>
 			<texture>flags/multich.png</texture>
 			<visible>Integer.IsGreater(ListItem.AudioChannels,2) + !String.Contains(ListItem.AudioCodec,ac3) + !String.Contains(ListItem.AudioCodec,truehd) + !String.Contains(ListItem.AudioCodec,dts) + !String.Contains(ListItem.AudioCodec,dca)</visible>
+		</control>
+	</include>
+	<!--  Resolution label -->
+	<include name="ListItemResolution">
+		<control type="label">
+			<top>-7</top>
+			<width>auto</width>
+			<height>24</height>
+			<aligny>bottom</aligny>
+			<font>Bold23</font>
+			<textcolor>ffbebebe</textcolor>
+			<label>[B]HD[/B] $VAR[ListItemResolution]</label>
+			<visible>Integer.IsGreater(ListItem.VideoResolution,710)</visible>
 		</control>
 	</include>
 	<!-- TV Ratings -->
