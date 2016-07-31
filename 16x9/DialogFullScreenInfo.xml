@@ -24,7 +24,7 @@
 		</control>
 		<!--Fullscreen Info-->
 		<control type="group">
-			<visible>!Window.IsActive(videoosd) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsActive(videoosd) + !Window.IsVisible(playerprocessinfo) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 			<control type="image">
 				<width>1980</width>
@@ -133,7 +133,7 @@
 		</control>
 		<!--XRay-->
 		<control type="group">
-			<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(videobookmarks) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
+			<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(playerprocessinfo) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!--Xray Icon-->
 			<control id="99" type="grouplist">
 				<right>92</right>
