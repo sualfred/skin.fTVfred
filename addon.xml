@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.6"
+	version="3.1.7"
 	name="fTV Fred Edition"
 	provider-name="Sualfred (Orignal skin by Hitcher)">
 	<requires>
@@ -31,11 +31,10 @@
         </assets>
 		<news>Changelog:
 
-[B]3.1.6[/B]
-- Added support for TV show FSK rating
-- Fixed missing episode rating icon in video info dialog
-- Fixed rare Live TV pseudo NextUp issue
-- Code improvements
+[B]3.1.7[/B]
+- Added resolution info flags for videos
+- Added process info dialog
+- Some other minor fixes
 
 See changelog.txt for more details.</news>
 	</extension>
