@@ -1360,6 +1360,11 @@ msgctxt "#31309"
 msgid "Live TV NextUp Popup"
 msgstr ""
 
+#: /16x9/Variables.xml
+msgctxt "#31310"
+msgid "Media"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

@@ -182,8 +182,8 @@
 					<icon>settings/icon_addons.png</icon>
 				</item>
 				<item>
-					<onclick>ActivateWindow(LibrarySettings)</onclick>
-					<label>14202</label>
+					<onclick>ActivateWindow(MediaSettings)</onclick>
+					<label>31310</label>
 					<label2>$LOCALIZE[31117]</label2>
 					<icon>settings/icon_library.png</icon>
 				</item>
