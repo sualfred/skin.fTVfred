@@ -864,6 +864,10 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="140" width="558">
+					<control type="button">
+						<include>HiddenControl</include>						
+						<onfocus>ClearProperty(ForceDefaultLayout,home)</onfocus>
+					</control>
 					<control type="image">
 						<width>558</width>
 						<height>140</height>

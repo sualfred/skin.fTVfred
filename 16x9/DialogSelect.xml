@@ -6,7 +6,6 @@
 	<onload condition="!Window.IsVisible(1105) + !String.IsEmpty(Window(home).Property(SetUserRating))">SetFocus(21)</onload>
 	<onunload>ClearProperty(SetUserRating,home)</onunload>
 	<onunload>ClearProperty(UserRatingIcon,home)</onunload>
-	<onunload>ClearProperty(ForceDefaultLayout,home)</onunload>
 	<controls>
 		<include condition="String.IsEmpty(Window(home).Property(SetUserRating))">IncludeDialogSelectDefault</include>
 		<include condition="String.IsEqual(Window(home).Property(SetUserRating),music)" content="IncludeDialogSelectSpecial">

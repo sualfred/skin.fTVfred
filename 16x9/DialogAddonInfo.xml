@@ -3,6 +3,7 @@
 	<!-- addoninformation -->
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<onload condition="!String.Contains(Control.GetLabel(13),*) | String.IsEmpty(Skin.String(AutoUpdate))">Skin.SetString(AutoUpdate,off)</onload>
+	<onload>ClearProperty(ForceDefaultLayout,home)</onload>
 	<onunload>ClearProperty(AddonDetails,home)</onunload>
 	<onunload>SetFocus(50)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-08 09:34+0000\n"
+"PO-Revision-Date: 2016-08-03 07:34+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1393,6 +1393,11 @@ msgstr "Zeigt während der Wiedergabe die nachfolgende Live-TV Sendung als Popup
 msgctxt "#31309"
 msgid "Live TV NextUp Popup"
 msgstr "'Als nächstes' Popup für Live-TV"
+
+#: /16x9/Variables.xml
+msgctxt "#31310"
+msgid "Media"
+msgstr "Medien"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
