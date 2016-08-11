@@ -4874,6 +4874,15 @@
 		<value condition="[!String.IsEmpty(Player.SeekOffset) + !String.Contains(Player.SeekOffset,-)] | [!String.IsEmpty(Player.SeekStepSize) + !String.Contains(Player.SeekStepSize,-)]">osd/step_forward.png</value>
 		<value condition="[!String.IsEmpty(Player.SeekOffset) + String.Contains(Player.SeekOffset,-)] | [!String.IsEmpty(Player.SeekStepSize) + String.Contains(Player.SeekStepSize,-)]">osd/step_back.png</value>
 	</variable>
+	<variable name="SpeedStepIcon">
+		<value condition="String.IsEqual(Player.PlaySpeed,0.80)">osd/rwx32.png</value>
+		<value condition="String.IsEqual(Player.PlaySpeed,0.90)">osd/rwx4.png</value>
+		<value condition="String.IsEqual(Player.PlaySpeed,1.10)">osd/ffx2.png</value>
+		<value condition="String.IsEqual(Player.PlaySpeed,1.20)">osd/ffx4.png</value>
+		<value condition="String.IsEqual(Player.PlaySpeed,1.30)">osd/ffx8.png</value>
+		<value condition="String.IsEqual(Player.PlaySpeed,1.40)">osd/ffx16.png</value>
+		<value condition="String.IsEqual(Player.PlaySpeed,1.50)">osd/ffx32.png</value>
+	</variable>
 	<variable name="NextAiredNextSeasonNumber">
 		<value condition="Container(999).HasFocus(1200)">$INFO[Container(200).ListItem.Property(NextSeasonNumber),S]</value>
 		<value condition="Container(999).HasFocus(1201)">$INFO[Container(201).ListItem.Property(NextSeasonNumber),S]</value>
