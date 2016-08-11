@@ -930,7 +930,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- Speed Up -->
+			<!-- Speed -->
 			<control type="group">
 				<visible>Player.IsTempo</visible>
 				<control type="image">
