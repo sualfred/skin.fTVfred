@@ -686,31 +686,6 @@
 					<shadowcolor>ff000000</shadowcolor>
 					<label>-</label>
 				</control>
-			</control>			
-			<!-- Speed -->
-			<control type="group" id="99">
-				<visible>Player.IsTempo + !Window.IsVisible(videoosd) + !Window.IsVisible(seekbar) + !Window.IsVisible(fullscreeninfo) + !Window.IsVisible(subtitlesearch)</visible>
-				<animation condition="System.IdleTime(2)" reversible="true" type="Conditional">
-					<effect type="fade" start="100" end="0" time="200" />
-				</animation>
-				<control type="image" id="99">
-					<left>97</left>
-					<bottom>120</bottom>
-					<width>80</width>
-					<height>80</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[SpeedStepIcon]</texture>
-				</control>
-				<control type="label" id="99">
-					<left>186</left>
-					<bottom>141</bottom>
-					<width>auto</width>
-					<height>40</height>
-					<align>left</align>
-					<font>Reg20</font>
-					<textcolor>ffe5e4e5</textcolor>
-					<label>$INFO[Player.PlaySpeed,,x]</label>
-				</control>
 			</control>
 		</control>
 	</controls>

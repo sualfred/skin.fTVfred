@@ -26,8 +26,38 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[Window(home).Property(ShowOptions)]</label>
-				<visible>false</visible>
+				<label>Player is able to speed up or down</label>
+				<visible>Player.TempoEnabled</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>Player is not able to speed up or down</label>
+				<visible>!Player.TempoEnabled</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>$INFO[Player.PlaySpeed]</label>
+				<visible>Player.IsTempo</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>Speed is normal</label>
+				<visible>!Player.IsTempo</visible>
 			</control>
 			<!-- FTV labels -->
 			<control type="label">

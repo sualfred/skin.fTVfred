@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.7"
+	version="3.1.8"
 	name="fTV Fred Edition"
-	provider-name="Sualfred (Orignal skin by Hitcher)">
+	provider-name="Sualfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.toolbox" version="1.0.0"/>
@@ -21,8 +21,8 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">Skin based on the Fire TV UI</summary>
-		<disclaimer lang="en">Does not support:[CR]Mouse[CR]Touch[CR]Live TV</disclaimer>
-		<description lang="en">Basic fTV skin (by Hitcher) with nearly full PVR functionality, plus changed a lot of behaviours and added dozens of other features[CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).</description>
+		<disclaimer lang="en">No mouse or touch support</disclaimer>
+		<description lang="en">Fork of Hitcher's fTV skin with nearly full PVR functionality, plus changed a lot of behaviours and added dozens of other features[CR][CR]Skin description: Provides the look and feel of the Fire TV user interface.[CR]For the complete experience enable 'TV Show wide icons' and either use Artwork Downloader to grab logos or create your own artwork and add it to the database (see forum for more details).</description>
 		<assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -31,10 +31,14 @@
         </assets>
 		<news>Changelog:
 
-[B]3.1.7[/B]
-- Added resolution info flags for videos
-- Added process info dialog
-- Some other minor fixes
+[B]3.1.8[/B]
+- Added tempo indicator
+- Added list view for addon screenshots in addon info dialog
+- New notification dialog layout
+- New volumebar dialog layout
+- New extendedprogress dialog layout
+- Fixed ExtendendInfo actor dialog labels
+- Fixed ExtendendInfo video dialog sidemenu
 
 See changelog.txt for more details.</news>
 	</extension>

@@ -1,5 +1,14 @@
 Changelog:
 
+3.1.8
+- Added tempo indicator
+- Added list view for addon screenshots in addon info dialog
+- New notification dialog layout
+- New volumebar dialog layout
+- New extendedprogress dialog layout
+- Fixed ExtendendInfo actor dialog labels
+- Fixed ExtendendInfo video dialog sidemenu
+
 3.1.7
 - Added resolution info flags for videos
 - Added process info dialog

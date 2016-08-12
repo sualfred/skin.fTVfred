@@ -930,28 +930,6 @@
 					</control>
 				</control>
 			</control>
-			<!-- Speed -->
-			<control type="group">
-				<visible>Player.IsTempo</visible>
-				<control type="image">
-					<left>97</left>
-					<bottom>120</bottom>
-					<width>80</width>
-					<height>80</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[SpeedStepIcon]</texture>
-				</control>
-				<control type="label">
-					<left>186</left>
-					<bottom>141</bottom>
-					<width>auto</width>
-					<height>40</height>
-					<align>left</align>
-					<font>Reg20</font>
-					<textcolor>ffe5e4e5</textcolor>
-					<label>$INFO[Player.PlaySpeed,,x]</label>
-				</control>
-			</control>
 		</control>
 	</controls>
 </window>

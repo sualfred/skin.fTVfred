@@ -69,6 +69,11 @@
 			<size>27</size>
 		</font>
 		<font>
+			<name>Reg25</name>
+			<filename>HelveticaNeue.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
 			<name>Reg24</name>
 			<filename>HelveticaNeue.ttf</filename>
 			<size>24</size>
@@ -485,6 +490,11 @@
 			<name>Reg27</name>
 			<filename>Roboto-Regular.ttf</filename>
 			<size>27</size>
+		</font>
+		<font>
+			<name>Reg25</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>25</size>
 		</font>
 		<font>
 			<name>Reg24</name>
@@ -907,6 +917,12 @@
 			<filename>Arial.ttf</filename>
 			<aspect>0.9</aspect>
 			<size>27</size>
+		</font>
+		<font>
+			<name>Reg25</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>25</size>
 		</font>
 		<font>
 			<name>Reg24</name>
