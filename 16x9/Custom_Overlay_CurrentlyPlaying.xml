@@ -46,6 +46,16 @@
 				<height>97</height>
 				<texture>dialogs/notification_play.png</texture>
 				<bordersize>5</bordersize>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="image">
+				<left>63</left>
+				<top>63</top>
+				<width>97</width>
+				<height>97</height>
+				<texture>dialogs/notification_paused.png</texture>
+				<bordersize>5</bordersize>
+				<visible>Player.Paused</visible>
 			</control>
 			<!-- Heading -->
 			<control id="401" type="label">
@@ -56,6 +66,17 @@
 				<font>Med30</font>
 				<label>$LOCALIZE[31106]</label>
 				<textcolor>ffdadada</textcolor>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control id="401" type="label">
+				<left>182</left>
+				<top>70</top>
+				<width>388</width>
+				<height>44</height>
+				<font>Med30</font>
+				<label>$LOCALIZE[112]</label>
+				<textcolor>ffdadada</textcolor>
+				<visible>Player.Paused</visible>
 			</control>
 			<!-- Details -->
 			<control id="402" type="label">
