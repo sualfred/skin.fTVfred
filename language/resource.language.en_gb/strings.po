@@ -1365,6 +1365,16 @@ msgctxt "#31310"
 msgid "Media"
 msgstr ""
 
+#: /16x9/Variables.xml
+msgctxt "#31311"
+msgid "Hides the Now Playing overlay during playback."
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31312"
+msgid "Hide Now Playing overlay"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

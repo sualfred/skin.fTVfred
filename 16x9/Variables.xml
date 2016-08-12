@@ -2325,6 +2325,7 @@
 		<value condition="ControlGroup(9).HasFocus(26)">$LOCALIZE[31289]</value>
 		<value condition="ControlGroup(9).HasFocus(27)">$LOCALIZE[31293]</value>
 		<value condition="ControlGroup(9).HasFocus(28)">$LOCALIZE[31308]</value>
+		<value condition="ControlGroup(9).HasFocus(29)">$LOCALIZE[31311]</value>
 	</variable>
 	<variable name="AlbumArtistName">
 		<value condition="!String.IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>
@@ -4448,6 +4449,12 @@
 		<value condition="String.EndsWith(VideoPlayer.Episode,s397)"> $LOCALIZE[31146], $LOCALIZE[20359] 397</value>
 		<value condition="String.EndsWith(VideoPlayer.Episode,s398)"> $LOCALIZE[31146], $LOCALIZE[20359] 398</value>
 		<value condition="String.EndsWith(VideoPlayer.Episode,s399)"> $LOCALIZE[31146], $LOCALIZE[20359] 399</value>
+	</variable>
+	<variable name="PlayerNotificationLabel">
+		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</value>
+		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="PlayerBigLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>

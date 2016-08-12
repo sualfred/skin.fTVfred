@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-03 07:34+0000\n"
+"PO-Revision-Date: 2016-08-12 15:05+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1398,6 +1398,16 @@ msgstr "'Als nächstes' Popup für Live-TV"
 msgctxt "#31310"
 msgid "Media"
 msgstr "Medien"
+
+#: /16x9/Variables.xml
+msgctxt "#31311"
+msgid "Hides the Now Playing overlay during playback."
+msgstr "Blendet das 'Jetzt läuft' Overlay während einer aktiven WIedergabe aus."
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31312"
+msgid "Hide Now Playing overlay"
+msgstr "Blende 'Jetzt läuft' Overlay aus"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
