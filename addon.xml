@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.8"
+	version="3.1.9"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -31,14 +31,13 @@
         </assets>
 		<news>Changelog:
 
-[B]3.1.8[/B]
-- Added tempo indicator
-- Added list view for addon screenshots in addon info dialog
-- New notification dialog layout
-- New volumebar dialog layout
-- New extendedprogress dialog layout
-- Fixed ExtendendInfo actor dialog labels
-- Fixed ExtendendInfo video dialog sidemenu
+[B]3.1.9[/B]
+- Improved Now Playing overlay layout
+- Improved legibility in visualisation window
+- Added disc art support for music in visualisation window
+- Fixed missing forward and rewinding indicators in visualisation window
+- Fixed broken rewinding indicator
+
 
 See changelog.txt for more details.</news>
 	</extension>

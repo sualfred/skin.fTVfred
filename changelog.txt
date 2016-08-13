@@ -1,5 +1,12 @@
 Changelog:
 
+3.1.9
+- Improved Now Playing overlay layout
+- Improved legibility in visualisation window
+- Added disc art support for music in visualisation window
+- Fixed missing forward and rewinding indicators in visualisation window
+- Fixed broken rewinding indicator
+
 3.1.8
 - Added tempo indicator
 - Added list view for addon screenshots in addon info dialog
