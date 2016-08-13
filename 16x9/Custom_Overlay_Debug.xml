@@ -11,6 +11,7 @@
 			<colordiffuse>88ffffff</colordiffuse>
 			<visible>Skin.HasSetting(DebugGrid)</visible>
 		</control>
+		<!-- Window/Dialog debug -->
 		<control type="grouplist">
 			<left>15</left>
 			<top>15</top>
@@ -18,7 +19,7 @@
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
-			<!--Temp -->
+			<!-- Window labels -->
 			<control type="label">
 				<width>780</width>
 				<height>21</height>
@@ -26,79 +27,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>Player is able to speed up or down</label>
-				<visible>Player.TempoEnabled</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>Player is not able to speed up or down</label>
-				<visible>!Player.TempoEnabled</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>$INFO[Player.PlaySpeed]</label>
-				<visible>Player.IsTempo</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>Speed is normal</label>
-				<visible>!Player.IsTempo</visible>
-			</control>
-			<!-- FTV labels -->
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>Preload Timeout on</label>
-				<visible>!String.IsEmpty(Window(home).Property(PreloadTimeout))</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>WaitForControl on</label>
-				<visible>!String.IsEmpty(Window(home).Property(WaitForControl))</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>Preload true</label>
-				<visible>!String.IsEmpty(Window(home).Property(Preload))</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>PreloadDone true</label>
-				<visible>!String.IsEmpty(Window(home).Property(PreloadDone))</visible>
+				<label>$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</label>
+				<visible>false</visible>
 			</control>
 			<!-- Window labels -->
 			<control type="label">
@@ -168,16 +98,6 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>MyMusicPlaylist.xml</label>
-				<visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
 				<label>MyMusicPlaylistEditor.xml</label>
 				<visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
 			</control>
@@ -200,6 +120,16 @@
 				<align>left</align>
 				<label>MyPics.xml</label>
 				<visible>Window.IsVisible(MyPics.xml)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>MyPlaylist.xml</label>
+				<visible>Window.IsVisible(MyPlaylist.xml)</visible>
 			</control>
 			<control type="label">
 				<width>780</width>
@@ -270,16 +200,6 @@
 				<align>left</align>
 				<label>MyVideoNav.xml</label>
 				<visible>Window.IsVisible(MyVideoNav.xml)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>MyVideoPlaylist.xml</label>
-				<visible>Window.IsVisible(MyVideoPlaylist.xml)</visible>
 			</control>
 			<control type="label">
 				<width>780</width>
@@ -515,6 +435,16 @@
 			<control type="label">
 				<width>780</width>
 				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>PlayerProcessInfo.xml</label>
+				<visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
 				<textcolor>FFFF0000</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -611,16 +541,6 @@
 				<align>left</align>
 				<label>DialogSettings.xml</label>
 				<visible>Window.IsVisible(DialogSettings.xml)</visible>
-			</control>
-			<control type="label">
-				<width>780</width>
-				<height>21</height>
-				<textcolor>FFFF0000</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>left</align>
-				<label>DialogPlayerProcessInfo.xml</label>
-				<visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
 			</control>
 			<control type="label">
 				<width>780</width>
@@ -903,7 +823,7 @@
 				<visible>Window.IsVisible(script-nextup-notification-StillWatchingInfo.xml)</visible>
 			</control>
 		</control>
-		<!-- Controls & codec debug -->
+		<!-- Controls debug -->
 		<control type="grouplist">
 			<right>15</right>
 			<top>15</top>
@@ -951,6 +871,17 @@
 				<font>font13</font>
 				<align>right</align>
 				<label>$INFO[Container.Content,[COLOR FF00FF00]Content - [/COLOR]]</label>
+				<visible>!Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+			</control>
+			<!-- DBTYPE label -->
+			<control type="label">
+				<top>48</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<label>$INFO[ListItem.DBTYPE,[COLOR FF00FF00]DBTYPE - [/COLOR]]</label>
 			</control>
 		</control>
 	</controls>

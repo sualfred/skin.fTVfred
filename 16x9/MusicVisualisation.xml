@@ -47,7 +47,8 @@
 					<font>Med48</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
-					<label>$LOCALIZE[10517]  </label>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$LOCALIZE[31106]  </label>
 				</control>
 				<control type="label">
 					<top>15</top>
@@ -56,6 +57,7 @@
 					<font>Med32</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[MusicPlayer.PlaylistPosition]</label>
 				</control>
 				<control type="label">
@@ -65,6 +67,7 @@
 					<font>Light36</font>
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
 					<label>|</label>
 				</control>
 				<control type="label">
@@ -74,6 +77,7 @@
 					<font>Light32</font>
 					<aligny>bottom</aligny>
 					<textcolor>ff505050</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[MusicPlayer.PlaylistLength]</label>
 				</control>
 			</control>
@@ -85,9 +89,37 @@
 				<height>26</height>
 				<font>Med26</font>
 				<textcolor>ffbebebe</textcolor>
+				<shadowcolor>ff000000</shadowcolor>
 				<label>$INFO[MusicPlayer.Title]</label>
 			</control>
 			<!-- Cover -->
+			<control type="group">
+				<visible>Player.HasAudio + Integer.IsGreater(MusicPlayer.Time,0) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="0,0" end="0,60" tween="sine" easing="out" time="600" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="0"/>
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					<effect type="slide" start="0,60" end="0,0" tween="sine" easing="out" time="700" delay="1000" />
+				</animation>
+				<control type="image">
+					<animation effect="rotate" center="auto" time="6000" end="-360" condition="true" loop="true">Conditional</animation>
+					<left>200</left>
+					<top>772</top>
+					<width>150</width>
+					<height>150</height>
+					<texture diffuse="osd/cd.png">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			<control type="image">
+				<left>150</left>
+				<top>788</top>
+				<width>250</width>
+				<height>250</height>
+				<texture border="48">views/shadow_fo.png</texture>
+			</control>
 			<control type="image">
 				<left>198</left>
 				<top>836</top>
@@ -106,6 +138,7 @@
 					<height>40</height>
 					<font>Med40</font>
 					<textcolor>ffbebebe</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[MusicPlayer.Album]</label>
 				</control>
 				<!-- Artist / Track -->
@@ -115,6 +148,7 @@
 					<height>40</height>
 					<font>Light30</font>
 					<textcolor>ffbebebe</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
 					<label>$VAR[ArtistTrack]</label>
 				</control>
 				<!-- Time / Duration / Shuffle /Repeat -->
@@ -130,6 +164,7 @@
 						<font>Light26</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffdadada</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
 						<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
 					</control>
 					<control type="image">
@@ -154,6 +189,115 @@
 						<visible>String.IsEqual(Playlist.Repeat,$LOCALIZE[592])</visible>
 					</control>
 				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Window.IsVisible(musicosd) + !Player.Paused + [Player.Forwarding | Player.Rewinding]</visible>
+			<control type="image">
+				<width>1980</width>
+				<height>210</height>
+				<texture border="1">osd/mask_top.png</texture>
+			</control>
+			<include>PlayerTitles</include>
+			<control type="image">
+				<bottom>0</bottom>
+				<width>1980</width>
+				<height>120</height>
+				<texture>osd/mask.png</texture>
+			</control>
+			<!--  Cache bar -->
+			<control type="progress">
+				<left>92</left>
+				<bottom>93</bottom>
+				<width>1735</width>
+				<height>11</height>
+				<reveal>true</reveal>
+				<info>Player.ProgressCache</info>
+				<texturebg border="4">osd/progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="4">osd/progress_cache.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<!--  Progress bar -->
+			<control id="10" type="progress">
+				<left>92</left>
+				<bottom>93</bottom>
+				<width>1735</width>
+				<height>11</height>
+				<reveal>true</reveal>
+				<info>Player.Progress</info>
+				<texturebg border="4" colordiffuse="00ffffff">osd/progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="4">osd/progress_bar.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="grouplist">
+				<left>92</left>
+				<bottom>38</bottom>
+				<width>800</width>
+				<height>40</height>
+				<itemgap>4</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<!--  Current position -->
+				<control type="label">
+					<width>auto</width>
+					<height>34</height>
+					<font>Light27</font>
+					<textcolor>fff3f3f3</textcolor>
+					<label>$VAR[PlayerTime]</label>
+				</control>
+				<!--  Divider -->
+				<control type="label">
+					<width>auto</width>
+					<height>34</height>
+					<font>Light27</font>
+					<textcolor>ff696969</textcolor>
+					<label>/</label>
+					<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
+				</control>
+				<!--  Total length -->
+				<control type="label">
+					<width>auto</width>
+					<height>34</height>
+					<font>Light27</font>
+					<textcolor>ff696969</textcolor>
+					<label>$VAR[PlayerDuration]</label>
+				</control>
+				<!--  HD label -->
+				<control type="label">
+					<left>24</left>
+					<top>-2</top>
+					<width>auto</width>
+					<height>34</height>
+					<font>Bold28</font>
+					<textcolor>ffebebeb</textcolor>
+					<label>[B]HD[/B]</label>
+					<visible>Integer.IsGreater(VideoPlayer.VideoResolution,710)</visible>
+				</control>
+				<!--  Resolution label -->
+				<control type="label">
+					<left>2</left>
+					<top>-2</top>
+					<width>auto</width>
+					<height>34</height>
+					<font>Bold29</font>
+					<textcolor>ffebebeb</textcolor>
+					<label>$VAR[PlayerResolution]</label>
+				</control>
+			</control>
+			<!--  Current time -->
+			<control type="label">
+				<right>92</right>
+				<bottom>45</bottom>
+				<width>800</width>
+				<height>30</height>
+				<font>Reg27</font>
+				<align>right</align>
+				<textcolor>fff3f3f3</textcolor>
+				<label>$INFO[System.Time]</label>
 			</control>
 		</control>
 	</controls>

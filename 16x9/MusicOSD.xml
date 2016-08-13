@@ -89,8 +89,8 @@
 				<bottom>26</bottom>
 				<width>800</width>
 				<height>64</height>
-				<onup>SetProperty(ShowOptions,1,home)</onup>
-				<onup>8</onup>
+				<onup condition="!Player.Forwarding + !Player.Rewinding">SetProperty(ShowOptions,1,home)</onup>
+				<onup condition="!Player.Forwarding + !Player.Rewinding">8</onup>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>
@@ -163,6 +163,7 @@
 			</control>
 			<!--Xray Icon-->
 			<control type="grouplist">
+				<visible>!Player.Forwarding + !Player.Rewinding</visible>
 				<right>92</right>
 				<bottom>40</bottom>
 				<height>40</height>

@@ -34,11 +34,11 @@
 		<value condition="Player.Forwarding8x">osd/ffx8.png</value>
 		<value condition="Player.Forwarding16x">osd/ffx16.png</value>
 		<value condition="Player.Forwarding32x">osd/ffx32.png</value>
-		<value condition="Player.Rewinding2x">osd/fwx2.png</value>
-		<value condition="Player.Rewinding4x">osd/fwx4.png</value>
-		<value condition="Player.Rewinding8x">osd/fwx8.png</value>
-		<value condition="Player.Rewinding16x">osd/ffw16.png</value>
-		<value condition="Player.Rewinding32x">osd/ffw32.png</value>
+		<value condition="Player.Rewinding2x">osd/rwx2.png</value>
+		<value condition="Player.Rewinding4x">osd/rwx4.png</value>
+		<value condition="Player.Rewinding8x">osd/rwx8.png</value>
+		<value condition="Player.Rewinding16x">osd/rwx16.png</value>
+		<value condition="Player.Rewinding32x">osd/rwx32.png</value>
 	</variable>
 	<variable name="videohwdecoder">
 		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[31295]</value>
@@ -4449,12 +4449,6 @@
 		<value condition="String.EndsWith(VideoPlayer.Episode,s397)"> $LOCALIZE[31146], $LOCALIZE[20359] 397</value>
 		<value condition="String.EndsWith(VideoPlayer.Episode,s398)"> $LOCALIZE[31146], $LOCALIZE[20359] 398</value>
 		<value condition="String.EndsWith(VideoPlayer.Episode,s399)"> $LOCALIZE[31146], $LOCALIZE[20359] 399</value>
-	</variable>
-	<variable name="PlayerNotificationLabel">
-		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</value>
-		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="PlayerBigLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>

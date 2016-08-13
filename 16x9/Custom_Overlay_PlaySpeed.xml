@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111" type="dialog">
 	<zorder>100</zorder>
-	<visible>VideoPlayer.IsFullscreen + Player.IsTempo</visible>
+	<visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.IsTempo</visible>
 	<controls>
 		<!-- Tempo -->
 		<control id="2" type="group">

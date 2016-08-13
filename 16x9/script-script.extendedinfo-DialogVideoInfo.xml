@@ -44,7 +44,7 @@
 			<width>1192</width>
 			<height>126</height>
 			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
+			<orientation>vertical</orientation>			
 		</control>
 		<!-- Background -->
 		<control type="image">
