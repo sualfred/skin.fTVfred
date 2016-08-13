@@ -9,18 +9,18 @@
 		<!--Xray Control -->
 		<control type="button" id="101">
 			<include>HiddenControl</include>
-			<onleft condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onleft>
-			<onleft condition="!Window.IsVisible(1108) + String.IsEqual(Container(100).CurrentItem,1)">SetProperty(BounceLeft,1,Home)</onleft>
-			<onright condition="!String.IsEqual(Container(100).Position,3)">Control.Move(100,1)</onright>
-			<onright condition="!Window.IsVisible(1103) + String.IsEqual(Container(100).Position,3)">SetProperty(BounceRight,1,Home)</onright>
+			<onleft condition="!String.IsEqual(Container(100).CurrentItem,1) + !Player.Rewinding + !Player.Forwarding">Control.Move(100,-1)</onleft>
+			<onleft condition="!Window.IsVisible(1108) + String.IsEqual(Container(100).CurrentItem,1) + !Player.Rewinding + !Player.Forwarding">SetProperty(BounceLeft,1,Home)</onleft>
+			<onright condition="!String.IsEqual(Container(100).Position,3) + !Player.Rewinding + !Player.Forwarding">Control.Move(100,1)</onright>
+			<onright condition="!Window.IsVisible(1103) + String.IsEqual(Container(100).Position,3) + !Player.Rewinding + !Player.Forwarding">SetProperty(BounceRight,1,Home)</onright>
 			<ondown>close</ondown>
-			<onclick>SetProperty(ShowOptions,1,home)</onclick>
-			<onclick>Dialog.Close(fullscreeninfo,true)</onclick>
-			<onclick>ActivateWindow(VideoOSD)</onclick>
-			<onup condition="Integer.IsGreater(Container(100).NumItems,0)">SetProperty(ShowXRay,true,home)</onup>
-			<onup condition="Integer.IsGreater(Container(100).NumItems,0)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(100).ListItem.Label])</onup>
-			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber) + VideoPlayer.Content(movies)">SetProperty(ShowXRay,true,home)</ondown>
-			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber) + VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</ondown>
+			<onclick condition="!Player.Rewinding + !Player.Forwarding">SetProperty(ShowOptions,1,home)</onclick>
+			<onclick condition="!Player.Rewinding + !Player.Forwarding">Dialog.Close(fullscreeninfo,true)</onclick>
+			<onclick condition="!Player.Rewinding + !Player.Forwarding">ActivateWindow(VideoOSD)</onclick>
+			<onup condition="Integer.IsGreater(Container(100).NumItems,0) + !Player.Rewinding + !Player.Forwarding">SetProperty(ShowXRay,true,home)</onup>
+			<onup condition="Integer.IsGreater(Container(100).NumItems,0) + !Player.Rewinding + !Player.Forwarding">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(100).ListItem.Label])</onup>
+			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber) + VideoPlayer.Content(movies) + !Player.Rewinding + !Player.Forwarding">SetProperty(ShowXRay,true,home)</ondown>
+			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber) + VideoPlayer.Content(movies) + !Player.Rewinding + !Player.Forwarding">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</ondown>
 		</control>
 		<!--Fullscreen Info-->
 		<control type="group">
@@ -136,6 +136,7 @@
 			<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(playerprocessinfo) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!--Xray Icon-->
 			<control id="99" type="grouplist">
+				<visible>!Player.Rewinding + !Player.Forwarding</visible>
 				<right>92</right>
 				<bottom>40</bottom>
 				<height>40</height>
@@ -189,7 +190,7 @@
 			</control>
 			<!--Cast-->
 			<control type="group">
-				<animation effect="fade" time="0" start="100" end="0" condition="Container(100).IsUpdating">Conditional</animation>
+				<animation effect="fade" time="0" start="100" end="0" condition="Container(100).IsUpdating | Player.Rewinding | Player.Forwarding">Conditional</animation>
 				<visible>String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 				<control id="100" type="fixedlist">
 					<width>1920</width>
