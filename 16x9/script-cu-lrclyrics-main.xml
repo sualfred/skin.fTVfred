@@ -28,6 +28,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>Med26</font>
 						<textcolor>ffbebebe</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1524"  height="54">
@@ -37,6 +38,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>Med26</font>
 						<textcolor>ffffc24b</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
 					</control>
 				</focusedlayout>
 			</control>
