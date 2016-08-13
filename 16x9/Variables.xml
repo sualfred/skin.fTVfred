@@ -286,15 +286,6 @@
 		<value condition="String.EndsWith(ListItem.Label2,1&#x25;)">views/percentage/001.png</value>
 		<value condition="String.EndsWith(ListItem.Label2,0&#x25;)">views/percentage/000.png</value>
 	</variable>
-	<!-- Vis Animation -->
-	<variable name="VisAnimation">
-		<value condition="Skin.HasSetting(VisAnimation)">$LOCALIZE[16041]</value>
-		<value>$LOCALIZE[351]</value>
-	</variable>
-	<variable name="VisCrossfade">
-		<value condition="Skin.HasSetting(VisCrossfade)">$LOCALIZE[16041]</value>
-		<value>$LOCALIZE[351]</value>
-	</variable>
 	<!-- Random music label -->
 	<variable name="RandomLabel">
 		<value condition="String.IsEqual(Playlist.Random,$LOCALIZE[590])">$LOCALIZE[16041]</value>

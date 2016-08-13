@@ -2,8 +2,7 @@
 <window>
 	<!-- visualisation -->
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol>-</defaultcontrol>
-	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
+	<defaultcontrol>-</defaultcontrol>	
 	<controls>
 		<!-- Visualisation -->
 		<control id="2" type="visualisation">
@@ -15,9 +14,9 @@
 			<include>FullscreenDimensions</include>
 			<fadetime>400</fadetime>
 			<colordiffuse>26ffffff</colordiffuse>
-			<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + [!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)]</visible>
-			<texture fallback="special://skin/extras/backgrounds/music_visualiser.jpg" background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<texture fallback="special://skin/extras/backgrounds/music_visualiser.jpg" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Fanart)]</texture>
 			<include>VisAnimation</include>
+			<visible>!Skin.HasSetting(VisFanartDisabled) + [!Skin.HasSetting(VisRandomFanart) | String.IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt))]</visible>
 		</control>
 		<!-- Artist slideshow -->
 		<control type="multiimage">
@@ -27,9 +26,9 @@
 			<aspectratio>scale</aspectratio>
 			<timeperimage>10000</timeperimage>
 			<colordiffuse>26ffffff</colordiffuse>
-			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt)]</imagepath>
 			<include>VisAnimation</include>
-			<visible>!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)</visible>
+			<visible>Skin.HasSetting(VisRandomFanart) + !Skin.HasSetting(VisFanartDisabled)</visible>
 		</control>
 		<control type="group">
 			<visible>!Window.IsActive(seekbar) + !Window.IsActive(musicosd) + Player.ShowInfo</visible>

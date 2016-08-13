@@ -62,8 +62,6 @@
 		<disabledcolor>DisabledColor</disabledcolor>
 		<radiowidth>100</radiowidth>
 		<radioheight>58</radioheight>
-		<radiowidth />
-		<radioheight />
 		<textureradioonfocus>-</textureradioonfocus>
 		<textureradioonnofocus>-</textureradioonnofocus>
 		<textureradioofffocus>-</textureradioofffocus>

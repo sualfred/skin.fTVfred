@@ -17,14 +17,14 @@
 				<width>1920</width>
 				<height>720</height>
 				<texture border="1">osd/mask_bottom.png</texture>
-				<visible>!String.IsEmpty(Window(home).Property(ShowOptions)) + ![Player.Forwarding | Player.Rewinding]</visible>
+				<visible>!String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(1000).HasFocus + ![Player.Forwarding | Player.Rewinding]</visible>
 			</control>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1980</width>
 				<height>120</height>
 				<texture>osd/mask.png</texture>
-				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | [Player.Forwarding | Player.Rewinding]</visible>
+				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(1000).HasFocus | [Player.Forwarding | Player.Rewinding]</visible>
 			</control>			
 			<include>PlayerTitles</include>		
 			<!-- Pause -->
@@ -90,7 +90,7 @@
 				<width>800</width>
 				<height>64</height>
 				<onup condition="!Player.Forwarding + !Player.Rewinding">SetProperty(ShowOptions,1,home)</onup>
-				<onup condition="!Player.Forwarding + !Player.Rewinding">8</onup>
+				<onup condition="!Player.Forwarding + !Player.Rewinding">201</onup>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>
@@ -200,96 +200,7 @@
 			</control>
 			<!-- Options -->
 			<control type="group">
-				<visible allowhiddenfocus="true">!Player.Forwarding + !Player.Rewinding + !String.IsEmpty(Window(home).Property(ShowOptions))</visible>
-				<!-- Left Options -->
-				<control id="100" type="grouplist">
-					<left>92</left>
-					<bottom>128</bottom>
-					<width>600</width>
-					<height>600</height>
-					<align>right</align>
-					<itemgap>0</itemgap>
-					<onleft>noop</onleft>
-					<onright>200</onright>
-					<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
-					<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
-					<ondown>ClearProperty(ShowOptions,home)</ondown>
-					<orientation>vertical</orientation>
-					<!-- Visualisation -->
-					<control type="button" id="500">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>left</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>12006</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-					</control>
-					<!-- Visualisation presets list -->
-					<control type="button" id="12">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>left</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[31047]</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>ActivateWindow(122)</onclick>
-						<visible>Visualisation.Enabled</visible>
-					</control>
-					<!-- Visualisation settings -->
-					<control type="button" id="11">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>left</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-						<visible>Visualisation.Enabled</visible>
-					</control>
-					<!-- Pan Zoom -->
-					<control type="togglebutton" id="102">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>left</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[31141]$VAR[VisCrossfade, : ]</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>Skin.ToggleSetting(VisCrossfade)</onclick>
-						<visible>Visualisation.Enabled</visible>
-					</control>
-					<!-- Pan Zoom -->
-					<control type="togglebutton" id="101">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>left</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[31102]$VAR[VisAnimation, : ]</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>Skin.ToggleSetting(VisAnimation)</onclick>
-						<visible>!Visualisation.Enabled | Skin.HasSetting(VisCrossfade)</visible>
-					</control>
-				</control>
-				<!-- Right Options -->			
+				<visible allowhiddenfocus="true">!Player.Forwarding + !Player.Rewinding + !String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(1000).HasFocus</visible>		
 				<control id="200" type="grouplist">
 					<right>92</right>
 					<bottom>128</bottom>
@@ -297,7 +208,7 @@
 					<height>600</height>
 					<align>right</align>
 					<itemgap>0</itemgap>
-					<onleft>100</onleft>
+					<onleft>noop</onleft>
 					<onright>noop</onright>
 					<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
 					<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
@@ -334,6 +245,20 @@
 						<onclick>Close</onclick>
 						<onclick>ActivateWindow(MusicPlaylist)</onclick>
 					</control>
+					<!-- Visualisation Options -->
+					<control type="button" id="202">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>right</align>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<label>$LOCALIZE[250]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>SetFocus(1100)</onclick>
+					</control>
 					<!-- Repeat -->
 					<control type="button" id="7">
 						<align>right</align>
@@ -362,6 +287,7 @@
 						<texturenofocus>-</texturenofocus>
 						<onclick>PlayerControl(Random)</onclick>
 					</control>
+					<!-- User rating -->
 					<control type="button" id="201">
 						<width>600</width>
 						<height>58</height>
@@ -375,6 +301,168 @@
 						<texturenofocus>-</texturenofocus>
 						<onclick>SetProperty(SetUserRating,music,home)</onclick>
 						<onclick>setrating</onclick>
+					</control>
+				</control>
+			</control>
+			<!-- Fanart Options -->
+			<control id="1000" type="group" >
+				<visible allowhiddenfocus="true">ControlGroup(1000).HasFocus</visible>
+				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(selectdialog)">Conditional</animation>
+				<top>635</top>
+				<!-- Background -->
+				<control type="image">
+					<bottom>120</bottom>
+					<width>1920</width>
+					<height>265</height>
+					<texture>osd/mask.png</texture>
+				</control>
+				<!-- Left Grouplist -->
+				<control type="group">
+					<bottom>0</bottom>
+					<height>368</height>
+					<control type="label">
+						<left>92</left>
+						<height>36</height>
+						<font>Bold30</font>
+						<label>$LOCALIZE[250]</label>
+						<textcolor>ffdadada</textcolor>
+					</control>
+					<control type="grouplist" id="1100">
+						<left>81</left>
+						<bottom>0</bottom>
+						<height>320</height>
+						<width>805</width>
+						<itemgap>10</itemgap>
+						<onleft>SetFocus(202)</onleft>
+						<onback>SetFocus(20)</onback>
+						<onright>SetFocus(1200)</onright>
+						<onup>noop</onup>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(400)</ondown>
+						<ondown>ClearProperty(ShowOptions,home)</ondown>
+						<orientation>vertical</orientation>
+						<scrolltime tween="sine" easing="out">240</scrolltime>
+						<control id="1101" type="button">
+							<width>300</width>
+							<height>58</height>
+							<font>Reg22</font>
+							<textoffsetx>34</textoffsetx>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
+							<label>$LOCALIZE[21417]</label>
+							<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+							<onback>SetFocus(202)</onback>
+							<enable>Visualisation.Enabled</enable>
+						</control>
+						<control id="1102" type="button">
+							<width>300</width>
+							<height>58</height>
+							<font>Reg22</font>
+							<label>$LOCALIZE[31047]</label>
+							<textoffsetx>34</textoffsetx>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
+							<onclick>ActivateWindow(122)</onclick>
+							<onback>SetFocus(202)</onback>
+							<enable>Visualisation.Enabled</enable>
+						</control>
+						<control id="500" type="button">
+							<width>300</width>
+							<height>58</height>
+							<font>Reg22</font>
+							<label>$LOCALIZE[12006]</label>
+							<textoffsetx>34</textoffsetx>
+							<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+							<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>							
+							<onback>SetFocus(202)</onback>
+						</control>
+					</control>
+				</control>
+				<!-- Right Grouplist -->
+				<control type="group">
+					<bottom>130</bottom>
+					<right>92</right>
+					<width>298</width>
+					<height>140</height>
+					<control type="label">
+						<height>36</height>
+						<font>Bold30</font>
+						<label>Fanart options</label>
+						<textcolor>ffdadada</textcolor>
+					</control>
+					<control type="grouplist" id="1200">
+						<width>298</width>
+						<bottom>0</bottom>
+						<height>90</height>
+						<itemgap>14</itemgap>
+						<onback>SetFocus(202)</onback>
+						<onright>SetFocus(202)</onright>
+						<onleft>SetFocus(1100)</onleft>
+						<onup>noop</onup>
+						<ondown condition="!Skin.HasSetting(HideOSDControls)">SetFocus(304)</ondown>
+						<ondown condition="Skin.HasSetting(HideOSDControls)">SetFocus(400)</ondown>
+						<ondown>ClearProperty(ShowOptions,home)</ondown>
+						<orientation>horizontal</orientation>
+						<scrolltime tween="sine" easing="out">240</scrolltime>
+						<control type="togglebutton" id="1201">
+							<width>90</width>
+							<height>90</height>
+							<font>Reg22</font>
+							<textoffsetx>5</textoffsetx>
+							<align>center</align>
+							<texturefocus>common/ghost_button_nf.png</texturefocus>
+							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
+							<alttexturefocus>common/ghost_button_nf.png</alttexturefocus>
+							<alttexturenofocus>common/ghost_button_nf.png</alttexturenofocus>
+							<usealttexture>Skin.HasSetting(VisFanartDisabled)</usealttexture>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$LOCALIZE[16041]</label>
+							<altlabel>$LOCALIZE[351]</altlabel>
+							<focusedcolor>ffffaf37</focusedcolor>
+							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>Skin.ToggleSetting(VisFanartDisabled)</onclick>
+							<onback>SetFocus(202)</onback>
+						</control>
+						<control type="togglebutton" id="1202">
+							<width>90</width>
+							<height>90</height>
+							<font>Reg22</font>
+							<textoffsetx>5</textoffsetx>
+							<align>center</align>
+							<texturefocus>common/ghost_button_nf.png</texturefocus>
+							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
+							<alttexturefocus>common/ghost_button_nf.png</alttexturefocus>
+							<alttexturenofocus>common/ghost_button_nf.png</alttexturenofocus>
+							<usealttexture>Skin.HasSetting(VisRandomFanart)</usealttexture>
+							<wrapmultiline>true</wrapmultiline>
+							<label>Multi[CR]$LOCALIZE[351]</label>
+							<altlabel>Multi[CR]$LOCALIZE[16041]</altlabel>
+							<focusedcolor>ffffaf37</focusedcolor>
+							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>Skin.ToggleSetting(VisRandomFanart)</onclick>
+							<onback>SetFocus(202)</onback>
+							<enable>!Skin.HasSetting(VisFanartDisabled)</enable>
+						</control>
+						<control type="togglebutton" id="1203">
+							<width>90</width>
+							<height>90</height>
+							<font>Reg22</font>
+							<textoffsetx>5</textoffsetx>
+							<align>center</align>
+							<texturefocus>common/ghost_button_nf.png</texturefocus>
+							<texturenofocus>common/ghost_button_nf.png</texturenofocus>
+							<alttexturefocus>common/ghost_button_nf.png</alttexturefocus>
+							<alttexturenofocus>common/ghost_button_nf.png</alttexturenofocus>
+							<usealttexture>Skin.HasSetting(VisAnimation)</usealttexture>
+							<wrapmultiline>true</wrapmultiline>
+							<label>Zoom[CR]$LOCALIZE[351]</label>
+							<altlabel>Zoom[CR]$LOCALIZE[16041]</altlabel>
+							<focusedcolor>ffffaf37</focusedcolor>
+							<disabledcolor>44ffffff</disabledcolor>
+							<onclick>Skin.ToggleSetting(VisAnimation)</onclick>
+							<onback>SetFocus(202)</onback>
+							<enable>!Skin.HasSetting(VisFanartDisabled)</enable>
+						</control>
 					</control>
 				</control>
 			</control>

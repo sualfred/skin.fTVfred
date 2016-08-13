@@ -19,7 +19,7 @@
 			<height>450</height>
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(DebugInfo)</visible>
-			<!-- Window labels -->
+			<!-- Temp labels -->
 			<control type="label">
 				<width>780</width>
 				<height>21</height>
@@ -27,8 +27,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</label>
-				<visible>false</visible>
+				<label>$INFO[Window(Home).Property(SkinHelper.Player.Music.Info)]</label>
+				<visible>False</visible>
 			</control>
 			<!-- Window labels -->
 			<control type="label">
