@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.1.10"
+	version="3.1.10b"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,11 +34,13 @@
         </assets>
 		<news>Changelog:
 
-[B]3.1.10[/B]
+[B]3.1.10b[/B]
 - Added user rating to visualisation
 - Reworked music OSD menus
 - Fixed equaliser.gif for albums
 - Replaced artist slideshow script with skin helper service
+- Fixed music playlist window issues
+- Fixed broken addon screenshots
 
 See changelog.txt for more details.</news>
 	</extension>
