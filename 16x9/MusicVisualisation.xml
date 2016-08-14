@@ -48,35 +48,38 @@
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$LOCALIZE[31106]  </label>
 				</control>
-				<control type="label">
-					<top>15</top>
-					<width>auto</width>
-					<height>60</height>
-					<font>Med32</font>
-					<aligny>bottom</aligny>
-					<textcolor>ffdadada</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[MusicPlayer.PlaylistPosition]</label>
-				</control>
-				<control type="label">
-					<top>14</top>
-					<width>auto</width>
-					<height>60</height>
-					<font>Light36</font>
-					<aligny>bottom</aligny>
-					<textcolor>ff505050</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>|</label>
-				</control>
-				<control type="label">
-					<top>15</top>
-					<width>auto</width>
-					<height>60</height>
-					<font>Light32</font>
-					<aligny>bottom</aligny>
-					<textcolor>ff505050</textcolor>
-					<shadowcolor>ff000000</shadowcolor>
-					<label>$INFO[MusicPlayer.PlaylistLength]</label>
+				<control type="group">
+					<visible>Integer.IsGreater(MusicPlayer.PlaylistLength,1)</visible>
+					<control type="label">
+						<top>15</top>
+						<width>auto</width>
+						<height>60</height>
+						<font>Med32</font>
+						<aligny>bottom</aligny>
+						<textcolor>ffdadada</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>$INFO[MusicPlayer.PlaylistPosition]</label>
+					</control>
+					<control type="label">
+						<top>14</top>
+						<width>auto</width>
+						<height>60</height>
+						<font>Light36</font>
+						<aligny>bottom</aligny>
+						<textcolor>ff505050</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>|</label>
+					</control>
+					<control type="label">
+						<top>15</top>
+						<width>auto</width>
+						<height>60</height>
+						<font>Light32</font>
+						<aligny>bottom</aligny>
+						<textcolor>ff505050</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>$INFO[MusicPlayer.PlaylistLength]</label>
+					</control>
 				</control>
 			</control>
 			<!-- Title -->
