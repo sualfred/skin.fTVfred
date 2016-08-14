@@ -306,7 +306,7 @@
 			</control>
 			<!-- Fanart Options -->
 			<control id="1000" type="group" >
-				<visible allowhiddenfocus="true">ControlGroup(1000).HasFocus</visible>
+				<visible allowhiddenfocus="true">ControlGroup(1000).HasFocus + !Player.Rewinding + !Player.Forwarding</visible>
 				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(selectdialog)">Conditional</animation>
 				<top>635</top>
 				<!-- Background -->
@@ -387,7 +387,7 @@
 					<control type="label">
 						<height>36</height>
 						<font>Bold30</font>
-						<label>Fanart options</label>
+						<label>$LOCALIZE[31313]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
 					<control type="grouplist" id="1200">

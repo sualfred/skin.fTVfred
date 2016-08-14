@@ -434,7 +434,7 @@
 						<width>62</width>
 						<height>62</height>
 						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums) + !String.IsEmpty(ListItem.Album) + !String.IsEmpty(MusicPlayer.Album)</visible>
 					</control>
 					<include>OverlayHD</include>
 					<include>OverlayWatched</include>
@@ -451,7 +451,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums) + !String.IsEmpty(ListItem.Album) + !String.IsEmpty(MusicPlayer.Album)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -463,7 +463,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + [!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + [!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums) | String.IsEmpty(ListItem.Album) | String.IsEmpty(MusicPlayer.Album)]</visible>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -677,7 +677,7 @@
 						<width>62</width>
 						<height>62</height>
 						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums) + !String.IsEmpty(ListItem.Album) + !String.IsEmpty(MusicPlayer.Album)</visible>
 					</control>
 					<control type="label">
 						<left>98</left>
@@ -689,7 +689,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Album,ListItem.Album) + Container.Content(albums) + !String.IsEmpty(ListItem.Album) + !String.IsEmpty(MusicPlayer.Album)</visible>
 					</control>
 					<control type="label">
 						<left>18</left>
@@ -701,7 +701,7 @@
 						<textcolor>ffffffff</textcolor>
 						<shadowcolor>88000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + [!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums)]</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + [!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Album) | !Container.Content(albums) |  String.IsEmpty(ListItem.Album) | String.IsEmpty(MusicPlayer.Album)]</visible>
 					</control>
 					<control type="image">
 						<top>48</top>

@@ -18,7 +18,6 @@
 			<include>VisAnimation</include>
 			<visible>!Skin.HasSetting(VisFanartDisabled) + [!Skin.HasSetting(VisRandomFanart) | String.IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt))]</visible>
 		</control>
-		<!-- Artist slideshow -->
 		<control type="multiimage">
 			<include>FullscreenDimensions</include>
 			<fadetime>400</fadetime>
@@ -189,7 +188,37 @@
 					</control>
 				</control>
 			</control>
+			<!-- Star rating / Rating -->
+			<control type="grouplist">
+				<visible>!String.IsEmpty(MusicPlayer.UserRating)</visible>
+				<right>198</right>
+				<width>222</width>
+				<top>155</top>
+				<height>26</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+				<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
+				<control type="image">
+					<top>2</top>
+					<width>147</width>
+					<height>24</height>
+					<texture>$INFO[MusicPlayer.UserRating,rating/rating,.png]</texture>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>26</height>
+					<font>Med26</font>
+					<aligny>bottom</aligny>
+					<textcolor>ffbebebe</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$INFO[MusicPlayer.UserRating,,/10]</label>
+				</control>
+			</control>
 		</control>
+		<!-- Progress -->
 		<control type="group">
 			<visible>!Window.IsVisible(musicosd) + !Player.Paused + [Player.Forwarding | Player.Rewinding]</visible>
 			<control type="image">
@@ -204,7 +233,7 @@
 				<height>120</height>
 				<texture>osd/mask.png</texture>
 			</control>
-			<!--  Cache bar -->
+			<!-- Cache bar -->
 			<control type="progress">
 				<left>92</left>
 				<bottom>93</bottom>
@@ -218,8 +247,8 @@
 				<righttexture>-</righttexture>
 				<overlaytexture>-</overlaytexture>
 			</control>
-			<!--  Progress bar -->
-			<control id="10" type="progress">
+			<!-- Progress bar -->
+			<control type="progress">
 				<left>92</left>
 				<bottom>93</bottom>
 				<width>1735</width>
@@ -240,7 +269,7 @@
 				<itemgap>4</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
-				<!--  Current position -->
+				<!-- Current position -->
 				<control type="label">
 					<width>auto</width>
 					<height>34</height>
@@ -248,7 +277,7 @@
 					<textcolor>fff3f3f3</textcolor>
 					<label>$VAR[PlayerTime]</label>
 				</control>
-				<!--  Divider -->
+				<!-- Divider -->
 				<control type="label">
 					<width>auto</width>
 					<height>34</height>
@@ -257,7 +286,7 @@
 					<label>/</label>
 					<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
 				</control>
-				<!--  Total length -->
+				<!-- Total length -->
 				<control type="label">
 					<width>auto</width>
 					<height>34</height>
@@ -265,29 +294,8 @@
 					<textcolor>ff696969</textcolor>
 					<label>$VAR[PlayerDuration]</label>
 				</control>
-				<!--  HD label -->
-				<control type="label">
-					<left>24</left>
-					<top>-2</top>
-					<width>auto</width>
-					<height>34</height>
-					<font>Bold28</font>
-					<textcolor>ffebebeb</textcolor>
-					<label>[B]HD[/B]</label>
-					<visible>Integer.IsGreater(VideoPlayer.VideoResolution,710)</visible>
-				</control>
-				<!--  Resolution label -->
-				<control type="label">
-					<left>2</left>
-					<top>-2</top>
-					<width>auto</width>
-					<height>34</height>
-					<font>Bold29</font>
-					<textcolor>ffebebeb</textcolor>
-					<label>$VAR[PlayerResolution]</label>
-				</control>
 			</control>
-			<!--  Current time -->
+			<!-- Current time -->
 			<control type="label">
 				<right>92</right>
 				<bottom>45</bottom>

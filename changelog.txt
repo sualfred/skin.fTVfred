@@ -1,5 +1,11 @@
 Changelog:
 
+3.1.10
+- Added user rating to visualisation
+- Reworked music OSD menus
+- Fixed equaliser.gif for albums
+- Replaced artist slideshow script with skin helper service
+
 3.1.9
 - Improved Now Playing overlay layout
 - Improved legibility in visualisation window
