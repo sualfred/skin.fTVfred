@@ -243,6 +243,7 @@
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onclick>Close</onclick>
+						<onclick condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Close</onclick>
 						<onclick>ActivateWindow(MusicPlaylist)</onclick>
 					</control>
 					<!-- Visualisation Options -->

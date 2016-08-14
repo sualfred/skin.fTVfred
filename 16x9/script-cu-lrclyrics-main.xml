@@ -4,13 +4,14 @@
 	<visible>Window.IsActive(Visualisation) + Player.HasAudio + !Player.IsInternetStream + !Window.IsVisible(musicplaylist)</visible>
 	<onload condition="Window.IsVisible(MusicOSD)">Dialog.Close(MusicOSD)</onload>
 	<onload condition="Player.IsInternetStream">Dialog.Close</onload>
+	<onunload condition="Window.IsVisible(musicplaylist)">SetFocus(50)</onunload>
 	<controls>
 		<control type="group">
 			<visible>!Player.IsInternetStream + !Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(musicosd) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(favourites)</visible>
 			<visible>Control.IsVisible(110) + ![Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 			<!-- ** Required ** Do not change <id> or <type> -->
 			<control type="list" id="110">
-				<visible>Window.IsActive(Visualisation) + Player.HasAudio</visible>				
+				<visible>Window.IsActive(Visualisation) + Player.HasAudio + !Window.IsVisible(musicplaylist)</visible>				
 				<top>310</top>
 				<left>198</left>
 				<width>1524</width>
