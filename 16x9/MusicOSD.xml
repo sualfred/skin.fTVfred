@@ -245,6 +245,7 @@
 						<onclick>Close</onclick>
 						<onclick condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Close</onclick>
 						<onclick>ActivateWindow(MusicPlaylist)</onclick>
+						<visible>Integer.IsGreater(MusicPlayer.PlaylistLength,1)</visible>
 					</control>
 					<!-- Visualisation Options -->
 					<control type="button" id="202">

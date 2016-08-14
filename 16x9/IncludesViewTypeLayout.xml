@@ -1676,7 +1676,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true" fallback="common/missing_image_cover.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -1710,7 +1710,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title) + !String.IsEmpty(ListItem.Title)</visible>
 					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 				</control>
 				<control type="label">
@@ -1723,7 +1723,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!String.IsEqual(ListItem.Label,..) + [[Player.HasAudio + !Player.Playing] | !String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title) + [[Player.HasAudio + !Player.Playing] | !String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
 					<animation condition="!String.IsEmpty(ListItem.Artist)" effect="slide" end="0,-36" start="0,0">Conditional</animation>
 				</control>
 				<control type="label">
@@ -1767,7 +1767,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true" fallback="common/missing_image_cover.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -1800,7 +1800,7 @@
 					<width>62</width>
 					<height>62</height>
 					<texture>views/playlist_play.png</texture>
-					<visible>!String.IsEqual(MusicPlayer.Title,ListItem.Title) | [!Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+					<visible>[!String.IsEqual(MusicPlayer.Title,ListItem.Title) | [!Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]] + !String.IsEmpty(ListItem.Title)</visible>
 					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" reversible="false" start="100" time="0" tween="sine">UnFocus</animation>
 				</control>
 				<control type="label">
