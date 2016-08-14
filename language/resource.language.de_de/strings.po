@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-12 15:05+0000\n"
+"PO-Revision-Date: 2016-08-14 07:46+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1408,6 +1408,11 @@ msgstr "Blendet das 'Jetzt läuft' Overlay während einer aktiven WIedergabe aus
 msgctxt "#31312"
 msgid "Hide Now Playing overlay"
 msgstr "Blende 'Jetzt läuft' Overlay aus"
+
+#: /16x9/MusicOSD.xml
+msgctxt "#31313"
+msgid "Fanart options"
+msgstr "Fanart Optionen"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

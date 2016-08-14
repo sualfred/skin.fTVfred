@@ -28,6 +28,9 @@
             <fanart>fanart.jpg</fanart>
             <screenshot>resources/screen1.jpg</screenshot>
             <screenshot>resources/screen2.jpg</screenshot>
+            <screenshot>resources/screen3.jpg</screenshot>
+            <screenshot>resources/screen4.jpg</screenshot>
+            <screenshot>resources/screen5.jpg</screenshot>
         </assets>
 		<news>Changelog:
 
