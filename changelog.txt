@@ -1,5 +1,9 @@
 Changelog:
 
+3.1.10b
+- Fixed music playlist window issues
+- Fixed broken addon screenshots
+
 3.1.10
 - Added user rating to visualisation
 - Reworked music OSD menus

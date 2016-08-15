@@ -116,10 +116,6 @@
 		<value condition="String.StartsWith(System.BuildVersion,17.)">Kodi Krypton</value>
 		<value condition="String.StartsWith(System.BuildVersion,16.)">Kodi Jarvis</value>
 	</variable>
-	<variable name="PVRWidgetReload">
-		<value condition="PVR.HasTVChannels">pvr://channels/tv/1</value>
-		<value>-</value>
-	</variable>
 	<variable name="PreloadLabel">
 		<value condition="Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))">$LOCALIZE[31531]</value>
 		<value>$LOCALIZE[31533]</value>
