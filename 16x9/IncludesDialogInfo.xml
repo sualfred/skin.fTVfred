@@ -328,7 +328,7 @@
 					</control>
 					<control type="image">
 						<top>4</top>
-						<width>45</width>
+						<width>30</width>
 						<height>23</height>
 						<texture>views/rotten_audience_low.png</texture>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter),59)</visible>
