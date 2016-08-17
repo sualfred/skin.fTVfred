@@ -229,7 +229,7 @@
 						<control id="198" type="button">
 							<centerleft>50%</centerleft>
 							<top>78</top>
-							<width>200</width>
+							<width>300</width>
 							<height>76</height>
 							<align>center</align>
 							<aligny>top</aligny>

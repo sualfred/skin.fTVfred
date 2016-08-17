@@ -1422,7 +1422,7 @@ msgstr "Willst du mehr wissen?"
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
 msgid "Press [B]DOWN[/B] to search online for the selected actor."
-msgstr "Drücke [B]RUNTER[/B] um online nach dem Darsteller zu suchen."
+msgstr "Drücke nach [B]UNTEN[/B] um online nach dem Darsteller zu suchen."
 
 msgctxt "#31500"
 msgid "Widget Group 1"

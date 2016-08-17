@@ -1,5 +1,13 @@
 Changelog:
 
+3.2.0
+- Added Rotten Tomatoes and Metacritics to DialogVideoInfo
+- Added hint box to DialogVideoInfo
+- Fixed list animations in video and extended info dialogs
+- Fixed GlobalSearch fanarts
+- Added button to 'no search results' message of GlobalSearch
+- Fixed playlist position glitch in music visualisation
+
 3.1.10b
 - Fixed music playlist window issues
 - Fixed broken addon screenshots
