@@ -22,6 +22,17 @@
 			<textcolor>ffa4a4a4</textcolor>
 			<label>$VAR[MusicInfoDescription]</label>
 		</control>
+		<control type="textbox">
+			<left>-1200</left>
+			<width>792</width>
+			<height>528</height>
+			<align>left</align>
+			<font>Light30</font>
+			<pagecontrol>97</pagecontrol>
+			<autoscroll>false</autoscroll>
+			<textcolor>ffa4a4a4</textcolor>
+			<label>$VAR[MusicInfoAlbumsTracks]</label>
+		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
@@ -30,6 +41,15 @@
 			<height>528</height>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
+		</control>
+		<control id="97" type="scrollbar">
+			<left>-1200</left>
+			<top>295</top>
+			<width>792</width>
+			<height>528</height>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)</visible>
 		</control>
 		<!-- Background -->
 		<include>BackgroundImage</include>
@@ -49,7 +69,7 @@
 			<control type="image">
 				<width>336</width>
 				<height>336</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture fallback="views/music_fallback.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control id="7000" type="button">
@@ -77,7 +97,8 @@
 				<ondown>noop</ondown>
 				<onleft>Close</onleft>
 				<onright condition="Control.IsVisible(96)">3002</onright>
-				<onright condition="!Control.IsVisible(96)">50</onright>
+				<onright condition="!Control.IsVisible(96) + Control.IsVisible(97)">3003</onright>
+				<onright condition="!Control.IsVisible(96) + !Control.IsVisible(97)">50</onright>
 				<onfocus>SetProperty(AlbumDetails,1,home)</onfocus>
 				<font>Light35</font>
 				<textcolor>ffdadada</textcolor>
@@ -258,7 +279,7 @@
 					<width>250</width>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!Control.HasFocus(5000) + !String.IsEmpty(ListItem.Rating)</visible>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 					<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
 					<control type="image">
@@ -292,7 +313,6 @@
 					<onright>noop</onright>
 					<orientation>horizontal</orientation>
 					<defaultcontrol always="true">9001</defaultcontrol>
-					<animation condition="Control.HasFocus(50)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
 					<!-- Dummy to always set focus to first visible button -->
 					<control id="9001" type="button">
 						<width>0</width>
@@ -322,12 +342,9 @@
 						<width min="124" max="254">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
-						<onup condition="!Control.IsVisible(96)">Close</onup>
-						<onup condition="Control.IsVisible(96)">3002</onup>
-						<ondown condition="Control.IsVisible(5000)">5000</ondown>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<onclick>SetProperty(SetUserRating,music,home)</onclick>
 						<onclick>SendClick(7)</onclick>
+						<onup>Close</onup>
 						<font>Med24</font>
 						<label>[CAPITALIZE]$LOCALIZE[31270][/CAPITALIZE][CR][COLOR=00ffffff]$LOCALIZE[31271][/COLOR]</label>
 						<textoffsetx>28</textoffsetx>
@@ -377,7 +394,6 @@
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<animation condition="Control.HasFocus(50)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
 					<!-- Play/Browse Button -->
 					<control type="button">
 						<width min="124" max="224">auto</width>
@@ -427,7 +443,7 @@
 				<!-- Description -->
 				<control type="label">
 					<top>235</top>
-					<width>792</width>
+					<width>742</width>
 					<height>32</height>
 					<align>left</align>
 					<font>Med32</font>
@@ -437,7 +453,7 @@
 				<!-- Info -->
 				<control type="textbox">
 					<top>291</top>
-					<width>792</width>
+					<width>742</width>
 					<height>528</height>
 					<align>left</align>
 					<font>Light30</font>
@@ -447,12 +463,13 @@
 				</control>
 				<!-- More button -->
 				<control id="3002" type="button">
-					<left>794</left>
+					<left>744</left>
 					<top>788</top>
 					<width>37</width>
 					<height>23</height>
 					<onleft>7001</onleft>
-					<onright>50</onright>
+					<onright condition="Control.IsVisible(97)">3003</onright>
+					<onclick>left</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[MusicInfoDescription]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
@@ -460,7 +477,7 @@
 				</control>
 				<!-- Albums -->
 				<control type="label">
-					<left>900</left>
+					<left>850</left>
 					<top>235</top>
 					<width>470</width>
 					<height>32</height>
@@ -472,7 +489,7 @@
 				</control>
 				<!-- Tracks -->
 				<control type="label">
-					<left>900</left>
+					<left>850</left>
 					<top>235</top>
 					<width>470</width>
 					<height>32</height>
@@ -480,11 +497,10 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>$LOCALIZE[31317]</label>
-					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.TrackList))</visible>
 				</control>
 				<control type="textbox">
-					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-					<left>900</left>
+					<left>850</left>
 					<top>291</top>
 					<width>470</width>
 					<height>528</height>
@@ -492,49 +508,23 @@
 					<font>Light30</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffa4a4a4</textcolor>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.Albums)]</label>
-				</control>					
-				<control type="list" id="50">
-					<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
-					<left>900</left>
-					<top>287</top>
-					<width>470</width>
-					<height>528</height>
-					<onleft>7001</onleft>
-					<itemlayout width="470" height="44">
-						<control type="label">
-							<width>470</width>
-							<height>44</height>
-							<align>left</align>
-							<font>Light30</font>
-							<textcolor>ffd8d8d8</textcolor>
-							<label>$VAR[MusicInfoListLabelNF]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout width="470" height="44">
-						<control type="group">
-							<visible>!Control.HasFocus(50)</visible>							
-							<control type="label">
-								<width>470</width>
-								<height>44</height>
-								<align>left</align>
-								<font>Light30</font>
-								<textcolor>ffd8d8d8</textcolor>
-								<label>$VAR[MusicInfoListLabelNF]</label>
-							</control>
-						</control>
-						<control type="group">
-							<visible>Control.HasFocus(50)</visible>							
-							<control type="label">
-								<width>470</width>
-								<height>44</height>
-								<align>left</align>
-								<font>Light30</font>
-								<textcolor>ffe9a01e</textcolor>
-								<label>$VAR[MusicInfoListLabelFO]</label>
-							</control>
-						</control>
-					</focusedlayout>
+					<label>$VAR[MusicInfoAlbumsTracks]</label>
+				</control>
+				<!-- More button -->
+				<control id="3003" type="button">
+					<left>1322</left>
+					<top>788</top>
+					<width>37</width>
+					<height>23</height>
+					<onleft condition="Control.IsVisible(96)">3002</onleft>
+					<onleft condition="!Control.IsVisible(96)">7001</onleft>
+					<onclick condition="!Control.IsVisible(96)">left</onclick>
+					<onclick condition="Control.IsVisible(96)">left</onclick>
+					<onclick condition="Control.IsVisible(96)">left</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=$LOCALIZE[31317],text='$ESCVAR[MusicInfoAlbumsTracks]')</onclick>
+					<texturefocus>views/more_fo.png</texturefocus>
+					<texturenofocus>views/more_nf.png</texturenofocus>
+					<visible>Control.IsVisible(97)</visible>
 				</control>
 			</control>
 		</control>
