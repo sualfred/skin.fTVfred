@@ -485,7 +485,7 @@
 				<control type="textbox">
 					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 					<left>900</left>
-					<top>297</top>
+					<top>291</top>
 					<width>470</width>
 					<height>528</height>
 					<align>left</align>
@@ -497,7 +497,7 @@
 				<control type="list" id="50">
 					<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 					<left>900</left>
-					<top>293</top>
+					<top>287</top>
 					<width>470</width>
 					<height>528</height>
 					<onleft>7001</onleft>
