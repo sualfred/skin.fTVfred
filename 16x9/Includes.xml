@@ -13,6 +13,7 @@
 	<include file="IncludesDialogSettings.xml" />
 	<include file="IncludesDialogSelect.xml" />
 	<include file="IncludesDialogInfo.xml" />
+	<include file="IncludesDialogMusicInfo.xml" />
 	<include file="IncludesPVRChannelsOSD.xml" />
 	<!-- Expressions -->
 	<expression name="Rating_TV">[String.Contains(ListItem.Mpaa,y) | String.Contains(ListItem.Mpaa,nr) | String.Contains(ListItem.Mpaa,ma) | String.Contains(ListItem.Mpaa,g) | String.Contains(ListItem.Mpaa,14)]</expression>
