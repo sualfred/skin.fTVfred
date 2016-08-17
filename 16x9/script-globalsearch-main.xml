@@ -213,7 +213,7 @@
 					</control>
 					<control type="group">
 						<centerleft>50%</centerleft>
-						<top>473</top>
+						<top>468</top>
 						<control type="label">
 							<height>32</height>
 							<font>Bold32</font>
@@ -228,6 +228,26 @@
 							<align>center</align>
 							<textcolor>ff717171</textcolor>
 							<label>$LOCALIZE[31112]</label>
+						</control>						
+						<control type="button">
+							<centerleft>50%</centerleft>
+							<top>78</top>
+							<width>200</width>
+							<height>76</height>
+							<align>center</align>
+							<aligny>top</aligny>
+							<onleft>10</onleft>
+							<onright>noop</onright>
+							<font>MedUpper24</font>
+							<textoffsety>27</textoffsety>
+							<label>$LOCALIZE[137]</label>
+							<textcolor>ff000000</textcolor>
+							<focusedcolor>ff000000</focusedcolor>
+							<selectedcolor>ffffffff</selectedcolor>
+							<invalidcolor>DisabledColor</invalidcolor>
+							<disabledcolor>DisabledColor</disabledcolor>
+							<texturefocus border="8">dialogs/DialogButtonFO.png</texturefocus>
+							<texturenofocus border="8">dialogs/DialogButtonFO.png</texturenofocus>
 						</control>
 					</control>
 				</control>
