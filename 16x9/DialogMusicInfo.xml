@@ -496,28 +496,8 @@
 							<height>44</height>
 							<align>left</align>
 							<font>Light30</font>
-							<textcolor>ff646668</textcolor>
-							<label>$INFO[ListItem.TrackNumber]</label>
-							<visible>String.IsEqual(ListItem.DBType,album)</visible>
-						</control>
-						<control type="label">
-							<left>48</left>
-							<width>422</width>
-							<height>44</height>
-							<align>left</align>
-							<font>Light30</font>
 							<textcolor>ffd8d8d8</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEqual(ListItem.DBType,album)</visible>
-						</control>
-						<control type="label">
-							<width>470</width>
-							<height>44</height>
-							<align>left</align>
-							<font>Light30</font>
-							<textcolor>ffd8d8d8</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="470" height="44">
@@ -528,28 +508,8 @@
 								<height>44</height>
 								<align>left</align>
 								<font>Light30</font>
-								<textcolor>ff646668</textcolor>
-								<label>$INFO[ListItem.TrackNumber]</label>
-								<visible>String.IsEqual(ListItem.DBType,album)</visible>
-							</control>
-							<control type="label">
-								<left>48</left>
-								<width>422</width>
-								<height>44</height>
-								<align>left</align>
-								<font>Light30</font>
 								<textcolor>ffd8d8d8</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>String.IsEqual(ListItem.DBType,album)</visible>
-							</control>
-							<control type="label">
-								<width>470</width>
-								<height>44</height>
-								<align>left</align>
-								<font>Light30</font>
-								<textcolor>ffd8d8d8</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -560,27 +520,7 @@
 								<align>left</align>
 								<font>Light30</font>
 								<textcolor>ffe9a01e</textcolor>
-								<label>$INFO[ListItem.TrackNumber]</label>
-								<visible>String.IsEqual(ListItem.DBType,album)</visible>
-							</control>
-							<control type="label">
-								<left>48</left>
-								<width>422</width>
-								<height>44</height>
-								<align>left</align>
-								<font>Light30</font>
-								<textcolor>ffe9a01e</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>String.IsEqual(ListItem.DBType,album)</visible>
-							</control>
-							<control type="label">
-								<width>470</width>
-								<height>44</height>
-								<align>left</align>
-								<font>Light30</font>
-								<textcolor>ffe9a01e</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 							</control>
 						</control>
 					</focusedlayout>
