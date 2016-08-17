@@ -93,7 +93,7 @@
 			<animation effect="fade" end="100" start="0" time="200" delay="400">WindowOpen</animation>
 			<!-- Heading -->
 			<control type="label">
-				<top>-10</top>
+				<top>-7</top>
 				<width>1170</width>
 				<height>48</height>
 				<font>Med48</font>
