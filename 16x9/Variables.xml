@@ -2971,17 +2971,19 @@
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Album]</value>
 		<value>$INFO[ListItem.Artist]</value>
 	</variable>
-	<variable name="MusicInfoSmallLabel">
-		<value condition="String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(ListItem.DBType,album)">$LOCALIZE[182]</value>
-		<value>$INFO[ListItem.Artist]</value>
-	</variable>
 	<variable name="MusicInfoDescription">
-		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.TrackList))">$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</value>
 		<value condition="!String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value>$LOCALIZE[161]</value>
+		<value>$LOCALIZE[19055]</value>
+	</variable>
+	<variable name="MusicInfoListLabelNF">
+		<value condition="Integer.IsGreater(ListItem.TrackNumber,0)">[COLOR ff646668]$INFO[ListItem.TrackNumber][/COLOR] $INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="MusicInfoListLabelFO">
+		<value condition="Integer.IsGreater(ListItem.TrackNumber,0)">[COLOR ffe9a01e]$INFO[ListItem.TrackNumber][/COLOR] $INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PercentRemaining">
 		<value condition="!Integer.IsGreater(ListItem.PercentPlayed,00)">$LOCALIZE[31060]</value>

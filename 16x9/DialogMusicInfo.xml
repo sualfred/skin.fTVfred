@@ -255,18 +255,18 @@
 				<control type="grouplist">
 					<height>40</height>
 					<itemgap>10</itemgap>
+					<width>250</width>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000)</visible>
+					<visible>!Control.HasFocus(5000) + !String.IsEmpty(ListItem.Rating)</visible>
 					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 					<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
 					<control type="image">
 						<top>2</top>
 						<width>147</width>
 						<height>24</height>
-						<texture>$INFO[ListItem.UserRating,rating/rating,.png]</texture>
+						<texture>$INFO[ListItem.Rating,rating/rating,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
-						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
 					<control type="label">
 						<top>-13</top>
@@ -276,7 +276,6 @@
 						<aligny>bottom</aligny>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[ListItem.Rating,,/10]</label>
-						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
 				</control>
 			</control>
@@ -355,7 +354,7 @@
 					</control>
 					<!-- Fanart Button -->
 					<control type="button" id="12">
-						<width min="124" max="224">auto</width>
+						<width min="124" max="294">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
@@ -433,7 +432,7 @@
 					<align>left</align>
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
-					<label>$VAR[MusicInfoSmallLabel]</label>
+					<label>$VAR[MusicInfoLabel]</label>
 				</control>
 				<!-- Info -->
 				<control type="textbox">
@@ -454,7 +453,6 @@
 					<height>23</height>
 					<onleft>7001</onleft>
 					<onright>50</onright>
-					<onclick>left</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[MusicInfoDescription]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
@@ -469,8 +467,8 @@
 					<align>left</align>
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
-					<label>132</label>
-					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
+					<label>$LOCALIZE[31316]</label>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.Albums))</visible>
 				</control>
 				<!-- Tracks -->
 				<control type="label">
@@ -481,10 +479,23 @@
 					<align>left</align>
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
-					<label>182</label>
+					<label>$LOCALIZE[31317]</label>
 					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 				</control>
+				<control type="textbox">
+					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+					<left>900</left>
+					<top>297</top>
+					<width>470</width>
+					<height>528</height>
+					<align>left</align>
+					<font>Light30</font>
+					<autoscroll>false</autoscroll>
+					<textcolor>ffa4a4a4</textcolor>
+					<label>$INFO[Window(Home).Property(SkinHelper.Music.Albums)]</label>
+				</control>					
 				<control type="list" id="50">
+					<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 					<left>900</left>
 					<top>293</top>
 					<width>470</width>
@@ -497,30 +508,30 @@
 							<align>left</align>
 							<font>Light30</font>
 							<textcolor>ffd8d8d8</textcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[MusicInfoListLabelNF]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout width="470" height="44">
 						<control type="group">
-							<visible>!Control.HasFocus(50)</visible>
+							<visible>!Control.HasFocus(50)</visible>							
 							<control type="label">
 								<width>470</width>
 								<height>44</height>
 								<align>left</align>
 								<font>Light30</font>
 								<textcolor>ffd8d8d8</textcolor>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$VAR[MusicInfoListLabelNF]</label>
 							</control>
 						</control>
 						<control type="group">
-							<visible>Control.HasFocus(50)</visible>
+							<visible>Control.HasFocus(50)</visible>							
 							<control type="label">
 								<width>470</width>
 								<height>44</height>
 								<align>left</align>
 								<font>Light30</font>
 								<textcolor>ffe9a01e</textcolor>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$VAR[MusicInfoListLabelFO]</label>
 							</control>
 						</control>
 					</focusedlayout>
