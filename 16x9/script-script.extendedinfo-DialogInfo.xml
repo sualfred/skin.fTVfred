@@ -223,8 +223,8 @@
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 				</animation>
-				<animation effect="fade" end="100" start="0" time="300">Visible</animation>
-				<animation effect="fade" end="0" start="100" time="300">Hidden</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(StarredInTV))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(StarredInTV))" effect="fade" end="0" start="100" time="300">Conditional</animation>
 				<animation center="480,212" condition="!Control.HasFocus(150)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<itemlayout height="576" width="300">
 					<control type="group">
@@ -340,6 +340,8 @@
 				<visible>String.IsEmpty(Window(home).Property(StarredInTV)) + !Control.HasFocus(150) + !String.IsEmpty(Container(150).ListItem.Label)</visible>
 				<animation center="480,212" condition="!Control.HasFocus(150)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(StarredInTV))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(StarredInTV))" effect="fade" end="0" start="100" time="300">Conditional</animation>
 				<include content="InfoDialogVideoList">
 					<param name="Left">0</param>
 					<param name="ID">150</param>
@@ -416,8 +418,8 @@
 					<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 				</animation>
-				<animation delay="300" effect="fade" end="100" start="0" time="300">Visible</animation>
-				<animation effect="fade" end="0" start="100" time="300">Hidden</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(StarredInTV))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(StarredInTV))" effect="fade" end="0" start="100" time="300">Conditional</animation>
 				<animation center="480,212" condition="!Control.HasFocus(250)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<itemlayout height="576" width="300">
 					<control type="group">
@@ -531,6 +533,8 @@
 				<visible>!String.IsEmpty(Window(home).Property(StarredInTV)) + !Control.HasFocus(250) + !String.IsEmpty(Container(250).ListItem.Label)</visible>
 				<animation center="480,212" condition="!Control.HasFocus(250)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 				<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
+				<animation condition="!String.IsEmpty(Window(home).Property(StarredInTV))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
+				<animation condition="String.IsEmpty(Window(home).Property(StarredInTV))" effect="fade" end="0" start="100" time="300">Conditional</animation>
 				<include content="InfoDialogVideoList">
 					<param name="Left">0</param>
 					<param name="ID">250</param>

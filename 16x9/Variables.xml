@@ -1493,8 +1493,8 @@
 	<variable name="SearchPlot">
 		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Artist_Description))">$INFO[Container(100).ListItem.Property(Artist_Description)]</value>
 		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Album_Description))">$INFO[Container(100).ListItem.Property(Album_Description)]</value>
-		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Plotoutline))">$INFO[Container(100).ListItem.Property("Plot"outline)]</value>
 		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Plot))">$INFO[Container(100).ListItem.Property(Plot)]</value>
+		<value condition="Window.IsVisible(script-globalsearch-infodialog.xml) + !String.IsEmpty(Container(100).ListItem.Property(Plotoutline))">$INFO[Container(100).ListItem.Property(Plotoutline)]</value>
 		<value condition="Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Plotoutline))">$INFO[Container(111).ListItem.Property(Plotoutline)]</value>
 		<value condition="Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Plot))">$INFO[Container(111).ListItem.Property(Plot)]</value>
 		<value condition="Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(Plotoutline))">$INFO[Container(121).ListItem.Property(Plotoutline)]</value>
@@ -1914,15 +1914,15 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="SearchFanart">
-		<value condition="Control.HasFocus(111)">$INFO[Container(111).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(121)">$INFO[Container(121).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(131)">$INFO[Container(131).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(141)">$INFO[Container(141).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(151)">$INFO[Container(151).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(161)">$INFO[Container(161).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(171)">$INFO[Container(171).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(181)">$INFO[Container(181).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(111)">$INFO[Container(111).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(121)">$INFO[Container(121).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(131)">$INFO[Container(131).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(141)">$INFO[Container(141).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(151)">$INFO[Container(151).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(161)">$INFO[Container(161).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(171)">$INFO[Container(171).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(181)">$INFO[Container(181).ListItem.Property(Fanart)]</value>
+		<value condition="Control.IsVisible(211)">$INFO[Container(211).ListItem.Property(Fanart)]</value>
 	</variable>
 	<variable name="SearchHeadingLabel">
 		<value condition="Control.HasFocus(111)">$LOCALIZE[342]</value>
