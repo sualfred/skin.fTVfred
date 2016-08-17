@@ -1380,6 +1380,16 @@ msgctxt "#31313"
 msgid "Fanart options"
 msgstr ""
 
+#: /16x9/IncludesDialogInfo.xml
+msgctxt "#31314"
+msgid "Want to know more?"
+msgstr ""
+
+#: /16x9/IncludesDialogInfo.xml
+msgctxt "#31315"
+msgid "Press [B]DOWN[/B] to search online for the selected actor."
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
