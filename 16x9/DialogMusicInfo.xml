@@ -111,7 +111,7 @@
 				<!-- Composer -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.Composer))</visible>
+					<visible>String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Property(Role.Composer))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -127,7 +127,7 @@
 				<!-- Conductor -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
+					<visible>String.IsEqual(ListItem.DBType,song)) + !String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -143,7 +143,7 @@
 				<!-- Engineer -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.Engineer))</visible>
+					<visible>String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Property(Role.Engineer))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -159,7 +159,7 @@
 				<!-- DJMixer -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Songs) + !String.IsEmpty(ListItem.Property(Role.DJMixer))</visible>
+					<visible>String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Property(Role.DJMixer))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -175,7 +175,7 @@
 				<!-- Formed -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -191,7 +191,7 @@
 				<!-- Year -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Albums) + !String.IsEmpty(ListItem.Year)</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Year)</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -222,7 +222,7 @@
 				<!-- Active -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -238,7 +238,7 @@
 				<!-- Artist -->
 				<control type="group">
 					<height>40</height>
-					<visible>Container.Content(Albums) + !String.IsEmpty(ListItem.Artist)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -433,7 +433,7 @@
 					<align>left</align>
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
-					<label>$VAR[MusicInfoLabel]</label>
+					<label>$VAR[MusicInfoSmallLabel]</label>
 				</control>
 				<!-- Info -->
 				<control type="textbox">
@@ -454,6 +454,7 @@
 					<height>23</height>
 					<onleft>7001</onleft>
 					<onright>50</onright>
+					<onclick>left</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[MusicInfoDescription]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
@@ -469,7 +470,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>132</label>
-					<visible>Container.Content(artists) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 				</control>
 				<!-- Tracks -->
 				<control type="label">
@@ -481,7 +482,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>182</label>
-					<visible>Container.Content(albums) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 				</control>
 				<control type="list" id="50">
 					<left>900</left>
@@ -497,7 +498,7 @@
 							<font>Light30</font>
 							<textcolor>ff646668</textcolor>
 							<label>$INFO[ListItem.TrackNumber]</label>
-							<visible>Container.Content(albums)</visible>
+							<visible>String.IsEqual(ListItem.DBType,album)</visible>
 						</control>
 						<control type="label">
 							<left>48</left>
@@ -507,7 +508,7 @@
 							<font>Light30</font>
 							<textcolor>ffd8d8d8</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Container.Content(albums)</visible>
+							<visible>String.IsEqual(ListItem.DBType,album)</visible>
 						</control>
 						<control type="label">
 							<width>470</width>
@@ -516,7 +517,7 @@
 							<font>Light30</font>
 							<textcolor>ffd8d8d8</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Container.Content(artists)</visible>
+							<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="470" height="44">
@@ -529,7 +530,7 @@
 								<font>Light30</font>
 								<textcolor>ff646668</textcolor>
 								<label>$INFO[ListItem.TrackNumber]</label>
-								<visible>Container.Content(albums)</visible>
+								<visible>String.IsEqual(ListItem.DBType,album)</visible>
 							</control>
 							<control type="label">
 								<left>48</left>
@@ -539,7 +540,7 @@
 								<font>Light30</font>
 								<textcolor>ffd8d8d8</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Container.Content(albums)</visible>
+								<visible>String.IsEqual(ListItem.DBType,album)</visible>
 							</control>
 							<control type="label">
 								<width>470</width>
@@ -548,7 +549,7 @@
 								<font>Light30</font>
 								<textcolor>ffd8d8d8</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Container.Content(artists)</visible>
+								<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -560,7 +561,7 @@
 								<font>Light30</font>
 								<textcolor>ffe9a01e</textcolor>
 								<label>$INFO[ListItem.TrackNumber]</label>
-								<visible>Container.Content(albums)</visible>
+								<visible>String.IsEqual(ListItem.DBType,album)</visible>
 							</control>
 							<control type="label">
 								<left>48</left>
@@ -570,7 +571,7 @@
 								<font>Light30</font>
 								<textcolor>ffe9a01e</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Container.Content(albums)</visible>
+								<visible>String.IsEqual(ListItem.DBType,album)</visible>
 							</control>
 							<control type="label">
 								<width>470</width>
@@ -579,7 +580,7 @@
 								<font>Light30</font>
 								<textcolor>ffe9a01e</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>Container.Content(artists)</visible>
+								<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 							</control>
 						</control>
 					</focusedlayout>
