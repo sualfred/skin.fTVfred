@@ -397,7 +397,7 @@
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
 					<include content="Spacer">
-						<param name="visible" value="Container.Content(movies) + !String.IsEmpty(ListItem.Mpaa)" />
+						<param name="visible" value="Container.Content(movies) + !String.IsEmpty(ListItem.Mpaa) + !String.Contains(ListItem.Mpaa,nr)" />
 					</include>
 					<control type="image">
 						<top>3</top>

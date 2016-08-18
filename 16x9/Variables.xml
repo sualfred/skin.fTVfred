@@ -5,7 +5,6 @@
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,g) + !String.Contains(ListItem.Mpaa,pg)">rating/tv/g.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,pg)">rating/tv/pg.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,ma)">rating/tv/ma.png</value>
-		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,nr)">rating/tv/nr.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y) + !String.Contains(ListItem.Mpaa,y7)">rating/tv/y.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,y7)">rating/tv/y7.png</value>
 	</variable>	
