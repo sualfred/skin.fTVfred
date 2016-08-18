@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-17 05:38+0000\n"
+"PO-Revision-Date: 2016-08-18 07:50+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1423,6 +1423,26 @@ msgstr "Willst du mehr wissen?"
 msgctxt "#31315"
 msgid "Press [B]DOWN[/B] to search online for the selected actor."
 msgstr "Drücke nach [B]UNTEN[/B] um online nach dem Darsteller zu suchen."
+
+#: /16x9/DialogMusicInfo.xml
+msgctxt "#31316"
+msgid "Local albums"
+msgstr "Lokale Alben"
+
+#: /16x9/DialogMusicInfo.xml
+msgctxt "#31317"
+msgid "Tracklist"
+msgstr "Trackliste"
+
+#: /16x9/IncludesDialogMusicInfo.xml
+msgctxt "#31318"
+msgid "Mood"
+msgstr "Stimmung"
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31319"
+msgid "Searching for cast"
+msgstr "Suche Darsteller"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
