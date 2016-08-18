@@ -65,7 +65,7 @@
 			<control type="image">
 				<width>336</width>
 				<height>336</height>
-				<texture fallback="views/music_fallback.png">$INFO[ListItem.Icon]</texture>
+				<texture fallback="views/music_fallback.png">$VAR[MusicInfoIcon]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control id="7000" type="button">
@@ -122,7 +122,7 @@
 			<control type="grouplist">
 				<top>57</top>
 				<width>1192</width>
-				<height>171</height>
+				<height>200</height>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<!-- Composer -->
@@ -144,7 +144,7 @@
 				<!-- Conductor -->
 				<control type="group">
 					<height>40</height>
-					<visible>String.IsEqual(ListItem.DBType,song)) + !String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
+					<visible>String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -234,6 +234,54 @@
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
 						<label>[LIGHT]$INFO[ListItem.Genre,[B]$LOCALIZE[515]:[/B] ][/LIGHT]</label>
+					</control>
+				</control>
+				<!-- Album Style -->
+				<control type="group">
+					<height>40</height>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Property(Album_Style))</visible>
+					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
+					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
+					<control type="textbox">
+						<width>1192</width>
+						<height>40</height>
+						<align>left</align>
+						<font>Reg30Spaced</font>
+						<autoscroll>false</autoscroll>
+						<textcolor>ffbbbbbb</textcolor>
+						<label>[LIGHT]$INFO[ListItem.Property(Album_Style),[B]$LOCALIZE[736]:[/B] ][/LIGHT]</label>
+					</control>
+				</control>
+				<!-- Album Mood -->
+				<control type="group">
+					<height>40</height>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Property(Album_Mood))</visible>
+					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
+					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
+					<control type="textbox">
+						<width>1192</width>
+						<height>40</height>
+						<align>left</align>
+						<font>Reg30Spaced</font>
+						<autoscroll>false</autoscroll>
+						<textcolor>ffbbbbbb</textcolor>
+						<label>[LIGHT]$INFO[ListItem.Property(Album_Mood),[B]$LOCALIZE[31318]:[/B] ][/LIGHT]</label>
+					</control>
+				</control>
+				<!-- Tracks -->
+				<control type="group">
+					<height>40</height>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.SongCount))</visible>
+					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
+					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
+					<control type="textbox">
+						<width>1192</width>
+						<height>40</height>
+						<align>left</align>
+						<font>Reg30Spaced</font>
+						<autoscroll>false</autoscroll>
+						<textcolor>ffbbbbbb</textcolor>
+						<label>[LIGHT]$INFO[Window(Home).Property(SkinHelper.Music.SongCount),[B]$LOCALIZE[182]:[/B] ][/LIGHT]</label>
 					</control>
 				</control>
 				<!-- Active -->
@@ -418,6 +466,7 @@
 			<control type="group">
 				<animation condition="!String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation effect="fade" end="100" start="0" time="200" delay="800">WindowOpen</animation>
+				<top>50</top>
 				<!-- Fanart -->
 				<control type="image">
 					<left>-48</left>
@@ -436,6 +485,7 @@
 			</control>
 			<control type="group">
 				<animation condition="String.IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				<top>50</top>
 				<!-- Description -->
 				<control type="label">
 					<top>235</top>

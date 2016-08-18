@@ -1400,6 +1400,11 @@ msgctxt "#31317"
 msgid "Tracklist"
 msgstr ""
 
+#: /16x9/IncludesDialogMusicInfo.xml
+msgctxt "#31318"
+msgid "Mood"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
