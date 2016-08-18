@@ -1,5 +1,12 @@
 Changelog:
 
+3.2.1
+- DialogMusicInfo Krypton work
+- Replaced track and album lists with Skin Helper Service in music info dialog
+- Added album mood and style in album info dialog
+- Added cast loading indicator to pseudo x-ray feature
+- Other minor fixes and changes
+
 3.2.0
 - Added Rotten Tomatoes and Metacritics to DialogVideoInfo
 - Added hint box to DialogVideoInfo

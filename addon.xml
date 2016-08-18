@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.0"
+	version="3.2.1"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,13 +34,12 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.0[/B]
-- Added Rotten Tomatoes and Metacritics to DialogVideoInfo
-- Added hint box to DialogVideoInfo
-- Fixed list animations in video and extended info dialogs
-- Fixed GlobalSearch fanarts
-- Added button to 'no search results' message of GlobalSearch
-- Fixed playlist position glitch in music visualisation
+[B]3.2.1[/B]
+- DialogMusicInfo Krypton work
+- Replaced track and album lists with Skin Helper Service in music info dialog
+- Added album mood and style in album info dialog
+- Added cast loading indicator to pseudo x-ray feature
+- Other minor fixes and changes
 
 See changelog.txt for more details.</news>
 	</extension>
