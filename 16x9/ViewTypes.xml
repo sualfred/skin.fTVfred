@@ -738,7 +738,7 @@
 				<orientation>vertical</orientation>
 				<viewtype label="535">list</viewtype>
 				<scrolltime>0</scrolltime>
-				<visible>Container.Content(songs)</visible>
+				<visible>Container.Content(songs) | [String.Contains(Container.FolderName,amazon) + String.Contains(Container.FolderPath,listSongs)]</visible>
 				<animation condition="[!system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,1)] | [system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,0)]" effect="slide" end="0,-101" start="0,0">Conditional</animation>
 				<itemlayout height="101" width="1000">
 					<control type="label">
@@ -874,7 +874,8 @@
 						<width>-8</width>
 						<height>0</height>
 						<label>-</label>
-						<onfocus>SetFocus(2002)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName)">SetFocus(2002)</onfocus>
+						<onfocus condition="!String.IsEmpty(Container.PluginName)">SetFocus(2004)</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(2002) + !Control.HasFocus(2003) + !Control.HasFocus(2004) + !Control.HasFocus(2005) + !Control.HasFocus(20)</visible>
 					</control>
@@ -884,48 +885,30 @@
 						<onleft>Back</onleft>
 						<onright>20</onright>
 						<onup>50</onup>
-						<ondown>2003</ondown>
+						<ondown>2004</ondown>
 						<onclick>SetFocus(50)</onclick>
 						<onclick>Info</onclick>
 						<onclick>SetProperty(OpenMusicInformation,1,home)</onclick>
 						<font>Med24</font>
-						<label>$VAR[MusicType][CR]Information</label>
+						<label>$VAR[MusicType]Information</label>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<enabled>!String.IsEqual(ListItem.Label,..)</enabled>
-					</control>
-					<control id="2003" type="button">
-						<top>110</top>
-						<width>249</width>
-						<height>100</height>
-						<onleft>Back</onleft>
-						<onright>2004</onright>
-						<onup>2002</onup>
-						<ondown>2005</ondown>
-						<onclick>ReplaceWindow(music,sources://music,enter)</onclick>
-						<font>Med24</font>						
-						<wrapmultiline>true</wrapmultiline>
-						<label>$LOCALIZE[31087]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<enabled>!ListItem.IsParentFolder</enabled>
+						<visible>String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control id="2004" type="button">
-						<left>247</left>
 						<top>110</top>
 						<width>249</width>
 						<height>100</height>
 						<onleft>2003</onleft>
-						<onright>50</onright>
-						<onup>20</onup>
+						<onright>2005</onright>
+						<onup>2002</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(5001)</onclick>
-						<font>Med24</font>						
+						<font>Med24</font>
 						<wrapmultiline>true</wrapmultiline>
 						<label>$LOCALIZE[31089]</label>
 						<textoffsetx>28</textoffsetx>
@@ -933,25 +916,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-					</control>
-					<control id="2005" type="button">
-						<top>220</top>
-						<width>249</width>
-						<height>100</height>
-						<onleft>Back</onleft>
-						<onright>50</onright>
-						<onup>2003</onup>
-						<ondown>noop</ondown>
-						<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
-						<font>Med24</font>						
-						<wrapmultiline>true</wrapmultiline>
-						<label>$LOCALIZE[31088]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<animation effect="slide" time="0" end="0,-110" condition="!String.IsEmpty(Container.PluginName)">Conditional</animation>
 					</control>
 					<control id="20" type="togglebutton">
 						<left>247</left>
@@ -960,21 +925,42 @@
 						<onleft>2002</onleft>
 						<onright>50</onright>
 						<onup>50</onup>
-						<ondown>2004</ondown>
+						<ondown>2005</ondown>
 						<onclick>SetFocus(50)</onclick>
 						<font>Med24</font>
-						<label>$LOCALIZE[31090]</label>						
+						<label>$LOCALIZE[31090]</label>
 						<wrapmultiline>true</wrapmultiline>
 						<altlabel>$LOCALIZE[31091]</altlabel>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<visible>Control.IsEnabled(20)</visible>
 						<usealttexture>Library.IsScanningMusic</usealttexture>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
 						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
+						<visible>String.IsEmpty(Container.PluginName)</visible>						
+					</control>
+					<control id="2005" type="button">
+						<left>247</left>
+						<top>110</top>
+						<width>249</width>
+						<height>100</height>
+						<onleft>2004</onleft>
+						<onright>50</onright>
+						<onup>20</onup>
+						<ondown>noop</ondown>
+						<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
+						<font>Med24</font>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$LOCALIZE[31088]</label>
+						<textoffsetx>28</textoffsetx>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ff222222</focusedcolor>
+						<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<animation effect="slide" time="0" end="0,-110" condition="!String.IsEmpty(Container.PluginName)">Conditional</animation>
 					</control>
 				</control>
 			</control>

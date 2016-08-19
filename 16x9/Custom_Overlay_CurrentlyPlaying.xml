@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1110" type="dialog">
-	<zorder>100</zorder>
+	<zorder>99</zorder>
 	<visible>Player.HasMedia + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Skin.HasSetting(HideNowPlaying)</visible>
 	<controls>
 		<!-- Main group -->

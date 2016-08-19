@@ -153,7 +153,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!String.IsEqual(ListItem.Label,..) + !Control.IsVisible(54) + [Container.Content(artists) | Container.Content(albums)]</visible>
+						<visible>!String.IsEqual(ListItem.Label,..) + !Control.IsVisible(54) + [Container.Content(artists) | Container.Content(albums)] + Sting.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control id="1005" type="button">
 						<width min="104" max="224">auto</width>
@@ -216,6 +216,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<visible>Sting.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control id="20" type="togglebutton">
 						<width min="104" max="224">auto</width>

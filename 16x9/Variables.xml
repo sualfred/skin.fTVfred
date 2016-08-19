@@ -2350,6 +2350,7 @@
 	</variable>
 	<variable name="Fanart">
 		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
+		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://movies/genres/)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="Window.IsActive(1106)">$INFO[Container(100).ListItem.Art(fanart)]</value>
@@ -2458,9 +2459,9 @@
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[20391]</value>
 	</variable>
 	<variable name="MusicType">
-		<value condition="Container.Content(albums)">$LOCALIZE[558]</value>
-		<value condition="Container.Content(artists)">$LOCALIZE[557]</value>
-		<value condition="Container.Content(songs)">$LOCALIZE[179]</value>
+		<value condition="Container.Content(albums)">$LOCALIZE[558][CR]</value>
+		<value condition="Container.Content(artists)">$LOCALIZE[557][CR]</value>
+		<value condition="Container.Content(songs)">$LOCALIZE[179][CR]</value>
 	</variable>
 	<variable name="SettingsLabel-1">
 		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[14036]</value>
