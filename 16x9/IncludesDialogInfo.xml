@@ -221,14 +221,6 @@
 						<top>2</top>
 						<width>147</width>
 						<height>24</height>
-						<texture>$INFO[ListItem.UserRating,rating/rating,.png]</texture>
-						<aspectratio align="left">keep</aspectratio>
-						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
-					</control>
-					<control type="image">
-						<top>2</top>
-						<width>147</width>
-						<height>24</height>
 						<texture>$INFO[Window(home).Property(TVShowRating),rating/rating,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>!String.IsEmpty(Window(home).Property(TVShowRating)) + String.IsEmpty(ListItem.Rating) + !String.IsEqual(ListItem.DBType,episode)</visible>
@@ -269,7 +261,7 @@
 					</control>
 					<!-- Meta Critics -->
 					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
 					</include>
 					<control type="image">
 						<top>4</top>
@@ -288,10 +280,10 @@
 						<label>$INFO[Window(Home).Property(SkinHelper.MetaCritic.Rating),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))</visible>
 					</control>
-					<!-- Rotten Tomatoes -->
 					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))" />
 					</include>
+					<!-- Rotten Tomatoes -->
 					<control type="image">
 						<top>4</top>
 						<width>22</width>
@@ -317,7 +309,7 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))</visible>
 					</control>
 					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter))" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))" />
 					</include>
 					<control type="image">
 						<top>4</top>

@@ -427,9 +427,6 @@
 						<aspectratio align="left">keep</aspectratio>
 						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
-					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(ListItem.UserRating)" />
-					</include>
 					<control type="image">
 						<top>3</top>
 						<width>48</width>
