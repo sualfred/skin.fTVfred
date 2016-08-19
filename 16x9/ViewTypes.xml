@@ -784,7 +784,7 @@
 						<font>Light28</font>
 						<textcolor>ff636466</textcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist)</visible>
+						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | !String.StartsWith(Container.FolderPath,musicdb://albums)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="101" width="1000">
@@ -836,7 +836,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist)</visible>
+						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | !String.StartsWith(Container.FolderPath,musicdb://albums)</visible>
 					</control>
 				</focusedlayout>
 			</control>
