@@ -748,6 +748,17 @@
 						<align>center</align>
 						<textcolor>ff646668</textcolor>
 						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>![Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+					</control>
+					<control type="image">
+						<top>-3</top>
+						<width>68</width>
+						<height>31</height>
+						<align>center</align>
+						<textcolor>ff646668</textcolor>
+						<aspectratio>keep</aspectratio>
+						<texture>views/equaliser.gif</texture>
+						<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
@@ -796,6 +807,17 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>![Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+					</control>
+					<control type="image">
+						<top>-3</top>
+						<width>68</width>
+						<height>31</height>
+						<align>center</align>
+						<textcolor>ff646668</textcolor>
+						<aspectratio>keep</aspectratio>
+						<texture>views/equaliser.gif</texture>
+						<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<left>89</left>
