@@ -136,11 +136,19 @@
 	<include name="Rating_FSK">
 		<control type="image">
 			<top>3</top>
-			<width>25</width>
+			<width>54</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<texture>$VAR[Rating_FSK]</texture>
-			<visible>String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Mpaa) + !String.Contains(ListItem.Mpaa,nr) + $EXP[Rating_FSK]</visible>
+			<visible>String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Mpaa) + !String.Contains(ListItem.Mpaa,nr) + !String.Contains(ListItem.Mpaa,not rated) + !String.EndsWith(ListItem.Mpaa,12) + !String.EndsWith(ListItem.Mpaa,16) + !String.EndsWith(ListItem.Mpaa,18) + $EXP[Rating_FSK]</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>63</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<texture>$VAR[Rating_FSK]</texture>
+			<visible>String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Mpaa) + !String.Contains(ListItem.Mpaa,nr) + !String.Contains(ListItem.Mpaa,not rated) + [String.EndsWith(ListItem.Mpaa,12) | String.EndsWith(ListItem.Mpaa,16) | String.EndsWith(ListItem.Mpaa,18)] + $EXP[Rating_FSK]</visible>
 		</control>
 	</include>
 	<!-- BBFC Ratings -->
@@ -241,7 +249,7 @@
 	<include name="AudioCodec">
 		<control type="image">
 			<top>3</top>
-			<width>59</width>
+			<width>58</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -250,7 +258,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>74</width>
+			<width>73</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -259,7 +267,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>43</width>
+			<width>42</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -268,7 +276,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>68</width>
+			<width>67</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -277,7 +285,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>65</width>
+			<width>64</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -286,7 +294,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>74</width>
+			<width>73</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -295,7 +303,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>79</width>
+			<width>78</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -304,7 +312,7 @@
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>80</width>
+			<width>79</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
@@ -329,38 +337,29 @@
 	<include name="Rating_TV">
 		<control type="image">
 			<top>3</top>
-			<width>69</width>
-			<height>23</height>
-			<colordiffuse>ffdadada</colordiffuse>
-			<aspectratio align="left">keep</aspectratio>
-			<texture>$VAR[Rating_TV]</texture>
-			<visible>String.IsEqual(ListItem.DBTYPE,tvshow) + $EXP[Rating_TV] + !$EXP[Rating_FSK]</visible>
-		</control>
-		<control type="image">
-			<top>3</top>
-			<width>35</width>
-			<height>23</height>
-			<colordiffuse>ffdadada</colordiffuse>
-			<aspectratio align="left">keep</aspectratio>
-			<texture>$VAR[Rating_FSK]</texture>
-			<visible>String.IsEqual(ListItem.DBTYPE,tvshow) + $EXP[Rating_FSK]</visible>
-		</control>
-		<control type="image">
-			<top>3</top>
 			<width>59</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<texture>$VAR[Rating_TV]</texture>
-			<visible>String.IsEqual(ListItem.DBTYPE,episode) + $EXP[Rating_TV] + !$EXP[Rating_FSK]</visible>
+			<visible>[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)] + $EXP[Rating_TV] + !$EXP[Rating_FSK]</visible>
 		</control>
 		<control type="image">
 			<top>3</top>
-			<width>25</width>
+			<width>54</width>
 			<height>23</height>
 			<colordiffuse>ffdadada</colordiffuse>
 			<aspectratio align="left">keep</aspectratio>
 			<texture>$VAR[Rating_FSK]</texture>
-			<visible>String.IsEqual(ListItem.DBTYPE,episode) + $EXP[Rating_FSK]</visible>
+			<visible>[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)] + ![String.EndsWith(ListItem.Mpaa,12) | String.EndsWith(ListItem.Mpaa,16) | String.EndsWith(ListItem.Mpaa,18)] + $EXP[Rating_FSK]</visible>
+		</control>
+		<control type="image">
+			<top>3</top>
+			<width>63</width>
+			<height>23</height>
+			<colordiffuse>ffdadada</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$VAR[Rating_FSK]</texture>
+			<visible>[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)] + [String.EndsWith(ListItem.Mpaa,12) | String.EndsWith(ListItem.Mpaa,16) | String.EndsWith(ListItem.Mpaa,18)] + $EXP[Rating_FSK]</visible>
 		</control>
 	</include>
 	<!-- Small Keyboard buttons -->
