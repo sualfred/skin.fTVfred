@@ -795,7 +795,7 @@
 						<font>Light28</font>
 						<textcolor>ff636466</textcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | !String.StartsWith(Container.FolderPath,musicdb://albums)</visible>
+						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | String.StartsWith(Container.FolderPath,musicdb://songs) | String.EndsWith(Container.FolderPath,xsp) | String.EndsWith(Container.FolderPath,m3u)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="101" width="1000">
@@ -858,7 +858,7 @@
 						<textcolor>ffe9a01e</textcolor>
 						<selectedcolor>ffe9a01e</selectedcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | !String.StartsWith(Container.FolderPath,musicdb://albums)</visible>
+						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | String.StartsWith(Container.FolderPath,musicdb://songs) | String.EndsWith(Container.FolderPath,xsp) | String.EndsWith(Container.FolderPath,m3u)</visible>
 					</control>
 				</focusedlayout>
 			</control>
