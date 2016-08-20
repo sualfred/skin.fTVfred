@@ -65,7 +65,7 @@
 					<height>60</height>
 					<font>Light36</font>
 					<aligny>bottom</aligny>
-					<textcolor>ff505050</textcolor>
+					<textcolor>ffdadada</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<visible>Integer.IsGreater(MusicPlayer.PlaylistLength,1)</visible>
 					<label>|</label>
@@ -76,7 +76,7 @@
 					<height>60</height>
 					<font>Light32</font>
 					<aligny>bottom</aligny>
-					<textcolor>ff505050</textcolor>
+					<textcolor>ffdadada</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$INFO[MusicPlayer.PlaylistLength]</label>
 					<visible>Integer.IsGreater(MusicPlayer.PlaylistLength,1)</visible>

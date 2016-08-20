@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.1"
+	version="3.2.2"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,12 +34,16 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.1[/B]
-- DialogMusicInfo Krypton work
-- Replaced track and album lists with Skin Helper Service in music info dialog
-- Added album mood and style in album info dialog
-- Added cast loading indicator to pseudo x-ray feature
-- Other minor fixes and changes
+[B]3.2.2[/B]
+- Enabled song viewtype for Amazon Prime music addon
+- Added equalizer icon for current playing item in song list
+- Replaced FSK rating flags
+- Fixed audio flags dimensions
+- Removed 'not rated' flag
+- Added play icon to episode and TV channels layout
+- Replaced PVR genre with next title
+- Cleanup and minor changes
+
 
 See changelog.txt for more details.</news>
 	</extension>
