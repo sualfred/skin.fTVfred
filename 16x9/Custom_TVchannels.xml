@@ -233,7 +233,7 @@
 				<!-- Small Details -->
 				<control type="grouplist">
 					<top>110</top>
-					<height>26</height>
+					<height>28</height>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
@@ -259,8 +259,8 @@
 						<font>Med24Num</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
-						<label>$INFO[Container(100).ListItem.Genre]</label>
-						<visible>!String.IsEqual(Container(100).ListItem.Genre,$LOCALIZE[19499])</visible>
+						<label>  [COLOR ff707070]$LOCALIZE[19031][/COLOR] $INFO[Container(100).ListItem.NextTitle]</label>
+						<visible>!String.IsEmpty(Container(100).ListItem.NextTitle)</visible>
 					</control>
 				</control>
 				<!-- Details -->

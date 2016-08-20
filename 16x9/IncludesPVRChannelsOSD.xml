@@ -119,7 +119,7 @@
 					<!-- Small Details -->
 					<control type="grouplist">
 						<top>110</top>
-						<height>26</height>
+						<height>28</height>
 						<itemgap>10</itemgap>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>

@@ -770,10 +770,18 @@
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
 				</control>
+				<control type="image">
+					<left>17</left>
+					<top>420</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/playlist_play.png</texture>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+				</control>
 				<control type="label">
-					<left>18</left>
+					<left>95</left>
 					<top>427</top>
-					<width>604</width>
+					<width>527</width>
 					<height>42</height>
 					<font>Bold44</font>
 					<textcolor>ffffffff</textcolor>
@@ -861,10 +869,18 @@
 					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
 					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
+				<control type="image">
+					<left>17</left>
+					<top>420</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/playlist_play.png</texture>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+				</control>
 				<control type="label">
-					<left>18</left>
+					<left>95</left>
 					<top>416</top>
-					<width>604</width>
+					<width>527</width>
 					<height>28</height>
 					<font>Med28</font>
 					<textcolor>ffffc448</textcolor>
@@ -875,9 +891,9 @@
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
 				<control type="label">
-					<left>18</left>
+					<left>95</left>
 					<top>448</top>
-					<width>604</width>
+					<width>527</width>
 					<height>42</height>
 					<font>Bold44</font>
 					<scroll>false</scroll>
@@ -1087,17 +1103,23 @@
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
+				<control type="image">
+					<left>17</left>
+					<top>420</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/playlist_play.png</texture>
+				</control>
 				<control type="label">
-					<left>18</left>
+					<left>98</left>
 					<top>427</top>
-					<width>444</width>
+					<width>364</width>
 					<height>42</height>
 					<font>Bold44</font>
 					<scroll>false</scroll>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[EpisodeValue]</label>
-					<visible>!String.IsEqual(ListItem.Label,..)</visible>					
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1150,31 +1172,36 @@
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<texture border="2">views/season_overlay.png</texture>
 				</control>
+				<control type="image">
+					<left>17</left>
+					<top>420</top>
+					<width>62</width>
+					<height>62</height>
+					<texture>views/playlist_play.png</texture>
+				</control>
 				<control type="label">
-					<left>18</left>
+					<left>98</left>
 					<top>416</top>
-					<width>480</width>
+					<width>364</width>
 					<height>28</height>
 					<font>Med28</font>
 					<textcolor>ffffc448</textcolor>
 					<selectedcolor>ffffc448</selectedcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[TuneInLabel]</label>
-					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
 				<control type="label">
-					<left>18</left>
+					<left>98</left>
 					<top>448</top>
-					<width>444</width>
+					<width>364</width>
 					<height>42</height>
 					<font>Bold44</font>
 					<scroll>false</scroll>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="0,-21" start="0,0" time="0">UnFocus</animation>
 				</control>
