@@ -4447,6 +4447,12 @@
 		<value condition="String.EndsWith(VideoPlayer.Episode,s398)"> $LOCALIZE[31146], $LOCALIZE[20359] 398</value>
 		<value condition="String.EndsWith(VideoPlayer.Episode,s399)"> $LOCALIZE[31146], $LOCALIZE[20359] 399</value>
 	</variable>
+	<variable name="PlayerFullLabel">
+		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title, - ]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, - $LOCALIZE[20373] ]$INFO[VideoPlayer.Episode, $LOCALIZE[20359] ]$INFO[VideoPlayer.Title, - ]</value>
+		<value>$INFO[VideoPlayer.Title]</value>
+	</variable>
 	<variable name="PlayerBigLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>

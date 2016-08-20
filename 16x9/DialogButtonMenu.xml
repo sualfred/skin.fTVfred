@@ -7,6 +7,8 @@
 		<effect easing="inout" end="100" start="0" time="400" tween="sine" type="fade" />
 	</animation>
 	<animation easing="inout" effect="fade" end="0" start="100" time="400" tween="sine">WindowClose</animation>
+	<onload>Control.Move(6000,$INFO[Container(6000).CurrentItem,-])</onload>
+	<onload>Control.Move(6000,1)</onload>
 	<controls>
 		<!-- Background -->
 		<control type="image">
@@ -102,8 +104,9 @@
 			<scrolltime>0</scrolltime>
 			<focusposition>3</focusposition>
 			<movement>3</movement>
+			<ondown condition="Player.HasMedia">6100</ondown>
 			<orientation>horizontal</orientation>
-			<defaultcontrol always="true">1</defaultcontrol>
+			<defaultcontrol>1</defaultcontrol>
 			<animation effect="slide" time="0" end="-114,0" condition="String.IsEqual(Container(6000).NumItems,2) | String.IsEqual(Container(6000).NumItems,4) | String.IsEqual(Container(6000).NumItems,6)">Conditional</animation>
 			<itemlayout height="228" width="228">
 				<control type="image">
@@ -132,35 +135,139 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="228" width="228">
-				<control type="image">
-					<left>20</left>
-					<width>188</width>
-					<height>188</height>
-					<texture border="3">common/button_fo.png</texture>
+				<control type="group">
+					<visible>!Control.HasFocus(6000)</visible>
+					<control type="image">
+						<left>20</left>
+						<width>188</width>
+						<height>188</height>
+						<texture border="3">common/button_nf.png</texture>
+					</control>
+					<control type="image">
+						<left>70</left>
+						<top>16</top>
+						<width>88</width>
+						<height>88</height>
+						<texture fallback="shutdown/DefaultShortcut.png">$INFO[ListItem.Icon,shutdown/]</texture>
+					</control>
+					<control type="textbox">
+						<left>30</left>
+						<top>102</top>
+						<width>168</width>
+						<height>66</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Med23Spaced</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>ffa5a5a6</textcolor>
+					</control>
 				</control>
-				<control type="image">
-					<left>70</left>
-					<top>16</top>
-					<width>88</width>
-					<height>88</height>
-					<colordiffuse>d9000000</colordiffuse>
-					<texture fallback="shutdown/DefaultShortcut.png">$INFO[ListItem.Icon,shutdown/]</texture>
-				</control>
-				<control type="textbox">
-					<left>30</left>
-					<top>102</top>
-					<width>168</width>
-					<height>66</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Med23Spaced</font>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>ff000000</textcolor>
+				<control type="group">
+					<visible>Control.HasFocus(6000)</visible>
+					<control type="image">
+						<left>20</left>
+						<width>188</width>
+						<height>188</height>
+						<texture border="3">common/button_fo.png</texture>
+					</control>
+					<control type="image">
+						<left>70</left>
+						<top>16</top>
+						<width>88</width>
+						<height>88</height>
+						<colordiffuse>d9000000</colordiffuse>
+						<texture fallback="shutdown/DefaultShortcut.png">$INFO[ListItem.Icon,shutdown/]</texture>
+					</control>
+					<control type="textbox">
+						<left>30</left>
+						<top>102</top>
+						<width>168</width>
+						<height>66</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Med23Spaced</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>ff000000</textcolor>
+					</control>
 				</control>
 			</focusedlayout>
 			<content>
 				<include>skinshortcuts-group-shutdown</include>
 			</content>
+		</control>
+		<!-- Player controls -->
+		<control type="group">
+			<visible>Player.HasMedia</visible>
+			<control type="label">
+				<width>1596</width>
+				<bottom>260</bottom>
+				<centerleft>50%</centerleft>
+				<height>23</height>
+				<align>center</align>
+				<label>$VAR[PlayerFullLabel]</label>
+				<font>Med23Spaced</font>
+				<textcolor>ffbfbcbb</textcolor>
+			</control>
+			<control type="grouplist" id="6100">
+				<centerleft>50%</centerleft>
+				<bottom>195</bottom>
+				<width>800</width>
+				<height>64</height>
+				<onup>6000</onup>
+				<itemgap>0</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<defaultcontrol always="true">6103</defaultcontrol>
+				<!-- Skip Back -->
+				<control type="button" id="6101">
+					<width>64</width>
+					<height>64</height>
+					<font>-</font>
+					<texturefocus>osd/osd_prev_fo.png</texturefocus>
+					<texturenofocus colordiffuse="ffeaebeb">osd/osd_prev_nf.png</texturenofocus>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<!-- Stop -->
+				<control type="button" id="6102">
+					<width>64</width>
+					<height>64</height>
+					<font>-</font>
+					<texturefocus>osd/osd_stop_fo.png</texturefocus>
+					<texturenofocus colordiffuse="ffeaebeb">osd/osd_stop_nf.png</texturenofocus>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<!-- Play/Pause -->
+				<control type="togglebutton" id="6103">
+					<width>64</width>
+					<height>64</height>
+					<font>-</font>
+					<texturefocus>osd/osd_pause_fo.png</texturefocus>
+					<texturenofocus colordiffuse="ffeaebeb">osd/osd_pause_nf.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>osd/osd_play_fo.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="ffeaebeb">osd/osd_play_nf.png</alttexturenofocus>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<!-- Next -->
+				<control type="button" id="6104">
+					<width>64</width>
+					<height>64</height>
+					<font>-</font>
+					<texturefocus>osd/osd_next_fo.png</texturefocus>
+					<texturenofocus colordiffuse="ffeaebeb">osd/osd_next_nf.png</texturenofocus>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<!-- Record -->
+				<control type="button" id="6105">
+					<width>64</width>
+					<height>64</height>
+					<font>-</font>
+					<texturefocus>osd/osd_rec_fo.png</texturefocus>
+					<texturenofocus colordiffuse="ffeaebeb">osd/osd_rec_nf.png</texturenofocus>
+					<onclick>PlayerControl(Record)</onclick>
+					<visible>VideoPlayer.Content(livetv) + [Player.CanRecord | Player.Recording]</visible>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

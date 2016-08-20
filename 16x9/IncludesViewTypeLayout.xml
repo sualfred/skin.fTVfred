@@ -1105,7 +1105,7 @@
 					<scroll>false</scroll>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
-					<label>$VAR[EpisodeValue]</label>
+					<label>$INFO[ListItem.ChannelName]</label>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1179,20 +1179,18 @@
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="700" easing="inout" effect="fade" end="100" reversible="false" start="0" time="220" tween="sine">Focus</animation>
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
-				<control type="group">
-					<control type="label">
-						<left>98</left>
-						<top>448</top>
-						<width>364</width>
-						<height>42</height>
-						<font>Bold44</font>
-						<scroll>false</scroll>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>88000000</shadowcolor>
-						<label>$INFO[ListItem.ChannelName]</label>
-						<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
-						<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="-80,-21" start="0,0" time="0">UnFocus</animation>
-					</control>
+				<control type="label">
+					<left>98</left>
+					<top>448</top>
+					<width>364</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
+					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="-80,-21" start="0,0" time="0">UnFocus</animation>
 				</control>
 				<control type="progress">
 					<top>515</top>
