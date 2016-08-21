@@ -1099,7 +1099,7 @@
 				<control type="label">
 					<left>18</left>
 					<top>427</top>
-					<width>364</width>
+					<width>444</width>
 					<height>42</height>
 					<font>Bold44</font>
 					<scroll>false</scroll>
@@ -1180,6 +1180,19 @@
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
 				<control type="label">
+					<left>18</left>
+					<top>427</top>
+					<width>444</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<scroll>false</scroll>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation condition="!Control.HasFocus($PARAM[ID]) + !Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				</control>
+				<control type="label">
 					<left>98</left>
 					<top>448</top>
 					<width>364</width>
@@ -1189,8 +1202,8 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
+					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
-					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="-80,-21" start="0,0" time="0">UnFocus</animation>
 				</control>
 				<control type="progress">
 					<top>515</top>
