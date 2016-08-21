@@ -678,8 +678,8 @@ msgid "Show"
 msgstr "Show"
 
 msgctxt "#31163"
-msgid "Start Party Mode"
-msgstr "Start Party Mode"
+msgid "Start[CR]Party Mode"
+msgstr "Start[CR]Party Mode"
 
 msgctxt "#31164"
 msgid "Next Up"

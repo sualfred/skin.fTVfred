@@ -380,7 +380,7 @@ msgstr "Aktuelle Playliste"
 
 msgctxt "#31089"
 msgid "View Options"
-msgstr "View Optionen"
+msgstr "Anzeige[CR]Optionen"
 
 msgctxt "#31090"
 msgid "Update Library"
@@ -700,8 +700,8 @@ msgid "Show"
 msgstr "Ansicht"
 
 msgctxt "#31163"
-msgid "Start Party Mode"
-msgstr "Partymodus starten"
+msgid "Start[CR]Party Mode"
+msgstr "Starte[CR]Partymodus"
 
 msgctxt "#31164"
 msgid "Next Up"
