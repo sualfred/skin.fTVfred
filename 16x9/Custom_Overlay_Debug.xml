@@ -168,6 +168,16 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
+				<label>DialogPVRInfo.xml</label>
+				<visible>Window.IsVisible(DialogPVRInfo.xml)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
 				<label>MyPVRRecordings.xml</label>
 				<visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
 			</control>

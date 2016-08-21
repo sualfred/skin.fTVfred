@@ -138,6 +138,7 @@
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
 						<label>-</label>
+						<visible>Control.IsEnabled(6) + !String.IsEmpty(Control.GetLabel(6))</visible>
 					</control>
 				</control>
 			</control>

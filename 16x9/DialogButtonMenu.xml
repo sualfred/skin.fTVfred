@@ -9,6 +9,8 @@
 	<animation easing="inout" effect="fade" end="0" start="100" time="400" tween="sine">WindowClose</animation>
 	<onload>Control.Move(6000,$INFO[Container(6000).CurrentItem,-])</onload>
 	<onload>Control.Move(6000,1)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(PlayerControls))">SetFocus(6100)</onload>
+	<onunload>ClearProperty(PlayerControls,home)</onunload>
 	<controls>
 		<!-- Background -->
 		<control type="image">
