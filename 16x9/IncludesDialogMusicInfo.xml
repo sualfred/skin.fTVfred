@@ -271,7 +271,7 @@
 				<!-- Tracks -->
 				<control type="group">
 					<height>40</height>
-					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.SongCount))</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(TrackCount))</visible>
 					<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 					<control type="textbox">
@@ -281,7 +281,7 @@
 						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[LIGHT]$INFO[Window(Home).Property(SkinHelper.Music.SongCount),[B]$LOCALIZE[182]:[/B] ][/LIGHT]</label>
+						<label>[LIGHT]$INFO[Window(Home).Property(TrackCount),[B]$LOCALIZE[182]:[/B] ][/LIGHT]</label>
 					</control>
 				</control>
 				<!-- Active -->
@@ -515,7 +515,6 @@
 					<height>23</height>
 					<onleft>7001</onleft>
 					<onright condition="Control.IsVisible(97)">3003</onright>
-					<onclick>left</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[MusicInfoDescription]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
@@ -531,7 +530,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>$LOCALIZE[31316]</label>
-					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.Albums))</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Window(Home).Property(Albums))</visible>
 				</control>
 				<!-- Tracks -->
 				<control type="label">
@@ -543,7 +542,7 @@
 					<font>Med32</font>
 					<textcolor>ffdadada</textcolor>
 					<label>$LOCALIZE[31317]</label>
-					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.TrackList))</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Window(Home).Property(TrackList))</visible>
 				</control>
 				<control type="textbox">
 					<left>850</left>
@@ -564,9 +563,6 @@
 					<height>23</height>
 					<onleft condition="Control.IsVisible(96)">3002</onleft>
 					<onleft condition="!Control.IsVisible(96)">7001</onleft>
-					<onclick condition="!Control.IsVisible(96)">left</onclick>
-					<onclick condition="Control.IsVisible(96)">left</onclick>
-					<onclick condition="Control.IsVisible(96)">left</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header=$LOCALIZE[31317],text='$ESCVAR[MusicInfoAlbumsTracks]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

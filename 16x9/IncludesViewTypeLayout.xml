@@ -223,10 +223,10 @@
 			<control type="button">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<onfocus>ClearProperty(TVShowID,home)</onfocus>
+				<onfocus condition="!Container.Content(seasons)">ClearProperty(TVShowID,home)</onfocus>
 				<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
-				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>						
+				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.Rating],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowUserRating,$INFO[ListItem.UserRating],home)</onfocus>
 				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>

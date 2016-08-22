@@ -2982,8 +2982,8 @@
 		<value>$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="MusicInfoAlbumsTracks">
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[Window(Home).Property(SkinHelper.Music.Albums.Formatted)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[Window(Home).Property(Albums)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[Window(Home).Property(TrackList)]</value>
 	</variable>
 	<variable name="MusicInfoDescription">
 		<value condition="!String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
