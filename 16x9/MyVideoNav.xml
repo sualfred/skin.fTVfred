@@ -247,7 +247,7 @@
 				<autoscroll>false</autoscroll>
 				<textcolor>ffbebebe</textcolor>
 				<label>$VAR[UnwatchedEpisodes]</label>
-				<visible>Container.Content(tvshows) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+				<visible>Container.Content(tvshows)</visible>
 			</control>
 			<!-- Sort method -->
 			<control type="grouplist">
