@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.3"
+	version="3.2.3b"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,14 +34,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.3[/B]
-- Changed play icon to episode and TV channels layout to be only visible for the focused item
-- Fixed invisible partymode button
-- Readded partymode button to song viewtype
-- Added playercontrol to shutdownmenu
-- Added unwatched episode label on tvshow level
-- Fixed rating on season level
-- Other minor fixes and changes
+[B]3.2.3b[/B]
+- Fixed rating on season level #2
+- Fixed info labels in music info dialog
 
 
 See changelog.txt for more details.</news>

@@ -1,5 +1,9 @@
 Changelog:
 
+3.2.3b
+- Fixed rating on season level #2
+- Fixed info labels in music info dialog
+
 3.2.3
 - Changed play icon to episode and TV channels layout to be only visible for the focused item
 - Fixed invisible partymode button
