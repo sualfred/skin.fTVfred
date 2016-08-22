@@ -140,7 +140,7 @@
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
-				<left>196</left>
+				<left>198</left>
 				<top>206</top>
 				<height>38</height>
 				<itemgap>10</itemgap>
@@ -176,14 +176,23 @@
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
-				<left>196</left>
+				<left>198</left>
 				<top>206</top>
 				<height>38</height>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<include>VisibleDelayFadeAnimation</include>
-				<visible>Container.Content(episodes) + !String.Contains(Container.FolderPath,recentlyaddedepisodes)</visible>
+				<visible>Container.Content(episodes)</visible>
+				<control type="label">
+					<top>-3</top>
+					<width>auto</width>
+					<height>32</height>
+					<font>Light32</font>
+					<textcolor>ffbebebe</textcolor>
+					<label>$INFO[ListItem.TVShowTitle] </label>
+					<visible>String.Contains(Container.FolderPath,recentlyaddedepisodes) | String.EndsWith(Container.FolderPath,xsp)</visible>
+				</control>
 				<control type="image">
 					<top>2</top>
 					<width>147</width>
@@ -212,8 +221,9 @@
 			</control>
 			<!-- Tagline -->
 			<control type="label">
+				<include>VisibleDelayFadeAnimation</include>
 				<left>198</left>
-				<top>206</top>
+				<top>200</top>
 				<width max="1610">auto</width>
 				<height>64</height>
 				<aligny>top</aligny>
@@ -226,10 +236,11 @@
 			</control>
 			<!-- Episodes -->
 			<control type="label">
+				<include>VisibleDelayFadeAnimation</include>
 				<left>198</left>
-				<top>206</top>
+				<top>200</top>
 				<width max="1610">auto</width>
-				<height>64</height>
+				<height>32</height>
 				<aligny>top</aligny>
 				<wrapmultiline>true</wrapmultiline>
 				<font>Light32</font>
@@ -237,17 +248,6 @@
 				<textcolor>ffbebebe</textcolor>
 				<label>$VAR[UnwatchedEpisodes]</label>
 				<visible>Container.Content(tvshows) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-			</control>
-			<!-- TV show title -->
-			<control type="label">
-				<left>198</left>
-				<top>206</top>
-				<width>auto</width>
-				<height>32</height>
-				<font>Med32</font>
-				<textcolor>ffbebebe</textcolor>
-				<label>$INFO[ListItem.TVShowTitle]</label>
-				<visible>Container.Content(episodes) + String.Contains(Container.FolderPath,recentlyaddedepisodes)</visible>
 			</control>
 			<!-- Sort method -->
 			<control type="grouplist">
