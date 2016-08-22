@@ -1,5 +1,14 @@
 Changelog:
 
+3.2.3
+- Changed play icon to episode and TV channels layout to be only visible for the focused item
+- Fixed invisible partymode button
+- Readded partymode button to song viewtype
+- Added playercontrol to shutdownmenu
+- Added unwatched episode label on tvshow level
+- Fixed rating on season level
+- Other minor fixes and changes
+
 3.2.2
 - Enabled song viewtype for Amazon Prime music addon
 - Added equalizer icon for current playing item in song list
