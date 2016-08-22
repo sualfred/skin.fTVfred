@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="UnwatchedEpisodes">
+		<value condition="Integer.IsGreater(ListItem.Property(UnwatchedEpisodes),1)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31320]]</value>
+		<value>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31321]]</value>
+	</variable>
 	<variable name="Rating_TV">
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,14)">rating/tv/14.png</value>
 		<value condition="!String.IsEmpty(ListItem.Mpaa) + String.Contains(ListItem.Mpaa,g) + !String.Contains(ListItem.Mpaa,pg)">rating/tv/g.png</value>

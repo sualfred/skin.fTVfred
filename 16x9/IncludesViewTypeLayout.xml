@@ -96,7 +96,8 @@
 				<onfocus>ClearProperty(ContentEpisodes,home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>						
-				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.UserRating],home)</onfocus>
+				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.Rating],home)</onfocus>
+				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowUserRating,$INFO[ListItem.UserRating],home)</onfocus>
 				<onfocus condition="!String.IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 			</control>
 			<control type="group">
@@ -773,7 +774,7 @@
 				<control type="label">
 					<left>18</left>
 					<top>427</top>
-					<width>527</width>
+					<width>607</width>
 					<height>42</height>
 					<font>Bold44</font>
 					<textcolor>ffffffff</textcolor>
@@ -884,6 +885,19 @@
 					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 				</control>
 				<control type="label">
+					<left>18</left>
+					<top>427</top>
+					<width>607</width>
+					<height>42</height>
+					<font>Bold44</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>88000000</shadowcolor>
+					<label>$VAR[EpisodeValue]</label>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation condition="!Control.HasFocus($PARAM[ID]) + !Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Conditional</animation>
+				</control>
+				<control type="label">
 					<left>95</left>
 					<top>448</top>
 					<width>527</width>
@@ -894,8 +908,8 @@
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[EpisodeValue]</label>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
-					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="slide" end="-77,-21" start="0,0" time="0">UnFocus</animation>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -981,7 +995,8 @@
 				<onfocus>ClearProperty(ContentEpisodes,home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>
-				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.UserRating],home)</onfocus>
+				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.Rating],home)</onfocus>
+				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowUserRating,$INFO[ListItem.UserRating],home)</onfocus>
 				<onfocus condition="!String.IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
 			</control>
 			<control type="group">

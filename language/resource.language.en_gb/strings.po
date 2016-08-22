@@ -1410,6 +1410,16 @@ msgctxt "#31319"
 msgid "Searching for cast"
 msgstr ""
 
+#: /16x9/MyVideoNav.xml
+msgctxt "#31320"
+msgid "unwatched episodes"
+msgstr "unwatched episodes"
+
+#: /16x9/MyVideoNav.xml
+msgctxt "#31321"
+msgid "unwatched episode"
+msgstr "unwatched episode"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
