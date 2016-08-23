@@ -161,7 +161,7 @@
 						<control type="textbox">
 							<top>15</top>
 							<left>50</left>
-							<width>605</width>
+							<width>550</width>
 							<height>165</height>
 							<font>Med32</font>
 							<textcolor>ffffffff</textcolor>
@@ -171,6 +171,22 @@
 							<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
 							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							<visible>String.IsEmpty(ListItem.Property(tagline))</visible>
+						</control>
+						<control type="textbox">
+							<top>15</top>
+							<left>50</left>
+							<width>550</width>
+							<height>165</height>
+							<font>Med32</font>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>[LIGHT]$INFO[ListItem.Property(tagline)][/LIGHT][CR]$INFO[.ListItem.Label,[B],[/B]]</label>
+							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							<visible>!String.IsEmpty(ListItem.Property(tagline))</visible>
 						</control>
 						<control type="image">
 							<width>1500</width>
@@ -239,7 +255,7 @@
 						<control type="textbox">
 							<top>15</top>
 							<left>50</left>
-							<width>605</width>
+							<width>550</width>
 							<height>165</height>
 							<font>Med32</font>
 							<textcolor>ffffffff</textcolor>
@@ -249,6 +265,22 @@
 							<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[.ListItem.Label,[B],[/B]]</label>
 							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							<visible>String.IsEmpty(ListItem.Property(tagline))</visible>
+						</control>
+						<control type="textbox">
+							<top>15</top>
+							<left>50</left>
+							<width>550</width>
+							<height>165</height>
+							<font>Med32</font>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>[LIGHT]$INFO[ListItem.Property(tagline)][/LIGHT][CR]$INFO[.ListItem.Label,[B],[/B]]</label>
+							<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+							<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+							<visible>!String.IsEmpty(ListItem.Property(tagline))</visible>
 						</control>
 						<control type="image">
 							<width>1500</width>
@@ -422,6 +454,7 @@
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
+			<property name="tagline">$INFO[Container($PARAM[ID]9).ListItem.Tagline]</property>
 			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 			<onclick>SetFocus($PARAM[ID]9)</onclick>
@@ -432,7 +465,8 @@
 			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
-			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>							
+			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
+			<property name="tagline">$INFO[Container($PARAM[ID]9).ListItem.Tagline]</property>					
 			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 			<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>

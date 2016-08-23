@@ -65,7 +65,7 @@
 		</control>
 		<control type="image">
 			<top>35</top>
-			<left>550</left>
+			<left>510</left>
 			<width>535</width>
 			<height>125</height>
 			<aspectratio aligny="center" align="center">keep</aspectratio>
@@ -73,14 +73,14 @@
 		</control>
 		<control type="grouplist">
 			<top>-175</top>
-			<left>1200</left>
-			<width>250</width>
+			<left>1170</left>
+			<width>280</width>
 			<heigth>32</heigth>
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<align>right</align>
 			<control type="label">
-				<width>240</width>
+				<width>280</width>
 				<heigth>32</heigth>
 				<font>Med24</font>
 				<align>right</align>

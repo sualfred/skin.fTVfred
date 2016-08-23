@@ -1067,8 +1067,8 @@ msgstr "Nothing to watch?[CR][LIGHT]Try [/LIGHT]"
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
-msgid "[LIGHT]Included in[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
-msgstr "[LIGHT]Included in[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
+msgid "[LIGHT]Watch it now with[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
+msgstr "[LIGHT]Watch it now with[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
 
 #: /16x9/ParametersHomeWidgets.xml:113
 msgctxt "#31252"
