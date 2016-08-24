@@ -1428,7 +1428,7 @@ msgstr "episodes in"
 #: /16x9/Variables.xml
 msgctxt "#31323"
 msgid "episode available"
-msgstr "episodes available"
+msgstr "episode available"
 
 #: /16x9/Settings.xml
 msgctxt "#31324"

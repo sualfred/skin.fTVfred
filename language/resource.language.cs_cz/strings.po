@@ -4,25 +4,25 @@
 # Addon Provider: Hitcher
 # Translators:
 # Translators:
-# sualfred <su4lfred@gmail.com>, 2015-2016
+# Enrich Silen <nhonzikn@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-18 07:50+0000\n"
+"PO-Revision-Date: 2016-08-24 12:52+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
+"Language-Team: Czech (Czech Republic) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Poedit 1.8.7\n"
 
 msgctxt "#31100"
 msgid "Photos"
-msgstr "Bilder"
+msgstr "Fotky"
 
 msgctxt "#31001"
 msgid "US"
@@ -34,530 +34,530 @@ msgstr "UK"
 
 msgctxt "#31003"
 msgid "Germany"
-msgstr "Deutschland"
+msgstr "Německo"
 
 msgctxt "#31004"
 msgid "minute"
-msgstr "Minute"
+msgstr "minuta"
 
 msgctxt "#31005"
 msgid "hour"
-msgstr "Stunde"
+msgstr "hodina"
 
 msgctxt "#31006"
 msgid "Starts at"
-msgstr "Startet bei"
+msgstr "Začíná v"
 
 msgctxt "#31101"
 msgid "Apps"
-msgstr "Apps"
+msgstr "Aplikace"
 
 msgctxt "#31103"
 msgid "Artwork Downloader"
-msgstr "Artwork Downloader"
+msgstr "Stahovač uměleckých prací"
 
 msgctxt "#31104"
 msgid "Cinema Experience"
-msgstr "Cinema Experience"
+msgstr "Zkušenosti s kinem"
 
 msgctxt "#31000"
 msgid "Audio Options"
-msgstr "Audio Optionen"
+msgstr "Možnosti audia"
 
 msgctxt "#31007"
 msgid "System music files"
-msgstr "System-Musikdateien"
+msgstr "Systémové hudební soubory"
 
 msgctxt "#31008"
 msgid "Current selection"
-msgstr "Aktuelle Auswahl"
+msgstr "Aktuální výběr"
 
 msgctxt "#31014"
 msgid "Next Movie"
-msgstr "Nächster Film"
+msgstr "Další film"
 
 msgctxt "#31015"
 msgid "Next Video"
-msgstr "Nächstes Video"
+msgstr "Další video"
 
 msgctxt "#31009"
 msgid "Open playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Otevřít playlist"
 
 msgctxt "#31017"
 msgid "View all of your enabled and disabled add-ons."
-msgstr "Aktivierte und deaktivierte Addons anzeigen"
+msgstr "Zobrazit všechny tvé povolené a zakázané adony"
 
 msgctxt "#31018"
 msgid "View add-ons that have updates available."
-msgstr "Addons mit verfügbaren Aktualisierungen anzeigen"
+msgstr "Zobrazit adony, které mají dostupné aktualizace"
 
 msgctxt "#31019"
 msgid "View add-ons that are currently being downloaded."
-msgstr "Addons anzeigen, die gerade heruntergeladen werden"
+msgstr "Zobrazit aktuálně stahované adony"
 
 msgctxt "#31020"
 msgid ""
 "View all the system add-ons including Dependencies, Orphaned Dependencies, "
 "and Running add-ons."
-msgstr "Systemaddons inklusive Abhängigkeiten, verweisten Abhängigkeiten und[CR]laufende Addons anzeigen"
+msgstr ""
 
 msgctxt "#31021"
 msgid "Download add-ons from your installed repos."
-msgstr "Addons aus den installierten Repositories herunterladen"
+msgstr "Stáhnout adony s tvých nainstalovaných repozitářů"
 
 msgctxt "#31010"
 msgid "Save playlist"
-msgstr "Wiedergabeliste speichern"
+msgstr "Uložit playlist"
 
 msgctxt "#31011"
 msgid "Close playlist"
-msgstr "Wiedergabeliste schließen"
+msgstr "Zavřít playlist"
 
 msgctxt "#31012"
 msgid "Current playlist"
-msgstr "Aktuelle Wiedergabeliste"
+msgstr "Aktuální playlist"
 
 msgctxt "#31013"
 msgid "Muted"
-msgstr "Stumm"
+msgstr "ztlumeno"
 
 msgctxt "#31016"
 msgid "Settings level"
-msgstr "Einstellungsebene"
+msgstr "Nastavení úrovně"
 
 msgctxt "#31027"
 msgid "Install add-ons using the file browser."
-msgstr "Addons durch den Dateimanager installieren."
+msgstr "nainstalovat adony pomocí průzkumníka"
 
 msgctxt "#31028"
 msgid "Search for an add-on from your installed repos."
-msgstr "Suche nach Addons in den installierten Repositories."
+msgstr "Hledat adony v tvých nainstalovaných repozitářích"
 
 msgctxt "#31022"
 msgid "Update[CR]Now"
-msgstr "Jetzt[CR]aktualisieren"
+msgstr "Aktualizovat[CR] ted"
 
 msgctxt "#31030"
 msgid "Customise the home menu to your liking with the Skin Shortcuts script."
-msgstr "Verändert das Home Menü nach eigenen Vorstellungen mit dem Skin-Shortcuts-Skript"
+msgstr ""
 
 msgctxt "#31031"
 msgid "Customise the shutdown menu to include your favourite actions."
-msgstr "Verändert das Ausschaltmenü, um die gewünschten Aktionen aufzunehmen"
+msgstr ""
 
 msgctxt "#31032"
 msgid "Hide thumbnails for unwatched episodes to avoid possible spoilers."
-msgstr "Blende Vorschau ungesehener Episoden aus, um Spoiler zu vermeiden"
+msgstr ""
 
 msgctxt "#31023"
 msgid "Widget Type"
-msgstr "Widget Typ"
+msgstr "Typ widgetu"
 
 msgctxt "#31034"
 msgid ""
 "Uses a combination of Fanart and Logo to display wide "
 "icons.[CR]Alternatively create and add your own as 'ftv' artwork."
-msgstr "Verwendet eine Kombination aus Fanart und Logo um ein breites Symbol darzustellen.[CR]Erzeuge und füge alternativ eigene Grafiken als 'ftv' hinzu."
+msgstr ""
 
 msgctxt "#31035"
 msgid ""
 "Runs Artwork Downloader in the background to fetch TV Show logos needed for "
 "wide icons."
-msgstr "Lässt Artwork Downloader im Hintergrund laufen, um Serienlogos für breite Symbole herunterzuladen."
+msgstr ""
 
 msgctxt "#31036"
 msgid "Displays fanart for your media in the background."
-msgstr "Stellt Fanart der Medien als Hintergrundbild dar."
+msgstr "Zobrazit fanart pro tvů media v pozadí"
 
 msgctxt "#31024"
 msgid "Widget Name"
-msgstr "Widget Name"
+msgstr "Název widgetu"
 
 msgctxt "#31038"
 msgid "Select your scrapers preferred certification county."
-msgstr "Wähle bevorzugtes Land für die Altersbewertung des Scrapers aus"
+msgstr ""
 
 msgctxt "#31039"
 msgid "Enable debug grid.[CR]Useful when skinning."
-msgstr "Debug Gitter aktivieren.[CR]Nützlich für Skinning."
+msgstr "Povolit debagovací mřížku.[CR]Užitečné při skinovavání."
 
 msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
-msgstr "Debug Info aktivieren.[CR]Nützlich für die Meldung von Fehlern."
+msgstr "Povolit debagovací informace.[CR]Užitečné pro odesílání zpráv o chybách."
 
 msgctxt "#31025"
 msgid "Widget Path"
-msgstr "Widget Pfad"
+msgstr "Cesta k widgetu"
 
 msgctxt "#31026"
 msgid "Overview"
-msgstr "Übersicht"
+msgstr "Přehled"
 
 msgctxt "#31043"
 msgid "Turn Off Randomise"
-msgstr "Deaktiviere Shuffle"
+msgstr "Vypnout náhodnost"
 
 msgctxt "#31029"
 msgid "Addon Details"
-msgstr "Addon Details"
+msgstr "Detaily adonu"
 
 msgctxt "#31045"
 msgid "Turn On Randomise"
-msgstr "Aktiviere Shuffle"
+msgstr "Zapnout náhodnost"
 
 msgctxt "#31046"
 msgid "Turn Off Shuffle All"
-msgstr "Deaktiviere Shuffle All"
+msgstr ""
 
 msgctxt "#31033"
 msgid "Launch Now"
-msgstr "Jetzt starten"
+msgstr "Spustit ted"
 
 msgctxt "#31037"
 msgid "Rollback Addon"
-msgstr "Addon zurücksetzen"
+msgstr ""
 
 msgctxt "#31041"
 msgid "Debug grid"
-msgstr "Debug Gitter"
+msgstr "Debug sít"
 
 msgctxt "#31042"
 msgid "Debug labels"
-msgstr "Debug Bezeichnungen"
+msgstr "Debug popisek"
 
 msgctxt "#31044"
 msgid "Local subtitle found!"
-msgstr "Lokaler Untertitel verfügbar!"
+msgstr "Lokální titulky byli nalezeny"
 
 msgctxt "#31052"
 msgid "Turn On Shuffle All"
-msgstr "Aktiviere Shuffle All"
+msgstr ""
 
 msgctxt "#31053"
 msgid "Turn Off Repeat"
-msgstr "Deaktiviere Repeat"
+msgstr "Vypnout opakování"
 
 msgctxt "#31054"
 msgid "Repeat This Item"
-msgstr "Wiederhole Item"
+msgstr "Opakovat tento předmět"
 
 msgctxt "#31055"
 msgid "Turn On Repeat All"
-msgstr "Aktiviere Wiederholung"
+msgstr "Zapnout opakovat vše"
 
 msgctxt "#31056"
 msgid "Move, copy and delete your files with KODI's built-in file manager."
-msgstr "Verschiebe, kopiere und lösche Dateien mit KODIs eingebautem Dateimanager"
+msgstr ""
 
 msgctxt "#31057"
 msgid "Watch Again"
-msgstr "Nochmal ansehen"
+msgstr "Sledovat znovu"
 
 msgctxt "#31058"
 msgid "Today's weather:"
-msgstr "Heutiges Wetter:"
+msgstr "Dnešní počasí: "
 
 msgctxt "#31059"
 msgid "Tonight's weather:"
-msgstr "Heute Nacht:"
+msgstr "Noční počasí: "
 
 msgctxt "#31060"
 msgid "Play Now"
-msgstr "Jetzt abspielen"
+msgstr "Hrát ted"
 
 msgctxt "#31050"
 msgid "Show Changelog"
-msgstr "Zeige Changelog"
+msgstr "Ukázat seznam změn"
 
 msgctxt "#31047"
 msgid "Visualisation Presets"
-msgstr "Visualisierungspresets"
+msgstr "Vizuální reprezentace"
 
 msgctxt "#31048"
 msgid "Playlist Options"
-msgstr "Wiedergabeliste-Optionen"
+msgstr "Možnosti playlistu"
 
 msgctxt "#31049"
 msgid "Customise Home Menu"
-msgstr "Home-Menü anpassen"
+msgstr "Upravit domácí nabídku"
 
 msgctxt "#31051"
 msgid "Settings can be accessed from the Shutdown menu or by rebooting XBMC!"
-msgstr "Einstellungen können vom Ausschaltmenü oder durch einen Neustart aufgerufen werden!"
+msgstr ""
 
 msgctxt "#31062"
 msgid "Choose Thumb"
-msgstr "Wähle Thumb"
+msgstr "Vybrat náhled"
 
 msgctxt "#31067"
 msgid "Choose Fanart"
-msgstr "Wähle Fanart"
+msgstr "Vyber fanart"
 
 msgctxt "#31068"
 msgid "IP"
-msgstr "IP"
+msgstr "IP adresa"
 
 msgctxt "#31069"
 msgid "Change Rating"
-msgstr "Bewertung ändern"
+msgstr "Změnit hodnocení"
 
 msgctxt "#31070"
 msgid "Similar Titles"
-msgstr "Ähnliche Titel"
+msgstr "Podobné tituly"
 
 msgctxt "#31071"
 msgid "Starring"
-msgstr "In den Hauptrollen"
+msgstr "Zdílet"
 
 msgctxt "#31072"
 msgid "Directed by"
-msgstr "Unter der Regie von"
+msgstr "Vedeno "
 
 msgctxt "#31073"
 msgid "Next episode"
-msgstr "Nächste Episode"
+msgstr "Další epizoda"
 
 msgctxt "#31074"
 msgid "Browse TV Show"
-msgstr "Durchsuche TV Show"
+msgstr "Prohledávat TV pořady"
 
 msgctxt "#31075"
 msgid "Play Trailer"
-msgstr "Trailer abspielen"
+msgstr "Přehrát upoutávku"
 
 msgctxt "#31076"
 msgid "Cast and Role"
-msgstr "Besetzung und Rollen"
+msgstr "Obsazení a role"
 
 msgctxt "#31077"
 msgid "Viewers Also Watched"
-msgstr "Andere sahen auch"
+msgstr "Ostatní také sledují"
 
 msgctxt "#31078"
 msgid "Sorry, we have no items for this title."
-msgstr "Keine Einträge zu diesem Titel vorhanden."
+msgstr "Promiňte, ale pro tento titul nemáme žádné předměty"
 
 msgctxt "#31079"
 msgid "Movie Widget"
-msgstr "Film Widget"
+msgstr "filmový widget"
 
 msgctxt "#31080"
 msgid "TV Show Widget"
-msgstr "Serien Widget"
+msgstr "widget TV pořadů"
 
 msgctxt "#31081"
 msgid "Music Widget"
-msgstr "Musik Widget"
+msgstr "Hudební widget"
 
 msgctxt "#31082"
 msgid "Videos Widget"
-msgstr "Video Widget"
+msgstr "widget videí"
 
 msgctxt "#31083"
 msgid "Programs Widget"
-msgstr "Programm Widget"
+msgstr "Widget programů"
 
 msgctxt "#31084"
 msgid "Pictures Widget"
-msgstr "Bilder Widget"
+msgstr "Widget obrázků"
 
 msgctxt "#31085"
 msgid "Shutdown Menu"
-msgstr "Ausschaltmenü"
+msgstr "Nabídka vypnutí"
 
 msgctxt "#31086"
 msgid "Sorted by"
-msgstr "Sortierung"
+msgstr "Třízeno podle"
 
 msgctxt "#31087"
 msgid "Music Files"
-msgstr "Musik Dateien"
+msgstr "Hudební soubory"
 
 msgctxt "#31088"
 msgid "Current Playlist"
-msgstr "Aktuelle Playliste"
+msgstr "Aktuální playlist"
 
 msgctxt "#31089"
 msgid "View Options"
-msgstr "Anzeige[CR]Optionen"
+msgstr "možnosti náhledu"
 
 msgctxt "#31090"
 msgid "Update Library"
-msgstr "Bibliothek aktualisieren"
+msgstr "Knihovna aktualizací"
 
 msgctxt "#31091"
 msgid "Stop scanning"
-msgstr "Scan abbrechen"
+msgstr "Zastavit skenování"
 
 msgctxt "#31092"
 msgid "Sort By"
-msgstr "Sortierung"
+msgstr "Třídit podle"
 
 msgctxt "#31093"
 msgid "Filter By"
-msgstr "Filtern nach"
+msgstr "Filtrováno podle "
 
 msgctxt "#31094"
 msgid "Save Playlist"
-msgstr "Playliste speichern"
+msgstr "Uložit playlist"
 
 msgctxt "#31095"
 msgid "Clear Playlist"
-msgstr "Playliste löschen"
+msgstr "Vyčistit playlist"
 
 msgctxt "#31096"
 msgid "Your Songs"
-msgstr "Musik"
+msgstr "Tvé písničky"
 
 msgctxt "#31097"
 msgid "Music Library"
-msgstr "Musik Datenbank"
+msgstr "Hudební knihovna"
 
 msgctxt "#31098"
 msgid "Your Photos"
-msgstr "Bilder"
+msgstr "Tvé fotky"
 
 msgctxt "#31099"
 msgid "Start Slideshow"
-msgstr "Diashow starten"
+msgstr "spustit slideshow"
 
 msgctxt "#31061"
 msgid "Enable Horizontal home layout"
-msgstr "Aktiviere horizontales Home Layout"
+msgstr "Povolit horizontální layout"
 
 msgctxt "#31063"
 msgid "Add-ons"
-msgstr "Addons"
+msgstr "Addony"
 
 msgctxt "#31064"
 msgid "Custom background image"
-msgstr "Benutzerdefiniertes Hintergrundbild"
+msgstr "Vlastní obrázek pozadí"
 
 #: /16x9/MusicOSD.xml:269
 msgctxt "#31102"
 msgid "Pan and zoom fanart"
-msgstr "Fanart Zoom Animation"
+msgstr ""
 
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
-msgstr "Blende 'Mauswarnung' aus"
+msgstr "Skrýt varování o 'myši'"
 
 msgctxt "#31066"
 msgid "Cinema Exp."
-msgstr "Cinema Exp."
+msgstr "Zkušenosti s kinem"
 
 msgctxt "#31105"
 msgid "Your Addons"
-msgstr "Addons"
+msgstr "Tvé adony"
 
 msgctxt "#31106"
 msgid "Now Playing"
-msgstr "Jetzt läuft"
+msgstr "Právě hraje"
 
 msgctxt "#31107"
 msgid "TV Roles"
-msgstr "TV Rollen"
+msgstr ""
 
 msgctxt "#31108"
 msgid "Known For"
-msgstr "Bekannt aus"
+msgstr "Známí pro"
 
 msgctxt "#31109"
 msgid "Watch Now"
-msgstr "Jetzt ansehen"
+msgstr "Sledovat hned"
 
 msgctxt "#31110"
 msgid "Written by"
-msgstr "Geschrieben von"
+msgstr "Napsáno "
 
 msgctxt "#31111"
 msgid "Sorry, no items where found for this search."
-msgstr "Leider fand die Suche keine Einträge."
+msgstr "Promiň tě, ale pro toto hledání nebyl nalezen žádný objekt."
 
 msgctxt "#31112"
 msgid "Please try again."
-msgstr "Bitte noch einmal versuchen."
+msgstr "Prosím, vyzkoušejte to znovu"
 
 msgctxt "#31113"
 msgid "Results for"
-msgstr "Ergebnisse für"
+msgstr "Výsledek pro"
 
 msgctxt "#31114"
 msgid "Customise Shutdown Menu"
-msgstr "Ausschaltmenü anpassen"
+msgstr "Upravit nabídku vypínání"
 
 msgctxt "#31115"
 msgid ""
 "Change the skin, set language and region, change file listing options and "
 "set up a screensaver."
-msgstr "Ändere den Skin · Wähle Sprache und Region · Ändere Dateilistenoptionen[CR]Setze Bildschirmschoner"
+msgstr ""
 
 msgctxt "#31116"
 msgid "Manage, browse for, install and modify Add-ons."
-msgstr "Organisiere die installierten Addons · Installiere Addons[CR]Passe Addon-Einstellungen an"
+msgstr ""
 
 msgctxt "#31117"
 msgid ""
 "Manage your media library, set database options, change media listing "
 "options."
-msgstr "Organisiere die Medien-Bibliothek · Setze Datenbank-Optionen · Ändere die Auflistungsoptionen"
+msgstr ""
 
 msgctxt "#31118"
 msgid ""
 "Manage your player settings, set media playback options, change the "
 "behaviour how supported media files will be handled."
-msgstr "Organisiere die Wiedergabe-Einstellungen · Setze Media Abspieloptionen · Ändere das Verhalten, wie mit Medien umgegangen wird"
+msgstr ""
 
 #: /16x9/MyWeather.xml
 msgctxt "#31119"
 msgid "Location"
-msgstr "Standort"
+msgstr "Umístění"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31120"
 msgid "Select Movie Rating Provider"
-msgstr "Quelle der Film-Bewertungen auswählen"
+msgstr "Vyber poskytovatele hodnocení filmů"
 
 msgctxt "#31121"
 msgid ""
 "Setup and calibrate displays, configure audio output, setup remote controls,"
 " set power saving options, enable debugging and setup master lock."
-msgstr "Konfiguriere und kalibriere Bildschirme · Konfiguriere Audioausgabe · Setze Fernbedienungseinstellungen[CR]Setze Energiespar-Optionen · Aktiviere Debugging · Richte die Master-Sperre ein"
+msgstr ""
 
 msgctxt "#31122"
 msgid ""
 "Setup control of Kodi via UPnP and HTTP, configure file sharing, enable "
 "Zeroconf and configure AirPlay."
-msgstr "Richte Zugriff auf Kodi via UPnP und HTTP ein · Konfiguriere die Dateifreigabe[CR]Aktiviere Zeroconf · Konfiguriere AirPlay"
+msgstr ""
 
 msgctxt "#31123"
 msgid "Profiles, File Manager, System Information and Settings Level."
-msgstr "Profile, Dateimanager, Systeminformationen und Einstellungsebene"
+msgstr ""
 
 msgctxt "#31124"
 msgid ""
 "Personalise your experience with profiles. Includes enabling login screen, "
 "profile creation and management."
-msgstr "Personalisiere die Benutzererfahrung mit Profilen. Beinhaltet Anmeldebildschirm, Profilerstellung und -organisation"
+msgstr ""
 
 msgctxt "#31125"
 msgid "Login"
-msgstr "Anmeldung"
+msgstr "Přihlášení"
 
 msgctxt "#31126"
 msgid "Last login"
-msgstr "Letzte Anmeldung"
+msgstr "Poslední přihlášení"
 
 msgctxt "#31127"
 msgid ""
 "View your system's information. Includes storage, network, and hardware "
 "information."
-msgstr "Systeminformationen anzeigen. Beinhaltet Speicher, Netzwerk und Hardware "
+msgstr "Zobrazit vlastnosti systému. Zahrnuje úložiště, síť, a hardwarové informace"
 
 msgctxt "#31128"
 msgid "About"
-msgstr "Über"
+msgstr "O"
 
 msgctxt "#31129"
 msgid "Kodi"
@@ -565,103 +565,103 @@ msgstr "Kodi"
 
 msgctxt "#31130"
 msgid "Hide Unwatched Episode Thumbs"
-msgstr "Vorschau ungesehener Episoden ausblenden"
+msgstr "Skrýt náhled nepřehraných epizod "
 
 msgctxt "#31131"
 msgid "Enable Wide TV Show Icons"
-msgstr "Breite Seriensymbole aktivieren"
+msgstr "Povolit široké ikony TV seriálů"
 
 msgctxt "#31132"
 msgid "Click to download TV Show logos"
-msgstr "Klicken, um Serienlogos herunterzuladen"
+msgstr "Klikni zde pro stažení log pořadu"
 
 msgctxt "#31133"
 msgid "Enable Wide Season Icons"
-msgstr "Breite Staffelsymbole aktivieren"
+msgstr "Povolit široké ikony sezon"
 
 msgctxt "#31134"
 msgid "Enable Fanart"
-msgstr "Fanart aktivieren"
+msgstr "Povolit fanart"
 
 msgctxt "#31135"
 msgid "Select Rating Country"
-msgstr "Land der Bewertung auswählen"
+msgstr "Vyber hodnotící zemi"
 
 msgctxt "#31136"
 msgid "DVD Menu"
-msgstr "DVD Menü"
+msgstr "Nabídka DVD"
 
 msgctxt "#31137"
 msgid "Video Options"
-msgstr "Video-Optionen"
+msgstr "Možnosti videa"
 
 msgctxt "#31138"
 msgid "Turn Subtitles On"
-msgstr "Aktiviere Untertitel"
+msgstr "Zapnout titulky"
 
 msgctxt "#31139"
 msgid "Turn Subtitles Off"
-msgstr "Deaktiviere Untertitel"
+msgstr "Vypnout titulky"
 
 msgctxt "#31140"
 msgid "Download Subtitles"
-msgstr "Untertitel herunterladen"
+msgstr "Stáhnout titulky"
 
 #: /16x9/MusicOSD.xml:269
 msgctxt "#31141"
 msgid "Crossfade fanart"
-msgstr "Crossfade Fanart"
+msgstr ""
 
 #: /16x9/script-skinshortcuts.xml:422
 msgctxt "#31142"
 msgid "Restore menu to skin defaults"
-msgstr "Menü auf Skin Standard zurücksetzen"
+msgstr "Obnovit nabídku do výchozího skinu"
 
 #: /16x9/script-skinshortcuts.xml:424
 msgctxt "#31143"
 msgid "Reset all custom widgets"
-msgstr "Alle Widget-Gruppen zurücksetzen"
+msgstr "Restartovat všechny vlastní widgety"
 
 #: /16x9/script-skinshortcuts.xml:426
 msgctxt "#31144"
 msgid "Backup custom widgets"
-msgstr "Widget-Sicherung erstellen"
+msgstr "Zálohovat vlastní widgety"
 
 msgctxt "#31145"
 msgid "percent remaining"
-msgstr "Prozent verbleibend"
+msgstr "Procent zbývá"
 
 msgctxt "#31146"
 msgid "Special"
-msgstr "Besonderheit"
+msgstr "Speciální"
 
 msgctxt "#31147"
 msgid "minutes"
-msgstr "Minuten"
+msgstr "minuty"
 
 msgctxt "#31148"
 msgid "hours"
-msgstr "Stunden"
+msgstr "hodiny"
 
 msgctxt "#31149"
 msgid "Hide OSD controls"
-msgstr "Blende OSD-Bedienelemente aus"
+msgstr "Skrýt kontrolky OSD"
 
 msgctxt "#31150"
 msgid "Hides the Stop, Play, Pause, etc buttons from the music and video OSD."
-msgstr "Blendet die Stop, Abspielen, Pause und andere Bedienelemente aus dem On-Screen-Display für Musik und Video aus."
+msgstr "skrýt tlačítka Zastavit, Hrát, Pauza atd. z OSD hudby a videí"
 
 msgctxt "#31151"
 msgid "Creator"
-msgstr "Schöpfer"
+msgstr "tvůrce"
 
 msgctxt "#31152"
 msgid "Air Date"
-msgstr "Ausstrahlungsdatum"
+msgstr "datum vypuštění"
 
 msgctxt "#31153"
 msgid "3D Options"
-msgstr "3D Optionen"
+msgstr "volba 3D"
 
 msgctxt "#31154"
 msgid "Profile"
@@ -669,171 +669,171 @@ msgstr "Profil"
 
 msgctxt "#31155"
 msgid "Build Version"
-msgstr "Build Version"
+msgstr "Verze sestavení"
 
 msgctxt "#31156"
 msgid "Capacity"
-msgstr "Platz"
+msgstr "Kapacita"
 
 msgctxt "#31157"
 msgid "Current Date and Time"
-msgstr "Aktuelles Datum und Zeit"
+msgstr "Aktuální datum a čas"
 
 msgctxt "#31158"
 msgid "Device Name"
-msgstr "Gerätename"
+msgstr "Název zařízení"
 
 msgctxt "#31159"
 msgid "Wide"
-msgstr "Breit"
+msgstr "Široký"
 
 msgctxt "#31160"
 msgid "Poster"
-msgstr "Poster"
+msgstr "Plakát"
 
 msgctxt "#31161"
 msgid "Square"
-msgstr "Quadrat"
+msgstr "čtverec"
 
 msgctxt "#31162"
 msgid "Show"
-msgstr "Ansicht"
+msgstr "Šou"
 
 msgctxt "#31163"
 msgid "Start[CR]Party Mode"
-msgstr "Starte[CR]Partymodus"
+msgstr "Spustit[CR] mod párty"
 
 msgctxt "#31164"
 msgid "Next Up"
-msgstr "Es folgt"
+msgstr "Další nařadě"
 
 msgctxt "#31165"
 msgid "Choose Art"
-msgstr "Grafik wählen"
+msgstr "vybrat umění"
 
 msgctxt "#31166"
 msgid "Open Visualisation"
-msgstr "Öffne Visualisierung"
+msgstr "Otevřít vyzualizaci"
 
 msgctxt "#31167"
 msgid "Recently Added Movies"
-msgstr "Kürzlich hinzugefügte Filme"
+msgstr "Nedávno přidané filmy"
 
 msgctxt "#31168"
 msgid "Your Movies"
-msgstr "Filme"
+msgstr "Tvé filmy"
 
 msgctxt "#31169"
 msgid "In Progress Movies"
-msgstr "Begonnene Filme"
+msgstr "Rozkoukané filmy"
 
 msgctxt "#31170"
 msgid "Kids Movies"
-msgstr "Kinderfilme"
+msgstr "Dětské filmy"
 
 msgctxt "#31171"
 msgid "Action and Adventure Movies"
-msgstr "Action- und Abenteuerfilme"
+msgstr "Akční a výpravné"
 
 msgctxt "#31172"
 msgid "Comedy Movies"
-msgstr "Komödien"
+msgstr "Komedie"
 
 msgctxt "#31173"
 msgid "Sci-Fi Movies"
-msgstr "Science-Fiction Filme"
+msgstr "Sci-Fi"
 
 msgctxt "#31174"
 msgid "Top Rated Movies"
-msgstr "Filme mit Top-Bewertungen"
+msgstr "Nejlépe hodnocené filmy"
 
 msgctxt "#31175"
 msgid "Recently Updated TV Shows"
-msgstr "Kürzlich aktualisierte Serien"
+msgstr "Nedávno aktualizované televizní pořady"
 
 msgctxt "#31176"
 msgid "Your TV Shows"
-msgstr "Serien"
+msgstr "Tvé televizní pořady"
 
 msgctxt "#31177"
 msgid "In Progress TV Shows"
-msgstr "Begonnene Serien"
+msgstr "Aktuálně vysílané televizní pořady"
 
 msgctxt "#31178"
 msgid "Kids TV Shows"
-msgstr "Kinderserien"
+msgstr "Dětské televizní pořady"
 
 msgctxt "#31179"
 msgid "Action and Adventure TV Shows"
-msgstr "Action- und Abenteuerserien"
+msgstr "Akční a výpravné televizní pořady"
 
 msgctxt "#31180"
 msgid "Comedy TV Shows"
-msgstr "Comedy-Serien"
+msgstr "Komediální televizní pořady"
 
 msgctxt "#31181"
 msgid "Sci-Fi TV Shows"
-msgstr "Science-Fiction-Serien"
+msgstr "Sci-Fi pořady"
 
 msgctxt "#31182"
 msgid "Top Rated TV Shows"
-msgstr "Serien mit Top-Bewertung"
+msgstr "Nejlépe hodnocené pořady"
 
 msgctxt "#31183"
 msgid "Recently Played Albums"
-msgstr "Kürzlich wiedergegebene Alben"
+msgstr "Nedávno přehraná alba"
 
 msgctxt "#31184"
 msgid "Your Albums"
-msgstr "Alben"
+msgstr "Tvá alba"
 
 msgctxt "#31185"
 msgid "Recently Added Albums"
-msgstr "Kürzlich hinzugefügte Alben"
+msgstr "Nedávno přidaná alba"
 
 msgctxt "#31186"
 msgid "Your Artists"
-msgstr "Künstler"
+msgstr "Tví umělci"
 
 msgctxt "#31187"
 msgid "Your Genres"
-msgstr "Genre"
+msgstr "Tvé žánry"
 
 msgctxt "#31188"
 msgid "Top Rated Albums"
-msgstr "Alben mit Top-Bewertungen"
+msgstr "Nejlépe hodnocená alba"
 
 msgctxt "#31189"
 msgid "Top Rated Songs"
-msgstr "Songs mit Top-Bewertungen"
+msgstr "Nejlépe hodnocené písničky"
 
 msgctxt "#31190"
 msgid "Your Songs"
-msgstr "Musik"
+msgstr "Tvé písničky"
 
 msgctxt "#31191"
 msgid "Video root"
-msgstr "Video Hauptverzeichnis"
+msgstr "Kořen videa"
 
 msgctxt "#31192"
 msgid "Your Music Videos"
-msgstr "Musikvideos"
+msgstr "Tvé hudební klipy"
 
 msgctxt "#31193"
 msgid "Your Video Add-ons"
-msgstr "Video Addons"
+msgstr "Tvé video adony"
 
 msgctxt "#31194"
 msgid "Personal Rating"
-msgstr "Eigene Bewertung"
+msgstr "Osobní hodnocení"
 
 msgctxt "#31195"
 msgid "Your Add-ons"
-msgstr "Addons"
+msgstr "Tvé adony"
 
 msgctxt "#31196"
 msgid "Your Android Apps"
-msgstr "Android Apps"
+msgstr "tvé aplikace na android"
 
 msgctxt "#31197"
 msgid "Widget"
@@ -841,60 +841,60 @@ msgstr "Widget"
 
 msgctxt "#31198"
 msgid "View Type"
-msgstr "View Type"
+msgstr "zobrazit typ"
 
 msgctxt "#31199"
 msgid "Label Overlay"
-msgstr "Label Overlay"
+msgstr ""
 
 msgctxt "#31200"
 msgid "Enter Name"
-msgstr "Setze Name"
+msgstr "Zadej jméno"
 
 msgctxt "#31201"
 msgid "Choose Shortcut"
-msgstr "Wähle Shortcut"
+msgstr "Zvol zkratku"
 
 msgctxt "#31202"
 msgid "Widget Action"
-msgstr "Widget Aktion"
+msgstr "Akce widgetu"
 
 msgctxt "#31203"
 msgid "Square Info"
-msgstr "Quadrat Info"
+msgstr "čtvercové informace"
 
 msgctxt "#31204"
 msgid "Titles with"
-msgstr "Titel mit"
+msgstr "Tituly s"
 
 msgctxt "#31205"
 msgid "Refresh Information"
-msgstr "Update Informationen"
+msgstr "Obnovit informace"
 
 msgctxt "#31206"
 msgid "Enable Auto-Update"
-msgstr "Aktiviere Auto-Update"
+msgstr "Povolit automatické aktualizace"
 
 msgctxt "#31207"
 msgid "Disable Auto-Update"
-msgstr "Deaktiviere Auto-Update"
+msgstr "zakázat automatické aktualizace"
 
 msgctxt "#31208"
 msgid "Enable Higher Levels"
-msgstr "Aktiviere höhere Level"
+msgstr "Povolit vyší úrovně"
 
 msgctxt "#31209"
 msgid "Disable Higher Levels"
-msgstr "Deaktiviere höhere Level"
+msgstr "zakázat vyší úrovně"
 
 msgctxt "#31210"
 msgid "Set View for all"
-msgstr "Setze Layout für alle"
+msgstr "Nastavit pohled pro všechny"
 
 #: \16x9\SkinSettings.xml:287
 msgctxt "#31211"
 msgid "Preload widgets on startup"
-msgstr "Widget Preloading bei Start"
+msgstr "Přednačítat widgety při startu"
 
 #: \16x9\Variables.xml:1512
 msgctxt "#31212"
@@ -902,103 +902,103 @@ msgid ""
 "Activates the preloading of widgets on startup. By disabling it, the skin "
 "won't wait until all widgets are loaded. Please note that this can cause "
 "some minor animation glitches on startup."
-msgstr "Aktiviert das Preloaden der Widgets beim Start. Wenn deaktiviert, wartet der Skin nicht bis alle Widgets gefüllt sind. Bitte beachte, dass dies unsaubere Animation beim Start verursachen kann."
+msgstr ""
 
 #: \16x9\Variables.xml:65
 msgctxt "#31213"
 msgid "Widget Group 9"
-msgstr "Widget Gruppe 9"
+msgstr "Skupina widgetů 9"
 
 #: \16x9\Variables.xml:69
 msgctxt "#31214"
 msgid "Widget Group 10"
-msgstr "Widget Gruppe 10"
+msgstr "Skupina widgetů 10"
 
 #: \16x9\Variables.xml:73
 msgctxt "#31215"
 msgid "Widget Group 11"
-msgstr "Widget Gruppe 11"
+msgstr "Skupina widgetů 11"
 
 #: \16x9\Variables.xml:77
 msgctxt "#31216"
 msgid "Widget Group 12"
-msgstr "Widget Gruppe 12"
+msgstr "Skupina widgetů 12"
 
 #: \16x9\MyPVRChannels.xml:234
 msgctxt "#31217"
 msgid "Current time"
-msgstr "Aktuelle Uhrzeit"
+msgstr "Aktuální čas"
 
 #: \16x9\DialogAudioDSPManager.xml:294
 msgctxt "#31218"
 msgid "No mode available"
-msgstr "Kein Modus verfügbar"
+msgstr "Nejsou k dispozici žádné mody"
 
 msgctxt "#31219"
 msgid "Watch"
-msgstr "Starte"
+msgstr "Sledovat"
 
 msgctxt "#31220"
 msgid "Cancel Next Up"
-msgstr "Wiedergabe beenden"
+msgstr "Ukončit další"
 
 msgctxt "#31221"
 msgid "Sorry, no shows are airing at this time."
-msgstr "Sorry, keine Sendezeiten gefunden."
+msgstr "Promiňte, ale žádně pořady právě neběží žívě"
 
 msgctxt "#31222"
 msgid "Please try again later."
-msgstr "Bitte später nochmal probieren."
+msgstr "Prosím zkuste to prosím později"
 
 #: \16x9\DialogAudioDSPManager.xml:175
 msgctxt "#31223"
 msgid "No mode activated"
-msgstr "Kein Modus aktiviert"
+msgstr "Žádný mod aktivní"
 
 #: \16x9\DialogAudioDSPManager.xml:407
 msgctxt "#31224"
 msgid "Direct"
-msgstr "Direkt"
+msgstr "Přímí"
 
 #: \16x9\Custom_Home_Widgets.xml:188
 msgctxt "#31225"
 msgid "No."
-msgstr "Nr."
+msgstr "Ne"
 
 #: \16x9\IncludesViewTypes.xml:996
 msgctxt "#31226"
 msgid "Tune in"
-msgstr "Einschalten"
+msgstr "naladit"
 
 #: \16x9\SkinSettings.xml:475
 msgctxt "#31227"
 msgid "Backup or restore fTV settings"
-msgstr "fTV Einstellungen sichern oder wiederherstellen"
+msgstr "Zálohovat nebo obnovit nastavení fTV"
 
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"
 msgid "Backup, restore or reset skin configuration."
-msgstr "fTV Skin Einstellungen sichern, wiederherstellen oder zurücksetzen."
+msgstr "Zalohovat, obnovit nebo resetovat konfiguraci"
 
 #: \16x9\SkinSettings.xml:482
 msgctxt "#31229"
 msgid "Create new backup"
-msgstr "Erstelle neues Backup"
+msgstr "Vytvořit novou zálohu"
 
 #: \16x9\SkinSettings.xml:484
 msgctxt "#31230"
 msgid "Restore existing backup"
-msgstr "Importiere vorhandenes Backup"
+msgstr "Obnovit exitující zálohu"
 
 #: \16x9\SkinSettings.xml:486
 msgctxt "#31231"
 msgid "Reset skin settings"
-msgstr "Skin-Einstellungen zurücksetzen"
+msgstr "Obnovit výchozí skin"
 
 #: /16x9/SkinSettings.xml:475
 msgctxt "#31232"
 msgid "Set default Favourites layout"
-msgstr "Setze Standard Favouriten Layout"
+msgstr ""
 
 #: /16x9/Variables.xml:1865
 msgctxt "#31233"
@@ -1006,112 +1006,112 @@ msgid ""
 "Changes the layout of the favourite items. Useful if you use the favourites "
 "for your favourite movies and you want them displayed with the "
 "poster.[CR]Default is 'Square Info'."
-msgstr "Ändert die Darstellung der Favouriten. Nützlich falls diese zum anzeigen der Lieblingsfilme im Poster-Layout verwendet werden sollen.[CR]Standard ist 'Quadrat Info'."
+msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
 msgid "View movie info"
-msgstr "Zeige Film Info"
+msgstr "Prohlédnout informace o filmu"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
 msgid "Awards"
-msgstr "Awards"
+msgstr "Odměny"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:346
 msgctxt "#31236"
 msgid "budget"
-msgstr "Budget"
+msgstr "rozpočet"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:346
 msgctxt "#31237"
 msgid "grossed"
-msgstr "eingespielt"
+msgstr ""
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31238"
 msgid "Budget and revenue"
-msgstr "Budget und Einnahmen"
+msgstr "Rozpočet a zisk"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:331
 msgctxt "#31239"
 msgid "Premiered on"
-msgstr "Erstaufführung am"
+msgstr "Premiéra "
 
 #: /16x9/VideoOSD.xml:288
 msgctxt "#31240"
 msgid "View X-Ray"
-msgstr "Zeige X-Ray"
+msgstr "Rentgenový pohled"
 
 #: /16x9/DialogFullScreenInfo.xml:218
 msgctxt "#31241"
 msgid "View actor info"
-msgstr "Zeige Darsteller Info"
+msgstr "Zobrazit informace o herci"
 
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
 msgid "Newest Movie"
-msgstr "Neuester Film"
+msgstr "Nejnovější film"
 
 #: /16x9/Custom_Home_Widgets.xml:722
 msgctxt "#31243"
 msgid "Recommended Movie"
-msgstr "Empfohlener Film"
+msgstr "Doporučený film"
 
 #: /16x9/Custom_Home_Widgets.xml:724
 msgctxt "#31244"
 msgid "Random Movie"
-msgstr "Zufalls-Film"
+msgstr "Náhodný film"
 
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
 msgid "Newest Show"
-msgstr "Neueste Serie"
+msgstr "Nejnovější show"
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
 msgid "Recommended Show"
-msgstr "Empfohlene Serie"
+msgstr "Doporučená show"
 
 #: /16x9/Custom_Home_Widgets.xml:731
 msgctxt "#31247"
 msgid "Random Show"
-msgstr "Zufalls-Serie"
+msgstr "Náhodná show"
 
 #: /16x9/Variables.xml:874
 msgctxt "#31248"
 msgid "[LIGHT]New and now included in[/LIGHT] Kodi[CR]"
-msgstr "[LIGHT]Neu und jetzt verfügbar in[/LIGHT] Kodi[CR]"
+msgstr "[LIGHT]Neví a nyní obsažený v [/LIGHT] Kodi[CR]"
 
 #: /16x9/Variables.xml:875
 msgctxt "#31249"
 msgid "[LIGHT]Because you watched [/LIGHT]"
-msgstr "[LIGHT]Empfohlen wegen [/LIGHT]"
+msgstr "[LIGHT]Protože jsi sledoval[/LIGHT]"
 
 #: /16x9/Variables.xml:876
 msgctxt "#31250"
 msgid "[LIGHT]Nothing to watch?[CR]Try [/LIGHT]"
-msgstr "[LIGHT]Nichts anzusehen?[CR]Wie wärs mit [/LIGHT]"
+msgstr ""
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
 msgid "[LIGHT]Watch it now with[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
-msgstr "[LIGHT]Jetzt abspielen mit[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
+msgstr ""
 
 #: /16x9/ParametersHomeWidgets.xml:113
 msgctxt "#31252"
 msgid "Available in"
-msgstr "Verfügbar in"
+msgstr "Dospupné v"
 
 #: /16x9/Custom_Home_Widgets.xml:712
 msgctxt "#31253"
 msgid "Banner"
-msgstr "Banner"
+msgstr "Pruh"
 
 #: /16x9/Custom_Home_Widgets.xml:732
 msgctxt "#31254"
 msgid "Recommended Movie/Show"
-msgstr "Empfohlener Film/Serie"
+msgstr "Doporučený film / Doporučená show"
 
 #: /16x9/VideoOSDSettings.xml:146
 msgctxt "#31255"
@@ -1121,130 +1121,130 @@ msgstr "3D"
 #: /16x9/VideoOSDSettings.xml:167
 msgctxt "#31256"
 msgid "Watch as 2D"
-msgstr "Als 2D abspielen"
+msgstr "Sledovat ve 2D"
 
 #: /16x9/VideoOSDSettings.xml:181
 msgctxt "#31257"
 msgid "Change mode"
-msgstr "Modus wechseln"
+msgstr "Změnit mod"
 
 #: /shortcuts/overrides.xml:31
 msgctxt "#31258"
 msgid "3D Movies"
-msgstr "3D Filme"
+msgstr "3D filmy"
 
 #: /16x9/script-skinshortcuts.xml:428
 msgctxt "#31259"
 msgid "Restore custom widgets backup"
-msgstr "Widget-Sicherung wiederherstellen"
+msgstr "Obnovit zálohu vlastních widgetů"
 
 #: /16x9/script-skinshortcuts.xml:421
 msgctxt "#31260"
 msgid "Reset / Backup"
-msgstr "Reset / Backup"
+msgstr "Restart / Obnovení"
 
 #: /16x9/ParametersHomeWidgets.xml:9
 msgctxt "#31261"
 msgid "Hide message"
-msgstr "Nicht mehr anzeigen"
+msgstr "Schovat zpávu"
 
 #: /16x9/IncludesWidgets.xml:399
 msgctxt "#31262"
 msgid "Your library seems to be empty. Do you want to configure it now?"
-msgstr "Deine Datenbank scheint leer zu sein. Willst du diese jetzt konfigurieren?"
+msgstr "Tvá knihovna se zdá být prázdná. Chcete jí teď nakonfigurovat?"
 
 #: /16x9/IncludesWidgets.xml:398
 msgctxt "#31263"
 msgid "No content configured"
-msgstr "Kein Inhalt konfiguriert"
+msgstr "Žádný obsah nebyl potvrzen"
 
 #: /16x9/IncludesWidgets.xml:408
 msgctxt "#31264"
 msgid "Empty library"
-msgstr "Leere Datenbank"
+msgstr "Prázdná knihovna"
 
 #: /16x9/IncludesWidgets.xml:422
 msgctxt "#31265"
 msgid "Set widget content"
-msgstr "Bearbeite Widget"
+msgstr "Nastavit obsah widgetu"
 
 #: /16x9/IncludesWidgets.xml:442
 msgctxt "#31266"
 msgid ""
 "There is no source assigned to this widget. Do you want to configure it now?"
-msgstr "Diesem Widget sind keine Quellen zugeordnet. Willst du es jetzt konfigurieren?"
+msgstr "Žádný zdroj nebyl přiřazen k widgetu. Chcete ho nastavit teď?"
 
 #: /16x9/Custom_Home_Widgets.xml:6
 msgctxt "#31267"
 msgid ""
 "It's highly recommended to reload the skin to fill the edited content lists "
 "correctly. Should the skin be reloaded?"
-msgstr "Es ist empfohlen den Skin nach dem Editieren der Inhalte erneut zu laden um alle Elemente korrekt anzeigen zu lassen. Soll der Skin jetzt neu geladen werden?"
+msgstr ""
 
 #: /16x9/IncludesWidgetLayout.xml:23
 msgctxt "#31268"
 msgid "There are no results for this widget"
-msgstr "Es gibt keine Ergebnisse für dieses Widget"
+msgstr "Žádný výsledek pro tento widget"
 
 #: /shortcuts/overrides.xml:55
 msgctxt "#31269"
 msgid "Genres (Plugin based)"
-msgstr "Genres (Plugin basierend)"
+msgstr "Žánry (založeny na pluginech)"
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
 msgid "Your Rating"
-msgstr "Deine Bewertung"
+msgstr "Tvé hodnocení"
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31271"
 msgid "YourRating"
-msgstr "DeineBewertung"
+msgstr "TvéHodnocení"
 
 #: /16x9/Variables.xml:21
 msgctxt "#31272"
 msgid "Not rated"
-msgstr "Keine"
+msgstr "Nehodnoceno"
 
 #: /16x9/Variables.xml:16
 msgctxt "#31273"
 msgid "I hate it"
-msgstr "Hasse es"
+msgstr "Nesnáším to"
 
 #: /16x9/Variables.xml:17
 msgctxt "#31274"
 msgid "I don't like it"
-msgstr "Mags nicht"
+msgstr "Nemám t o rád"
 
 #: /16x9/Variables.xml:18
 msgctxt "#31275"
 msgid "It's okay"
-msgstr "Ist okay"
+msgstr "Je to v pohodě"
 
 #: /16x9/Variables.xml:19
 msgctxt "#31276"
 msgid "I like it"
-msgstr "Gefällt mir"
+msgstr "mám to rád"
 
 #: /16x9/Variables.xml:20
 msgctxt "#31277"
 msgid "I love it"
-msgstr "Liebe es"
+msgstr "Miluju to"
 
 #: /16x9/IncludesDialogSelect.xml:384
 msgctxt "#31278"
 msgid "This is your own personal rating and is not shared publicly"
-msgstr "Dies ist deine eigene Bewertung und wird nicht öffentlich geteilt"
+msgstr "Toto je tvé osobní hodnocení a nebude sdíleno veřejně"
 
 #: /16x9/IncludesDialogSelect.xml:412
 msgctxt "#31279"
 msgid "Select your rating"
-msgstr "Vergebe deine Bewertung"
+msgstr "Zvol tvé hodnocení"
 
 #: /16x9/IncludesDialogSelect.xml:447
 msgctxt "#31280"
 msgid "Submit"
-msgstr "Bewerten"
+msgstr "Odeslat"
 
 #: /16x9/ViewTypes.xml:415
 msgctxt "#31281"
@@ -1254,431 +1254,431 @@ msgstr "Panel"
 #: /16x9/script-script.extendedinfo-VideoList.xml:190
 msgctxt "#31282"
 msgid "My Account"
-msgstr "Mein Account"
+msgstr "Můj účet"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:123
 msgctxt "#31283"
 msgid "Next page"
-msgstr "Nächste Seite"
+msgstr "Další strana"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:135
 msgctxt "#31284"
 msgid "Previous page"
-msgstr "Vorherige Seite"
+msgstr "Předchozí stránka"
 
 #: /16x9/Widgets.xml:449
 msgctxt "#31285"
 msgid "Weather settings"
-msgstr "Wetter-Einstellungen"
+msgstr "Nastavení počasí"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:134
 msgctxt "#31286"
 msgid "ExtendedInfo Script"
-msgstr "ExtendedInfo Script"
+msgstr "Rozšířené informace o scriptech"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31287"
 msgid "Select TV Show Rating Provider"
-msgstr "Quelle der Serien-Bewertungen auswählen"
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31288"
 msgid "Select the rating provider of your configured movie scraper."
-msgstr "Wähle die Herkunft der Film-Bewertungen deines konfiguriertem Scrapers."
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31289"
 msgid "Select the rating provider of your configured TV show scraper."
-msgstr "Wähle die Herkunft der Serien-Bewertungen deines konfiguriertem Scrapers."
+msgstr ""
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31290"
 msgid "Horizontal"
-msgstr "Horizontal"
+msgstr "Horizontální"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31291"
 msgid "Vertical"
-msgstr "Vertikal"
+msgstr "Vertikální"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31292"
 msgid "Set PVR Channels OSD Layout"
-msgstr "Setze TV Kanal OSD Ansicht "
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31293"
 msgid ""
 "Changes the OSD layout of the Live TV channels.[CR]Default is 'Horizontal'."
-msgstr "Ändert die Darstellung des OSD Layouts der TV Kanäle während der Wiedergabe.[CR]Standard ist 'Horizontal'."
+msgstr ""
 
 #: /16x9/VideoOSDBookmarks.xml
 msgctxt "#31294"
 msgid "No boomarks available"
-msgstr "Keine Kapitel verfügbar"
+msgstr "Žádné záložky nejsou k dispozici"
 
 #: /16x9/Variables.xml
 msgctxt "#31295"
 msgid "Hardware decoding is active"
-msgstr "Hardware Decoding aktiv"
+msgstr "Hardwarové dekódovaní je zapnuté"
 
 #: /16x9/Variables.xml
 msgctxt "#31296"
 msgid "Hardware decoding is inactive"
-msgstr "Hardware Decoding inaktiv"
+msgstr "Hardwarové dekódovaní je vypnuté"
 
 #: /16x9/IncludesDialogSettings.xml
 msgctxt "#31297"
 msgid "Media processing info"
-msgstr "Media Processing Info"
+msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31298"
 msgid "Subtitle styling"
-msgstr "Untertitelstil"
+msgstr "stylování titulků"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31299"
 msgid "Shift"
-msgstr "Shift"
+msgstr "přeskočit"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31300"
 msgid "Shift[CR]Down"
-msgstr "Nach[CR]unten"
+msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31301"
 msgid "Mode"
-msgstr "Modus"
+msgstr "mod"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31302"
 msgid "Offset"
-msgstr "Offset"
+msgstr "odstazení"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31303"
 msgid "Apply"
-msgstr "Apply"
+msgstr "Aplikovat"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31304"
 msgid "Shift [B]UP[/B]"
-msgstr "Schiebe nach [B]OBEN[/B]"
+msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31305"
 msgid "Shift [B]DOWN[/B]"
-msgstr "Schiebe nach [B]UNTEN[/B]"
+msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31306"
 msgid "Offset [B]MINUS[/B]"
-msgstr "Offset [B]MINUS[/B]"
+msgstr "Posun [B]MÍNUS[/B]"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31307"
 msgid "Offset [B]PLUS[/B]"
-msgstr "Offset [B]PLUS[/B]"
+msgstr "Posun [B]PLUS[/B]"
 
 #: /16x9/Variables.xml
 msgctxt "#31308"
 msgid ""
 "Enables the video fullscreen NextUp popup notification for LiveTV "
 "playback.[CR]Enabled by default."
-msgstr "Zeigt während der Wiedergabe die nachfolgende Live-TV Sendung als Popup an.[CR]Standardmäßig aktiviert."
+msgstr ""
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31309"
 msgid "Live TV NextUp Popup"
-msgstr "'Als nächstes' Popup für Live-TV"
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31310"
 msgid "Media"
-msgstr "Medien"
+msgstr "Média"
 
 #: /16x9/Variables.xml
 msgctxt "#31311"
 msgid "Hides the Now Playing overlay during playback."
-msgstr "Blendet das 'Jetzt läuft' Overlay während einer aktiven WIedergabe aus."
+msgstr ""
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31312"
 msgid "Hide Now Playing overlay"
-msgstr "Blende 'Jetzt läuft' Overlay aus"
+msgstr ""
 
 #: /16x9/MusicOSD.xml
 msgctxt "#31313"
 msgid "Fanart options"
-msgstr "Fanart Optionen"
+msgstr "Možnosti fanartu"
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31314"
 msgid "Want to know more?"
-msgstr "Willst du mehr wissen?"
+msgstr ""
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
 msgid "Press [B]DOWN[/B] to search online for the selected actor."
-msgstr "Drücke nach [B]UNTEN[/B] um online nach dem Darsteller zu suchen."
+msgstr ""
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31316"
 msgid "Local albums"
-msgstr "Lokale Alben"
+msgstr "lokální alba"
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31317"
 msgid "Tracklist"
-msgstr "Trackliste"
+msgstr "Seznam stop"
 
 #: /16x9/IncludesDialogMusicInfo.xml
 msgctxt "#31318"
 msgid "Mood"
-msgstr "Stimmung"
+msgstr "Nálada"
 
 #: /16x9/DialogFullScreenInfo.xml
 msgctxt "#31319"
 msgid "Searching for cast"
-msgstr "Suche Darsteller"
+msgstr "Hledat pro obsazení"
 
 #: /16x9/MyVideoNav.xml
 msgctxt "#31320"
 msgid "unwatched episodes"
-msgstr "ungesehene Folgen"
+msgstr "Nesledované epizody"
 
 #: /16x9/MyVideoNav.xml
 msgctxt "#31321"
 msgid "unwatched episode"
-msgstr "ungesehene Folge"
+msgstr "nezhlédnutá epizoda"
 
 #: /16x9/Variables.xml
 msgctxt "#31322"
 msgid "episodes in"
-msgstr "Folgen in"
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31323"
 msgid "episode available"
-msgstr "Folge verfügbar"
+msgstr ""
 
 #: /16x9/Settings.xml
 msgctxt "#31324"
 msgid "Interface"
-msgstr "Oberfläche"
+msgstr ""
 
 msgctxt "#31500"
 msgid "Widget Group 1"
-msgstr "Widget Gruppe 1"
+msgstr "Skupina widgetů 1"
 
 msgctxt "#31501"
 msgid "Widget Group 2"
-msgstr "Widget Gruppe 2"
+msgstr "Skupina widgetů 2"
 
 msgctxt "#31502"
 msgid "Widget Group 3"
-msgstr "Widget Gruppe 3"
+msgstr "Skupina widgetů 3"
 
 msgctxt "#31503"
 msgid "Widget Group 4"
-msgstr "Widget Gruppe 4"
+msgstr "Skupina widgetů 4"
 
 msgctxt "#31504"
 msgid "Widget Group 5"
-msgstr "Widget Gruppe 5"
+msgstr "Skupina widgetů 5"
 
 msgctxt "#31505"
 msgid "Widget Group 6"
-msgstr "Widget Gruppe 6"
+msgstr "Skupina widgetů 6"
 
 msgctxt "#31506"
 msgid "Widget Group 7"
-msgstr "Widget Gruppe 7"
+msgstr "Skupina widgetů 7"
 
 msgctxt "#31507"
 msgid "Widget Group 8"
-msgstr "Widget Gruppe 8"
+msgstr "Skupina widgetů 8"
 
 msgctxt "#31508"
 msgid "Edit"
-msgstr "Edit"
+msgstr "Upravit"
 
 msgctxt "#31509"
 msgid "Set Widget"
-msgstr "Setze Widget"
+msgstr "Nastavit widget"
 
 msgctxt "#31510"
 msgid "IMDB Top250 Movies"
-msgstr "IMDB Top250 Filme"
+msgstr "Top250 filmů na iMDB - alternativa českého CSFD"
 
 msgctxt "#31511"
 msgid "TuneIn Recents"
-msgstr "TuneIn Verlauf"
+msgstr "Naladit nedávné"
 
 msgctxt "#31512"
 msgid "Audio Add-ons"
-msgstr "Audio Add-ons"
+msgstr ""
 
 msgctxt "#31513"
 msgid "TuneIn Local"
-msgstr "TuneIn Lokal"
+msgstr "Naladit lokální"
 
 msgctxt "#31514"
 msgid "TuneIn Favourites"
-msgstr "TuneIn Favouriten"
+msgstr "Naladit oblíbené"
 
 msgctxt "#31515"
 msgid "Drama and Thriller Movies"
-msgstr "Drama und Thriller Filme"
+msgstr "Dramatické a triler filmy"
 
 msgctxt "#31516"
 msgid "Drama and Thriller TV Shows"
-msgstr "Drama und Thriller Serien"
+msgstr "Dramatické a triler seriály"
 
 msgctxt "#31517"
 msgid "War and History Movies"
-msgstr "Krieg und Historie Filme"
+msgstr "Válečné a historické filmy"
 
 msgctxt "#31518"
 msgid "War and History TV Shows"
-msgstr "Krieg und Historie Serien"
+msgstr "Válečné a historické seriály"
 
 msgctxt "#31519"
 msgid "Video Add-ons"
-msgstr "Video Add-ons"
+msgstr "video adony"
 
 msgctxt "#31520"
 msgid "Program Add-ons"
-msgstr "Programm Add-ons"
+msgstr "Adony programu"
 
 msgctxt "#31521"
 msgid "Picture Add-ons"
-msgstr "Bilder Add-ons"
+msgstr "Adony obrázku"
 
 msgctxt "#31522"
 msgid "New Search"
-msgstr "Neue Suche"
+msgstr "nové vyhledávání"
 
 msgctxt "#31523"
 msgid "Text Input"
-msgstr "Texteingabe"
+msgstr "Textový vstup"
 
 msgctxt "#31524"
 msgid "Numeric Input"
-msgstr "Zahleneingabe"
+msgstr "Číselný vstup"
 
 msgctxt "#31525"
 msgid "Skip Search menu item"
-msgstr "Überspringe 'Suche' Menüeintrag"
+msgstr "Přeskočit nabídku hledání předmětů"
 
 msgctxt "#31526"
 msgid ""
 "Enable this, if your first main menu item is 'Search' and you want the next "
 "item focused after Kodi has been started."
-msgstr "Aktiviere diese Option, falls dein erstes Hauptmenü-Item 'Suche' ist und du automatisch den nächsten Eintrag fokusiert haben willst nachdem Kodi gestaret ist."
+msgstr ""
 
 msgctxt "#31527"
 msgid "'Wide' for TV Shows / Movies / Sets / Artists"
-msgstr "'Breit' für Serien / Filme / Sets / Interpreten"
+msgstr ""
 
 msgctxt "#31528"
 msgid "'Poster' for TV Shows / Movies / Sets"
-msgstr "'Poster' für Serien / Filme / Sets"
+msgstr ""
 
 msgctxt "#31529"
 msgid "'Square' for Music / Add-ons"
-msgstr "'Quadrat' für Music / Add-ons"
+msgstr "'Čtverec' pro hudbu / adony"
 
 msgctxt "#31530"
 msgid "'Square Info' for Music / Add-ons"
-msgstr "'Quadrat Info' für Music / Add-ons"
+msgstr "'Čtverová informace' pro hudbu / adony"
 
 msgctxt "#31531"
 msgid "loading home"
-msgstr "lade Startseite"
+msgstr "načítání domácího prostředí"
 
 msgctxt "#31532"
 msgid "updating widgets"
-msgstr "update widgets"
+msgstr "aktualizace widgetů"
 
 msgctxt "#31533"
 msgid "done!"
-msgstr "fertig!"
+msgstr "hotovo!"
 
 msgctxt "#31534"
 msgid "Air Time"
-msgstr "Sendetermin"
+msgstr "datum vypuštění"
 
 msgctxt "#31535"
 msgid "Warning: No mouse support"
-msgstr "Warnung: Keine Maus-Unterstützung!"
+msgstr "Pozor: Myš není podporovaná."
 
 msgctxt "#31536"
 msgid ""
 "This skin has no mouse support. It's highly recommended to disable mouse "
 "controls in Kodi to prevent issues. Should I do this for you?"
-msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Soll ich das für dich tun?"
+msgstr "Tento skin nemá podporu myš. Je doporučeno vypnout ovládaní pomocí myši v Kodi aby se zabránilo problémům"
 
 msgctxt "#31537"
 msgid ""
 "This skin has no mouse support. It's highly recommended to disable mouse "
 "controls in Kodi. Otherwise this can cause bugs and errors in some windows."
-msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Andernfalls kann es zu Problemen im Betrieb führen."
+msgstr "Tento skin nemá podporu myš. Je doporučeno vypnout ovládaní pomocí myši v Kodi. Pokud tak neučiníte mohou nastat problémy v některých oknech"
 
 msgctxt "#31538"
 msgid "Better fTV experience"
-msgstr "Besseres fTV-Erlebniss"
+msgstr "Lepší pocit z fTV"
 
 msgctxt "#31539"
 msgid ""
 "It's recommended to disable 'Show parent folders' and 'Show all items'. "
 "Should I do this for you?"
-msgstr "Es wird empfohlen 'Symbol für übergeordnetes Verzeichnis' und 'Zeige alle Einträge' zu deaktivieren. Soll ich das für dich tun?"
+msgstr "Je doporučeno vypnout \"Show parent folders\" a \"Show all items\". Mám to "
 
 msgctxt "#31540"
 msgid ""
 "Still there? Press 'Continue' to watch the next episode, otherwise the "
 "playback will be stopped."
-msgstr "Noch da? Drücke 'Weiter' um die nächste Folge zu sehen. Andernfalls wird die Wiedergabe gestoppt."
+msgstr "Stále zde? Stiskněte 'Pokračovat' pro sledování další epizody, nebo bude přehrávaní zastaveno."
 
 msgctxt "#31541"
 msgid "Continue"
-msgstr "Weiter"
+msgstr "Pokračovat"
 
 msgctxt "#31542"
 msgid "Continue Watching?"
-msgstr "Weiter ansehen?"
+msgstr "Pokračovat ve sledování ?"
 
 msgctxt "#31543"
 msgid "Please select"
-msgstr "Bitte auswählen"
+msgstr "Prosím vyberte"
 
 msgctxt "#31544"
 msgid "Change widget name"
-msgstr "Ändere Widget-Name"
+msgstr "Změnit název widgetu"
 
 msgctxt "#31545"
 msgid "View[CR]TV guide"
-msgstr "Öffne[CR]TV Guide"
+msgstr "Zobrazit[CR] TV návod"
 
 msgctxt "#31546"
 msgid "View[CR]TV recordings"
-msgstr "Öffne[CR]TV Aufnahmen"
+msgstr "Zobrazit[CR] TV nahrávání"
 
 msgctxt "#31547"
 msgid "View[CR]All groups"
-msgstr "Öffne[CR]Alle Gruppen"
+msgstr "Zobrazit[CR] všechny skupiny"
 
 msgctxt "#31548"
 msgid "View[CR]TV timers"
-msgstr "Öffne[CR]TV Timer"
+msgstr "Zobrazit[CR] TV časovače"
 
 msgctxt "#31549"
 msgid "Episode"
-msgstr "Episode"
+msgstr "Epizoda"
 
 msgctxt "#31550"
 msgid "'Episode' for episodes or video add-on contents"
-msgstr "'Episode' für Episoden or Video Add-On Inhalte"
+msgstr ""

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.3b"
+	version="3.2.4"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,9 +34,10 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.3b[/B]
-- Fixed rating on season level #2
-- Fixed info labels in music info dialog
+[B]3.2.4[/B]
+- Improved code and look of banner feature
+- Added latest CZ and FR translations
+- Other minor fixes and changes
 
 
 See changelog.txt for more details.</news>

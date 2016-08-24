@@ -1,5 +1,10 @@
 Changelog:
 
+3.2.4
+- Improved code and look of banner feature
+- Added latest CZ and FR translations
+- Other minor fixes and changes
+
 3.2.3b
 - Fixed rating on season level #2
 - Fixed info labels in music info dialog

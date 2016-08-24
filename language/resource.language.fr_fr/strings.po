@@ -4,53 +4,53 @@
 # Addon Provider: Hitcher
 # Translators:
 # Translators:
-# sualfred <su4lfred@gmail.com>, 2015-2016
+# Loïc Laurent <ll413c@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-18 07:50+0000\n"
+"PO-Revision-Date: 2016-08-24 12:52+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
+"Language-Team: French (France) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.8.7\n"
 
 msgctxt "#31100"
 msgid "Photos"
-msgstr "Bilder"
+msgstr "Photos"
 
 msgctxt "#31001"
 msgid "US"
-msgstr "US"
+msgstr "États-Unis d'Amérique"
 
 msgctxt "#31002"
 msgid "UK"
-msgstr "UK"
+msgstr "Royaume-Uni"
 
 msgctxt "#31003"
 msgid "Germany"
-msgstr "Deutschland"
+msgstr "Allemagne"
 
 msgctxt "#31004"
 msgid "minute"
-msgstr "Minute"
+msgstr "minute"
 
 msgctxt "#31005"
 msgid "hour"
-msgstr "Stunde"
+msgstr "heure"
 
 msgctxt "#31006"
 msgid "Starts at"
-msgstr "Startet bei"
+msgstr "Commence à"
 
 msgctxt "#31101"
 msgid "Apps"
-msgstr "Apps"
+msgstr "Applications"
 
 msgctxt "#31103"
 msgid "Artwork Downloader"
@@ -62,237 +62,237 @@ msgstr "Cinema Experience"
 
 msgctxt "#31000"
 msgid "Audio Options"
-msgstr "Audio Optionen"
+msgstr "Options Audio"
 
 msgctxt "#31007"
 msgid "System music files"
-msgstr "System-Musikdateien"
+msgstr ""
 
 msgctxt "#31008"
 msgid "Current selection"
-msgstr "Aktuelle Auswahl"
+msgstr "Sélection courante"
 
 msgctxt "#31014"
 msgid "Next Movie"
-msgstr "Nächster Film"
+msgstr "Prochain Film"
 
 msgctxt "#31015"
 msgid "Next Video"
-msgstr "Nächstes Video"
+msgstr "Prochaine Vidéo"
 
 msgctxt "#31009"
 msgid "Open playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Ouvrir la liste de lecture"
 
 msgctxt "#31017"
 msgid "View all of your enabled and disabled add-ons."
-msgstr "Aktivierte und deaktivierte Addons anzeigen"
+msgstr "Voir l'ensemble de vos add-ons activés et désactivés."
 
 msgctxt "#31018"
 msgid "View add-ons that have updates available."
-msgstr "Addons mit verfügbaren Aktualisierungen anzeigen"
+msgstr "Voir les add-ons pouvant être mis à jour."
 
 msgctxt "#31019"
 msgid "View add-ons that are currently being downloaded."
-msgstr "Addons anzeigen, die gerade heruntergeladen werden"
+msgstr "Voir les add-ons qui sont en cours de téléchargement."
 
 msgctxt "#31020"
 msgid ""
 "View all the system add-ons including Dependencies, Orphaned Dependencies, "
 "and Running add-ons."
-msgstr "Systemaddons inklusive Abhängigkeiten, verweisten Abhängigkeiten und[CR]laufende Addons anzeigen"
+msgstr "Voir tous les add-ons système, ce qui inclus les add-ons actifs, leurs dépendances ainsi que les orphelins."
 
 msgctxt "#31021"
 msgid "Download add-ons from your installed repos."
-msgstr "Addons aus den installierten Repositories herunterladen"
+msgstr "Télécharger des add-ons depuis vos dépôts."
 
 msgctxt "#31010"
 msgid "Save playlist"
-msgstr "Wiedergabeliste speichern"
+msgstr "Enregistrer la liste de lecture"
 
 msgctxt "#31011"
 msgid "Close playlist"
-msgstr "Wiedergabeliste schließen"
+msgstr "Fermer la liste de lecture"
 
 msgctxt "#31012"
 msgid "Current playlist"
-msgstr "Aktuelle Wiedergabeliste"
+msgstr "Liste de lecture courante"
 
 msgctxt "#31013"
 msgid "Muted"
-msgstr "Stumm"
+msgstr "Muet"
 
 msgctxt "#31016"
 msgid "Settings level"
-msgstr "Einstellungsebene"
+msgstr "Niveaux de réglages"
 
 msgctxt "#31027"
 msgid "Install add-ons using the file browser."
-msgstr "Addons durch den Dateimanager installieren."
+msgstr "Installer des add-ons en utilisant le navigateur de fichiers."
 
 msgctxt "#31028"
 msgid "Search for an add-on from your installed repos."
-msgstr "Suche nach Addons in den installierten Repositories."
+msgstr "Rechercher un add-on depuis vos dépôts installés."
 
 msgctxt "#31022"
 msgid "Update[CR]Now"
-msgstr "Jetzt[CR]aktualisieren"
+msgstr "Mettre à jour[CR]Maintenant"
 
 msgctxt "#31030"
 msgid "Customise the home menu to your liking with the Skin Shortcuts script."
-msgstr "Verändert das Home Menü nach eigenen Vorstellungen mit dem Skin-Shortcuts-Skript"
+msgstr "Personnaliser le menu d'accueil selon vos envies avec le script Skin Shorcuts."
 
 msgctxt "#31031"
 msgid "Customise the shutdown menu to include your favourite actions."
-msgstr "Verändert das Ausschaltmenü, um die gewünschten Aktionen aufzunehmen"
+msgstr "Personnaliser le menu d'arrêt pour y inclure vos actions favorites."
 
 msgctxt "#31032"
 msgid "Hide thumbnails for unwatched episodes to avoid possible spoilers."
-msgstr "Blende Vorschau ungesehener Episoden aus, um Spoiler zu vermeiden"
+msgstr "Masquer les vignettes des épisodes non vus pour éviter autant que possible les spoilers."
 
 msgctxt "#31023"
 msgid "Widget Type"
-msgstr "Widget Typ"
+msgstr "Type de Widget"
 
 msgctxt "#31034"
 msgid ""
 "Uses a combination of Fanart and Logo to display wide "
 "icons.[CR]Alternatively create and add your own as 'ftv' artwork."
-msgstr "Verwendet eine Kombination aus Fanart und Logo um ein breites Symbol darzustellen.[CR]Erzeuge und füge alternativ eigene Grafiken als 'ftv' hinzu."
+msgstr "Utiliser une combinaison du Fanart et du Logo pour afficher des icônes larges.[CR]Alternativement créer et ajouter les votre en tant que artwork 'ftv'."
 
 msgctxt "#31035"
 msgid ""
 "Runs Artwork Downloader in the background to fetch TV Show logos needed for "
 "wide icons."
-msgstr "Lässt Artwork Downloader im Hintergrund laufen, um Serienlogos für breite Symbole herunterzuladen."
+msgstr "Exécuter Artwork Downloader en arrière plan pour récuperer les logos des séries nécessaires pour la création des icônes larges."
 
 msgctxt "#31036"
 msgid "Displays fanart for your media in the background."
-msgstr "Stellt Fanart der Medien als Hintergrundbild dar."
+msgstr "Afficher le Fanart de vos média en arrière-plan."
 
 msgctxt "#31024"
 msgid "Widget Name"
-msgstr "Widget Name"
+msgstr "Nom du Widget"
 
 msgctxt "#31038"
 msgid "Select your scrapers preferred certification county."
-msgstr "Wähle bevorzugtes Land für die Altersbewertung des Scrapers aus"
+msgstr "Sélectionnez votre pays de certification pour les scrapers."
 
 msgctxt "#31039"
 msgid "Enable debug grid.[CR]Useful when skinning."
-msgstr "Debug Gitter aktivieren.[CR]Nützlich für Skinning."
+msgstr "Activer la grille de débogage.[CR]Utile durant le développement."
 
 msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
-msgstr "Debug Info aktivieren.[CR]Nützlich für die Meldung von Fehlern."
+msgstr "Activer les étiquettes d'infos.[CR]Utile pour rapporter des bogues."
 
 msgctxt "#31025"
 msgid "Widget Path"
-msgstr "Widget Pfad"
+msgstr "Chemin du Widget"
 
 msgctxt "#31026"
 msgid "Overview"
-msgstr "Übersicht"
+msgstr "Aperçu"
 
 msgctxt "#31043"
 msgid "Turn Off Randomise"
-msgstr "Deaktiviere Shuffle"
+msgstr "Désactiver Aléatoire"
 
 msgctxt "#31029"
 msgid "Addon Details"
-msgstr "Addon Details"
+msgstr "Détails de l'Add-on"
 
 msgctxt "#31045"
 msgid "Turn On Randomise"
-msgstr "Aktiviere Shuffle"
+msgstr "Activer Aléatoire"
 
 msgctxt "#31046"
 msgid "Turn Off Shuffle All"
-msgstr "Deaktiviere Shuffle All"
+msgstr ""
 
 msgctxt "#31033"
 msgid "Launch Now"
-msgstr "Jetzt starten"
+msgstr "Démarrer Maintenant"
 
 msgctxt "#31037"
 msgid "Rollback Addon"
-msgstr "Addon zurücksetzen"
+msgstr ""
 
 msgctxt "#31041"
 msgid "Debug grid"
-msgstr "Debug Gitter"
+msgstr "Grille de débogage"
 
 msgctxt "#31042"
 msgid "Debug labels"
-msgstr "Debug Bezeichnungen"
+msgstr "Étiquettes de débogage"
 
 msgctxt "#31044"
 msgid "Local subtitle found!"
-msgstr "Lokaler Untertitel verfügbar!"
+msgstr "Sous-titre local trouvé!"
 
 msgctxt "#31052"
 msgid "Turn On Shuffle All"
-msgstr "Aktiviere Shuffle All"
+msgstr ""
 
 msgctxt "#31053"
 msgid "Turn Off Repeat"
-msgstr "Deaktiviere Repeat"
+msgstr "Désactiver Répéter"
 
 msgctxt "#31054"
 msgid "Repeat This Item"
-msgstr "Wiederhole Item"
+msgstr "Répéter Cet Item"
 
 msgctxt "#31055"
 msgid "Turn On Repeat All"
-msgstr "Aktiviere Wiederholung"
+msgstr "Activer Tout Répéter"
 
 msgctxt "#31056"
 msgid "Move, copy and delete your files with KODI's built-in file manager."
-msgstr "Verschiebe, kopiere und lösche Dateien mit KODIs eingebautem Dateimanager"
+msgstr "Déplacer, copier et supprimer votre fichier avec l'explorateur de fichiers intégré à Kodi."
 
 msgctxt "#31057"
 msgid "Watch Again"
-msgstr "Nochmal ansehen"
+msgstr "Regarder à nouveau"
 
 msgctxt "#31058"
 msgid "Today's weather:"
-msgstr "Heutiges Wetter:"
+msgstr "Météo du jour:"
 
 msgctxt "#31059"
 msgid "Tonight's weather:"
-msgstr "Heute Nacht:"
+msgstr "Météo de ce soir:"
 
 msgctxt "#31060"
 msgid "Play Now"
-msgstr "Jetzt abspielen"
+msgstr "Lire Maintenant"
 
 msgctxt "#31050"
 msgid "Show Changelog"
-msgstr "Zeige Changelog"
+msgstr "Afficher le journal des modifications"
 
 msgctxt "#31047"
 msgid "Visualisation Presets"
-msgstr "Visualisierungspresets"
+msgstr "Préréglages de la Visualisation"
 
 msgctxt "#31048"
 msgid "Playlist Options"
-msgstr "Wiedergabeliste-Optionen"
+msgstr "Options de la liste de lecture"
 
 msgctxt "#31049"
 msgid "Customise Home Menu"
-msgstr "Home-Menü anpassen"
+msgstr "Personnaliser le menu d'accueil"
 
 msgctxt "#31051"
 msgid "Settings can be accessed from the Shutdown menu or by rebooting XBMC!"
-msgstr "Einstellungen können vom Ausschaltmenü oder durch einen Neustart aufgerufen werden!"
+msgstr "Les réglages peuvent être atteint depuis le menu d'arrêt ou en redémarrant Kodi!"
 
 msgctxt "#31062"
 msgid "Choose Thumb"
-msgstr "Wähle Thumb"
+msgstr "Choisir une Vignette"
 
 msgctxt "#31067"
 msgid "Choose Fanart"
-msgstr "Wähle Fanart"
+msgstr "Choisir un Fanart"
 
 msgctxt "#31068"
 msgid "IP"
@@ -300,148 +300,148 @@ msgstr "IP"
 
 msgctxt "#31069"
 msgid "Change Rating"
-msgstr "Bewertung ändern"
+msgstr "Changer la Note"
 
 msgctxt "#31070"
 msgid "Similar Titles"
-msgstr "Ähnliche Titel"
+msgstr "Titres Similaires"
 
 msgctxt "#31071"
 msgid "Starring"
-msgstr "In den Hauptrollen"
+msgstr "Rôle"
 
 msgctxt "#31072"
 msgid "Directed by"
-msgstr "Unter der Regie von"
+msgstr "Réalisé par"
 
 msgctxt "#31073"
 msgid "Next episode"
-msgstr "Nächste Episode"
+msgstr "Prochain épisode"
 
 msgctxt "#31074"
 msgid "Browse TV Show"
-msgstr "Durchsuche TV Show"
+msgstr "Parcourir les séries"
 
 msgctxt "#31075"
 msgid "Play Trailer"
-msgstr "Trailer abspielen"
+msgstr "Lire la Bande Annonce"
 
 msgctxt "#31076"
 msgid "Cast and Role"
-msgstr "Besetzung und Rollen"
+msgstr "Casting"
 
 msgctxt "#31077"
 msgid "Viewers Also Watched"
-msgstr "Andere sahen auch"
+msgstr "Les téléspectateurs ont également regardés"
 
 msgctxt "#31078"
 msgid "Sorry, we have no items for this title."
-msgstr "Keine Einträge zu diesem Titel vorhanden."
+msgstr "Désolé, nous n'avons aucun item pour ce titre."
 
 msgctxt "#31079"
 msgid "Movie Widget"
-msgstr "Film Widget"
+msgstr "Widget Film"
 
 msgctxt "#31080"
 msgid "TV Show Widget"
-msgstr "Serien Widget"
+msgstr "Widget Série TV"
 
 msgctxt "#31081"
 msgid "Music Widget"
-msgstr "Musik Widget"
+msgstr "Widget Musique"
 
 msgctxt "#31082"
 msgid "Videos Widget"
-msgstr "Video Widget"
+msgstr "Widget Vidéos"
 
 msgctxt "#31083"
 msgid "Programs Widget"
-msgstr "Programm Widget"
+msgstr "Widget Programme"
 
 msgctxt "#31084"
 msgid "Pictures Widget"
-msgstr "Bilder Widget"
+msgstr "Widget Images"
 
 msgctxt "#31085"
 msgid "Shutdown Menu"
-msgstr "Ausschaltmenü"
+msgstr "Menu d'arrêt"
 
 msgctxt "#31086"
 msgid "Sorted by"
-msgstr "Sortierung"
+msgstr "Trié par"
 
 msgctxt "#31087"
 msgid "Music Files"
-msgstr "Musik Dateien"
+msgstr "Fichiers musicaux"
 
 msgctxt "#31088"
 msgid "Current Playlist"
-msgstr "Aktuelle Playliste"
+msgstr "Liste de lecture courante"
 
 msgctxt "#31089"
 msgid "View Options"
-msgstr "Anzeige[CR]Optionen"
+msgstr "Options d'Affichage"
 
 msgctxt "#31090"
 msgid "Update Library"
-msgstr "Bibliothek aktualisieren"
+msgstr "Mettre à jour la bibliothèque"
 
 msgctxt "#31091"
 msgid "Stop scanning"
-msgstr "Scan abbrechen"
+msgstr "Arrêter le scan"
 
 msgctxt "#31092"
 msgid "Sort By"
-msgstr "Sortierung"
+msgstr "Trier Par"
 
 msgctxt "#31093"
 msgid "Filter By"
-msgstr "Filtern nach"
+msgstr "Filtrer Par"
 
 msgctxt "#31094"
 msgid "Save Playlist"
-msgstr "Playliste speichern"
+msgstr "Enregistrer la Liste de lecture"
 
 msgctxt "#31095"
 msgid "Clear Playlist"
-msgstr "Playliste löschen"
+msgstr "Nettoyer la Liste de lecture"
 
 msgctxt "#31096"
 msgid "Your Songs"
-msgstr "Musik"
+msgstr "Vos Chansons"
 
 msgctxt "#31097"
 msgid "Music Library"
-msgstr "Musik Datenbank"
+msgstr "Bibliothèque Musicale"
 
 msgctxt "#31098"
 msgid "Your Photos"
-msgstr "Bilder"
+msgstr "Vos Photos"
 
 msgctxt "#31099"
 msgid "Start Slideshow"
-msgstr "Diashow starten"
+msgstr "Démarrer le Diaporama"
 
 msgctxt "#31061"
 msgid "Enable Horizontal home layout"
-msgstr "Aktiviere horizontales Home Layout"
+msgstr "Activer la mise en page horizontal sur l'écran d'accueil"
 
 msgctxt "#31063"
 msgid "Add-ons"
-msgstr "Addons"
+msgstr "Add-ons"
 
 msgctxt "#31064"
 msgid "Custom background image"
-msgstr "Benutzerdefiniertes Hintergrundbild"
+msgstr "Fond d'écran personnalisé"
 
 #: /16x9/MusicOSD.xml:269
 msgctxt "#31102"
 msgid "Pan and zoom fanart"
-msgstr "Fanart Zoom Animation"
+msgstr ""
 
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
-msgstr "Blende 'Mauswarnung' aus"
+msgstr "Masquer l'avertissement 'Souris'"
 
 msgctxt "#31066"
 msgid "Cinema Exp."
@@ -449,115 +449,115 @@ msgstr "Cinema Exp."
 
 msgctxt "#31105"
 msgid "Your Addons"
-msgstr "Addons"
+msgstr "Vos Addons"
 
 msgctxt "#31106"
 msgid "Now Playing"
-msgstr "Jetzt läuft"
+msgstr "En ce moment"
 
 msgctxt "#31107"
 msgid "TV Roles"
-msgstr "TV Rollen"
+msgstr ""
 
 msgctxt "#31108"
 msgid "Known For"
-msgstr "Bekannt aus"
+msgstr "Connu pour"
 
 msgctxt "#31109"
 msgid "Watch Now"
-msgstr "Jetzt ansehen"
+msgstr "Regarder Maintenant"
 
 msgctxt "#31110"
 msgid "Written by"
-msgstr "Geschrieben von"
+msgstr "Écrit par"
 
 msgctxt "#31111"
 msgid "Sorry, no items where found for this search."
-msgstr "Leider fand die Suche keine Einträge."
+msgstr "Désolé, aucun item trouvé pour cette recherche."
 
 msgctxt "#31112"
 msgid "Please try again."
-msgstr "Bitte noch einmal versuchen."
+msgstr "Veuillez réessayer."
 
 msgctxt "#31113"
 msgid "Results for"
-msgstr "Ergebnisse für"
+msgstr "Résultats pour"
 
 msgctxt "#31114"
 msgid "Customise Shutdown Menu"
-msgstr "Ausschaltmenü anpassen"
+msgstr "Personnaliser le Menu d'Arrêt"
 
 msgctxt "#31115"
 msgid ""
 "Change the skin, set language and region, change file listing options and "
 "set up a screensaver."
-msgstr "Ändere den Skin · Wähle Sprache und Region · Ändere Dateilistenoptionen[CR]Setze Bildschirmschoner"
+msgstr "Changer l'habillage, définir la langue et la région, modifier les options d'affichage des fichiers et configurer un écran de veille."
 
 msgctxt "#31116"
 msgid "Manage, browse for, install and modify Add-ons."
-msgstr "Organisiere die installierten Addons · Installiere Addons[CR]Passe Addon-Einstellungen an"
+msgstr "Contrôlez, explorez, installez et modifiez les Add-ons."
 
 msgctxt "#31117"
 msgid ""
 "Manage your media library, set database options, change media listing "
 "options."
-msgstr "Organisiere die Medien-Bibliothek · Setze Datenbank-Optionen · Ändere die Auflistungsoptionen"
+msgstr "Gérer votre bibliothèque, définir les options de la base de données, modifier les options de listing des médias."
 
 msgctxt "#31118"
 msgid ""
 "Manage your player settings, set media playback options, change the "
 "behaviour how supported media files will be handled."
-msgstr "Organisiere die Wiedergabe-Einstellungen · Setze Media Abspieloptionen · Ändere das Verhalten, wie mit Medien umgegangen wird"
+msgstr ""
 
 #: /16x9/MyWeather.xml
 msgctxt "#31119"
 msgid "Location"
-msgstr "Standort"
+msgstr "Emplacement"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31120"
 msgid "Select Movie Rating Provider"
-msgstr "Quelle der Film-Bewertungen auswählen"
+msgstr "Sélectionnez le fournisseur de notes pour les films"
 
 msgctxt "#31121"
 msgid ""
 "Setup and calibrate displays, configure audio output, setup remote controls,"
 " set power saving options, enable debugging and setup master lock."
-msgstr "Konfiguriere und kalibriere Bildschirme · Konfiguriere Audioausgabe · Setze Fernbedienungseinstellungen[CR]Setze Energiespar-Optionen · Aktiviere Debugging · Richte die Master-Sperre ein"
+msgstr "Installer et calibrer l'affichage, configurer la sortie audio, paramétrer les télécommandes, choisir les options d'économie d'énergie, activer le débogage et définir un mot de passe maître."
 
 msgctxt "#31122"
 msgid ""
 "Setup control of Kodi via UPnP and HTTP, configure file sharing, enable "
 "Zeroconf and configure AirPlay."
-msgstr "Richte Zugriff auf Kodi via UPnP und HTTP ein · Konfiguriere die Dateifreigabe[CR]Aktiviere Zeroconf · Konfiguriere AirPlay"
+msgstr "Paramétrer le contrôle de Kodi via UPnp et HTTP, configurer le partage de fichier, activer Zeroconf et configurer AirPlay."
 
 msgctxt "#31123"
 msgid "Profiles, File Manager, System Information and Settings Level."
-msgstr "Profile, Dateimanager, Systeminformationen und Einstellungsebene"
+msgstr "Profils, Gestionnaire de Fichiers, Informations Système et Niveaux de Réglages"
 
 msgctxt "#31124"
 msgid ""
 "Personalise your experience with profiles. Includes enabling login screen, "
 "profile creation and management."
-msgstr "Personalisiere die Benutzererfahrung mit Profilen. Beinhaltet Anmeldebildschirm, Profilerstellung und -organisation"
+msgstr ""
 
 msgctxt "#31125"
 msgid "Login"
-msgstr "Anmeldung"
+msgstr "Connexion"
 
 msgctxt "#31126"
 msgid "Last login"
-msgstr "Letzte Anmeldung"
+msgstr "Dernière connexion"
 
 msgctxt "#31127"
 msgid ""
 "View your system's information. Includes storage, network, and hardware "
 "information."
-msgstr "Systeminformationen anzeigen. Beinhaltet Speicher, Netzwerk und Hardware "
+msgstr "Afficher les informations de votre système. Comprend le stockage, le réseau et les informations matérielles."
 
 msgctxt "#31128"
 msgid "About"
-msgstr "Über"
+msgstr "A propos"
 
 msgctxt "#31129"
 msgid "Kodi"
@@ -565,103 +565,103 @@ msgstr "Kodi"
 
 msgctxt "#31130"
 msgid "Hide Unwatched Episode Thumbs"
-msgstr "Vorschau ungesehener Episoden ausblenden"
+msgstr "Masquer les vignettes des épisodes non vus"
 
 msgctxt "#31131"
 msgid "Enable Wide TV Show Icons"
-msgstr "Breite Seriensymbole aktivieren"
+msgstr "Activer les icônes larges pour les séries"
 
 msgctxt "#31132"
 msgid "Click to download TV Show logos"
-msgstr "Klicken, um Serienlogos herunterzuladen"
+msgstr "Cliquez pour télécharger les logos des séries"
 
 msgctxt "#31133"
 msgid "Enable Wide Season Icons"
-msgstr "Breite Staffelsymbole aktivieren"
+msgstr "Activer les posters de saison larges"
 
 msgctxt "#31134"
 msgid "Enable Fanart"
-msgstr "Fanart aktivieren"
+msgstr "Activer Fanart"
 
 msgctxt "#31135"
 msgid "Select Rating Country"
-msgstr "Land der Bewertung auswählen"
+msgstr "Sélectionnez le pays de notation"
 
 msgctxt "#31136"
 msgid "DVD Menu"
-msgstr "DVD Menü"
+msgstr "Menu DVD"
 
 msgctxt "#31137"
 msgid "Video Options"
-msgstr "Video-Optionen"
+msgstr "Options Vidéo"
 
 msgctxt "#31138"
 msgid "Turn Subtitles On"
-msgstr "Aktiviere Untertitel"
+msgstr "Activer les Sous-Titres"
 
 msgctxt "#31139"
 msgid "Turn Subtitles Off"
-msgstr "Deaktiviere Untertitel"
+msgstr "Désactiver les Sous-Titres"
 
 msgctxt "#31140"
 msgid "Download Subtitles"
-msgstr "Untertitel herunterladen"
+msgstr "Télécharger les Sous-Titres"
 
 #: /16x9/MusicOSD.xml:269
 msgctxt "#31141"
 msgid "Crossfade fanart"
-msgstr "Crossfade Fanart"
+msgstr ""
 
 #: /16x9/script-skinshortcuts.xml:422
 msgctxt "#31142"
 msgid "Restore menu to skin defaults"
-msgstr "Menü auf Skin Standard zurücksetzen"
+msgstr "Restaurer le menu par défaut"
 
 #: /16x9/script-skinshortcuts.xml:424
 msgctxt "#31143"
 msgid "Reset all custom widgets"
-msgstr "Alle Widget-Gruppen zurücksetzen"
+msgstr "Réinitialiser l'ensemble des widgets personnalisés"
 
 #: /16x9/script-skinshortcuts.xml:426
 msgctxt "#31144"
 msgid "Backup custom widgets"
-msgstr "Widget-Sicherung erstellen"
+msgstr "Sauvegarder les widgets personnalisés"
 
 msgctxt "#31145"
 msgid "percent remaining"
-msgstr "Prozent verbleibend"
+msgstr "pourcentage restant"
 
 msgctxt "#31146"
 msgid "Special"
-msgstr "Besonderheit"
+msgstr ""
 
 msgctxt "#31147"
 msgid "minutes"
-msgstr "Minuten"
+msgstr "minutes"
 
 msgctxt "#31148"
 msgid "hours"
-msgstr "Stunden"
+msgstr "heures"
 
 msgctxt "#31149"
 msgid "Hide OSD controls"
-msgstr "Blende OSD-Bedienelemente aus"
+msgstr "Masquer les contrôles OSD"
 
 msgctxt "#31150"
 msgid "Hides the Stop, Play, Pause, etc buttons from the music and video OSD."
-msgstr "Blendet die Stop, Abspielen, Pause und andere Bedienelemente aus dem On-Screen-Display für Musik und Video aus."
+msgstr "Masquer les boutons Stop, Lecture, Pause, etc... de l'OSD musique et vidéo."
 
 msgctxt "#31151"
 msgid "Creator"
-msgstr "Schöpfer"
+msgstr ""
 
 msgctxt "#31152"
 msgid "Air Date"
-msgstr "Ausstrahlungsdatum"
+msgstr ""
 
 msgctxt "#31153"
 msgid "3D Options"
-msgstr "3D Optionen"
+msgstr "Options 3D"
 
 msgctxt "#31154"
 msgid "Profile"
@@ -669,23 +669,23 @@ msgstr "Profil"
 
 msgctxt "#31155"
 msgid "Build Version"
-msgstr "Build Version"
+msgstr ""
 
 msgctxt "#31156"
 msgid "Capacity"
-msgstr "Platz"
+msgstr "Capacité"
 
 msgctxt "#31157"
 msgid "Current Date and Time"
-msgstr "Aktuelles Datum und Zeit"
+msgstr "Date et Heure actuelle"
 
 msgctxt "#31158"
 msgid "Device Name"
-msgstr "Gerätename"
+msgstr "Nom du périphérique"
 
 msgctxt "#31159"
 msgid "Wide"
-msgstr "Breit"
+msgstr "Large"
 
 msgctxt "#31160"
 msgid "Poster"
@@ -693,147 +693,147 @@ msgstr "Poster"
 
 msgctxt "#31161"
 msgid "Square"
-msgstr "Quadrat"
+msgstr "Carré"
 
 msgctxt "#31162"
 msgid "Show"
-msgstr "Ansicht"
+msgstr ""
 
 msgctxt "#31163"
 msgid "Start[CR]Party Mode"
-msgstr "Starte[CR]Partymodus"
+msgstr "Démarrer le[CR]Mix de Soirée"
 
 msgctxt "#31164"
 msgid "Next Up"
-msgstr "Es folgt"
+msgstr "À venir"
 
 msgctxt "#31165"
 msgid "Choose Art"
-msgstr "Grafik wählen"
+msgstr ""
 
 msgctxt "#31166"
 msgid "Open Visualisation"
-msgstr "Öffne Visualisierung"
+msgstr "Ouvrir la Visualisation"
 
 msgctxt "#31167"
 msgid "Recently Added Movies"
-msgstr "Kürzlich hinzugefügte Filme"
+msgstr "Films Ajoutés Récemment"
 
 msgctxt "#31168"
 msgid "Your Movies"
-msgstr "Filme"
+msgstr "Vos Films"
 
 msgctxt "#31169"
 msgid "In Progress Movies"
-msgstr "Begonnene Filme"
+msgstr "Films En Cours"
 
 msgctxt "#31170"
 msgid "Kids Movies"
-msgstr "Kinderfilme"
+msgstr "Films Jeunesse"
 
 msgctxt "#31171"
 msgid "Action and Adventure Movies"
-msgstr "Action- und Abenteuerfilme"
+msgstr "Films Action et Aventure"
 
 msgctxt "#31172"
 msgid "Comedy Movies"
-msgstr "Komödien"
+msgstr "Films de Comédie"
 
 msgctxt "#31173"
 msgid "Sci-Fi Movies"
-msgstr "Science-Fiction Filme"
+msgstr "Films de Science-Fiction"
 
 msgctxt "#31174"
 msgid "Top Rated Movies"
-msgstr "Filme mit Top-Bewertungen"
+msgstr "Films les mieux notés"
 
 msgctxt "#31175"
 msgid "Recently Updated TV Shows"
-msgstr "Kürzlich aktualisierte Serien"
+msgstr "Séries mises à jour récemment"
 
 msgctxt "#31176"
 msgid "Your TV Shows"
-msgstr "Serien"
+msgstr "Vos Séries TV"
 
 msgctxt "#31177"
 msgid "In Progress TV Shows"
-msgstr "Begonnene Serien"
+msgstr "Séries TV En Cours"
 
 msgctxt "#31178"
 msgid "Kids TV Shows"
-msgstr "Kinderserien"
+msgstr "Séries TV Jeunesse"
 
 msgctxt "#31179"
 msgid "Action and Adventure TV Shows"
-msgstr "Action- und Abenteuerserien"
+msgstr "Séries TV Action et Aventure"
 
 msgctxt "#31180"
 msgid "Comedy TV Shows"
-msgstr "Comedy-Serien"
+msgstr "Séries TV Comédies"
 
 msgctxt "#31181"
 msgid "Sci-Fi TV Shows"
-msgstr "Science-Fiction-Serien"
+msgstr "Séries TV de Science-Fiction"
 
 msgctxt "#31182"
 msgid "Top Rated TV Shows"
-msgstr "Serien mit Top-Bewertung"
+msgstr "Séries TV Les Mieux Notés"
 
 msgctxt "#31183"
 msgid "Recently Played Albums"
-msgstr "Kürzlich wiedergegebene Alben"
+msgstr "Albums Joués Récemment"
 
 msgctxt "#31184"
 msgid "Your Albums"
-msgstr "Alben"
+msgstr "Vos Albums"
 
 msgctxt "#31185"
 msgid "Recently Added Albums"
-msgstr "Kürzlich hinzugefügte Alben"
+msgstr "Albums ajoutés récemment"
 
 msgctxt "#31186"
 msgid "Your Artists"
-msgstr "Künstler"
+msgstr "Vos Artistes"
 
 msgctxt "#31187"
 msgid "Your Genres"
-msgstr "Genre"
+msgstr "Vos Genres"
 
 msgctxt "#31188"
 msgid "Top Rated Albums"
-msgstr "Alben mit Top-Bewertungen"
+msgstr "Albums les Mieux Notés"
 
 msgctxt "#31189"
 msgid "Top Rated Songs"
-msgstr "Songs mit Top-Bewertungen"
+msgstr "Chansons les Mieux Notés"
 
 msgctxt "#31190"
 msgid "Your Songs"
-msgstr "Musik"
+msgstr "Vos Chansons"
 
 msgctxt "#31191"
 msgid "Video root"
-msgstr "Video Hauptverzeichnis"
+msgstr ""
 
 msgctxt "#31192"
 msgid "Your Music Videos"
-msgstr "Musikvideos"
+msgstr "Vos Clips Musicaux"
 
 msgctxt "#31193"
 msgid "Your Video Add-ons"
-msgstr "Video Addons"
+msgstr "Vos Add-ons Vidéo"
 
 msgctxt "#31194"
 msgid "Personal Rating"
-msgstr "Eigene Bewertung"
+msgstr "Note Personnelle"
 
 msgctxt "#31195"
 msgid "Your Add-ons"
-msgstr "Addons"
+msgstr "Vos Add-ons"
 
 msgctxt "#31196"
 msgid "Your Android Apps"
-msgstr "Android Apps"
+msgstr "Vos Applications Android"
 
 msgctxt "#31197"
 msgid "Widget"
@@ -841,60 +841,60 @@ msgstr "Widget"
 
 msgctxt "#31198"
 msgid "View Type"
-msgstr "View Type"
+msgstr "Type d'Affichage"
 
 msgctxt "#31199"
 msgid "Label Overlay"
-msgstr "Label Overlay"
+msgstr ""
 
 msgctxt "#31200"
 msgid "Enter Name"
-msgstr "Setze Name"
+msgstr "Entrez le Nom"
 
 msgctxt "#31201"
 msgid "Choose Shortcut"
-msgstr "Wähle Shortcut"
+msgstr "Choisir le raccourci"
 
 msgctxt "#31202"
 msgid "Widget Action"
-msgstr "Widget Aktion"
+msgstr "Action du Widget"
 
 msgctxt "#31203"
 msgid "Square Info"
-msgstr "Quadrat Info"
+msgstr ""
 
 msgctxt "#31204"
 msgid "Titles with"
-msgstr "Titel mit"
+msgstr "Titres avec"
 
 msgctxt "#31205"
 msgid "Refresh Information"
-msgstr "Update Informationen"
+msgstr "Actualiser les infos"
 
 msgctxt "#31206"
 msgid "Enable Auto-Update"
-msgstr "Aktiviere Auto-Update"
+msgstr "Activer Mise à jour Automatique"
 
 msgctxt "#31207"
 msgid "Disable Auto-Update"
-msgstr "Deaktiviere Auto-Update"
+msgstr "Désactiver Mise à jour Automatique"
 
 msgctxt "#31208"
 msgid "Enable Higher Levels"
-msgstr "Aktiviere höhere Level"
+msgstr "Activer les niveaux élevés"
 
 msgctxt "#31209"
 msgid "Disable Higher Levels"
-msgstr "Deaktiviere höhere Level"
+msgstr "Désactiver les niveaux élevés"
 
 msgctxt "#31210"
 msgid "Set View for all"
-msgstr "Setze Layout für alle"
+msgstr "Définir la vue pour tous"
 
 #: \16x9\SkinSettings.xml:287
 msgctxt "#31211"
 msgid "Preload widgets on startup"
-msgstr "Widget Preloading bei Start"
+msgstr "Précharger les widgets au démarrage"
 
 #: \16x9\Variables.xml:1512
 msgctxt "#31212"
@@ -902,103 +902,103 @@ msgid ""
 "Activates the preloading of widgets on startup. By disabling it, the skin "
 "won't wait until all widgets are loaded. Please note that this can cause "
 "some minor animation glitches on startup."
-msgstr "Aktiviert das Preloaden der Widgets beim Start. Wenn deaktiviert, wartet der Skin nicht bis alle Widgets gefüllt sind. Bitte beachte, dass dies unsaubere Animation beim Start verursachen kann."
+msgstr "Activer le pré-chargement des widgets au démarrage. En désactivant cette option, l'habillage n'attendra pas que les widgets soit chargés. Veuillez noter que ceci peut provoquer quelques problèmes d'animation au démarrage."
 
 #: \16x9\Variables.xml:65
 msgctxt "#31213"
 msgid "Widget Group 9"
-msgstr "Widget Gruppe 9"
+msgstr "Groupe de Widget 9"
 
 #: \16x9\Variables.xml:69
 msgctxt "#31214"
 msgid "Widget Group 10"
-msgstr "Widget Gruppe 10"
+msgstr "Groupe de Widget 10"
 
 #: \16x9\Variables.xml:73
 msgctxt "#31215"
 msgid "Widget Group 11"
-msgstr "Widget Gruppe 11"
+msgstr "Groupe de Widget 11"
 
 #: \16x9\Variables.xml:77
 msgctxt "#31216"
 msgid "Widget Group 12"
-msgstr "Widget Gruppe 12"
+msgstr "Groupe de Widget 12"
 
 #: \16x9\MyPVRChannels.xml:234
 msgctxt "#31217"
 msgid "Current time"
-msgstr "Aktuelle Uhrzeit"
+msgstr "Heure actuelle"
 
 #: \16x9\DialogAudioDSPManager.xml:294
 msgctxt "#31218"
 msgid "No mode available"
-msgstr "Kein Modus verfügbar"
+msgstr "Aucun mode disponible"
 
 msgctxt "#31219"
 msgid "Watch"
-msgstr "Starte"
+msgstr "Regarder"
 
 msgctxt "#31220"
 msgid "Cancel Next Up"
-msgstr "Wiedergabe beenden"
+msgstr "Annuler la prochaine vidéo"
 
 msgctxt "#31221"
 msgid "Sorry, no shows are airing at this time."
-msgstr "Sorry, keine Sendezeiten gefunden."
+msgstr "Désolé, aucune séries n'est diffusées à cette heure."
 
 msgctxt "#31222"
 msgid "Please try again later."
-msgstr "Bitte später nochmal probieren."
+msgstr "Veuillez réessayer plus tard."
 
 #: \16x9\DialogAudioDSPManager.xml:175
 msgctxt "#31223"
 msgid "No mode activated"
-msgstr "Kein Modus aktiviert"
+msgstr "Aucun mode activé"
 
 #: \16x9\DialogAudioDSPManager.xml:407
 msgctxt "#31224"
 msgid "Direct"
-msgstr "Direkt"
+msgstr "Direct"
 
 #: \16x9\Custom_Home_Widgets.xml:188
 msgctxt "#31225"
 msgid "No."
-msgstr "Nr."
+msgstr "Nu."
 
 #: \16x9\IncludesViewTypes.xml:996
 msgctxt "#31226"
 msgid "Tune in"
-msgstr "Einschalten"
+msgstr "Zapper sur"
 
 #: \16x9\SkinSettings.xml:475
 msgctxt "#31227"
 msgid "Backup or restore fTV settings"
-msgstr "fTV Einstellungen sichern oder wiederherstellen"
+msgstr "Sauvegarder ou restaurer les réglages de fTV"
 
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"
 msgid "Backup, restore or reset skin configuration."
-msgstr "fTV Skin Einstellungen sichern, wiederherstellen oder zurücksetzen."
+msgstr "Sauvegarder, restaurer ou réinitialiser la configuration de l'habillage."
 
 #: \16x9\SkinSettings.xml:482
 msgctxt "#31229"
 msgid "Create new backup"
-msgstr "Erstelle neues Backup"
+msgstr "Créer une nouvelle sauvegarde"
 
 #: \16x9\SkinSettings.xml:484
 msgctxt "#31230"
 msgid "Restore existing backup"
-msgstr "Importiere vorhandenes Backup"
+msgstr "Restaurer une sauvegarde existante"
 
 #: \16x9\SkinSettings.xml:486
 msgctxt "#31231"
 msgid "Reset skin settings"
-msgstr "Skin-Einstellungen zurücksetzen"
+msgstr "Réinitialiser les réglages de l'habillage"
 
 #: /16x9/SkinSettings.xml:475
 msgctxt "#31232"
 msgid "Set default Favourites layout"
-msgstr "Setze Standard Favouriten Layout"
+msgstr ""
 
 #: /16x9/Variables.xml:1865
 msgctxt "#31233"
@@ -1006,112 +1006,112 @@ msgid ""
 "Changes the layout of the favourite items. Useful if you use the favourites "
 "for your favourite movies and you want them displayed with the "
 "poster.[CR]Default is 'Square Info'."
-msgstr "Ändert die Darstellung der Favouriten. Nützlich falls diese zum anzeigen der Lieblingsfilme im Poster-Layout verwendet werden sollen.[CR]Standard ist 'Quadrat Info'."
+msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
 msgid "View movie info"
-msgstr "Zeige Film Info"
+msgstr "Voir les infos du film"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
 msgid "Awards"
-msgstr "Awards"
+msgstr "Récompenses"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:346
 msgctxt "#31236"
 msgid "budget"
-msgstr "Budget"
+msgstr "budget"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:346
 msgctxt "#31237"
 msgid "grossed"
-msgstr "eingespielt"
+msgstr ""
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31238"
 msgid "Budget and revenue"
-msgstr "Budget und Einnahmen"
+msgstr "Budget et revenu"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:331
 msgctxt "#31239"
 msgid "Premiered on"
-msgstr "Erstaufführung am"
+msgstr "Première diffusion le"
 
 #: /16x9/VideoOSD.xml:288
 msgctxt "#31240"
 msgid "View X-Ray"
-msgstr "Zeige X-Ray"
+msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:218
 msgctxt "#31241"
 msgid "View actor info"
-msgstr "Zeige Darsteller Info"
+msgstr "Voir les infos de l'acteur"
 
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
 msgid "Newest Movie"
-msgstr "Neuester Film"
+msgstr "Nouveau Film"
 
 #: /16x9/Custom_Home_Widgets.xml:722
 msgctxt "#31243"
 msgid "Recommended Movie"
-msgstr "Empfohlener Film"
+msgstr "Film recommandé"
 
 #: /16x9/Custom_Home_Widgets.xml:724
 msgctxt "#31244"
 msgid "Random Movie"
-msgstr "Zufalls-Film"
+msgstr "Film Aléatoire"
 
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
 msgid "Newest Show"
-msgstr "Neueste Serie"
+msgstr "Nouvelle Série TV"
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
 msgid "Recommended Show"
-msgstr "Empfohlene Serie"
+msgstr "Série TV recommandée"
 
 #: /16x9/Custom_Home_Widgets.xml:731
 msgctxt "#31247"
 msgid "Random Show"
-msgstr "Zufalls-Serie"
+msgstr "Série TV Aléatoire"
 
 #: /16x9/Variables.xml:874
 msgctxt "#31248"
 msgid "[LIGHT]New and now included in[/LIGHT] Kodi[CR]"
-msgstr "[LIGHT]Neu und jetzt verfügbar in[/LIGHT] Kodi[CR]"
+msgstr "[LIGHT]Nouveau et maintenant inclus dans[/LIGHT] Kodi[CR]"
 
 #: /16x9/Variables.xml:875
 msgctxt "#31249"
 msgid "[LIGHT]Because you watched [/LIGHT]"
-msgstr "[LIGHT]Empfohlen wegen [/LIGHT]"
+msgstr "[LIGHT]Parce que vous avez regardé [/LIGHT]"
 
 #: /16x9/Variables.xml:876
 msgctxt "#31250"
 msgid "[LIGHT]Nothing to watch?[CR]Try [/LIGHT]"
-msgstr "[LIGHT]Nichts anzusehen?[CR]Wie wärs mit [/LIGHT]"
+msgstr "[LIGHT]Rien à regarder ?[CR]Essayer [/LIGHT]"
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
 msgid "[LIGHT]Watch it now with[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
-msgstr "[LIGHT]Jetzt abspielen mit[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
+msgstr "[LIGHT]Regarder le maintenant avec[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
 
 #: /16x9/ParametersHomeWidgets.xml:113
 msgctxt "#31252"
 msgid "Available in"
-msgstr "Verfügbar in"
+msgstr "Disponible en"
 
 #: /16x9/Custom_Home_Widgets.xml:712
 msgctxt "#31253"
 msgid "Banner"
-msgstr "Banner"
+msgstr "Bannière"
 
 #: /16x9/Custom_Home_Widgets.xml:732
 msgctxt "#31254"
 msgid "Recommended Movie/Show"
-msgstr "Empfohlener Film/Serie"
+msgstr "Film/Série TV recommandé"
 
 #: /16x9/VideoOSDSettings.xml:146
 msgctxt "#31255"
@@ -1121,155 +1121,155 @@ msgstr "3D"
 #: /16x9/VideoOSDSettings.xml:167
 msgctxt "#31256"
 msgid "Watch as 2D"
-msgstr "Als 2D abspielen"
+msgstr "Regarder en 2D"
 
 #: /16x9/VideoOSDSettings.xml:181
 msgctxt "#31257"
 msgid "Change mode"
-msgstr "Modus wechseln"
+msgstr "Changer le mode"
 
 #: /shortcuts/overrides.xml:31
 msgctxt "#31258"
 msgid "3D Movies"
-msgstr "3D Filme"
+msgstr "Films 3D"
 
 #: /16x9/script-skinshortcuts.xml:428
 msgctxt "#31259"
 msgid "Restore custom widgets backup"
-msgstr "Widget-Sicherung wiederherstellen"
+msgstr ""
 
 #: /16x9/script-skinshortcuts.xml:421
 msgctxt "#31260"
 msgid "Reset / Backup"
-msgstr "Reset / Backup"
+msgstr "Réinitialiser / Sauvegarder"
 
 #: /16x9/ParametersHomeWidgets.xml:9
 msgctxt "#31261"
 msgid "Hide message"
-msgstr "Nicht mehr anzeigen"
+msgstr "Masquer le message"
 
 #: /16x9/IncludesWidgets.xml:399
 msgctxt "#31262"
 msgid "Your library seems to be empty. Do you want to configure it now?"
-msgstr "Deine Datenbank scheint leer zu sein. Willst du diese jetzt konfigurieren?"
+msgstr "Votre bibliothèque semble être vide. Voulez-vous la configurer maintenant?"
 
 #: /16x9/IncludesWidgets.xml:398
 msgctxt "#31263"
 msgid "No content configured"
-msgstr "Kein Inhalt konfiguriert"
+msgstr "Aucun contenu configuré"
 
 #: /16x9/IncludesWidgets.xml:408
 msgctxt "#31264"
 msgid "Empty library"
-msgstr "Leere Datenbank"
+msgstr "Bibliothèque vide"
 
 #: /16x9/IncludesWidgets.xml:422
 msgctxt "#31265"
 msgid "Set widget content"
-msgstr "Bearbeite Widget"
+msgstr "Définir le contenu du widget"
 
 #: /16x9/IncludesWidgets.xml:442
 msgctxt "#31266"
 msgid ""
 "There is no source assigned to this widget. Do you want to configure it now?"
-msgstr "Diesem Widget sind keine Quellen zugeordnet. Willst du es jetzt konfigurieren?"
+msgstr "Il n'y a aucune source affectée à ce widget. Voulez-vous le configurer maintenant?"
 
 #: /16x9/Custom_Home_Widgets.xml:6
 msgctxt "#31267"
 msgid ""
 "It's highly recommended to reload the skin to fill the edited content lists "
 "correctly. Should the skin be reloaded?"
-msgstr "Es ist empfohlen den Skin nach dem Editieren der Inhalte erneut zu laden um alle Elemente korrekt anzeigen zu lassen. Soll der Skin jetzt neu geladen werden?"
+msgstr "Il est vivement recommandé de recharger l'habillage pour permettre un affichage correct. L'habillage doit il être rechargé maintenant ?"
 
 #: /16x9/IncludesWidgetLayout.xml:23
 msgctxt "#31268"
 msgid "There are no results for this widget"
-msgstr "Es gibt keine Ergebnisse für dieses Widget"
+msgstr "Il n'y a pas de résultats pour ce widget"
 
 #: /shortcuts/overrides.xml:55
 msgctxt "#31269"
 msgid "Genres (Plugin based)"
-msgstr "Genres (Plugin basierend)"
+msgstr "Genres (via Plugin)"
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
 msgid "Your Rating"
-msgstr "Deine Bewertung"
+msgstr "Votre Note"
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31271"
 msgid "YourRating"
-msgstr "DeineBewertung"
+msgstr "VotreNote"
 
 #: /16x9/Variables.xml:21
 msgctxt "#31272"
 msgid "Not rated"
-msgstr "Keine"
+msgstr "Non noté"
 
 #: /16x9/Variables.xml:16
 msgctxt "#31273"
 msgid "I hate it"
-msgstr "Hasse es"
+msgstr "Je déteste"
 
 #: /16x9/Variables.xml:17
 msgctxt "#31274"
 msgid "I don't like it"
-msgstr "Mags nicht"
+msgstr "Je n'aime pas"
 
 #: /16x9/Variables.xml:18
 msgctxt "#31275"
 msgid "It's okay"
-msgstr "Ist okay"
+msgstr "Bien"
 
 #: /16x9/Variables.xml:19
 msgctxt "#31276"
 msgid "I like it"
-msgstr "Gefällt mir"
+msgstr "J'aime"
 
 #: /16x9/Variables.xml:20
 msgctxt "#31277"
 msgid "I love it"
-msgstr "Liebe es"
+msgstr "J'adore"
 
 #: /16x9/IncludesDialogSelect.xml:384
 msgctxt "#31278"
 msgid "This is your own personal rating and is not shared publicly"
-msgstr "Dies ist deine eigene Bewertung und wird nicht öffentlich geteilt"
+msgstr "Ceci est votre note personnelle, elle n'est pas partagée publiquement"
 
 #: /16x9/IncludesDialogSelect.xml:412
 msgctxt "#31279"
 msgid "Select your rating"
-msgstr "Vergebe deine Bewertung"
+msgstr "Sélectionnez votre note"
 
 #: /16x9/IncludesDialogSelect.xml:447
 msgctxt "#31280"
 msgid "Submit"
-msgstr "Bewerten"
+msgstr "Envoyer"
 
 #: /16x9/ViewTypes.xml:415
 msgctxt "#31281"
 msgid "Panel"
-msgstr "Panel"
+msgstr "Panneau"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:190
 msgctxt "#31282"
 msgid "My Account"
-msgstr "Mein Account"
+msgstr "Mon Compte"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:123
 msgctxt "#31283"
 msgid "Next page"
-msgstr "Nächste Seite"
+msgstr "Page suivante"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:135
 msgctxt "#31284"
 msgid "Previous page"
-msgstr "Vorherige Seite"
+msgstr "Page précédente"
 
 #: /16x9/Widgets.xml:449
 msgctxt "#31285"
 msgid "Weather settings"
-msgstr "Wetter-Einstellungen"
+msgstr "Réglages de la Météo"
 
 #: /16x9/script-script.extendedinfo-VideoList.xml:134
 msgctxt "#31286"
@@ -1279,17 +1279,17 @@ msgstr "ExtendedInfo Script"
 #: /16x9/SkinSettings.xml
 msgctxt "#31287"
 msgid "Select TV Show Rating Provider"
-msgstr "Quelle der Serien-Bewertungen auswählen"
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31288"
 msgid "Select the rating provider of your configured movie scraper."
-msgstr "Wähle die Herkunft der Film-Bewertungen deines konfiguriertem Scrapers."
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31289"
 msgid "Select the rating provider of your configured TV show scraper."
-msgstr "Wähle die Herkunft der Serien-Bewertungen deines konfiguriertem Scrapers."
+msgstr ""
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31290"
@@ -1299,386 +1299,386 @@ msgstr "Horizontal"
 #: /16x9/SkinSettings.xml
 msgctxt "#31291"
 msgid "Vertical"
-msgstr "Vertikal"
+msgstr "Vertical"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31292"
 msgid "Set PVR Channels OSD Layout"
-msgstr "Setze TV Kanal OSD Ansicht "
+msgstr "Définir l'affichage OSD pour les chaines TV"
 
 #: /16x9/Variables.xml
 msgctxt "#31293"
 msgid ""
 "Changes the OSD layout of the Live TV channels.[CR]Default is 'Horizontal'."
-msgstr "Ändert die Darstellung des OSD Layouts der TV Kanäle während der Wiedergabe.[CR]Standard ist 'Horizontal'."
+msgstr ""
 
 #: /16x9/VideoOSDBookmarks.xml
 msgctxt "#31294"
 msgid "No boomarks available"
-msgstr "Keine Kapitel verfügbar"
+msgstr "Aucun signets disponible"
 
 #: /16x9/Variables.xml
 msgctxt "#31295"
 msgid "Hardware decoding is active"
-msgstr "Hardware Decoding aktiv"
+msgstr "Décodage matériel activé"
 
 #: /16x9/Variables.xml
 msgctxt "#31296"
 msgid "Hardware decoding is inactive"
-msgstr "Hardware Decoding inaktiv"
+msgstr "Décodage matériel désactivé"
 
 #: /16x9/IncludesDialogSettings.xml
 msgctxt "#31297"
 msgid "Media processing info"
-msgstr "Media Processing Info"
+msgstr "Info de traitement du média"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31298"
 msgid "Subtitle styling"
-msgstr "Untertitelstil"
+msgstr "Style du sous-titre"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31299"
 msgid "Shift"
-msgstr "Shift"
+msgstr "Majuscule"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31300"
 msgid "Shift[CR]Down"
-msgstr "Nach[CR]unten"
+msgstr "Majuscule[CR]Bas"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31301"
 msgid "Mode"
-msgstr "Modus"
+msgstr "Mode"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31302"
 msgid "Offset"
-msgstr "Offset"
+msgstr "Décalage"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31303"
 msgid "Apply"
-msgstr "Apply"
+msgstr "Appliquer"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31304"
 msgid "Shift [B]UP[/B]"
-msgstr "Schiebe nach [B]OBEN[/B]"
+msgstr "Majuscule [B]HAUT[/B]"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31305"
 msgid "Shift [B]DOWN[/B]"
-msgstr "Schiebe nach [B]UNTEN[/B]"
+msgstr "Majuscule [B]BAS[/B]"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31306"
 msgid "Offset [B]MINUS[/B]"
-msgstr "Offset [B]MINUS[/B]"
+msgstr ""
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31307"
 msgid "Offset [B]PLUS[/B]"
-msgstr "Offset [B]PLUS[/B]"
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31308"
 msgid ""
 "Enables the video fullscreen NextUp popup notification for LiveTV "
 "playback.[CR]Enabled by default."
-msgstr "Zeigt während der Wiedergabe die nachfolgende Live-TV Sendung als Popup an.[CR]Standardmäßig aktiviert."
+msgstr "Activer la notification de la prochaine émission pour les flux TV.[CR]Activé par défaut."
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31309"
 msgid "Live TV NextUp Popup"
-msgstr "'Als nächstes' Popup für Live-TV"
+msgstr "Notification pour la prochaine émission TV"
 
 #: /16x9/Variables.xml
 msgctxt "#31310"
 msgid "Media"
-msgstr "Medien"
+msgstr "Media"
 
 #: /16x9/Variables.xml
 msgctxt "#31311"
 msgid "Hides the Now Playing overlay during playback."
-msgstr "Blendet das 'Jetzt läuft' Overlay während einer aktiven WIedergabe aus."
+msgstr ""
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31312"
 msgid "Hide Now Playing overlay"
-msgstr "Blende 'Jetzt läuft' Overlay aus"
+msgstr ""
 
 #: /16x9/MusicOSD.xml
 msgctxt "#31313"
 msgid "Fanart options"
-msgstr "Fanart Optionen"
+msgstr ""
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31314"
 msgid "Want to know more?"
-msgstr "Willst du mehr wissen?"
+msgstr "Vous voulez en savoir plus ?"
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
 msgid "Press [B]DOWN[/B] to search online for the selected actor."
-msgstr "Drücke nach [B]UNTEN[/B] um online nach dem Darsteller zu suchen."
+msgstr "Appuyez sur [B]BAS[/B] pour rechercher en ligne pour l'acteur sélectionné."
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31316"
 msgid "Local albums"
-msgstr "Lokale Alben"
+msgstr "Albums locaux"
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31317"
 msgid "Tracklist"
-msgstr "Trackliste"
+msgstr ""
 
 #: /16x9/IncludesDialogMusicInfo.xml
 msgctxt "#31318"
 msgid "Mood"
-msgstr "Stimmung"
+msgstr "Humeur"
 
 #: /16x9/DialogFullScreenInfo.xml
 msgctxt "#31319"
 msgid "Searching for cast"
-msgstr "Suche Darsteller"
+msgstr ""
 
 #: /16x9/MyVideoNav.xml
 msgctxt "#31320"
 msgid "unwatched episodes"
-msgstr "ungesehene Folgen"
+msgstr "Épisodes non vus"
 
 #: /16x9/MyVideoNav.xml
 msgctxt "#31321"
 msgid "unwatched episode"
-msgstr "ungesehene Folge"
+msgstr "Épisode non vu"
 
 #: /16x9/Variables.xml
 msgctxt "#31322"
 msgid "episodes in"
-msgstr "Folgen in"
+msgstr ""
 
 #: /16x9/Variables.xml
 msgctxt "#31323"
 msgid "episode available"
-msgstr "Folge verfügbar"
+msgstr ""
 
 #: /16x9/Settings.xml
 msgctxt "#31324"
 msgid "Interface"
-msgstr "Oberfläche"
+msgstr ""
 
 msgctxt "#31500"
 msgid "Widget Group 1"
-msgstr "Widget Gruppe 1"
+msgstr "Groupe de Widget 1"
 
 msgctxt "#31501"
 msgid "Widget Group 2"
-msgstr "Widget Gruppe 2"
+msgstr "Groupe de Widget 2"
 
 msgctxt "#31502"
 msgid "Widget Group 3"
-msgstr "Widget Gruppe 3"
+msgstr "Groupe de Widget 3"
 
 msgctxt "#31503"
 msgid "Widget Group 4"
-msgstr "Widget Gruppe 4"
+msgstr "Groupe de Widget 4"
 
 msgctxt "#31504"
 msgid "Widget Group 5"
-msgstr "Widget Gruppe 5"
+msgstr "Groupe de Widget 5"
 
 msgctxt "#31505"
 msgid "Widget Group 6"
-msgstr "Widget Gruppe 6"
+msgstr "Groupe de Widget 6"
 
 msgctxt "#31506"
 msgid "Widget Group 7"
-msgstr "Widget Gruppe 7"
+msgstr "Groupe de Widget 7"
 
 msgctxt "#31507"
 msgid "Widget Group 8"
-msgstr "Widget Gruppe 8"
+msgstr "Groupe de Widget 8"
 
 msgctxt "#31508"
 msgid "Edit"
-msgstr "Edit"
+msgstr "Éditer"
 
 msgctxt "#31509"
 msgid "Set Widget"
-msgstr "Setze Widget"
+msgstr "Définir le Widget"
 
 msgctxt "#31510"
 msgid "IMDB Top250 Movies"
-msgstr "IMDB Top250 Filme"
+msgstr ""
 
 msgctxt "#31511"
 msgid "TuneIn Recents"
-msgstr "TuneIn Verlauf"
+msgstr ""
 
 msgctxt "#31512"
 msgid "Audio Add-ons"
-msgstr "Audio Add-ons"
+msgstr "Add-ons Audio"
 
 msgctxt "#31513"
 msgid "TuneIn Local"
-msgstr "TuneIn Lokal"
+msgstr ""
 
 msgctxt "#31514"
 msgid "TuneIn Favourites"
-msgstr "TuneIn Favouriten"
+msgstr ""
 
 msgctxt "#31515"
 msgid "Drama and Thriller Movies"
-msgstr "Drama und Thriller Filme"
+msgstr "Films d'Horreurs et Thriller"
 
 msgctxt "#31516"
 msgid "Drama and Thriller TV Shows"
-msgstr "Drama und Thriller Serien"
+msgstr ""
 
 msgctxt "#31517"
 msgid "War and History Movies"
-msgstr "Krieg und Historie Filme"
+msgstr "Films Guerre et Histoire"
 
 msgctxt "#31518"
 msgid "War and History TV Shows"
-msgstr "Krieg und Historie Serien"
+msgstr "Séries TV Guerre et Histoire"
 
 msgctxt "#31519"
 msgid "Video Add-ons"
-msgstr "Video Add-ons"
+msgstr "Add-ons Vidéo"
 
 msgctxt "#31520"
 msgid "Program Add-ons"
-msgstr "Programm Add-ons"
+msgstr "Add-ons  Programmes"
 
 msgctxt "#31521"
 msgid "Picture Add-ons"
-msgstr "Bilder Add-ons"
+msgstr "Add-ons Images"
 
 msgctxt "#31522"
 msgid "New Search"
-msgstr "Neue Suche"
+msgstr "Nouvelle Recherche"
 
 msgctxt "#31523"
 msgid "Text Input"
-msgstr "Texteingabe"
+msgstr "Saisie Alphabétique"
 
 msgctxt "#31524"
 msgid "Numeric Input"
-msgstr "Zahleneingabe"
+msgstr "Saisie Numérique"
 
 msgctxt "#31525"
 msgid "Skip Search menu item"
-msgstr "Überspringe 'Suche' Menüeintrag"
+msgstr "Sauter l'item Recherche dans le menu"
 
 msgctxt "#31526"
 msgid ""
 "Enable this, if your first main menu item is 'Search' and you want the next "
 "item focused after Kodi has been started."
-msgstr "Aktiviere diese Option, falls dein erstes Hauptmenü-Item 'Suche' ist und du automatisch den nächsten Eintrag fokusiert haben willst nachdem Kodi gestaret ist."
+msgstr "Activer cette option, si le premier item du menu est \"Rechercher\", et que vous souhaiter définir le focus sur l'item suivant au démarrage de Kodi."
 
 msgctxt "#31527"
 msgid "'Wide' for TV Shows / Movies / Sets / Artists"
-msgstr "'Breit' für Serien / Filme / Sets / Interpreten"
+msgstr "'Large' pour les Séries TV / Films / Artistes"
 
 msgctxt "#31528"
 msgid "'Poster' for TV Shows / Movies / Sets"
-msgstr "'Poster' für Serien / Filme / Sets"
+msgstr "'Poster' pour les Séries TV / Films"
 
 msgctxt "#31529"
 msgid "'Square' for Music / Add-ons"
-msgstr "'Quadrat' für Music / Add-ons"
+msgstr "'Carré' pour la Musique / les Add-ons"
 
 msgctxt "#31530"
 msgid "'Square Info' for Music / Add-ons"
-msgstr "'Quadrat Info' für Music / Add-ons"
+msgstr ""
 
 msgctxt "#31531"
 msgid "loading home"
-msgstr "lade Startseite"
+msgstr "chargement de l'accueil"
 
 msgctxt "#31532"
 msgid "updating widgets"
-msgstr "update widgets"
+msgstr "mise à jour des widgets"
 
 msgctxt "#31533"
 msgid "done!"
-msgstr "fertig!"
+msgstr "terminé!"
 
 msgctxt "#31534"
 msgid "Air Time"
-msgstr "Sendetermin"
+msgstr ""
 
 msgctxt "#31535"
 msgid "Warning: No mouse support"
-msgstr "Warnung: Keine Maus-Unterstützung!"
+msgstr "Attention: Pas de support de la souris"
 
 msgctxt "#31536"
 msgid ""
 "This skin has no mouse support. It's highly recommended to disable mouse "
 "controls in Kodi to prevent issues. Should I do this for you?"
-msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Soll ich das für dich tun?"
+msgstr "Cet habillage ne supporte pas la souris. Il est vivement recommandé de désactiver le support de la souris dans Kodi pour éviter les problèmes. Dois-je le faire pour vous ?"
 
 msgctxt "#31537"
 msgid ""
 "This skin has no mouse support. It's highly recommended to disable mouse "
 "controls in Kodi. Otherwise this can cause bugs and errors in some windows."
-msgstr "Dieser Skin unterstützt keine Maus. Es wird dringend empfohlen diese zu deaktivieren. Andernfalls kann es zu Problemen im Betrieb führen."
+msgstr "Cet habillage ne supporte pas la souris. Il est vivement recommandé de désactiver le support de la souris dans Kodi. Sinon, cela pourrait provoquer des bogues et des erreurs dans certaines fenêtres."
 
 msgctxt "#31538"
 msgid "Better fTV experience"
-msgstr "Besseres fTV-Erlebniss"
+msgstr "Meilleure expérience fTV"
 
 msgctxt "#31539"
 msgid ""
 "It's recommended to disable 'Show parent folders' and 'Show all items'. "
 "Should I do this for you?"
-msgstr "Es wird empfohlen 'Symbol für übergeordnetes Verzeichnis' und 'Zeige alle Einträge' zu deaktivieren. Soll ich das für dich tun?"
+msgstr "Il est recommandé de désactiver les options \"Afficher le dossier parent\" et \"Afficher tous les items\". Dois-je le faire pour vous ?"
 
 msgctxt "#31540"
 msgid ""
 "Still there? Press 'Continue' to watch the next episode, otherwise the "
 "playback will be stopped."
-msgstr "Noch da? Drücke 'Weiter' um die nächste Folge zu sehen. Andernfalls wird die Wiedergabe gestoppt."
+msgstr "Toujours là ? Appuyez sur \"Continuer\" pour regarder l'épisode suivant, sinon la lecture s'arrêtera."
 
 msgctxt "#31541"
 msgid "Continue"
-msgstr "Weiter"
+msgstr "Continuer"
 
 msgctxt "#31542"
 msgid "Continue Watching?"
-msgstr "Weiter ansehen?"
+msgstr "Continuer à Regarder ?"
 
 msgctxt "#31543"
 msgid "Please select"
-msgstr "Bitte auswählen"
+msgstr "Veuillez choisir"
 
 msgctxt "#31544"
 msgid "Change widget name"
-msgstr "Ändere Widget-Name"
+msgstr "Changer le nom du widget"
 
 msgctxt "#31545"
 msgid "View[CR]TV guide"
-msgstr "Öffne[CR]TV Guide"
+msgstr "Voir le[CR]Guide TV"
 
 msgctxt "#31546"
 msgid "View[CR]TV recordings"
-msgstr "Öffne[CR]TV Aufnahmen"
+msgstr "Voir les[CR]Enregistrements TV"
 
 msgctxt "#31547"
 msgid "View[CR]All groups"
-msgstr "Öffne[CR]Alle Gruppen"
+msgstr "Voir tous[CR]les groupes"
 
 msgctxt "#31548"
 msgid "View[CR]TV timers"
-msgstr "Öffne[CR]TV Timer"
+msgstr "Voir les[CR]programmations TV"
 
 msgctxt "#31549"
 msgid "Episode"
-msgstr "Episode"
+msgstr "Épisode"
 
 msgctxt "#31550"
 msgid "'Episode' for episodes or video add-on contents"
-msgstr "'Episode' für Episoden or Video Add-On Inhalte"
+msgstr ""
