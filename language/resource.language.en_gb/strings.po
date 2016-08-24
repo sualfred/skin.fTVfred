@@ -1430,6 +1430,11 @@ msgctxt "#31323"
 msgid "episode available"
 msgstr "episodes available"
 
+#: /16x9/Settings.xml
+msgctxt "#31324"
+msgid "Interface"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

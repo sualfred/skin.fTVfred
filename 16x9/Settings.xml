@@ -171,7 +171,7 @@
 			<content>
 				<item>
 					<onclick>ActivateWindow(InterfaceSettings)</onclick>
-					<label>14206</label>
+					<label>$LOCALIZE[31324]</label>
 					<label2>$LOCALIZE[31115]</label2>
 					<icon>settings/icon_appearance.png</icon>
 				</item>

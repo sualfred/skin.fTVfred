@@ -2474,7 +2474,7 @@
 	</variable>
 	<variable name="SettingsLabel-1">
 		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[14206]</value>
+		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[31324]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[31310]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[14200]</value>
@@ -2483,7 +2483,7 @@
 	</variable>
 	<variable name="SettingsLabel0">
 		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[22082]</value>
-		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[14206]</value>
+		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[31324]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[31310]</value>
 		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[14200]</value>

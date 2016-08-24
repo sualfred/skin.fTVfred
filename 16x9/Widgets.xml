@@ -369,7 +369,7 @@
 			<content>
 				<item>
 					<onclick>noop</onclick>
-					<label>14206</label>
+					<label>$LOCALIZE[31324]</label>
 					<icon>settings/icon_appearance.png</icon>
 				</item>
 				<item>

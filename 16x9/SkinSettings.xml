@@ -181,7 +181,7 @@
 					<height>32</height>
 					<font>Bold34</font>
 					<textcolor>ffdadada</textcolor>
-					<label>14206</label>
+					<label>$LOCALIZE[31324]</label>
 				</control>
 				<control type="image">
 					<left>-13</left>
