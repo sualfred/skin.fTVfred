@@ -1028,6 +1028,11 @@
 		<value condition="String.IsEqual(Window(home).Property(SubMenu),12000) + !String.IsEmpty(Skin.String(11000-WidgetAd-Label))">$INFO[Skin.String(12000-WidgetAd-Label)]</value>
 		<value>$LOCALIZE[16018]</value>
 	</variable>
+	<variable name="WidgetEpisodeLabel">
+		<value condition="Integer.IsGreater(ListItem.Property(episodes),1) + Integer.IsGreater(ListItem.Property(seasons),1)">$INFO[ListItem.Property(episodes),, $LOCALIZE[31322] ]$INFO[ListItem.Property(seasons),, $LOCALIZE[36905]]</value>
+		<value condition="Integer.IsGreater(ListItem.Property(episodes),1) + !Integer.IsGreater(ListItem.Property(seasons),1)">$INFO[ListItem.Property(episodes),, $LOCALIZE[31322] ]$INFO[ListItem.Property(seasons),, $LOCALIZE[36904]]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(episodes),1)">$INFO[ListItem.Property(episodes),, $LOCALIZE[31323]]</value>
+	</variable>
 	<variable name="1000-WidgetAd-Text">
 		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31242])">$LOCALIZE[31248]</value>
 		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31243])">$LOCALIZE[31249]</value>

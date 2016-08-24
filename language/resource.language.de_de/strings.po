@@ -1090,8 +1090,8 @@ msgstr "[LIGHT]Empfohlen wegen [/LIGHT]"
 
 #: /16x9/Variables.xml:876
 msgctxt "#31250"
-msgid "Nothing to watch?[CR][LIGHT]Try [/LIGHT]"
-msgstr "Nichts anzusehen?[CR][LIGHT]Wie wärs mit [/LIGHT]"
+msgid "[LIGHT]Nothing to watch?[CR]Try [/LIGHT]"
+msgstr "[LIGHT]Nichts anzusehen?[CR]Wie wärs mit [/LIGHT]"
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
@@ -1453,6 +1453,16 @@ msgstr "ungesehene Folgen"
 msgctxt "#31321"
 msgid "unwatched episode"
 msgstr "ungesehene Folge"
+
+#: /16x9/Variables.xml
+msgctxt "#31322"
+msgid "episodes in"
+msgstr "Folgen in"
+
+#: /16x9/Variables.xml
+msgctxt "#31323"
+msgid "episode available"
+msgstr "Folge verfügbar"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

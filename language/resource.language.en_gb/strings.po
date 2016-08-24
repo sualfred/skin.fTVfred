@@ -1062,8 +1062,8 @@ msgstr "[LIGHT]Because you watched [/LIGHT]"
 
 #: /16x9/Variables.xml:876
 msgctxt "#31250"
-msgid "Nothing to watch?[CR][LIGHT]Try [/LIGHT]"
-msgstr "Nothing to watch?[CR][LIGHT]Try [/LIGHT]"
+msgid "[LIGHT]Nothing to watch?[CR]Try [/LIGHT]"
+msgstr "[LIGHT]Nothing to watch?[CR]Try [/LIGHT]"
 
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
@@ -1419,6 +1419,16 @@ msgstr "unwatched episodes"
 msgctxt "#31321"
 msgid "unwatched episode"
 msgstr "unwatched episode"
+
+#: /16x9/Variables.xml
+msgctxt "#31322"
+msgid "episodes in"
+msgstr "episodes in"
+
+#: /16x9/Variables.xml
+msgctxt "#31323"
+msgid "episode available"
+msgstr "episodes available"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
