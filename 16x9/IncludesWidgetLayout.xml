@@ -55,8 +55,16 @@
 			<top>-136</top>
 			<width>1500</width>
 			<height>331</height>
+			<aspectratio>scale</aspectratio>
+			<texture>views/highlight_banner_back.png</texture>
+		</control>
+		<control type="image">
+			<top>-136</top>
+			<width>1500</width>
+			<height>331</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture diffuse="views/highlight_banner_mask.png" background="true">$INFO[ListItem.Property(bannerArt)]</texture>
+			<colordiffuse>99ffffff</colordiffuse>
 		</control>
 		<control type="image">
 			<width>58</width>
@@ -64,10 +72,10 @@
 			<texture>views/OverlayHighlight.png</texture>
 		</control>
 		<control type="image">
-			<top>35</top>
-			<left>510</left>
-			<width>535</width>
-			<height>125</height>
+			<top>15</top>
+			<left>550</left>
+			<width>439</width>
+			<height>170</height>
 			<aspectratio aligny="center" align="center">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Property(bannerLogo)]</texture>
 		</control>
