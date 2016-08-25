@@ -947,8 +947,8 @@ msgstr "Tune in"
 
 #: \16x9\SkinSettings.xml:475
 msgctxt "#31227"
-msgid "Backup or restore fTV settings"
-msgstr "Backup or restore fTV settings"
+msgid "Backup fTV settings"
+msgstr "Backup fTV settings"
 
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"

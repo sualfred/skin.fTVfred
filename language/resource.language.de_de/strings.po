@@ -972,8 +972,8 @@ msgstr "Einschalten"
 
 #: \16x9\SkinSettings.xml:475
 msgctxt "#31227"
-msgid "Backup or restore fTV settings"
-msgstr "fTV Einstellungen sichern oder wiederherstellen"
+msgid "Backup fTV settings"
+msgstr "Backup fTV Einstellungen"
 
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"

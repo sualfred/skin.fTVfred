@@ -592,25 +592,6 @@
 					<onclick>Skin.ToggleSetting(PVRNextUpDisabled)</onclick>
 					<selected>!Skin.HasSetting(PVRNextUpDisabled)</selected>
 				</control>
-				<control id="23" type="button">
-					<width>958</width>
-					<height>84</height>
-					<font>Light32</font>
-					<label>$LOCALIZE[31227]</label>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<onclick>SetProperty(Dialog.NumItems,3)</onclick>
-					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31229])</onclick>
-					<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=backup))</onclick>
-					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31230])</onclick>
-					<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=restore))</onclick>
-					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31231])</onclick>
-					<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.service,action=reset))</onclick>
-					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31543])</onclick>
-				</control>
 				<control id="21" type="radiobutton">
 					<width>958</width>
 					<height>84</height>

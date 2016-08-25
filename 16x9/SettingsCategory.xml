@@ -457,6 +457,27 @@
 						<texturefocus border="3">settings/button_focus.png</texturefocus>
 						<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					</control>
+					<control id="9005" type="button">
+						<height>120</height>
+						<width>638</width>
+						<textoffsetx>40</textoffsetx>
+						<textwidth>576</textwidth>
+						<aligny>center</aligny>
+						<font>Light30Spaced</font>
+						<label>$LOCALIZE[31227]</label>
+						<textcolor>ff505153</textcolor>
+						<focusedcolor>ffffaf37</focusedcolor>
+						<onclick>SetProperty(Dialog.NumItems,3)</onclick>
+						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31229])</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=backup))</onclick>
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31230])</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=restore))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31231])</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.service,action=reset))</onclick>
+						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31543])</onclick>
+						<texturefocus border="3">settings/button_focus.png</texturefocus>
+						<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					</control>
 					<control id="20" type="button">
 						<height>120</height>
 						<width>638</width>
@@ -481,7 +502,7 @@
 					<font>Light30Spaced</font>
 					<label>$LOCALIZE[31016]</label>
 					<textcolor>ff505153</textcolor>
-					<visible>!Control.HasFocus(20)</visible>
+					<visible>!Control.HasFocus(20) + !Container(9001).HasNext</visible>
 				</control>
 				<control type="label">
 					<left>40</left>

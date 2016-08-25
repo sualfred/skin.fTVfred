@@ -2314,7 +2314,7 @@
 		<value condition="ControlGroup(9).HasFocus(20)">$LOCALIZE[31034]</value>
 		<value condition="ControlGroup(9).HasFocus(21)">$LOCALIZE[31039]</value>
 		<value condition="ControlGroup(9).HasFocus(22)">$LOCALIZE[31040]</value>
-		<value condition="ControlGroup(9).HasFocus(23)">$LOCALIZE[31228]</value>
+		<!--<value condition="ControlGroup(9).HasFocus(23)">$LOCALIZE[31228]</value>-->
 		<value condition="ControlGroup(9).HasFocus(24)">$LOCALIZE[31233]</value>
 		<value condition="ControlGroup(9).HasFocus(25)">$LOCALIZE[31288]</value>
 		<value condition="ControlGroup(9).HasFocus(26)">$LOCALIZE[31289]</value>
@@ -2387,6 +2387,7 @@
 		<value condition="Control.HasFocus(9002)">$LOCALIZE[31056]</value>
 		<value condition="Control.HasFocus(9003)">$LOCALIZE[31124]</value>
 		<value condition="Control.HasFocus(9004)">$LOCALIZE[31127]</value>
+		<value condition="Control.HasFocus(9005)">$LOCALIZE[31228]</value>
 		<value condition="Control.HasFocus(20)">$LOCALIZE[10047]</value>
 		<value condition="!String.IsEmpty(Window(home).Property(SettingInfo))">$INFO[Window(home).Property(SettingInfo)]</value>
 		<value>$INFO[Control.GetLabel(6)]</value>
