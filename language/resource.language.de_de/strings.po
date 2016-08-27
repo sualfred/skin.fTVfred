@@ -1469,6 +1469,11 @@ msgctxt "#31324"
 msgid "Interface"
 msgstr "Oberfläche"
 
+#: /16x9/IncludesWidgetLayout.xml
+msgctxt "#31325"
+msgid "Return to"
+msgstr "Kehre zurück zu"
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Gruppe 1"

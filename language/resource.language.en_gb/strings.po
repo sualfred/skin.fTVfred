@@ -1433,7 +1433,12 @@ msgstr "episode available"
 #: /16x9/Settings.xml
 msgctxt "#31324"
 msgid "Interface"
-msgstr ""
+msgstr "Interface"
+
+#: /16x9/IncludesWidgetLayout.xml
+msgctxt "#31325"
+msgid "Return to"
+msgstr "Return to"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

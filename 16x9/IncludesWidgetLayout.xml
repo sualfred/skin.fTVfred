@@ -89,10 +89,25 @@
 			<shadowcolor>88000000</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[ListItem.Label,[B][COLOR ffffffff],[/COLOR][/B]]$INFO[ListItem.Property(season) ,[CR][LIGHT]$LOCALIZE[20373] , ]$INFO[ListItem.Property(episode),$LOCALIZE[20359] ,[/LIGHT]]</label>
+			<label>[LIGHT]$VAR[$PARAM[ID]0-WidgetAd-Text]$LOCALIZE[31325][/LIGHT] [COLOR ffffffff]$INFO[ListItem.Label,[B],[/COLOR][/B]]</label>
 			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-			<visible>String.IsEmpty(ListItem.Property(tagline))</visible>
+			<visible>String.IsEmpty(ListItem.Property(tagline)) + String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,inprogresstvshows)</visible>
+		</control>
+		<control type="textbox">
+			<top>15</top>
+			<left>50</left>
+			<width>550</width>
+			<height>165</height>
+			<font>Med32</font>
+			<textcolor>ffdadada</textcolor>
+			<shadowcolor>88000000</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]][COLOR ffffffff]$INFO[ListItem.Label,[B],[/COLOR][/B]][LIGHT]$INFO[ListItem.Property(season) ,[CR]$LOCALIZE[20373] , ]$INFO[ListItem.Property(episode),$LOCALIZE[20359] ][/LIGHT]</label>
+			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
+			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
+			<visible>String.IsEmpty(ListItem.Property(tagline)) + !String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,inprogresstvshows)</visible>
 		</control>
 		<control type="textbox">
 			<top>15</top>
