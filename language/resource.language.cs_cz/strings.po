@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-24 12:52+0000\n"
+"PO-Revision-Date: 2016-08-27 09:12+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -972,8 +972,8 @@ msgstr "naladit"
 
 #: \16x9\SkinSettings.xml:475
 msgctxt "#31227"
-msgid "Backup or restore fTV settings"
-msgstr "Zálohovat nebo obnovit nastavení fTV"
+msgid "Backup fTV settings"
+msgstr ""
 
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"
@@ -1467,6 +1467,11 @@ msgstr ""
 #: /16x9/Settings.xml
 msgctxt "#31324"
 msgid "Interface"
+msgstr ""
+
+#: /16x9/IncludesWidgetLayout.xml
+msgctxt "#31325"
+msgid "Return to"
 msgstr ""
 
 msgctxt "#31500"

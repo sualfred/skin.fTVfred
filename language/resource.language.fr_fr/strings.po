@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-24 12:52+0000\n"
+"PO-Revision-Date: 2016-08-27 09:12+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: French (France) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -657,7 +657,7 @@ msgstr ""
 
 msgctxt "#31152"
 msgid "Air Date"
-msgstr ""
+msgstr "Diffusé le"
 
 msgctxt "#31153"
 msgid "3D Options"
@@ -944,7 +944,7 @@ msgstr "Annuler la prochaine vidéo"
 
 msgctxt "#31221"
 msgid "Sorry, no shows are airing at this time."
-msgstr "Désolé, aucune séries n'est diffusées à cette heure."
+msgstr "Désolé, aucunes séries n'est diffusées à cette heure."
 
 msgctxt "#31222"
 msgid "Please try again later."
@@ -972,8 +972,8 @@ msgstr "Zapper sur"
 
 #: \16x9\SkinSettings.xml:475
 msgctxt "#31227"
-msgid "Backup or restore fTV settings"
-msgstr "Sauvegarder ou restaurer les réglages de fTV"
+msgid "Backup fTV settings"
+msgstr "Sauvegarder les réglages fTV"
 
 #: \16x9\Variables.xml:1881
 msgctxt "#31228"
@@ -1041,7 +1041,7 @@ msgstr "Première diffusion le"
 #: /16x9/VideoOSD.xml:288
 msgctxt "#31240"
 msgid "View X-Ray"
-msgstr ""
+msgstr "Voir X-Ray"
 
 #: /16x9/DialogFullScreenInfo.xml:218
 msgctxt "#31241"
@@ -1457,16 +1457,21 @@ msgstr "Épisode non vu"
 #: /16x9/Variables.xml
 msgctxt "#31322"
 msgid "episodes in"
-msgstr ""
+msgstr "épisodes en"
 
 #: /16x9/Variables.xml
 msgctxt "#31323"
 msgid "episode available"
-msgstr ""
+msgstr "épisode disponible"
 
 #: /16x9/Settings.xml
 msgctxt "#31324"
 msgid "Interface"
+msgstr ""
+
+#: /16x9/IncludesWidgetLayout.xml
+msgctxt "#31325"
+msgid "Return to"
 msgstr ""
 
 msgctxt "#31500"
@@ -1511,7 +1516,7 @@ msgstr "Définir le Widget"
 
 msgctxt "#31510"
 msgid "IMDB Top250 Movies"
-msgstr ""
+msgstr "Films Top250 IMDB"
 
 msgctxt "#31511"
 msgid "TuneIn Recents"
@@ -1531,11 +1536,11 @@ msgstr ""
 
 msgctxt "#31515"
 msgid "Drama and Thriller Movies"
-msgstr "Films d'Horreurs et Thriller"
+msgstr "Films Drame et Suspens"
 
 msgctxt "#31516"
 msgid "Drama and Thriller TV Shows"
-msgstr ""
+msgstr "Séries Drame et Suspens"
 
 msgctxt "#31517"
 msgid "War and History Movies"
@@ -1609,7 +1614,7 @@ msgstr "terminé!"
 
 msgctxt "#31534"
 msgid "Air Time"
-msgstr ""
+msgstr "Diffusé le"
 
 msgctxt "#31535"
 msgid "Warning: No mouse support"
