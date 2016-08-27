@@ -89,7 +89,7 @@
 			<shadowcolor>88000000</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[ListItem.Label,[B][COLOR ffffffff],[/COLOR][/B]]</label>
+			<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]]$INFO[ListItem.Label,[B][COLOR ffffffff],[/COLOR][/B]]$INFO[ListItem.Property(season) ,[CR][LIGHT]$LOCALIZE[20373] , ]$INFO[ListItem.Property(episode),$LOCALIZE[20359] ,[/LIGHT]]</label>
 			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 			<visible>String.IsEmpty(ListItem.Property(tagline))</visible>
@@ -140,6 +140,7 @@
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<align>right</align>
+			<visible>String.IsEmpty(ListItem.Property(episodes))</visible>
 			<control type="label">
 				<width>200</width>
 				<height>30</height>

@@ -388,15 +388,26 @@
 	<!-- widget contents -->
 	<include name="FtvWidget">
 		<item>
+			<label>$INFO[Container($PARAM[ID]9).ListItem.Title]</label>
+			<label2>AdvertBanner</label2>
+			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
+			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)]</property>
+			<property name="tvshow">$INFO[Container($PARAM[ID]9).ListItem.TvShowTitle]</property>
+			<property name="season">$INFO[Container($PARAM[ID]9).ListItem.season]</property>
+			<property name="episode">$INFO[Container($PARAM[ID]9).ListItem.episode]</property>
+			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
+			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+			<onclick>SetFocus($PARAM[ID]9)</onclick>
+		</item>
+		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
 			<label2>AdvertBanner</label2>
-			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
 			<property name="tagline">$INFO[Container($PARAM[ID]9).ListItem.Tagline]</property>
-			<property name="episodes">$INFO[Container($PARAM[ID]9).ListItem.Property(TotalEpisodes)]</property>
-			<property name="seasons">$INFO[Container($PARAM[ID]9).ListItem.Property(TotalSeasons)]</property>
 			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 			<onclick>SetFocus($PARAM[ID]9)</onclick>
@@ -408,9 +419,9 @@
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
-			<property name="tagline">$INFO[Container($PARAM[ID]9).ListItem.Tagline]</property>
 			<property name="episodes">$INFO[Container($PARAM[ID]9).ListItem.Property(TotalEpisodes)]</property>
 			<property name="seasons">$INFO[Container($PARAM[ID]9).ListItem.Property(TotalSeasons)]</property>
+			<property name="unwatched">$INFO[Container($PARAM[ID]9).ListItem.Property(UnWatchedEpisodes)]</property>
 			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
 			<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>
