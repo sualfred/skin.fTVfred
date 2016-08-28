@@ -4,6 +4,7 @@
 	<menucontrol>333</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90</defaultcontrol>
+	<onload condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))">SetProperty(Preload,1,home)</onload>
 	<!-- Main menu focus position properties -->
 	<onload condition="String.IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + String.IsEqual(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
@@ -385,6 +386,9 @@
 			<include>HiddenControl</include>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
 			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(99)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))">SetProperty(Preload,1,home)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
 		</control>
 		<!-- Loading Splash -->
 		<control type="group" id="91">
