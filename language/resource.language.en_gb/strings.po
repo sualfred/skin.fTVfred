@@ -1569,18 +1569,6 @@ msgctxt "#31530"
 msgid "'Square Info' for Music / Add-ons"
 msgstr "'Square Info' for Music / Add-ons"
 
-msgctxt "#31531"
-msgid "loading home"
-msgstr "loading home"
-
-msgctxt "#31532"
-msgid "updating widgets"
-msgstr "updating widgets"
-
-msgctxt "#31533"
-msgid "done!"
-msgstr "done!"
-
 msgctxt "#31534"
 msgid "Air Time"
 msgstr "Air Time"

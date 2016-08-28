@@ -119,10 +119,6 @@
 		<value condition="String.StartsWith(System.BuildVersion,17.)">Kodi Krypton</value>
 		<value condition="String.StartsWith(System.BuildVersion,16.)">Kodi Jarvis</value>
 	</variable>
-	<variable name="PreloadLabel">
-		<value condition="Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))">$LOCALIZE[31531]</value>
-		<value>$LOCALIZE[31533]</value>
-	</variable>
 	<variable name="InfoImage">
 		<value condition="String.IsEqual(Window(home).Property(SetUserRating),video) + !String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="String.IsEqual(Window(home).Property(SetUserRating),video) + !String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
