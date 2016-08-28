@@ -18,7 +18,7 @@
 	<!-- Build menu -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
 	<controls>
-		<control type="group">		
+		<control type="group">
 			<!-- Hidden controls to get sure that the widget animations are going to be triggered -->
 			<control type="group" id="31">
 				<animation reversible="false" effect="slide" end="0,0" time="250">Hidden</animation>
@@ -65,6 +65,19 @@
 				<onfocus condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget12000],home)</onfocus>
 				<onfocus>ActivateWindow(1149)</onfocus>
 			</control>
+			<!-- Hidden startup check button -->
+			<control type="button" id="90">
+				<include>HiddenControl</include>
+				<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
+				<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(99)</onfocus>
+				<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
+				<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
+			</control>
+			<!-- Hidden control to check the preloading status -->			
+			<control type="group" id="91">
+				<animation reversible="false" effect="slide" end="0,0" time="800">Hidden</animation>
+				<visible>!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
+			</control>
 			<!-- Background -->
 			<control type="image">
 				<include>FullscreenDimensions</include>
@@ -92,7 +105,7 @@
 				<onup>SetProperty(Movement,1)</onup>
 				<ondown>noop</ondown>
 				<ondown>ClearProperty(Movement)</ondown>
-				<onleft>noop</onleft>				
+				<onleft>noop</onleft>
 				<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 				<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
@@ -382,19 +395,7 @@
 			<include>HomeWidgets</include>
 			<include>EmptyMessages</include>
 		</control>
-		<control type="button" id="90">
-			<label>Loop</label>
-			<include>HiddenControl</include>
-			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
-			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(99)</onfocus>
-			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
-			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
-		</control>
 		<!-- Loading Splash -->
-		<control type="group" id="91">
-			<animation reversible="false" effect="slide" end="0,0" time="800">Hidden</animation>
-			<visible>!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
-		</control>
 		<control type="group">
 			<visible>Control.IsVisible(91)</visible>
 			<animation effect="fade" end="0" start="100" time="120">Hidden</animation>

@@ -212,19 +212,19 @@
 	<!-- Widget Layout Include -->
 	<include name="ParamWidgetLayout">
 		<item>
-			<label>$VAR[WidgetStyle-$PARAM[Pos]]</label>
+			<label fallback="31161">$VAR[WidgetStyleLabel-$PARAM[Pos]]</label>
 			<label2>$LOCALIZE[31203]</label2>
 			<onclick>SetProperty(Dialog.NumItems,$PARAM[Pos])</onclick>
 			<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
-			<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31159]))</onclick>
+			<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-$PARAM[Pos]],$LOCALIZE[31159]))</onclick>
 			<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
-			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31160]))</onclick>
+			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-$PARAM[Pos]],$LOCALIZE[31160]))</onclick>
 			<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31550])</onclick>
-			<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31549]))</onclick>
+			<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-$PARAM[Pos]],$LOCALIZE[31549]))</onclick>
 			<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31529])</onclick>
-			<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31161]))</onclick>
+			<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-$PARAM[Pos]],$LOCALIZE[31161]))</onclick>
 			<onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31530])</onclick>
-			<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],$LOCALIZE[31203]))</onclick>
+			<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-$PARAM[Pos]],$LOCALIZE[31203]))</onclick>
 			<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
 		</item>
 	</include>

@@ -439,7 +439,7 @@
 	</include>
 	<include name="HomeSquareInfoItemlayout">
 		<control type="group">
-			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),squareinfo) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeSquareInfoItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -460,7 +460,7 @@
 	</include>
 	<include name="HomeSquareInfoFocusedlayout">
 		<control type="group">
-			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31203]) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>[String.IsEqual(ListItem.Property(WidgetStyle),squareinfo) | String.IsEmpty(ListItem.Property(WidgetStyle))] + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeSquareInfoFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -680,7 +680,7 @@
 	</include>
 	<include name="HomeSquareItemlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>!String.IsEqual(ListItem.Property(WidgetStyle),squareinfo) + !String.IsEqual(ListItem.Property(WidgetStyle),episode) + !String.IsEqual(ListItem.Property(WidgetStyle),wide) + !String.IsEqual(ListItem.Property(WidgetStyle),poster) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeSquareItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -701,7 +701,7 @@
 	</include>
 	<include name="HomeSquareFocusedlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31161]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>!String.IsEqual(ListItem.Property(WidgetStyle),squareinfo) + !String.IsEqual(ListItem.Property(WidgetStyle),episode) + !String.IsEqual(ListItem.Property(WidgetStyle),wide) + !String.IsEqual(ListItem.Property(WidgetStyle),poster) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>			
 			<include content="ParamHomeSquareFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -804,7 +804,7 @@
 	</include>
 	<include name="HomePosterItemlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),poster) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomePosterItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -833,7 +833,7 @@
 	</include>
 	<include name="HomePosterFocusedlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31160]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),poster) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomePosterFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -978,7 +978,7 @@
 	</include>
 	<include name="HomeWideItemlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),wide) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeWideItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -995,7 +995,7 @@
 	</include>
 	<include name="HomeWideFocusedlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),wide) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeWideFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1095,7 +1095,7 @@
 	</include>
 	<include name="HomeWideEpisodeItemlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),episode) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeWideEpisodeItemlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
@@ -1112,7 +1112,7 @@
 	</include>
 	<include name="HomeWideEpisodeFocusedlayout">
 		<control type="group">
-			<visible>String.IsEqual(ListItem.Property(WidgetStyle),$LOCALIZE[31549]) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
+			<visible>String.IsEqual(ListItem.Property(WidgetStyle),episode) + !String.IsEmpty(ListItem.Property(InfoLabel1))</visible>
 			<include content="ParamHomeWideEpisodeFocusedlayout">
 				<param name="left">273</param>
 				<param name="ID">1</param>
