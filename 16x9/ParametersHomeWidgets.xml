@@ -123,7 +123,7 @@
 			<control id="$PARAM[ID]0" type="fixedlist">
 				<include>HomeWidgetsAnimation</include>
 				<include>HomeWidgetBounceAnimation</include>
-				<visible>[[!String.IsEmpty(Window(home).Property(Preload)) + String.IsEmpty(Window(home).Property(PreloadDone)) + !Skin.HasSetting(PreloadDeactivated)] | String.IsEqual(Container(99).ListItem.Property(ftvWidget),$PARAM[widget])] + ![$EXP[NoContentMessage]]</visible>
+				<visible>[String.IsEqual(Container(99).ListItem.Property(ftvWidget),$PARAM[widget]) + ![$EXP[NoContentMessage]]] | [!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]]</visible>
 				<left>419</left>
 				<top>-253</top>
 				<width>2100</width>

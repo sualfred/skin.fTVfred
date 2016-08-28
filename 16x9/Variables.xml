@@ -1041,8 +1041,8 @@
 		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(1000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="2000-WidgetAd-Text">
@@ -1053,8 +1053,8 @@
 		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(2000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="3000-WidgetAd-Text">
@@ -1065,8 +1065,8 @@
 		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(3000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="4000-WidgetAd-Text">
@@ -1077,8 +1077,8 @@
 		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(4000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="5000-WidgetAd-Text">
@@ -1089,8 +1089,8 @@
 		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(5000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="6000-WidgetAd-Text">
@@ -1101,8 +1101,8 @@
 		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(6000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="7000-WidgetAd-Text">
@@ -1113,8 +1113,8 @@
 		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(7000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="8000-WidgetAd-Text">
@@ -1125,8 +1125,8 @@
 		<value condition="String.IsEqual(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(8000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(8000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="9000-WidgetAd-Text">
@@ -1137,8 +1137,8 @@
 		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(9000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="10000-WidgetAd-Text">
@@ -1149,8 +1149,8 @@
 		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(10000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="11000-WidgetAd-Text">
@@ -1161,8 +1161,8 @@
 		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(11000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="12000-WidgetAd-Text">
@@ -1173,8 +1173,8 @@
 		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31246])">$LOCALIZE[31249]</value>
 		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31247])">$LOCALIZE[31250]</value>
 		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[31254])">$LOCALIZE[31249]</value>
-		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320][CR]]</value>
-		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321][CR]]</value>
+		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsGreater(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31320]]</value>
+		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[626]) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, $LOCALIZE[31321]]</value>
 		<value condition="String.IsEqual(Skin.String(12000-WidgetAd-Label),$LOCALIZE[20387])">$LOCALIZE[31248]</value>
 	</variable>
 	<variable name="WidgetLabel-1">

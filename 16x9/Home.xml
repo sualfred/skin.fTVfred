@@ -3,12 +3,9 @@
 	<!-- home -->
 	<menucontrol>333</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol>89</defaultcontrol>
-	<!-- Preload properties -->
-	<onload condition="Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))">SetProperty(Preload,1,Home)</onload>
-	<onload>SetProperty(PreloadTimeout,1,Home)</onload>
+	<defaultcontrol>90</defaultcontrol>
 	<!-- Main menu focus position properties -->
-	<onload condition="String.IsEmpty(Window(home).Property(PreloadDone)) + String.IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + String.IsEqual(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + String.IsEqual(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,$INFO[Window(home).Property(CurrentItem)])</onload>
 	<!-- Clear properties -->
@@ -66,8 +63,6 @@
 				<onfocus condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget12000],home)</onfocus>
 				<onfocus>ActivateWindow(1149)</onfocus>
 			</control>
-			<!-- Hide elements until Preloading is done -->
-			<animation effect="slide" time="0" start="0,0" end="0,2000" condition="[!String.IsEmpty(Window(home).Property(Preload)) | Control.IsVisible(91)] + !Skin.HasSetting(PreloadDeactivated)">Conditional</animation>
 			<!-- Background -->
 			<control type="image">
 				<include>FullscreenDimensions</include>
@@ -103,88 +98,88 @@
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 				<oninfo>SetFocus(333)</oninfo>
 				<!--on right-->
-				<onright condition="!String.IsEmpty(Container(99).ListItem.Property(ftvWidget)) | String.IsEqual(Container(99).ListItem.Property(defaultID),settings)">ClearProperty(MainMenuFocus,home)</onright>
-				<onright condition="String.Contains(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + !String.IsEmpty(Container(99).ListItem.Property(ftvWidget)) | String.IsEqual(Container(99).ListItem.Property(defaultID),settings)">ClearProperty(MainMenuFocus,home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.Contains(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
 				<!-- #1 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + Integer.IsGreater(Container(1009).NumItems,0) + String.IsEqual(Container(1000).CurrentItem,1) + !String.IsEmpty(Skin.String(1000-WidgetAd))">Control.Move(1000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + Integer.IsGreater(Container(1000).NumItems,1)">SetFocus(1000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,1) + String.IsEqual(Container(1000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,1) + String.IsEqual(Container(1000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,1) + !String.IsEmpty(Container(1000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(1000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + Integer.IsGreater(Container(1009).NumItems,0) + String.IsEqual(Container(1000).CurrentItem,1) + !String.IsEmpty(Skin.String(1000-WidgetAd))">Control.Move(1000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + Integer.IsGreater(Container(1000).NumItems,1)">SetFocus(1000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,1) + String.IsEqual(Container(1000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,1) + String.IsEqual(Container(1000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1) + !Integer.IsGreater(Container(1000).NumItems,1) + !String.IsEmpty(Container(1000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(1000-WidgetAction-1)]</onright>
 				<!-- #2 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + Integer.IsGreater(Container(2009).NumItems,0) + String.IsEqual(Container(2000).CurrentItem,1) + !String.IsEmpty(Skin.String(2000-WidgetAd))">Control.Move(2000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + Integer.IsGreater(Container(2000).NumItems,1)">SetFocus(2000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,1) + String.IsEqual(Container(2000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,1) + String.IsEqual(Container(2000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,1) + !String.IsEmpty(Container(2000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(2000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + Integer.IsGreater(Container(2009).NumItems,0) + String.IsEqual(Container(2000).CurrentItem,1) + !String.IsEmpty(Skin.String(2000-WidgetAd))">Control.Move(2000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + Integer.IsGreater(Container(2000).NumItems,1)">SetFocus(2000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,1) + String.IsEqual(Container(2000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,1) + String.IsEqual(Container(2000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2) + !Integer.IsGreater(Container(2000).NumItems,1) + !String.IsEmpty(Container(2000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(2000-WidgetAction-1)]</onright>
 				<!-- #3 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + Integer.IsGreater(Container(3009).NumItems,0) + String.IsEqual(Container(3000).CurrentItem,1) + !String.IsEmpty(Skin.String(3000-WidgetAd))">Control.Move(3000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + Integer.IsGreater(Container(3000).NumItems,1)">SetFocus(3000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,1) + String.IsEqual(Container(3000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,1) + String.IsEqual(Container(3000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,1) + !String.IsEmpty(Container(3000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(3000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + Integer.IsGreater(Container(3009).NumItems,0) + String.IsEqual(Container(3000).CurrentItem,1) + !String.IsEmpty(Skin.String(3000-WidgetAd))">Control.Move(3000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + Integer.IsGreater(Container(3000).NumItems,1)">SetFocus(3000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,1) + String.IsEqual(Container(3000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,1) + String.IsEqual(Container(3000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget3) + !Integer.IsGreater(Container(3000).NumItems,1) + !String.IsEmpty(Container(3000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(3000-WidgetAction-1)]</onright>
 				<!-- #4 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + Integer.IsGreater(Container(4009).NumItems,0) + String.IsEqual(Container(4000).CurrentItem,1) + !String.IsEmpty(Skin.String(4000-WidgetAd))">Control.Move(4000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + Integer.IsGreater(Container(4000).NumItems,1)">SetFocus(4000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,1) + String.IsEqual(Container(4000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,1) + String.IsEqual(Container(4000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,1) + !String.IsEmpty(Container(4000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(4000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + Integer.IsGreater(Container(4009).NumItems,0) + String.IsEqual(Container(4000).CurrentItem,1) + !String.IsEmpty(Skin.String(4000-WidgetAd))">Control.Move(4000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + Integer.IsGreater(Container(4000).NumItems,1)">SetFocus(4000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,1) + String.IsEqual(Container(4000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,1) + String.IsEqual(Container(4000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget4) + !Integer.IsGreater(Container(4000).NumItems,1) + !String.IsEmpty(Container(4000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(4000-WidgetAction-1)]</onright>
 				<!-- #5 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + Integer.IsGreater(Container(5009).NumItems,0) + String.IsEqual(Container(5000).CurrentItem,1) + !String.IsEmpty(Skin.String(5000-WidgetAd))">Control.Move(5000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + Integer.IsGreater(Container(5000).NumItems,1)">SetFocus(5000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,1) + String.IsEqual(Container(5000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,1) + String.IsEqual(Container(5000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,1) + !String.IsEmpty(Container(5000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(5000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + Integer.IsGreater(Container(5009).NumItems,0) + String.IsEqual(Container(5000).CurrentItem,1) + !String.IsEmpty(Skin.String(5000-WidgetAd))">Control.Move(5000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + Integer.IsGreater(Container(5000).NumItems,1)">SetFocus(5000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,1) + String.IsEqual(Container(5000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,1) + String.IsEqual(Container(5000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget5) + !Integer.IsGreater(Container(5000).NumItems,1) + !String.IsEmpty(Container(5000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(5000-WidgetAction-1)]</onright>
 				<!-- #6 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + Integer.IsGreater(Container(6009).NumItems,0) + String.IsEqual(Container(6000).CurrentItem,1) + !String.IsEmpty(Skin.String(6000-WidgetAd))">Control.Move(6000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + Integer.IsGreater(Container(6000).NumItems,1)">SetFocus(6000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,1) + String.IsEqual(Container(6000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,1) + String.IsEqual(Container(6000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,1) + !String.IsEmpty(Container(6000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(6000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + Integer.IsGreater(Container(6009).NumItems,0) + String.IsEqual(Container(6000).CurrentItem,1) + !String.IsEmpty(Skin.String(6000-WidgetAd))">Control.Move(6000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + Integer.IsGreater(Container(6000).NumItems,1)">SetFocus(6000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,1) + String.IsEqual(Container(6000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,1) + String.IsEqual(Container(6000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget6) + !Integer.IsGreater(Container(6000).NumItems,1) + !String.IsEmpty(Container(6000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(6000-WidgetAction-1)]</onright>
 				<!-- #7 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + Integer.IsGreater(Container(7009).NumItems,0) + String.IsEqual(Container(7000).CurrentItem,1) + !String.IsEmpty(Skin.String(7000-WidgetAd))">Control.Move(7000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + Integer.IsGreater(Container(7000).NumItems,1)">SetFocus(7000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,1) + String.IsEqual(Container(7000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,1) + String.IsEqual(Container(7000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,1) + !String.IsEmpty(Container(7000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(7000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + Integer.IsGreater(Container(7009).NumItems,0) + String.IsEqual(Container(7000).CurrentItem,1) + !String.IsEmpty(Skin.String(7000-WidgetAd))">Control.Move(7000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + Integer.IsGreater(Container(7000).NumItems,1)">SetFocus(7000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,1) + String.IsEqual(Container(7000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,1) + String.IsEqual(Container(7000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget7) + !Integer.IsGreater(Container(7000).NumItems,1) + !String.IsEmpty(Container(7000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(7000-WidgetAction-1)]</onright>
 				<!-- #8 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + Integer.IsGreater(Container(8009).NumItems,0) + String.IsEqual(Container(8000).CurrentItem,1) + !String.IsEmpty(Skin.String(8000-WidgetAd))">Control.Move(8000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + Integer.IsGreater(Container(8000).NumItems,1)">SetFocus(8000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,1) + String.IsEqual(Container(8000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,1) + String.IsEqual(Container(8000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,1) + !String.IsEmpty(Container(8000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(8000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + Integer.IsGreater(Container(8009).NumItems,0) + String.IsEqual(Container(8000).CurrentItem,1) + !String.IsEmpty(Skin.String(8000-WidgetAd))">Control.Move(8000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + Integer.IsGreater(Container(8000).NumItems,1)">SetFocus(8000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,1) + String.IsEqual(Container(8000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,1) + String.IsEqual(Container(8000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget8) + !Integer.IsGreater(Container(8000).NumItems,1) + !String.IsEmpty(Container(8000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(8000-WidgetAction-1)]</onright>
 				<!-- #9 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + Integer.IsGreater(Container(9009).NumItems,0) + String.IsEqual(Container(9000).CurrentItem,1) + !String.IsEmpty(Skin.String(9000-WidgetAd))">Control.Move(9000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + Integer.IsGreater(Container(9000).NumItems,1)">SetFocus(9000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,1) + String.IsEqual(Container(9000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,1) + String.IsEqual(Container(9000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,1) + !String.IsEmpty(Container(9000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(9000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + Integer.IsGreater(Container(9009).NumItems,0) + String.IsEqual(Container(9000).CurrentItem,1) + !String.IsEmpty(Skin.String(9000-WidgetAd))">Control.Move(9000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + Integer.IsGreater(Container(9000).NumItems,1)">SetFocus(9000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,1) + String.IsEqual(Container(9000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,1) + String.IsEqual(Container(9000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget9) + !Integer.IsGreater(Container(9000).NumItems,1) + !String.IsEmpty(Container(9000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(9000-WidgetAction-1)]</onright>
 				<!-- #10 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + Integer.IsGreater(Container(10009).NumItems,0) + String.IsEqual(Container(10000).CurrentItem,1) + !String.IsEmpty(Skin.String(10000-WidgetAd))">Control.Move(10000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + Integer.IsGreater(Container(10000).NumItems,1)">SetFocus(10000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,1) + String.IsEqual(Container(10000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,1) + String.IsEqual(Container(10000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,1) + !String.IsEmpty(Container(10000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(10000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + Integer.IsGreater(Container(10009).NumItems,0) + String.IsEqual(Container(10000).CurrentItem,1) + !String.IsEmpty(Skin.String(10000-WidgetAd))">Control.Move(10000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + Integer.IsGreater(Container(10000).NumItems,1)">SetFocus(10000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,1) + String.IsEqual(Container(10000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,1) + String.IsEqual(Container(10000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget10) + !Integer.IsGreater(Container(10000).NumItems,1) + !String.IsEmpty(Container(10000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(10000-WidgetAction-1)]</onright>
 				<!-- #11 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + Integer.IsGreater(Container(11009).NumItems,0) + String.IsEqual(Container(11000).CurrentItem,1) + !String.IsEmpty(Skin.String(11000-WidgetAd))">Control.Move(11000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + Integer.IsGreater(Container(11000).NumItems,1)">SetFocus(11000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,1) + String.IsEqual(Container(11000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,1) + String.IsEqual(Container(11000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,1) + !String.IsEmpty(Container(11000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(11000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + Integer.IsGreater(Container(11009).NumItems,0) + String.IsEqual(Container(11000).CurrentItem,1) + !String.IsEmpty(Skin.String(11000-WidgetAd))">Control.Move(11000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + Integer.IsGreater(Container(11000).NumItems,1)">SetFocus(11000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,1) + String.IsEqual(Container(11000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,1) + String.IsEqual(Container(11000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget11) + !Integer.IsGreater(Container(11000).NumItems,1) + !String.IsEmpty(Container(11000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(11000-WidgetAction-1)]</onright>
 				<!-- #12 -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + Integer.IsGreater(Container(12009).NumItems,0) + String.IsEqual(Container(12000).CurrentItem,1) + !String.IsEmpty(Skin.String(12000-WidgetAd))">Control.Move(12000,1)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + Integer.IsGreater(Container(12000).NumItems,1)">SetFocus(12000)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,1) + String.IsEqual(Container(12000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,1) + String.IsEqual(Container(12000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,1) + !String.IsEmpty(Container(12000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(12000-WidgetAction-1)]</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + Integer.IsGreater(Container(12009).NumItems,0) + String.IsEqual(Container(12000).CurrentItem,1) + !String.IsEmpty(Skin.String(12000-WidgetAd))">Control.Move(12000,1)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + Integer.IsGreater(Container(12000).NumItems,1)">SetFocus(12000)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,1) + String.IsEqual(Container(12000).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,1) + String.IsEqual(Container(12000).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12) + !Integer.IsGreater(Container(12000).NumItems,1) + !String.IsEmpty(Container(12000).ListItem.Property(InfoLabel1))">$INFO[Skin.String(12000-WidgetAction-1)]</onright>
 				<!-- Other -->
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + Integer.IsGreater(Container(301).NumItems,0)">ActivateWindow(1106)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + !Integer.IsGreater(Container(301).NumItems,0)">Select</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),favourites) + Integer.IsGreater(Container(201).NumItems,0)">ActivateWindow(favourites)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),favourites) + !Integer.IsGreater(Container(201).NumItems,0)">Select</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather) + !String.IsEmpty(Window(Weather).Property(Day0.Outlook))">ActivateWindow(weather)</onright>
-				<onright condition="String.IsEqual(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
-				<onright condition="Control.IsVisible(999)">SetFocus(9991)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + Integer.IsGreater(Container(301).NumItems,0)">ActivateWindow(1106)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + !Integer.IsGreater(Container(301).NumItems,0)">Select</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),favourites) + Integer.IsGreater(Container(201).NumItems,0)">ActivateWindow(favourites)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),favourites) + !Integer.IsGreater(Container(201).NumItems,0)">Select</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather) + !String.IsEmpty(Window(Weather).Property(Day0.Outlook))">ActivateWindow(weather)</onright>
+				<onright condition="!Control.IsVisible(91) + String.IsEqual(Container(99).ListItem.Property(defaultID),settings)">Select</onright>
+				<onright condition="!Control.IsVisible(91) + Control.IsVisible(999)">SetFocus(9991)</onright>
 				<itemlayout height="74" width="284">
 					<control type="label">
 						<width>284</width>
@@ -385,293 +380,51 @@
 			<include>HomeWidgets</include>
 			<include>EmptyMessages</include>
 		</control>
-		<!-- Preload widgets -->
-		<control type="button" id="91">
+		<control type="button" id="90">
+			<label>Loop</label>
 			<include>HiddenControl</include>
-			<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + !String.IsEmpty(Window(home).Property(PreloadTimeout))
-				+ [[Container(1001).IsUpdating + Control.IsVisible(1001)]
-				| [Container(1002).IsUpdating + Control.IsVisible(1002)]
-				| [Container(1003).IsUpdating + Control.IsVisible(1003)]
-				| [Container(1004).IsUpdating + Control.IsVisible(1004)]
-				| [Container(1005).IsUpdating + Control.IsVisible(1005)]
-				| [Container(1006).IsUpdating + Control.IsVisible(1006)]
-				| [Container(1007).IsUpdating + Control.IsVisible(1007)]
-				| [Container(1008).IsUpdating + Control.IsVisible(1008)]
-				| [Container(1009).IsUpdating + Control.IsVisible(1009)]
-				| [Container(2001).IsUpdating + Control.IsVisible(2001)]
-				| [Container(2002).IsUpdating + Control.IsVisible(2002)]
-				| [Container(2003).IsUpdating + Control.IsVisible(2003)]
-				| [Container(2004).IsUpdating + Control.IsVisible(2004)]
-				| [Container(2005).IsUpdating + Control.IsVisible(2005)]
-				| [Container(2006).IsUpdating + Control.IsVisible(2006)]
-				| [Container(2007).IsUpdating + Control.IsVisible(2007)]
-				| [Container(2008).IsUpdating + Control.IsVisible(2008)]
-				| [Container(2009).IsUpdating + Control.IsVisible(2009)]
-				| [Container(3001).IsUpdating + Control.IsVisible(3001)]
-				| [Container(3002).IsUpdating + Control.IsVisible(3002)]
-				| [Container(3003).IsUpdating + Control.IsVisible(3003)]
-				| [Container(3004).IsUpdating + Control.IsVisible(3004)]
-				| [Container(3005).IsUpdating + Control.IsVisible(3005)]
-				| [Container(3006).IsUpdating + Control.IsVisible(3006)]
-				| [Container(3007).IsUpdating + Control.IsVisible(3007)]
-				| [Container(3008).IsUpdating + Control.IsVisible(3008)]
-				| [Container(3009).IsUpdating + Control.IsVisible(3009)]
-				| [Container(4001).IsUpdating + Control.IsVisible(4001)]
-				| [Container(4002).IsUpdating + Control.IsVisible(4002)]
-				| [Container(4003).IsUpdating + Control.IsVisible(4003)]
-				| [Container(4004).IsUpdating + Control.IsVisible(4004)]
-				| [Container(4005).IsUpdating + Control.IsVisible(4005)]
-				| [Container(4006).IsUpdating + Control.IsVisible(4006)]
-				| [Container(4007).IsUpdating + Control.IsVisible(4007)]
-				| [Container(4008).IsUpdating + Control.IsVisible(4008)]
-				| [Container(4009).IsUpdating + Control.IsVisible(4009)]
-				| [Container(5001).IsUpdating + Control.IsVisible(5001)]
-				| [Container(5002).IsUpdating + Control.IsVisible(5002)]
-				| [Container(5003).IsUpdating + Control.IsVisible(5003)]
-				| [Container(5004).IsUpdating + Control.IsVisible(5004)]
-				| [Container(5005).IsUpdating + Control.IsVisible(5005)]
-				| [Container(5006).IsUpdating + Control.IsVisible(5006)]
-				| [Container(5007).IsUpdating + Control.IsVisible(5007)]
-				| [Container(5008).IsUpdating + Control.IsVisible(5008)]
-				| [Container(5009).IsUpdating + Control.IsVisible(5009)]
-				| [Container(6001).IsUpdating + Control.IsVisible(6001)]
-				| [Container(6002).IsUpdating + Control.IsVisible(6002)]
-				| [Container(6003).IsUpdating + Control.IsVisible(6003)]
-				| [Container(6004).IsUpdating + Control.IsVisible(6004)]
-				| [Container(6005).IsUpdating + Control.IsVisible(6005)]
-				| [Container(6006).IsUpdating + Control.IsVisible(6006)]
-				| [Container(6007).IsUpdating + Control.IsVisible(6007)]
-				| [Container(6008).IsUpdating + Control.IsVisible(6008)]
-				| [Container(6009).IsUpdating + Control.IsVisible(6009)]
-				| [Container(7001).IsUpdating + Control.IsVisible(7001)]
-				| [Container(7002).IsUpdating + Control.IsVisible(7002)]
-				| [Container(7003).IsUpdating + Control.IsVisible(7003)]
-				| [Container(7004).IsUpdating + Control.IsVisible(7004)]
-				| [Container(7005).IsUpdating + Control.IsVisible(7005)]
-				| [Container(7006).IsUpdating + Control.IsVisible(7006)]
-				| [Container(7007).IsUpdating + Control.IsVisible(7007)]
-				| [Container(7008).IsUpdating + Control.IsVisible(7008)]
-				| [Container(7009).IsUpdating + Control.IsVisible(7009)]
-				| [Container(8001).IsUpdating + Control.IsVisible(8001)]
-				| [Container(8002).IsUpdating + Control.IsVisible(8002)]
-				| [Container(8003).IsUpdating + Control.IsVisible(8003)]
-				| [Container(8004).IsUpdating + Control.IsVisible(8004)]
-				| [Container(8005).IsUpdating + Control.IsVisible(8005)]
-				| [Container(8006).IsUpdating + Control.IsVisible(8006)]
-				| [Container(8007).IsUpdating + Control.IsVisible(8007)]
-				| [Container(8008).IsUpdating + Control.IsVisible(8008)]
-				| [Container(8009).IsUpdating + Control.IsVisible(8009)]
-				| [Container(9001).IsUpdating + Control.IsVisible(9001)]
-				| [Container(9002).IsUpdating + Control.IsVisible(9002)]
-				| [Container(9003).IsUpdating + Control.IsVisible(9003)]
-				| [Container(9004).IsUpdating + Control.IsVisible(9004)]
-				| [Container(9005).IsUpdating + Control.IsVisible(9005)]
-				| [Container(9006).IsUpdating + Control.IsVisible(9006)]
-				| [Container(9007).IsUpdating + Control.IsVisible(9007)]
-				| [Container(9008).IsUpdating + Control.IsVisible(9008)]
-				| [Container(9009).IsUpdating + Control.IsVisible(9009)]
-				| [Container(10001).IsUpdating + Control.IsVisible(10001)]
-				| [Container(10002).IsUpdating + Control.IsVisible(10002)]
-				| [Container(10003).IsUpdating + Control.IsVisible(10003)]
-				| [Container(10004).IsUpdating + Control.IsVisible(10004)]
-				| [Container(10005).IsUpdating + Control.IsVisible(10005)]
-				| [Container(10006).IsUpdating + Control.IsVisible(10006)]
-				| [Container(10007).IsUpdating + Control.IsVisible(10007)]
-				| [Container(10008).IsUpdating + Control.IsVisible(10008)]
-				| [Container(10009).IsUpdating + Control.IsVisible(10009)]
-				| [Container(11001).IsUpdating + Control.IsVisible(11001)]
-				| [Container(11002).IsUpdating + Control.IsVisible(11002)]
-				| [Container(11003).IsUpdating + Control.IsVisible(11003)]
-				| [Container(11004).IsUpdating + Control.IsVisible(11004)]
-				| [Container(11005).IsUpdating + Control.IsVisible(11005)]
-				| [Container(11006).IsUpdating + Control.IsVisible(11006)]
-				| [Container(11007).IsUpdating + Control.IsVisible(11007)]
-				| [Container(11008).IsUpdating + Control.IsVisible(11008)]
-				| [Container(11009).IsUpdating + Control.IsVisible(11009)]
-				| [Container(12001).IsUpdating + Control.IsVisible(12001)]
-				| [Container(12002).IsUpdating + Control.IsVisible(12002)]
-				| [Container(12003).IsUpdating + Control.IsVisible(12003)]
-				| [Container(12004).IsUpdating + Control.IsVisible(12004)]
-				| [Container(12005).IsUpdating + Control.IsVisible(12005)]
-				| [Container(12006).IsUpdating + Control.IsVisible(12006)]
-				| [Container(12007).IsUpdating + Control.IsVisible(12007)]
-				| [Container(12008).IsUpdating + Control.IsVisible(12008)]
-				| [Container(12009).IsUpdating + Control.IsVisible(12009)]
-				| Container(201).IsUpdating]
-			</visible>
+			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(99)</onfocus>
 		</control>
-		<!-- Splash -->
+		<!-- Loading Splash -->
+		<control type="group" id="91">
+			<animation reversible="false" effect="slide" end="0,0" time="800">Hidden</animation>
+			<visible>!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
+		</control>
 		<control type="group">
-			<visible>[Control.IsVisible(91) + !String.IsEmpty(Window(home).Property(Preload)) + !Control.HasFocus(99) + !Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(PreloadTimeout))] | [!String.IsEmpty(Window(home).Property(WaitForControl)) + !Control.HasFocus(99)]</visible>
-			<animation type="Hidden" condition="!Skin.HasSetting(PreloadDeactivated)">
-				<effect center="auto" tween="circle" easing="out" end="90" start="100" time="400" type="zoom" delay="1800" />
-				<effect easing="inout" end="0" start="1000" time="400" tween="sine" type="fade" delay="1800" />
-			</animation>
+			<visible>Control.IsVisible(91)</visible>
+			<animation effect="fade" end="0" start="100" time="120">Hidden</animation>
 			<control type="image">
-				<left>-96</left>
-				<top>-54</top>
-				<width>2112</width>
-				<height>1188</height>
-				<texture>special://skin/extras/backgrounds/loading.jpg</texture>
+				<left>418</left>
+				<width>1502</width>
+				<height>1080</height>
+				<texture>special://skin/extras/backgrounds/default.png</texture>
 			</control>
 			<control type="grouplist">
-				<top>765</top>
-				<width>1920</width>
-				<align>center</align>
-				<height>200</height>
+				<bottom>118</bottom>
+				<right>125</right>
+				<align>right</align>
+				<height>46</height>
 				<orientation>horizontal</orientation>
 				<itemgap>10</itemgap>
-				<control type="image">
-					<width>40</width>
-					<height>46</height>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture>home/loading_icon.png</texture>
-					<colordiffuse>ffb0b4b7</colordiffuse>
-					<visible>Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))</visible>
-				</control>
 				<control type="label">
-					<font>Light32</font>
-					<textcolor>ffb0b4b7</textcolor>
+					<font>Bold32</font>
+					<textcolor>ffffffff</textcolor>
 					<width>auto</width>
 					<height>41</height>
-					<label>$VAR[PreloadLabel]</label>
+					<label>Loading [I]Home[/I] ...</label>
 				</control>
 			</control>
 			<control type="image">
-				<top>735</top>
-				<left>700</left>
+				<bottom>93</bottom>
+				<right>380</right>
 				<height>100</height>
 				<width>89</width>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture>dialogs/gradient_animation.png</texture>
-				<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
+				<animation effect="slide" time="3000" tween="sine" easing="inout" start="0,0" end="340,0" loop="true" condition="true">Conditional</animation>
 			</control>
-		</control>
-		<!-- Check if Preloading is in progress -->
-		<control type="button" id="89">
-			<include>HiddenControl</include>			
-			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(PreloadTimeout),00:20,silent)</onfocus>
-			<onfocus>AlarmClock(WaitForControl,ClearProperty(WaitForControl),00:05,silent)</onfocus>
-			<onfocus>SetFocus(90)</onfocus>
-		</control>
-		<control type="button" id="90">
-			<label>Loop</label>
-			<include>HiddenControl</include>
-			<onfocus>SetProperty(Preload,1,home)</onfocus>
-			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
-			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated) + [Control.IsVisible(91) | !String.IsEmpty(Window(home).Property(WaitForControl))]">SetFocus(93)</onfocus>
-			<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Control.IsVisible(91) + String.IsEmpty(Window(home).Property(WaitForControl))] | Skin.HasSetting(PreloadDeactivated)">SetFocus(94)</onfocus>
-		</control>
-		<!-- Loop trigger -->
-		<control type="button" id="93">
-			<label>Loop</label>
-			<include>HiddenControl</include>
-			<onfocus>SetFocus(90)</onfocus>
-		</control>
-		<!-- Ready to focus -->
-		<control type="button" id="94">
-			<label>Loop stopped</label>
-			<include>HiddenControl</include>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,2)">Control.Move(1000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,3)">Control.Move(1000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,4)">Control.Move(1000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,5)">Control.Move(1000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,6)">Control.Move(1000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,7)">Control.Move(1000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,8)">Control.Move(1000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(1000).CurrentItem,9)">Control.Move(1000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,2)">Control.Move(2000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,3)">Control.Move(2000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,4)">Control.Move(2000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,5)">Control.Move(2000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,6)">Control.Move(2000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,7)">Control.Move(2000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,8)">Control.Move(2000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(2000).CurrentItem,9)">Control.Move(2000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,2)">Control.Move(3000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,3)">Control.Move(3000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,4)">Control.Move(3000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,5)">Control.Move(3000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,6)">Control.Move(3000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,7)">Control.Move(3000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,8)">Control.Move(3000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(3000).CurrentItem,9)">Control.Move(3000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,2)">Control.Move(4000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,3)">Control.Move(4000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,4)">Control.Move(4000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,5)">Control.Move(4000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,6)">Control.Move(4000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,7)">Control.Move(4000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,8)">Control.Move(4000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(4000).CurrentItem,9)">Control.Move(4000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,2)">Control.Move(5000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,3)">Control.Move(5000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,4)">Control.Move(5000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,5)">Control.Move(5000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,6)">Control.Move(5000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,7)">Control.Move(5000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,8)">Control.Move(5000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(5000).CurrentItem,9)">Control.Move(5000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,2)">Control.Move(6000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,3)">Control.Move(6000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,4)">Control.Move(6000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,5)">Control.Move(6000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,6)">Control.Move(6000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,7)">Control.Move(6000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,8)">Control.Move(6000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(6000).CurrentItem,9)">Control.Move(6000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,2)">Control.Move(7000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,3)">Control.Move(7000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,4)">Control.Move(7000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,5)">Control.Move(7000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,6)">Control.Move(7000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,7)">Control.Move(7000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,8)">Control.Move(7000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(7000).CurrentItem,9)">Control.Move(7000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,2)">Control.Move(8000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,3)">Control.Move(8000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,4)">Control.Move(8000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,5)">Control.Move(8000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,6)">Control.Move(8000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,7)">Control.Move(8000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,8)">Control.Move(8000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(8000).CurrentItem,9)">Control.Move(8000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,2)">Control.Move(9000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,3)">Control.Move(9000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,4)">Control.Move(9000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,5)">Control.Move(9000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,6)">Control.Move(9000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,7)">Control.Move(9000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,8)">Control.Move(9000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(9000).CurrentItem,9)">Control.Move(9000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,2)">Control.Move(10000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,3)">Control.Move(10000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,4)">Control.Move(10000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,5)">Control.Move(10000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,6)">Control.Move(10000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,7)">Control.Move(10000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,8)">Control.Move(10000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(10000).CurrentItem,9)">Control.Move(10000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,2)">Control.Move(11000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,3)">Control.Move(11000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,4)">Control.Move(11000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,5)">Control.Move(11000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,6)">Control.Move(11000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,7)">Control.Move(11000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,8)">Control.Move(11000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(11000).CurrentItem,9)">Control.Move(11000,-8)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,2)">Control.Move(12000,-1)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,3)">Control.Move(12000,-2)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,4)">Control.Move(12000,-3)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,5)">Control.Move(12000,-4)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,6)">Control.Move(12000,-5)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,7)">Control.Move(12000,-6)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,8)">Control.Move(12000,-7)</onfocus>
-			<onfocus condition="String.IsEqual(Container(12000).CurrentItem,9)">Control.Move(12000,-8)</onfocus>
-			<onfocus>SetFocus(99)</onfocus>
-			<onfocus>SetProperty(PreloadDone,1,Home)</onfocus>
-			<onfocus>ClearProperty(Preload,Home)</onfocus>
 		</control>
 	</controls>
 </window>

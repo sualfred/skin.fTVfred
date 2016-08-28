@@ -47,8 +47,6 @@
 				<textoffsety>27</textoffsety>
 				<textoffsetx>27</textoffsetx>
 				<label>$LOCALIZE[184]</label>
-				<onclick>ClearProperty(PreloadDone,home)</onclick>
-				<onclick>SetProperty(Preload,1,home)</onclick>
 				<onclick>SetProperty(ReloadTriggered,1,home)</onclick>
 				<onclick>Close</onclick>
 				<onclick>XBMC.ReloadSkin()</onclick>

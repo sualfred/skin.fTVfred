@@ -2,7 +2,6 @@
 <window>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">40</defaultcontrol>
-	<onload>SetProperty(preload,1,Home)</onload>
 	<controls>
 		<!-- splash -->
 		<control type="image">
@@ -39,7 +38,6 @@
 		</control>
 		<!-- trigger -->
 		<control type="button" id="40">
-			<onfocus>SetProperty(Preload,1,Home)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(10)</onfocus>
 			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(30)</onfocus>
 			<texturenofocus>-</texturenofocus>
@@ -64,9 +62,9 @@
 		</control>
 		<!-- switch to home -->
 		<control type="button" id="30">
+			<onfocus>SetProperty(Preload,1,home)</onfocus>
+			<onfocus>AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
-			<onfocus>SetProperty(WaitForControl,1,Home)</onfocus>
-			<!--<onfocus>AlarmClock(StartupWindow,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>-->
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>

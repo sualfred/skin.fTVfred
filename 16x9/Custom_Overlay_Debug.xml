@@ -27,8 +27,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>Temp: </label>
-				<visible>false</visible>
+				<label>Preload set</label>
+				<visible>!String.IsEmpty(Window(home).Property(Preload))</visible>
 			</control>
 			<!-- Window labels -->
 			<control type="label">

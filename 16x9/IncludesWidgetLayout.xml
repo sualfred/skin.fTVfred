@@ -89,7 +89,7 @@
 			<shadowcolor>88000000</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>[LIGHT]$VAR[$PARAM[ID]0-WidgetAd-Text]$LOCALIZE[31325][/LIGHT] [COLOR ffffffff]$INFO[ListItem.Label,[B],[/COLOR][/B]]</label>
+			<label>[LIGHT]$VAR[$PARAM[ID]0-WidgetAd-Text,,[CR]]$LOCALIZE[31325][/LIGHT] [COLOR ffffffff]$INFO[ListItem.Label,[B],[/B]][/COLOR]</label>
 			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
 			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
 			<visible>String.IsEmpty(ListItem.Property(tagline)) + String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,inprogresstvshows)</visible>
