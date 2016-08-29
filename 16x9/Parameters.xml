@@ -187,6 +187,14 @@
 		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-6)</onfocus>
 		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-7)</onfocus>
 		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyle-8)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-1)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-2)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-3)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-4)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-5)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-6)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-7)</onfocus>
+		<onfocus>Skin.Reset($PARAM[ID]-WidgetStyleLabel-8)</onfocus>
 		<onfocus>Skin.Reset($PARAM[ID]-WidgetView)</onfocus>
 		<onfocus>Skin.Reset(ftvLabelWidget$PARAM[ID])</onfocus>
 		<onfocus>Skin.Reset($PARAM[ID]-WidgetAd)</onfocus>
@@ -334,24 +342,28 @@
 			<onclick>Skin.SetString(TempItemLabel,$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos])])</onclick>
 			<onclick>Skin.SetString(TempItemAction,$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos])])</onclick>
 			<onclick>Skin.SetString(TempItemStyle,$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos])])</onclick>
+			<onclick>Skin.SetString(TempItemStyleLabel,$INFO[Skin.String($PARAM[SubMenu]-WidgetStyleLabel-$PARAM[TempPos])])</onclick>
 			<onclick>Skin.SetString(TempItemType,$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[TempPos])])</onclick>
 			<onclick>Skin.SetString(TempItemList,$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[TempPos])])</onclick>
 			<!-- save current items to next position -->
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos])])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetAction-$PARAM[Pos])])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos])])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyleLabel-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetStyleLabel-$PARAM[Pos])])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetType-$PARAM[Pos])])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[TempPos],$INFO[Skin.String($PARAM[SubMenu]-WidgetList-$PARAM[Pos])])</onclick>
 			<!-- save temporary items to current postion -->
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetLabel-$PARAM[Pos],$INFO[Skin.String(TempItemLabel)])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetAction-$PARAM[Pos],$INFO[Skin.String(TempItemAction)])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyle-$PARAM[Pos],$INFO[Skin.String(TempItemStyle)])</onclick>
+			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetStyleLabel-$PARAM[Pos],$INFO[Skin.String(TempItemStyleLabel)])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetType-$PARAM[Pos],$INFO[Skin.String(TempItemType)])</onclick>
 			<onclick>Skin.SetString($PARAM[SubMenu]-WidgetList-$PARAM[Pos],$INFO[Skin.String(TempItemList)])</onclick>
 			<!-- clear temp strings -->
 			<onclick>Skin.Reset(TempItemLabel)</onclick>
 			<onclick>Skin.Reset(TempItemAction)</onclick>
 			<onclick>Skin.Reset(TempItemStyle)</onclick>
+			<onclick>Skin.Reset(TempItemStyleLabel)</onclick>
 			<onclick>Skin.Reset(TempItemType)</onclick>
 			<onclick>Skin.Reset(TempItemList)</onclick>
 			<!-- move with the lines -->
