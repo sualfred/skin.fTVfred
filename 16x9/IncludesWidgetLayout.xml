@@ -89,40 +89,9 @@
 			<shadowcolor>88000000</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Label,[COLOR ffffffff][B],[/B][/COLOR]]</label>
+			<label>$VAR[WidgetAdText]</label>
 			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-			<visible>String.IsEmpty(ListItem.Property(tagline)) + String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,inprogresstvshows)</visible>
-		</control>
-		<control type="textbox">
-			<top>15</top>
-			<left>50</left>
-			<width>550</width>
-			<height>165</height>
-			<font>Med32</font>
-			<textcolor>ffdadada</textcolor>
-			<shadowcolor>88000000</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
-			<label>$VAR[$PARAM[ID]0-WidgetAd-Text]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]][COLOR ffffffff]$INFO[ListItem.Property(tvshow),[B],[/B][CR]]$INFO[ListItem.Label,[B],[/COLOR][/B]]</label>
-			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-			<visible>String.IsEmpty(ListItem.Property(tagline)) + !String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,inprogresstvshows)</visible>
-		</control>
-		<control type="textbox">
-			<top>15</top>
-			<left>50</left>
-			<width>550</width>
-			<height>165</height>
-			<font>Med32</font>
-			<textcolor>ffdadada</textcolor>
-			<shadowcolor>88000000</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
-			<label>[LIGHT]$INFO[ListItem.Property(tagline)][/LIGHT][CR]$INFO[ListItem.Label,[B][COLOR ffffffff],[/COLOR][/B]]</label>
-			<animation condition="true" effect="slide" end="-18,-26" time="0">Conditional</animation>
-			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>
-			<visible>!String.IsEmpty(ListItem.Property(tagline))</visible>
+			<animation center="135,201" condition="true" effect="zoom" end="76" start="76" time="0">Conditional</animation>			
 		</control>
 		<control type="label">
 			<top>20</top>
@@ -157,10 +126,10 @@
 			<textcolor>bbffffff</textcolor>
 			<shadowcolor>88000000</shadowcolor>
 			<label>$INFO[ListItem.Property(season) ,$LOCALIZE[20373] , ]$INFO[ListItem.Property(episode),$LOCALIZE[20359] ]</label>
-			<visible>String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,recentlyaddedepisodes)</visible>
+			<visible>String.IsEqual(ListItem.Property(bannerType),newepisode)</visible>
 		</control>
 		<control type="grouplist">
-			<animation effect="slide" time="0" end="0,30" condition="String.Contains(Container($PARAM[ID]9).ListItem.FolderPath,recentlyaddedepisodes)">Conditional</animation>
+			<animation effect="slide" time="0" end="0,30" condition="String.IsEqual(ListItem.Property(bannerType),newepisode)">Conditional</animation>
 			<top>50</top>
 			<left>1150</left>
 			<width>280</width>

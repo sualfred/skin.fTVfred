@@ -390,6 +390,7 @@
 		<item>			
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Title]</label>
 			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<property name="bannerType">$INFO[Skin.String($PARAM[ID]0-WidgetAd-Type)]</property>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)]</property>
 			<property name="tvshow">$INFO[Container($PARAM[ID]9).ListItem.TvShowTitle]</property>
@@ -402,6 +403,7 @@
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
 			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<property name="bannerType">$INFO[Skin.String($PARAM[ID]0-WidgetAd-Type)]</property>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
@@ -413,6 +415,7 @@
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
 			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<property name="bannerType">$INFO[Skin.String($PARAM[ID]0-WidgetAd-Type)]</property>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
