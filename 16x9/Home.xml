@@ -398,7 +398,6 @@
 		<!-- Loading Splash -->
 		<control type="group">
 			<visible>Control.IsVisible(91)</visible>
-			<animation effect="fade" end="0" start="100" time="120">Hidden</animation>
 			<control type="image">
 				<left>418</left>
 				<width>1502</width>
