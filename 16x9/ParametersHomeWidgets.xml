@@ -208,9 +208,9 @@
 						<onfocus condition="!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + Integer.IsGreater(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(1)">SetProperty(FocusRow,2_3)</onfocus>
 						<onfocus condition="Integer.IsGreater(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(2)">SetProperty(FocusRow,2_3)</onfocus>
 						<onfocus condition="Integer.IsGreater(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3)">SetProperty(FocusRow,3_3)</onfocus>
-						<onfocus condition="String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159])">SetProperty(ForceViewType,wide,Home)</onfocus>
-						<onfocus condition="String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">SetProperty(ForceViewType,poster,Home)</onfocus>
-						<onfocus condition="!String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31159]) + !String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),$LOCALIZE[31160])">ClearProperty(ForceViewType,Home)</onfocus>
+						<onfocus condition="String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),wide)">SetProperty(ForceViewType,wide,Home)</onfocus>
+						<onfocus condition="String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),poster)">SetProperty(ForceViewType,poster,Home)</onfocus>
+						<onfocus condition="!String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),wide) + !String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),poster)">ClearProperty(ForceViewType,Home)</onfocus>
 					</control>
 					<control type="group">
 						<visible>!String.IsEmpty(ListItem.Property(bannerArt))</visible>
