@@ -28,6 +28,7 @@
 	<icon labelID="20045">DefaultMastermode.png</icon>
 	<icon labelID="settings">DefaultSettings.png</icon>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
+	<visibleoverride condition="PVR.HasTVChannels">RunScript(script.skin.helper.service,action=dialogok,header=$LOCALIZE[257],message=$LOCALIZE[31327])</visibleoverride>
 	<visibleoverride condition="Library.HasContent(Movies)">ActivateWindow(Videos,Files,return)</visibleoverride>
 	<visibleoverride condition="Library.HasContent(TVShows)">ActivateWindow(Videos,Files,return)</visibleoverride>
 	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>

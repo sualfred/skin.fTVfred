@@ -1445,6 +1445,11 @@ msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
 msgstr ""
 
+#: /shortcuts/overrides.xml
+msgctxt "#31327"
+msgid "No PVR channels have been found yet. Please wait for the PVR clients to start up or check your PVR configuration."
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
