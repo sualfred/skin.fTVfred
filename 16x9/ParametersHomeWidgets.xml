@@ -19,12 +19,14 @@
 				<height>1200</height>
 				<texture>special://skin/extras/backgrounds/default.png</texture>
 				<colordiffuse>ccffffff</colordiffuse>
-				<visible>$PARAM[Visible] + !String.IsEqual(Container(99).ListItem.Property(defaultID),settings)</visible>
+				<visible>$PARAM[Visible] + !String.IsEqual(Container(99).ListItem.Property(defaultID),settings) + !Control.IsVisible(91)</visible>
 				<include>HomeMessageAnimation</include>
+				<include>HomeWidgetsAnimation</include>
 			</control>
 			<control type="group" id="999">
-				<visible>$PARAM[Visible] + !String.IsEqual(Container(99).ListItem.Property(defaultID),settings)</visible>
+				<visible>$PARAM[Visible] + !String.IsEqual(Container(99).ListItem.Property(defaultID),settings) + !Control.IsVisible(91)</visible>
 				<include>HomeMessageAnimation</include>
+				<include>HomeWidgetsAnimation</include>
 				<control type="group">
 					<left>345</left>
 					<control type="image">
@@ -309,7 +311,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content>
+				<content>					
 					<include content="$PARAM[content]">
 						<param name="ID">$PARAM[ID]</param>
 					</include>
