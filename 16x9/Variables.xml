@@ -294,17 +294,14 @@
 	<variable name="GenreArt1">
 		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
 		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
-		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.0)]</value>
 	</variable>
 	<variable name="GenreArt2">
 		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
 		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
-		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.1)]</value>
 	</variable>
 	<variable name="GenreArt3">
 		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
 		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
-		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(poster.2)]</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>
@@ -2371,8 +2368,6 @@
 		<value>$INFO[Player.Duration(mm:ss)]</value>
 	</variable>
 	<variable name="Fanart">
-		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
-		<value condition="String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)">$INFO[ListItem.Art(fanart.0)]</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://movies/genres/)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="Window.IsActive(1106)">$INFO[Container(100).ListItem.Art(fanart)]</value>

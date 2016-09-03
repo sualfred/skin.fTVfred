@@ -197,7 +197,7 @@
 		</control>
 		<!-- Genre -->
 		<control type="group">
-			<visible>String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres) | String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+			<visible>String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 			<control type="image">
 				<left>102</left>
 				<width>215</width>
@@ -221,33 +221,6 @@
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>views/poster_fallback.png</texture>
-			</control>
-			<control type="group">
-				<visible>String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-				<control type="image">
-					<left>102</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
-				</control>
-				<control type="image">
-					<left>51</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
-				</control>
 			</control>
 			<control type="group">
 				<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
@@ -336,7 +309,7 @@
 			<width>308</width>
 			<height>308</height>
 			<texture border="2">views/season_overlay.png</texture>
-			<visible>!String.Contains(ListItem.Property(Icon$PARAM[ID]),Default) | [String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres) | String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)]</visible>
+			<visible>!String.Contains(ListItem.Property(Icon$PARAM[ID]),Default) | String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 		</control>
 		<control type="image">
 			<left>10</left>
@@ -477,7 +450,7 @@
 		</control>
 		<!-- Genre -->
 		<control type="group">
-			<visible>String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres) | String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
+			<visible>String.Contains(ListItem.Property(Path),movies/genres) | String.Contains(ListItem.Property(Path),tvshows/genres)</visible>
 			<control type="image">
 				<left>102</left>
 				<width>215</width>
@@ -501,33 +474,6 @@
 				<bordersize>0,13,10,13</bordersize>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>views/poster_fallback.png</texture>
-			</control>
-			<control type="group">
-				<visible>String.Contains(ListItem.Property(Path),plugin://script.skin.helper.service/?action=browsegenres)</visible>
-				<control type="image">
-					<left>102</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png">$INFO[ListItem.Property(Genre$PARAM[ID]-3)]</texture>
-				</control>
-				<control type="image">
-					<left>51</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" fallback="views/poster_fallback.png" diffuse="views/genre_crop_mask.png" >$INFO[ListItem.Property(Genre$PARAM[ID]-2)]</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<width>215</width>
-					<height>334</height>
-					<bordersize>0,13,10,13</bordersize>
-					<aspectratio align="center">scale</aspectratio>
-					<texture background="true" fallback="views/poster_fallback.png">$INFO[ListItem.Property(Genre$PARAM[ID]-1)]</texture>
-				</control>
 			</control>
 			<control type="group">
 				<visible>String.Contains(ListItem.Property(Path),movies/genres)</visible>
