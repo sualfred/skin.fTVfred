@@ -108,7 +108,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[String.IsEmpty(Container.PluginName) | String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres)] + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Container.Content(files) + !Container.Content(actors)</visible>
+				<visible>String.IsEmpty(Container.PluginName) + !Window.IsActive(tvrecordings) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Container.Content(files) + !Container.Content(actors)</visible>
 				<include content="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -276,7 +276,7 @@
 				<viewtype label="31159">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Window.IsVisible(pictures) + !Container.Content(actors)] | Container.Content(images)</visible>
+				<visible>!String.IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Window.IsVisible(pictures) + !Container.Content(actors)] | Container.Content(images)</visible>
 				<include content="ViewOpenAnimation">
 					<param name="pos1">186,10</param>
 					<param name="pos2">490,-174</param>
@@ -318,7 +318,7 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Container.Content(actors)]</visible>
+				<visible>!String.IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Container.Content(actors)]</visible>
 				<include content="ViewOpenAnimation">
 					<param name="pos1">193,10</param>
 					<param name="pos2">497,-174</param>
@@ -360,7 +360,7 @@
 				<viewtype label="31160">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime easing="inout" tween="sine">300</scrolltime>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Window.IsVisible(pictures)] | Container.Content(images) | Container.Content(actors)</visible>
+				<visible>!String.IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(songs) + !Window.IsVisible(pictures)] | Container.Content(images) | Container.Content(actors)</visible>
 				<include content="ViewOpenAnimation">
 					<param name="pos1">208,10</param>
 					<param name="pos2">512,-174</param>

@@ -283,7 +283,7 @@
 				<left>196</left>
 				<top>782</top>
 				<include>VisibleDelayFadeAnimation</include>
-				<visible>[String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) | String.IsEmpty(Container.PluginName)] + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<visible>String.IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
 					<left>-10</left>
@@ -625,7 +625,7 @@
 				<left>196</left>
 				<top>807</top>
 				<include>VisibleDelayFadeAnimation</include>
-				<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
+				<visible>!String.IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
 					<left>-10</left>
@@ -805,12 +805,12 @@
 						<width>-8</width>
 						<height>0</height>
 						<label>-</label>
-						<onfocus condition="[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)]">SetFocus(5022)</onfocus>
-						<onfocus condition="[String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) | String.IsEmpty(Container.PluginName)] + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
-						<onfocus condition="[String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) | String.IsEmpty(Container.PluginName)] + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(14)</onfocus>
-						<onfocus condition="[String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) | String.IsEmpty(Container.PluginName)] + !Control.IsEnabled(3) + Control.IsEnabled(4) + Control.IsEnabled(14)">SetFocus(4)</onfocus>
-						<onfocus condition="[String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) | String.IsEmpty(Container.PluginName)] + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
-						<onfocus condition="[String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) | String.IsEmpty(Container.PluginName)] + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
+						<onfocus condition="!String.IsEmpty(Container.PluginName)">SetFocus(5022)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(14)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4) + Control.IsEnabled(14)">SetFocus(4)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>
+						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + !Control.IsEnabled(4) + Control.IsEnabled(14) + Container.CanFilterAdvanced">SetFocus(5011)</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(5022) + !Control.HasFocus(5004) + !Control.HasFocus(14) + !Control.HasFocus(4) + !Control.HasFocus(19) + !Control.HasFocus(5011) + !Control.HasFocus(5013)</visible>
 					</control>
@@ -818,7 +818,7 @@
 						<width>640</width>
 						<height>60</height>
 						<texture border="2">dialogs/OptionsBackgroundHeading.png</texture>
-						<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | Container.Content(files)</visible>
+						<visible>!String.IsEmpty(Container.PluginName) | Container.Content(files)</visible>
 					</control>
 					<control type="label" id="5021">
 						<left>40</left>
@@ -828,7 +828,7 @@
 						<font>Bold30</font>
 						<textcolor>ffdadada</textcolor>
 						<label>$LOCALIZE[582]:</label>
-						<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | Container.Content(files)</visible>
+						<visible>!String.IsEmpty(Container.PluginName) | Container.Content(files)</visible>
 					</control>
 					<control type="button" id="5022">
 						<height>110</height>
@@ -844,7 +844,7 @@
 						<focusedcolor>ffffaf37</focusedcolor>
 						<texturefocus border="3">dialogs/OptionsBackgroundButtonFO.png</texturefocus>
 						<texturenofocus border="3">dialogs/OptionsBackgroundButtonNF.png</texturenofocus>
-						<visible>[!String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=browsegenres) + !String.IsEmpty(Container.PluginName)] | Container.Content(files)</visible>
+						<visible>!String.IsEmpty(Container.PluginName) | Container.Content(files)</visible>
 					</control>
 					<control type="image" id="5002">
 						<width>640</width>
