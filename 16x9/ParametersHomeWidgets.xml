@@ -321,14 +321,6 @@
 	<include name="ParamFtvWidgetLists">
 		<control id="$PARAM[ID]9" type="list">
 			<include>HiddenHomeList</include>
-			<onfocus>SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
-			<onup>99</onup>
-			<onback>99</onback>
-			<onright>99</onright>
-			<onleft>99</onleft>
-			<ondown>$PARAM[ID]0</ondown>
-			<onfocus condition="!String.IsEmpty(Window(home).Property(StartedByBanner))">Select</onfocus>
-			<onfocus condition="String.IsEmpty(Window(home).Property(StartedByBanner))">down</onfocus>
 			<content sortby="random" limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
 			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetAd))</visible>
 		</control>
@@ -396,9 +388,8 @@
 			<property name="tvshow">$INFO[Container($PARAM[ID]9).ListItem.TvShowTitle]</property>
 			<property name="season">$INFO[Container($PARAM[ID]9).ListItem.season]</property>
 			<property name="episode">$INFO[Container($PARAM[ID]9).ListItem.episode]</property>
-			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
-			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
-			<onclick>SetFocus($PARAM[ID]9)</onclick>
+			<onclick>left</onclick>
+			<onclick>PlayMedia($INFO[Container($PARAM[ID]9).ListItem.FileNameAndPath])</onclick>
 		</item>
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
@@ -408,9 +399,8 @@
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
 			<property name="similartitle">$INFO[Container($PARAM[ID]9).ListItem.Property(similartitle)]</property>
 			<property name="tagline">$INFO[Container($PARAM[ID]9).ListItem.Tagline]</property>
-			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
-			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
-			<onclick>SetFocus($PARAM[ID]9)</onclick>
+			<onclick>left</onclick>
+			<onclick>PlayMedia($INFO[Container($PARAM[ID]9).ListItem.FileNameAndPath])</onclick>
 		</item>
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
@@ -422,8 +412,9 @@
 			<property name="episodes">$INFO[Container($PARAM[ID]9).ListItem.Property(TotalEpisodes)]</property>
 			<property name="seasons">$INFO[Container($PARAM[ID]9).ListItem.Property(TotalSeasons)]</property>
 			<property name="unwatched">$INFO[Container($PARAM[ID]9).ListItem.Property(UnWatchedEpisodes)]</property>
-			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
 			<onclick>SetProperty(MainMenuFocus,1,home)</onclick>
+			<onclick>SetProperty(StartedByBanner,1,home)</onclick>
+			<onclick>left</onclick>
 			<onclick>ActivateWindow(videos,$INFO[Container($PARAM[ID]9).ListItem.FolderPath],return)</onclick>
 		</item>
 		<include condition="!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1))" content="ParamWidgetContent">
