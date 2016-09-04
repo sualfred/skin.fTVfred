@@ -65,7 +65,7 @@
 				<onfocus condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget12)">SetProperty(WidgetGroupLabel,$VAR[ftvLabelWidget12000],home)</onfocus>
 				<onfocus>ActivateWindow(1149)</onfocus>
 			</control>
-			<!-- Hidden startup check button -->
+			<!-- Hidden preload controls -->
 			<control type="button" id="90">
 				<include>HiddenControl</include>
 				<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
@@ -73,7 +73,6 @@
 				<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
 				<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
 			</control>
-			<!-- Hidden control to check the preloading status -->			
 			<control type="group" id="91">
 				<animation reversible="false" effect="slide" end="0,0" time="800">Hidden</animation>
 				<visible>!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
@@ -101,6 +100,7 @@
 				<include>HomeMenuSlideAnimation</include>
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
+				<oninfo>SetFocus(333)</oninfo>
 				<onup>noop</onup>
 				<onup>SetProperty(Movement,1)</onup>
 				<ondown>noop</ondown>
@@ -109,11 +109,10 @@
 				<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 				<onfocus condition="String.IsEmpty(Window(home).Property(StartedByBanner))">SetProperty(LabelsDelayFadeAnimation,1,home)</onfocus>
 				<onfocus condition="!String.IsEmpty(Window(home).Property(StartedByBanner))">ClearProperty(StartedByBanner,home)</onfocus>
-				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
-				<oninfo>SetFocus(333)</oninfo>
 				<!--on right-->
+				<onright>SetProperty(LabelsDelayFadeAnimation,1,home)</onright>
 				<onright condition="!Control.IsVisible(91) + !String.IsEmpty(Container(99).ListItem.Property(ftvWidget)) | String.IsEqual(Container(99).ListItem.Property(defaultID),settings)">ClearProperty(MainMenuFocus,home)</onright>
 				<onright condition="!Control.IsVisible(91) + String.Contains(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(WidgetHasFocus,1,Home)</onright>
 				<!-- #1 -->

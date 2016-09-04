@@ -66,7 +66,7 @@
 			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
 			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
 			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
-			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<onfocus>AlarmClock(WaitForPVR,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>
