@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-28 15:33+0000\n"
+"PO-Revision-Date: 2016-08-31 09:14+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -1476,6 +1476,13 @@ msgstr "Powróć do"
 #: /16x9/Home.xml
 msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31327"
+msgid ""
+"No PVR channels have been found yet. Please wait for the PVR clients to "
+"start up or check your PVR configuration."
 msgstr ""
 
 msgctxt "#31500"
