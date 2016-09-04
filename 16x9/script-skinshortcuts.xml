@@ -78,11 +78,11 @@
 			<left>190</left>
 			<centertop>50%</centertop>
 			<width>1540</width>
-			<height>748</height>
+			<height>916</height>
 			<include>DialogZoomAnimation</include>
 			<control type="image">
 				<width>1540</width>
-				<height>748</height>
+				<height>916</height>
 				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
 			</control>
 			<!-- Heading -->
@@ -112,7 +112,7 @@
 			<control type="list" id="211">
 				<top>60</top>
 				<width>670</width>
-				<height>588</height>
+				<height>756</height>
 				<onleft>noop</onleft>
 				<onright>304</onright>
 				<onup>noop</onup>
@@ -129,17 +129,28 @@
 						<width>590</width>
 						<height>84</height>
 						<font>Light32</font>
-						<textcolor>ff505153</textcolor>
+						<textcolor>DisabledColor</textcolor>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 					<control type="label">
 						<left>40</left>
 						<width>590</width>
 						<height>84</height>
 						<font>Light32</font>
-						<align>right</align>
 						<textcolor>ff505153</textcolor>
-						<label>$INFO[Container(211).ListItem.Property(list)]</label>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),False)</visible>
+					</control>
+					<control type="label">
+						<right>40</right>
+						<width>590</width>
+						<label>$LOCALIZE[571]</label>
+						<height>84</height>
+						<font>Light32</font>
+						<align>right</align>
+						<textcolor>ffdadada</textcolor>
+						<visible>String.IsEqual(ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="84" width="670">
@@ -165,6 +176,16 @@
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(303) + !Control.HasFocus(304)</visible>
+					</control>
+					<control type="label">
+						<right>120</right>
+						<width>590</width>
+						<label>$LOCALIZE[571]</label>
+						<height>84</height>
+						<font>Light32</font>
+						<align>right</align>
+						<textcolor>ffdadada</textcolor>
+						<visible>String.IsEqual(ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))</visible>
 					</control>
 					<control type="image">
 						<top>31</top>
@@ -200,12 +221,27 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="group">
+				<width>670</width>
+				<top>60</top>
+				<control type="label">
+					<right>40</right>
+					<width>590</width>
+					<label>$LOCALIZE[571]</label>
+					<height>84</height>
+					<font>Light32</font>
+					<align>right</align>
+					<textcolor>ffdadada</textcolor>
+					<animation effect="slide" time="0" start="0,0" end="-80,0" condition="Container(211).Row(0)">Conditional</animation>
+					<visible>String.IsEmpty(Skin.String(MenuDefaultControl)) + !Container(211).HasPrevious</visible>
+				</control>
+			</control>
 			<!-- Right grouplist -->
 			<control type="grouplist" id="9000">
 				<left>670</left>
 				<top>60</top>
 				<width>870</width>
-				<height>588</height>
+				<height>756</height>
 				<itemgap>0</itemgap>
 				<onleft>303</onleft>
 				<onright>noop</onright>
@@ -214,19 +250,6 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<!-- Change shortcut -->
-				<control type="button" id="401">
-					<width>870</width>
-					<height>84</height>
-					<font>Light32</font>
-					<textwidth>790</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>$ADDON[script.skinshortcuts 32048]</label>
-				</control>
 				<!-- Change label -->
 				<control type="button" id="305">
 					<width>870</width>
@@ -240,6 +263,19 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32025]</label>
 					<label2>$INFO[Container(211).ListItem.Label]</label2>
+				</control>
+				<!-- Change shortcut -->
+				<control type="button" id="401">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<label>$LOCALIZE[31201]</label>
 				</control>
 				<!-- Change action -->
 				<control type="button" id="307">
@@ -256,7 +292,7 @@
 					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
 				</control>
 				<!-- widget button -->
-				<control id="997" type="button">
+				<control id="997" type="radiobutton">
 					<width>870</width>
 					<height>84</height>
 					<font>Light32</font>
@@ -264,6 +300,15 @@
 					<textoffsetx>40</textoffsetx>
 					<textcolor>ff505153</textcolor>
 					<focusedcolor>ffffaf37</focusedcolor>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>718</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<onclick>SetProperty(DisableSuggestions,1,Home)</onclick>
@@ -300,8 +345,8 @@
 					<onclick>SetProperty(Dialog.16.Label,$VAR[ftvLabelWidget12000])</onclick>
 					<onclick>SetProperty(Dialog.16.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget12)||Skin.SetString(ftvLabelWidget12000)||SendClick(404))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$ADDON[script.skinshortcuts 32044])</onclick>
-					<label>31509</label>
-					<label2>$VAR[ftvWidgetLabel]</label2>
+					<label>$LOCALIZE[31509]</label>
+					<selected>!String.IsEmpty(Container(211).ListItem.Property(ftvWidget))</selected>
 					<enable>!String.IsEqual(Container(211).ListItem.Property(defaultID),settings)</enable>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
@@ -316,7 +361,8 @@
 					<focusedcolor>ffffaf37</focusedcolor>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>- $LOCALIZE[31508] $VAR[ftvWidgetLabel]</label>
+					<label>$LOCALIZE[31265]</label>
+					<label2>$VAR[ftvWidgetLabel]</label2>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),widget3)">SetProperty(SubMenu,3000,home)</onclick>
@@ -329,11 +375,12 @@
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),widget10)">SetProperty(SubMenu,10000,home)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),widget11)">SetProperty(SubMenu,11000,home)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(ftvWidget),widget12)">SetProperty(SubMenu,12000,home)</onclick>
-					<visible>String.StartsWith(Container(211).ListItem.Property(ftvWidget),widget)</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(ftvWidget))</visible>
 					<onclick>ActivateWindow(1105)</onclick>
+					<enable>String.StartsWith(Container(211).ListItem.Property(ftvWidget),widget)</enable>
 				</control>
 				<!-- Change background -->
-				<control type="button" id="999">
+				<control type="radiobutton" id="999">
 					<width>870</width>
 					<height>84</height>
 					<font>Light32</font>
@@ -341,10 +388,19 @@
 					<textoffsetx>40</textoffsetx>
 					<textcolor>ff505153</textcolor>
 					<focusedcolor>ffffaf37</focusedcolor>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>718</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
-					<label2>$VAR[BackgroundLabel2]</label2>
+					<selected>!String.IsEqual(Container(211).ListItem.Thumb,DefaultAddonNone.png) + !String.IsEmpty(Container(211).ListItem.Thumb)</selected>
 					<onclick>SetProperty(LabelOverride,$ADDON[script.skinshortcuts 32045],home)</onclick>
 					<onclick>SendClick(311)</onclick>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
@@ -363,6 +419,55 @@
 					<label>$ADDON[script.skinshortcuts 32026]</label>
 					<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
+				<!-- Start -->
+				<control type="radiobutton" id="996">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<selected>String.IsEqual(Container(211).ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))</selected>
+					<onclick condition="!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))">Skin.SetString(MenuDefaultControl,$INFO[Container(211).ListItem.Property(skinshortcuts-orderindex)])</onclick>
+					<onclick condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))">Skin.Reset(MenuDefaultControl)</onclick>
+					<label>$LOCALIZE[31269]</label>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>718</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<enable>!Integer.IsGreater(Container(211).ListItem.Property(skinshortcuts-orderindex),21)</enable>
+				</control>
+				<!-- Disable -->
+				<control type="radiobutton" id="313">
+					<width>870</width>
+					<height>84</height>
+					<font>Light32</font>
+					<textwidth>790</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<label>$LOCALIZE[19218]</label>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>718</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<selected>String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)</selected>
+				</control>
 				<!-- Remove -->
 				<control type="button" id="302">
 					<width>870</width>
@@ -379,7 +484,7 @@
 			</control>
 			<control type="image">
 				<left>670</left>
-				<top>564</top>
+				<top>732</top>
 				<width>870</width>
 				<height>84</height>
 				<texture border="3">settings/button_no_focus.png</texture>
@@ -461,7 +566,7 @@
 				<left>670</left>
 				<top>60</top>
 				<width>40</width>
-				<height>588</height>
+				<height>756</height>
 				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 		</control>

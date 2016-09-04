@@ -6,14 +6,9 @@
 	<defaultcontrol>90</defaultcontrol>
 	<onload condition="!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">ClearProperty(PreloadDone,home)</onload>
 	<onload condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">SetProperty(Preload,1,home)</onload>
-	<!-- Main menu focus position properties -->
-	<onload condition="String.IsEmpty(Window(home).Property(ReloadTriggered)) + Skin.HasSetting(SkipSearchItem) + String.IsEqual(Container(99).ListItem.Property(defaultID),script.globalsearch)">Control.Move(99,1)</onload>
-	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,-1)</onload>
-	<onload condition="!String.IsEmpty(Window(home).Property(CurrentItem)) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">Control.Move(99,$INFO[Window(home).Property(CurrentItem)])</onload>
 	<!-- Clear properties -->
-	<onload>ClearProperty(CurrentItem,home)</onload>
-	<onload>ClearProperty(ItemHasWidget,home)</onload>
 	<onload>ClearProperty(ReloadTriggered,home)</onload>
+	<onload>ClearProperty(ItemHasWidget,home)</onload>
 	<onload>ClearProperty(BounceRight,Home)</onload>
 	<!-- Build menu -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onload>
@@ -37,7 +32,6 @@
 			<control type="button" id="333">
 				<visible>String.IsEmpty(Window(home).Property(ReloadTriggered))</visible>
 				<include>HiddenControl</include>
-				<onfocus>SetProperty(CurrentItem,$INFO[Container(99).CurrentItem],home)</onfocus>
 				<onfocus condition="String.StartsWith(Container(99).ListItem.Property(ftvWidget),widget)">SetProperty(ItemHasWidget,1,home)</onfocus>
 				<onfocus condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget1)">SetProperty(SubMenu,1000,home)</onfocus>
 				<onfocus condition="String.IsEqual(Container(99).ListItem.Property(ftvWidget),widget2)">SetProperty(SubMenu,2000,home)</onfocus>
@@ -98,6 +92,7 @@
 				<height>942</height>
 				<include>WindowHomeFadeAnimation</include>
 				<include>HomeMenuSlideAnimation</include>
+				<include condition="Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))">DefaultControl</include>
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
 				<oninfo>SetFocus(333)</oninfo>
@@ -399,8 +394,8 @@
 		<control type="group">
 			<visible>Control.IsVisible(91)</visible>
 			<control type="image">
-				<left>418</left>
-				<width>1502</width>
+				<left>408</left>
+				<width>1512</width>
 				<height>1080</height>
 				<texture>special://skin/extras/backgrounds/default.png</texture>
 			</control>

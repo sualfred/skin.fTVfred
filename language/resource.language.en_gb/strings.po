@@ -1155,6 +1155,11 @@ msgctxt "#31268"
 msgid "There are no results for this widget"
 msgstr ""
 
+#: /16x9/script-skinshortcuts.xml
+msgctxt "#31269"
+msgid "Focus on startup"
+msgstr ""
+
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
 msgid "Your Rating"

@@ -897,7 +897,7 @@
 					<shadowcolor>88000000</shadowcolor>
 					<label>$VAR[EpisodeValue]</label>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
-					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
 					<animation condition="!Control.HasFocus($PARAM[ID]) + !Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				</control>
 				<control type="label">
@@ -1207,7 +1207,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>88000000</shadowcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<animation condition="Control.HasFocus($PARAM[ID]) | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
+					<animation effect="fade" end="0" start="100" time="0">Focus</animation>
 					<animation condition="!Control.HasFocus($PARAM[ID]) + !Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				</control>
 				<control type="label">

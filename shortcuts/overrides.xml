@@ -27,6 +27,8 @@
 	<icon labelID="360">DefaultScreensaver.png</icon>
 	<icon labelID="20045">DefaultMastermode.png</icon>
 	<icon labelID="settings">DefaultSettings.png</icon>
+	<requiredshortcut label="$LOCALIZE[10004]">ActivateWindow(Settings)</requiredshortcut>
+	<requiredshortcut label="$LOCALIZE[137]">RunScript(script.globalsearch)</requiredshortcut>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
 	<!--<visibleoverride condition="PVR.HasTVChannels">RunScript(script.skin.helper.service,action=dialogok,header=$LOCALIZE[257],message=$LOCALIZE[31327])</visibleoverride>
 	<visibleoverride condition="Library.HasContent(Movies)">ActivateWindow(Videos,Files,return)</visibleoverride>
@@ -38,6 +40,15 @@
 		<condition>Control.IsVisible(91)</condition>
 		<action>noop</action>
 	</override>
+	<contextmenu>
+		<!-- Enable context menu on control 211 -->
+		<enableon>211</enableon>
+		<enableon>303</enableon>
+		<enableon>304</enableon>
+		<!-- Add enable/disable controls -->
+		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[24021]</item>
+		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[24022]</item>
+	</contextmenu>
 	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
 	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>
 	<propertydefault labelID="favourites" property="ftvWidget">favourites</propertydefault>
