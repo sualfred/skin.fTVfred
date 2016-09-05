@@ -6,6 +6,7 @@
 	<defaultcontrol>90</defaultcontrol>
 	<onload condition="!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">ClearProperty(PreloadDone,home)</onload>
 	<onload condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">SetProperty(Preload,1,home)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(MenuDefaultControl))">Control.Move(99,$INFO[Skin.String(MenuDefaultControl)])</onload>
 	<!-- Clear properties -->
 	<onload>ClearProperty(ReloadTriggered,home)</onload>
 	<onload>ClearProperty(ItemHasWidget,home)</onload>
@@ -92,7 +93,6 @@
 				<height>942</height>
 				<include>WindowHomeFadeAnimation</include>
 				<include>HomeMenuSlideAnimation</include>
-				<include condition="Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))">DefaultControl</include>
 				<orientation>vertical</orientation>
 				<scrolltime easing="out" tween="sine">180</scrolltime>
 				<oninfo>SetFocus(333)</oninfo>
