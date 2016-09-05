@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Defaultcontrol -->
+	<include name="MoveDefaultControl">
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),1)">
+			<param name="position">2</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),2)">
+			<param name="position">3</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),3)">
+			<param name="position">4</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),4)">
+			<param name="position">5</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),5)">
+			<param name="position">6</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),6)">
+			<param name="position">7</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),7)">
+			<param name="position">8</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),8)">
+			<param name="position">9</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),9)">
+			<param name="position">10</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),10)">
+			<param name="position">11</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),11)">
+			<param name="position">12</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),12)">
+			<param name="position">13</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),13)">
+			<param name="position">14</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),14)">
+			<param name="position">15</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),15)">
+			<param name="position">16</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),16)">
+			<param name="position">17</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),17)">
+			<param name="position">18</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),18)">
+			<param name="position">19</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),19)">
+			<param name="position">20</param>
+		</include>
+		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),20)">
+			<param name="position">21</param>
+		</include>
+	</include>
+	<include name="ParamDefaultControl">		
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(1).Property(id),$PARAM[position])">Control.Move(99,1)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(2).Property(id),$PARAM[position])">Control.Move(99,2)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(3).Property(id),$PARAM[position])">Control.Move(99,3)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(4).Property(id),$PARAM[position])">Control.Move(99,4)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(5).Property(id),$PARAM[position])">Control.Move(99,5)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(6).Property(id),$PARAM[position])">Control.Move(99,6)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(7).Property(id),$PARAM[position])">Control.Move(99,7)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(8).Property(id),$PARAM[position])">Control.Move(99,8)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(9).Property(id),$PARAM[position])">Control.Move(99,9)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(10).Property(id),$PARAM[position])">Control.Move(99,10)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(11).Property(id),$PARAM[position])">Control.Move(99,11)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(12).Property(id),$PARAM[position])">Control.Move(99,12)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(13).Property(id),$PARAM[position])">Control.Move(99,13)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(14).Property(id),$PARAM[position])">Control.Move(99,14)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(15).Property(id),$PARAM[position])">Control.Move(99,15)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(16).Property(id),$PARAM[position])">Control.Move(99,16)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(17).Property(id),$PARAM[position])">Control.Move(99,17)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(18).Property(id),$PARAM[position])">Control.Move(99,18)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(19).Property(id),$PARAM[position])">Control.Move(99,19)</onfocus>
+		<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + String.IsEqual(Container(99).ListItem(20).Property(id),$PARAM[position])">Control.Move(99,20)</onfocus>
+	</include>
 	<!-- Spacer for grouplists -->
 	<include name="Spacer">
 		<param name="visible" default="false" />

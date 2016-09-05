@@ -64,7 +64,7 @@
 				<include>HiddenControl</include>
 				<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow(startup)</onfocus>
 				<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(99)</onfocus>
-				<onfocus condition="[Window.Previous(startup) | !String.IsEmpty(Window(home).Property(ReloadTriggered))] + !String.IsEmpty(Skin.String(MenuDefaultControl))">Control.Move(99,$INFO[Skin.String(MenuDefaultControl)])</onfocus>
+				<include>MoveDefaultControl</include>
 				<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
 				<onfocus condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
 			</control>
