@@ -261,7 +261,7 @@
 					<focusedcolor>ffffaf37</focusedcolor>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>$ADDON[script.skinshortcuts 32025]</label>
+					<label>$LOCALIZE[21899]</label>
 					<label2>$INFO[Container(211).ListItem.Label]</label2>
 				</control>
 				<!-- Change shortcut -->
@@ -345,7 +345,7 @@
 					<onclick>SetProperty(Dialog.16.Label,$VAR[ftvLabelWidget12000])</onclick>
 					<onclick>SetProperty(Dialog.16.BuiltIn,SetProperty(customProperty,ftvWidget)||setProperty(customValue,widget12)||Skin.SetString(ftvLabelWidget12000)||SendClick(404))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$ADDON[script.skinshortcuts 32044])</onclick>
-					<label>$LOCALIZE[31509]</label>
+					<label>$LOCALIZE[31197]</label>
 					<selected>!String.IsEmpty(Container(211).ListItem.Property(ftvWidget))</selected>
 					<enable>!String.IsEqual(Container(211).ListItem.Property(defaultID),settings)</enable>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
@@ -399,7 +399,7 @@
 					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>$ADDON[script.skinshortcuts 32045]</label>
+					<label>$LOCALIZE[19190]</label>
 					<selected>!String.IsEqual(Container(211).ListItem.Thumb,DefaultAddonNone.png) + !String.IsEmpty(Container(211).ListItem.Thumb)</selected>
 					<onclick>SetProperty(LabelOverride,$ADDON[script.skinshortcuts 32045],home)</onclick>
 					<onclick>SendClick(311)</onclick>
@@ -483,9 +483,8 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>670</left>
 				<top>732</top>
-				<width>870</width>
+				<width>1540</width>
 				<height>84</height>
 				<texture border="3">settings/button_no_focus.png</texture>
 			</control>
@@ -534,18 +533,6 @@
 					<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31142])</onclick>
 					<onclick>SetProperty(Dialog.4.BuiltIn,SendClick(308))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31260])</onclick>
-				</control>
-				<!-- Cancel Button -->
-				<control type="button" id="21">
-					<width>320</width>
-					<height>76</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>Med24</font>
-					<textoffsetx>23</textoffsetx>
-					<textoffsety>27</textoffsety>
-					<label>222</label>
-					<onclick>Close</onclick>
 				</control>
 				<!-- OK Button -->
 				<control type="button" id="10">
