@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.5"
+	version="3.2.6"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,13 +34,12 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.5[/B]
-!Important! All widget and banner layout settings must be set again
-
- - Reworked preloading mechanism
- - Rework of banner and widget layout settings to use static values instead of language strings
- - Added recently added episodes and in progress TV shows as banner option
- - Moved skin backup option from Skin Settings to More
+[B]3.2.6[/B]
+ - Reworked skinshortcuts dialog
+ - Added option to select preferred active menu item after Kodi startup
+ - Improved preload and animations
+ - Added fallback for pseudo xray episode cast
+ - Removed plugin based genre support
  - Merged language strings and cleanup
 
 See changelog.txt for more details.</news>

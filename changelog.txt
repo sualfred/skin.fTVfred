@@ -1,5 +1,13 @@
 Changelog:
 
+3.2.6
+ - Reworked skinshortcuts dialog
+ - Added option to select preferred active menu item after Kodi startup
+ - Improved preload and animations
+ - Added fallback for pseudo xray episode cast
+ - Removed plugin based genre support
+ - Merged language strings and cleanup
+ 
 3.2.5
 !Important! All widget and banner layout settings must be set again
 

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-31 09:14+0000\n"
+"PO-Revision-Date: 2016-09-05 09:07+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -1185,10 +1185,10 @@ msgctxt "#31268"
 msgid "There are no results for this widget"
 msgstr "Brak wyników dla widżetu"
 
-#: /shortcuts/overrides.xml:55
+#: /16x9/script-skinshortcuts.xml
 msgctxt "#31269"
-msgid "Genres (Plugin based)"
-msgstr "Gatunki (wymaga pluginu)"
+msgid "Focus on startup"
+msgstr ""
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
