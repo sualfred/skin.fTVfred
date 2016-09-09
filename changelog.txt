@@ -1,5 +1,12 @@
 Changelog:
 
+3.2.7
+ - Removed thumbnail option for the shutdownmenu
+ - Fixed icon issue with custom shutdownmenu items
+ - Fixed visible DefaultControl option in shutdownmenu edit dialog
+ - Added NumItems to skinshortcuts edit dialog
+ - Tweaked height difference and improved skinshortcuts edit dialog
+
 3.2.6
  - Reworked skinshortcuts dialog
  - Added option to select preferred active menu item after Kodi startup

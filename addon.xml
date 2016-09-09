@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.6"
+	version="3.2.7"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,13 +34,12 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.6[/B]
- - Reworked skinshortcuts dialog
- - Added option to select preferred active menu item after Kodi startup
- - Improved preload and animations
- - Added fallback for pseudo xray episode cast
- - Removed plugin based genre support
- - Merged language strings and cleanup
+[B]3.2.7[/B]
+ - Removed thumbnail option for the shutdownmenu
+ - Fixed icon issue with custom shutdownmenu items
+ - Fixed visible DefaultControl option in shutdownmenu edit dialog
+ - Added NumItems to skinshortcuts edit dialog
+ - Tweaked height difference and improved skinshortcuts edit dialog
 
 See changelog.txt for more details.</news>
 	</extension>
