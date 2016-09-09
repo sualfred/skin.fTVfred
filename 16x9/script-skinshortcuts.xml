@@ -119,6 +119,16 @@
 				<textcolor>ffdadada</textcolor>
 				<visible>!String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 			</control>
+			<control type="label">
+				<right>40</right>
+				<top>14</top>
+				<width>1540</width>
+				<height>30</height>
+				<font>Light30Spaced</font>
+				<align>right</align>
+				<textcolor>ff636364</textcolor>
+				<label>[COLOR ffb2b2b2]$INFO[Container(211).CurrentItem][/COLOR] | $INFO[Container(211).NumItems]</label>
+			</control>
 			<!-- Left list -->
 			<control type="list" id="211">
 				<top>60</top>
