@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Param Height -->
+	<include name="ParamHeight">
+		<height>$PARAM[height]</height>
+	</include>
 	<!-- Defaultcontrol -->
 	<include name="MoveDefaultControl">
 		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),1)">

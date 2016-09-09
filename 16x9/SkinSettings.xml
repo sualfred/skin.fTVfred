@@ -278,6 +278,7 @@
 					<focusedcolor>ffffaf37</focusedcolor>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>SetProperty(editShutdownmenu,1,home)</onclick>
 					<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>
 				</control>
 				<control id="17" type="radiobutton">

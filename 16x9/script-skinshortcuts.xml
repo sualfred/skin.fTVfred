@@ -2,6 +2,7 @@
 <window>
 	<!-- script-skinshortcuts -->
 	<defaultcontrol always="true">10</defaultcontrol>
+	<onunload>ClearProperty(editShutdownmenu,home)</onunload>
 	<onunload condition="Window.IsVisible(home)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[20183],text=$LOCALIZE[31267],yesaction=SetProperty(ReloadTriggered,1,home)||XBMC.ReloadSkin,noaction=SetFocus(99),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onunload>
 	<controls>
 		<!-- Move down -->
@@ -78,11 +79,21 @@
 			<left>190</left>
 			<centertop>50%</centertop>
 			<width>1540</width>
-			<height>916</height>
+			<include condition="String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+				<param name="height" value="916"/>
+			</include>
+			<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+				<param name="height" value="664"/>
+			</include>
 			<include>DialogZoomAnimation</include>
 			<control type="image">
 				<width>1540</width>
-				<height>916</height>
+				<include condition="String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="916"/>
+				</include>
+				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="664"/>
+				</include>
 				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
 			</control>
 			<!-- Heading -->
@@ -95,7 +106,7 @@
 				<font>Bold30</font>
 				<label>21432</label>
 				<textcolor>ffdadada</textcolor>
-				<visible>String.IsEqual(Window.Property(groupname), mainmenu)</visible>
+				<visible>String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 			</control>
 			<control type="label">
 				<left>40</left>
@@ -106,13 +117,18 @@
 				<font>Bold30</font>
 				<label>$LOCALIZE[31114]</label>
 				<textcolor>ffdadada</textcolor>
-				<visible>String.IsEqual(Window.Property(groupname), shutdown)</visible>
+				<visible>!String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 			</control>
 			<!-- Left list -->
 			<control type="list" id="211">
 				<top>60</top>
 				<width>670</width>
-				<height>756</height>
+				<include condition="String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="756"/>
+				</include>
+				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="504"/>
+				</include>
 				<onleft>noop</onleft>
 				<onright>304</onright>
 				<onup>noop</onup>
@@ -150,7 +166,7 @@
 						<font>Light32</font>
 						<align>right</align>
 						<textcolor>ffdadada</textcolor>
-						<visible>String.IsEqual(ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))</visible>
+						<visible>String.IsEqual(ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl)) + String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="84" width="670">
@@ -185,7 +201,7 @@
 						<font>Light32</font>
 						<align>right</align>
 						<textcolor>ffdadada</textcolor>
-						<visible>String.IsEqual(ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl))</visible>
+						<visible>String.IsEqual(ListItem.Property(skinshortcuts-orderindex),Skin.String(MenuDefaultControl)) + String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 					</control>
 					<control type="image">
 						<top>31</top>
@@ -233,7 +249,7 @@
 					<align>right</align>
 					<textcolor>ffdadada</textcolor>
 					<animation effect="slide" time="0" start="0,0" end="-80,0" condition="Container(211).Row(0)">Conditional</animation>
-					<visible>String.IsEmpty(Skin.String(MenuDefaultControl)) + !Container(211).HasPrevious</visible>
+					<visible>String.IsEmpty(Skin.String(MenuDefaultControl)) + !Container(211).HasPrevious + String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 				</control>
 			</control>
 			<!-- Right grouplist -->
@@ -241,7 +257,12 @@
 				<left>670</left>
 				<top>60</top>
 				<width>870</width>
-				<height>756</height>
+				<include condition="String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="756"/>
+				</include>
+				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="504"/>
+				</include>
 				<itemgap>0</itemgap>
 				<onleft>303</onleft>
 				<onright>noop</onright>
@@ -348,7 +369,7 @@
 					<label>$LOCALIZE[31197]</label>
 					<selected>!String.IsEmpty(Container(211).ListItem.Property(ftvWidget))</selected>
 					<enable>!String.IsEqual(Container(211).ListItem.Property(defaultID),settings)</enable>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 				</control>
 				<!-- Manage widgets -->
 				<control id="998" type="button">
@@ -403,7 +424,7 @@
 					<selected>!String.IsEqual(Container(211).ListItem.Thumb,DefaultAddonNone.png) + !String.IsEmpty(Container(211).ListItem.Thumb)</selected>
 					<onclick>SetProperty(LabelOverride,$ADDON[script.skinshortcuts 32045],home)</onclick>
 					<onclick>SendClick(311)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 				</control>
 				<!-- Change thumbnail -->
 				<control type="button" id="306">
@@ -417,7 +438,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<label>$ADDON[script.skinshortcuts 32026]</label>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>!String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 				</control>
 				<!-- Start -->
 				<control type="radiobutton" id="996">
@@ -443,7 +464,8 @@
 					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<enable>!Integer.IsGreater(Container(211).ListItem.Property(skinshortcuts-orderindex),21)</enable>
+					<enable>!Integer.IsGreater(Container(211).ListItem.Property(skinshortcuts-orderindex),21)</enable>					
+					<visible>String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 				</control>
 				<!-- Disable -->
 				<control type="radiobutton" id="313">
@@ -467,6 +489,7 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<selected>String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)</selected>
+					<enable>!String.IsEmpty(Container(211).ListItem.Property(skinshortcuts-disabled))</enable>
 				</control>
 				<!-- Remove -->
 				<control type="button" id="302">
@@ -487,6 +510,7 @@
 				<width>1540</width>
 				<height>84</height>
 				<texture border="3">settings/button_no_focus.png</texture>
+				<animation effect="slide" time="0" end="0,-252" condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))">Conditional</animation>
 			</control>
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">
@@ -553,7 +577,12 @@
 				<left>670</left>
 				<top>60</top>
 				<width>40</width>
-				<height>756</height>
+				<include condition="String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="756"/>
+				</include>
+				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
+					<param name="height" value="504"/>
+				</include>
 				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 		</control>
