@@ -47,8 +47,10 @@
 		<enableon>303</enableon>
 		<enableon>304</enableon>
 		<!-- Add enable/disable controls -->
+		<item control="301">$ADDON[script.skinshortcuts 32000]</item>
 		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[24021]</item>
 		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[24022]</item>
+		<item control="302" condition="Control.IsEnabled(302)">$LOCALIZE[117]</item>
 	</contextmenu>
 	<propertydefault labelID="19019" property="ftvWidget">livetv</propertydefault>
 	<propertydefault labelID="weather" property="ftvWidget">weather</propertydefault>

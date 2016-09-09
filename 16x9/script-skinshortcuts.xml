@@ -83,7 +83,7 @@
 				<param name="height" value="916"/>
 			</include>
 			<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
-				<param name="height" value="664"/>
+				<param name="height" value="580"/>
 			</include>
 			<include>DialogZoomAnimation</include>
 			<control type="image">
@@ -92,7 +92,7 @@
 					<param name="height" value="916"/>
 				</include>
 				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
-					<param name="height" value="664"/>
+					<param name="height" value="580"/>
 				</include>
 				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
 			</control>
@@ -127,7 +127,7 @@
 					<param name="height" value="756"/>
 				</include>
 				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
-					<param name="height" value="504"/>
+					<param name="height" value="420"/>
 				</include>
 				<onleft>noop</onleft>
 				<onright>304</onright>
@@ -261,7 +261,7 @@
 					<param name="height" value="756"/>
 				</include>
 				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
-					<param name="height" value="504"/>
+					<param name="height" value="420"/>
 				</include>
 				<itemgap>0</itemgap>
 				<onleft>303</onleft>
@@ -426,20 +426,6 @@
 					<onclick>SendClick(311)</onclick>
 					<visible>String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
 				</control>
-				<!-- Change thumbnail -->
-				<control type="button" id="306">
-					<width>870</width>
-					<height>84</height>
-					<font>Light32</font>
-					<textwidth>790</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<label>$ADDON[script.skinshortcuts 32026]</label>
-					<visible>!String.IsEmpty(Window(home).Property(editShutdownmenu))</visible>
-				</control>
 				<!-- Start -->
 				<control type="radiobutton" id="996">
 					<width>870</width>
@@ -510,7 +496,7 @@
 				<width>1540</width>
 				<height>84</height>
 				<texture border="3">settings/button_no_focus.png</texture>
-				<animation effect="slide" time="0" end="0,-252" condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))">Conditional</animation>
+				<animation effect="slide" time="0" end="0,-336" condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))">Conditional</animation>
 			</control>
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">
@@ -581,7 +567,7 @@
 					<param name="height" value="756"/>
 				</include>
 				<include condition="!String.IsEmpty(Window(home).Property(editShutdownmenu))" content="ParamHeight">
-					<param name="height" value="504"/>
+					<param name="height" value="420"/>
 				</include>
 				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
