@@ -35,16 +35,6 @@
 			<size>10</size>
 		</font>
 		<font>
- 			<name>Reg48</name>
- 			<filename>HelveticaNeue.ttf</filename>
- 			<size>48</size>
- 		</font>
-		<font>
- 			<name>Reg38</name>
- 			<filename>HelveticaNeue.ttf</filename>
- 			<size>38</size>
- 		</font>
-		<font>
  			<name>Reg37</name>
  			<filename>HelveticaNeue.ttf</filename>
  			<size>37</size>
@@ -220,6 +210,19 @@
 			<name>Light23</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>23</size>
+		</font>
+		<!-- Light Menu -->
+		<font>
+			<name>LightMenu48</name>
+			<filename>HelveticaNeue.ttf</filename>
+			<style>lighten</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>LightMenu38</name>
+			<filename>HelveticaNeue.ttf</filename>
+			<style>lighten</style>
+			<size>38</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
@@ -483,16 +486,6 @@
 			<size>10</size>
 		</font>
 		<font>
-			<name>Reg48</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>48</size>
-		</font>
-		<font>
-			<name>Reg38</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>38</size>
-		</font>
-		<font>
 			<name>Reg37</name>
 			<filename>Roboto-Regular.ttf</filename>
 			<size>37</size>
@@ -653,6 +646,19 @@
 			<name>Light23</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>23</size>
+		</font>
+		<!-- Light Menu -->
+		<font>
+			<name>LightMenu48</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<style>lighten</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>LightMenu38</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<style>lighten</style>
+			<size>38</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
@@ -915,18 +921,6 @@
 			<size>10</size>
 		</font>
 		<font>
-			<name>Reg48</name>
-			<filename>Arial.ttf</filename>
-			<aspect>0.9</aspect>
-			<size>48</size>
-		</font>
-		<font>
-			<name>Reg38</name>
-			<filename>Arial.ttf</filename>
-			<aspect>0.9</aspect>
-			<size>38</size>
-		</font>
-		<font>
 			<name>Reg37</name>
 			<filename>Arial.ttf</filename>
 			<aspect>0.9</aspect>
@@ -1137,6 +1131,21 @@
 			<aspect>0.9</aspect>
 			<style>lighten</style>
 			<size>23</size>
+		</font>
+		<!-- Light Menu -->
+		<font>
+			<name>LightMenu48</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>LightMenu38</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>38</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
