@@ -116,6 +116,11 @@
 			<size>49</size>
 		</font>
 		<font>
+			<name>Light48</name>
+			<filename>HelveticaNeue_Lt.ttf</filename>
+			<size>48</size>
+		</font>
+		<font>
 			<name>Light40</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>40</size>
@@ -124,6 +129,11 @@
 			<name>Light39</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>39</size>
+		</font>
+		<font>
+			<name>Light38</name>
+			<filename>HelveticaNeue_Lt.ttf</filename>
+			<size>38</size>
 		</font>
 		<font>
 			<name>Light36</name>
@@ -200,6 +210,19 @@
 			<name>Light23</name>
 			<filename>HelveticaNeue_Lt.ttf</filename>
 			<size>23</size>
+		</font>
+		<!-- Light Menu -->
+		<font>
+			<name>LightMenu48</name>
+			<filename>HelveticaNeue.ttf</filename>
+			<style>lighten</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>LightMenu38</name>
+			<filename>HelveticaNeue.ttf</filename>
+			<style>lighten</style>
+			<size>38</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
@@ -623,6 +646,19 @@
 			<name>Light23</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>23</size>
+		</font>
+		<!-- Light Menu -->
+		<font>
+			<name>LightMenu48</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<style>lighten</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>LightMenu38</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<style>lighten</style>
+			<size>38</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>
@@ -1095,6 +1131,21 @@
 			<aspect>0.9</aspect>
 			<style>lighten</style>
 			<size>23</size>
+		</font>
+		<!-- Light Menu -->
+		<font>
+			<name>LightMenu48</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>LightMenu38</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>lighten</style>
+			<size>38</size>
 		</font>
 		<!-- Light Capitalised -->
 		<font>

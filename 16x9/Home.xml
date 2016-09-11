@@ -196,7 +196,7 @@
 						<height>74</height>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
-						<font>LightCap38</font>
+						<font>LightMenu38</font>
 						<textcolor>ff5b6064</textcolor>
 						<animation condition="!Control.HasFocus(99)" easing="in" effect="fade" end="40" reversible="true" start="100" time="600" tween="linear">Conditional</animation>
 					</control>
@@ -314,7 +314,7 @@
 						<height>128</height>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
-						<font>LightCap38</font>
+						<font>LightMenu38</font>
 						<textcolor>ff5b6064</textcolor>
 						<animation condition="Container(99).OnNext" reversible="false" type="UnFocus">
 							<effect easing="out" end="0,-28" start="0,0" time="200" tween="circle" type="slide" />
@@ -334,7 +334,7 @@
 						<height>128</height>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
-						<font>LightCap48</font>
+						<font>LightMenu48</font>
 						<textcolor>ffffc24b</textcolor>
 						<animation reversible="false" type="UnFocus">
 							<effect end="0" start="100" time="0" type="fade" />
@@ -346,7 +346,7 @@
 						<height>128</height>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
-						<font>LightCap48</font>
+						<font>LightMenu48</font>
 						<textcolor>ffffffff</textcolor>
 						<visible>!Control.HasFocus(99)</visible>
 					</control>
