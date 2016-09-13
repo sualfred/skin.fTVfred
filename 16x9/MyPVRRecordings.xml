@@ -122,7 +122,7 @@
                         <include>NoTextures</include>
                         <visible>!Control.HasFocus(30)</visible>
                     </control>                    
-                    <control id="30" type="button">
+                    <control id="1003" type="button">
                         <width min="104" max="224">auto</width>
                         <wrapmultiline>true</wrapmultiline>
                         <height>100</height>
