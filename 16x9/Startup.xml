@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<backgroundcolor>0xff12161b</backgroundcolor>
-	<defaultcontrol always="true">40</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<controls>
 		<!-- splash -->
 		<control type="image">
@@ -11,62 +11,33 @@
 			<height>1188</height>
 			<texture>special://skin/extras/backgrounds/loading.jpg</texture>
 		</control>
-		<control type="grouplist">
+		<control type="label">
 			<top>765</top>
 			<width>1920</width>
-			<align>center</align>			
-			<height>200</height>
-			<orientation>horizontal</orientation>
-			<itemgap>10</itemgap>
-			<control type="label">
-				<font>Light32</font>
-				<textcolor>ffb0b4b7</textcolor>
-				<width>auto</width>
-				<height>41</height>
-				<label>$VAR[version]</label>
-			</control>
+			<height>41</height>
+			<align>center</align>	
+			<height>41</height>
+			<font>Light32</font>
+			<textcolor>ffb0b4b7</textcolor>
+			<label>$VAR[version]</label>
 		</control>
 		<control type="image">
 			<top>735</top>
-			<left>700</left>
+			<left>750</left>
 			<height>100</height>
 			<width>89</width>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture>dialogs/gradient_animation.png</texture>
-			<animation effect="slide" time="4000" tween="sine" easing="inout" start="0,0" end="420,0" loop="true" condition="true">Conditional</animation>
+			<animation effect="slide" time="3500" tween="sine" easing="inout" start="0,0" end="330,0" loop="true" condition="true">Conditional</animation>
 		</control>
-		<!-- trigger -->
-		<control type="button" id="40">
-			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(10)</onfocus>
-			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(30)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-		</control>
-		<!-- ask to change stuff -->
+		<!-- switch window -->
 		<control type="button" id="10">
-			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31535],text=$LOCALIZE[31536],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)||SetFocus(20),noaction=SetFocus(20),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
-			<onfocus condition="!System.HasAddon(script.skin.helper.service) + System.GetBool(input.enablemouse)">RunScript(script.toolbox,info=okdialog,header=$LOCALIZE[31535],text=$LOCALIZE[31537])</onfocus>
-			<onfocus condition="!System.HasAddon(script.skin.helper.service) | !System.GetBool(input.enablemouse)">SetFocus(20)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-		</control>
-		<!-- ask to change stuff -->
-		<control type="button" id="20">
-			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems) + System.GetBool(musiclibrary.showallitems)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31538],text=$LOCALIZE[31539],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)||RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)||SetFocus(30),noaction=SetFocus(30),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
-			<onfocus condition="System.HasAddon(script.skin.helper.service) + System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31538],text=$LOCALIZE[31539],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)||SetFocus(30),noaction=SetFocus(30),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
-			<onfocus condition="System.HasAddon(script.skin.helper.service) + !System.GetBool(filelists.showparentdiritems) + System.GetBool(musiclibrary.showallitems)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[31538],text=$LOCALIZE[31539],yesaction=RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)||SetFocus(30),noaction=SetFocus(30),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onfocus>
-			<onfocus condition="!System.HasAddon(script.skin.helper.service) | [!System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)]">SetFocus(30)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-		</control>
-		<!-- switch to home -->
-		<control type="button" id="30">
-			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">SetProperty(Preload,1,home)</onfocus>
-			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
-			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
-			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">Skin.SetString(QuestionsAsked,1)</onfocus>
-			<onfocus>AlarmClock(WaitForPVR,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
+			<onfocus condition="!String.IsEqual(Skin.String(QuestionsAsked),1)">AlarmClock(WaitForPVR,ReplaceWindow(1112),00:02,silent)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated)">SetProperty(Preload,1,home)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1) + !Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
+			<onfocus condition="String.IsEqual(Skin.String(QuestionsAsked),1)">AlarmClock(WaitForPVR,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>
