@@ -30,7 +30,7 @@
 				<width>97</width>
 				<height>97</height>
 				<texture>dialogs/notification_icon_small.png</texture>
-				<visible>String.Contains(Control.GetLabel(400),notification_) | String.Contains(Control.GetLabel(400),Default)</visible>
+				<visible>String.Contains(Control.GetLabel(400),notification_) | String.Contains(Control.GetLabel(400),Default) | String.IsEmpty(Control.GetLabel(400))</visible>
 			</control>
 			<!-- Info default -->
 			<control type="image">
