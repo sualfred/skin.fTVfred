@@ -109,7 +109,7 @@
 				<shortcut label="31513" type="music" icon="ftv_icon.png" condition="System.HasAddon(plugin.audio.tuneinradio)">ActivateWindow(Music,plugin://plugin.audio.tuneinradio/?path=browse&amp;c=local,return)</shortcut>	
 			</node>
 			<node label="19020">
-				<shortcut label="19217" type="livetv" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/1,return)</shortcut>
+				<shortcut label="19217" type="livetv" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/$LOCALIZE[19287]/,return)</shortcut>
 				<shortcut label="19017" type="livetv" icon="ftv_icon.png">ActivateWindow(tvrecordings,pvr://recordings/active,return)</shortcut>
 			</node>
 		</node>

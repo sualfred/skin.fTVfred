@@ -57,7 +57,7 @@
 			<include content="ViewPVRLayout">
 				<param name="ID">100</param>
 			</include>
-			<content>pvr://channels/tv/all channels/</content>
+			<content>pvr://channels/tv/$LOCALIZE[19287]/</content>
 		</control>
 		<!-- Page Layout -->
 		<control type="group">

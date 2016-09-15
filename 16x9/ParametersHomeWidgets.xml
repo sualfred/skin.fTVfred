@@ -369,7 +369,7 @@
 	<include name="ParamLivetvWidgetLists">
 		<control id="$PARAM[ID]1" type="list">
 			<include>HiddenHomeList</include>
-			<content limit="4">pvr://channels/tv/1</content>
+			<content limit="4">pvr://channels/tv/$LOCALIZE[19287]/</content>
 		</control>
 	</include>
 	<include name="ParamFavouritesWidgetLists">
