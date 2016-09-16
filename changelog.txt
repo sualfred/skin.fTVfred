@@ -1,5 +1,12 @@
 Changelog:
 
+3.2.8
+ - Fixed TV widget for the latest Krypton nightlies
+ - Tweaked startup window
+ - Fixed TV guide button in recording window
+ - Fixed notification icon background
+ - Removed main menu capitalization
+
 3.2.7
  - Removed thumbnail option for the shutdownmenu
  - Fixed icon issue with custom shutdownmenu items
