@@ -1,5 +1,8 @@
 Changelog:
 
+3.2.9a
+- Fixed custom startup bug
+
 3.2.9
  - Fixed TV recordings widget
  - Cleaned up and improved widget code
