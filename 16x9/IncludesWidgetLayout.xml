@@ -185,7 +185,7 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">scale</aspectratio>
 			<texture fallback="views/square_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>!String.Contains(ListItem.Property(Path),pvr://channels)</visible>
+			<visible>!String.Contains(ListItem.Property(Path),pvr://)</visible>
 		</control>
 		<control type="image">
 			<width>318</width>
@@ -193,7 +193,7 @@
 			<bordersize>0,13,10,13</bordersize>
 			<aspectratio align="center">keep</aspectratio>
 			<texture fallback="views/pvr_fallback.png" background="true">$INFO[ListItem.Property(Icon$PARAM[ID])]</texture>
-			<visible>String.Contains(ListItem.Property(Path),pvr://channels)</visible>
+			<visible>String.Contains(ListItem.Property(Path),pvr://)</visible>
 		</control>
 		<!-- Genre -->
 		<control type="group">
@@ -342,6 +342,7 @@
 			<shadowcolor>88000000</shadowcolor>
 			<label>$INFO[ListItem.Property(InfoLabel$PARAM[ID])]</label>
 			<visible>!Player.Playing | !String.IsEqual(MusicPlayer.Album,ListItem.Property(InfoLabel$PARAM[ID]))</visible>
+			<animation effect="slide" time="0" start="0,0" end="0,-13" condition="String.Contains(ListItem.Property(Path),pvr://channels)">Conditional</animation>
 		</control>
 	</include>
 	<include name="ParamHomeSquareInfoItemlayout">

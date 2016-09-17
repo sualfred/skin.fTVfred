@@ -318,54 +318,81 @@
 			</control>
 		</definition>
 	</include>
-	<!-- widget hiddenlists -->
+	<!-- Hidden Custom Ftv Widget Groups -->
+	<include name="ParamFtVWidgetListTemplate">		
+		<control id="$PARAM[ID]$PARAM[ROW]" type="list">
+			<include>HiddenHomeList</include>
+			<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW])]</content>
+			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]))</visible>
+		</control>
+	</include>
+	<include name="ParamFtVWidgetListInclude">
+		<include content="ParamFtVWidgetListTemplate" condition="String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),plugin://plugin.video.youtube/channel)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+			<param name="sortby" value="name"/>
+		</include>
+		<include content="ParamFtVWidgetListTemplate" condition="String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),musicdb://artists/)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+			<param name="sortby" value="artist"/>
+		</include>
+		<include content="ParamFtVWidgetListTemplate" condition="String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),addons://sources/)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+			<param name="sortby" value="label"/>
+		</include>
+		<include content="ParamFtVWidgetListTemplate" condition="String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),pvr://recordings)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+			<param name="sortby" value="date"/>
+			<param name="sortorder" value="descending"/>
+		</include>
+		<include content="ParamFtVWidgetListTemplate" condition="!String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),plugin://plugin.video.youtube/channel) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),musicdb://artists/) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),addons://sources/) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),pvr://recordings)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+		</include>
+	</include>
 	<include name="ParamFtvWidgetLists">
 		<control id="$PARAM[ID]9" type="list">
 			<include>HiddenHomeList</include>
 			<content sortby="random" limit="1">$INFO[Skin.String($PARAM[ID]0-WidgetAd)]</content>
 			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetAd))</visible>
 		</control>
-		<control id="$PARAM[ID]1" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-1]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-1)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1))</visible>
-		</control>
-		<control id="$PARAM[ID]2" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-2]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-2)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2))</visible>
-		</control>
-		<control id="$PARAM[ID]3" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-3]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-3)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3))</visible>
-		</control>
-		<control id="$PARAM[ID]4" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-4]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-4)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4))</visible>
-		</control>
-		<control id="$PARAM[ID]5" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-5]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-5)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5))</visible>
-		</control>
-		<control id="$PARAM[ID]6" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-6]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-6)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6))</visible>
-		</control>
-		<control id="$PARAM[ID]7" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-7]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-7)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7))</visible>
-		</control>
-		<control id="$PARAM[ID]8" type="list">
-			<include>HiddenHomeList</include>
-			<content sortby="$VAR[$PARAM[ID]0-orderby-8]" limit="6">$INFO[Skin.String($PARAM[ID]0-WidgetList-8)]</content>
-			<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))</visible>
-		</control>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">1</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">2</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">3</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">4</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">5</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">6</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">7</param>
+		</include>
+		<include content="ParamFtVWidgetListInclude">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">8</param>
+		</include>
 	</include>
+	<!-- Hidden Widget Lists -->
 	<include name="ParamLivetvWidgetLists">
 		<control id="$PARAM[ID]1" type="list">
 			<include>HiddenHomeList</include>
@@ -518,6 +545,13 @@
 			<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
 			<onclick condition="!String.IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
 			<onclick condition="String.IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">noop</onclick>
+			<visible>!String.IsEqual(Container($PARAM[ID]).ListItemPosition(0).Label,..) | !String.IsEmpty(Container($PARAM[ID]).ListItemPosition(1).Label)</visible>
+		</item>
+		<item id="$PARAM[POS]">
+			<label>$INFO[Skin.String($PARAM[ListID]0-WidgetLabel-$PARAM[POS])]</label>
+			<property name="WidgetStyle">$INFO[Skin.String($PARAM[ListID]0-WidgetStyle-$PARAM[POS])]</property>
+			<onclick>noop</onclick>
+			<visible>String.IsEqual(Container($PARAM[ID]).ListItemPosition(0).Label,..) + String.IsEmpty(Container($PARAM[ID]).ListItemPosition(1).Label)</visible>
 		</item>
 	</include>
 	<include name="LivetvWidget">
