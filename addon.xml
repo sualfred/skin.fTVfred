@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.2.8"
+	version="3.2.9"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,12 +34,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.2.8[/B]
- - Fixed TV widget for the latest Krypton nightlies
- - Tweaked startup window
- - Fixed TV guide button in recording window
- - Fixed notification icon background
- - Removed main menu capitalization
+[B]3.2.9[/B]
+ - Fixed TV recordings widget
+ - Cleaned up and improved widget code
 
 See changelog.txt for more details.</news>
 	</extension>

@@ -1,5 +1,9 @@
 Changelog:
 
+3.2.9
+ - Fixed TV recordings widget
+ - Cleaned up and improved widget code
+ 
 3.2.8
  - Fixed TV widget for the latest Krypton nightlies
  - Tweaked startup window
