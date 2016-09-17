@@ -3,7 +3,7 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<onload condition="System.GetBool(input.enablemouse)">SetFocus(10)</onload>
 	<onload condition="!System.GetBool(input.enablemouse) + [System.GetBool(filelists.showparentdiritems) | System.GetBool(musiclibrary.showallitems)]">SetFocus(20)</onload>
-	<onload condition="[!System.GetBool(input.enablemouse) + !System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)] | Skin.SetString(QuestionsAsked,1)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onload condition="[!System.GetBool(input.enablemouse) + !System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)] | String.IsEqual(Skin.String(QuestionsAsked),1)">ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<controls>
 		<!-- Hidden control -->
 		<control type="button" id="50">

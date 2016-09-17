@@ -5,7 +5,7 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol>90</defaultcontrol>
 	<onload condition="!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(ReloadTriggered))">ClearProperty(PreloadDone,home)</onload>
-	<onload condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | !String.IsEmpty(Window(home).Property(ReloadTriggered))">SetProperty(Preload,1,home)</onload>
+	<onload condition="[String.IsEqual(Skin.String(QuestionsAsked),1) + !Window.Previous(startup) + !Skin.HasSetting(PreloadDeactivated) + String.IsEmpty(Window(home).Property(PreloadDone))] | [!String.IsEmpty(Window(home).Property(ReloadTriggered)) + !Skin.HasSetting(PreloadDeactivated)]">SetProperty(Preload,1,home)</onload>
 	<!-- Clear properties -->
 	<onload>ClearProperty(ReloadTriggered,home)</onload>
 	<onload>ClearProperty(ItemHasWidget,home)</onload>
@@ -70,7 +70,7 @@
 			</control>
 			<control type="group" id="91">
 				<animation reversible="false" effect="slide" end="0,0" time="800">Hidden</animation>
-				<visible>!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
+				<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
 			</control>
 			<!-- Background -->
 			<control type="image">
