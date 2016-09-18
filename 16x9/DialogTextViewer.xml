@@ -3,7 +3,8 @@
 	<!-- textviewer -->
 	<zorder>2</zorder>
 	<defaultcontrol always="true">3000</defaultcontrol>
-	<onunload condition="!String.IsEmpty(Window(home).Property(OpenTextViewer))">SetFocus(50)</onunload>
+	<onunload condition="String.IsEqual(Window(home).Property(OpenTextViewer),1)">SetFocus(50)</onunload>
+	<onunload condition="String.IsEqual(Window(home).Property(OpenTextViewer),2)">SetFocus(100)</onunload>
 	<onunload condition="!String.IsEmpty(Window(home).Property(SearchOpenTextViewer))">$VAR[SearchSetFocus]</onunload>
 	<onunload>ClearProperty(OpenTextViewer,home)</onunload>
 	<onunload>ClearProperty(NoLabel,home)</onunload>

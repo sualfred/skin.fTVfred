@@ -3,6 +3,7 @@
 	<menucontrol>1000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">100</defaultcontrol>	
+	<include>WindowOpenTrigger</include>
 	<onunload>ClearProperty(LabelsDelayFadeAnimation,home)</onunload>
 	<onload>ClearProperty(LabelsDelayFadeAnimation,home)</onload>
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
@@ -292,6 +293,7 @@
 					<ondown>noop</ondown>
 					<onleft>100</onleft>
 					<onright>100</onright>
+					<onclick>SetProperty(OpenTextViewer,2,home)</onclick>
 					<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[Container(100).ListItem.Title]',text='$ESCVAR[Plot]')</onclick>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>

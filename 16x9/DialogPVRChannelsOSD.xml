@@ -2,6 +2,7 @@
 <!-- Channel OSD -->
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
+	<include condition="String.IsEmpty(Skin.String(PVRChannelsOSDLayout))">WindowOpenTrigger</include>
 	<controls>
 		<include condition="String.IsEmpty(Skin.String(PVRChannelsOSDLayout))">PVRChannelsOSDDefault</include>
 		<include condition="!String.IsEmpty(Skin.String(PVRChannelsOSDLayout))">PVRChannelsOSDVertical</include>
