@@ -1,5 +1,9 @@
 Changelog:
 
+3.3.0a
+- Fixed startup loop for fresh installations and a rare scenario
+- Adjusted forgotten NextAired animations
+
 3.3.0
 - Fixed animation of focused items in the viewtypes
 - GlobalSeach cleanup

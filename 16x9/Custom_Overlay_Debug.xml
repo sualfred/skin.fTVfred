@@ -799,6 +799,26 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
+				<label>script-NextAired-TVGuide.xml</label>
+				<visible>Window.IsVisible(script-NextAired-TVGuide.xml)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
+				<label>script-NextAired-TVGuide2.xml</label>
+				<visible>Window.IsVisible(script-NextAired-TVGuide2.xml)</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>left</align>
 				<label>script-globalsearch-contextmenu.xml</label>
 				<visible>Window.IsVisible(script-globalsearch-contextmenu.xml)</visible>
 			</control>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.0"
+	version="3.3.0a"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,10 +34,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.0[/B]
-- Fixed animation of focused items in the viewtypes
-- GlobalSeach cleanup
-- Improved PVR windows
+[B]3.3.0a[/B]
+- Fixed startup loop for fresh installations and a rare scenario
+- Adjusted forgotten NextAired animations
 
 See changelog.txt for more details.</news>
 	</extension>

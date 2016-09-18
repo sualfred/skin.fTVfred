@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<include>WindowOpenTrigger</include>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
 		<control type="button" id="8">

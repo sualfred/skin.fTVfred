@@ -505,75 +505,9 @@
 				<effect center="357,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 				<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 			</animation>
-			<itemlayout height="576" width="300">
-				<control type="group">
-					<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-					<control type="image">
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/movie_fallback.png">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>416</width>
-						<height>576</height>
-						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<texture>views/OverlayNF.png</texture>
-						<visible>!Control.HasFocus(999)</visible>
-						<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Hidden</animation>
-						<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Visible</animation>
-					</control>
-				</control>
-			</itemlayout>
-			<focusedlayout height="576" width="300">
-				<control type="group">
-					<animation center="150,288" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
-					<animation center="150,288" condition="Container($PARAM[ListID]).OnNext | Container($PARAM[ListID]).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
-					<animation center="150,288" condition="Window.IsVisible(textviewer)" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">Conditional</animation>
-					<control type="image">
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<aspectratio align="center">scale</aspectratio>
-						<texture background="true" fallback="views/movie_fallback.png">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>416</width>
-						<height>576</height>
-						<texture border="51">views/shadow_fo.png</texture>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ListID]) | Container($PARAM[ListID]).OnNext | Container($PARAM[ListID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Container($PARAM[ListID]).OnNext | Container($PARAM[ListID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<left>-48</left>
-						<centertop>288</centertop>
-						<width>416</width>
-						<height>576</height>
-						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ListID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ListID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-					</control>
-					<control type="image">
-						<top>48</top>
-						<width>320</width>
-						<height>480</height>
-						<texture>views/OverlayNF.png</texture>
-						<visible>!Control.HasFocus(999)</visible>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ListID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ListID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-					</control>
-				</control>
-			</focusedlayout>
+			<include content="ViewPosterLayout">
+				<param name="ID">$PARAM[ListID]</param>
+			</include>
 		</control>
 	</include>
 </includes>
