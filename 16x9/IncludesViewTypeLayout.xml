@@ -151,9 +151,8 @@
 					<width>736</width>
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -267,9 +266,8 @@
 					<width>416</width>
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -578,8 +576,8 @@
 						<width>576</width>
 						<height>576</height>
 						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -662,9 +660,8 @@
 						<width>576</width>
 						<height>576</height>
 						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-						<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -865,9 +862,8 @@
 					<width>736</width>
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -876,7 +872,7 @@
 					<height>62</height>
 					<texture>views/playlist_play.png</texture>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
-					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="0,0" time="0">UnFocus</animation>
+					<animation condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="0" time="0">UnFocus</animation>
 				</control>
 				<control type="label">
 					<left>95</left>
@@ -1048,9 +1044,8 @@
 					<width>736</width>
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1171,9 +1166,8 @@
 					<width>576</width>
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -1835,9 +1829,8 @@
 					<width>576</width>
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation center="auto" condition="!Container($PARAM[ID]).OnNext + !Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 				<control type="image">
 					<top>48</top>
