@@ -1234,7 +1234,6 @@
 					<overlaytexture>-</overlaytexture>
 					<info>ListItem.Progress</info>
 					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">UnFocus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">Focus</animation>
 					<visible>!String.IsEmpty(ListItem.StartTime) + !String.IsEmpty(ListItem.EndTime)</visible>
 				</control>
 				<control type="image">

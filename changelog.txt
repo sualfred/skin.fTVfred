@@ -1,5 +1,10 @@
 Changelog:
 
+3.3.0
+- Fixed animation of focused items in the viewtypes
+- GlobalSeach cleanup
+- Improved PVR windows
+
 3.2.9a
 - Fixed custom startup bug
 
