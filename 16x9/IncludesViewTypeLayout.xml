@@ -1098,7 +1098,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -1149,7 +1149,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -1260,7 +1260,7 @@
 			</control>
 			<control type="label">
 				<left>90</left>
-				<width>200</width>
+				<width>220</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ff5b6064</textcolor>
@@ -1268,18 +1268,18 @@
 			</control>
 			<!-- Fake Progress -->
 			<control type="image">
-				<left>320</left>
-				<width>890</width>
+				<left>340</left>
+				<width>870</width>
 				<height>67</height>
 				<texture border="5">pvr/epg_button_nf.png</texture>
 			</control>
 			<control type="image">
-				<left>320</left>
-				<width>890</width>
+				<left>340</left>
+				<width>870</width>
 				<height>67</height>
 				<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
 				<include content="FakeProgressAnimation">
-					<param name="posx">320</param>
+					<param name="posx">340</param>
 				</include>
 			</control>
 			<!-- Fake Next Progress -->
@@ -1290,8 +1290,8 @@
 				<texture border="5">pvr/epg_button_nf.png</texture>
 			</control>
 			<control type="label">
-				<left>335</left>
-				<width>855</width>
+				<left>355</left>
+				<width>835</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffffffff</textcolor>
@@ -1300,8 +1300,8 @@
 				<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
 			</control>
 			<control type="label">
-				<left>335</left>
-				<width>805</width>
+				<left>355</left>
+				<width>785</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffffffff</textcolor>
@@ -1347,7 +1347,7 @@
 			</control>
 			<control type="label">
 				<left>90</left>
-				<width>200</width>
+				<width>220</width>
 				<scroll>false</scroll>
 				<aligny>center</aligny>
 				<height>67</height>
@@ -1358,7 +1358,7 @@
 			</control>
 			<control type="label">
 				<left>90</left>
-				<width>200</width>
+				<width>220</width>
 				<scroll>false</scroll>
 				<aligny>center</aligny>
 				<height>67</height>
@@ -1369,18 +1369,18 @@
 			</control>
 			<!-- Fake Progress -->
 			<control type="image">
-				<left>320</left>
-				<width>890</width>
+				<left>340</left>
+				<width>870</width>
 				<height>67</height>
 				<texture border="5">pvr/epg_button_nf.png</texture>
 			</control>
 			<control type="image">
-				<left>320</left>
-				<width>890</width>
+				<left>340</left>
+				<width>870</width>
 				<height>67</height>
 				<texture colordiffuse="33FFFFFF" border="5">pvr/epg_button_progress.png</texture>
 				<include content="FakeProgressAnimation">
-					<param name="posx">320</param>
+					<param name="posx">340</param>
 				</include>
 			</control>
 			<!-- Fake Next Progress -->
@@ -1392,8 +1392,8 @@
 				<overlaytexture>-</overlaytexture>
 			</control>
 			<control type="label">
-				<left>335</left>
-				<width>855</width>
+				<left>355</left>
+				<width>835</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffFFC24B</textcolor>
@@ -1402,8 +1402,8 @@
 				<visible>Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 			</control>
 			<control type="label">
-				<left>335</left>
-				<width>855</width>
+				<left>355</left>
+				<width>835</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffffffff</textcolor>
@@ -1412,8 +1412,8 @@
 				<visible>!Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 			</control>
 			<control type="label">
-				<left>335</left>
-				<width>805</width>
+				<left>355</left>
+				<width>785</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffFFC24B</textcolor>
@@ -1422,8 +1422,8 @@
 				<visible>Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 			</control>
 			<control type="label">
-				<left>335</left>
-				<width>805</width>
+				<left>355</left>
+				<width>785</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffffffff</textcolor>

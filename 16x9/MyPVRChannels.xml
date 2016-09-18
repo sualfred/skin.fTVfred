@@ -15,7 +15,7 @@
 			<height>420</height>
 			<control type="label">
 				<left>0</left>
-				<width>315</width>
+				<width>340</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ffbebebe</textcolor>
@@ -23,7 +23,7 @@
 				<label>$INFO[System.Date]</label>
 			</control>
 			<control type="label">
-				<left>335</left>
+				<left>350</left>
 				<width>1260</width>
 				<aligny>center</aligny>
 				<height>67</height>
@@ -32,7 +32,7 @@
 				<label>$LOCALIZE[31106]</label>
 			</control>
 			<control type="label">
-				<left>1229</left>
+				<left>1230</left>
 				<width>1260</width>
 				<aligny>center</aligny>
 				<height>67</height>

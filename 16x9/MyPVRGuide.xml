@@ -256,24 +256,22 @@
                     <timeblocks>40</timeblocks>
                     <rulerunit>6</rulerunit>
                     <!-- Ruler -->
-                    <rulerlayout height="70" width="260">
+                    <rulerlayout height="70">
                         <control type="label" id="2">
-                            <left>0</left>
                             <top>20</top>
-                            <width>300</width>
                             <align>left</align>
                             <aligny>top</aligny>
-                            <font>Med24Num</font>                            
+                            <font>Med24Num</font>                        
                             <textcolor>ffbebebe</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>White</textcolor>
                         </control>
                     </rulerlayout>
                     <!-- Channels -->
-                    <channellayout height="70" width="320">
+                    <channellayout height="70" width="340">
                         <control type="label">
                             <left>90</left>
-                            <width>200</width>
+                            <width>220</width>
                             <aligny>center</aligny>
                             <height>67</height>
                             <textcolor>ff5b6064</textcolor>
@@ -287,10 +285,10 @@
                             <aspectratio aligny="center" align="left">keep</aspectratio>
                         </control>
                     </channellayout>
-                    <focusedchannellayout height="70" width="320">  
+                    <focusedchannellayout height="70" width="340">
                         <control type="label">
                             <left>90</left>
-                            <width>200</width>
+                            <width>220</width>
                             <scroll>false</scroll>
                             <aligny>center</aligny>
                             <height>67</height>
