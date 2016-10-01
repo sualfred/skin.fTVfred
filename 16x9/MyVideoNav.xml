@@ -408,6 +408,18 @@
 						<label>$INFO[ListItem.Year,,[COLOR 00ffffff]/[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Year)</visible>
 					</control>
+					<control type="label">
+						<width>auto</width>
+						<height>24</height>
+						<font>Med24</font>
+						<aligny>bottom</aligny>
+						<textcolor>ffbebebe</textcolor>
+						<label>$INFO[ListItem.Duration,, $LOCALIZE[31147]]</label>
+						<visible>!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,1)</visible>
+					</control>
+					<include content="Spacer">
+						<param name="visible" value="!String.IsEmpty(ListItem.Duration)" />
+					</include>
 					<include>Rating_TV</include>
 					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>

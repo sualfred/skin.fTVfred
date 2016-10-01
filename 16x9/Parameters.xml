@@ -183,7 +183,7 @@
 				<width>320</width>
 				<height>480</height>
 				<texture border="2">views/season_overlay.png</texture>
-				<visible>!String.Contains(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]),Default)</visible>
+				<visible>!String.Contains(Container($PARAM[ID]).ListItemNoWrap($PARAM[POS]).Icon,Default)</visible>
 			</control>
 			<control type="label">
 				<left>18</left>
