@@ -414,7 +414,7 @@
 						<font>Med24</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
-						<label>$INFO[ListItem.Duration,, $LOCALIZE[31147]]</label>
+						<label>$VAR[Duration]</label>
 						<visible>!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,1)</visible>
 					</control>
 					<include content="Spacer">
