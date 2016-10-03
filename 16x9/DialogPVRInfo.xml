@@ -22,13 +22,13 @@
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
-					<width>973</width>
+					<width>1103</width>
 					<height>784</height>
 					<texture border="4,7,4,7">views/text_viewer_background.png</texture>
 				</control>
 				<!-- Arrow up -->
 				<control type="image">
-					<left>942</left>
+					<centerleft>50%</centerleft>
 					<top>52</top>
 					<width>36</width>
 					<height>20</height>
@@ -41,7 +41,7 @@
 				<control id="3001" type="textbox">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
-					<width>788</width>
+					<width>948</width>
 					<height>452</height>
 					<align>left</align>
 					<font>Reg36Spaced</font>
@@ -53,7 +53,7 @@
 				</control>
 				<!-- Arrow down -->
 				<control type="image">
-					<left>942</left>
+					<centerleft>50%</centerleft>
 					<top>610</top>
 					<width>36</width>
 					<height>20</height>
@@ -64,7 +64,7 @@
 				</control>
 				<!-- Scrollbar -->
 				<control id="3000" type="scrollbar">
-					<left>1394</left>
+					<left>1459</left>
 					<centertop>50%</centertop>
 					<width>8</width>
 					<height>452</height>
@@ -83,7 +83,7 @@
 				<control type="grouplist" id="2000">
 					<centerleft>50%</centerleft>
 					<bottom>24</bottom>
-					<width>1540</width>
+					<width>1003</width>
 					<height>76</height>
 					<itemgap>0</itemgap>
 					<onleft>noop</onleft>
@@ -139,6 +139,22 @@
 						<textoffsety>27</textoffsety>
 						<label>-</label>
 						<visible>Control.IsEnabled(6) + !String.IsEmpty(Control.GetLabel(6))</visible>
+					</control>
+					<!-- Timer Button -->
+					<control type="button" id="9">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<onup condition="Container(3001).HasPrevious">SetFocus(3000)</onup>
+						<onup condition="Container(3001).HasPrevious">PageUp(3000)</onup>
+						<ondown condition="Container(3001).HasNext">SetFocus(3000)</ondown>
+						<ondown condition="Container(3001).HasNext">PageDown(3000)</ondown>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>19061</label>
+						<visible>Control.IsEnabled(9)</visible>
 					</control>
 				</control>
 			</control>
