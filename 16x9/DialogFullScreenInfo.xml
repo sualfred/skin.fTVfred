@@ -157,6 +157,7 @@
 					<width>40</width>
 					<height>40</height>
 					<texture>osd/x_ray_empty.png</texture>
+					<animation effect="fade" time="500" end="30" start="100" condition="true" pulse="true">Conditional</animation>
 					<visible>Container(100).IsUpdating</visible>
 				</control>
 				<control id="99" type="label">
@@ -260,7 +261,7 @@
 								<scroll>false</scroll>
 								<textcolor>ffffffff</textcolor>
 								<shadowcolor>80000000</shadowcolor>
-								<label>$INFO[ListItem.Label2]</label>
+								<label fallback="31329">$INFO[ListItem.Label2]</label>
 							</control>
 						</control>
 					</itemlayout>
@@ -304,7 +305,7 @@
 								<scroll>false</scroll>
 								<textcolor>ffffffff</textcolor>
 								<shadowcolor>80000000</shadowcolor>
-								<label>$INFO[ListItem.Label2]</label>
+								<label fallback="31329">$INFO[ListItem.Label2]</label>
 							</control>
 						</control>
 					</focusedlayout>

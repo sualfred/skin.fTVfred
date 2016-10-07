@@ -1455,6 +1455,11 @@ msgctxt "#31328"
 msgid "View[CR]TV channels"
 msgstr ""
 
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31329"
+msgid "Unknown role"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
