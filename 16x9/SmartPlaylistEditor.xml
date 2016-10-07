@@ -33,7 +33,7 @@
 				<width>770</width>
 				<height>648</height>
 				<!-- Set Playlist type -->
-				<control type="spincontrolex" id="22">
+				<control type="button" id="22">
 					<width>770</width>
 					<height>84</height>
 					<onleft>back</onleft>
@@ -47,10 +47,9 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>true</reverse>
 				</control>
 				<!-- Name Button -->
-				<control type="edit" id="12">
+				<control type="button" id="12">
 					<top>84</top>
 					<width>770</width>
 					<height>84</height>
@@ -62,7 +61,7 @@
 					<textoffsetx>40</textoffsetx>
 					<textcolor>ff505153</textcolor>
 					<focusedcolor>ffffaf37</focusedcolor>
-					<hinttext>21433</hinttext>
+					<label>$LOCALIZE[31200]</label>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 				</control>
@@ -207,8 +206,7 @@
 				<top>60</top>
 				<width>770</width>
 				<height>504</height>
-				<!-- Default spin control -->
-				<control type="spincontrolex" id="16">
+				<control type="button" id="16">
 					<top>0</top>
 					<width>770</width>
 					<height>84</height>
@@ -223,10 +221,8 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>true</reverse>
 				</control>
-				<!-- Default spin control -->
-				<control type="spincontrolex" id="17">
+				<control type="button" id="17">
 					<top>84</top>
 					<width>770</width>
 					<height>84</height>
@@ -244,8 +240,7 @@
 					<aligny>center</aligny>
 					<reverse>true</reverse>
 				</control>
-				<!-- Default spin control -->
-				<control type="spincontrolex" id="18">
+				<control type="button" id="18">
 					<top>168</top>
 					<width>770</width>
 					<height>84</height>
@@ -261,10 +256,8 @@
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<aligny>center</aligny>
-					<reverse>true</reverse>
 				</control>
-				<!-- Default toggle -->
-				<control type="togglebutton" id="19">
+				<control type="button" id="19">
 					<top>252</top>
 					<width>770</width>
 					<height>84</height>
@@ -273,7 +266,6 @@
 					<onup>18</onup>
 					<ondown>23</ondown>
 					<font>Light32</font>
-					<align>right</align>
 					<label>[CAPITALIZE]$LOCALIZE[21431][/CAPITALIZE]</label>
 					<altlabel>[CAPITALIZE]$LOCALIZE[21430][/CAPITALIZE]</altlabel>
 					<textoffsetx>40</textoffsetx>
@@ -285,8 +277,7 @@
 					<alttexturenofocus border="3">settings/button_no_focus.png</alttexturenofocus>
 					<aligny>center</aligny>
 				</control>
-				<!-- Default spin control -->
-				<control type="spincontrolex" id="23">
+				<control type="button" id="23">
 					<top>336</top>
 					<width>770</width>
 					<height>84</height>
@@ -373,7 +364,7 @@
 				<top>312</top>
 				<width>40</width>
 				<height>252</height>
-				<texture flipx="true" border="0,20,0,0">common/shadow.png</texture>
+				<texture flipx="true" border="0,20,0,0">common/shadow_hard.png</texture>
 			</control>
 			<control type="image">
 				<left>770</left>
