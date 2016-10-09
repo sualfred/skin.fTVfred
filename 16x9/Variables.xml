@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="SongListFocusedColor">
+		<value condition="Control.HasFocus(54)">ffe9a01e</value>
+		<value>ffffffff</value>
+	</variable>
 	<variable name="UnwatchedEpisodes">
 		<value condition="Integer.IsGreater(ListItem.Property(UnwatchedEpisodes),1)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31320]]</value>
 		<value condition="Integer.IsEqual(ListItem.Property(UnwatchedEpisodes),1)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31321]]</value>

@@ -731,7 +731,7 @@
 				<height>900</height>
 				<onup>back</onup>
 				<ondown>noop</ondown>
-				<onleft>2001</onleft>
+				<onleft>2002</onleft>
 				<onright>noop</onright>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<focusposition>1</focusposition>
@@ -741,61 +741,64 @@
 				<visible>Container.Content(songs) | [String.Contains(Container.FolderName,amazon) + String.Contains(Container.FolderPath,listSongs)]</visible>
 				<animation condition="[!system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,1)] | [system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,0)]" effect="slide" end="0,-101" start="0,0">Conditional</animation>
 				<itemlayout height="101" width="1000">
-					<control type="label">
-						<width>68</width>
-						<height>31</height>
-						<font>Light32</font>
-						<align>center</align>
-						<textcolor>ff646668</textcolor>
-						<label>$INFO[ListItem.TrackNumber]</label>
-						<visible>![Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
-					</control>
-					<control type="image">
-						<top>-3</top>
-						<width>68</width>
-						<height>31</height>
-						<align>center</align>
-						<textcolor>ff646668</textcolor>
-						<aspectratio>keep</aspectratio>
-						<texture>views/equaliser.gif</texture>
-						<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<left>89</left>
-						<width>892</width>
-						<height>31</height>
-						<font>Light32</font>
-						<textcolor>ffd8d8d8</textcolor>
-						<label>$INFO[ListItem.Title]</label>
-						<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<left>89</left>
-						<width>892</width>
-						<height>31</height>
-						<font>Light32</font>
-						<textcolor>ffd8d8d8</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<left>89</left>
-						<width>892</width>
-						<height>31</height>
-						<font>Light32</font>
-						<align>right</align>
-						<textcolor>ff636466</textcolor>
-						<label>$INFO[ListItem.Duration]</label>
-					</control>
-					<control type="label">
-						<left>89</left>
-						<top>35</top>
-						<width>892</width>
-						<height>28</height>
-						<font>Light28</font>
-						<textcolor>ff636466</textcolor>
-						<label>$INFO[ListItem.Artist]</label>
-						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | String.StartsWith(Container.FolderPath,musicdb://songs) | String.EndsWith(Container.FolderPath,xsp) | String.EndsWith(Container.FolderPath,m3u)</visible>
+					<control type="group">
+						<animation effect="fade" time="300" easing="inout" tween="sine" start="100" end="65" condition="!Control.HasFocus(54)">Conditional</animation>
+						<control type="label">
+							<width>68</width>
+							<height>31</height>
+							<font>Light32</font>
+							<align>center</align>
+							<textcolor>ff646668</textcolor>
+							<label>$INFO[ListItem.TrackNumber]</label>
+							<visible>![Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
+						</control>
+						<control type="image">
+							<top>-3</top>
+							<width>68</width>
+							<height>31</height>
+							<align>center</align>
+							<textcolor>ff646668</textcolor>
+							<aspectratio>keep</aspectratio>
+							<texture>views/equaliser.gif</texture>
+							<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
+						</control>
+						<control type="label">
+							<left>89</left>
+							<width>892</width>
+							<height>31</height>
+							<font>Light32</font>
+							<textcolor>ffd8d8d8</textcolor>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
+						</control>
+						<control type="label">
+							<left>89</left>
+							<width>892</width>
+							<height>31</height>
+							<font>Light32</font>
+							<textcolor>ffd8d8d8</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
+						</control>
+						<control type="label">
+							<left>89</left>
+							<width>892</width>
+							<height>31</height>
+							<font>Light32</font>
+							<align>right</align>
+							<textcolor>ff636466</textcolor>
+							<label>$INFO[ListItem.Duration]</label>
+						</control>
+						<control type="label">
+							<left>89</left>
+							<top>35</top>
+							<width>892</width>
+							<height>28</height>
+							<font>Light28</font>
+							<textcolor>ff636466</textcolor>
+							<label>$INFO[ListItem.Artist]</label>
+							<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | String.StartsWith(Container.FolderPath,musicdb://songs) | String.EndsWith(Container.FolderPath,xsp) | String.EndsWith(Container.FolderPath,m3u)</visible>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="101" width="1000">
@@ -804,8 +807,8 @@
 						<height>31</height>
 						<font>Light32</font>
 						<align>center</align>
-						<textcolor>ffe9a01e</textcolor>
-						<selectedcolor>ffe9a01e</selectedcolor>
+						<textcolor>$VAR[SongListFocusedColor]</textcolor>
+						<selectedcolor>$VAR[SongListFocusedColor]</selectedcolor>
 						<label>$INFO[ListItem.TrackNumber]</label>
 						<visible>![Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)]</visible>
 					</control>
@@ -814,7 +817,6 @@
 						<width>68</width>
 						<height>31</height>
 						<align>center</align>
-						<textcolor>ff646668</textcolor>
 						<aspectratio>keep</aspectratio>
 						<texture>views/equaliser.gif</texture>
 						<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
@@ -824,8 +826,8 @@
 						<width>892</width>
 						<height>31</height>
 						<font>Light32</font>
-						<textcolor>ffe9a01e</textcolor>
-						<selectedcolor>ffe9a01e</selectedcolor>
+						<textcolor>$VAR[SongListFocusedColor]</textcolor>
+						<selectedcolor>$VAR[SongListFocusedColor]</selectedcolor>
 						<label>$INFO[ListItem.Title]</label>
 						<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -834,8 +836,8 @@
 						<width>892</width>
 						<height>31</height>
 						<font>Light32</font>
-						<textcolor>ffe9a01e</textcolor>
-						<selectedcolor>ffe9a01e</selectedcolor>
+						<textcolor>$VAR[SongListFocusedColor]</textcolor>
+						<selectedcolor>$VAR[SongListFocusedColor]</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -845,8 +847,8 @@
 						<height>31</height>
 						<font>Light32</font>
 						<align>right</align>
-						<textcolor>ffe9a01e</textcolor>
-						<selectedcolor>ffe9a01e</selectedcolor>
+						<textcolor>$VAR[SongListFocusedColor]</textcolor>
+						<selectedcolor>$VAR[SongListFocusedColor]</selectedcolor>
 						<label>$INFO[ListItem.Duration]</label>
 					</control>
 					<control type="label">
@@ -855,8 +857,8 @@
 						<width>892</width>
 						<height>28</height>
 						<font>Light28</font>
-						<textcolor>ffe9a01e</textcolor>
-						<selectedcolor>ffe9a01e</selectedcolor>
+						<textcolor>$VAR[SongListFocusedColor]</textcolor>
+						<selectedcolor>$VAR[SongListFocusedColor]</selectedcolor>
 						<label>$INFO[ListItem.Artist]</label>
 						<visible>!String.IsEqual(ListItem.AlbumArtist,ListItem.Artist) | String.StartsWith(Container.FolderPath,musicdb://songs) | String.EndsWith(Container.FolderPath,xsp) | String.EndsWith(Container.FolderPath,m3u)</visible>
 					</control>
@@ -867,132 +869,116 @@
 				<left>132</left>
 				<top>648</top>
 				<include>VisibleDelayFadeAnimation</include>
+				<!-- Hidden Controls -->
+				<control id="16" type="button">
+					<include>HiddenControl</include>
+					<label>$LOCALIZE[31163]</label>
+				</control>
+				<control id="20" type="togglebutton">
+					<include>HiddenControl</include>
+					<label>$LOCALIZE[31090]</label>
+					<altlabel>$LOCALIZE[31091]</altlabel>
+					<usealttexture>Library.IsScanningMusic</usealttexture>
+				</control>
 				<!-- Controls -->
-				<control type="group">
-					<!-- Dummy to always set focus to first visible button -->
-					<control id="2001" type="button">
-						<width>-8</width>
-						<height>0</height>
-						<label>-</label>
-						<onfocus condition="String.IsEmpty(Container.PluginName)">SetFocus(2002)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container.PluginName)">SetFocus(2004)</onfocus>
-						<include>NoTextures</include>
-						<visible>!Control.HasFocus(2002) + !Control.HasFocus(2004) + !Control.HasFocus(2005) + !Control.HasFocus(20) + !Control.HasFocus(16)</visible>
-					</control>
-					<control id="2002" type="button">
-						<width>249</width>
-						<height>100</height>
-						<onleft>Back</onleft>
-						<onright condition="!Skin.HasSetting(EmbyHideUpdateButton)">20</onright>
-						<onright condition="Skin.HasSetting(EmbyHideUpdateButton)">16</onright>
-						<onup>50</onup>
-						<ondown>2004</ondown>
-						<onclick>SetFocus(50)</onclick>
-						<onclick>Info</onclick>
-						<onclick>SetProperty(OpenMusicInformation,1,home)</onclick>
-						<font>Med24</font>
-						<label>$VAR[MusicType]Information</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<enabled>!ListItem.IsParentFolder</enabled>
-						<visible>String.IsEmpty(Container.PluginName)</visible>
-					</control>
-					<control id="2004" type="button">
-						<top>110</top>
-						<width>249</width>
-						<height>100</height>
-						<onleft>2003</onleft>
-						<onright condition="!Control.IsVisible(16)">2005</onright>
-						<onright condition="Control.IsVisible(16) + !Skin.HasSetting(EmbyHideUpdateButton)">16</onright>
-						<onright condition="Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)">2005</onright>
-						<onup>2002</onup>
-						<ondown condition="Control.IsVisible(16)+ !Skin.HasSetting(EmbyHideUpdateButton)">2005</ondown>
-						<onclick>SetFocus(5001)</onclick>
-						<font>Med24</font>
-						<wrapmultiline>true</wrapmultiline>
-						<label>$LOCALIZE[31089]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<animation effect="slide" time="0" end="0,-110" condition="!String.IsEmpty(Container.PluginName)">Conditional</animation>
-					</control>
-					<control id="20" type="togglebutton">
-						<left>247</left>
-						<width>249</width>
-						<height>100</height>
-						<onleft>2002</onleft>
-						<onright>50</onright>
-						<onup>50</onup>
-						<ondown condition="Control.IsVisible(16)">16</ondown>
-						<ondown condition="!Control.IsVisible(16)">2005</ondown>
-						<onclick>SetFocus(50)</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31090]</label>
-						<wrapmultiline>true</wrapmultiline>
-						<altlabel>$LOCALIZE[31091]</altlabel>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<usealttexture>Library.IsScanningMusic</usealttexture>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
-						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
-						<visible>String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
-					</control>
-					<control id="16" type="button">
-						<left>247</left>
-						<top>110</top>
-						<width>249</width>
-						<height>100</height>
-						<onleft condition="!Skin.HasSetting(EmbyHideUpdateButton)">2004</onleft>
-						<onleft condition="Skin.HasSetting(EmbyHideUpdateButton)">2002</onleft>
-						<onright>50</onright>
-						<onup>20</onup>
-						<ondown condition="!Skin.HasSetting(EmbyHideUpdateButton)">noop</ondown>
-						<ondown condition="Skin.HasSetting(EmbyHideUpdateButton) + Control.IsVisible(2005)">2005</ondown>
-						<font>Med24</font>
-						<onclick>SetFocus(50)</onclick>
-						<wrapmultiline>true</wrapmultiline>
-						<label>$LOCALIZE[31163]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>String.IsEmpty(Container.PluginName)</visible>						
-						<animation effect="slide" time="0" end="0,-110" condition="Skin.HasSetting(EmbyHideUpdateButton)">Conditional</animation>
-					</control>
-					<control id="2005" type="button">
-						<left>247</left>
-						<top>110</top>
-						<width>249</width>
-						<height>100</height>
-						<onleft condition="!Control.IsVisible(16) | [Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)]">2004</onleft>
-						<onright>50</onright>
-						<onup condition="Control.IsVisible(16) + !Skin.HasSetting(EmbyHideUpdateButton)">2004</onup>
-						<onup condition="Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)">16</onup>
-						<onup condition="!Control.IsVisible(16) + !Skin.HasSetting(EmbyHideUpdateButton)">20</onup>
-						<onup condition="!Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)">16</onup>
-						<ondown>noop</ondown>
-						<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
-						<font>Med24</font>
-						<wrapmultiline>true</wrapmultiline>
-						<label>$LOCALIZE[31088]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<animation effect="slide" time="0" end="-247,110" condition="String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)">Conditional</animation>
-						<animation effect="slide" time="0" end="0,-110" condition="!String.IsEmpty(Container.PluginName)">Conditional</animation>
-					</control>
+				<control type="panel" id="2002">
+					<width>600</width>
+					<height>350</height>
+					<onright>54</onright>
+					<ondown>noop</ondown>
+					<onup>noop</onup>
+					<onleft>noop</onleft>
+					<onback>50</onback>
+					<defaultcontrol always="true">0</defaultcontrol>
+					<orientation>vertical</orientation>
+					<itemlayout width="247" height="110">
+						<control type="group">
+							<control type="image">
+								<width>249</width>
+								<height>100</height>
+								<texture border="13,3,6,6">views/button_nf.png</texture>
+							</control>
+							<control type="textbox">
+								<top>-1</top>
+								<left>28</left>
+								<width>199</width>
+								<height>100</height>
+								<aligny>center</aligny>
+								<font>Med24</font>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ffdadada</textcolor>
+								<autoscroll>false</autoscroll>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="247" height="110">
+						<control type="group">
+							<visible>!Control.HasFocus(2002)</visible>
+							<control type="image">
+								<width>249</width>
+								<height>100</height>
+								<texture border="13,3,6,6">views/button_nf.png</texture>
+							</control>
+							<control type="textbox">
+								<top>-1</top>
+								<left>28</left>
+								<width>199</width>
+								<height>100</height>
+								<aligny>center</aligny>
+								<font>Med24</font>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ffdadada</textcolor>
+								<autoscroll>false</autoscroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Control.HasFocus(2002)</visible>
+							<control type="image">
+								<width>249</width>
+								<height>100</height>
+								<texture border="13,3,6,6">views/button_fo.png</texture>
+							</control>
+							<control type="textbox">
+								<top>-1</top>
+								<left>28</left>
+								<width>199</width>
+								<height>100</height>
+								<aligny>center</aligny>
+								<font>Med24</font>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ff222222</textcolor>
+								<autoscroll>false</autoscroll>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$VAR[MusicType]Information</label>
+							<onclick>SetFocus(50)</onclick>
+							<onclick>Info</onclick>
+							<onclick>SetProperty(OpenMusicInformation,1,home)</onclick>
+							<visible>String.IsEmpty(Container.PluginName) + !ListItem.IsParentFolder</visible>
+						</item>
+						<item>
+							<label>$INFO[Control.GetLabel(20)]</label>
+							<onclick>SendClick(20)</onclick>
+							<visible>String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31089]</label>
+							<onclick>SetFocus(5001)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31163]</label>
+							<onclick>SendClick(16)</onclick>							
+							<visible>String.IsEmpty(Container.PluginName)</visible>			
+						</item>
+						<item>
+							<label>$LOCALIZE[31088]</label>
+							<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
+							<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
+						</item>
+					</content>
 				</control>
 			</control>
 		</control>
