@@ -383,7 +383,7 @@
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<visible>Control.IsEnabled(20)</visible>
+						<visible>Control.IsEnabled(20) + String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
 						<usealttexture>Library.IsScanningVideo</usealttexture>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
@@ -734,7 +734,7 @@
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<visible>Control.IsEnabled(20) + String.IsEmpty(Container.PluginName)</visible>
+						<visible>Control.IsEnabled(20) + String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
 						<usealttexture>Library.IsScanningVideo</usealttexture>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>

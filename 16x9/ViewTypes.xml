@@ -883,7 +883,8 @@
 						<width>249</width>
 						<height>100</height>
 						<onleft>Back</onleft>
-						<onright>20</onright>
+						<onright condition="!Skin.HasSetting(EmbyHideUpdateButton)">20</onright>
+						<onright condition="Skin.HasSetting(EmbyHideUpdateButton)">16</onright>
 						<onup>50</onup>
 						<ondown>2004</ondown>
 						<onclick>SetFocus(50)</onclick>
@@ -905,9 +906,10 @@
 						<height>100</height>
 						<onleft>2003</onleft>
 						<onright condition="!Control.IsVisible(16)">2005</onright>
-						<onright condition="Control.IsVisible(16)">16</onright>
+						<onright condition="Control.IsVisible(16) + !Skin.HasSetting(EmbyHideUpdateButton)">16</onright>
+						<onright condition="Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)">2005</onright>
 						<onup>2002</onup>
-						<ondown condition="Control.IsVisible(16)">2005</ondown>
+						<ondown condition="Control.IsVisible(16)+ !Skin.HasSetting(EmbyHideUpdateButton)">2005</ondown>
 						<onclick>SetFocus(5001)</onclick>
 						<font>Med24</font>
 						<wrapmultiline>true</wrapmultiline>
@@ -941,17 +943,19 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
 						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
-						<visible>String.IsEmpty(Container.PluginName)</visible>						
+						<visible>String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
 					</control>
 					<control id="16" type="button">
 						<left>247</left>
 						<top>110</top>
 						<width>249</width>
 						<height>100</height>
-						<onleft>2004</onleft>
+						<onleft condition="!Skin.HasSetting(EmbyHideUpdateButton)">2004</onleft>
+						<onleft condition="Skin.HasSetting(EmbyHideUpdateButton)">2002</onleft>
 						<onright>50</onright>
 						<onup>20</onup>
-						<ondown>noop</ondown>
+						<ondown condition="!Skin.HasSetting(EmbyHideUpdateButton)">noop</ondown>
+						<ondown condition="Skin.HasSetting(EmbyHideUpdateButton) + Control.IsVisible(2005)">2005</ondown>
 						<font>Med24</font>
 						<onclick>SetFocus(50)</onclick>
 						<wrapmultiline>true</wrapmultiline>
@@ -961,17 +965,20 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>String.IsEmpty(Container.PluginName)</visible>
+						<visible>String.IsEmpty(Container.PluginName)</visible>						
+						<animation effect="slide" time="0" end="0,-110" condition="Skin.HasSetting(EmbyHideUpdateButton)">Conditional</animation>
 					</control>
 					<control id="2005" type="button">
 						<left>247</left>
 						<top>110</top>
 						<width>249</width>
 						<height>100</height>
-						<onleft condition="!Control.IsVisible(16)">2004</onleft>
+						<onleft condition="!Control.IsVisible(16) | [Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)]">2004</onleft>
 						<onright>50</onright>
-						<onup condition="Control.IsVisible(16)">2004</onup>
-						<onup condition="!Control.IsVisible(16)">20</onup>
+						<onup condition="Control.IsVisible(16) + !Skin.HasSetting(EmbyHideUpdateButton)">2004</onup>
+						<onup condition="Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)">16</onup>
+						<onup condition="!Control.IsVisible(16) + !Skin.HasSetting(EmbyHideUpdateButton)">20</onup>
+						<onup condition="!Control.IsVisible(16) + Skin.HasSetting(EmbyHideUpdateButton)">16</onup>
 						<ondown>noop</ondown>
 						<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
 						<font>Med24</font>
@@ -983,7 +990,7 @@
 						<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<animation effect="slide" time="0" end="-247,110" condition="String.IsEmpty(Container.PluginName)">Conditional</animation>
+						<animation effect="slide" time="0" end="-247,110" condition="String.IsEmpty(Container.PluginName) + !Skin.HasSetting(EmbyHideUpdateButton)">Conditional</animation>
 						<animation effect="slide" time="0" end="0,-110" condition="!String.IsEmpty(Container.PluginName)">Conditional</animation>
 					</control>
 				</control>

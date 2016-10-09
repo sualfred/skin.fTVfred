@@ -4,6 +4,10 @@
 	<include name="ParamHeight">
 		<height>$PARAM[height]</height>
 	</include>
+	<!-- Param Width -->
+	<include name="ParamWidth">
+		<width>$PARAM[width]</width>
+	</include>
 	<!-- Defaultcontrol -->
 	<include name="MoveDefaultControl">
 		<include content="ParamDefaultControl" condition="String.IsEqual(Skin.String(MenuDefaultControl),1)">
