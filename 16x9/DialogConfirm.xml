@@ -50,8 +50,8 @@
 				<width>716</width>
 				<height min="35" max="210">auto</height>
 				<font>Light28</font>
-				<textcolor>ff9d9d9d</textcolor>
-				<autoscroll>False</autoscroll>
+				<textcolor>ff9d9d9d</textcolor>				
+				<autoscroll delay="8000" repeat="12000" time="4000">True</autoscroll>
 			</control>
 			<!--  Progress -->
 			<control id="20" type="progress">
