@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-09-18 13:54+0000\n"
+"PO-Revision-Date: 2016-10-10 10:37+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1490,6 +1490,23 @@ msgstr "Es wurden bisher keine PVR Kanäle gefunden. Bitte warte bis der PVR Kli
 msgctxt "#31328"
 msgid "View[CR]TV channels"
 msgstr "Öffne[CR]TV Kanäle"
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31329"
+msgid "Unknown role"
+msgstr "Unbekannte Rolle"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31330"
+msgid "Hide 'update library' buttons"
+msgstr "Blende 'Bibliothek aktualisieren' Button aus"
+
+#: /16x9/Variables.xml
+msgctxt "#31331"
+msgid ""
+"Hides the 'update library' buttons in all libary windows. Useful if Emby is "
+"used as Kodi database replacement.[CR]Disabled by default."
+msgstr "Blendet den 'Bibliothek aktualisieren' Button in allen Datenbank Fenstern aus. Nützlich, falls Emby als Datenbankersatz genutzt wird.[CR]Standardmäßig deaktiviert."
 
 msgctxt "#31500"
 msgid "Widget Group 1"

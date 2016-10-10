@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-31 09:14+0000\n"
+"PO-Revision-Date: 2016-10-10 09:10+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: French (France) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -1186,10 +1186,10 @@ msgctxt "#31268"
 msgid "There are no results for this widget"
 msgstr "Il n'y a pas de résultats pour ce widget"
 
-#: /shortcuts/overrides.xml:55
+#: /16x9/script-skinshortcuts.xml
 msgctxt "#31269"
-msgid "Genres (Plugin based)"
-msgstr "Genres (via Plugin)"
+msgid "Focus on startup"
+msgstr ""
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
@@ -1484,6 +1484,28 @@ msgctxt "#31327"
 msgid ""
 "No PVR channels have been found yet. Please wait for the PVR clients to "
 "start up or check your PVR configuration."
+msgstr ""
+
+#: /16x9/MyPVRRecordings.xml
+msgctxt "#31328"
+msgid "View[CR]TV channels"
+msgstr ""
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31329"
+msgid "Unknown role"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31330"
+msgid "Hide 'update library' buttons"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31331"
+msgid ""
+"Hides the 'update library' buttons in all libary windows. Useful if Emby is "
+"used as Kodi database replacement.[CR]Disabled by default."
 msgstr ""
 
 msgctxt "#31500"
