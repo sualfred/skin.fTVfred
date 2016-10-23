@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-10 10:37+0000\n"
+"PO-Revision-Date: 2016-10-23 06:56+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1421,8 +1421,8 @@ msgstr "Willst du mehr wissen?"
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
-msgid "Press [B]DOWN[/B] to search online for the selected actor."
-msgstr "Drücke nach [B]UNTEN[/B] um online nach dem Darsteller zu suchen."
+msgid "Press [B]DOWN[/B] to search online for more information."
+msgstr "Drücke nach [B]UNTEN[/B] um online nach Informationen zu suchen."
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31316"
@@ -1507,6 +1507,26 @@ msgid ""
 "Hides the 'update library' buttons in all libary windows. Useful if Emby is "
 "used as Kodi database replacement.[CR]Disabled by default."
 msgstr "Blendet den 'Bibliothek aktualisieren' Button in allen Datenbank Fenstern aus. Nützlich, falls Emby als Datenbankersatz genutzt wird.[CR]Standardmäßig deaktiviert."
+
+#: /16x9/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31332"
+msgid "Press [B]SELECT[/B] to search online for more information."
+msgstr "Drücke [B]OK[/B] um online nach Informationen zu suchen."
+
+#: /16x9/MyVideoNav.xml
+msgctxt "#31333"
+msgid "Jump[CR]To Letter"
+msgstr "Springe[CR]zu Buchstabe"
+
+#: /16x9/Parameters.xml
+msgctxt "#31334"
+msgid "Jump to letter"
+msgstr "Springe zu Buchstabe"
+
+#: /16x9/Parameters.xml
+msgctxt "#31335"
+msgid "Select the desired initial letter"
+msgstr "Wähle den gewünschten Anfangsbuchstaben"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

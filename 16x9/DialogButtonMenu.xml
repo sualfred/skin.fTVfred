@@ -10,6 +10,7 @@
 	<onload>Control.Move(6000,$INFO[Container(6000).CurrentItem,-])</onload>
 	<onload>Control.Move(6000,1)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(PlayerControls))">SetFocus(6100)</onload>
+	<onunload condition="Window.IsVisible(musicplaylist)">SetFocus(50)</onunload>
 	<onunload>ClearProperty(PlayerControls,home)</onunload>
 	<controls>
 		<!-- Background -->
