@@ -220,7 +220,7 @@
 						<visible>String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control id="1010" type="button">
-						<width min="104" max="204">auto</width>
+						<width min="104" max="244">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
@@ -233,7 +233,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>Integer.IsGreater(Container.NumItems,20)</visible>
+						<visible>Integer.IsGreater(Container.NumItems,20) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
 					</control>
 					<control id="20" type="togglebutton">
 						<width min="104" max="224">auto</width>
@@ -545,5 +545,6 @@
 			</control>			
 			<include content="JumpToLetter" />
 		</control>
+		<include>SortLetterOverlay</include>
 	</controls>
 </window>
