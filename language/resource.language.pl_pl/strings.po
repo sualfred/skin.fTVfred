@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-10 09:10+0000\n"
+"PO-Revision-Date: 2016-10-23 09:37+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -1420,8 +1420,8 @@ msgstr "Czy chcesz wiedzieć więcej?"
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
-msgid "Press [B]DOWN[/B] to search online for the selected actor."
-msgstr "Naciśnij [B]DÓŁ[/B] by wyszukać więcej o wybranym aktorze online."
+msgid "Press [B]DOWN[/B] to search online for more information."
+msgstr ""
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31316"
@@ -1478,13 +1478,6 @@ msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
 msgstr ""
 
-#: /shortcuts/overrides.xml
-msgctxt "#31327"
-msgid ""
-"No PVR channels have been found yet. Please wait for the PVR clients to "
-"start up or check your PVR configuration."
-msgstr ""
-
 #: /16x9/MyPVRRecordings.xml
 msgctxt "#31328"
 msgid "View[CR]TV channels"
@@ -1505,6 +1498,26 @@ msgctxt "#31331"
 msgid ""
 "Hides the 'update library' buttons in all libary windows. Useful if Emby is "
 "used as Kodi database replacement.[CR]Disabled by default."
+msgstr ""
+
+#: /16x9/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31332"
+msgid "Press [B]SELECT[/B] to search online for more information."
+msgstr ""
+
+#: /16x9/MyVideoNav.xml
+msgctxt "#31333"
+msgid "Jump[CR]To Letter"
+msgstr ""
+
+#: /16x9/Parameters.xml
+msgctxt "#31334"
+msgid "Jump to letter"
+msgstr ""
+
+#: /16x9/Parameters.xml
+msgctxt "#31335"
+msgid "Select the desired initial letter"
 msgstr ""
 
 msgctxt "#31500"
