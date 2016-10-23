@@ -912,6 +912,16 @@
 				<scroll>true</scroll>
 				<label>$INFO[Container.FolderPath,[COLOR FF00FF00]Folder path - [/COLOR]]</label>
 			</control>
+			<control type="label">
+				<top>48</top>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>font13</font>
+				<align>right</align>
+				<scroll>true</scroll>
+				<label>$INFO[ListItem.FolderPath,[COLOR FF00FF00]ListItem path - [/COLOR]]</label>
+			</control>
 			<!-- Content label -->
 			<control type="label">
 				<top>48</top>

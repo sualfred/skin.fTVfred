@@ -31,8 +31,6 @@
 	<requiredshortcut label="$LOCALIZE[10004]">ActivateWindow(Settings)</requiredshortcut>
 	<requiredshortcut label="$LOCALIZE[137]">RunScript(script.globalsearch)</requiredshortcut>
 	<groupoverride group="shutdown" condition="true">Close</groupoverride>
-	<visibleoverride condition="PVR.HasTVChannels">RunScript(script.skin.helper.service,action=dialogok,header=$LOCALIZE[257],message=$LOCALIZE[31327])</visibleoverride>
-	<visibleoverride condition="System.HasPVRAddon">RunScript(script.skin.helper.service,action=dialogok,header=$LOCALIZE[257],message=$LOCALIZE[31327])</visibleoverride>
 	<visibleoverride condition="Library.HasContent(Movies)">ActivateWindow(Videos,Files,return)</visibleoverride>	
 	<visibleoverride condition="Library.HasContent(TVShows)">ActivateWindow(Videos,Files,return)</visibleoverride>
 	<override action="globaloverride" group="mainmenu">

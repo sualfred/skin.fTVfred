@@ -118,7 +118,7 @@
 					<onup condition="Control.IsVisible(96)">3002</onup>
 					<ondown>7001</ondown>
 					<onleft>Close</onleft>
-					<onright>50</onright>
+					<onright>9001</onright>
 					<onfocus>ClearProperty(Similar,home)</onfocus>
 					<font>Light35</font>
 					<textcolor>ffdadada</textcolor>
@@ -565,6 +565,7 @@
 						<visible>Control.IsEnabled(6)</visible>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<visible>!Skin.HasSetting(EmbyHideUpdateButton)</visible>
 					</control>
 					<!-- Get Thumb Button -->
 					<control id="10" type="button">
@@ -583,6 +584,7 @@
 						<visible>Control.IsEnabled(10)</visible>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<visible>!Skin.HasSetting(EmbyHideUpdateButton)</visible>
 					</control>
 					<!-- Artwork Downloader Button -->
 					<control id="20" type="button">
@@ -602,7 +604,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+						<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
 					</control>
 					<!-- Cinema Experience Button -->
 					<control id="21" type="button">

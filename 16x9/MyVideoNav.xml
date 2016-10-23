@@ -370,6 +370,22 @@
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
+					<control id="1006" type="button">
+						<width min="104" max="204">auto</width>
+						<wrapmultiline>true</wrapmultiline>
+						<height>100</height>
+						<onup>50</onup>
+						<ondown>3000</ondown>
+						<onclick>SetFocus(6000,0)</onclick>
+						<font>Med24</font>
+						<label>$LOCALIZE[31333]</label>
+						<textoffsetx>28</textoffsetx>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ff222222</focusedcolor>						
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>			
+						<visible>Integer.IsGreater(Container.NumItems,20)</visible>
+					</control>
 					<control id="20" type="togglebutton">
 						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
@@ -721,6 +737,22 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Container.Content(musicvideos)</visible>
 					</control>
+					<control id="1006" type="button">
+						<width min="104" max="204">auto</width>
+						<wrapmultiline>true</wrapmultiline>
+						<height>100</height>
+						<onup>50</onup>
+						<ondown>3000</ondown>
+						<onclick>SetFocus(6000,0)</onclick>
+						<font>Med24</font>
+						<label>$LOCALIZE[31333]</label>
+						<textoffsetx>28</textoffsetx>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ff222222</focusedcolor>						
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>			
+						<visible>Integer.IsGreater(Container.NumItems,20)</visible>
+					</control>
 					<control id="20" type="togglebutton">
 						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
@@ -785,7 +817,7 @@
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>dialogs/DialogBackground.png</texture>
-				<visible>ControlGroup(5000).HasFocus</visible>
+				<visible>ControlGroup(5000).HasFocus | Control.HasFocus(6000)</visible>
 				<animation effect="fade" end="100" start="0" time="120" tween="sine" easing="inout">Visible</animation>
 				<animation delay="100" effect="fade" end="0" start="100" time="200" tween="sine" easing="inout">Hidden</animation>
 			</control>
@@ -1049,6 +1081,7 @@
 					</control>
 				</control>
 			</control>
+			<include content="JumpToLetter" />
 		</control>
 	</controls>
 </window>

@@ -1387,7 +1387,7 @@ msgstr ""
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
-msgid "Press [B]DOWN[/B] to search online for the selected actor."
+msgid "Press [B]DOWN[/B] to search online for more information."
 msgstr ""
 
 #: /16x9/DialogMusicInfo.xml
@@ -1468,6 +1468,26 @@ msgstr ""
 #: /16x9/Variables.xml
 msgctxt "#31331"
 msgid "Hides the 'update library' buttons in all libary windows. Useful if Emby is used as Kodi database replacement.[CR]Disabled by default."
+msgstr ""
+
+#: /16x9/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31332"
+msgid "Press [B]SELECT[/B] to search online for more information."
+msgstr ""
+
+#: /16x9/MyVideoNav.xml
+msgctxt "#31333"
+msgid "Jump[CR]To Letter"
+msgstr ""
+
+#: /16x9/Parameters.xml
+msgctxt "#31334"
+msgid "Jump to letter"
+msgstr ""
+
+#: /16x9/Parameters.xml
+msgctxt "#31335"
+msgid "Select the desired initial letter"
 msgstr ""
 
 msgctxt "#31500"
