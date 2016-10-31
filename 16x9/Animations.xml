@@ -181,16 +181,16 @@
 	</include>
 	<!-- Home Widgets Animation -->
 	<include name="HomeWidgetsAnimation">
-		<animation condition="!Control.IsVisible(31) + !Control.IsVisible(32)" reversible="false" type="Visible">
+		<animation condition="!String.IsEmpty(Window(home).Property(ChangeAnimation)) | [!Control.IsVisible(31) + !Control.IsVisible(32)]" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation condition="Control.IsVisible(32)" reversible="false" type="Visible">
+		<animation condition="String.IsEmpty(Window(home).Property(ChangeAnimation)) + Control.IsVisible(32)" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,-40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
 		</animation>
-		<animation condition="Control.IsVisible(31)" reversible="false" type="Visible">
+		<animation condition="String.IsEmpty(Window(home).Property(ChangeAnimation)) + Control.IsVisible(31)" reversible="false" type="Visible">
 			<effect center="960,540" delay="280" easing="in" end="100" start="98" time="180" tween="sine" type="zoom" />
 			<effect delay="280" easing="in" end="0,0" start="0,40" time="180" tween="sine" type="slide" />
 			<effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade" />
