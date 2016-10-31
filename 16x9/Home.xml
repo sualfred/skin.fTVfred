@@ -207,6 +207,8 @@
 					<control type="button">
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
+						<onfocus condition="!Control.IsVisible(91) + !String.IsEmpty(Window(home).Property(Preload))">ClearProperty(Preload,home)</onfocus>
+						<onfocus condition="!Control.IsVisible(91) + String.IsEmpty(Window(home).Property(PreloadDone))">SetProperty(PreloadDone,1,home)</onfocus>
 						<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 						<onfocus>SetProperty(MainMenuFocus,1,home)</onfocus>
 						<onfocus>ClearProperty(Fade,Home)</onfocus>
