@@ -81,6 +81,10 @@
 					<label>$VAR[SeasonValue]</label>
 					<visible>[Container.Content(artists) | Container.Content(seasons)] + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
+				<include content="ParamProgress">
+					<param name="width">640</param>
+					<param name="OverlayWatched">false</param>
+				</include>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -172,6 +176,10 @@
 					<label>$VAR[SeasonValue]</label>
 					<visible>[Container.Content(artists) | Container.Content(seasons)] + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
+				<include content="ParamProgress">
+					<param name="width">640</param>
+					<param name="OverlayWatched">false</param>
+				</include>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -211,6 +219,10 @@
 					<height>576</height>
 					<texture border="66,66,51,51">views/shadow_nf.png</texture>
 				</control>
+				<include content="ParamProgress">
+					<param name="width">320</param>
+					<param name="OverlayWatched">false</param>
+				</include>
 				<control type="image">
 					<top>48</top>
 					<width>320</width>
@@ -269,6 +281,10 @@
 					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
 					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
+				<include content="ParamProgress">
+					<param name="width">320</param>
+					<param name="OverlayWatched">false</param>
+				</include>
 				<control type="image">
 					<top>48</top>
 					<width>320</width>
@@ -764,9 +780,6 @@
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
-				<include content="ParamProgress">
-					<param name="width">640</param>
-				</include>
 				<control type="image">
 					<left>-48</left>
 					<centertop>288</centertop>
@@ -785,6 +798,9 @@
 					<label>$VAR[EpisodeValue]</label>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
+				<include content="ParamProgress">
+					<param name="width">640</param>
+				</include>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -844,9 +860,6 @@
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
-				<include content="ParamProgress">
-					<param name="width">640</param>
-				</include>
 				<control type="image">
 					<left>-48</left>
 					<centertop>288</centertop>
@@ -914,6 +927,9 @@
 					<animation condition="[Control.HasFocus($PARAM[ID]) + !String.IsEmpty(Window(home).Property(WindowOpen))] | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" effect="fade" end="0" start="100" time="0">UnFocus</animation>
 					<animation condition="[Control.HasFocus($PARAM[ID]) + !String.IsEmpty(Window(home).Property(WindowOpen))] | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
 				</control>
+				<include content="ParamProgress">
+					<param name="width">640</param>
+				</include>
 				<control type="image">
 					<top>48</top>
 					<width>640</width>
@@ -1224,7 +1240,7 @@
 					<animation condition="[Control.HasFocus($PARAM[ID]) + !String.IsEmpty(Window(home).Property(WindowOpen))] | Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious" delay="560" easing="inout" effect="slide" end="0,0" reversible="false" start="0,-21" time="220" tween="sine">Focus</animation>
 				</control>
 				<control type="progress">
-					<top>515</top>
+					<top>516</top>
 					<width>480</width>
 					<height>12</height>
 					<texturebg border="2">views/ProgressBack.png</texturebg>

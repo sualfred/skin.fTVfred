@@ -380,25 +380,31 @@
 	</include>
 	<!-- ViewType progress -->
 	<include name="ParamProgress">
-		<control type="progress">
-			<top>515</top>
-			<width>$PARAM[width]</width>
-			<height>12</height>
-			<info>ListItem.PercentPlayed</info>
-			<texturebg border="2">views/ProgressBack.png</texturebg>
-			<lefttexture>-</lefttexture>
-			<midtexture border="2">views/ProgressBar.png</midtexture>
-			<righttexture>-</righttexture>
-			<overlaytexture>-</overlaytexture>
-			<visible>ListItem.IsResumable</visible>
-		</control>
-		<control type="image">
-			<top>515</top>
-			<width>$PARAM[width]</width>
-			<height>12</height>
-			<texture border="2">views/ProgressBar.png</texture>
-			<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
-		</control>
+		<param name="OverlayWatched" default="true" />		
+		<definition>			
+			<control type="progress">
+				<top>516</top>
+				<width>$PARAM[width]</width>
+				<height>12</height>
+				<info>ListItem.PercentPlayed</info>
+				<texturebg border="2">views/ProgressBack.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">views/ProgressBar.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>ListItem.IsResumable</visible>
+			</control>
+			<control type="group">
+				<visible>$PARAM[OverlayWatched]</visible>
+				<control type="image">
+					<top>516</top>
+					<width>$PARAM[width]</width>
+					<height>12</height>
+					<texture border="2">views/ProgressBar.png</texture>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+				</control>
+			</control>
+		</definition>
 	</include>
 	<!-- Reset Parameters -->
 	<include name="ResetAllWidgets">		
