@@ -11,7 +11,7 @@
         <control type="image">
             <include>FullscreenDimensions</include>
             <texture>special://skin/extras/backgrounds/default.png</texture>
-            <animation effect="fade" time="0" start="100" end="95" condition="VideoPlayer.Content(livetv)">Conditional</animation>
+            <animation effect="fade" time="0" start="100" end="93" condition="VideoPlayer.Content(livetv)">Conditional</animation>
         </control>
         <control type="group">
             <!-- Fanart -->
