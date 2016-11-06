@@ -139,7 +139,7 @@
 				<fadetime>400</fadetime>
 				<colordiffuse>0effffff</colordiffuse>
 				<texture background="true">$VAR[Fanart]</texture>
-				<visible>!VideoPlayer.Content(livetv)</visible>
+				<visible>!Window.Previous(fullscreenvideo)</visible>
 			</control>
 		</control>
 	</include>
