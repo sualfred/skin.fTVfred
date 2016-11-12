@@ -812,7 +812,7 @@
 		</control>
 		<control type="image">
 			<left>78</left>
-			<top>193</top>
+			<top>192</top>
 			<width>257</width>
 			<height>101</height>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
