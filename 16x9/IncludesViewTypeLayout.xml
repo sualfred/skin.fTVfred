@@ -50,7 +50,7 @@
 					<top>328</top>
 					<width>400</width>
 					<height>155</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<visible>!String.IsEqual(ListItem.Label,..) + String.IsEmpty(ListItem.Art(ftv))</visible>
 				</control>
@@ -134,7 +134,7 @@
 					<top>328</top>
 					<width>400</width>
 					<height>155</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<visible>!String.IsEqual(ListItem.Label,..) + String.IsEmpty(ListItem.Art(ftv))</visible>
 				</control>
@@ -768,7 +768,7 @@
 					<top>328</top>
 					<width>400</width>
 					<height>155</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>
 				<control type="image">
@@ -848,7 +848,7 @@
 					<top>328</top>
 					<width>400</width>
 					<height>155</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>
 				<control type="image">
@@ -1275,7 +1275,7 @@
 			</control>
 			<control type="label">
 				<left>90</left>
-				<width>220</width>
+				<width>230</width>
 				<aligny>center</aligny>
 				<height>67</height>
 				<textcolor>ff5b6064</textcolor>
@@ -1362,7 +1362,7 @@
 			</control>
 			<control type="label">
 				<left>90</left>
-				<width>220</width>
+				<width>230</width>
 				<scroll>false</scroll>
 				<aligny>center</aligny>
 				<height>67</height>
@@ -1373,7 +1373,7 @@
 			</control>
 			<control type="label">
 				<left>90</left>
-				<width>220</width>
+				<width>230</width>
 				<scroll>false</scroll>
 				<aligny>center</aligny>
 				<height>67</height>

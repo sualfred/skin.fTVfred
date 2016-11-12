@@ -815,7 +815,7 @@
 			<top>193</top>
 			<width>257</width>
 			<height>101</height>
-			<aspectratio align="center" aligny="top">keep</aspectratio>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Property(ArtLogo$PARAM[ID])]</texture>
 			<visible>String.IsEmpty(ListItem.Property(ArtFTV$PARAM[ID])) + !String.IsEmpty(ListItem.Property(ArtFanart$PARAM[ID]))</visible>
 		</control>
