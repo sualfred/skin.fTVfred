@@ -279,7 +279,7 @@
 				<label>$LOCALIZE[31128]</label>
 				<textcolor>ffdadada</textcolor>
 			</control>
-			<control id="100" type="grouplist">
+			<control id="1000" type="grouplist">
 				<top>60</top>
 				<width>479</width>
 				<height>420</height>
@@ -362,6 +362,19 @@
 					<aligny>center</aligny>
 					<font>Light30Spaced</font>
 					<label>13277</label>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+				</control>
+				<control id="100" type="button">
+					<height>84</height>
+					<width>479</width>
+					<textoffsetx>40</textoffsetx>
+					<textwidth>576</textwidth>
+					<aligny>center</aligny>
+					<font>Light30Spaced</font>
+					<label>12389</label>
 					<textcolor>ff505153</textcolor>
 					<focusedcolor>ffffaf37</focusedcolor>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
@@ -490,6 +503,18 @@
 				<animation delay="100" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 				<animation effect="fade" end="0" start="100" time="0">WindowClose</animation>
 				<visible>Control.HasFocus(101)</visible>
+			</control>
+			<control type="textbox" id="30">
+				<left>501</left>
+				<top>22</top>
+				<width>889</width>
+				<height>434</height>
+				<font>Med24CR</font>
+				<aligny>top</aligny>
+				<textcolor>ffdadada</textcolor>
+				<animation delay="100" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<animation effect="fade" end="0" start="100" time="0">WindowClose</animation>
+				<visible>Control.HasFocus(100)</visible>
 			</control>
 		</control>
 		<!-- Hidden labels -->
