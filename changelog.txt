@@ -1,5 +1,8 @@
 Changelog:
 
+3.3.1
+- Merged GitHub version to repo with a lot of small minor adjustments
+
 3.3.0a
 - Fixed startup loop for fresh installations and a rare scenario
 - Adjusted forgotten NextAired animations
