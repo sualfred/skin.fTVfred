@@ -742,7 +742,6 @@
 				<animation condition="[!system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,1)] | [system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,0)]" effect="slide" end="0,-101" start="0,0">Conditional</animation>
 				<itemlayout height="101" width="1000">
 					<control type="group">
-						<animation effect="fade" time="300" easing="inout" tween="sine" start="100" end="65" condition="!Control.HasFocus(54)">Conditional</animation>
 						<control type="label">
 							<width>68</width>
 							<height>31</height>
@@ -762,23 +761,47 @@
 							<texture>views/equaliser.gif</texture>
 							<visible>Player.Playing + String.IsEqual(MusicPlayer.Title,ListItem.Title)</visible>
 						</control>
-						<control type="label">
-							<left>89</left>
-							<width>892</width>
-							<height>31</height>
-							<font>Light32</font>
-							<textcolor>ffd8d8d8</textcolor>
-							<label>$INFO[ListItem.Title]</label>
-							<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
+						<control type="group">
+							<visible>!Control.HasFocus(2002)</visible>
+							<control type="label">
+								<left>89</left>
+								<width>892</width>
+								<height>31</height>
+								<font>Light32</font>
+								<textcolor>ffd8d8d8</textcolor>
+								<label>$INFO[ListItem.Title]</label>
+								<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
+							</control>
+							<control type="label">
+								<left>89</left>
+								<width>892</width>
+								<height>31</height>
+								<font>Light32</font>
+								<textcolor>ffd8d8d8</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
+							</control>
 						</control>
-						<control type="label">
-							<left>89</left>
-							<width>892</width>
-							<height>31</height>
-							<font>Light32</font>
-							<textcolor>ffd8d8d8</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
+						<control type="group">
+							<visible>Control.HasFocus(2002)</visible>
+							<control type="label">
+								<left>89</left>
+								<width>892</width>
+								<height>31</height>
+								<font>Light32</font>
+								<textcolor>ff636466</textcolor>
+								<label>$INFO[ListItem.Title]</label>
+								<visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Title)</visible>
+							</control>
+							<control type="label">
+								<left>89</left>
+								<width>892</width>
+								<height>31</height>
+								<font>Light32</font>
+								<textcolor>ff636466</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Title)</visible>
+							</control>
 						</control>
 						<control type="label">
 							<left>89</left>
@@ -887,7 +910,7 @@
 					<ondown>back</ondown>
 					<onup>back</onup>
 					<onleft>back</onleft>
-					<onback>50</onback>
+					<onback>54</onback>
 					<defaultcontrol always="true">0</defaultcontrol>
 					<orientation>vertical</orientation>
 					<itemlayout width="247" height="110">
