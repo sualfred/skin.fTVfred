@@ -884,9 +884,9 @@
 					<width>600</width>
 					<height>350</height>
 					<onright>54</onright>
-					<ondown>noop</ondown>
-					<onup>noop</onup>
-					<onleft>noop</onleft>
+					<ondown>back</ondown>
+					<onup>back</onup>
+					<onleft>back</onleft>
 					<onback>50</onback>
 					<defaultcontrol always="true">0</defaultcontrol>
 					<orientation>vertical</orientation>
