@@ -361,7 +361,7 @@
 						<onleft>Back</onleft>
 						<onright>1000</onright>
 						<onclick>SetProperty(SettingsCurrentItem,7,settings)</onclick>
-						<onclick>ActivateWindow(settings)</onclick>
+						<onclick>ActivateWindow(servicesettings,weather)</onclick>
 						<texturefocus border="3">common/button_fo.png</texturefocus>
 						<texturenofocus border="3">common/button_nf.png</texturenofocus>
 					</control>
