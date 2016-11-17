@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-23 06:56+0000\n"
+"PO-Revision-Date: 2016-11-17 19:53+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1479,12 +1479,10 @@ msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
 msgstr "Lade [I]Startseite[/I] ..."
 
-#: /shortcuts/overrides.xml
+#: /16x9/SkinSettings.xml
 msgctxt "#31327"
-msgid ""
-"No PVR channels have been found yet. Please wait for the PVR clients to "
-"start up or check your PVR configuration."
-msgstr "Es wurden bisher keine PVR Kanäle gefunden. Bitte warte bis der PVR Klient gestaret ist or überprüfe deine Einstellungen."
+msgid "Enable PVR Fanart"
+msgstr "PVR Fanart aktivieren"
 
 #: /16x9/MyPVRRecordings.xml
 msgctxt "#31328"
@@ -1527,6 +1525,11 @@ msgstr "Springe zu Buchstabe"
 msgctxt "#31335"
 msgid "Select the desired initial letter"
 msgstr "Wähle den gewünschten Anfangsbuchstaben"
+
+#: /16x9/Variables.xml
+msgctxt "#31336"
+msgid "Downloads thumbnails and fanarts of your PVR items and recordings."
+msgstr "Aktiviert den Download von Thumbnails und Fanarts für PVR Kanäle und Aufnahmen."
 
 msgctxt "#31500"
 msgid "Widget Group 1"

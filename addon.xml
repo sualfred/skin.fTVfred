@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.1"
+	version="3.3.2"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,8 +34,10 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.1[/B]
-- Merged GitHub version to repo with a lot of small minor adjustments
+[B]3.3.2[/B]
+- Readded PVR artwork support for recordings
+- Fixed and moved PVR artwork setting to a own settings entry
+- Fixed small bugs
 
 See changelog.txt for more details.</news>
 	</extension>
