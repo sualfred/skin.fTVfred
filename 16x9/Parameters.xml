@@ -473,8 +473,7 @@
 	<!-- Widget Layout Include -->
 	<include name="ParamWidgetLayout">
 		<item>
-			<label fallback="31161">$VAR[WidgetStyleLabel-$PARAM[Pos]]</label>
-			<label2>$LOCALIZE[31203]</label2>
+			<label fallback="31203">$VAR[WidgetStyleLabel-$PARAM[Pos]]</label>
 			<onclick>SetProperty(Dialog.NumItems,$PARAM[Pos])</onclick>
 			<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
 			<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-$PARAM[Pos]],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-$PARAM[Pos]],$LOCALIZE[31159]))</onclick>
