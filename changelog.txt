@@ -1,5 +1,10 @@
 Changelog:
 
+3.3.2
+- Readded PVR artwork support for recordings
+- Fixed and moved PVR artwork setting to a own settings entry
+- Fixed small bugs
+
 3.3.1
 - Merged GitHub version to repo with a lot of small minor adjustments
 
