@@ -503,6 +503,12 @@
 			<property name="InfoLabel4">$INFO[Container($PARAM[ID]).ListItemPosition(3).Label]</property>
 			<property name="InfoLabel5">$INFO[Container($PARAM[ID]).ListItemPosition(4).Label]</property>
 			<property name="InfoLabel6">$INFO[Container($PARAM[ID]).ListItemPosition(5).Label]</property>
+			<property name="ChannelLabel1">$INFO[Container($PARAM[ID]).ListItemPosition(0).ChannelName]</property>
+			<property name="ChannelLabel2">$INFO[Container($PARAM[ID]).ListItemPosition(1).ChannelName]</property>
+			<property name="ChannelLabel3">$INFO[Container($PARAM[ID]).ListItemPosition(2).ChannelName]</property>
+			<property name="ChannelLabel4">$INFO[Container($PARAM[ID]).ListItemPosition(3).ChannelName]</property>
+			<property name="ChannelLabel5">$INFO[Container($PARAM[ID]).ListItemPosition(4).ChannelName]</property>
+			<property name="ChannelLabel6">$INFO[Container($PARAM[ID]).ListItemPosition(5).ChannelName]</property>
 			<property name="Overlay1">$INFO[Container($PARAM[ID]).ListItemPosition(0).Overlay]</property>
 			<property name="Overlay2">$INFO[Container($PARAM[ID]).ListItemPosition(1).Overlay]</property>
 			<property name="Overlay3">$INFO[Container($PARAM[ID]).ListItemPosition(2).Overlay]</property>
