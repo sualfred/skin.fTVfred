@@ -20,7 +20,7 @@
 				<colordiffuse>26ffffff</colordiffuse>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(100).Listitem.Title]&amp;channel=$INFO[Container(100).ListItem.ChannelName]&amp;type=fanart</texture>
-				<visible>Skin.HasSetting(EnableFanart)</visible>
+				<visible>Skin.HasSetting(EnableFanart) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 			</control>
 		</control>
 		<!-- Channels -->

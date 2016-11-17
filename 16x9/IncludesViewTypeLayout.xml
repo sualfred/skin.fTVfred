@@ -37,6 +37,7 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/episode_fallback.png">$VAR[TVShowWideImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
 					<top>48</top>
@@ -209,6 +210,15 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
+					<visible>!Window.IsActive(tvrecordings)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>320</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
@@ -260,6 +270,15 @@
 					<height>480</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture background="true" fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
+					<visible>!Window.IsActive(tvrecordings)</visible>
+				</control>
+				<control type="image">
+					<top>48</top>
+					<width>320</width>
+					<height>480</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
+					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<include>OverlayHD</include>
 				<include>OverlayWatched</include>
@@ -423,7 +442,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
+						<texture fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
 						<visible>Window.IsActive(tvrecordings)</visible>
 					</control>
 					<control type="image">
@@ -592,8 +611,8 @@
 						<width>576</width>
 						<height>576</height>
 						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -650,7 +669,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture background="true" fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
+						<texture fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
 						<visible>Window.IsActive(tvrecordings)</visible>
 					</control>
 					<control type="image">
@@ -676,8 +695,8 @@
 						<width>576</width>
 						<height>576</height>
 						<texture border="66,66,51,51">views/shadow_nf.png</texture>
-					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 					<control type="image">
 						<top>48</top>
@@ -957,8 +976,8 @@
 					<top>48</top>
 					<width>640</width>
 					<height>480</height>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true" fallback="views/wide_fallback.png">$VAR[WideImage]</texture>
+					<aspectratio align="center">scale</aspectratio>
+					<texture fallback="views/wide_fallback.png">$VAR[WideImage]</texture>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">
@@ -1033,8 +1052,8 @@
 					<top>48</top>
 					<width>640</width>
 					<height>480</height>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true" fallback="views/wide_fallback.png">$VAR[WideImage]</texture>
+					<aspectratio align="center">scale</aspectratio>
+					<texture fallback="views/wide_fallback.png">$VAR[WideImage]</texture>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="image">

@@ -16,7 +16,7 @@
         </control>
         <control type="group">
             <!-- Fanart -->
-            <include condition="Skin.HasSetting(EnableFanart)">PVRFanart</include>
+            <include condition="Skin.HasSetting(EnableFanart) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">PVRFanart</include>
             <visible>Control.IsVisible(10)</visible>
             <height>1080</height>
             <!-- Title -->

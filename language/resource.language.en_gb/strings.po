@@ -1445,6 +1445,11 @@ msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31327"
+msgid "Enable PVR Fanart"
+msgstr ""
+
 #: /16x9/MyPVRRecordings.xml
 msgctxt "#31328"
 msgid "View[CR]TV channels"
@@ -1483,6 +1488,11 @@ msgstr ""
 #: /16x9/Parameters.xml
 msgctxt "#31335"
 msgid "Select the desired initial letter"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31336"
+msgid "Downloads thumbnails and fanarts of your PVR items and recordings."
 msgstr ""
 
 msgctxt "#31500"

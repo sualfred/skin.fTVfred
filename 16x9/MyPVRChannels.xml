@@ -6,7 +6,7 @@
 	<views>59</views>
 	<controls>
 		<!-- Fanart -->
-		<include condition="Skin.HasSetting(EnableFanart)">PVRFanart</include>
+		<include condition="Skin.HasSetting(EnableFanart) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">PVRFanart</include>
 		<!-- Columns -->
 		<control type="group">
 			<left>198</left>
