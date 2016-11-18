@@ -146,7 +146,31 @@
 					<align>right</align>
 					<textcolor>fff3f3f3</textcolor>
 					<label>$INFO[System.Time]</label>
-					<visible>!Window.IsVisible(fullscreeninfo)</visible>
+					<visible>!Window.IsVisible(fullscreeninfo) + Player.HasAudio</visible>
+				</control>
+				<!--Xray Icon-->
+				<control id="99" type="grouplist">
+					<visible>!Window.IsVisible(fullscreeninfo) + Player.HasVideo</visible>
+					<right>92</right>
+					<bottom>40</bottom>
+					<height>40</height>
+					<itemgap>10</itemgap>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control id="99" type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>    $LOCALIZE[33063]</label>
+					</control>
+					<control id="99" type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/select.png</texture>
+					</control>
 				</control>
 			</control>
 			<control type="group">
@@ -247,17 +271,29 @@
 						<label>$VAR[PlayerResolution]</label>
 					</control>
 				</control>
-				<!--  Current time -->
-				<control id="99" type="label">
-					<right>92</right>
-					<bottom>45</bottom>
-					<width>800</width>
-					<height>30</height>
-					<font>Reg27</font>
-					<align>right</align>
-					<textcolor>fff3f3f3</textcolor>
-					<label>$INFO[System.Time]</label>
+				<!--Xray Icon-->
+				<control id="99" type="grouplist">
 					<visible>!Window.IsVisible(fullscreeninfo)</visible>
+					<right>92</right>
+					<bottom>40</bottom>
+					<height>40</height>
+					<itemgap>10</itemgap>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control id="99" type="label">
+						<top>4</top>
+						<width>auto</width>
+						<height>30</height>
+						<font>Reg27</font>
+						<textcolor>fff3f3f3</textcolor>
+						<label>    $LOCALIZE[33063]</label>
+					</control>
+					<control id="99" type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>osd/select.png</texture>
+					</control>
 				</control>
 			</control>
 			<control type="group">

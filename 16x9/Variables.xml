@@ -3989,6 +3989,12 @@
 		<value condition="String.EndsWith(VideoPlayer.Episode,s398)"> $LOCALIZE[31146], $LOCALIZE[20359] 398</value>
 		<value condition="String.EndsWith(VideoPlayer.Episode,s399)"> $LOCALIZE[31146], $LOCALIZE[20359] 399</value>
 	</variable>
+	<variable name="PlayerTitleImage">
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Cover)">$INFO[VideoPlayer.Cover]</value>
+		<value condition="VideoPlayer.Content(livetv)">views/pvr_fallback.png</value>
+		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
+	</variable>
 	<variable name="PlayerFullLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title, - ]</value>
@@ -3997,14 +4003,17 @@
 	</variable>
 	<variable name="PlayerBigLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="PlayerSmallLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, / ,]</value>
-		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>
+
+		<value condition="VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Title)">$LOCALIZE[195]</value>
+		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(movies)">$LOCALIZE[20338]</value>
 	</variable>
 	<variable name="EpisodeValue">
 		<value condition="String.IsEqual(ListItem.DBID,-1)">$INFO[ListItem.Label]</value>

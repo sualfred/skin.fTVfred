@@ -511,44 +511,121 @@
 	</include>
 	<!-- Player Titles -->
 	<include name="PlayerTitles">
-		<control id="99" type="grouplist">
-			<left>20</left>
-			<top>64</top>
-			<width>1880</width>
-			<height>50</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<!--  Title -->
-			<control id="99" type="label">
-				<width>auto</width>
+		<control id="99" type="group">
+			<visible>Player.HasAudio</visible>
+			<control id="99" type="grouplist">
+				<left>20</left>
+				<top>64</top>
+				<width>1880</width>
 				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffeaeaea</textcolor>
-				<shadowcolor>ff000000</shadowcolor>
-				<label>$VAR[PlayerBigLabel]</label>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<!--  Title -->
+				<control id="99" type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffeaeaea</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$VAR[PlayerBigLabel]</label>
+				</control>
+				<!-- Season/Episode number -->
+				<control id="99" type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffeaeaea</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$VAR[PlayerEpisodeValue]</label>
+				</control>
 			</control>
-			<!-- Season/Episode number -->
+			<!--  Small label -->
 			<control id="99" type="label">
-				<width>auto</width>
-				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffeaeaea</textcolor>
+				<left>20</left>
+				<top>127</top>
+				<width>1880</width>
+				<height>40</height>
+				<align>center</align>
+				<font>Light36</font>
+				<textcolor>fffe8e8e8</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
-				<label>$VAR[PlayerEpisodeValue]</label>
+				<label>$VAR[PlayerSmallLabel]</label>
 			</control>
 		</control>
-		<!--  Small label -->
-		<control id="99" type="label">
-			<left>20</left>
-			<top>127</top>
-			<width>1880</width>
-			<height>40</height>
-			<align>center</align>
-			<font>Light36</font>
-			<textcolor>fffe8e8e8</textcolor>
-			<shadowcolor>ff000000</shadowcolor>
-			<label>$VAR[PlayerSmallLabel]</label>
+		<control id="99" type="group">
+			<visible>Player.HasVideo</visible>
+			<control id="99" type="group">
+				<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo)) | [!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)]</visible>
+				<control id="99" type="image">
+					<left>90</left>
+					<top>64</top>
+					<width>164</width>
+					<height>109</height>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+					<texture background="true">$VAR[PlayerTitleImage]</texture>
+					<visible>!VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control id="99" type="image">
+					<left>90</left>
+					<top>64</top>
+					<width>109</width>
+					<height>109</height>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+					<texture background="true">$VAR[PlayerTitleImage]</texture>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control id="99" type="image">
+					<left>274</left>
+					<top>64</top>
+					<width>8</width>
+					<height>109</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>common/WhiteLine.png</texture>
+					<colordiffuse>ffeaeaea</colordiffuse>
+					<animation effect="slide" time="0" start="0,0" end="-55,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
+				</control>
+			</control>
+			<control id="99" type="group">
+				<animation effect="slide" time="0" start="0,0" end="-200,0" condition="![!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo)) | [!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)]]">Conditional</animation>
+				<animation effect="slide" time="0" start="0,0" end="-55,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
+				<!--  Title -->
+				<control id="99" type="label">
+					<left>294</left>
+					<top>64</top>
+					<width>1300</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Med40</font>
+					<textcolor>ffeaeaea</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$VAR[PlayerBigLabel]$VAR[PlayerEpisodeValue, ]</label>
+				</control>
+				<!--  Small label -->
+				<control id="99" type="label">
+					<left>294</left>
+					<top>127</top>
+					<width>1300</width>
+					<height>40</height>
+					<align>left</align>
+					<font>Light36</font>
+					<textcolor>fffe8e8e8</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$VAR[PlayerSmallLabel]</label>
+				</control>
+			</control>			
+			<!-- Clock -->	
+			<control id="99" type="label">
+				<right>90</right>
+				<top>64</top>
+				<width>500</width>
+				<height>50</height>
+				<font>Light32</font>
+				<textcolor>ffeaeaea</textcolor>
+				<shadowcolor>ff000000</shadowcolor>
+				<align>right</align>
+				<label>$INFO[System.Time]</label>
+			</control>
 		</control>
 	</include>
 </includes>
