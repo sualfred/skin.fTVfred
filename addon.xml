@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.2"
+	version="3.3.3"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,10 +34,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.2[/B]
-- Readded PVR artwork support for recordings
-- Fixed and moved PVR artwork setting to a own settings entry
-- Fixed small bugs
+[B]3.3.3[/B]
+- Fixed Wide viewtype
+- Changed player title label layout
 
 See changelog.txt for more details.</news>
 	</extension>
