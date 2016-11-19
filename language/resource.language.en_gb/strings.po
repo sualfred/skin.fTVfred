@@ -55,8 +55,8 @@ msgid "Artwork Downloader"
 msgstr "Artwork Downloader"
 
 msgctxt "#31104"
-msgid "Cinema Experience"
-msgstr "Cinema Experience"
+msgid "Cinemavision"
+msgstr "Cinemavision"
 
 msgctxt "#31000"
 msgid "Audio Options"
@@ -434,10 +434,6 @@ msgstr ""
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
 msgstr "Hide 'Mouse' warning"
-
-msgctxt "#31066"
-msgid "Cinema Exp."
-msgstr "Cinema Exp."
 
 msgctxt "#31105"
 msgid "Your Addons"

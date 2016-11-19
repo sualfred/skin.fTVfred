@@ -559,10 +559,10 @@
 				<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo)) | [!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)]</visible>
 				<control id="99" type="image">
 					<left>90</left>
-					<top>64</top>
+					<top>76</top>
 					<width>164</width>
-					<height>109</height>
-					<aspectratio align="left" aligny="center">keep</aspectratio>
+					<height>85</height>
+					<aspectratio align="left" aligny="top">keep</aspectratio>
 					<texture background="true">$VAR[PlayerTitleImage]</texture>
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>

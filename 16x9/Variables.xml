@@ -1953,7 +1953,7 @@
 	</variable>
 	<variable name="WideImage">
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_wide.png</value>
-		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=fanart&amp;fallback=$INFO[ListItem.Icon]</value>
+		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=thumbnail&amp;fallback=$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(videoplaylist) + String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(videoplaylist) + !String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(thumb)) + [!Skin.HasSetting(HideUnwatchedThumbs) | [Skin.HasSetting(HideUnwatchedThumbs) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)]]">$INFO[ListItem.Art(thumb)]</value>

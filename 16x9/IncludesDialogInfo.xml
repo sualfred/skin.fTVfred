@@ -606,7 +606,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
 					</control>
-					<!-- Cinema Experience Button -->
+					<!-- Cinemavision Button -->
 					<control id="21" type="button">
 						<width min="124" max="244">auto</width>
 						<wrapmultiline>true</wrapmultiline>
@@ -616,7 +616,7 @@
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<onclick>Dialog.Close(MovieInformation)</onclick>
-						<onclick>RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
+						<onclick>RunScript(script.cinemavision,movieid=$INFO[ListItem.DBID])</onclick>
 						<font>Med24</font>
 						<label>31104</label>
 						<textoffsetx>28</textoffsetx>
@@ -624,7 +624,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>System.HasAddon(script.cinema.experience) + String.IsEqual(ListItem.DBType,movie)</visible>
+						<visible>System.HasAddon(script.cinemavision) + String.IsEqual(ListItem.DBType,movie)</visible>
 					</control>
 				</control>
 				<!-- Dummy Button grouplist -->
