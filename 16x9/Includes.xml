@@ -568,9 +568,9 @@
 				</control>
 				<control id="99" type="image">
 					<left>90</left>
-					<top>64</top>
-					<width>109</width>
-					<height>109</height>
+					<top>76</top>
+					<width>85</width>
+					<height>85</height>
 					<aspectratio align="left" aligny="center">keep</aspectratio>
 					<texture background="true">$VAR[PlayerTitleImage]</texture>
 					<visible>VideoPlayer.Content(livetv)</visible>
@@ -583,12 +583,12 @@
 					<aspectratio>stretch</aspectratio>
 					<texture>common/WhiteLine.png</texture>
 					<colordiffuse>ffeaeaea</colordiffuse>
-					<animation effect="slide" time="0" start="0,0" end="-55,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
+					<animation effect="slide" time="0" start="0,0" end="-78,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
 				</control>
 			</control>
 			<control id="99" type="group">
 				<animation effect="slide" time="0" start="0,0" end="-200,0" condition="![!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo)) | [!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)]]">Conditional</animation>
-				<animation effect="slide" time="0" start="0,0" end="-55,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
+				<animation effect="slide" time="0" start="0,0" end="-78,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
 				<!--  Title -->
 				<control id="99" type="label">
 					<left>294</left>
@@ -614,17 +614,36 @@
 					<label>$VAR[PlayerSmallLabel]</label>
 				</control>
 			</control>			
-			<!-- Clock -->	
-			<control id="99" type="label">
+			<!-- Clock -->
+			<control type="grouplist">
 				<right>90</right>
-				<top>64</top>
+				<top>74</top>
 				<width>500</width>
-				<height>50</height>
-				<font>Light32</font>
-				<textcolor>ffeaeaea</textcolor>
-				<shadowcolor>ff000000</shadowcolor>
+				<height>60</height>
 				<align>right</align>
-				<label>$INFO[System.Time]</label>
+				<itemgap>6</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<include>VisibleDelayFadeAnimation</include>
+				<control type="label">
+					<width>auto</width>
+					<height>30</height>
+					<font>Light28</font>
+					<align>right</align>
+					<textcolor>ffeaeaea</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$LOCALIZE[31217]</label>
+				</control>
+				<control type="label">
+					<top>1</top>
+					<width>auto</width>
+					<height>30</height>
+					<align>right</align>
+					<font>Med28</font>
+					<textcolor>ffeaeaea</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<label>$INFO[System.Time]</label>
+				</control>
 			</control>
 		</control>
 	</include>
