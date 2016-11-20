@@ -11,7 +11,7 @@
 				<bottom>0</bottom>
 				<width>1920</width>
 				<height>720</height>
-				<texture border="1">osd/mask_gradient.png</texture>
+				<texture border="1">osd/mask_bottom.png</texture>
 				<visible>!String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(1000).HasFocus + ![Player.Forwarding | Player.Rewinding]</visible>
 			</control>
 			<control type="image">

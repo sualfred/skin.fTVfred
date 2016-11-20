@@ -514,8 +514,7 @@
 		<control id="99" type="image">
 			<width>1980</width>
 			<height>720</height>
-			<texture flipy="true" border="1">osd/mask_gradient.png</texture>
-			<colordiffuse>E6FFFFFF</colordiffuse>
+			<texture border="1">osd/mask_top.png</texture>
 		</control>
 		<control id="99" type="group">
 			<visible>Player.HasAudio</visible>
