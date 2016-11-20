@@ -7,6 +7,7 @@
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(visualisationpresetlist) | Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog)">Conditional</animation>
+			<include>PlayerTitles</include>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1920</width>
@@ -21,7 +22,6 @@
 				<texture>osd/mask.png</texture>
 				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | ControlGroup(1000).HasFocus | [Player.Forwarding | Player.Rewinding]</visible>
 			</control>			
-			<include>PlayerTitles</include>		
 			<!-- Pause -->
 			<control type="image" id="99">
 				<centerleft>50%</centerleft>

@@ -43,6 +43,7 @@
 		<control type="group">
 			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) + !Window.IsVisible(playerprocessinfo) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!-- Masks -->
+			<include>PlayerTitles</include>			
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1920</width>
@@ -58,7 +59,6 @@
 				<texture>osd/mask.png</texture>
 				<visible>String.IsEmpty(Window(home).Property(ShowOptions)) | Control.HasFocus(999) | ControlGroup(2000).HasFocus | ControlGroup(3000).HasFocus | ControlGroup(5000).HasFocus | Control.HasFocus(998) | Control.HasFocus(997)</visible>
 			</control>
-			<include>PlayerTitles</include>
 			<!-- Pause -->
 			<control type="image">
 				<centerleft>50%</centerleft>
