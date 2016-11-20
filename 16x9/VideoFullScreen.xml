@@ -18,11 +18,6 @@
 					<effect delay="4200" end="0" start="100" time="200" type="fade" />
 				</animation>
 				<visible>!Window.IsActive(seekbar) + !Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd) + !Window.IsActive(musicosd) + !Window.IsActive(subtitlesearch) + !Window.IsVisible(script-nextup-notification-NextUpInfo.xml)</visible>
-				<control id="99" type="image">
-					<width>1980</width>
-					<height>210</height>
-					<texture border="1">osd/mask_top.png</texture>
-				</control>
 				<include>PlayerTitles</include>
 				<control id="99" type="image">
 					<bottom>0</bottom>

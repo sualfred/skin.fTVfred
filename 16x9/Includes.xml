@@ -511,6 +511,12 @@
 	</include>
 	<!-- Player Titles -->
 	<include name="PlayerTitles">
+		<control id="99" type="image">
+			<width>1980</width>
+			<height>720</height>
+			<texture flipy="true" border="1">osd/mask_gradient.png</texture>
+			<colordiffuse>E6FFFFFF</colordiffuse>
+		</control>
 		<control id="99" type="group">
 			<visible>Player.HasAudio</visible>
 			<control id="99" type="grouplist">
@@ -615,7 +621,7 @@
 				</control>
 			</control>			
 			<!-- Clock -->
-			<control type="grouplist">
+			<control id="99" type="grouplist">
 				<right>90</right>
 				<top>74</top>
 				<width>500</width>
@@ -625,7 +631,7 @@
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<include>VisibleDelayFadeAnimation</include>
-				<control type="label">
+				<control id="99" type="label">
 					<width>auto</width>
 					<height>30</height>
 					<font>Light28</font>
@@ -634,7 +640,7 @@
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$LOCALIZE[31217]</label>
 				</control>
-				<control type="label">
+				<control id="99" type="label">
 					<top>1</top>
 					<width>auto</width>
 					<height>30</height>

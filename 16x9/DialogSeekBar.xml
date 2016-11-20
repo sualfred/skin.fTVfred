@@ -11,11 +11,6 @@
 				<animation condition="System.IdleTime(4) + !Player.Caching + !Window.IsVisible(fullscreeninfo)" reversible="true" type="Conditional">
 					<effect end="0" start="100" time="200" type="fade" />
 				</animation>
-				<control type="image">
-					<width>1980</width>
-					<height>210</height>
-					<texture border="1">osd/mask_top.png</texture>
-				</control>
 				<include>PlayerTitles</include>
 				<!-- Pause -->
 				<control type="image">
@@ -175,11 +170,6 @@
 			</control>
 			<control type="group">
 				<visible>!Player.Paused + [Player.Seeking | Player.DisplayAfterSeek]</visible>
-				<control type="image">
-					<width>1980</width>
-					<height>210</height>
-					<texture border="1">osd/mask_top.png</texture>
-				</control>
 				<include>PlayerTitles</include>
 				<control type="image">
 					<bottom>0</bottom>

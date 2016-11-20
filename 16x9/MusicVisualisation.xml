@@ -224,11 +224,6 @@
 		<!-- Progress -->
 		<control type="group">
 			<visible>!Window.IsVisible(musicosd) + !Player.Paused + [Player.Forwarding | Player.Rewinding]</visible>
-			<control type="image">
-				<width>1980</width>
-				<height>210</height>
-				<texture border="1">osd/mask_top.png</texture>
-			</control>
 			<include>PlayerTitles</include>
 			<control type="image">
 				<bottom>0</bottom>
