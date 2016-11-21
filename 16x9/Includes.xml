@@ -592,7 +592,7 @@
 				</control>
 			</control>
 			<control id="99" type="group">
-				<animation effect="slide" time="0" start="0,0" end="-200,0" condition="![!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo)) | [!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)]]">Conditional</animation>
+				<animation effect="slide" time="0" start="0,0" end="-200,0" condition="[String.IsEmpty(Player.Art(tvshow.clearlogo)) + String.IsEmpty(Player.Art(clearlogo)) + !VideoPlayer.Content(livetv)] | [String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)]">Conditional</animation>
 				<animation effect="slide" time="0" start="0,0" end="-78,0" condition="!String.IsEmpty(VideoPlayer.Cover) + VideoPlayer.Content(livetv)">Conditional</animation>
 				<!--  Title -->
 				<control id="99" type="label">
