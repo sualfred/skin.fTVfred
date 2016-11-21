@@ -161,7 +161,7 @@
 						<label>$LOCALIZE[544]</label>
 						<include>NoTextures</include>
 						<animation condition="String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
-						<visible>!String.IsEmpty(ListItem.FileNameAndPath)</visible>
+						<visible>!String.IsEmpty(ListItem.FileName)</visible>
 					</control>
 				</control>
 			</control>
@@ -387,7 +387,9 @@
 						<top>-38</top>
 						<width>37</width>
 						<height>23</height>
-						<onleft>700</onleft>
+						<onleft condition="String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))">7000</onleft>
+						<onleft condition="!String.IsEmpty(Window(home).Property(Similar))">7001</onleft>
+						<onleft condition="!String.IsEmpty(Window(home).Property(Details))">7002</onleft>
 						<onright>1004</onright>
 						<onclick>SetProperty(NoLabel,1,home)</onclick>
 						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[Plot]')</onclick>
@@ -493,7 +495,9 @@
 					<width>1620</width>
 					<height>116</height>
 					<itemgap>0</itemgap>
-					<onleft>700</onleft>
+					<onleft condition="String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))">7000</onleft>
+					<onleft condition="!String.IsEmpty(Window(home).Property(Similar))">7001</onleft>
+					<onleft condition="!String.IsEmpty(Window(home).Property(Details))">7002</onleft>
 					<onright>noop</onright>
 					<orientation>horizontal</orientation>
 					<include>DialogVideoInfoAnimation</include>
@@ -767,7 +771,9 @@
 					<onup>9001</onup>
 					<ondown>Back</ondown>
 					<ondown>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</ondown>
-					<onleft>700</onleft>
+					<onleft condition="String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))">7000</onleft>
+					<onleft condition="!String.IsEmpty(Window(home).Property(Similar))">7001</onleft>
+					<onleft condition="!String.IsEmpty(Window(home).Property(Details))">7002</onleft>
 					<onright>noop</onright>
 					<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
 					<onback>9001</onback>
