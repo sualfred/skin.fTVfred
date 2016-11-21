@@ -8,6 +8,7 @@
 	<onload>Control.Move(50,1)</onload>
 	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onunload>ClearProperty(Similar,home)</onunload>
+	<onunload>ClearProperty(Details,home)</onunload>
 	<!--<onunload>SetFocus(50)</onunload>-->
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>

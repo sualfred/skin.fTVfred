@@ -110,39 +110,59 @@
 					<texture border="2">views/ProgressBar.png</texture>
 					<visible>Integer.IsGreater(ListItem.PlayCount,0) + !ListItem.IsResumable</visible>
 				</control>
-				<control id="7000" type="button">
+				<control type="grouplist" id="700">
+					<orientation>vertical</orientation>
 					<top>518</top>
+					<height>145</height>
 					<width>480</width>
-					<height>35</height>
+					<itemgap>20</itemgap>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
-					<ondown>7001</ondown>
-					<onleft>Close</onleft>
-					<onright>9001</onright>
-					<onfocus>ClearProperty(Similar,home)</onfocus>
-					<font>Light35</font>
-					<textcolor>ffdadada</textcolor>
-					<focusedcolor>ffffc24b</focusedcolor>
-					<label>$LOCALIZE[31026]</label>
-					<include>NoTextures</include>
-					<animation condition="!String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
-				</control>
-				<control id="7001" type="button">
-					<top>573</top>
-					<width>480</width>
-					<height>35</height>
-					<onup>7000</onup>
 					<ondown>noop</ondown>
-					<onleft>Close</onleft>
-					<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
-					<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
-					<onfocus>SetProperty(Similar,1,home)</onfocus>
-					<font>Light35</font>
-					<textcolor>ffdadada</textcolor>
-					<focusedcolor>ffffc24b</focusedcolor>
-					<label>$LOCALIZE[31070]</label>
-					<include>NoTextures</include>
-					<animation condition="String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+					<control id="7000" type="button">
+						<height>35</height>
+						<onleft>Close</onleft>
+						<onright>9001</onright>
+						<onfocus>ClearProperty(Details,home)</onfocus>
+						<onfocus>ClearProperty(Similar,home)</onfocus>
+						<font>Light35</font>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[31026]</label>
+						<include>NoTextures</include>
+						<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | !String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+					</control>
+					<control id="7001" type="button">
+						<width>480</width>
+						<height>35</height>
+						<onleft>Close</onleft>
+						<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
+						<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
+						<onfocus>ClearProperty(Details,home)</onfocus>
+						<onfocus>SetProperty(Similar,1,home)</onfocus>
+						<font>Light35</font>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[31070]</label>
+						<include>NoTextures</include>
+						<animation condition="String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+					</control>
+					<control id="7002" type="button">
+						<width>480</width>
+						<height>35</height>
+						<onleft>Close</onleft>
+						<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
+						<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
+						<onfocus>ClearProperty(Similar,home)</onfocus>
+						<onfocus>SetProperty(Details,1,home)</onfocus>
+						<font>Light35</font>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[544]</label>
+						<include>NoTextures</include>
+						<animation condition="String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.FileNameAndPath)</visible>
+					</control>
 				</control>
 			</control>
 			<control type="group">
@@ -367,7 +387,7 @@
 						<top>-38</top>
 						<width>37</width>
 						<height>23</height>
-						<onleft>7000</onleft>
+						<onleft>700</onleft>
 						<onright>1004</onright>
 						<onclick>SetProperty(NoLabel,1,home)</onclick>
 						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='$ESCVAR[Plot]')</onclick>
@@ -473,7 +493,7 @@
 					<width>1620</width>
 					<height>116</height>
 					<itemgap>0</itemgap>
-					<onleft>7000</onleft>
+					<onleft>700</onleft>
 					<onright>noop</onright>
 					<orientation>horizontal</orientation>
 					<include>DialogVideoInfoAnimation</include>
@@ -734,7 +754,7 @@
 					<font>Med32</font>
 					<textcolor>ff717171</textcolor>
 					<label>$LOCALIZE[31076]</label>
-					<visible>String.IsEmpty(Window(home).Property(Similar)) + !String.IsEmpty(Container(50).ListItem.Label) + !Control.HasFocus(50)</visible>
+					<visible>String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details)) + !String.IsEmpty(Container(50).ListItem.Label) + !Control.HasFocus(50)</visible>
 					<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
 					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 				</control>
@@ -747,7 +767,7 @@
 					<onup>9001</onup>
 					<ondown>Back</ondown>
 					<ondown>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</ondown>
-					<onleft>7000</onleft>
+					<onleft>700</onleft>
 					<onright>noop</onright>
 					<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
 					<onback>9001</onback>
@@ -756,7 +776,7 @@
 					<viewtype label="">list</viewtype>
 					<orientation>horizontal</orientation>
 					<scrolltime easing="inout" tween="sine">300</scrolltime>
-					<visible>String.IsEmpty(Window(home).Property(Similar))</visible>
+					<visible>String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))</visible>
 					<animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
 						<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 						<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
@@ -914,7 +934,7 @@
 				<control type="group">
 					<left>1030</left>
 					<top>-319</top>
-					<visible>String.IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(50) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details)) + !Control.HasFocus(50) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 					<animation center="480,1022" condition="!Control.HasFocus(50)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 					<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
 					<animation condition="String.IsEmpty(Window(home).Property(Similar))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
@@ -945,7 +965,7 @@
 						<param name="POS">5</param>
 					</include>
 				</control>
-				<!-- Similar videos -->
+				<!-- Similar videos label -->
 				<control type="label">
 					<left>575</left>
 					<width>1000</width>
@@ -1176,6 +1196,78 @@
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Container(50).ListItem.Label2,$LOCALIZE[20347] ,]</label>
 						<visible>Control.HasFocus(50)</visible>
+					</control>
+				</control>
+				<!-- Media info label -->
+				<control type="group">
+					<visible>!String.IsEmpty(Window(home).Property(Details))</visible>
+					<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
+					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+					<left>575</left>
+					<control type="label">
+						<width>1000</width>
+						<height>32</height>
+						<font>Med32</font>
+						<textcolor>ff717171</textcolor>
+						<label>$LOCALIZE[544]</label>
+					</control>
+					<control type="grouplist">
+						<top>50</top>
+						<width>1200</width>
+						<height>500</height>
+						<itemgap>15</itemgap>
+						<orientation>vertical</orientation>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<width>1200</width>
+							<height>30</height>
+							<wrapmultiline>true</wrapmultiline>
+							<font>Light30Spaced</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[B]$LOCALIZE[21800]:[/B]  $INFO[ListItem.FileName]</label>
+							<visible>!String.IsEmpty(ListItem.FileName)</visible>
+						</control>
+						<control type="label">
+							<width>1200</width>
+							<height>30</height>
+							<wrapmultiline>true</wrapmultiline>
+							<font>Light30Spaced</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[B]$LOCALIZE[573]:[/B]  $INFO[ListItem.Path]</label>
+							<visible>!String.IsEmpty(ListItem.Path)</visible>
+						</control>
+						<control type="label">
+							<width>1200</width>
+							<height>30</height>
+							<wrapmultiline>true</wrapmultiline>
+							<font>Light30Spaced</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[B]$LOCALIZE[291]:[/B]  $INFO[ListItem.VideoResolution,,p]$INFO[ListItem.VideoCodec, ,]$INFO[ListItem.VideoAspect, ,AR]$INFO[ListItem.StereoscopicMode, ]</label>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+						</control>
+						<control type="label">
+							<width>1200</width>
+							<height>30</height>
+							<wrapmultiline>true</wrapmultiline>
+							<font>Light30Spaced</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[B]$LOCALIZE[292]:[/B]  $INFO[ListItem.Property(AudioLanguage.1),, ]$INFO[ListItem.Property(AudioChannels.1),,ch ]$INFO[ListItem.Property(AudioCodec.1),, ]$INFO[ListItem.Property(AudioLanguage.2),/ , ]$INFO[ListItem.Property(AudioChannels.2),,ch ]$INFO[ListItem.Property(AudioCodec.2),, ]$INFO[ListItem.Property(AudioLanguage.3),/ , ]$INFO[ListItem.Property(AudioChannels.3),,ch ]$INFO[ListItem.Property(AudioCodec.3),, ]$INFO[ListItem.Property(AudioLanguage.4),/ , ]$INFO[ListItem.Property(AudioChannels.4),,ch ]$INFO[ListItem.Property(AudioCodec.4),, ]$INFO[ListItem.Property(AudioLanguage.5),/ , ]$INFO[ListItem.Property(AudioChannels.5),,ch ]$INFO[ListItem.Property(AudioCodec.5),, ]</label>
+							<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						</control>
+						<control type="label">
+							<width>1200</width>
+							<height>30</height>
+							<wrapmultiline>true</wrapmultiline>
+							<font>Light30Spaced</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[B]$LOCALIZE[459]:[/B]  $INFO[ListItem.Property(SubtitleLanguage.1),, ]$INFO[ListItem.Property(SubtitleLanguage.2),/ , ]$INFO[ListItem.Property(SubtitleLanguage.3),/ , ]$INFO[ListItem.Property(SubtitleLanguage.4),/ , ]$INFO[ListItem.Property(SubtitleLanguage.5),/ , ]</label>
+							<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+						</control>
 					</control>
 				</control>
 			</control>
