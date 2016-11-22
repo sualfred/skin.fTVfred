@@ -161,7 +161,7 @@
 						<label>$LOCALIZE[544]</label>
 						<include>NoTextures</include>
 						<animation condition="String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
-						<visible>!String.IsEmpty(ListItem.FileName)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoResolution) | !String.IsEmpty(ListItem.AudioLanguage) | !String.IsEmpty(ListItem.FileName)</visible>
 					</control>
 				</control>
 			</control>
