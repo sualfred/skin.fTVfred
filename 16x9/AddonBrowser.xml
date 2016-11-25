@@ -543,7 +543,7 @@
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
 						<visible>Control.IsVisible(96)</visible>
-					</control>
+					</control>	
 				</control>
 				<control id="9000" type="grouplist">
 					<left>579</left>
@@ -783,8 +783,9 @@
 				<width>40</width>
 				<height>480</height>
 				<texture>common/shadow.png</texture>
-				<visible>!String.EndsWith(Container.FolderPath,/)</visible>
-				<animation easing="inout" effect="fade" end="100" start="0" time="0" tween="sine">VisibleChange</animation>
+				<visible>[!String.IsEmpty(ListItem.AddonVersion) | Control.IsVisible(96)] + !String.IsEqual(Container.FolderPath,addons://)</visible>
+				<animation reversible="false" easing="inout" effect="fade" end="100" start="0" time="0" delay="200">Visible</animation>
+				<animation reversible="false" easing="inout" effect="fade" end="0" start="100" time="50" delay="350">Hidden</animation>
 			</control>
 			<control type="label">
 				<left>40</left>

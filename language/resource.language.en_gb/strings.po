@@ -55,8 +55,8 @@ msgid "Artwork Downloader"
 msgstr "Artwork Downloader"
 
 msgctxt "#31104"
-msgid "Cinemavision"
-msgstr "Cinemavision"
+msgid "Start Cinemavision"
+msgstr "Start Cinemavision"
 
 msgctxt "#31000"
 msgid "Audio Options"
