@@ -6,7 +6,6 @@
 	<include>WindowOpenTrigger</include>
 	<onload>ClearProperty(LabelsDelayFadeAnimation,home)</onload>
 	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="Window.Previous(home) + system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onload>
 	<onunload condition="Window.Next(home)">Control.Move($VAR[ContainerID],$INFO[Container.CurrentItem,-])</onunload>
 	<onunload condition="Window.Next(home) + !system.getbool(filelists.showparentdiritems)">Control.Move($VAR[ContainerID],1)</onunload>

@@ -2,7 +2,6 @@
 <window>
 	<!-- script-script.extendedinfo-DialogVideoInfo -->
 	<defaultcontrol always="true">7000</defaultcontrol>
-	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="Window.IsVisible(fullscreenvideo)">SetProperty(ShowXRay,true,home)</onload>
 	<onunload>ClearProperty(ExActor1,home)</onunload>
 	<onunload>ClearProperty(ExActor2,home)</onunload>
