@@ -65,6 +65,7 @@
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture diffuse="views/highlight_banner_mask.png" background="true">$INFO[ListItem.Property(bannerArt)]</texture>
 			<colordiffuse>99ffffff</colordiffuse>
+			<fadetime>300</fadetime>
 		</control>
 		<control type="image">
 			<width>58</width>
@@ -78,6 +79,7 @@
 			<height>170</height>
 			<aspectratio aligny="center" align="center">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Property(bannerLogo)]</texture>
+			<fadetime>300</fadetime>
 		</control>
 		<control type="textbox">
 			<top>15</top>
