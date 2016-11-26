@@ -2,6 +2,7 @@
 <window>    
     <menucontrol>1000</menucontrol>
     <allowoverlay>true</allowoverlay>
+    <backgroundcolor>0xff12161b</backgroundcolor>
     <defaultcontrol always="true">10</defaultcontrol>
     <views>10</views>
     <controls>
