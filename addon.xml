@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.3"
+	version="3.3.4"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,9 +34,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.3[/B]
-- Fixed Wide viewtype
-- Changed player title label layout
+[B]3.3.4[/B]
+- Added option to show the video in the background
+- Small changes and code adjustments
 
 See changelog.txt for more details.</news>
 	</extension>

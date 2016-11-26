@@ -1,5 +1,9 @@
 Changelog:
 
+3.3.4
+- Added option to show the video in the background
+- Small changes and code adjustments
+
 3.3.3
 - Fixed Wide viewtype
 - Changed player title label layout
