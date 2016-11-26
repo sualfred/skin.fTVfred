@@ -4,6 +4,8 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">101</defaultcontrol>
 	<controls>
+		<!-- Video Background -->
+		<include>VideoBackground</include>
 		<!-- Heading / Current item / Total items -->
 		<control type="grouplist">
 			<left>198</left>

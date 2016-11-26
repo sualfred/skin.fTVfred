@@ -6,7 +6,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>special://skin/extras/backgrounds/default.png</texture>
-			<animation effect="fade" time="0" start="100" end="93" condition="VideoPlayer.Content(livetv)">Conditional</animation>
+			<colordiffuse>EFFFFFFF</colordiffuse>
 		</control>
 		<!-- Channels -->
 		<control id="11" type="fixedlist">

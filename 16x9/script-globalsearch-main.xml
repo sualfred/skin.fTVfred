@@ -196,7 +196,7 @@
 					<fadetime>400</fadetime>
 					<colordiffuse>26ffffff</colordiffuse>
 					<texture background="true">$VAR[SearchFanart]</texture>
-					<visible>Skin.HasSetting(EnableFanart)</visible>
+					<visible>!Skin.HasSetting(HideFanart)</visible>
 				</control>
 				<!-- No results -->
 				<control type="group">

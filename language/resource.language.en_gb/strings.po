@@ -282,6 +282,11 @@ msgctxt "#31062"
 msgid "Choose Thumb"
 msgstr "Choose Thumb"
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31066"
+msgid "Enable Video Background"
+msgstr ""
+
 msgctxt "#31067"
 msgid "Choose Fanart"
 msgstr "Choose Fanart"
@@ -1489,6 +1494,11 @@ msgstr ""
 #: /16x9/Variables.xml
 msgctxt "#31336"
 msgid "Downloads thumbnails and fanarts of your PVR items and recordings."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31337"
+msgid "Displays the currently playing video in the background."
 msgstr ""
 
 msgctxt "#31500"

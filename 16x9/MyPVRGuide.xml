@@ -4,19 +4,10 @@
     <allowoverlay>true</allowoverlay>
     <defaultcontrol always="true">10</defaultcontrol>
     <views>10</views>
-    <controls> 
-        <control type="videowindow">
-            <include>FullscreenDimensions</include>
-            <visible>Window.Previous(fullscreenvideo)</visible>
-        </control>
-        <control type="image">
-            <include>FullscreenDimensions</include>
-            <texture>special://skin/extras/backgrounds/default.png</texture>
-            <animation effect="fade" time="0" start="100" end="93" condition="Window.Previous(fullscreenvideo)">Conditional</animation>
-        </control>
+    <controls>
         <control type="group">
             <!-- Fanart -->
-            <include condition="Skin.HasSetting(EnableFanart) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">PVRFanart</include>
+            <include>PVRFanart</include>
             <visible>Control.IsVisible(10)</visible>
             <height>1080</height>
             <!-- Title -->

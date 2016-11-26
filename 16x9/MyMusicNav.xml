@@ -20,7 +20,7 @@
 			<include>HiddenControl</include>
 		</control>
 		<!-- Fanart -->
-		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
+		<include>Fanart</include>
 		<!-- Views -->
 		<include>ForcedViewtype61</include>
 		<include>Viewtype50</include>

@@ -6,7 +6,7 @@
 	<controls>
 		<!--Background -->
 		<include>BackgroundImage</include>
-		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
+		<include>Fanart</include>
 		<!-- Hidden controls -->		
 		<control type="button" id="600">
 			<include>HiddenControl</include>

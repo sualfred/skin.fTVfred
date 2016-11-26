@@ -5,6 +5,8 @@
 	<defaultcontrol always="true">9</defaultcontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=99&amp;levels=0&amp;group=mainmenu|shutdown)</onunload>
 	<controls>
+		<!-- Video Background -->
+		<include>VideoBackground</include>
 		<!-- Dummy items to fake opening dialog -->
 		<control type="group">
 			<visible>Window.Previous(settingscategory.xml)</visible>
@@ -382,6 +384,28 @@
 					<onclick>Skin.ToggleSetting(WideSeasonArt)</onclick>
 					<selected>Skin.HasSetting(WideSeasonArt)</selected>
 				</control>
+				<control id="30" type="radiobutton">
+					<width>958</width>
+					<height>84</height>
+					<font>Light32</font>
+					<label>$LOCALIZE[31066]</label>
+					<textoffsetx>40</textoffsetx>
+					<textcolor>ff505153</textcolor>
+					<focusedcolor>ffffaf37</focusedcolor>
+					<radiowidth>125</radiowidth>
+					<radioheight>53</radioheight>
+					<radioposx>813</radioposx>
+					<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+					<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
+					<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
+					<texturefocus border="3">settings/button_focus.png</texturefocus>
+					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(HideVideoBackground)</onclick>
+					<selected>!Skin.HasSetting(HideVideoBackground)</selected>
+				</control>
 				<control id="15" type="radiobutton">
 					<width>958</width>
 					<height>84</height>
@@ -401,8 +425,8 @@
 					<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 					<texturefocus border="3">settings/button_focus.png</texturefocus>
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<onclick>Skin.ToggleSetting(EnableFanart)</onclick>
-					<selected>Skin.HasSetting(EnableFanart)</selected>
+					<onclick>Skin.ToggleSetting(HideFanart)</onclick>
+					<selected>!Skin.HasSetting(HideFanart)</selected>
 				</control>
 				<control id="23" type="radiobutton">
 					<width>958</width>

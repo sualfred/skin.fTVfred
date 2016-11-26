@@ -1852,6 +1852,7 @@
 		<value condition="ControlGroup(9).HasFocus(27)">$LOCALIZE[31293]</value>
 		<value condition="ControlGroup(9).HasFocus(28)">$LOCALIZE[31308]</value>
 		<value condition="ControlGroup(9).HasFocus(29)">$LOCALIZE[31311]</value>
+		<value condition="ControlGroup(9).HasFocus(30)">$LOCALIZE[31337]</value>
 	</variable>
 	<variable name="AlbumArtistName">
 		<value condition="!String.IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>
@@ -1891,7 +1892,7 @@
 	<variable name="Fanart">
 		<value condition="String.IsEqual(Container.FolderPath,videodb://movies/genres/)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
-		<value condition="Window.IsActive(1106)">$INFO[Container(100).ListItem.Art(fanart)]</value>
+		<value condition="Window.IsActive(1106)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(100).Listitem.Title]&amp;channel=$INFO[Container(100).ListItem.ChannelName]&amp;type=fanart</value>		
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
 		<value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>

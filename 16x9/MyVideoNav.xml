@@ -25,7 +25,7 @@
 			<visible>Control.IsEnabled(3)</visible>
 		</control>
 		<!-- Fanart -->
-		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
+		<include>Fanart</include>
 		<!-- Views -->
 		<include>ForcedViewtype60</include>
 		<include>ForcedViewtype61</include>

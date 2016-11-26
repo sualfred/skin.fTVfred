@@ -118,9 +118,26 @@
 		<itemlayout height="1" width="1" />
 		<focusedlayout height="1" width="1" />
 	</include>
+	<!-- Global Video Background -->
+	<include name="VideoBackground">
+		<control type="group">
+			<visible>Player.HasVideo + !Skin.HasSetting(HideVideoBackground)</visible>
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+				<visible>!Window.Next(home)</visible>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>special://skin/extras/backgrounds/default.png</texture>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+			</control>
+		</control>
+	</include>
 	<!-- Fanart -->
 	<include name="Fanart">
+		<include>VideoBackground</include>
 		<control type="group">
+			<visible>[!Player.HasVideo | Skin.HasSetting(HideVideoBackground)] + !Skin.HasSetting(HideFanart)</visible>
 			<animation condition="!Window.Previous(visualisation)" delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 			<control type="image">
 				<include>FullscreenDimensions</include>
@@ -132,14 +149,15 @@
 	</include>
 	<!-- PVR Fanart -->
 	<include name="PVRFanart">
+		<include>VideoBackground</include>
 		<control type="group">
-			<animation delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<visible>[!Player.HasVideo | Skin.HasSetting(HideVideoBackground)] + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+			<animation condition="!Window.Previous(fullscreenvideo)" delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>
 				<colordiffuse>0effffff</colordiffuse>
 				<texture background="true">$VAR[Fanart]</texture>
-				<visible>!Window.Previous(fullscreenvideo)</visible>
 			</control>
 		</control>
 	</include>

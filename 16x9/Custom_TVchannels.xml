@@ -12,17 +12,7 @@
 	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 	<controls>		
 		<!-- Fanart -->
-		<control type="group">
-			<animation condition="!Window.Previous(visualisation)" delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<fadetime>400</fadetime>
-				<colordiffuse>26ffffff</colordiffuse>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(100).Listitem.Title]&amp;channel=$INFO[Container(100).ListItem.ChannelName]&amp;type=fanart</texture>
-				<visible>Skin.HasSetting(EnableFanart) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
-			</control>
-		</control>
+		<include>PVRFanart</include>
 		<!-- Channels -->
 		<control id="100" type="fixedlist">
 			<left>-238</left>

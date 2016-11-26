@@ -75,13 +75,24 @@
 				<visible>!Skin.HasSetting(PreloadDeactivated) + !String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]</visible>
 			</control>
 			<!-- Background -->
+			<control type="group">
+				<visible>Player.HasVideo + !Skin.HasSetting(HideVideoBackground)</visible>
+				<control type="videowindow">
+					<include>FullscreenDimensions</include>
+				</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture>special://skin/extras/backgrounds/default.png</texture>
+					<colordiffuse>BFFFFFFF</colordiffuse>
+				</control>
+			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<aspectratio>scale</aspectratio>
 				<texture>$INFO[Container(99).ListItem.Thumb]</texture>
 				<include>VisibleFadeAnimation</include>
 				<fadetime>200</fadetime>
-				<visible>!String.IsEmpty(Container(99).ListItem.Thumb) + !String.IsEqual(Container(99).ListItem.Thumb,DefaultAddonNone.png)</visible>
+				<visible>!String.IsEmpty(Container(99).ListItem.Thumb) + !String.IsEqual(Container(99).ListItem.Thumb,DefaultAddonNone.png) + [!Player.HasVideo | Skin.HasSetting(HideVideoBackground)]</visible>
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>

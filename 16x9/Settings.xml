@@ -5,6 +5,17 @@
 	<onload>Dialog.Close(all,true)</onload>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
+		<control type="group">
+			<visible>Player.HasVideo + !Skin.HasSetting(HideVideoBackground)</visible>			
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>special://skin/extras/backgrounds/default.png</texture>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+			</control>
+		</control>
 		<control id="999" type="button">
 			<width>1</width>
 			<height>1</height>

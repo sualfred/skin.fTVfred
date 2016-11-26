@@ -11,7 +11,7 @@
     <views>50,51,52,53,55,56,57</views>
     <controls>
         <!-- Fanart -->
-        <include condition="Skin.HasSetting(EnableFanart) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Fanart</include>
+        <include>Fanart</include>
         <!-- Views -->
         <include>Viewtype50</include>
         <include>Viewtype51</include>

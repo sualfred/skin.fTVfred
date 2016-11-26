@@ -7,6 +7,8 @@
 	<onload condition="!String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">SetFocus(3)</onload>
 	<onload condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">SetFocus(9001)</onload>
 	<controls>
+		<!-- Video Background -->
+		<include>VideoBackground</include>
 		<control id="6" type="label">
 			<font>-</font>
 		</control>

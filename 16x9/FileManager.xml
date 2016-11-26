@@ -4,6 +4,8 @@
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">20</defaultcontrol>
 	<controls>
+		<!-- Video Background -->
+		<include>VideoBackground</include>
 		<!-- Heading -->
 		<control type="label">
 			<left>90</left>

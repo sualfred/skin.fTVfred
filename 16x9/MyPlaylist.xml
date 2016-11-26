@@ -19,7 +19,7 @@
 			<include>HiddenControl</include>
 		</control>
 		<!-- Fanart -->
-		<include condition="Skin.HasSetting(EnableFanart)">Fanart</include>
+		<include>Fanart</include>
 		<!-- List -->
 		<include condition="Window.IsVisible(videoplaylist)">ViewVideoPlaylist</include>
 		<include condition="Window.IsVisible(musicplaylist)">ViewMusicPlaylist</include>
