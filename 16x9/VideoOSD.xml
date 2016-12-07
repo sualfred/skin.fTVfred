@@ -349,7 +349,6 @@
 						<texturenofocus>-</texturenofocus>
 						<onclick>SetFocus(200)</onclick>
 						<onclick>ClearProperty(ShowOptions,home)</onclick>
-						<visible>VideoPlayer.HasSubtitles</visible>
 					</control>
 					<!-- Bookmarks -->
 					<control id="104" type="button">
