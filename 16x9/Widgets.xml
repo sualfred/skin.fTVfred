@@ -448,7 +448,7 @@
 			<param name="ShowButton">true</param>
 			<param name="Button">$LOCALIZE[31285]</param>
 			<param name="Focus">SetProperty(SettingsCurrentItem,7,settings)</param>
-			<param name="Action">ActivateWindow(servicesettings)</param>
+			<param name="Action">ActivateWindow(servicesettings,weather)</param>
 		</include>
 		<!-- Empty widgets -->
 		<include content="NoContentMessage">
