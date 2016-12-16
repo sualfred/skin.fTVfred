@@ -4,13 +4,14 @@
 # Addon Provider: Hitcher
 # Translators:
 # Translators:
+# Damian Teodorowicz <mogiel@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-23 09:37+0000\n"
-"Last-Translator: sualfred <su4lfred@gmail.com>\n"
+"PO-Revision-Date: 2016-12-12 21:19+0000\n"
+"Last-Translator: Damian Teodorowicz <mogiel@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,8 +57,8 @@ msgid "Artwork Downloader"
 msgstr "Artwork Downloader"
 
 msgctxt "#31104"
-msgid "Cinema Experience"
-msgstr "Cinema Experience"
+msgid "Start Cinemavision"
+msgstr "Uruchom Cinemavision"
 
 msgctxt "#31000"
 msgid "Audio Options"
@@ -289,6 +290,11 @@ msgctxt "#31062"
 msgid "Choose Thumb"
 msgstr "Wybierz miniaturę"
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31066"
+msgid "Enable Video Background"
+msgstr "Włącz wideo w tle"
+
 msgctxt "#31067"
 msgid "Choose Fanart"
 msgstr "Wybierz fanart"
@@ -441,10 +447,6 @@ msgstr "Przybliż i powiększ fanart"
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
 msgstr "Ukryj ostrzeżenie o myszce"
-
-msgctxt "#31066"
-msgid "Cinema Exp."
-msgstr "Cinema Exp."
 
 msgctxt "#31105"
 msgid "Your Addons"
@@ -1095,7 +1097,7 @@ msgstr "[LIGHT]Nic do oglądania?[CR]Spróbuj [/LIGHT]"
 #: /16x9/ParametersHomeWidgets.xml:77
 msgctxt "#31251"
 msgid "[LIGHT]Watch it now with[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
-msgstr "[LIGHT]Oglądaj teraz na[/LIGHT] [COLOR ftvgold]HTPC[/COLOR]"
+msgstr "[LIGHT]Oglądaj teraz w[/LIGHT] [COLOR ftvgold]Kodi[/COLOR]"
 
 #: /16x9/ParametersHomeWidgets.xml:113
 msgctxt "#31252"
@@ -1188,7 +1190,7 @@ msgstr "Brak wyników dla widżetu"
 #: /16x9/script-skinshortcuts.xml
 msgctxt "#31269"
 msgid "Focus on startup"
-msgstr ""
+msgstr "Wybieranie na starcie"
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
@@ -1339,7 +1341,7 @@ msgstr "Styl napisów"
 #: /16x9/VideoOSD.xml
 msgctxt "#31299"
 msgid "Shift"
-msgstr "Przesuń"
+msgstr "Przesuń[CR]poz."
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31300"
@@ -1354,32 +1356,32 @@ msgstr "Tryb"
 #: /16x9/VideoOSD.xml
 msgctxt "#31302"
 msgid "Offset"
-msgstr "Przesunięcie"
+msgstr "Przesuń[CR]pion."
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31303"
 msgid "Apply"
-msgstr "Zastosuj"
+msgstr "Zast."
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31304"
 msgid "Shift [B]UP[/B]"
-msgstr "Przesuń [B]GÓRA[/B]"
+msgstr "Przesuń w[B]GÓRĘ[/B]"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31305"
 msgid "Shift [B]DOWN[/B]"
-msgstr "Przesuń [B]DÓŁ[/B]"
+msgstr "Przesuń w [B]DÓŁ[/B]"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31306"
 msgid "Offset [B]MINUS[/B]"
-msgstr "Przesuń [B]MINUS[/B]"
+msgstr "Przesuń w [B]LEWO[/B]"
 
 #: /16x9/VideoOSD.xml
 msgctxt "#31307"
 msgid "Offset [B]PLUS[/B]"
-msgstr "Przesuń [B]PLUS[/B]"
+msgstr "Przesuń w[ B]prawo[/B]"
 
 #: /16x9/Variables.xml
 msgctxt "#31308"
@@ -1421,7 +1423,7 @@ msgstr "Czy chcesz wiedzieć więcej?"
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
 msgid "Press [B]DOWN[/B] to search online for more information."
-msgstr ""
+msgstr "Naciśnij [B]DÓŁ[/B] aby wyszukać więcej informacji w internecie."
 
 #: /16x9/DialogMusicInfo.xml
 msgctxt "#31316"
@@ -1476,49 +1478,64 @@ msgstr "Powróć do"
 #: /16x9/Home.xml
 msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
-msgstr ""
+msgstr "Ładowanie [I]Ekran domowy[/I]"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31327"
+msgid "Enable PVR Fanart"
+msgstr "Włącz fanart PVR"
 
 #: /16x9/MyPVRRecordings.xml
 msgctxt "#31328"
 msgid "View[CR]TV channels"
-msgstr ""
+msgstr "Pokaż[CR]kanały TV"
 
 #: /16x9/DialogFullScreenInfo.xml
 msgctxt "#31329"
 msgid "Unknown role"
-msgstr ""
+msgstr "Nieznana rola"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31330"
 msgid "Hide 'update library' buttons"
-msgstr ""
+msgstr "Ukryj przycisk aktualizacji biblioteki"
 
 #: /16x9/Variables.xml
 msgctxt "#31331"
 msgid ""
 "Hides the 'update library' buttons in all libary windows. Useful if Emby is "
 "used as Kodi database replacement.[CR]Disabled by default."
-msgstr ""
+msgstr "Ukrywa przycisk 'Aktualizuj bibliotekę' we wszystkich widokach biblioteki. Przydatne w przypadku używania jako Emby w zastępstwie bazy danych Kodi.[CR]Domyślnie wyłączone."
 
 #: /16x9/script-script.extendedinfo-DialogInfo.xml
 msgctxt "#31332"
 msgid "Press [B]SELECT[/B] to search online for more information."
-msgstr ""
+msgstr "Wybierz [B]OK[/B] aby wyszukać więcej informacji w internecie."
 
 #: /16x9/MyVideoNav.xml
 msgctxt "#31333"
 msgid "Jump[CR]To Letter"
-msgstr ""
+msgstr "Przeskocz[CR]do litery"
 
 #: /16x9/Parameters.xml
 msgctxt "#31334"
 msgid "Jump to letter"
-msgstr ""
+msgstr "Przeskocz do litery"
 
 #: /16x9/Parameters.xml
 msgctxt "#31335"
 msgid "Select the desired initial letter"
-msgstr ""
+msgstr "Wybierz początkową literę"
+
+#: /16x9/Variables.xml
+msgctxt "#31336"
+msgid "Downloads thumbnails and fanarts of your PVR items and recordings."
+msgstr "Pobiera miniatury i fanart dla pozycji i nagrań PVR"
+
+#: /16x9/Variables.xml
+msgctxt "#31337"
+msgid "Displays the currently playing video in the background."
+msgstr "Wyświetla obecnie odtwarzane wideo w tle."
 
 msgctxt "#31500"
 msgid "Widget Group 1"
