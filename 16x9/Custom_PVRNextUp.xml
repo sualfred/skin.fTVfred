@@ -4,64 +4,75 @@
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
 	<controls>
 		<control type="group">
+			<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(fullscreeninfo) + !Window.IsVisible(seekbar)</visible>
 			<animation effect="fade" end="100" start="0" time="200" delay="50">WindowOpen</animation>
 			<animation effect="fade" end="0" start="0" time="0">WindowClose</animation>
-			<left>1422</left>
-			<top>523</top>
-			<width>378</width>
-			<control type="label">
-				<width>auto</width>
-				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>ff080808</shadowcolor>
-				<label>31164</label>
-			</control>
+			<include>PlayerTitles</include>
 			<control type="image">
-				<top>70</top>
-				<width>378</width>
-				<height>295</height>
-				<texture>common/wide_empty.png</texture>
-				<aspectratio>scale</aspectratio>
+				<bottom>0</bottom>
+				<width>1920</width>
+				<height>720</height>
+				<texture flipy="true" border="1">osd/mask_top.png</texture>
 			</control>
-			<control type="image">
-				<top>70</top>
+			<control type="group">
+				<right>90</right>
+				<bottom>90</bottom>
 				<width>378</width>
-				<height>295</height>
-				<texture>views/episode_fallback.png</texture>
-				<visible>String.IsEmpty(VideoPlayer.Cover)</visible>
-			</control>
-			<control type="image">
-				<top>70</top>
-				<width>378</width>
-				<height>295</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture>$INFO[VideoPlayer.Cover]</texture>
-				<visible>!String.IsEmpty(VideoPlayer.Cover)</visible>
-			</control>
-			<control type="image">
-				<top>70</top>
-				<width>378</width>
-				<height>295</height>
-				<aspectratio>scale</aspectratio>
-				<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.NextTitle]&amp;channel=$INFO[VideoPlayer.ChannelName]&amp;type=fanart</texture>
-			</control>
-			<control type="image">
-				<top>365</top>
-				<width>378</width>
-				<height>68</height>
-				<texture>osd/nextup/background.png</texture>
-			</control>
-			<control type="label">
-				<top>379</top>
-				<width>378</width>
-				<height>40</height>
-				<font>Light28</font>
-				<align>center</align>
-				<textoffsetx>5</textoffsetx>
-				<scroll>true</scroll>
-				<textcolor>ff000000</textcolor>				
-				<label>$INFO[VideoPlayer.NextTitle]</label>
+				<height>423</height>
+				<control type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff080808</shadowcolor>
+					<label>31164</label>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<texture>common/wide_empty.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<texture>views/episode_fallback.png</texture>
+					<visible>String.IsEmpty(VideoPlayer.Cover)</visible>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<visible>!String.IsEmpty(VideoPlayer.Cover)</visible>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<aspectratio>scale</aspectratio>
+					<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.NextTitle]&amp;channel=$INFO[VideoPlayer.ChannelName]&amp;type=fanart</texture>
+				</control>
+				<control type="image">
+					<top>365</top>
+					<width>378</width>
+					<height>68</height>
+					<texture>osd/nextup/background.png</texture>
+				</control>
+				<control type="label">
+					<top>379</top>
+					<width>378</width>
+					<height>40</height>
+					<font>Light28</font>
+					<align>center</align>
+					<textoffsetx>5</textoffsetx>
+					<scroll>true</scroll>
+					<textcolor>ff000000</textcolor>				
+					<label>$INFO[VideoPlayer.NextTitle]</label>
+				</control>
 			</control>
 		</control>
 	</controls>

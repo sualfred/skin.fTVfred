@@ -2,8 +2,7 @@
 <window>
 	<defaultcontrol always="true">3012</defaultcontrol>
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
-	<onload>Dialog.Close(videoosd,true)</onload>
-	
+	<onload>Dialog.Close(videoosd,true)</onload>	
 	<controls>
 		<control type="label" id="3000">
 			<visible>false</visible>
@@ -55,90 +54,102 @@
 			<visible>false</visible>
 		</control>
 		<control type="group">
-			<left>1422</left>
-			<top>523</top>
-			<width>378</width>
+			<visible>!Window.IsVisible(seekbar)</visible>
 			<animation effect="fade" end="100" start="0" time="200" condition="Window.IsVisible(script-nextup-notification-NextUpInfo.xml)">Conditional</animation>
-			<!--  Next up label -->
-			<control type="label">
-				<width>auto</width>
-				<height>50</height>
-				<font>Med40</font>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>ff080808</shadowcolor>
-				<label>31164</label>
-			</control>
-			<!-- Next episode thumb -->
+			<include>PlayerTitles</include>		
 			<control type="image">
-				<top>70</top>
+				<bottom>0</bottom>
+				<width>1920</width>
+				<height>720</height>
+				<texture flipy="true" border="1">osd/mask_top.png</texture>
+			</control>
+			<!-- Popup -->
+			<control type="group">
+				<right>90</right>
+				<bottom>90</bottom>
 				<width>378</width>
-				<height>295</height>
-				<texture>views/episode_fallback.png</texture>
-				<aspectratio>scale</aspectratio>
-			</control>
-			<control type="image">
-				<top>70</top>
-				<width>378</width>
-				<height>295</height>
-				<aspectratio>scale</aspectratio>
-				<texture>$VAR[NextUpThumb]</texture>
-			</control>
-			<control type="image">
-				<top>70</top>
-				<width>378</width>
-				<height>295</height>
-				<aspectratio align="center">scale</aspectratio>
-				<texture>views/episode_fallback.png</texture>
-				<visible>Skin.HasSetting(HideUnwatchedThumbs) + !Integer.IsGreater(Control.GetLabel(3018),0)</visible>
-			</control>
-			<control type="image">
-				<top>70</top>
-				<width>90</width>
-				<height>90</height>
-				<texture>views/OverlayHD.png</texture>
-				<visible>Integer.IsGreater(Control.GetLabel(3011),709)</visible>
-			</control>
-			<!-- Next episode countdown -->
-			<control type="image">
-				<left>134</left>
-				<top>163</top>
-				<width>110</width>
-				<height>110</height>
-				<texture>$VAR[NextEpisodeCountdown]</texture>
-			</control>
-			<control type="image">
-				<top>365</top>
-				<width>378</width>
-				<height>68</height>
-				<texture>osd/nextup/background.png</texture>
-			</control>
-			<!--  Next episode label -->
-			<control type="label">
-				<top>379</top>
-				<width>378</width>
-				<height>40</height>
-				<font>Light28</font>
-				<align>center</align>
-				<textcolor>ff000000</textcolor>
-				<label>$INFO[Control.GetLabel(3015),$LOCALIZE[20373] ], $INFO[Control.GetLabel(3016),Ep. ]</label>
-			</control>
-			<!--  Close NextUp label -->
-			<control type="label">
-				<top>464</top>
-				<width>378</width>
-				<height>40</height>
-				<font>Light27</font>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>ff080808</shadowcolor>
-				<label>$LOCALIZE[31220]</label>
-			</control>
-			<!--  Close NextUp image -->
-			<control type="image">
-				<right>0</right>
-				<top>463</top>
-				<width>44</width>
-				<height>44</height>
-				<texture>osd/nextup/back.png</texture>
+				<height>456</height>
+				<!--  Next up label -->
+				<control type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff080808</shadowcolor>
+					<label>31164</label>
+				</control>
+				<!-- Next episode thumb -->
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<texture>views/episode_fallback.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<aspectratio>scale</aspectratio>
+					<texture>$VAR[NextUpThumb]</texture>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture>views/episode_fallback.png</texture>
+					<visible>Skin.HasSetting(HideUnwatchedThumbs) + !Integer.IsGreater(Control.GetLabel(3018),0)</visible>
+				</control>
+				<control type="image">
+					<top>70</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>views/OverlayHD.png</texture>
+					<visible>Integer.IsGreater(Control.GetLabel(3011),709)</visible>
+				</control>
+				<!-- Next episode countdown -->
+				<control type="image">
+					<left>134</left>
+					<top>163</top>
+					<width>110</width>
+					<height>110</height>
+					<texture>$VAR[NextEpisodeCountdown]</texture>
+				</control>
+				<control type="image">
+					<top>365</top>
+					<width>378</width>
+					<height>68</height>
+					<texture>osd/nextup/background.png</texture>
+				</control>
+				<!--  Next episode label -->
+				<control type="label">
+					<top>379</top>
+					<width>378</width>
+					<height>40</height>
+					<font>Light28</font>
+					<align>center</align>
+					<textcolor>ff000000</textcolor>
+					<label>$INFO[Control.GetLabel(3015),$LOCALIZE[20373] ], $INFO[Control.GetLabel(3016),Ep. ]</label>
+				</control>
+				<!--  Close NextUp label -->
+				<control type="label">
+					<top>464</top>
+					<width>378</width>
+					<height>40</height>
+					<font>Light27</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff080808</shadowcolor>
+					<label>$LOCALIZE[31220]</label>
+				</control>
+				<!--  Close NextUp image -->
+				<control type="image">
+					<right>0</right>
+					<top>463</top>
+					<width>44</width>
+					<height>44</height>
+					<texture>osd/nextup/back.png</texture>
+				</control>
 			</control>
 		</control>
 	</controls>

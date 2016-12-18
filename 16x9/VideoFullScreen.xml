@@ -11,7 +11,7 @@
 			<animation delay="100" effect="fade" end="0" start="100" time="200">Hidden</animation>
 		</control>
 		<control type="group" id="99">
-			<visible>String.IsEmpty(Window(home).Property(ShowXRay)) + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(pvrosdchannels)</visible>
+			<visible>String.IsEmpty(Window(home).Property(ShowXRay)) + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(script-nextup-notification-NextUpInfo.xml) + !Window.IsVisible(script-nextup-notification-StillWatchingInfo.xml)</visible>
 			<control id="99" type="group">
 				<animation reversible="true" type="WindowOpen">
 					<effect end="100" start="0" time="200" type="fade" />

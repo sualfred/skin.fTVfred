@@ -20,7 +20,7 @@
 			<control type="image">
 				<left>48</left>
 				<top>48</top>
-				<width>540</width>
+				<width>540</width>++
 				<height>127</height>
 				<texture border="4">dialogs/DialogNotificationBackground.png</texture>
 			</control>

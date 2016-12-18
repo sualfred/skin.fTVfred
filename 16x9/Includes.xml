@@ -636,7 +636,7 @@
 					<shadowcolor>ff000000</shadowcolor>
 					<label>$VAR[PlayerSmallLabel]</label>
 				</control>
-			</control>			
+			</control>
 			<!-- Clock -->
 			<control id="99" type="grouplist">
 				<right>90</right>
@@ -646,8 +646,6 @@
 				<align>right</align>
 				<itemgap>6</itemgap>
 				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
-				<include>VisibleDelayFadeAnimation</include>
 				<control id="99" type="label">
 					<width>auto</width>
 					<height>30</height>

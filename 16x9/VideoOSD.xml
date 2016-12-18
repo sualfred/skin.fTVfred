@@ -43,7 +43,7 @@
 		<control type="group">
 			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(subtitlesearch) + !Window.IsVisible(playerprocessinfo) + String.IsEmpty(Window(home).Property(ShowXRay))</visible>
 			<!-- Masks -->
-			<include>PlayerTitles</include>			
+			<include>PlayerTitles</include>
 			<control type="image">
 				<bottom>0</bottom>
 				<width>1920</width>
