@@ -5,7 +5,7 @@
 	<controls>
 		<!-- Main group -->
 		<control type="group">
-			<visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation)</visible>
+			<visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation) + !Window.IsVisible(notification)</visible>
 			<include>DialogAnimation</include>
 			<right>12</right>
 			<top>12</top>
@@ -26,7 +26,7 @@
 			</control>		
 			<control id="32" type="progress">
 				<left>49</left>
-				<top>178</top>
+				<top>177</top>
 				<width>538</width>
 				<height>12</height>
 				<texturebg border="2">views/ProgressBack.png</texturebg>
