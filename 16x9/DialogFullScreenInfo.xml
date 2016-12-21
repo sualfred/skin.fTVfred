@@ -19,7 +19,7 @@
 			<onclick condition="!Player.Rewinding + !Player.Forwarding">ActivateWindow(VideoOSD)</onclick>
 			<onup condition="Integer.IsGreater(Container(100).NumItems,0) + !Player.Rewinding + !Player.Forwarding">SetProperty(ShowXRay,true,home)</onup>
 			<onup condition="Integer.IsGreater(Container(100).NumItems,0) + !Player.Rewinding + !Player.Forwarding">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(100).ListItem.Label])</onup>
-			<onup condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[VideoPlayer.ChannelName,, - ]' '$ESCINFO[VideoPlayer.Title]',text='$ESCVAR[Plot]')</onup>
+			<onup condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[VideoPlayer.ChannelName,, - ]' '$ESCINFO[VideoPlayer.Title]',text='$ESCINFO[VideoPlayer.Plot]')</onup>
 			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber) + VideoPlayer.Content(movies) + !Player.Rewinding + !Player.Forwarding">SetProperty(ShowXRay,true,home)</ondown>
 			<ondown condition="!String.IsEmpty(VideoPlayer.IMDBNumber) + VideoPlayer.Content(movies) + !Player.Rewinding + !Player.Forwarding">RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[VideoPlayer.IMDBNumber])</ondown>
 		</control>
