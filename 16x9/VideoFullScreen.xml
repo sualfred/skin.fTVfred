@@ -108,17 +108,6 @@
 						<label>$VAR[PlayerResolution]</label>
 					</control>
 				</control>
-				<!--  Current time 
-				<control id="99" type="label">
-					<right>92</right>
-					<bottom>45</bottom>
-					<width>800</width>
-					<height>30</height>
-					<font>Reg27</font>
-					<align>right</align>
-					<textcolor>fff3f3f3</textcolor>
-					<label>$INFO[System.Time]</label>
-				</control>-->
 				<!--Xray Icon-->
 				<control id="99" type="grouplist">
 					<right>92</right>

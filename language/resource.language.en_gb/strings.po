@@ -1501,6 +1501,11 @@ msgctxt "#31337"
 msgid "Displays the currently playing video in the background."
 msgstr ""
 
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31338"
+msgid "View channel info"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
