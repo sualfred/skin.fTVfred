@@ -17,7 +17,8 @@
 			<include>HiddenControl</include>
 			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
 			<onup condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
-			<onup condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[VideoPlayer.ChannelName,, - ]' '$ESCINFO[VideoPlayer.Title]',text='$ESCINFO[VideoPlayer.Plot]')</onup>
+			<onup condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">SetProperty(ShowXRay,true,home)</onup>
+			<onup condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">ActivateWindow(1113)</onup>
 			<onclick condition="Skin.HasSetting(HideOSDControls)">SetProperty(ShowOptions,1,home)</onclick>
 			<onclick condition="Skin.HasSetting(HideOSDControls) + VideoPlayer.Content(livetv)">SetFocus(110)</onclick>
 			<onclick condition="Skin.HasSetting(HideOSDControls) + !VideoPlayer.Content(livetv) + system.getbool(videoplayer.autoplaynextitem)">SetFocus(107)</onclick>
@@ -852,8 +853,9 @@
 					<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</onup>
 					<onup condition="Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</onup>
 					<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">Dialog.Close(videoosd,true)</ondown>
-					<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</ondown>
-					<ondown condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">RunScript(script.toolbox,info=textviewer,header='$ESCINFO[VideoPlayer.ChannelName,, - ]' '$ESCINFO[VideoPlayer.Title]',text='$ESCINFO[VideoPlayer.Plot]')</ondown>
+					<ondown condition="!Skin.HasSetting(HideOSDControls) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">ActivateWindow(fullscreeninfo)</ondown>					
+					<ondown condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">SetProperty(ShowXRay,true,home)</ondown>
+					<ondown condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">ActivateWindow(1113)</ondown>
 					<itemgap>0</itemgap>
 					<align>center</align>
 					<orientation>horizontal</orientation>
