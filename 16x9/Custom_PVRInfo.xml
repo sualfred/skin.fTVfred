@@ -9,7 +9,8 @@
 	<controls>
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture>dialogs/DialogBackground.png</texture>
+			<texture>special://skin/extras/backgrounds/default.png</texture>
+			<colordiffuse>EFFFFFFF</colordiffuse>
 		</control>
 		<control type="group">
 			<left>90</left>
