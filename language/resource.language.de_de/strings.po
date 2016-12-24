@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-11-26 08:30+0000\n"
+"PO-Revision-Date: 2016-12-24 07:35+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1536,6 +1536,11 @@ msgstr "Aktiviert den Download von Thumbnails und Fanarts für PVR Kanäle und A
 msgctxt "#31337"
 msgid "Displays the currently playing video in the background."
 msgstr "Zeigt die aktuelle Video Wiedergabe im Hintergrund der Menüs."
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31338"
+msgid "View channel info"
+msgstr "Zeige Kanal Info"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

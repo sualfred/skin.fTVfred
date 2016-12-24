@@ -1,5 +1,9 @@
 Changelog:
 
+3.3.6
+- Added custom PVR info OSD
+- Minor adjustments
+
 3.3.5
 - Minor fixes such as the hidden subtitle settings button
 

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-12 21:19+0000\n"
+"PO-Revision-Date: 2016-12-22 12:39+0000\n"
 "Last-Translator: Damian Teodorowicz <mogiel@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -928,7 +928,7 @@ msgstr "Grupa widżetów 12"
 #: \16x9\MyPVRChannels.xml:234
 msgctxt "#31217"
 msgid "Current time"
-msgstr "Obecny czas"
+msgstr "Obecna godzina"
 
 #: \16x9\DialogAudioDSPManager.xml:294
 msgctxt "#31218"
@@ -1536,6 +1536,11 @@ msgstr "Pobiera miniatury i fanart dla pozycji i nagrań PVR"
 msgctxt "#31337"
 msgid "Displays the currently playing video in the background."
 msgstr "Wyświetla obecnie odtwarzane wideo w tle."
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31338"
+msgid "View channel info"
+msgstr "Pokaż informacje o kanale"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

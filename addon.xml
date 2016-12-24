@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.5"
+	version="3.3.6"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,8 +34,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.5[/B]
-- Minor fixes such as the hidden subtitle settings button
+[B]3.3.6[/B]
+- Added custom PVR info OSD
+- Minor adjustments
 
 See changelog.txt for more details.</news>
 	</extension>

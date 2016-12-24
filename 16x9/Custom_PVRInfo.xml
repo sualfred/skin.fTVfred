@@ -28,8 +28,7 @@
 			</control>
 			<control type="progress">
 				<top>324</top>
-				<left>1</left>
-				<width>334</width>
+				<width>336</width>
 				<height>12</height>
 				<info>Player.Progress</info>
 				<texturebg border="2">views/ProgressBack.png</texturebg>
@@ -44,7 +43,7 @@
 			<top>99</top>
 			<control type="label">
 				<top>-7</top>
-				<width>1170</width>
+				<width>1270</width>
 				<height>48</height>
 				<font>Med48</font>
 				<scroll>true</scroll>
