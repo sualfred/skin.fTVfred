@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.6"
+	version="3.3.7"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,9 +34,8 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.6[/B]
-- Added custom PVR info OSD
-- Minor adjustments
+[B]3.3.7[/B]
+- Fixed broken SkinHelper music artworks
 
 See changelog.txt for more details.</news>
 	</extension>

@@ -14,9 +14,9 @@
 			<include>FullscreenDimensions</include>
 			<fadetime>400</fadetime>
 			<colordiffuse>26ffffff</colordiffuse>
-			<texture fallback="special://skin/extras/backgrounds/music_visualiser.jpg" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Fanart)]</texture>
+			<texture fallback="special://skin/extras/backgrounds/music_visualiser.jpg" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Art.Fanart)]</texture>
 			<include>VisAnimation</include>
-			<visible>!Skin.HasSetting(VisFanartDisabled) + [!Skin.HasSetting(VisRandomFanart) | String.IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt))]</visible>
+			<visible>!Skin.HasSetting(VisFanartDisabled) + [!Skin.HasSetting(VisRandomFanart) | String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ExtraFanArt))]</visible>
 		</control>
 		<control type="multiimage">
 			<include>FullscreenDimensions</include>
@@ -25,7 +25,7 @@
 			<aspectratio>scale</aspectratio>
 			<timeperimage>10000</timeperimage>
 			<colordiffuse>26ffffff</colordiffuse>
-			<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt)]</imagepath>
+			<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.Player.Art.ExtraFanArt)]</imagepath>
 			<include>VisAnimation</include>
 			<visible>Skin.HasSetting(VisRandomFanart) + !Skin.HasSetting(VisFanartDisabled)</visible>
 		</control>

@@ -2,6 +2,8 @@
 <window>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">10</defaultcontrol>
+	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
+	<onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<controls>
 		<!-- splash -->
 		<control type="image">

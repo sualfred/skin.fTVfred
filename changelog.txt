@@ -1,5 +1,8 @@
 Changelog:
 
+3.3.7
+- Fixed broken SkinHelper music artworks
+
 3.3.6
 - Added custom PVR info OSD
 - Minor adjustments
