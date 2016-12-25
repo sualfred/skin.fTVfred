@@ -170,10 +170,6 @@ msgctxt "#31038"
 msgid "Select your scrapers preferred certification county."
 msgstr "Select your scrapers preferred certification county."
 
-msgctxt "#31039"
-msgid "Enable debug grid.[CR]Useful when skinning."
-msgstr "Enable debug grid.[CR]Useful when skinning."
-
 msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
 msgstr "Enable debug info.[CR]Useful for bug reporting."
@@ -209,10 +205,6 @@ msgstr "Launch Now"
 msgctxt "#31037"
 msgid "Rollback Addon"
 msgstr "Rollback Addon"
-
-msgctxt "#31041"
-msgid "Debug grid"
-msgstr "Debug grid"
 
 msgctxt "#31042"
 msgid "Debug labels"
@@ -1504,6 +1496,16 @@ msgstr ""
 #: /16x9/DialogFullScreenInfo.xml
 msgctxt "#31338"
 msgid "View channel info"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31339"
+msgid "Enable Holiday Theme"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31340"
+msgid "Enable the holiday overlay theme. This will add falling snow for the holiday season all over the skin."
 msgstr ""
 
 msgctxt "#31500"

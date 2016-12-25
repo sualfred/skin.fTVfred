@@ -1843,7 +1843,7 @@
 		<value condition="ControlGroup(9).HasFocus(18)">$LOCALIZE[31150]</value>
 		<value condition="ControlGroup(9).HasFocus(19)">$LOCALIZE[31331]</value>
 		<value condition="ControlGroup(9).HasFocus(20)">$LOCALIZE[31034]</value>
-		<value condition="ControlGroup(9).HasFocus(21)">$LOCALIZE[31039]</value>
+		<value condition="ControlGroup(9).HasFocus(21)">$LOCALIZE[31340]</value>
 		<value condition="ControlGroup(9).HasFocus(22)">$LOCALIZE[31040]</value>
 		<value condition="ControlGroup(9).HasFocus(23)">$LOCALIZE[31336]</value>
 		<value condition="ControlGroup(9).HasFocus(24)">$LOCALIZE[31233]</value>
