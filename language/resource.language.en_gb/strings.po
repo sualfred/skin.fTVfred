@@ -174,9 +174,19 @@ msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
 msgstr "Enable debug info.[CR]Useful for bug reporting."
 
+#: /shortcuts/overrides.xml
+msgctxt "#31039"
+msgid "Unwatched Movies"
+msgstr ""
+
 msgctxt "#31025"
 msgid "Widget Path"
 msgstr "Widget Path"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31041"
+msgid "Unwatched TV Shows"
+msgstr ""
 
 msgctxt "#31026"
 msgid "Overview"

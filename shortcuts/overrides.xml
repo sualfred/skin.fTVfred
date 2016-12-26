@@ -60,8 +60,9 @@
 		<node label="fTV">
 			<shortcut label="10134" icon="ftv_icon.png">ActivateWindow(Favourites,favourites://,return)</shortcut>
 			<node label="342">
-				<shortcut label="31167" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyAddedMovies.xsp,return)</shortcut>
 				<shortcut label="31168" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourMovies.xsp,return)</shortcut>
+				<shortcut label="31039" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/UnwatchedMovies.xsp,return)</shortcut>
+				<shortcut label="31167" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyAddedMovies.xsp,return)</shortcut>
 				<shortcut label="31169" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressMovies.xsp,return)</shortcut>
 				<shortcut label="31170" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/KidsMovies.xsp,return)</shortcut>
 				<shortcut label="31171" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ActionAdventureMovies.xsp,return)</shortcut>
@@ -75,8 +76,9 @@
 				<shortcut label="135" type="movie" icon="ftv_icon.png">ActivateWindow(Videos,library://video/movies/genres.xml/,return)</shortcut>
 			</node>
 			<node label="20343">
-				<shortcut label="31175" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyUpdatedTVShows.xsp,return)</shortcut>
 				<shortcut label="31176" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/YourTVShows.xsp,return)</shortcut>
+				<shortcut label="31041" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/UnwatchedTVShows.xsp,return)</shortcut>
+				<shortcut label="31175" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/RecentlyUpdatedTVShows.xsp,return)</shortcut>
 				<shortcut label="31177" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/InProgressTVShows.xsp,return)</shortcut>
 				<shortcut label="31178" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/KidsTVShows.xsp,return)</shortcut>
 				<shortcut label="31179" type="tvshow" icon="ftv_icon.png">ActivateWindow(Videos,special://skin/extras/video/ActionAdventureTVShows.xsp,return)</shortcut>
