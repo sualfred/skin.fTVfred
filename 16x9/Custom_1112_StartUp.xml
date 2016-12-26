@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1112">
+	<backgroundcolor>0xff12161b</backgroundcolor>
+	<onload condition="System.GetBool(input.enablemouse)">SetFocus(10)</onload>
+	<onload condition="!System.GetBool(input.enablemouse) + [System.GetBool(filelists.showparentdiritems) | System.GetBool(musiclibrary.showallitems)]">SetFocus(20)</onload>
+	<onload condition="[!System.GetBool(input.enablemouse) + !System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)] | String.IsEqual(Skin.String(QuestionsAsked),1)">SetFocus(50)</onload>
+	<controls>
+		<!-- Hidden control -->
+		<control type="button" id="50">
+			<include>HiddenControl</include>
+			<onfocus>Skin.SetString(QuestionsAsked,1)</onfocus>	
+			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">SetProperty(Preload,1,home)</onfocus>
+			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadTimeout,ClearProperty(Preload,home),00:30,silent)</onfocus>
+			<onfocus condition="!Skin.HasSetting(PreloadDeactivated)">AlarmClock(PreloadDone,SetProperty(PreloadDone,1,home),00:30,silent)</onfocus>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+		</control>
+		<!-- splash -->
+		<control type="image">
+			<left>-96</left>
+			<top>-190</top>
+			<width>2112</width>
+			<height>1188</height>
+			<texture>special://skin/extras/backgrounds/loading.jpg</texture>
+			<visible>ControlGroup(10).HasFocus | ControlGroup(20).HasFocus</visible>
+		</control>
+		<!-- mouse -->
+		<control type="group">
+			<visible>ControlGroup(10).HasFocus</visible>
+			<control type="textbox">
+				<top>585</top>
+				<width>1200</width>
+				<centerleft>50%</centerleft>
+				<align>center</align>			
+				<height>200</height>
+				<font>Light32</font>
+				<textcolor>ffb0b4b7</textcolor>
+				<label>$LOCALIZE[31536]</label>
+			</control>
+			<control type="grouplist" id="10">
+				<top>705</top>
+				<height>76</height>
+				<centerleft>50%</centerleft>
+				<align>center</align>
+				<onleft>99</onleft>
+				<onright>noop</onright>
+				<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+				<onup>noop</onup>
+				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+				<ondown>noop</ondown>
+				<orientation>horizontal</orientation>
+				<control id="11" type="button">
+					<width>363</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>MedUpper24</font>
+					<textoffsety>27</textoffsety>
+					<label>107</label>
+					<onclick condition="System.GetBool(input.enablemouse)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=input.enablemouse)</onclick>
+					<onclick condition="System.GetBool(filelists.showparentdiritems) | System.GetBool(musiclibrary.showallitems)">SetFocus(21)</onclick>
+					<onclick condition="!System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)">SetFocus(50)</onclick>
+				</control>
+				<control id="12" type="button">
+					<width>363</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>MedUpper24</font>
+					<textoffsety>27</textoffsety>
+					<label>106</label>
+					<onclick condition="System.GetBool(filelists.showparentdiritems) | System.GetBool(musiclibrary.showallitems)">SetFocus(21)</onclick>
+					<onclick condition="!System.GetBool(filelists.showparentdiritems) + !System.GetBool(musiclibrary.showallitems)">SetFocus(50)</onclick>
+				</control>
+			</control>
+		</control>
+		<!-- other -->
+		<control type="group">
+			<visible>ControlGroup(20).HasFocus</visible>
+			<control type="textbox">
+				<top>585</top>
+				<width>1200</width>
+				<centerleft>50%</centerleft>
+				<align>center</align>			
+				<height>200</height>
+				<font>Light32</font>
+				<textcolor>ffb0b4b7</textcolor>
+				<label>$LOCALIZE[31539]</label>
+			</control>
+			<control type="grouplist" id="20">
+				<top>705</top>
+				<height>76</height>
+				<centerleft>50%</centerleft>
+				<align>center</align>
+				<onleft>99</onleft>
+				<onright>noop</onright>
+				<onup condition="!Window.IsVisible(1101)">SetProperty(BounceUp,1,Home)</onup>
+				<onup>noop</onup>
+				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
+				<ondown>noop</ondown>
+				<orientation>horizontal</orientation>
+				<control id="21" type="button">
+					<width>363</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>MedUpper24</font>
+					<textoffsety>27</textoffsety>
+					<label>107</label>
+					<onclick condition="System.GetBool(filelists.showparentdiritems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=filelists.showparentdiritems)</onclick>
+					<onclick condition="System.GetBool(musiclibrary.showallitems)">RunScript(script.skin.helper.service,action=togglekodisetting,setting=musiclibrary.showallitems)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				<control id="22" type="button">
+					<width>363</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>MedUpper24</font>
+					<textoffsety>27</textoffsety>
+					<label>106</label>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

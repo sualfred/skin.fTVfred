@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.3.7"
+	version="3.3.8"
 	name="fTV Fred Edition"
 	provider-name="Sualfred">
 	<requires>
@@ -34,8 +34,8 @@
         </assets>
 		<news>Changelog:
 
-[B]3.3.7[/B]
-- Fixed broken SkinHelper music artworks
+[B]3.3.8[/B]
+- Let it snow, let it snow, let it snooooow
 
 See changelog.txt for more details.</news>
 	</extension>

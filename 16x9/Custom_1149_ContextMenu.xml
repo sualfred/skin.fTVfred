@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1149">
+	<!-- custom contextmenu -->
+	<defaultcontrol always="true">11</defaultcontrol>
+	<onunload>ClearProperty(ItemHasWidget,home)</onunload>
+	<onunload>SetFocus(99)</onunload>
+	<controls>
+		<!-- Background -->
+		<include>DialogBackgroundImage</include>
+		<!-- Dialog background image -->
+		<control type="image">
+			<include>DialogAnimation</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>500</width>
+			<height>228</height>
+			<include>MessageBackground</include>
+			<visible>!String.IsEmpty(Window(home).Property(ItemHasWidget))</visible>
+		</control>
+		<control type="image">
+			<include>DialogAnimation</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>500</width>
+			<height>152</height>
+			<include>MessageBackground</include>
+			<visible>String.IsEmpty(Window(home).Property(ItemHasWidget))</visible>
+		</control>
+		<!-- Grouplist -->
+		<control type="grouplist" id="10">
+			<include>DialogAnimation</include>
+			<animation effect="slide" time="0" start="0,0" end="0,38" condition="String.IsEmpty(Window(home).Property(ItemHasWidget))">Conditional</animation>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<height>228</height>
+			<width>500</width>
+			<itemgap>0</itemgap>
+			<onleft>close</onleft>				
+			<onright>close</onright>				
+			<control type="button" id="11">
+				<left>-5</left>
+				<width>500</width>				
+				<height>76</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>MedUpper24</font>
+				<textoffsety>27</textoffsety>
+				<textoffsetx>27</textoffsetx>
+				<label>$LOCALIZE[184]</label>
+				<onclick>SetProperty(ReloadTriggered,1,home)</onclick>
+				<onclick>Close</onclick>
+				<onclick>XBMC.ReloadSkin()</onclick>
+			</control>
+			<control type="button" id="12">
+				<left>-5</left>
+				<width>500</width>				
+				<height>76</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>MedUpper24</font>
+				<textoffsety>27</textoffsety>
+				<textoffsetx>27</textoffsetx>
+				<label>$LOCALIZE[31508] $INFO[Window(home).Property(WidgetGroupLabel)]</label>
+				<onclick>Close</onclick>
+				<onclick>ActivateWindow(1105)</onclick>
+				<visible>!String.IsEmpty(Window(home).Property(ItemHasWidget))</visible>
+			</control>
+			<control type="button" id="13">
+				<left>-5</left>
+				<width>500</width>				
+				<height>76</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>MedUpper24</font>
+				<textoffsety>27</textoffsety>
+				<textoffsetx>27</textoffsetx>
+				<label>$LOCALIZE[31509]</label>
+				<onclick>Close</onclick>
+				<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+			</control>
+		</control>
+	</controls>
+</window>

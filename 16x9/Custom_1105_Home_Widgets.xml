@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1105">
+	<defaultcontrol always="true">30</defaultcontrol>
+	<onload>Skin.SetString($INFO[Window(home).Property(SubMenu),WidgetMenu-],$INFO[Window(home).Property(WidgetMenu)])</onload>
+	<onunload>ClearProperty(SubMenu,Home)</onunload>
+	<onunload condition="Window.IsVisible(home) + !Window.IsVisible(script-skinshortcuts.xml)">RunScript(script.toolbox,info=yesnodialog,header=$LOCALIZE[20183],text=$LOCALIZE[31267],yesaction=SetProperty(ReloadTriggered,1,home)||XBMC.ReloadSkin,noaction=SetFocus(99),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onunload>
+	<controls>
+		<!-- List 200 Control -->
+		<control type="button" id="20">
+			<include>HiddenControl</include>
+			<onleft>noop</onleft>
+			<onright>30</onright>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(21)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(21)</ondown>
+			<onclick>SetFocus(200)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(20)</onclick>
+		</control>
+		<!-- List 300 Control -->
+		<control type="button" id="30">
+			<include>HiddenControl</include>
+			<onleft>20</onleft>
+			<onright>40</onright>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(31)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(31)</ondown>
+			<onclick>SetFocus(300)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(30)</onclick>
+		</control>
+		<!-- List 400 Control -->
+		<control type="button" id="40">
+			<include>HiddenControl</include>
+			<onleft>30</onleft>
+			<onright>50</onright>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(41)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(41)</ondown>
+			<onclick>SetFocus(400)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(40)</onclick>
+		</control>
+		<!-- List 500 Control -->
+		<control type="button" id="50">
+			<include>HiddenControl</include>
+			<onleft>40</onleft>
+			<onright>60</onright>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(51)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(51)</ondown>
+			<onclick>SetFocus(500)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(50)</onclick>
+		</control>
+		<!-- List 600 Control -->
+		<control type="button" id="60">
+			<include>HiddenControl</include>
+			<onleft>50</onleft>
+			<onright>noop</onright>
+			<onup condition="String.IsEqual(Container(100).CurrentItem,1)">noop</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(100,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(200,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(300,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(400,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(500,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">Control.Move(600,-1)</onup>
+			<onup condition="!String.IsEqual(Container(100).CurrentItem,1)">SetFocus(61)</onup>
+			<ondown condition="String.IsEqual(Container(100).CurrentItem,8)">SetFocus(9001)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(100,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(200,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(300,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(400,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(500,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">Control.Move(600,1)</ondown>
+			<ondown condition="!String.IsEqual(Container(100).CurrentItem,8)">SetFocus(61)</ondown>
+			<onclick>SetFocus(600)</onclick>
+			<onclick>Select</onclick>
+			<onclick>SetFocus(60)</onclick>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="21">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(20)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="31">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(30)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="41">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(40)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="51">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
+		<!-- Button to fix movement problem  -->
+		<control type="button" id="61">
+			<include>HiddenControl</include>
+			<onfocus>SetFocus(60)</onfocus>
+		</control>
+		<!-- Background -->
+		<include>DialogTextBackgroundImage</include>
+		<control type="group">
+			<animation reversible="true" type="WindowOpen">
+				<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
+				<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
+			</animation>
+			<animation reversible="true" type="WindowClose">
+				<effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
+				<effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
+			</animation>
+			<!-- Main group -->
+			<control type="group">
+				<include>DialogZoomAnimation</include>
+				<left>90</left>
+				<centertop>50%</centertop>
+				<width>1740</width>
+				<height>832</height>
+				<control type="image">
+					<width>1740</width>
+					<height>832</height>
+					<texture border="1,61,1,1">dialogs/file_manager_back.png</texture>
+				</control>
+				<!-- Widget type -->				
+				<control type="label">
+					<left>40</left>
+					<top>14</top>
+					<height>30</height>
+					<width>70</width>
+					<aligny>center</aligny>
+					<font>Bold30</font>
+					<label>$LOCALIZE[31225]</label>
+					<textcolor>ffdadada</textcolor>
+				</control>
+				<!-- Widget name -->
+				<control type="label">
+					<left>130</left>
+					<top>14</top>
+					<height>30</height>
+					<width>420</width>
+					<aligny>center</aligny>
+					<font>Bold30</font>
+					<label>$LOCALIZE[31024]</label>
+					<textcolor>ffdadada</textcolor>
+				</control>
+				<!-- Widget path -->
+				<control type="label">
+					<left>570</left>
+					<top>14</top>
+					<height>30</height>
+					<width>820</width>
+					<aligny>center</aligny>
+					<font>Bold30</font>
+					<label>$LOCALIZE[31202]</label>
+					<textcolor>ffdadada</textcolor>
+				</control>
+				<!-- Widget Layout -->
+				<control type="label">
+					<left>1430</left>
+					<top>14</top>
+					<height>30</height>
+					<width>180</width>
+					<aligny>center</aligny>
+					<font>Bold30</font>
+					<label>$LOCALIZE[31198]</label>
+					<textcolor>ffdadada</textcolor>
+				</control>
+				<!-- Widget -->
+				<control type="list" id="100">
+					<top>60</top>
+					<width>1740</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="1740">
+						<control type="image">
+							<width>1740</width>
+							<height>84</height>
+							<texture border="3">settings/button_no_focus.png</texture>
+						</control>
+						<control type="label">
+							<left>40</left>
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="84" width="1740">
+						<control type="image">
+							<width>1740</width>
+							<height>84</height>
+							<texture border="3">settings/button_focus.png</texture>
+						</control>
+						<control type="label">
+							<left>40</left>
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(10)</visible>
+						</control>
+						<control type="label">
+							<left>40</left>
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(10)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>#1</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#2</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#3</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#4</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#5</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#6</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#7</label>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>#8</label>
+							<onclick>noop</onclick>
+						</item>
+					</content>
+				</control>
+				<!-- Widget label -->
+				<control type="list" id="200">
+					<top>60</top>
+					<left>130</left>
+					<width>420</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="420">
+						<control type="label">
+							<width>420</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>420</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="84" width="420">
+						<control type="label">
+							<width>420</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(20) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>420</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(20) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>420</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>Control.HasFocus(20) + String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>420</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>!Control.HasFocus(20) + String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">1</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">2</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">3</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">4</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">5</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">6</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">7</param>
+						</include>
+						<include content="ParamWidgetLabel">
+							<param name="Pos">8</param>
+						</include>
+					</content>
+				</control>
+				<!-- Widget path -->
+				<control type="list" id="300">
+					<top>60</top>
+					<left>570</left>
+					<width>820</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="820">
+						<control type="label">
+							<width>820</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>820</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="84" width="820">
+						<control type="label">
+							<width>820</width>
+							<height>84</height>
+							<font>Light32</font>
+							<scroll>true</scroll>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(30) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>820</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(30) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>820</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>Control.HasFocus(30) + String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>820</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>!Control.HasFocus(30) + String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="ParamWidgetPath">
+							<param name="Pos">1</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">2</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">3</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">4</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">5</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">6</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">7</param>
+						</include>
+						<include content="ParamWidgetPath">
+							<param name="Pos">8</param>
+						</include>
+					</content>
+				</control>
+				<!-- Widget layout -->
+				<control type="list" id="400">
+					<top>60</top>
+					<left>1430</left>
+					<width>180</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="180">
+						<control type="label">
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ff505153</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="84" width="180">
+						<control type="label">
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<scroll>true</scroll>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(40) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(40) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffaf37</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>Control.HasFocus(40) + String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="label">
+							<width>180</width>
+							<height>84</height>
+							<font>Light32</font>
+							<textcolor>ffffffff</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>!Control.HasFocus(40) + String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">1</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">2</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">3</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">4</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">5</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">6</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">7</param>
+						</include>
+						<include content="ParamWidgetLayout">
+							<param name="Pos">8</param>
+						</include>
+					</content>
+				</control>
+				<!-- Move Down -->
+				<control type="list" id="500">
+					<top>60</top>
+					<left>1635</left>
+					<width>33</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="33" />
+					<focusedlayout height="84" width="33">						
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinDownWhite.png</texture>
+							<visible>!Control.HasFocus(50)</visible>
+						</control>
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinDownFO.png</texture>							
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">1000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">2000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">3000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">4000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">5000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">6000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">7000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">8000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">9000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">10000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">11000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" content="ParamWidgetMoveDownInclude">
+							<param name="SubMenu">12000</param>
+						</include>
+					</content>
+				</control>
+				<!-- Move Up -->
+				<control type="list" id="600">
+					<top>60</top>
+					<left>1668</left>
+					<width>33</width>
+					<height>672</height>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="84" width="33" />
+					<focusedlayout height="84" width="33">						
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinUpWhite.png</texture>
+							<visible>!Control.HasFocus(60)</visible>
+						</control>
+						<control type="image">
+							<top>31</top>
+							<width>32</width>
+							<height>21</height>
+							<texture>dialogs/SpinUpFO.png</texture>							
+							<visible>Control.HasFocus(60)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),1000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">1000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),2000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">2000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),3000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">3000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),4000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">4000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),5000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">5000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),6000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">6000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),7000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">7000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),8000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">8000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),9000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">9000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),10000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">10000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),11000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">11000</param>
+						</include>
+						<include condition="String.IsEqual(Window(home).Property(SubMenu),12000)" content="ParamWidgetMoveUpInclude">
+							<param name="SubMenu">12000</param>
+						</include>
+					</content>
+				</control>
+				<!-- Button grouplist -->
+				<control type="grouplist" id="9001">
+					<left>0</left>
+					<bottom>12</bottom>
+					<width>1740</width>
+					<height>76</height>
+					<itemgap>0</itemgap>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>30</onup>
+					<ondown>noop</ondown>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<!-- Set Banner -->
+					<control type="button" id="1005">
+						<width>420</width>
+						<height>76</height>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>$LOCALIZE[31253]</label>
+						<label2>$VAR[WidgetBannerLabel]</label2>
+						<onclick>SetProperty(Dialog.NumItems,7)</onclick>
+						<!-- Clear -->
+						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd])||Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label]))</onclick>
+						<!--Movies -->
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31242])</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/NewMovie.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31242])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newmovie))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31243])</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],plugin://script.skin.helper.service/?action=similarmovies&amp;randomize=true&amp;reload=$INFO[Window(Home).Property(widgetreload2)])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31243])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedmovie))</onclick>
+						<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31244])</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/RandomMovie.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31244])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],randommovie))</onclick>
+						<!-- Shows -->
+						<onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31245])</onclick>
+						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/NewShow.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31245])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newshow))</onclick>
+						<onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31246])</onclick>
+						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],plugin://script.skin.helper.service/?action=similarshows&amp;randomize=true&amp;reload=$INFO[Window(Home).Property(widgetreload2)])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31246])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedshow))</onclick>
+						<onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31247])</onclick>
+						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/RandomShow.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31247])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],randomshow))</onclick>
+						<onclick>SetProperty(Dialog.8.Label,$LOCALIZE[626])</onclick>
+						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],videodb://inprogresstvshows/)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[626])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],inprogressshow))</onclick>
+						<onclick>SetProperty(Dialog.9.Label,$LOCALIZE[20387])</onclick>
+						<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],videodb://recentlyaddedepisodes/)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[20387])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newepisode))</onclick>
+						<onclick>SetProperty(Dialog.10.Label,$LOCALIZE[31254])</onclick>
+						<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],plugin://script.skin.helper.service/?action=similarmedia&amp;randomize=true&amp;reload=$INFO[Window(Home).Property(widgetreload2)])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31254])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedmedia))</onclick>
+						<!-- Ok -->
+						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31543])</onclick>
+					</control>
+					<!-- Set View Type for all -->
+					<control type="button" id="1004">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>$LOCALIZE[31210]</label>
+						<onclick>SetProperty(Dialog.NumItems,5)</onclick>					
+						<!--wide-->
+						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31527])</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],wide)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-1],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-2],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-3],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-4],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-5],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-6],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-7],$LOCALIZE[31159])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-8],$LOCALIZE[31159]))</onclick>
+						<!--poster-->
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31528])</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],poster)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-1],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-2],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-3],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-4],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-5],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-6],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-7],$LOCALIZE[31160])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-8],$LOCALIZE[31160]))</onclick>
+						<!--episode-->
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31550])</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],episode)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-1],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-2],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-3],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-4],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-5],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-6],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-7],$LOCALIZE[31549])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-8],$LOCALIZE[31549]))</onclick>
+						<!--square -->
+						<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31529])</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],square)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-1],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-2],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-3],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-4],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-5],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-6],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-7],$LOCALIZE[31161])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-8],$LOCALIZE[31161]))</onclick>
+						<!--square info-->
+						<onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31530])</onclick>
+						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8],squareinfo)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-1],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-2],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-3],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-4],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-5],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-6],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-7],$LOCALIZE[31203])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetStyleLabel-8],$LOCALIZE[31203]))</onclick>
+						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31198])</onclick>
+					</control>
+					<!-- Change Group Name -->
+					<control type="button" id="1001">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>31544</label>
+						<onclick>SetProperty(DisableSuggestions,1,Home)</onclick>
+						<onclick>Skin.SetString(ftvLabelWidget$INFO[Window(home).Property(SubMenu)])</onclick>
+					</control>
+					<!-- Reset Button -->
+					<control type="button" id="1002">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>10035</label>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-1])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-2])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-3])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-4])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-5])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-6])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-7])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetLabel-8])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-1])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-2])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-3])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-4])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-5])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-6])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-7])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAction-8])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-1])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-2])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-3])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-4])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-5])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-6])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-7])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetList-8])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-1])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-2])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-3])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-4])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-5])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-6])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-7])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetStyle-8])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetView])</onclick>
+						<onclick>Skin.Reset(ftvLabelWidget$INFO[Window(home).Property(SubMenu)])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd])</onclick>
+						<onclick>Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label])</onclick>
+					</control>
+					<!-- OK Button -->
+					<control type="button" id="1003">
+						<width>320</width>
+						<height>76</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Med24</font>
+						<textoffsetx>23</textoffsetx>
+						<textoffsety>27</textoffsety>
+						<label>186</label>
+						<onclick>Close</onclick>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

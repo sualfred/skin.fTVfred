@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1150">
+	<onload>AlarmClock(LabelsDelayFadeAnimation,ClearProperty(LabelsDelayFadeAnimation,Home),00:01,silent)</onload>
+	<visible>!Window.IsActive(home) + !String.IsEmpty(Window(home).Property(LabelsDelayFadeAnimation))</visible>
+	<controls />
+</window>
