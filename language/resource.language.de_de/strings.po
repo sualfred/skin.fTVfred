@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-26 07:26+0000\n"
+"PO-Revision-Date: 2016-12-26 17:12+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -182,9 +182,19 @@ msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
 msgstr "Debug Info aktivieren.[CR]Nützlich für die Meldung von Fehlern."
 
+#: /shortcuts/overrides.xml
+msgctxt "#31039"
+msgid "Unwatched Movies"
+msgstr "Ungesehene Filme"
+
 msgctxt "#31025"
 msgid "Widget Path"
 msgstr "Widget Pfad"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31041"
+msgid "Unwatched TV Shows"
+msgstr "Ungesehene Serien"
 
 msgctxt "#31026"
 msgid "Overview"
