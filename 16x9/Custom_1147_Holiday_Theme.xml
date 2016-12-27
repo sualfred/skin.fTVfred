@@ -12,7 +12,7 @@
 					<top>-180</top>
 					<width>19</width>
 					<height>19</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -23,7 +23,7 @@
 					<top>-100</top>
 					<width>28</width>
 					<height>28</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -33,7 +33,7 @@
 					<top>-40</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -43,7 +43,7 @@
 					<top>-80</top>
 					<width>25</width>
 					<height>25</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -53,7 +53,7 @@
 					<top>-210</top>
 					<width>17</width>
 					<height>17</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -68,7 +68,7 @@
 					<top>-180</top>
 					<width>19</width>
 					<height>19</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -79,7 +79,7 @@
 					<top>-100</top>
 					<width>28</width>
 					<height>28</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -89,7 +89,7 @@
 					<top>-40</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -99,7 +99,7 @@
 					<top>-80</top>
 					<width>25</width>
 					<height>25</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -109,7 +109,7 @@
 					<top>-210</top>
 					<width>17</width>
 					<height>17</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -125,7 +125,7 @@
 					<top>-100</top>
 					<width>28</width>
 					<height>28</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -135,7 +135,7 @@
 					<top>-40</top>
 					<width>22</width>
 					<height>22</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="8000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -145,7 +145,7 @@
 					<top>-210</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1620" time="12000" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -161,7 +161,7 @@
 					<top>-60</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -171,7 +171,7 @@
 					<top>-190</top>
 					<width>28</width>
 					<height>28</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-60,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -181,7 +181,7 @@
 					<top>-80</top>
 					<width>24</width>
 					<height>24</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1620" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -191,7 +191,7 @@
 					<top>-110</top>
 					<width>17</width>
 					<height>17</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1320" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -202,7 +202,7 @@
 					<top>-110</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="-30,0" end="60,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -217,7 +217,7 @@
 					<top>-200</top>
 					<width>26</width>
 					<height>26</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -227,7 +227,7 @@
 					<top>-40</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -237,7 +237,7 @@
 					<top>-80</top>
 					<width>24</width>
 					<height>24</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -247,7 +247,7 @@
 					<top>-110</top>
 					<width>18</width>
 					<height>18</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1320" time="12000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="30,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -262,7 +262,7 @@
 					<top>-180</top>
 					<width>19</width>
 					<height>19</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -273,7 +273,7 @@
 					<top>-100</top>
 					<width>28</width>
 					<height>28</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -283,7 +283,7 @@
 					<top>-40</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -293,7 +293,7 @@
 					<top>-80</top>
 					<width>25</width>
 					<height>25</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -303,7 +303,7 @@
 					<top>-210</top>
 					<width>17</width>
 					<height>17</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1620" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -318,7 +318,7 @@
 					<top>-180</top>
 					<width>19</width>
 					<height>19</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1120" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -329,7 +329,7 @@
 					<top>-100</top>
 					<width>28</width>
 					<height>28</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1320" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -339,7 +339,7 @@
 					<top>-40</top>
 					<width>20</width>
 					<height>20</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1420" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -349,7 +349,7 @@
 					<top>-80</top>
 					<width>25</width>
 					<height>25</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1220" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
@@ -359,13 +359,18 @@
 					<top>-210</top>
 					<width>17</width>
 					<height>17</height>
-					<texture>snow.png</texture>
+					<texture>holiday/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="0,1520" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
 					<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 			</control>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>holiday/frost.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
 	</controls>
 </window>
