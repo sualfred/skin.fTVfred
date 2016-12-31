@@ -82,7 +82,8 @@
 					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[LIGHT]$INFO[Player.Duration(mm),[B]$LOCALIZE[180]:[/B] , $LOCALIZE[31147]][/LIGHT]</label>
+					<label>[LIGHT][B]$LOCALIZE[180]:[/B] $VAR[HourPlayerDuration]$VAR[MinutePlayerDuration][/LIGHT]</label>
+					<visible>!String.IsEmpty(Player.Duration)</visible>
 				</control>
 				<control type="textbox">
 					<width>1192</width>

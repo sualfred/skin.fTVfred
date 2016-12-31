@@ -10,7 +10,7 @@
 	<onload>Control.Move(100,1)</onload>
 	<!-- workaround animation for focusing the first item -->
 	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
-	<controls>		
+	<controls>
 		<!-- Fanart -->
 		<include>PVRFanart</include>
 		<!-- Channels -->

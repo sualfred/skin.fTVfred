@@ -14,21 +14,21 @@
 			<!-- Background image -->
 			<control type="image">
 				<width>636</width>
-				<height>238</height>
+				<height>234</height>
 				<texture border="48">views/shadow_fo.png</texture>
 			</control>
 			<control type="image">
 				<left>48</left>
 				<top>48</top>
 				<width>540</width>
-				<height>142</height>
+				<height>138</height>
 				<texture border="4">dialogs/DialogNotificationBackground.png</texture>
 			</control>		
 			<control id="32" type="progress">
 				<left>49</left>
 				<top>177</top>
 				<width>538</width>
-				<height>12</height>
+				<height>8</height>
 				<texturebg border="2">views/ProgressBack.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture border="2">views/ProgressBar.png</midtexture>

@@ -52,7 +52,7 @@
 		<value>$LOCALIZE[31296]</value>
 	</variable>
 	<variable name="TuneInLabel">
-		<value condition="Window.IsVisible(pvrosdchannels)">$LOCALIZE[19165]</value>
+		<value condition="VideoPlayer.Content(livetv)">$LOCALIZE[19165]</value>
 		<value>$LOCALIZE[31226]</value>
 	</variable>
 	<variable name="MovieRatingProvider">
@@ -1890,11 +1890,27 @@
 		<value condition="Integer.IsGreater(Player.Duration(h),0)">$INFO[Player.Duration(h:mm:ss)]</value>
 		<value>$INFO[Player.Duration(mm:ss)]</value>
 	</variable>
+	<variable name="HourPlayerDuration">
+		<value condition="Integer.IsGreater(Player.Duration(h),1)">$INFO[Player.Duration(h),, $LOCALIZE[31148]] </value>
+		<value condition="Integer.IsEqual(Player.Duration(h),1)">$INFO[Player.Duration(h),, $LOCALIZE[31005]] </value>
+	</variable>
+	<variable name="MinutePlayerDuration">
+		<value condition="Integer.IsEqual(Player.Duration(mm),01)">1 $LOCALIZE[31004]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),02)">2 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),03)">3 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),04)">4 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),05)">5 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),06)">6 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),07)">7 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),08)">8 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsEqual(Player.Duration(mm),09)">9 $LOCALIZE[31147]</value>
+		<value condition="Integer.IsGreaterOrEqual(Player.Duration(mm),10)">$INFO[Player.Duration(mm),, $LOCALIZE[31147]]</value>
+	</variable>
 	<variable name="Fanart">		
 		<value condition="String.IsEqual(Container.FolderPath,videodb://movies/genres/)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
-		<value condition="String.StartsWith(ListItem.Path,pvr://)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container.Listitem.Title]&amp;channel=$INFO[Container.ListItem.ChannelName]&amp;type=fanart</value>
+		<value condition="String.StartsWith(ListItem.Path,pvr://)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=fanart</value>
 		<value condition="Window.IsActive(1106)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(100).Listitem.Title]&amp;channel=$INFO[Container(100).ListItem.ChannelName]&amp;type=fanart</value>
 		<value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
