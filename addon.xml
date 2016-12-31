@@ -9,7 +9,7 @@
 		<import addon="script.toolbox" version="1.1.1"/>
 		<import addon="script.extendedinfo" version="5.6.0"/>
 		<import addon="script.globalsearch" version="7.4.4"/>
-		<import addon="script.skinshortcuts" version="1.0.8"/>
+		<import addon="script.skinshortcuts" version="1.0.13"/>
 		<import addon="script.artwork.downloader" version="13.1.0"/>
 		<import addon="script.skin.helper.service" version="1.0.100"/>
 		<import addon="script.module.autocompletion" version="1.1.2"/>
