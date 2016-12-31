@@ -455,6 +455,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Content(movies) + !Container.Content(tvshows)" height="240" width="240">
+					<control type="button">
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.audio.prime_music)">SetProperty(PrimeMusicLabel,$INFO[ListItem.Titel],home)</onfocus>
+					</control>
 					<control type="group">
 						<width>240</width>
 						<height>240</height>
@@ -738,7 +743,7 @@
 				<orientation>vertical</orientation>
 				<viewtype label="535">list</viewtype>
 				<scrolltime>0</scrolltime>
-				<visible>Container.Content(songs) | [String.Contains(Container.FolderName,amazon) + String.Contains(Container.FolderPath,listSongs)]</visible>
+				<visible>Container.Content(songs) | [String.Contains(Container.FolderName,amazon) + [String.Contains(Container.FolderPath,listSongs) | String.Contains(Container.FolderPath,showPlaylist)]]</visible>
 				<animation condition="[!system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,1)] | [system.getbool(filelists.showparentdiritems) + String.IsEqual(Container(54).CurrentItem,0)]" effect="slide" end="0,-101" start="0,0">Conditional</animation>
 				<itemlayout height="101" width="1000">
 					<control type="group">

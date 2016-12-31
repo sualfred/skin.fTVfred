@@ -1855,6 +1855,7 @@
 		<value condition="ControlGroup(9).HasFocus(30)">$LOCALIZE[31337]</value>
 	</variable>
 	<variable name="AlbumArtistName">
+		<value condition="String.StartsWith(Container.FolderPath,plugin://plugin.audio.prime_music) + !String.IsEmpty(Window(home).Property(PrimeMusicLabel))">$INFO[Window(home).Property(PrimeMusicLabel)]</value>
 		<value condition="!String.IsEmpty(ListItem.AlbumArtist)">$INFO[ListItem.AlbumArtist]</value>
 		<value condition="!String.IsEmpty(ListItem(1).AlbumArtist)">$INFO[ListItem(1).AlbumArtist]</value>
 		<value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
