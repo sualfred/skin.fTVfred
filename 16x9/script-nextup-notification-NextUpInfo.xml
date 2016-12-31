@@ -56,13 +56,7 @@
 		<control type="group">
 			<visible>!Window.IsVisible(seekbar)</visible>
 			<animation effect="fade" end="100" start="0" time="200" condition="Window.IsVisible(script-nextup-notification-NextUpInfo.xml)">Conditional</animation>
-			<include>PlayerTitles</include>		
-			<control type="image">
-				<bottom>0</bottom>
-				<width>1920</width>
-				<height>720</height>
-				<texture flipy="true" border="1">osd/mask_top.png</texture>
-			</control>
+			<include>PlayerTitles</include>
 			<!-- Popup -->
 			<control type="group">
 				<right>90</right>

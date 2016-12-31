@@ -8,12 +8,6 @@
 			<animation effect="fade" end="100" start="0" time="200" delay="50">WindowOpen</animation>
 			<animation effect="fade" end="0" start="0" time="0">WindowClose</animation>
 			<include>PlayerTitles</include>
-			<control type="image">
-				<bottom>0</bottom>
-				<width>1920</width>
-				<height>720</height>
-				<texture flipy="true" border="1">osd/mask_top.png</texture>
-			</control>
 			<control type="group">
 				<right>90</right>
 				<bottom>90</bottom>

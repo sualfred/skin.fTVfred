@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1148" type="dialog">
 	<zorder>999</zorder>
-	<visible>!Window.IsVisible(startup)</visible>
+	<visible>String.IsEqual(System.ScreenHeight,1200) | String.IsEqual(System.ScreenHeight,1600) | String.IsEqual(System.ScreenHeight,2400)| String.IsEqual(System.ScreenHeight,3200)</visible>
 	<controls>
 		<control type="image">
 			<centertop>50%</centertop>
