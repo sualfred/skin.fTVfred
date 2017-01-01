@@ -35,21 +35,21 @@
 				<scrollspeed>100</scrollspeed>
 				<label>$INFO[ListItem.Title]</label>
 			</control>
+			<control type="label">
+				<top>50</top>
+				<width>1270</width>
+				<height>48</height>
+				<font>Reg30Spaced</font>
+				<scroll>true</scroll>
+				<textcolor>ffFFC24B</textcolor>
+				<label>[LIGHT]$INFO[ListItem.ChannelName][/LIGHT]</label>
+			</control>
 			<control type="grouplist">
-				<top>57</top>
+				<top>110</top>
 				<width>1192</width>
 				<height>200</height>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
-				<control type="textbox">
-					<width>1192</width>
-					<height>40</height>
-					<align>left</align>
-					<font>Reg30Spaced</font>
-					<autoscroll>false</autoscroll>
-					<textcolor>ffFFC24B</textcolor>
-					<label>[LIGHT]$INFO[ListItem.ChannelName][/LIGHT]</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
 					<height>40</height>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1109" type="dialog">
-	<visible>VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.NextTitle) + !Skin.HasSetting(PVRNextUpDisabled) + !Window.IsVisible(videoosd) + !Window.IsVisible(1113) + String.IsEmpty(Window(home).Property(ShowXRay)) + Window.IsVisible(fullscreenvideo) + Integer.IsEqual(Player.TimeRemaining(hh),00) + Integer.IsEqual(Player.TimeRemaining(mm),00) + Integer.IsLessOrEqual(Player.TimeRemaining(ss),16) + !Integer.IsLessOrEqual(Player.TimeRemaining(ss),1) + !String.IsEmpty(Player.Duration) + [Integer.IsGreater(Player.Duration(mm),05) | Integer.IsGreater(Player.Duration(hh),00)]</visible>
+	<visible>VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.NextTitle) + !Skin.HasSetting(PVRNextUpDisabled) + !Window.IsVisible(videoosd) + !Window.IsVisible(1113) + String.IsEmpty(Window(home).Property(ShowXRay)) + Window.IsVisible(fullscreenvideo) + Integer.IsEqual(Player.TimeRemaining(hh),00) + Integer.IsEqual(Player.TimeRemaining(mm),00) + Integer.IsLessOrEqual(Player.TimeRemaining(ss),17) + !Integer.IsLessOrEqual(Player.TimeRemaining(ss),2) + !Integer.IsEmpty(Player.Duration) + [Integer.IsGreater(Player.Duration(mm),05) | Integer.IsGreater(Player.Duration(hh),00)]</visible>
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
 	<controls>
 		<control type="group">
@@ -66,6 +66,13 @@
 					<scroll>true</scroll>
 					<textcolor>ff000000</textcolor>				
 					<label>$INFO[VideoPlayer.NextTitle]</label>
+				</control>
+				<control type="image">
+					<top>22</top>
+					<left>-48</left>
+					<width>473</width>
+					<height>459</height>
+					<texture border="51">views/shadow_fo.png</texture>
 				</control>
 			</control>
 		</control>

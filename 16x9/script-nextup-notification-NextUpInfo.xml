@@ -116,6 +116,13 @@
 					<height>68</height>
 					<texture>osd/nextup/background.png</texture>
 				</control>
+				<control type="image">
+					<top>22</top>
+					<left>-48</left>
+					<width>473</width>
+					<height>459</height>
+					<texture border="51">views/shadow_fo.png</texture>
+				</control>
 				<!--  Next episode label -->
 				<control type="label">
 					<top>379</top>
