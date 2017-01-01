@@ -271,7 +271,7 @@
 				<width>320</width>
 				<height>480</height>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">views/movie_fallback.png</texture>
+				<texture>views/movie_fallback.png</texture>
 			</control>
 			<control type="image">
 				<top>48</top>
@@ -319,7 +319,7 @@
 				<width>320</width>
 				<height>480</height>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true">views/cast_fallback.png</texture>
+				<texture>views/cast_fallback.png</texture>
 			</control>
 			<control type="image">
 				<top>48</top>

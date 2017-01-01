@@ -24,6 +24,13 @@
 			<include>HiddenControl</include>
 			<visible>Control.IsEnabled(3)</visible>
 		</control>
+		<control id="9999" type="button">
+			<include>HiddenControl</include>
+			<onfocus>ClearProperty(InfoDialogCloseFocus,home)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
+			<onfocus>Select</onfocus>
+			<visible>!String.IsEmpty(Window(home).Property(InfoDialogCloseFocus))</visible>
+		</control>
 		<!-- Fanart -->
 		<include>Fanart</include>
 		<!-- Views -->

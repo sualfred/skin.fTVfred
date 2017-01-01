@@ -221,7 +221,7 @@
 						<height>23</height>
 						<colordiffuse>ffdadada</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<texture align="left">flags/cc.png</texture>
+						<texture>flags/cc.png</texture>
 						<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 					</control>
 					<include>AudioCodec</include>
@@ -523,7 +523,9 @@
 						<ondown condition="Control.IsVisible(50)">50</ondown>
 						<font>Med24</font>
 						<label>$INFO[Control.GetLabel(8)]</label>
-						<onclick>SetFocus(8)</onclick>
+						<onclick condition="!String.IsEqual(ListItem.DBType,tvshow)">SetFocus(8)</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">SetProperty(InfoDialogCloseFocus,1,home)</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">close</onclick>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
