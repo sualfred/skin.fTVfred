@@ -122,6 +122,7 @@
 					<width>473</width>
 					<height>459</height>
 					<texture border="51">views/shadow_fo.png</texture>
+					<colordiffuse>abffffff</colordiffuse>
 				</control>
 				<!--  Next episode label -->
 				<control type="label">
