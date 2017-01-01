@@ -1,5 +1,10 @@
 Changelog:
 
+3.4.0
+- Reworked PVR info dialogs
+- Workaround for "Browse TV Show" button in DialogVideoInfo for Emby users
+- Other minor changes
+
 3.3.9
 - Just minor things and code cleanup. Happy new year, folks!
 

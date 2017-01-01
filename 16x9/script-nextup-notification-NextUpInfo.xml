@@ -63,16 +63,6 @@
 				<bottom>90</bottom>
 				<width>378</width>
 				<height>456</height>
-				<!--  Next up label -->
-				<control type="label">
-					<width>auto</width>
-					<height>50</height>
-					<font>Med40</font>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff080808</shadowcolor>
-					<label>31164</label>
-				</control>
-				<!-- Next episode thumb -->
 				<control type="image">
 					<top>70</top>
 					<width>378</width>
@@ -102,7 +92,6 @@
 					<texture>views/OverlayHD.png</texture>
 					<visible>Integer.IsGreater(Control.GetLabel(3011),709)</visible>
 				</control>
-				<!-- Next episode countdown -->
 				<control type="image">
 					<left>134</left>
 					<top>163</top>
@@ -123,6 +112,15 @@
 					<height>459</height>
 					<texture border="51">views/shadow_fo.png</texture>
 					<colordiffuse>abffffff</colordiffuse>
+				</control>
+				<!--  Next up label -->
+				<control type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff080808</shadowcolor>
+					<label>31164</label>
 				</control>
 				<!--  Next episode label -->
 				<control type="label">

@@ -13,14 +13,6 @@
 				<bottom>90</bottom>
 				<width>378</width>
 				<height>423</height>
-				<control type="label">
-					<width>auto</width>
-					<height>50</height>
-					<font>Med40</font>
-					<textcolor>ffffffff</textcolor>
-					<shadowcolor>ff080808</shadowcolor>
-					<label>31164</label>
-				</control>
 				<control type="image">
 					<top>70</top>
 					<width>378</width>
@@ -57,6 +49,22 @@
 					<height>68</height>
 					<texture>osd/nextup/background.png</texture>
 				</control>
+				<control type="image">
+					<top>22</top>
+					<left>-48</left>
+					<width>473</width>
+					<height>459</height>
+					<texture border="51">views/shadow_fo.png</texture>
+					<colordiffuse>abffffff</colordiffuse>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>50</height>
+					<font>Med40</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>ff080808</shadowcolor>
+					<label>31164</label>
+				</control>
 				<control type="label">
 					<top>379</top>
 					<width>378</width>
@@ -67,14 +75,6 @@
 					<scroll>true</scroll>
 					<textcolor>ff000000</textcolor>				
 					<label>$INFO[VideoPlayer.NextTitle]</label>
-				</control>
-				<control type="image">
-					<top>22</top>
-					<left>-48</left>
-					<width>473</width>
-					<height>459</height>
-					<texture border="51">views/shadow_fo.png</texture>
-					<colordiffuse>abffffff</colordiffuse>
 				</control>
 			</control>
 		</control>
