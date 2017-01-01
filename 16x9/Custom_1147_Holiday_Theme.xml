@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1147" type="dialog">
 	<zorder>998</zorder>
-	<visible>System.Date(12-01,01-06)  + !Skin.HasSetting(HideHolidayTheme) + [[!Window.IsVisible(visualisation) + !VideoPlayer.IsFullscreen] | Window.IsActive(shutdownmenu) | Window.IsActive(pvrosdchannels) | Window.IsActive(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
+	<visible>System.Date(12-01,01-06)  + !Skin.HasSetting(HideHolidayTheme) + [[!Window.IsVisible(visualisation) + !VideoPlayer.IsFullscreen] | Window.IsActive(1113)| Window.IsActive(shutdownmenu) | Window.IsActive(pvrosdchannels) | Window.IsActive(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
 	<controls>
 		<control type="group">
 			<control type="group">
