@@ -153,6 +153,10 @@
 			</control>
 		</definition>
 	</include>
+	<!-- Param Top -->
+	<include name="ParamTop">
+		<top>$PARAM[top]</top>
+	</include>
 	<!-- Param Height -->
 	<include name="ParamHeight">
 		<height>$PARAM[height]</height>

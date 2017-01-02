@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1107">
-	<visible>Window.IsVisible(fullscreenvideo) + !String.IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(selectdialog) | Window.IsVisible(busydialog)]</visible>
+	<visible>Window.IsVisible(fullscreenvideo) + !String.IsEmpty(Window(home).Property(ShowXRay)) + [Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(1114) | Window.IsVisible(selectdialog) | Window.IsVisible(busydialog)]</visible>
 	<onload condition="!Player.Paused">Pause</onload>
 	<onunload condition="Player.Paused">Play</onunload>
 	<onunload>Dialog.Close(fullscreeninfo,true)</onunload>

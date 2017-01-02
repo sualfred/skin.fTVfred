@@ -985,8 +985,8 @@ msgstr "Changes the layout of the favourite items. Useful if you use the favouri
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
-msgid "View movie info"
-msgstr "View movie info"
+msgid "View video info"
+msgstr "View video info"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
@@ -1516,6 +1516,16 @@ msgstr ""
 #: /16x9/Variables.xml
 msgctxt "#31340"
 msgid "Enable the holiday overlay theme. This will add falling snow for the holiday season all over the skin."
+msgstr ""
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31341"
+msgid "Interested?"
+msgstr ""
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31342"
+msgid "Press [B]DOWN[/B] to watch the item."
 msgstr ""
 
 msgctxt "#31500"
