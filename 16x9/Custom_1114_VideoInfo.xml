@@ -555,6 +555,7 @@
 					<width>2600</width>
 					<height>576</height>
 					<onup condition="Control.IsVisible(96)">3002</onup>
+					<onup condition="!Control.IsVisible(96)">7000</onup>
 					<ondown>Back</ondown>
 					<ondown>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</ondown>
 					<onleft condition="String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))">7000</onleft>
@@ -791,6 +792,7 @@
 					<width>2600</width>
 					<height>576</height>
 					<onup condition="Control.IsVisible(96)">3002</onup>
+					<onup condition="!Control.IsVisible(96)">7000</onup>
 					<ondown condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Container(5000).ListItem.DBID)">close</ondown>
 					<ondown condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Container(5000).ListItem.DBID)">ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(5000).ListItem.DBID]/)</ondown>
 					<ondown condition="!VideoPlayer.Content(episodes)">select</ondown>
