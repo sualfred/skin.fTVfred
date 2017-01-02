@@ -509,7 +509,7 @@
 						<include>DialogVideoInfoAnimation</include>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>VideoPlayer.Content(movies) + !String.IsEmpty(Window(home).Property(SkinHelper.Player.Revenue)) + !String.IsEmpty(Window(home).Property(SkinHelper.Player.Budget))</visible>
+						<visible>VideoPlayer.Content(movies) + !String.IsEmpty(Window(home).Property(SkinHelper.Player.Revenue.formatted)) + !String.IsEmpty(Window(home).Property(SkinHelper.Player.Budget.formatted))</visible>
 						<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 						<animation condition="!Control.HasFocus(50) + !Control.HasFocus(5000)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
 						<control type="label">
@@ -527,7 +527,7 @@
 							<font>Light30Spaced</font>
 							<aligny>bottom</aligny>
 							<textcolor>ffbcbcbc</textcolor>
-							<label>$INFO[Window(home).Property(SkinHelper.Player.Budget.formatted),, $LOCALIZE[31236]], $INFO[Window(home).Property(SkinHelper.Player.Revenue ),,$ $LOCALIZE[31237]]</label>
+							<label>$INFO[Window(home).Property(SkinHelper.Player.Budget.formatted),,$ $LOCALIZE[31236]], $INFO[Window(home).Property(SkinHelper.Player.Revenue.formatted),,$ $LOCALIZE[31237]]</label>
 						</control>
 					</control>
 				</control>
