@@ -307,7 +307,7 @@
 						<width>23</width>
 						<height>23</height>
 						<texture>views/metacritics_logo.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))</visible>
 					</control>
 					<control type="label">
 						<top>-6</top>
@@ -316,11 +316,11 @@
 						<font>Bold23</font>
 						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
-						<label>$INFO[Window(Home).Property(SkinHelper.MetaCritic.Rating),,%]</label>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))</visible>
+						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.MC),,%]</label>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))</visible>
 					</control>
 					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))" />
 					</include>
 					<!-- Rotten Tomatoes -->
 					<control type="image">
@@ -328,14 +328,14 @@
 						<width>22</width>
 						<height>23</height>
 						<texture>views/rotten_fresh.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter)) + Integer.IsGreater(Window(Home).Property(SkinHelper.RottenTomatoesMeter),59)</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
 					</control>
 					<control type="image">
 						<top>4</top>
 						<width>24</width>
 						<height>23</height>
 						<texture>views/rotten_rotten.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.RottenTomatoesMeter),59)</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
 					</control>
 					<control type="label">
 						<top>-6</top>
@@ -344,25 +344,25 @@
 						<font>Bold23</font>
 						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
-						<label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesMeter),,%]</label>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))</visible>
+						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,%]</label>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
 					</control>
 					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))" />
 					</include>
 					<control type="image">
 						<top>4</top>
 						<width>17</width>
 						<height>23</height>
 						<texture>views/rotten_audience_high.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter)) + Integer.IsGreater(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter),59)</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),59)</visible>
 					</control>
 					<control type="image">
 						<top>4</top>
 						<width>30</width>
 						<height>23</height>
 						<texture>views/rotten_audience_low.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter),59)</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),59)</visible>
 					</control>
 					<control type="label">
 						<top>-6</top>
@@ -371,8 +371,8 @@
 						<font>Bold23</font>
 						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
-						<label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter),,%]</label>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter))</visible>
+						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),,%]</label>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
 					</control>
 				</control>
 				<control type="grouplist">
