@@ -965,6 +965,7 @@
 					<ondown condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)">back</ondown>
 					<ondown condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)">back</ondown>
 					<ondown condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)">ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(5000).ListItem.DBID]/)</ondown>
+					<ondown condition="!String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,episode)">select</ondown>
 					<onleft>7001</onleft>
 					<onright>noop</onright>
 					<onright condition="!Window.IsVisible(1103)">SetProperty(BounceRight,1,Home)</onright>
