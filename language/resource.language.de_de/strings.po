@@ -4,13 +4,13 @@
 # Addon Provider: Hitcher
 # Translators:
 # Translators:
-# sualfred <su4lfred@gmail.com>, 2015-2016
+# sualfred <su4lfred@gmail.com>, 2015-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-26 17:12+0000\n"
+"PO-Revision-Date: 2017-01-02 10:37+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1013,8 +1013,8 @@ msgstr "Ändert die Darstellung der Favouriten. Nützlich falls diese zum anzeig
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
-msgid "View movie info"
-msgstr "Zeige Film Info"
+msgid "View video info"
+msgstr "Zeige Video Info"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
@@ -1555,6 +1555,16 @@ msgid ""
 "Enable the holiday overlay theme. This will add falling snow for the holiday"
 " season all over the skin."
 msgstr "Aktiviert das Holiday Theme Overlay. Dies zeigt fallenden Schnee während der Weihnachtszeit überall im Skin."
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31341"
+msgid "Interested?"
+msgstr "Interessiert?"
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31342"
+msgid "Press [B]DOWN[/B] to watch the item."
+msgstr "Drücke nach [B]UNTEN[/B] um den Eintrag anzusehen."
 
 msgctxt "#31500"
 msgid "Widget Group 1"
