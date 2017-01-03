@@ -6,6 +6,8 @@
 	<onload>Control.Move(5000,1)</onload>
 	<onload>Control.Move(50,$INFO[Container(50).CurrentItem,-])</onload>
 	<onload>Control.Move(50,1)</onload>
+	<onload condition="String.IsEqual(Window(home).Property(SkinHelper.ListItem.Status),Ended)">SetProperty(ShowStatus,Ended,home)</onload>
+	<onunload>ClearProperty(ShowStatus,home)</onunload>
 	<onunload>ClearProperty(Similar,home)</onunload>
 	<onunload>ClearProperty(Details,home)</onunload>
 	<onunload condition="!String.IsEmpty(Window(home).Property(InfoDialogCloseFocus))">SetFocus(9999)</onunload>

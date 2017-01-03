@@ -3,9 +3,9 @@
 	<!-- musicinformation -->
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="String.IsEmpty(ListItem.DBType)">SetFocus(8)</onload>
-	<onload>SetProperty(TrackCount,$INFO[Window(home).Property(SkinHelper.Music.SongCount)],home)</onload>
-	<onload>SetProperty(TrackList,$INFO[Window(home).Property(SkinHelper.Music.TrackList)],home)</onload>
-	<onload>SetProperty(Albums,$INFO[Window(home).Property(SkinHelper.Music.Albums.Formatted)],home)</onload>
+	<onload>SetProperty(TrackCount,$INFO[Window(home).Property(SkinHelper.ListItem.SongCount)],home)</onload>
+	<onload>SetProperty(TrackList,$INFO[Window(home).Property(SkinHelper.ListItem.Tracks.Formatted)],home)</onload>
+	<onload>SetProperty(Albums,$INFO[Window(home).Property(SkinHelper.ListItem.Albums.Formatted)],home)</onload>
 	<onunload>ClearProperty(AlbumDetails,home)</onunload>
 	<onunload>ClearProperty(TrackList,home)</onunload>
 	<onunload>ClearProperty(TrackCount,home)</onunload>

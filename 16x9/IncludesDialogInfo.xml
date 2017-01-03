@@ -196,7 +196,7 @@
 						<width>auto</width>
 						<height>32</height>
 						<font>Light32</font>
-						<aligny>bottom</aligny>
+						<aligny>bottom</aligny>i
 						<textcolor>ffbebebe</textcolor>
 						<label>$INFO[ListItem.Year]</label>
 						<visible>!String.IsEmpty(ListItem.Year)</visible>
@@ -212,7 +212,7 @@
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
 					<include>Rating_TV</include>
-					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | String.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
+					<include condition="String.IsEmpty(Skin.String(RatingCountry)) | tring.IsEqual(Skin.String(RatingCountry),US)">Rating_MPAA</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
 					<control type="image">
@@ -226,6 +226,16 @@
 					</control>
 					<include>AudioCodec</include>
 					<include>ListItemResolution</include>
+					<control type="label">
+						<top>-7</top>
+						<width>auto</width>
+						<height>24</height>
+						<aligny>bottom</aligny>
+						<font>Bold23</font>
+						<textcolor>ffbebebe</textcolor>
+						<label>[CAPITALIZE]$LOCALIZE[31343][/CAPITALIZE]</label>
+						<visible>[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + String.IsEqual(Window(home).Property(ShowStatus),Ended)</visible>
+					</control>
 				</control>
 				<!-- Season Episode -->
 				<control type="grouplist">

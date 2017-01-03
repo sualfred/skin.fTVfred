@@ -1528,6 +1528,11 @@ msgctxt "#31342"
 msgid "Press [B]DOWN[/B] to watch the item."
 msgstr ""
 
+#: /16x9/IncludesDialogInfo.xml
+msgctxt "#31343"
+msgid "discontinued show"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
