@@ -95,7 +95,7 @@
 			</control>
 			<!-- Cover -->
 			<control type="group">
-				<visible>Player.HasAudio + Integer.IsGreater(MusicPlayer.Time,0) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
+				<visible>Player.HasAudio + Integer.IsGreater(MusicPlayer.Time,0) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.DiscArt))</visible>
 				<animation type="Hidden" reversible="false">
 					<effect type="slide" start="0,0" end="0,60" tween="sine" easing="out" time="600" delay="0" />
 					<effect type="fade" start="100" end="0" time="500" delay="0"/>
@@ -110,7 +110,7 @@
 					<top>772</top>
 					<width>150</width>
 					<height>150</height>
-					<texture diffuse="osd/cd.png">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<texture diffuse="osd/cd.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.DiscArt)]</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
 			</control>
