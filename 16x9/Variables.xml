@@ -2359,7 +2359,7 @@
 		<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(programs)">$LOCALIZE[0]</value>
 		<value condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(skinsettings) | Window.IsVisible(systeminfo) | Window.IsVisible(addonbrowser) | Window.IsVisible(profiles) | Window.IsVisible(filemanager)]">$LOCALIZE[5]</value>
-		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>		
+		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
 		<value>$INFO[Container.FolderName]</value>
 	</variable>
 	<variable name="MusicNavLabel2">

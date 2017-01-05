@@ -1533,6 +1533,26 @@ msgctxt "#31343"
 msgid "discontinued show"
 msgstr ""
 
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31344"
+msgid "View recordings"
+msgstr ""
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31345"
+msgid "Switch group"
+msgstr ""
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31346"
+msgid "View timers"
+msgstr ""
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31347"
+msgid "View guide"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

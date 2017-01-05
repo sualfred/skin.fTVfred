@@ -7,6 +7,10 @@
 	<views>10</views>
 	<controls>
 		<control type="group">
+			<!-- Hidden Controls -->
+			<control type="label" id="30">
+				<include>HiddenControl</include>
+			</control>
 			<!-- Fanart -->
 			<include>PVRFanart</include>
 			<visible>Control.IsVisible(10)</visible>
@@ -29,7 +33,7 @@
 						<font>Med48</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffdadada</textcolor>
-						<label>$VAR[HeadingLabel]  </label>
+						<label>$VAR[HeadingLabel]$INFO[Control.GetLabel(30),  “,”]  </label>
 					</control>
 					<control type="label">
 						<top>15</top>
@@ -91,80 +95,10 @@
 						<label>$INFO[System.Time]</label>
 					</control>
 				</control>
-				<!-- Controls -->
-				<control id="1000" type="grouplist">
-					<left>186</left>
-					<top>807</top>
-					<height>100</height>
-					<itemgap>0</itemgap>
-					<onup>10</onup>
-					<onleft>10</onleft>
-					<onright>10</onright>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<defaultcontrol always="true">1001</defaultcontrol>
-					<!-- Dummy to always set focus to first visible button -->
-					<control id="1001" type="button">
-						<width>0</width>
-						<height>0</height>
-						<label>-</label>
-						<onfocus>Right</onfocus>
-						<include>NoTextures</include>
-						<visible>!Control.HasFocus(1002) + !Control.HasFocus(20) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005)</visible>
-					</control>
-					<control id="30" type="button">
-						<width min="104" max="224">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>10</onup>
-						<ondown>3000</ondown>
-						<onclick>NextChannelGroup</onclick>
-						<font>Med24</font>
-						<label>[CAPITALIZE]$LOCALIZE[19141][CR]$VAR[PVRPath][/CAPITALIZE]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!String.IsEqual(ListItem.Label,..)</visible>
-					</control>
-					<control id="32" type="button">
-						<width min="104" max="224">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>10</onup>
-						<ondown>3000</ondown>
-						<onclick>ActivateWindow(tvrecordings)</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31546]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!String.IsEqual(Container(59).ListItem.Label,..)</visible>
-					</control>
-					<control id="34" type="button">
-						<width min="104" max="224">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>10</onup>
-						<ondown>3000</ondown>
-						<onclick>ActivateWindow(TVTimers)</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31548]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!String.IsEqual(Container(59).ListItem.Label,..)</visible>
-					</control>
-				</control>
 				<!-- title plot section -->
 				<control type="group">                    
 					<left>196</left>
-					<top>807</top>
+					<top>767</top>
 					<control type="grouplist">
 						<top>110</top>
 						<height>26</height>
@@ -201,7 +135,7 @@
 					<control type="textbox">
 						<top>143</top>
 						<width>1192</width>
-						<height>84e</height>
+						<height>124</height>
 						<align>left</align>
 						<font>Reg30Spaced</font>
 						<pagecontrol>99</pagecontrol>
@@ -219,7 +153,7 @@
 					<!-- More button -->
 					<control id="3000" type="button">
 						<left>1194</left>
-						<top>192</top>
+						<top>232</top>
 						<width>37</width>
 						<height>23</height>
 						<onup>10</onup>
@@ -234,20 +168,64 @@
 					<!-- More button -->
 					<control type="image">
 						<left>1194</left>
-						<top>192</top>
+						<top>232</top>
 						<width>37</width>
 						<height>23</height>
 						<texture>views/more_nf.png</texture>
 						<visible>Window.IsVisible(textviewer)</visible>
 					</control>
 				</control>
+				<!-- Controls -->
+				<control type="grouplist">
+					<left>196</left>
+					<top>212</top>
+					<height>40</height>
+					<itemgap>47</itemgap>
+					<orientation>horizontal</orientation>
+					<onright>1003</onright>
+					<onleft>1001</onleft>
+					<ondown>10</ondown>
+					<control type="button" id="1001">
+						<width>auto</width>
+						<height>40</height>
+						<font>Light32</font>
+						<aligny>bottom</aligny>
+						<textcolor>ff505559</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[31345]</label>
+						<onclick>NextChannelGroup</onclick>
+						<include>NoTextures</include>
+					</control>
+					<control type="button" id="1002">
+						<width>auto</width>
+						<height>40</height>
+						<font>Light32</font>
+						<aligny>bottom</aligny>
+						<textcolor>ff505559</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[31344]</label>
+						<onclick>ActivateWindow(tvrecordings)</onclick>
+						<include>NoTextures</include>
+					</control>
+					<control type="button" id="1003">
+						<width>auto</width>
+						<height>40</height>
+						<font>Light32</font>
+						<aligny>bottom</aligny>
+						<textcolor>ff505559</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[31346]</label>
+						<onclick>ActivateWindow(TVTimers)</onclick>
+						<include>NoTextures</include>
+					</control>
+				</control>
 			</control>
 			<!-- Guide -->
 			<control type="epggrid" id="10" description="EPG">     
 				<left>198</left>
-				<top>280</top>
+				<top>303</top>
 				<width>1722</width>
-				<height>490</height>
+				<height>547</height>
 				<onback>1001</onback>
 				<viewtype label="19069">list</viewtype>
 				<progresstexture border="5" colordiffuse="33FFFFFF">pvr/progressline.png</progresstexture>
@@ -255,12 +233,12 @@
 				<timeblocks>25</timeblocks>
 				<rulerunit>6</rulerunit>
 				<!-- Ruler -->
-				<rulerlayout height="90">
+				<rulerlayout height="47">
 					<control type="label" id="1">
-						<top>20</top>
+						<top>6</top>
 						<align>left</align>
 						<aligny>top</aligny>
-						<font>Med24Num</font>
+						<font>Bold20</font>
 						<textcolor>ffbebebe</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -276,15 +254,15 @@
 						<bordersize>10</bordersize>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 					</control>
-                    <control type="label">
+					<control type="label">
 						<top>-1</top>
-                        <left>90</left>
-                        <width>230</width>
+						<left>90</left>
+						<width>230</width>
 						<height>98</height>
-                        <aligny>center</aligny>
-                        <textcolor>ff5b6064</textcolor>
-                        <label>$INFO[ListItem.ChannelName]</label>
-                    </control>
+						<aligny>center</aligny>
+						<textcolor>ff5b6064</textcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
 				</channellayout>
 				<focusedchannellayout height="100" width="340">
 					<control type="image">
@@ -296,17 +274,17 @@
 						<bordersize>10</bordersize>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 					</control>
-                    <control type="label">
+					<control type="label">
 						<top>-1</top>
-                        <left>90</left>
-                        <width>230</width>
+						<left>90</left>
+						<width>230</width>
 						<height>98</height>
-                        <aligny>center</aligny>
-                        <selectedcolor>ffFFC24B</selectedcolor>
-                        <textcolor>ffFFC24B</textcolor>
-                        <scroll>false</scroll>
-                        <label>$INFO[ListItem.ChannelName]</label>
-                    </control>
+						<aligny>center</aligny>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<textcolor>ffFFC24B</textcolor>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
 				</focusedchannellayout>    
 				<!-- Grid -->
 				<itemlayout height="100" width="260">

@@ -444,6 +444,11 @@
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>22</size>
 		</font>
+		<font>
+			<name>Bold20</name>
+			<filename>HelveticaNeue_Bold.ttf</filename>
+			<size>20</size>
+		</font>
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
@@ -869,6 +874,11 @@
 			<name>Bold22</name>
 			<filename>Roboto-Bold.ttf</filename>
 			<size>22</size>
+		</font>
+		<font>
+			<name>Bold20</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<size>20</size>
 		</font>
 		<!-- Required for system -->
 		<font>
@@ -1423,6 +1433,13 @@
 			<aspect>0.9</aspect>
 			<style>bold</style>
 			<size>22</size>
+		</font>
+		<font>
+			<name>Bold20</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>bold</style>
+			<size>20</size>
 		</font>
 		<!-- Required for system -->
 		<font>

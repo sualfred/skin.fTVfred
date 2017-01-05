@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-04 11:39+0000\n"
+"PO-Revision-Date: 2017-01-05 16:50+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1570,6 +1570,26 @@ msgstr "Drücke nach [B]UNTEN[/B] um den Eintrag anzusehen."
 msgctxt "#31343"
 msgid "discontinued show"
 msgstr "eingestellte Serie"
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31344"
+msgid "View recordings"
+msgstr "Zeige Aufnahmen"
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31345"
+msgid "Switch group"
+msgstr "Gruppe wechseln"
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31346"
+msgid "View timers"
+msgstr "Geplante Aufnahmen"
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31347"
+msgid "View guide"
+msgstr "Öffne Guide"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
