@@ -1,5 +1,9 @@
 Changelog:
 
+3.4.3
+- Relayouted MyPVRChannels.xml
+- Relayouted MyPVRGuide.xml
+
 3.4.2
 - More script.skin.helper.service fixes
 - Added label for discontinued shows in video info dialog

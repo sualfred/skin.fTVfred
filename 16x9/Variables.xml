@@ -4462,10 +4462,6 @@
 		<value condition="String.EndsWith(ListItem.Episode,s399)">$LOCALIZE[31146] $LOCALIZE[20359] 399</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
-	<variable name="PVRPath">
-		<value condition="String.IsEqual(Container.FolderPath,pvr://channels/tv/all channels/)">$LOCALIZE[19287]</value>
-		<value>$INFO[Container.FolderName]</value>
-	</variable>
 	<variable name="SeekStepIcon">
 		<value condition="[!String.IsEmpty(Player.SeekOffset) + !String.Contains(Player.SeekOffset,-)] | [!String.IsEmpty(Player.SeekStepSize) + !String.Contains(Player.SeekStepSize,-)]">osd/step_forward.png</value>
 		<value condition="[!String.IsEmpty(Player.SeekOffset) + String.Contains(Player.SeekOffset,-)] | [!String.IsEmpty(Player.SeekStepSize) + String.Contains(Player.SeekStepSize,-)]">osd/step_back.png</value>
