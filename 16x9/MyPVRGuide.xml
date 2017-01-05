@@ -226,6 +226,8 @@
 				<top>303</top>
 				<width>1722</width>
 				<height>547</height>
+				<onup>1001</onup>
+				<ondown>noop</ondown>
 				<onback>1001</onback>
 				<viewtype label="19069">list</viewtype>
 				<progresstexture border="5" colordiffuse="33FFFFFF">pvr/progressline.png</progresstexture>
