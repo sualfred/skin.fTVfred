@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!--  -->
 	<controls>
 		<!-- Background -->
 		<include>DialogBackgroundImage</include>
@@ -29,10 +28,10 @@
 			<!-- Heading -->
 			<control type="group">
 				<width>816</width>
-				<height>97</height>
+				<height>120</height>
 				<control type="image">
 					<width>816</width>
-					<height>97</height>
+					<height>120</height>
 					<texture border="2">dialogs/DialogConfirm.png</texture>
 				</control>
 				<control id="1" type="label">

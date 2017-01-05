@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="SortDirectionLabel">
+		<value condition="Container.SortDirection(ascending)">$LOCALIZE[584]</value>
+		<value condition="Container.SortDirection(descending)">$LOCALIZE[585]</value>
+	</variable>
 	<variable name="SongListFocusedColor">
 		<value condition="Control.HasFocus(54)">ffe9a01e</value>
 		<value>ffffffff</value>

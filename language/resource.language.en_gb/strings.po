@@ -1553,6 +1553,11 @@ msgctxt "#31347"
 msgid "View guide"
 msgstr ""
 
+#: /16x9/MyPVRTimers.xml
+msgctxt "#31348"
+msgid "Toggle disabled items"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
