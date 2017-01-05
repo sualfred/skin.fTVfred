@@ -1380,6 +1380,15 @@
 					<top>6</top>
 					<width>52</width>
 					<height>52</height>
+					<texture>pvr/timer.png</texture>
+					<colordiffuse>White</colordiffuse>
+					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<left>1152</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
 					<texture>pvr/rec.png</texture>
 					<colordiffuse>ftvgold</colordiffuse>
 					<visible>ListItem.IsRecording</visible>
@@ -1551,6 +1560,15 @@
 					<font>Med24</font>
 					<label>$INFO[ListItem.StartDate,, / ]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
 					<visible>Control.HasFocus(59)</visible>
+				</control>
+				<control type="image">
+					<left>1152</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>pvr/timer.png</texture>
+					<colordiffuse>White</colordiffuse>
+					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
 				<control type="image">
 					<left>1152</left>
