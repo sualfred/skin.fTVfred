@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="PostPlayCountdown">
+		<value condition="String.IsEqual(Window.Property(countdown),1)">$LOCALIZE[31353]</value>
+		<value>$LOCALIZE[31352]</value>
+	</variable>
 	<variable name="SortDirectionLabel">
 		<value condition="Container.SortDirection(ascending)">$LOCALIZE[584]</value>
 		<value condition="Container.SortDirection(descending)">$LOCALIZE[585]</value>

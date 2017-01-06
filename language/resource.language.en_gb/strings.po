@@ -1560,7 +1560,7 @@ msgstr ""
 
 #: /16x9/script-nextup-notification-PostPlayInfo.xml
 msgctxt "#31349"
-msgid "Other in progress shows"
+msgid "More in progress shows"
 msgstr ""
 
 #: /16x9/script-nextup-notification-PostPlayInfo.xml
@@ -1576,6 +1576,11 @@ msgstr ""
 #: /16x9/script-nextup-notification-PostPlayInfo.xml
 msgctxt "#31352"
 msgid "seconds"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31353"
+msgid "second"
 msgstr ""
 
 msgctxt "#31500"

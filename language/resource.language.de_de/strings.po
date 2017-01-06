@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-05 16:50+0000\n"
+"PO-Revision-Date: 2017-01-06 21:12+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1590,6 +1590,36 @@ msgstr "Geplante Aufnahmen"
 msgctxt "#31347"
 msgid "View guide"
 msgstr "Öffne Guide"
+
+#: /16x9/MyPVRTimers.xml
+msgctxt "#31348"
+msgid "Toggle disabled items"
+msgstr "Deaktivierte zeigen/verbergen"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31349"
+msgid "More in progress shows"
+msgstr "Andere angefangene Serien"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31350"
+msgid "Repeat last episode"
+msgstr "Letzte Folge wiederholen"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31351"
+msgid "Starts in"
+msgstr "Startet in"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31352"
+msgid "seconds"
+msgstr "Sekunden"
+
+#: /16x9/Variables.xml
+msgctxt "#31353"
+msgid "second"
+msgstr "Sekunde"
 
 msgctxt "#31500"
 msgid "Widget Group 1"
