@@ -154,6 +154,7 @@
 				<visible>Skin.HasSetting(HideOSDControls)</visible>
 				<include>HiddenControl</include>
 				<onclick>SetProperty(ShowOptions,1,home)</onclick>
+				<onclick>SetFocus(201)</onclick>
 				<onclick>8</onclick>
 			</control>
 			<!--Xray Icon-->
