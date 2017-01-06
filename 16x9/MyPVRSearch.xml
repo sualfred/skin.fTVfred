@@ -245,7 +245,7 @@
 					<height>67</height>
 					<font>Bold20</font>
 					<textcolor>ffbebebe</textcolor>
-					<label>$LOCALIZE[180] / $LOCALIZE[515]</label>
+					<label>$LOCALIZE[21820]</label>
 				</control>
 			</control>
 			<!-- Results-->
