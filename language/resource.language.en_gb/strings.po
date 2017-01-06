@@ -1558,6 +1558,16 @@ msgctxt "#31348"
 msgid "Toggle disabled items"
 msgstr ""
 
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31349"
+msgid "Other in progress shows"
+msgstr ""
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31350"
+msgid "Repeat last episode"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
