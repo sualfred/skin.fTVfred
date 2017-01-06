@@ -1568,6 +1568,16 @@ msgctxt "#31350"
 msgid "Repeat last episode"
 msgstr ""
 
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31351"
+msgid "Starts in"
+msgstr ""
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31352"
+msgid "seconds"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"
