@@ -120,7 +120,7 @@
 								<!-- Small Details -->
 								<control type="grouplist">
 									<top>170</top>
-									<height>26</height>
+									<height>30</height>
 									<itemgap>10</itemgap>
 									<orientation>horizontal</orientation>
 									<usecontrolcoords>true</usecontrolcoords>
@@ -130,7 +130,15 @@
 										<font>Med24Num</font>
 										<aligny>bottom</aligny>
 										<textcolor>ffbebebe</textcolor>
-										<label>$INFO[Window.Property(next.duration),$LOCALIZE[180]: , $LOCALIZE[31147]]</label>
+										<label>$INFO[Window.Property(next.duration),, $LOCALIZE[31147]]</label>
+									</control>
+									<control type="label">
+										<width>auto</width>
+										<height>24</height>
+										<font>Med24Num</font>
+										<aligny>bottom</aligny>
+										<textcolor>ffbebebe</textcolor>
+										<label>$INFO[Window.Property(next.year),[COLOR ff707070]$LOCALIZE[31152]:[/COLOR] ]</label>
 									</control>
 								</control>
 							</control>
@@ -207,7 +215,7 @@
 								<onleft>close</onleft>
 								<onright>close</onright>
 								<onup condition="Control.IsVisible(99)">3000</onup>
-								<control id="200" type="button">
+								<control id="102" type="button">
 									<width min="144" max="320">auto</width>
 									<wrapmultiline>true</wrapmultiline>
 									<height>100</height>
@@ -239,25 +247,15 @@
 				<control type="group">
 					<visible>Integer.IsGreater(Container(400).NumItems,0)</visible>
 					<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
-					<control type="group">
+					<control type="label">
 						<left>90</left>
 						<top>750</top>
-						<!-- Heading / Current item / Total items -->
-						<control type="grouplist">
-							<height>80</height>
-							<itemgap>10</itemgap>
-							<orientation>horizontal</orientation>
-							<usecontrolcoords>true</usecontrolcoords>
-							<include>VisibleDelayFadeAnimation</include>
-							<control type="label">
-								<width>auto</width>
-								<height>60</height>
-								<font>Med40</font>
-								<aligny>bottom</aligny>
-								<textcolor>ffdadada</textcolor>
-								<label>$LOCALIZE[31349]</label>
-							</control>
-						</control>
+						<width>auto</width>
+						<height>60</height>
+						<font>Med40</font>
+						<aligny>bottom</aligny>
+						<textcolor>ffdadada</textcolor>
+						<label>$LOCALIZE[31349]</label>
 					</control>
 					<!-- video list -->
 					<control type="fixedlist" id="400">
