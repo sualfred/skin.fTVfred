@@ -154,7 +154,7 @@
 				<visible>Skin.HasSetting(HideOSDControls)</visible>
 				<include>HiddenControl</include>
 				<onclick>SetProperty(ShowOptions,1,home)</onclick>
-				<onclick>8</onclick>
+				<onclick>SetFocus(8)</onclick>
 			</control>
 			<!--Xray Icon-->
 			<control type="grouplist">
@@ -195,23 +195,39 @@
 			</control>
 			<!-- Options -->
 			<control type="group">
-				<visible allowhiddenfocus="true">!Player.Forwarding + !Player.Rewinding + !String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(1000).HasFocus</visible>		
-				<control id="200" type="grouplist">
-					<right>92</right>
+				<visible allowhiddenfocus="true">!Player.Forwarding + !Player.Rewinding + !String.IsEmpty(Window(home).Property(ShowOptions)) + !ControlGroup(1000).HasFocus</visible>
+				<control id="100" type="grouplist">
+					<left>92</left>
 					<bottom>128</bottom>
 					<width>600</width>
 					<height>600</height>
 					<align>right</align>
 					<itemgap>0</itemgap>
 					<onleft>noop</onleft>
-					<onright>noop</onright>
+					<onright>8</onright>
 					<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
 					<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
 					<ondown>ClearProperty(ShowOptions,home)</ondown>
 					<orientation>vertical</orientation>
+					<!-- User rating -->
+					<control type="button" id="201">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>left</align>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<label>$LOCALIZE[31194]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>SetProperty(SetUserRating,music,home)</onclick>
+						<onclick>setrating</onclick>
+						<visible>!String.IsEmpty(MusicPlayer.DBID)</visible>
+					</control>
 					<!-- Lyrics -->
 					<control type="button" id="9">
-						<align>right</align>
+						<align>left</align>
 						<width>600</width>
 						<height>58</height>
 						<font>Light32</font>
@@ -225,6 +241,34 @@
 						<onclick condition="String.IsEmpty(Skin.String(LyricAddon))">Skin.SetAddon(LyricAddon,xbmc.python.lyrics)</onclick>
 						<onclick condition="!String.IsEmpty(Skin.String(LyricAddon))">XBMC.RunScript($INFO[Skin.String(LyricAddon)])</onclick>
 					</control>
+					<!-- Visualisation Options -->
+					<control type="button" id="202">
+						<width>600</width>
+						<height>58</height>
+						<font>Light32</font>
+						<align>left</align>
+						<textcolor>ffffffff</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<focusedcolor>ffffc04b</focusedcolor>
+						<label>$LOCALIZE[250]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>SetFocus(1100)</onclick>
+					</control>
+				</control>
+				<control id="200" type="grouplist">
+					<right>92</right>
+					<bottom>128</bottom>
+					<width>600</width>
+					<height>600</height>
+					<align>right</align>
+					<itemgap>0</itemgap>
+					<onleft>202</onleft>
+					<onright>noop</onright>
+					<ondown condition="!Skin.HasSetting(HideOSDControls)">304</ondown>
+					<ondown condition="Skin.HasSetting(HideOSDControls)">400</ondown>
+					<ondown>ClearProperty(ShowOptions,home)</ondown>
+					<orientation>vertical</orientation>
 					<!-- Playlist -->
 					<control type="button" id="10">
 						<align>right</align>
@@ -241,20 +285,6 @@
 						<onclick condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Close</onclick>
 						<onclick>ActivateWindow(MusicPlaylist)</onclick>
 						<visible>Integer.IsGreater(MusicPlayer.PlaylistLength,1)</visible>
-					</control>
-					<!-- Visualisation Options -->
-					<control type="button" id="202">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>right</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[250]</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>SetFocus(1100)</onclick>
 					</control>
 					<!-- Repeat -->
 					<control type="button" id="7">
@@ -283,21 +313,6 @@
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onclick>PlayerControl(Random)</onclick>
-					</control>
-					<!-- User rating -->
-					<control type="button" id="201">
-						<width>600</width>
-						<height>58</height>
-						<font>Light32</font>
-						<align>right</align>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<focusedcolor>ffffc04b</focusedcolor>
-						<label>$LOCALIZE[31194]</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>SetProperty(SetUserRating,music,home)</onclick>
-						<onclick>setrating</onclick>
 					</control>
 				</control>
 			</control>
