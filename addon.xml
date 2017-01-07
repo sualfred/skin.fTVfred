@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.fTVfred-krypton"
-	version="3.4.3"
+	version="3.4.4"
 	name="fTV Fred Edition (Krypton)"
 	provider-name="Sualfred">
 	<requires>
@@ -33,9 +33,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.4.3[/B]
-- Relayouted MyPVRChannels.xml
-- Relayouted MyPVRGuide.xml
+[B]3.4.4[/B]
+- Added NextUP PostPlay dialog
+- Fixed some MusicOSD issues
 
 See changelog.txt for more details.</news>
 	</extension>

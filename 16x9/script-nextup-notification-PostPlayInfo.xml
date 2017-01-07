@@ -71,7 +71,7 @@
 									<centerleft>50%</centerleft>
 									<width>130</width>
 									<height>130</height>
-									<texture fallback="osd/nextup/postplay/30-30.png">osd/nextup/postplay/30-$INFO[Window.Property(countdown)].png</texture>
+									<texture fallback="osd/nextup/postplay/15-30.png">osd/nextup/postplay/15-$INFO[Window.Property(countdown)].png</texture>
 								</control>
 							</control>
 							<control type="image">

@@ -1,5 +1,9 @@
 Changelog:
 
+3.4.4
+- Added NextUP PostPlay dialog
+- Fixed some MusicOSD issues
+
 3.4.3
 - Relayouted MyPVRChannels.xml
 - Relayouted MyPVRGuide.xml
