@@ -54,6 +54,26 @@
 								<aspectratio align="center">scale</aspectratio>
 								<texture background="true" fallback="views/episode_fallback.png">$INFO[Window.Property(next.thumb)]</texture>
 							</control>
+							<control type="group">
+								<visible>!String.IsEmpty(Window.Property(countdown)) + String.IsEmpty(Window.Property(stillwatching))</visible>
+								<top>48</top>
+								<width>640</width>
+								<height>480</height>
+								<control type="image">
+									<centertop>50%</centertop>
+									<centerleft>50%</centerleft>
+									<width>130</width>
+									<height>130</height>
+									<texture>osd/nextup/postplay/bg_play.png</texture>
+								</control>
+								<control type="image">
+									<centertop>50%</centertop>
+									<centerleft>50%</centerleft>
+									<width>130</width>
+									<height>130</height>
+									<texture fallback="osd/nextup/postplay/15.png">osd/nextup/postplay/blank$INFO[Window.Property(countdown)].png</texture>
+								</control>
+							</control>
 							<control type="image">
 								<top>48</top>
 								<width>640</width>
@@ -228,7 +248,7 @@
 									<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 								</control>
 								<control id="101" type="button">
-									<width min="200" max="300">auto</width>
+									<width min="200" max="320">auto</width>
 									<wrapmultiline>true</wrapmultiline>
 									<height>100</height>
 									<font>Med24</font>
