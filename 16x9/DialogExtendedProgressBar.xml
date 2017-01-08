@@ -10,52 +10,65 @@
 			<right>12</right>
 			<top>12</top>
 			<width>636</width>
-			<height>223</height>
+			<height>224</height>
+			<!-- Hidden Control -->
+			<control id="32" type="progress">
+				<top>-100</top>
+			</control>
 			<!-- Background image -->
 			<control type="image">
 				<width>636</width>
-				<height>234</height>
+				<height>224</height>
 				<texture border="48">views/shadow_fo.png</texture>
 			</control>
 			<control type="image">
 				<left>48</left>
 				<top>48</top>
 				<width>540</width>
-				<height>138</height>
+				<height>128</height>
 				<texture border="4">dialogs/DialogNotificationBackground.png</texture>
-			</control>		
-			<control id="32" type="progress">
-				<left>49</left>
-				<top>177</top>
-				<width>538</width>
-				<height>8</height>
-				<texturebg border="2">views/ProgressBack.png</texturebg>
-				<lefttexture>-</lefttexture>
-				<midtexture border="2">views/ProgressBar.png</midtexture>
-				<righttexture>-</righttexture>
-				<overlaytexture>-</overlaytexture>
 			</control>
-			<!-- Icon back -->
-			<control type="image">
-				<left>63</left>
-				<top>63</top>
-				<width>97</width>
-				<height>97</height>
-				<texture>dialogs/notification_busy_small.png</texture>
-				<animation center="auto" condition="true" effect="rotate" end="-360" loop="true" reversible="false" time="1500">Conditional</animation>
-			</control>
-			<!-- Icon -->
-			<control type="image">
-				<left>63</left>
-				<top>63</top>
-				<width>97</width>
-				<height>97</height>
-				<texture>dialogs/notification_downloading.png</texture>
+			<!-- icon -->
+			<control type="group">
+				<left>54</left>
+				<top>54</top>
+				<width>116</width>
+				<height>116</height>
+				<!-- Icon back -->
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/progress/bg.png</texture>
+				</control>
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/progress/bg_circle.png</texture>
+				</control>
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/progress/$VAR[ExtendedProgressCircle].png</texture>		
+					<colordiffuse>ffdadada</colordiffuse>
+				</control>
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/progress/13.png</texture>
+					<colordiffuse>ffd4992b</colordiffuse>
+					<animation center="auto" condition="true" effect="rotate" end="-360" loop="true" reversible="false" time="1500">Conditional</animation>
+				</control>
+				<!-- Icon -->
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/icons/downloading.png</texture>
+				</control>
 			</control>
 			<!-- Heading -->
 			<control id="30" type="label">
 				<left>182</left>
-				<top>70</top>
+				<top>72</top>
 				<width>388</width>
 				<height>44</height>
 				<font>Med30</font>
@@ -65,7 +78,7 @@
 			<!-- Details -->
 			<control id="31" type="label">
 				<left>182</left>
-				<top>112</top>
+				<top>114</top>
 				<width>388</width>
 				<height>36</height>
 				<font>Reg25</font>

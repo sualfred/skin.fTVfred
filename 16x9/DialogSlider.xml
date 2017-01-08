@@ -5,57 +5,76 @@
 	<controls>
 		<!-- Main group -->
 		<control type="group">
-			<include>NotificationAnimation</include>
-			<centerleft>50%</centerleft>
-			<top>26</top>
-			<width>738</width>
-			<height>163</height>
+			<include>DialogAnimation</include>
+			<right>12</right>
+			<top>12</top>
+			<width>800</width>
+			<height>224</height>
+			<!-- Hidden Control -->
+			<control id="32" type="progress">
+				<top>-100</top>
+			</control>
 			<!-- Background image -->
 			<control type="image">
-				<centerleft>50%</centerleft>
-				<width>100%</width>
-				<height>100%</height>
-				<texture border="4">dialogs/notification_back.png</texture>
+				<width>800</width>
+				<height>224</height>
+				<texture border="48">views/shadow_fo.png</texture>
 			</control>
-			<!-- Icon back -->
 			<control type="image">
-				<left>26</left>
-				<top>26</top>
-				<width>111</width>
-				<height>111</height>
-				<texture>dialogs/notification_icon.png</texture>
+				<left>48</left>
+				<top>48</top>
+				<width>704</width>
+				<height>128</height>
+				<texture border="4">dialogs/DialogNotificationBackground.png</texture>
 			</control>
-			<!-- Icon -->
-			<control type="image">
-				<left>26</left>
-				<top>26</top>
-				<width>111</width>
-				<height>111</height>
-				<texture>dialogs/notification_slider.png</texture>
+			<!-- icon -->
+			<control type="group">
+				<left>54</left>
+				<top>54</top>
+				<width>116</width>
+				<height>116</height>
+				<!-- Icon back -->
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/progress/bg.png</texture>
+				</control>
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/progress/bg_circle.png</texture>
+				</control>
+				<!-- Icon -->
+				<control type="image">
+					<width>116</width>
+					<height>116</height>
+					<texture>dialogs/icons/slider.png</texture>
+				</control>
 			</control>
 			<!-- Heading -->
 			<control id="10" type="label">
-				<left>160</left>
-				<top>42</top>
+				<left>182</left>
+				<top>72</top>
 				<width>552</width>
-				<height>31</height>
-				<font>Light31</font>
-				<textcolor>fff6f6f6</textcolor>
+				<height>44</height>
+				<font>Med30</font>
+				<scroll>true</scroll>
+				<textcolor>ffdadada</textcolor>
 			</control>
-			<!-- Details -->
 			<control id="12" type="label">
-				<left>160</left>
-				<top>47</top>
-				<width>552</width>
-				<height>26</height>
+				<left>182</left>
+				<top>72</top>
 				<align>right</align>
-				<font>Light26</font>
+				<width>552</width>
+				<height>44</height>
+				<font>Light30</font>
+				<scroll>true</scroll>
 				<textcolor>fffbbb45</textcolor>
 			</control>
-			<!-- Slider -->
+			<!-- Details -->
 			<control id="11" type="slider">
-				<left>160</left>
-				<top>104</top>
+				<left>182</left>
+				<top>130</top>
 				<width>552</width>
 				<height>11</height>
 				<orientation>horizontal</orientation>

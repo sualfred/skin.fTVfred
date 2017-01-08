@@ -1064,52 +1064,61 @@
 				<right>12</right>
 				<top>12</top>
 				<width>636</width>
-				<height>223</height>
+				<height>224</height>
 				<!-- Background image -->
 				<control type="image">
 					<width>636</width>
-					<height>223</height>
+					<height>224</height>
 					<texture border="48">views/shadow_fo.png</texture>
 				</control>
 				<control type="image">
 					<left>48</left>
 					<top>48</top>
 					<width>540</width>
-					<height>127</height>
+					<height>128</height>
 					<texture border="4">dialogs/DialogNotificationBackground.png</texture>
 				</control>
-				<!-- Icon back -->
-				<control type="image">
-					<left>63</left>
-					<top>63</top>
-					<width>97</width>
-					<height>97</height>
-					<texture>dialogs/notification_icon_small.png</texture>
-				</control>
-				<!-- Info default -->
-				<control type="image">
-					<left>63</left>
-					<top>63</top>
-					<width>97</width>
-					<height>97</height>
-					<texture>DefaultIconInfo.png</texture>
+				<!-- icon -->
+				<control type="group">
+					<left>54</left>
+					<top>54</top>
+					<width>116</width>
+					<height>116</height>
+					<!-- Icon back -->
+					<control type="image">
+						<width>116</width>
+						<height>116</height>
+						<texture>dialogs/progress/bg.png</texture>
+					</control>
+					<control type="image">
+						<width>116</width>
+						<height>116</height>
+						<texture>dialogs/progress/bg_circle.png</texture>
+					</control>
+					<!-- Icon -->
+					<control type="image">
+						<width>116</width>
+						<height>116</height>
+						<texture>dialogs/icons/info.png</texture>
+					</control>
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(50)</visible>
 					<!-- Heading -->
-					<control type="label">
+					<control id="30" type="label">
 						<left>182</left>
-						<top>70</top>
+						<top>72</top>
 						<width>388</width>
 						<height>44</height>
 						<font>Med30</font>
+						<scroll>true</scroll>
 						<textcolor>ffdadada</textcolor>
-						<label>$LOCALIZE[31314]</label>					
+						<label>$LOCALIZE[31314]</label>
 					</control>
 					<!-- Details -->
-					<control type="label">
+					<control id="31" type="label">
 						<left>182</left>
-						<top>112</top>
+						<top>114</top>
 						<width>388</width>
 						<height>36</height>
 						<font>Reg25</font>
@@ -1121,19 +1130,20 @@
 				<control type="group">
 					<visible>Control.HasFocus(5000)</visible>
 					<!-- Heading -->
-					<control type="label">
+					<control id="30" type="label">
 						<left>182</left>
-						<top>70</top>
+						<top>72</top>
 						<width>388</width>
 						<height>44</height>
 						<font>Med30</font>
+						<scroll>true</scroll>
 						<textcolor>ffdadada</textcolor>
-						<label>$LOCALIZE[31341]</label>					
+						<label>$LOCALIZE[31341]</label>
 					</control>
 					<!-- Details -->
-					<control type="label">
+					<control id="31" type="label">
 						<left>182</left>
-						<top>112</top>
+						<top>114</top>
 						<width>388</width>
 						<height>36</height>
 						<font>Reg25</font>
