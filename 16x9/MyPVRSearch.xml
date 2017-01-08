@@ -90,7 +90,7 @@
 				</control>
 			</control>
 			<!-- Controls -->
-			<control type="grouplist">
+			<control type="grouplist" id="1000">
 				<left>196</left>
 				<top>212</top>
 				<height>40</height>
@@ -104,7 +104,7 @@
 					<height>40</height>
 					<font>Light32</font>
 					<aligny>bottom</aligny>
-					<textcolor>ff505559</textcolor>
+					<textcolor>$VAR[PVRButtonColor]</textcolor>
 					<focusedcolor>ffffc24b</focusedcolor>
 					<label>$LOCALIZE[31345]</label>
 					<include>NoTextures</include>
@@ -114,7 +114,7 @@
 					<height>40</height>
 					<font>Light32</font>
 					<aligny>bottom</aligny>
-					<textcolor>ff505559</textcolor>
+					<textcolor>$VAR[PVRButtonColor]</textcolor>
 					<focusedcolor>ffffc24b</focusedcolor>
 					<include>NoTextures</include>
 				</control>
@@ -123,7 +123,7 @@
 					<height>40</height>
 					<font>Light32</font>
 					<aligny>bottom</aligny>
-					<textcolor>ff505559</textcolor>
+					<textcolor>$VAR[PVRButtonColor]</textcolor>
 					<focusedcolor>ffffc24b</focusedcolor>
 					<label>$LOCALIZE[31086]: $VAR[SortDirectionLabel]</label>
 					<include>NoTextures</include>

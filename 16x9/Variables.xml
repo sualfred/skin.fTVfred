@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="PVRButtonColor">
+		<value condition="ControlGroup(1000).HasFocus">ff8e8b90</value>
+		<value>ff505559</value>
+	</variable>
 	<variable name="PostPlayCountdown">
 		<value condition="String.IsEqual(Window.Property(countdown),1)">$LOCALIZE[31353]</value>
 		<value>$LOCALIZE[31352]</value>

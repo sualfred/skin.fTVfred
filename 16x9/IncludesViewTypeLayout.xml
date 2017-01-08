@@ -1350,8 +1350,8 @@
 					<height>67</height>
 					<textcolor>ffdadada</textcolor>
 					<selectedcolor>ffdadada</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.Title][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
 				<control type="label">
@@ -1361,8 +1361,8 @@
 					<height>67</height>
 					<textcolor>ffdadada</textcolor>
 					<selectedcolor>ffdadada</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.Title][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 				</control>
 				<control type="label">
@@ -1400,8 +1400,8 @@
 					<height>67</height>
 					<textcolor>ff99a2a6</textcolor>
 					<selectedcolor>ff99a2a6</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.StartDate][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.StartDate]</label>
 				</control>
 				<control type="label">
 					<top>31</top>
@@ -1411,7 +1411,7 @@
 					<font>Med24</font>
 					<textcolor>ff99a2a6</textcolor>
 					<selectedcolor>ff99a2a6</selectedcolor>
-					<label fallback="195">[LIGHT]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ][/LIGHT]</label>
+					<label fallback="195">$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 				</control>
 			</control>
 		</itemlayout>
@@ -1454,8 +1454,8 @@
 					<width>230</width>
 					<height>98</height>
 					<aligny>center</aligny>
-					<selectedcolor>ffFFC24B</selectedcolor>
-					<textcolor>ffffffff</textcolor>
+					<selectedcolor>ff5b6064</selectedcolor>
+					<textcolor>ff5b6064</textcolor>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<scroll>false</scroll>
 					<visible>!Control.HasFocus(59)</visible>
@@ -1502,8 +1502,8 @@
 					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
 					<selectedcolor>ffFFC24B</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.Title][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
 				<control type="label">
@@ -1513,8 +1513,8 @@
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
 					<selectedcolor>ffFFC24B</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.Title][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!Control.HasFocus(59) + !ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>
 				<control type="label">
@@ -1524,8 +1524,8 @@
 					<height>67</height>
 					<textcolor>ffFFC24B</textcolor>
 					<selectedcolor>ffFFC24B</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.Title][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 				</control>
 				<control type="label">
@@ -1535,8 +1535,8 @@
 					<height>67</height>
 					<textcolor>ffffffff</textcolor>
 					<selectedcolor>ffFFC24B</selectedcolor>
-					<font>Med26</font>
-					<label fallback="195">[LIGHT]$INFO[ListItem.Title][/LIGHT]</label>
+					<font>Med24</font>
+					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 				</control>
 				<control type="label">
@@ -1586,9 +1586,9 @@
 					<height>67</height>
 					<textcolor>ff99a2a6</textcolor>
 					<selectedcolor>ff99a2a6</selectedcolor>
-					<font>Med26</font>
+					<font>Med24</font>
 					<scroll>false</scroll>
-					<label fallback="195">[LIGHT]$INFO[ListItem.StartDate][/LIGHT]</label>
+					<label fallback="195">$INFO[ListItem.StartDate]</label>
 				</control>
 				<control type="label">
 					<top>31</top>
@@ -1598,7 +1598,7 @@
 					<font>Med24</font>
 					<textcolor>ff99a2a6</textcolor>
 					<selectedcolor>ff99a2a6</selectedcolor>
-					<label fallback="195">[LIGHT]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ][/LIGHT]</label>
+					<label fallback="195">$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 				</control>
 			</control>		
 		</focusedlayout>		
