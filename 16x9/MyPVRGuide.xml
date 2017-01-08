@@ -127,6 +127,14 @@
 							<font>Med24Num</font>
 							<aligny>bottom</aligny>
 							<textcolor>ffbebebe</textcolor>
+							<label>$VAR[Duration]</label>
+						</control>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbebebe</textcolor>
 							<label>$INFO[ListItem.Genre]</label>
 							<visible>!String.IsEqual(ListItem.Genre,$LOCALIZE[19499])</visible>
 						</control>
@@ -232,7 +240,7 @@
 				<viewtype label="19069">list</viewtype>
 				<progresstexture border="5" colordiffuse="33FFFFFF">pvr/progressline.png</progresstexture>
 				<scrolltime tween="quadratic">300</scrolltime>
-				<timeblocks>22</timeblocks>
+				<timeblocks>23</timeblocks>
 				<rulerunit>6</rulerunit>
 				<!-- Ruler -->
 				<rulerlayout height="47">

@@ -1286,11 +1286,11 @@
 		</focusedlayout>
 	</include>
 	<!--PVR Timer / Search -->
-	<include name="ViewPVRSearchTimer">		
+	<include name="ViewPVRList">		
 		<itemlayout height="100" width="1850">
 			<!-- Button layouts -->
 			<control type="group">					
-				<visible>String.IsEmpty(ListItem.Date)</visible>
+				<visible>String.IsEmpty(ListItem.Date) + !Window.IsVisible(tvchannels)</visible>
 				<control type="label">
 					<width>285</width>
 					<aligny>center</aligny>
@@ -1301,7 +1301,7 @@
 			</control>
 			<!-- Results layout -->
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Date)</visible>
+				<visible>!String.IsEmpty(ListItem.Date) | Window.IsVisible(tvchannels)</visible>
 				<control type="image">
 					<top>-1</top>
 					<left>-9</left>
@@ -1365,16 +1365,6 @@
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 				</control>
-				<control type="label">
-					<top>31</top>
-					<left>355</left>
-					<width>835</width>
-					<height>67</height>
-					<textcolor>ff99a2a6</textcolor>
-					<selectedcolor>ff99a2a6</selectedcolor>
-					<font>Med24</font>
-					<label fallback="19499">$INFO[ListItem.Genre]</label>
-				</control>
 				<control type="image">
 					<left>1152</left>
 					<top>6</top>
@@ -1393,32 +1383,78 @@
 					<colordiffuse>ftvgold</colordiffuse>
 					<visible>ListItem.IsRecording</visible>
 				</control>
-				<control type="label">
-					<left>1229</left>
-					<width>480</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ff99a2a6</textcolor>
-					<selectedcolor>ff99a2a6</selectedcolor>
-					<font>Med24</font>
-					<label fallback="195">$INFO[ListItem.StartDate]</label>
+				<control type="group">
+					<visible>!Window.IsVisible(tvchannels)</visible>
+					<control type="label">
+						<top>31</top>
+						<left>355</left>
+						<width>835</width>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<font>Med24</font>
+						<label fallback="19499">$INFO[ListItem.Genre]</label>
+					</control>
+					<control type="label">
+						<left>1229</left>
+						<width>480</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<font>Med24</font>
+						<label fallback="195">$INFO[ListItem.StartDate]</label>
+					</control>
+					<control type="label">
+						<top>31</top>
+						<left>1229</left>
+						<width>480</width>
+						<height>67</height>
+						<font>Med24</font>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<label fallback="195">$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
+					</control>
 				</control>
-				<control type="label">
-					<top>31</top>
-					<left>1229</left>
-					<width>480</width>
-					<height>67</height>
-					<font>Med24</font>
-					<textcolor>ff99a2a6</textcolor>
-					<selectedcolor>ff99a2a6</selectedcolor>
-					<label fallback="195">$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
+				<control type="group">
+					<visible>Window.IsVisible(tvchannels)</visible>
+					<control type="label">
+						<top>31</top>
+						<left>355</left>
+						<width>835</width>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<font>Med24</font>
+						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+					</control>
+					<control type="label">
+						<left>1229</left>
+						<width>480</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<font>Med24</font>
+						<label fallback="195">$INFO[ListItem.NextTitle]</label>
+					</control>
+					<control type="label">
+						<top>31</top>
+						<left>1229</left>
+						<width>480</width>
+						<height>67</height>
+						<font>Med24</font>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<label fallback="195">$INFO[ListItem.NextStartTime]$INFO[ListItem.NextEndTime, - ]</label>
+					</control>
 				</control>
 			</control>
 		</itemlayout>
 		<focusedlayout height="100" width="1850">
 			<!-- Button layouts -->
 			<control type="group">					
-				<visible>String.IsEmpty(ListItem.Date)</visible>
+				<visible>String.IsEmpty(ListItem.Date) + !Window.IsVisible(tvchannels)</visible>
 				<control type="label">
 					<width>285</width>
 					<aligny>center</aligny>
@@ -1438,7 +1474,7 @@
 			</control>
 			<!-- Results layout -->
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Date)</visible>					
+				<visible>!String.IsEmpty(ListItem.Date) | Window.IsVisible(tvchannels)</visible>					
 				<control type="image">
 					<top>-1</top>
 					<left>-9</left>
@@ -1539,27 +1575,102 @@
 					<label fallback="195">$INFO[ListItem.Title]</label>
 					<visible>!Control.HasFocus(59) + [ListItem.HasTimer | ListItem.IsRecording]</visible>
 				</control>
-				<control type="label">
-					<top>31</top>
-					<left>355</left>
-					<width>835</width>
-					<height>67</height>
-					<textcolor>ff99a2a6</textcolor>
-					<selectedcolor>ffFFC24B</selectedcolor>
-					<font>Med24</font>
-					<label fallback="19499">$INFO[ListItem.Genre]</label>
-					<visible>!Control.HasFocus(59)</visible>
+				<control type="group">
+					<visible>!Window.IsVisible(tvchannels)</visible>
+					<control type="label">
+						<top>31</top>
+						<left>355</left>
+						<width>835</width>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med24</font>
+						<label fallback="19499">$INFO[ListItem.Genre]</label>
+						<visible>!Control.HasFocus(59)</visible>
+					</control>
+					<control type="label">
+						<top>31</top>
+						<left>355</left>
+						<width>835</width>
+						<height>67</height>
+						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med24</font>
+						<scroll>false</scroll>
+						<label fallback="19499">$INFO[ListItem.Genre]</label>
+						<visible>Control.HasFocus(59)</visible>
+					</control>
+					<control type="label">
+						<left>1229</left>
+						<width>480</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<font>Med24</font>
+						<scroll>false</scroll>
+						<scroll>false</scroll>
+						<label fallback="195">$INFO[ListItem.StartDate]</label>
+					</control>
+					<control type="label">
+						<top>31</top>
+						<left>1229</left>
+						<width>480</width>
+						<height>67</height>
+						<font>Med24</font>
+						<scroll>false</scroll>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<label fallback="195">$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
+					</control>
 				</control>
-				<control type="label">
-					<top>31</top>
-					<left>355</left>
-					<width>835</width>
-					<height>67</height>
-					<textcolor>ffFFC24B</textcolor>
-					<selectedcolor>ffFFC24B</selectedcolor>
-					<font>Med24</font>
-					<label fallback="19499">$INFO[ListItem.Genre]</label>
-					<visible>Control.HasFocus(59)</visible>
+				<control type="group">
+					<visible>Window.IsVisible(tvchannels)</visible>
+					<control type="label">
+						<top>31</top>
+						<left>355</left>
+						<width>835</width>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med24</font>
+						<label fallback="195">$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+						<visible>!Control.HasFocus(59)</visible>
+					</control>
+					<control type="label">
+						<top>31</top>
+						<left>355</left>
+						<width>835</width>
+						<height>67</height>
+						<textcolor>ffFFC24B</textcolor>
+						<selectedcolor>ffFFC24B</selectedcolor>
+						<font>Med24</font>
+						<scroll>false</scroll>
+						<label fallback="195">$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+						<visible>Control.HasFocus(59)</visible>
+					</control>
+					<control type="label">
+						<left>1229</left>
+						<width>480</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<font>Med24</font>
+						<scroll>false</scroll>
+						<label fallback="195">$INFO[ListItem.NextTitle]</label>
+					</control>
+					<control type="label">
+						<top>31</top>
+						<left>1229</left>
+						<width>480</width>
+						<height>67</height>
+						<font>Med24</font>
+						<scroll>false</scroll>
+						<textcolor>ff99a2a6</textcolor>
+						<selectedcolor>ff99a2a6</selectedcolor>
+						<label fallback="195">$INFO[ListItem.NextStartTime]$INFO[ListItem.NextEndTime, - ]</label>
+					</control>
 				</control>
 				<control type="image">
 					<left>1152</left>
@@ -1578,27 +1689,6 @@
 					<texture>pvr/rec.png</texture>
 					<colordiffuse>ftvgold</colordiffuse>
 					<visible>ListItem.IsRecording</visible>
-				</control>
-				<control type="label">
-					<left>1229</left>
-					<width>480</width>
-					<aligny>center</aligny>
-					<height>67</height>
-					<textcolor>ff99a2a6</textcolor>
-					<selectedcolor>ff99a2a6</selectedcolor>
-					<font>Med24</font>
-					<scroll>false</scroll>
-					<label fallback="195">$INFO[ListItem.StartDate]</label>
-				</control>
-				<control type="label">
-					<top>31</top>
-					<left>1229</left>
-					<width>480</width>
-					<height>67</height>
-					<font>Med24</font>
-					<textcolor>ff99a2a6</textcolor>
-					<selectedcolor>ff99a2a6</selectedcolor>
-					<label fallback="195">$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 				</control>
 			</control>		
 		</focusedlayout>		
