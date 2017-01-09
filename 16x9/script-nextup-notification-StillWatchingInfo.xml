@@ -201,6 +201,7 @@
 					<width>116</width>
 					<height>116</height>
 					<texture fallback="osd/nextup/countdown/30-30.png">osd/nextup/countdown/30-$INFO[Player.TimeRemaining(ss)].png</texture>
+					<colordiffuse>ffdadada</colordiffuse>
 				</control>
 				<!-- Icon -->
 				<control type="image">
