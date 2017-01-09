@@ -1,5 +1,8 @@
 Changelog:
 
+3.4.7
+- Fixed skin helper widgets and backup feature
+
 3.4.6
 - Reworked some dialogs
 - Code and file cleanup
