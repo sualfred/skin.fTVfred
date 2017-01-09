@@ -1156,10 +1156,6 @@
 		<value condition="String.IsEqual(Window(home).Property(SubMenu),11000)">$INFO[Skin.String(11000-WidgetStyleLabel-8)]</value>
 		<value condition="String.IsEqual(Window(home).Property(SubMenu),12000)">$INFO[Skin.String(12000-WidgetStyleLabel-8)]</value>
 	</variable>
-	<variable name="NextEpisodeCountdown">
-		<value condition="String.IsEqual(Player.TimeRemaining(hh),00) + String.IsEqual(Player.TimeRemaining(mm),00)">$INFO[Player.TimeRemaining(ss),osd/nextup/countdown/,.png]</value>
-		<value>osd/nextup/countdown/60.png</value>
-	</variable>
 	<variable name="RatingCountry">
 		<value condition="String.IsEqual(Skin.String(RatingCountry),US)">$LOCALIZE[31001]</value>
 		<value condition="String.IsEqual(Skin.String(RatingCountry),UK)">$LOCALIZE[31002]</value>
@@ -4187,7 +4183,6 @@
 	</variable>
 	<variable name="PlayerSmallLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, / ,]</value>
-
 		<value condition="VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Title)">$LOCALIZE[195]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.Title]</value>

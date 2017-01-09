@@ -92,12 +92,35 @@
 					<texture>views/OverlayHD.png</texture>
 					<visible>Integer.IsGreater(Control.GetLabel(3011),709)</visible>
 				</control>
-				<control type="image">
-					<left>134</left>
-					<top>163</top>
-					<width>110</width>
-					<height>110</height>
-					<texture>$VAR[NextEpisodeCountdown]</texture>
+				<!-- icon -->
+				<control type="group">
+					<top>70</top>
+					<width>378</width>
+					<height>295</height>
+					<!-- Icon back -->
+					<control type="image">
+						<centertop>50%</centertop>
+						<centerleft>50%</centerleft>
+						<width>116</width>
+						<height>116</height>
+						<texture>dialogs/progress/bg.png</texture>
+					</control>
+					<!-- Icon progress -->
+					<control type="image">
+						<centertop>50%</centertop>
+						<centerleft>50%</centerleft>
+						<width>116</width>
+						<height>116</height>
+						<texture fallback="osd/nextup/countdown/30-30.png">osd/nextup/countdown/30-$INFO[Player.TimeRemaining(ss)].png</texture>
+					</control>
+					<!-- Icon -->
+					<control type="image">
+						<centertop>50%</centertop>
+						<centerleft>50%</centerleft>
+						<width>116</width>
+						<height>116</height>
+						<texture>dialogs/icons/play.png</texture>
+					</control>
 				</control>
 				<control type="image">
 					<top>365</top>

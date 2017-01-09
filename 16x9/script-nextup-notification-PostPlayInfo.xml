@@ -62,16 +62,23 @@
 								<control type="image">
 									<centertop>50%</centertop>
 									<centerleft>50%</centerleft>
-									<width>130</width>
-									<height>130</height>
-									<texture>osd/nextup/postplay/bg_play.png</texture>
+									<width>116</width>
+									<height>116</height>
+									<texture>dialogs/progress/bg.png</texture>
 								</control>
 								<control type="image">
 									<centertop>50%</centertop>
 									<centerleft>50%</centerleft>
-									<width>130</width>
-									<height>130</height>
+									<width>116</width>
+									<height>116</height>
 									<texture fallback="osd/nextup/postplay/15-15.png">osd/nextup/postplay/15-$INFO[Window.Property(countdown)].png</texture>
+								</control>
+								<control type="image">
+									<centertop>50%</centertop>
+									<centerleft>50%</centerleft>
+									<width>116</width>
+									<height>116</height>
+									<texture>dialogs/icons/play.png</texture>
 								</control>
 							</control>
 							<control type="image">
