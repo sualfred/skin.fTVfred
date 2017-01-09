@@ -1,5 +1,9 @@
 Changelog:
 
+3.4.6
+- Reworked some dialogs
+- Code and file cleanup
+
 3.4.5
 - Replaced some fonts and color values in the PVR screens
 - Code cleanup

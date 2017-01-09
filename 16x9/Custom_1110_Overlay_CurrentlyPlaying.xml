@@ -51,7 +51,7 @@
 				<control type="image">
 					<width>116</width>
 					<height>116</height>
-					<texture>dialogs/progress/$INFO[Control.GetLabel(999)].png</texture>		
+					<texture>dialogs/progress/$VAR[CurrentlyPlayingProgressCircle].png</texture>		
 					<colordiffuse>ffdadada</colordiffuse>
 				</control>
 				<!-- Icon -->
