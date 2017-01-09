@@ -97,7 +97,7 @@
 				<height>36</height>
 				<font>Reg25</font>
 				<scroll>true</scroll>
-				<label>$VAR[PlayerBigLabel]</label>
+				<label>$VAR[PlayerFullLabel]</label>
 				<textcolor>ffdadada</textcolor>
 			</control>
 		</control>

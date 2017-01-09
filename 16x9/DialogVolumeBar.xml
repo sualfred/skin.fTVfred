@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- volumebar -->
+	<zorder>2</zorder>
 	<controls>
 		<!-- Progress -->
 		<control id="404" type="progress">
@@ -9,6 +9,7 @@
 		</control>
 		<!-- Main group -->
 		<control type="group">
+			<animation effect="slide" start="0,0" end="-566,0" time="0" condition="Window.IsVisible(extendedprogressdialog) | Window.IsVisible(notification)">Conditional</animation>
 			<include>DialogAnimation</include>
 			<right>12</right>
 			<top>12</top>

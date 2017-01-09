@@ -4176,7 +4176,7 @@
 	<variable name="PlayerFullLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title, - ]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]$VAR[PlayerEpisodeValue]$INFO[VideoPlayer.Title, - ]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]$VAR[PlayerEpisodeValue, ]$INFO[VideoPlayer.Title, - ]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="PlayerBigLabel">
