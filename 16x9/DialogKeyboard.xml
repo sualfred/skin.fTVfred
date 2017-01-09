@@ -17,34 +17,51 @@
 				<!-- Background -->
 				<control type="image">
 					<centerleft>50%</centerleft>
-					<width>980</width>
-					<height>700</height>
+					<width>960</width>
+					<height>695</height>
 					<texture border="32">dialogs/DialogMessageBackground.png</texture>
 					<visible>!String.IsEmpty(Window(Home).Property(DisableSuggestions)) | !Integer.IsGreater(Container(9091).NumItems,0)</visible>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
-					<width>980</width>
+					<width>960</width>
 					<height>1145</height>
 					<texture border="32">dialogs/DialogMessageBackground.png</texture>
 					<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions)) + Integer.IsGreater(Container(9091).NumItems,0)</visible>
 				</control>
 				<!-- Control group -->
 				<control type="group">
-					<top>48</top>
+					<top>38</top>
 					<width>868</width>
 					<centerleft>50%</centerleft>
-					<!-- Icon -->
-					<control type="image">
+					<!-- icon -->
+					<control type="group">
 						<top>10</top>
-						<width>111</width>
-						<height>111</height>
-						<texture border="4">dialogs/keyboard_search_icon.png</texture>
+						<left>0</left>
+						<width>116</width>
+						<height>116</height>
+						<!-- Icon back -->
+						<control type="image">
+							<width>116</width>
+							<height>116</height>
+							<texture>dialogs/progress/bg.png</texture>
+						</control>
+						<control type="image">
+							<width>116</width>
+							<height>116</height>
+							<texture>dialogs/progress/bg_circle.png</texture>
+						</control>
+						<!-- Icon -->
+						<control type="image">
+							<width>116</width>
+							<height>116</height>
+							<texture>dialogs/icons/abc.png</texture>
+						</control>
 					</control>
 					<!-- Heading -->
 					<control type="label">
 						<left>132</left>
-						<top>21</top>
+						<top>24</top>
 						<width>736</width>
 						<height>54</height>
 						<font>Light30</font>
@@ -53,7 +70,7 @@
 					</control>
 					<control id="311" type="label">
 						<left>132</left>
-						<top>56</top>
+						<top>58</top>
 						<width>736</width>
 						<height>54</height>
 						<font>Reg27</font>
@@ -63,13 +80,12 @@
 					<!-- auto completion -->
 					<control type="list" id="9091">
 						<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions))</visible>
-						<left>7</left>
-						<top>607</top>
-						<width>846</width>
+						<left>10</left>
+						<top>612</top>
+						<width>868</width>
 						<height>432</height>
 						<onup>312</onup>
 						<content limit="9">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).Index(1)]</content>
-						<width>1068</width>
 						<onup>312</onup>
 						<ondown>noop</ondown>
 						<onleft>300</onleft>
@@ -107,14 +123,13 @@
 					</control>
 					<!-- Edit -->
 					<control id="312" type="edit">
-						<left>7</left>
+						<left>10</left>
 						<top>545</top>
 						<width>788</width>
 						<height>48</height>
 						<onup>4000</onup>
 						<onright>300</onright>
 						<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
-						<onclick>300</onclick>
 						<font>Light39</font>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ffffc24b</focusedcolor>
@@ -123,15 +138,15 @@
 					<!-- Edit Text line -->
 					<control type="image">
 						<top>515</top>
-						<left>-25</left>
-						<width>918</width>
+						<centerleft>50%</centerleft>
+						<width>898</width>
 						<height>2</height>
 						<texture border="1">dialogs/KeyboardEditLine2.png</texture>
 					</control>
 					<!-- Keys -->
 					<control type="group">
 						<top>171</top>
-						<!-- Control buttons left -->
+						<!-- Control buttons 1col -->
 						<control id="8000" type="grouplist">
 							<left>760</left>
 							<width>60</width>
@@ -157,7 +172,7 @@
 								<param name="ID">32</param>
 							</include>
 						</control>
-						<!-- Control buttons right -->
+						<!-- Control buttons 2col -->
 						<control id="8001" type="grouplist">
 							<left>820</left>
 							<width>60</width>
