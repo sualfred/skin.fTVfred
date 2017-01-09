@@ -471,11 +471,11 @@
 						<focusedcolor>ffffaf37</focusedcolor>
 						<onclick>SetProperty(Dialog.NumItems,3)</onclick>
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31229])</onclick>
-						<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=backup))</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.skinbackup,action=backup,promptfilename=true))</onclick>
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31230])</onclick>
-						<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=restore))</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.skinbackup,action=restore))</onclick>
 						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31231])</onclick>
-						<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.service,action=reset))</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skin.helper.skinbackup,action=reset))</onclick>
 						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31543])</onclick>
 						<texturefocus border="3">settings/button_focus.png</texturefocus>
 						<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>

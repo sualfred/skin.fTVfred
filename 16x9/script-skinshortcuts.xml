@@ -545,9 +545,9 @@
 					<textoffsety>27</textoffsety>
 					<label>$LOCALIZE[31260]</label>
 					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31144])</onclick>
-					<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.service,action=backup,filter=Widget))</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.skin.helper.skinbackup,action=backup,filter=Widget,promptfilename=true))</onclick>
 					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31259])</onclick>
-					<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.service,action=restore,filter=Widget))</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.skin.helper.skinbackup,action=restore,filter=Widget))</onclick>
 					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31143])</onclick>
 					<onclick>SetProperty(Dialog.3.BuiltIn,SetFocus(50))</onclick>
 					<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31142])</onclick>
