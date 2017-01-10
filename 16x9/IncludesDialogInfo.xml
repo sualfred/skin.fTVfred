@@ -13,7 +13,7 @@
 				<pagecontrol>96</pagecontrol>
 				<autoscroll>false</autoscroll>
 				<textcolor>ffbbbbbb</textcolor>
-				<label>$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
+				<label>$VAR[EpisodeValue,[B],[/B] ]$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
 			</control>
 			<!-- Hidden Button -->
 			<control id="7" type="button">
@@ -237,25 +237,6 @@
 						<visible>[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + String.IsEqual(Window(home).Property(ShowStatus),Ended)</visible>
 					</control>
 				</control>
-				<!-- Season Episode -->
-				<control type="grouplist">
-					<top>100</top>
-					<height>40</height>
-					<itemgap>10</itemgap>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000) + String.IsEqual(ListItem.DBType,episode)</visible>
-					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
-					<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
-					<control type="label">
-						<width>auto</width>
-						<height>34</height>
-						<font>Bold30</font>i
-						<aligny>bottom</aligny>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>$VAR[EpisodeValue]</label>
-					</control>
-				</control>
 				<!-- Star rating / Rating -->
 				<control type="grouplist">
 					<top>100</top>
@@ -263,17 +244,9 @@
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000) + !String.IsEqual(ListItem.DBType,episode)</visible>
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000)</visible>
 					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 					<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
-					<control type="image">
-						<top>2</top>
-						<width>147</width>
-						<height>24</height>
-						<texture>$INFO[Window(home).Property(TVShowRating),rating/rating,.png]</texture>
-						<aspectratio align="left">keep</aspectratio>
-						<visible>!String.IsEmpty(Window(home).Property(TVShowRating)) + String.IsEmpty(ListItem.Rating) + !String.IsEqual(ListItem.DBType,episode)</visible>
-					</control>
 					<control type="image">
 						<top>4</top>
 						<width>48</width>
@@ -282,7 +255,7 @@
 						<visible>!String.IsEmpty(ListItem.Rating) + String.IsEqual(ListItem.DBType,movie)</visible>
 					</control>
 					<control type="image">
-						<top>3</top>
+						<top>4</top>
 						<width>48</width>
 						<height>23</height>
 						<texture>$VAR[TVShowRatingProvider]</texture>
@@ -292,7 +265,7 @@
 						<top>-1</top>
 						<width>auto</width>
 						<height>30</height>
-						<font>Bold30</font>
+						<font>Bold26</font>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[ListItem.Rating,,/10]</label>
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
@@ -301,7 +274,7 @@
 						<top>-1</top>
 						<width>auto</width>
 						<height>30</height>
-						<font>Bold30</font>
+						<font>Bold26</font>
 						<textcolor>ff717171</textcolor>
 						<label>[LIGHT]$INFO[ListItem.Votes,(,)][/LIGHT]</label>
 						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes)</visible>
@@ -321,8 +294,8 @@
 						<top>-1</top>
 						<width>auto</width>
 						<height>30</height>
-						<font>Bold23</font>
-						<textcolor>ff717171</textcolor>
+						<font>Bold26</font>
+						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.MC),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))</visible>
 					</control>
@@ -348,8 +321,8 @@
 						<top>-1</top>
 						<width>auto</width>
 						<height>30</height>
-						<font>Bold23</font>
-						<textcolor>ff717171</textcolor>
+						<font>Bold26</font>
+						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
 					</control>
@@ -374,8 +347,8 @@
 						<top>-1</top>
 						<width>auto</width>
 						<height>30</height>
-						<font>Bold23</font>
-						<textcolor>ff717171</textcolor>
+						<font>Bold26</font>
+						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
 					</control>
@@ -397,7 +370,7 @@
 						<font>Light30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
+						<label>$VAR[EpisodeValue,[B],[/B] ]$INFO[ListItem.Tagline,“,” - ]$VAR[Plot]</label>
 						<include>DialogVideoInfoAnimation</include>
 						<visible>!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)</visible>
 					</control>

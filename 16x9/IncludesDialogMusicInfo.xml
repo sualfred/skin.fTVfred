@@ -334,11 +334,10 @@
 						<aspectratio align="left">keep</aspectratio>
 					</control>
 					<control type="label">
-						<top>-13</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
-						<font>Bold30</font>
-						<aligny>bottom</aligny>
+						<height>30</height>
+						<font>Bold26</font>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[ListItem.Rating,,/10]</label>
 					</control>

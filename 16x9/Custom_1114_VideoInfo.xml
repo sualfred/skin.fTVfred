@@ -22,7 +22,7 @@
 			<pagecontrol>96</pagecontrol>
 			<autoscroll>false</autoscroll>
 			<textcolor>ffbbbbbb</textcolor>
-			<label>$INFO[VideoPlayer.Tagline,“,” - ]$VAR[Plot]</label>
+			<label>$VAR[PlayerEpisodeValue,[B],[/B] ]$INFO[VideoPlayer.Tagline,“,” - ]$VAR[Plot]</label>
 		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
@@ -186,25 +186,6 @@
 					<include>VideoPlayerAudioCodec</include>
 					<include>ListItemResolution</include>
 				</control>
-				<!-- Season Episode -->
-				<control type="grouplist">
-					<top>100</top>
-					<height>40</height>
-					<itemgap>10</itemgap>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000) + VideoPlayer.Content(episodes)</visible>
-					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
-					<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
-					<control type="label">
-						<width>auto</width>
-						<height>34</height>
-						<font>Bold30</font>
-						<aligny>bottom</aligny>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>$VAR[PlayerEpisodeValue]</label>
-					</control>
-				</control>
 				<!-- Star rating / Rating -->
 				<control type="grouplist">
 					<top>100</top>
@@ -212,7 +193,7 @@
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000) + !VideoPlayer.Content(episodes)</visible>
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(5000)</visible>
 					<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 					<animation delay="200" effect="fade" end="100" start="0" time="80">Visible</animation>
 					<control type="image">
@@ -223,28 +204,26 @@
 						<visible>!String.IsEmpty(VideoPlayer.Rating) + VideoPlayer.Content(movies)</visible>
 					</control>
 					<control type="image">
-						<top>3</top>
+						<top>4</top>
 						<width>48</width>
 						<height>23</height>
 						<texture>$VAR[TVShowRatingProvider]</texture>
 						<visible>!String.IsEmpty(VideoPlayer.Rating) + !VideoPlayer.Content(movies)</visible>
 					</control>
 					<control type="label">
-						<top>-13</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
-						<font>Bold30</font>
-						<aligny>bottom</aligny>
+						<height>30</height>
+						<font>Bold26</font>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[VideoPlayer.Rating,,/10]</label>
 						<visible>!String.IsEmpty(VideoPlayer.Rating)</visible>
 					</control>
 					<control type="label">
-						<top>-13</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
-						<font>Bold30</font>
-						<aligny>bottom</aligny>
+						<height>30</height>
+						<font>Bold26</font>
 						<textcolor>ff717171</textcolor>
 						<label>[LIGHT]$INFO[ListItem.Votes,(,)][/LIGHT]</label>
 						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes)</visible>
@@ -261,12 +240,11 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Rating.MC))</visible>
 					</control>
 					<control type="label">
-						<top>-6</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
-						<font>Bold23</font>
-						<aligny>bottom</aligny>
-						<textcolor>ff717171</textcolor>
+						<height>30</height>
+						<font>Bold26</font>
+						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.Player.Rating.MC),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Rating.MC))</visible>
 					</control>
@@ -289,12 +267,11 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.RottenTomatoes.Meter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.Player.RottenTomatoes.Meter),59)</visible>
 					</control>
 					<control type="label">
-						<top>-6</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
-						<font>Bold23</font>
-						<aligny>bottom</aligny>
-						<textcolor>ff717171</textcolor>
+						<height>30</height>
+						<font>Bold26</font>
+						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.Player.RottenTomatoes.Meter),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.RottenTomatoes.Meter))</visible>
 					</control>
@@ -316,12 +293,11 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.RottenTomatoes.UserMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.Player.RottenTomatoes.UserMeter),59)</visible>
 					</control>
 					<control type="label">
-						<top>-6</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
-						<font>Bold23</font>
-						<aligny>bottom</aligny>
-						<textcolor>ff717171</textcolor>
+						<height>30</height>
+						<font>Bold26</font>
+						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.Player.RottenTomatoes.UserMeter),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.RottenTomatoes.UserMeter))</visible>
 					</control>
@@ -349,7 +325,7 @@
 						<font>Light30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>$INFO[VideoPlayer.Tagline,“,” - ]$VAR[Plot]</label>
+						<label>$VAR[PlayerEpisodeValue,[B],[/B] ]$INFO[VideoPlayer.Tagline,“,” - ]$VAR[Plot]</label>
 						<include>DialogVideoInfoAnimation</include>
 						<visible>!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)</visible>
 					</control>

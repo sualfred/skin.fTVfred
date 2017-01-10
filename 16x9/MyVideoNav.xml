@@ -164,18 +164,17 @@
 					<visible>!String.IsEmpty(Window(home).Property(TVShowUserRating))</visible>
 				</control>
 				<control type="image">
-					<top>3</top>
+					<top>2</top>
 					<width>48</width>
 					<height>23</height>
 					<texture>$VAR[TVShowRatingProvider]</texture>
 					<visible>!String.IsEmpty(Window(home).Property(TVShowRating))</visible>
 				</control>
 				<control type="label">
-					<top>-13</top>
+					<top>-3</top>
 					<width>auto</width>
-					<height>34</height>
-					<font>Bold30Num</font>
-					<aligny>bottom</aligny>
+					<height>30</height>
+					<font>Bold29</font>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[Window(home).Property(TVShowRating),,/10]</label>
 					<visible>!String.IsEmpty(Window(home).Property(TVShowRating))</visible>
@@ -209,18 +208,17 @@
 					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 				</control>
 				<control type="image">
-					<top>3</top>
+					<top>2</top>
 					<width>48</width>
 					<height>23</height>
 					<texture>$VAR[TVShowRatingProvider]</texture>
 					<visible>!String.IsEmpty(ListItem.Rating)</visible>
 				</control>
 				<control type="label">
-					<top>-13</top>
+					<top>-3</top>
 					<width>auto</width>
-					<height>34</height>
-					<font>Bold30Num</font>
-					<aligny>bottom</aligny>
+					<height>30</height>
+					<font>Bold29</font>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[ListItem.Rating,,/10]</label>
 					<visible>!String.IsEmpty(ListItem.Rating)</visible>
