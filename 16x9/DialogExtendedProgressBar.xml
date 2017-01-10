@@ -48,7 +48,7 @@
 				<control type="image">
 					<width>116</width>
 					<height>116</height>
-					<texture>dialogs/progress/$VAR[ExtendedProgressCircle].png</texture>		
+					<texture>dialogs/progress/$VAR[ExtendedProgressCircle].png</texture>
 					<colordiffuse>ffdadada</colordiffuse>
 				</control>
 				<control type="image">

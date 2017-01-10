@@ -572,10 +572,9 @@
 	<!--  Resolution label -->
 	<include name="ListItemResolution">
 		<control type="label">
-			<top>-7</top>
 			<width>auto</width>
-			<height>24</height>
-			<aligny>bottom</aligny>
+			<top>2</top>
+			<height>23</height>
 			<font>Bold23</font>
 			<textcolor>ffbebebe</textcolor>
 			<label>[B]HD[/B] $VAR[ListItemResolution]</label>

@@ -289,21 +289,19 @@
 						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEqual(ListItem.DBType,movie)</visible>
 					</control>
 					<control type="label">
-						<top>-13</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
+						<height>30</height>
 						<font>Bold30</font>
-						<aligny>bottom</aligny>
 						<textcolor>ffbcbcbc</textcolor>
 						<label>$INFO[ListItem.Rating,,/10]</label>
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
 					<control type="label">
-						<top>-13</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
+						<height>30</height>
 						<font>Bold30</font>
-						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
 						<label>[LIGHT]$INFO[ListItem.Votes,(,)][/LIGHT]</label>
 						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes)</visible>
@@ -320,11 +318,10 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))</visible>
 					</control>
 					<control type="label">
-						<top>-6</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
+						<height>30</height>
 						<font>Bold23</font>
-						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.MC),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))</visible>
@@ -348,11 +345,10 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
 					</control>
 					<control type="label">
-						<top>-6</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
+						<height>30</height>
 						<font>Bold23</font>
-						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
@@ -375,11 +371,10 @@
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),59)</visible>
 					</control>
 					<control type="label">
-						<top>-6</top>
+						<top>-1</top>
 						<width>auto</width>
-						<height>34</height>
+						<height>30</height>
 						<font>Bold23</font>
-						<aligny>bottom</aligny>
 						<textcolor>ff717171</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),,%]</label>
 						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
