@@ -1,5 +1,8 @@
 Changelog:
 
+3.4.8
+- Label fixes
+
 3.4.7
 - Fixed skin helper widgets and backup feature
 

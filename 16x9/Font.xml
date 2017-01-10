@@ -405,11 +405,6 @@
 			<size>30</size>
 		</font>
 		<font>
-			<name>Bold30Num</name>
-			<filename>HelveticaNeue_Bold.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
 			<name>Bold29</name>
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>29</size>
@@ -833,11 +828,6 @@
 		<font>
 			<name>Bold30</name>
 			<filename>Roboto-Bold.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>Bold30Num</name>
-			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
@@ -1380,11 +1370,6 @@
 			<filename>Arial.ttf</filename>
 			<aspect>0.9</aspect>
 			<style>bold</style>
-			<size>30</size>
-		</font>
-		<font>
-			<name>Bold30Num</name>
-			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
