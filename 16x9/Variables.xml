@@ -542,16 +542,16 @@
 	</variable>
 	<!-- Genre Library -->
 	<variable name="GenreArt1">
-		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
-		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
+		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png&amp;refresh=$INFO[System.Date(mmm)]</value>
+		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png&amp;refresh=$INFO[System.Date(mmm)]</value>
 	</variable>
 	<variable name="GenreArt2">
-		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
-		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png</value>
+		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png&amp;refresh=$INFO[System.Date(mmm)]</value>
+		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.1&amp;fallback=DefaultGenre.png&amp;refresh=$INFO[System.Date(mmm)]</value>
 	</variable>
 	<variable name="GenreArt3">
-		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
-		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png</value>
+		<value condition="String.Contains(Container.FolderPath,movies/genre)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png&amp;refresh=$INFO[System.Date(mmm)]</value>
+		<value condition="String.Contains(Container.FolderPath,tvshows/genre)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.2&amp;fallback=DefaultGenre.png&amp;refresh=$INFO[System.Date(mmm)]</value>
 	</variable>
 	<variable name="RecordingLabel">
 		<value condition="Player.Recording">$LOCALIZE[19059]</value>
