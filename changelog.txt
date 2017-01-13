@@ -1,5 +1,8 @@
 Changelog:
 
+3.4.9
+- Improved PVR window performance
+
 3.4.8
 - Label fixes
 
