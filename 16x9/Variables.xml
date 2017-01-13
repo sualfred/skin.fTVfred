@@ -2155,8 +2155,6 @@
 	<variable name="Fanart">		
 		<value condition="String.IsEqual(Container.FolderPath,videodb://movies/genres/)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
 		<value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)">http://localhost:52307/gettvshowgenreimages&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0</value>
-		<value condition="String.StartsWith(ListItem.Path,pvr://)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=fanart</value>
-		<value condition="Window.IsActive(1106)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(100).Listitem.Title]&amp;channel=$INFO[Container(100).ListItem.ChannelName]&amp;type=fanart</value>
 		<value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>		

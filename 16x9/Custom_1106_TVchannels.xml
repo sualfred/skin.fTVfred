@@ -5,9 +5,11 @@
 	<defaultcontrol always="true">100</defaultcontrol>	
 	<include>WindowOpenTrigger</include>
 	<onunload>ClearProperty(LabelsDelayFadeAnimation,home)</onunload>
+	<onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
 	<onload>ClearProperty(LabelsDelayFadeAnimation,home)</onload>
 	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
 	<onload>Control.Move(100,1)</onload>
+	<onload>SetProperty(SkinHelper.WidgetContainer,100,Home)</onload>
 	<!-- workaround animation for focusing the first item -->
 	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 	<controls>
