@@ -1,5 +1,8 @@
 Changelog:
 
+3.5.0
+- Added new optional "recently watched" widget for TV channels
+
 3.4.9
 - Improved PVR window performance
 
