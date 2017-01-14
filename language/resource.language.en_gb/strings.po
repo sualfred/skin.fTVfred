@@ -1583,6 +1583,11 @@ msgctxt "#31353"
 msgid "second"
 msgstr ""
 
+#: /shortcuts/overrides.xml
+msgctxt "#31354"
+msgid "Recently watched"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

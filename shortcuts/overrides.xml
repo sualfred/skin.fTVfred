@@ -111,6 +111,7 @@
 			</node>
 			<node label="19020">
 				<shortcut label="19217" type="livetv" icon="ftv_icon.png">ActivateWindow(1106,pvr://channels/tv/*,return)</shortcut>
+				<shortcut label="31354" type="livetv" icon="ftv_icon.png">ActivateWindow(1115,pvr://channels/tv/*,return)</shortcut>
 				<shortcut label="19017" type="livetv" icon="ftv_icon.png">ActivateWindow(tvrecordings,pvr://recordings/tv/active,return)</shortcut>
 			</node>
 		</node>

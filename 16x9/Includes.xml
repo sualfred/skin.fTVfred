@@ -15,6 +15,7 @@
 	<include file="IncludesDialogInfo.xml" />
 	<include file="IncludesDialogMusicInfo.xml" />
 	<include file="IncludesPVRChannelsOSD.xml" />
+	<include file="IncludesCustomPVRWindow.xml" />
 	<!-- Expressions -->
 	<expression name="Rating_TV">[String.Contains(ListItem.Mpaa,y) | String.Contains(ListItem.Mpaa,ma) | String.Contains(ListItem.Mpaa,g) | String.Contains(ListItem.Mpaa,14)]</expression>
 	<expression name="VideoPlayerRating_TV">[String.Contains(VideoPlayer.Mpaa,y) | String.Contains(VideoPlayer.Mpaa,ma) | String.Contains(VideoPlayer.Mpaa,g) | String.Contains(VideoPlayer.Mpaa,14)]</expression>

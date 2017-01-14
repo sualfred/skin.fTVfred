@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1115">
+	<menucontrol>1000</menucontrol>
+	<backgroundcolor>0xff12161b</backgroundcolor>
+	<defaultcontrol always="true">100</defaultcontrol>	
+	<include>WindowOpenTrigger</include>
+	<onunload>ClearProperty(LabelsDelayFadeAnimation,home)</onunload>
+	<onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
+	<onload>ClearProperty(LabelsDelayFadeAnimation,home)</onload>
+	<onload>Control.Move(100,$INFO[Container(100).CurrentItem,-])</onload>
+	<onload>Control.Move(100,1)</onload>
+	<onload>SetProperty(SkinHelper.WidgetContainer,100,Home)</onload>
+	<!-- workaround animation for focusing the first item -->
+	<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
+	<controls>
+		<include content="IncludesCustomPVRWindow">
+			<param name="SortBy" value="lastplayed"/>
+			<param name="SortOrder" value="descending"/>
+			<param name="Path" value="pvr://channels/tv/*/"/>
+			<param name="HeadingLabel" value="$LOCALIZE[19217]"/>
+			<param name="SortbyLabel" value="$LOCALIZE[31354]"/>
+		</include>
+	</controls>
+</window>
