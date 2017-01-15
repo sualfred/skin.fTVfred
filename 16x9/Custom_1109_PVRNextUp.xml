@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1109" type="dialog">
-	<visible>VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.NextTitle) + !Skin.HasSetting(PVRNextUpDisabled) + !Window.IsVisible(videoosd) + !Window.IsVisible(1113) + String.IsEmpty(Window(home).Property(ShowXRay)) + Window.IsVisible(fullscreenvideo) + Integer.IsEqual(Player.TimeRemaining(hh),00) + Integer.IsEqual(Player.TimeRemaining(mm),00) + Integer.IsLessOrEqual(Player.TimeRemaining(ss),25) + Integer.IsGreaterOrEqual(Player.TimeRemaining(ss),10) + !Integer.IsEmpty(Player.Duration) + [Integer.IsGreater(Player.Duration(mm),05) | Integer.IsGreater(Player.Duration(hh),00)]</visible>
+	<visible>VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.NextTitle) + !Skin.HasSetting(PVRNextUpDisabled) + !Window.IsVisible(videoosd) + !Window.IsVisible(1113) + !Window.IsVisible(1109) + String.IsEmpty(Window(home).Property(ShowXRay)) + Window.IsVisible(fullscreenvideo) + Integer.IsEqual(Player.TimeRemaining(hh),00) + Integer.IsEqual(Player.TimeRemaining(mm),00) + Integer.IsLessOrEqual(Player.TimeRemaining(ss),25) + Integer.IsGreaterOrEqual(Player.TimeRemaining(ss),10) + !Integer.IsEmpty(Player.Duration) + [Integer.IsGreater(Player.Duration(mm),05) | Integer.IsGreater(Player.Duration(hh),00)]</visible>
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
 	<controls>
 		<control type="group">
