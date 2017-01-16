@@ -399,12 +399,6 @@
 		</include>
 	</include>
 	<!-- Hidden Widget Lists -->
-	<include name="ParamLivetvWidgetLists">
-		<control id="$PARAM[ID]1" type="list">
-			<include>HiddenHomeList</include>
-			<content limit="4">pvr://channels/tv/*</content>
-		</control>
-	</include>
 	<include name="ParamFavouritesWidgetLists">
 		<control id="$PARAM[ID]1" type="list">
 			<include>HiddenHomeList</include>

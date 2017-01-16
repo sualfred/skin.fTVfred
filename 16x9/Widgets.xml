@@ -133,7 +133,7 @@
 					</control>
 				</control>
 			</focusedlayout>
-			<content>pvr://channels/tv/*?view=lastplayed</content>
+			<content>pvr://channels/tv/*</content>
 		</control>
 		<!-- Weather Widget -->
 		<control type="fixedlist">
