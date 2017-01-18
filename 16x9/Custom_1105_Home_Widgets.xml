@@ -718,24 +718,20 @@
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd])||Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label]))</onclick>
 						<!--Movies -->
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31242])</onclick>
-						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/NewMovie.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31242])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newmovie))</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31242])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newmovie))</onclick>
 						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31243])</onclick>
-						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],plugin://script.skin.helper.widgets/?action=similar&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload2)])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31243])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedmovie))</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31243])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedmovie))</onclick>
 						<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31244])</onclick>
-						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/RandomMovie.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31244])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],randommovie))</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31244])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],randommovie))</onclick>
 						<!-- Shows -->
 						<onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31245])</onclick>
-						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/NewShow.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31245])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newshow))</onclick>
+						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31245])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newshow))</onclick>
 						<onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31246])</onclick>
-						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],plugin://script.skin.helper.widgets/?action=similarshows&amp;mreload=$INFO[Window(Home).Property(widgetreload2)])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31246])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedshow))</onclick>
-						<onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31247])</onclick>
-						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],special://skin/extras/ads/RandomShow.xsp)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31247])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],randomshow))</onclick>
-						<onclick>SetProperty(Dialog.8.Label,$LOCALIZE[626])</onclick>
-						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],videodb://inprogresstvshows/)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[626])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],inprogressshow))</onclick>
-						<onclick>SetProperty(Dialog.9.Label,$LOCALIZE[20387])</onclick>
-						<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],videodb://recentlyaddedepisodes/)||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[20387])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newepisode))</onclick>
-						<onclick>SetProperty(Dialog.10.Label,$LOCALIZE[31254])</onclick>
-						<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd],plugin://script.skin.helper.widgets/?action=similar&amp;mediatype=media&amp;reload=$INFO[Window(Home).Property(widgetreload2)])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31254])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedmedia))</onclick>
+						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31246])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],recommendedshow))</onclick>
+						<onclick>SetProperty(Dialog.7.Label,$LOCALIZE[626])</onclick>
+						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[626])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],inprogressshow))</onclick>
+						<onclick>SetProperty(Dialog.8.Label,$LOCALIZE[20387])</onclick>
+						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[20387])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newepisode))</onclick>
 						<!-- Ok -->
 						<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31543])</onclick>
 					</control>
