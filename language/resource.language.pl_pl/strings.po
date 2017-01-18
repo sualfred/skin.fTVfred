@@ -4,14 +4,14 @@
 # Addon Provider: Hitcher
 # Translators:
 # Translators:
-# Damian Teodorowicz <mogiel@gmail.com>, 2016
+# Damian Teodorowicz <mogiel@gmail.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-26 18:25+0000\n"
-"Last-Translator: Damian Teodorowicz <mogiel@gmail.com>\n"
+"PO-Revision-Date: 2017-01-18 18:09+0000\n"
+"Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1013,8 +1013,8 @@ msgstr "Zmienia układ dla ulubionych. Użyteczne w przypadku używania ulubiony
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
-msgid "View movie info"
-msgstr "Pokaż informacje o filmie"
+msgid "View video info"
+msgstr "Pokaż informacje o wideo"
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
@@ -1053,33 +1053,28 @@ msgstr "Pokaż informacje o aktorach"
 
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
-msgid "Newest Movie"
-msgstr "Najnowszy film"
+msgid "New movies"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:722
 msgctxt "#31243"
-msgid "Recommended Movie"
-msgstr "Polecany filmy"
+msgid "Similar movies (because you watched...)"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:724
 msgctxt "#31244"
-msgid "Random Movie"
-msgstr "Losowy film"
+msgid "Recommended movies"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
-msgid "Newest Show"
-msgstr "Najnowszy serial"
+msgid "Recently added TV shows"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
-msgid "Recommended Show"
-msgstr "Polecany serial"
-
-#: /16x9/Custom_Home_Widgets.xml:731
-msgctxt "#31247"
-msgid "Random Show"
-msgstr "Losowy serial"
+msgid "Similar TV shows (because you watched...)"
+msgstr ""
 
 #: /16x9/Variables.xml:874
 msgctxt "#31248"
@@ -1555,6 +1550,76 @@ msgid ""
 "Enable the holiday overlay theme. This will add falling snow for the holiday"
 " season all over the skin."
 msgstr "Włącza motyw na Boże Narodzenie. To ustawienie doda padający śnieg w całym motywie."
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31341"
+msgid "Interested?"
+msgstr "Zainteresowany?"
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31342"
+msgid "Press [B]DOWN[/B] to watch the item."
+msgstr "Naciśnij [B]DÓŁ[/B] aby zobaczyć pozycję."
+
+#: /16x9/IncludesDialogInfo.xml
+msgctxt "#31343"
+msgid "discontinued show"
+msgstr "przerwany serial"
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31344"
+msgid "View recordings"
+msgstr "Pokaż nagrania"
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31345"
+msgid "Switch group"
+msgstr "Przełącz grupę"
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31346"
+msgid "View timers"
+msgstr "Pokaż alarmy"
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31347"
+msgid "View guide"
+msgstr "Pokaż program TV"
+
+#: /16x9/MyPVRTimers.xml
+msgctxt "#31348"
+msgid "Toggle disabled items"
+msgstr "Przełącz wyłączone pozycje"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31349"
+msgid "More in progress shows"
+msgstr "Więcej seriali w trakcie oglądania"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31350"
+msgid "Repeat last episode"
+msgstr "Powtórz ostatni odcinek"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31351"
+msgid "Starts in"
+msgstr "Zaczyna się za"
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31352"
+msgid "seconds"
+msgstr "sekund"
+
+#: /16x9/Variables.xml
+msgctxt "#31353"
+msgid "second"
+msgstr "sekunda"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31354"
+msgid "Recently watched"
+msgstr "Ostatnio oglądane"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

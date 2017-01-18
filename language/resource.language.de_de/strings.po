@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-14 20:39+0000\n"
+"PO-Revision-Date: 2017-01-18 18:11+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1053,33 +1053,28 @@ msgstr "Zeige Darsteller Info"
 
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
-msgid "Newest Movie"
-msgstr "Neuester Film"
+msgid "New movies"
+msgstr "Neue Filme"
 
 #: /16x9/Custom_Home_Widgets.xml:722
 msgctxt "#31243"
-msgid "Recommended Movie"
-msgstr "Empfohlener Film"
+msgid "Similar movies (because you watched...)"
+msgstr "Ähnliche Filme (weil du ... gesehen hast)"
 
 #: /16x9/Custom_Home_Widgets.xml:724
 msgctxt "#31244"
-msgid "Random Movie"
-msgstr "Zufalls-Film"
+msgid "Recommended movies"
+msgstr "Empfohlene Filme"
 
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
-msgid "Newest Show"
-msgstr "Neueste Serie"
+msgid "Recently added TV shows"
+msgstr "Kürzlich hinzugefügte Serien"
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
-msgid "Recommended Show"
-msgstr "Empfohlene Serie"
-
-#: /16x9/Custom_Home_Widgets.xml:731
-msgctxt "#31247"
-msgid "Random Show"
-msgstr "Zufalls-Serie"
+msgid "Similar TV shows (because you watched...)"
+msgstr "Ähnliche Serien (weil du ... gesehen hast)"
 
 #: /16x9/Variables.xml:874
 msgctxt "#31248"

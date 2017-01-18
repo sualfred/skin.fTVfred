@@ -148,7 +148,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[31252]</label>
-				<visible>String.IsEqual(ListItem.Property(videoresolution),720) | String.Contains(ListItem.Property(videoresolution),1080) | String.Contains(ListItem.Property(videoresolution),4K) | !String.Contains(ListItem.Property(3dmode),mono)</visible>
+				<visible>[String.Contains(ListItem.Property(videoresolution),720) | String.Contains(ListItem.Property(videoresolution),1080) | String.Contains(ListItem.Property(videoresolution),4K)] + [String.Contains(ListItem.Property(3dmode),mono) | String.IsEmpty(ListItem.Property(3dmode))] | [!String.IsEqual(ListItem.Property(3dmode),mono) + !String.IsEmpty(ListItem.Property(3dmode))]</visible>
 			</control>
 			<control type="image">
 				<right>0</right>
