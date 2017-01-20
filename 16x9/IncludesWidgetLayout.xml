@@ -59,9 +59,10 @@
 			<texture>views/highlight_banner_back.png</texture>
 		</control>
 		<control type="image">
-			<top>-136</top>
-			<width>1500</width>
-			<height>331</height>
+			<top>-65</top>
+			<left>360</left>
+			<width>800</width>
+			<height>260</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture diffuse="views/highlight_banner_mask.png" background="true">$INFO[ListItem.Property(bannerArt)]</texture>
 			<colordiffuse>99ffffff</colordiffuse>
@@ -75,7 +76,7 @@
 			<top>15</top>
 			<left>550</left>
 			<width>439</width>
-			<height>170</height>
+			<height>165</height>
 			<aspectratio aligny="center" align="center">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Property(bannerLogo)]</texture>
 		</control>
