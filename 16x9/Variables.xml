@@ -803,7 +803,7 @@
 		<value condition="String.IsEqual(ListItem.Property(bannerType),inprogressshow) + Integer.IsEqual(ListItem.Property(unwatched),1)">$INFO[ListItem.Property(unwatched),, [LIGHT]$LOCALIZE[31321][CR]$LOCALIZE[31325] [/LIGHT]]$INFO[ListItem.Label,[COLOR ffffffff][B],[/B][/COLOR]]</value>		
 		<value condition="String.IsEqual(ListItem.Property(bannerType),newmovie)">$LOCALIZE[31248][COLOR ffffffff]$INFO[ListItem.Label,[B],[/B]][/COLOR]</value>
 		<value condition="String.IsEqual(ListItem.Property(bannerType),newshow)">$LOCALIZE[31248][COLOR ffffffff]$INFO[ListItem.Label,[B],[/B]][/COLOR]</value>
-		<value condition="String.IsEqual(ListItem.Property(bannerType),newepisode)">$LOCALIZE[31248][COLOR ffffffff]$INFO[ListItem.Property(tvshow),[B],[/B][CR]]$INFO[ListItem.Label,[B],[/B]][/COLOR]</value>
+		<value condition="String.IsEqual(ListItem.Property(bannerType),newepisode)">$LOCALIZE[31248][COLOR ffffffff][B]$INFO[ListItem.Property(season) ,$LOCALIZE[20373] , ]$INFO[ListItem.Property(episode),$LOCALIZE[20359] ], $INFO[ListItem.Label][/B][/COLOR]</value>
 		<value condition="String.IsEqual(ListItem.Property(bannerType),randommovie)">$LOCALIZE[31250][COLOR ffffffff]$INFO[ListItem.Label,[B],[/B]][/COLOR]</value>
 		<value condition="String.IsEqual(ListItem.Property(bannerType),randomshow)">$LOCALIZE[31250][COLOR ffffffff]$INFO[ListItem.Label,[B],[/B]][/COLOR]</value>
 		<value condition="String.IsEqual(ListItem.Property(bannerType),recommendedshow)">$LOCALIZE[31249]$INFO[ListItem.Property(similartitle),[LIGHT],[/LIGHT][CR]][COLOR ffffffff]$INFO[ListItem.Label,[B],[/B]][/COLOR]</value>

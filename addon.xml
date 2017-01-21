@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.fTVfred-krypton" version="3.5.2" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
+<addon id="skin.fTVfred-krypton" version="3.5.3" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.toolbox" version="1.1.1"/>
@@ -29,8 +29,9 @@
         </assets>
 		<news>Changelog:
 
-[B]3.5.2[/B]
-- Reworked banner implementation (eg auto refresh each 10 minutes)
+[B]3.5.3[/B]
+- Banner texture adjustment
+- Fixed square image fallback
 
 See changelog.txt for more details.</news>
 	</extension>

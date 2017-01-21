@@ -46,8 +46,7 @@
 		<control type="image">
 			<top>-2</top>
 			<left>-48</left>
-			<centertop>288</centertop>
-			<width>1616</width>
+			<width>1596</width>
 			<height>243</height>
 			<texture border="66,66,51,51">views/shadow_nf.png</texture>
 		</control>
@@ -56,21 +55,22 @@
 			<width>1500</width>
 			<height>331</height>
 			<aspectratio>scale</aspectratio>
-			<texture>views/highlight_banner_back.png</texture>
+			<texture>views/banner_back.png</texture>
+			<colordiffuse>ff050505</colordiffuse>
 		</control>
 		<control type="image">
-			<top>-65</top>
+			<top>-67</top>
 			<left>310</left>
 			<width>900</width>
-			<height>260</height>
+			<height>262</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-			<texture diffuse="views/highlight_banner_mask.png" background="true">$INFO[ListItem.Property(bannerArt)]</texture>
+			<texture diffuse="views/banner_mask.png" background="true">$INFO[ListItem.Property(bannerArt)]</texture>
 			<colordiffuse>99ffffff</colordiffuse>
 		</control>
 		<control type="image">
 			<width>58</width>
 			<height>58</height>
-			<texture>views/OverlayHighlight.png</texture>
+			<texture>views/OverlayKodi.png</texture>
 		</control>
 		<control type="image">
 			<top>15</top>
@@ -87,7 +87,6 @@
 			<height>165</height>
 			<font>Med32</font>
 			<textcolor>ffdadada</textcolor>
-			<shadowcolor>88000000</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>$VAR[WidgetAdText]</label>
@@ -102,7 +101,6 @@
 			<font>Med24</font>
 			<align>right</align>
 			<textcolor>ccffffff</textcolor>
-			<shadowcolor>88000000</shadowcolor>
 			<label>$LOCALIZE[31251]</label>
 		</control>
 		<control type="label">
@@ -113,7 +111,6 @@
 			<font>Med18</font>
 			<align>right</align>
 			<textcolor>bbffffff</textcolor>
-			<shadowcolor>88000000</shadowcolor>
 			<label>$VAR[WidgetEpisodeLabel]</label>
 			<visible>!String.IsEmpty(ListItem.Property(episodes))</visible>
 		</control>
@@ -125,8 +122,7 @@
 			<font>Med18</font>
 			<align>right</align>
 			<textcolor>bbffffff</textcolor>
-			<shadowcolor>88000000</shadowcolor>
-			<label>$INFO[ListItem.Property(season) ,$LOCALIZE[20373] , ]$INFO[ListItem.Property(episode),$LOCALIZE[20359] ]</label>
+			<label>$INFO[ListItem.Property(tvshow)]</label>
 			<visible>String.IsEqual(ListItem.Property(bannerType),newepisode)</visible>
 		</control>
 		<control type="group">
@@ -145,7 +141,6 @@
 				<font>Med18</font>
 				<scroll>false</scroll>
 				<textcolor>bbffffff</textcolor>
-				<shadowcolor>88000000</shadowcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[31252]</label>

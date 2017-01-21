@@ -1,5 +1,9 @@
 Changelog:
 
+3.5.3
+- Banner texture adjustment
+- Fixed square image fallback
+
 3.5.2
 - Reworked banner implementation (eg auto refresh each 10 minutes)
 

@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-18 18:09+0000\n"
-"Last-Translator: sualfred <su4lfred@gmail.com>\n"
+"PO-Revision-Date: 2017-01-18 20:31+0000\n"
+"Last-Translator: Damian Teodorowicz <mogiel@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1054,27 +1054,27 @@ msgstr "Pokaż informacje o aktorach"
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
 msgid "New movies"
-msgstr ""
+msgstr "Nowe filmy"
 
 #: /16x9/Custom_Home_Widgets.xml:722
 msgctxt "#31243"
 msgid "Similar movies (because you watched...)"
-msgstr ""
+msgstr "Podobne filmy (ponieważ oglądałeś...)"
 
 #: /16x9/Custom_Home_Widgets.xml:724
 msgctxt "#31244"
 msgid "Recommended movies"
-msgstr ""
+msgstr "Polecane filmy"
 
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
 msgid "Recently added TV shows"
-msgstr ""
+msgstr "Ostatnio dodane seriale"
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
 msgid "Similar TV shows (because you watched...)"
-msgstr ""
+msgstr "Podobne seriale (ponieważ oglądałeś...)"
 
 #: /16x9/Variables.xml:874
 msgctxt "#31248"

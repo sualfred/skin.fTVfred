@@ -443,7 +443,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
+						<texture>$VAR[SquareImage]</texture>
 						<visible>Window.IsActive(tvrecordings)</visible>
 					</control>
 					<control type="image">
@@ -671,7 +671,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture fallback="views/square_fallback.png">$VAR[SquareImage]</texture>
+						<texture>$VAR[SquareImage]</texture>
 						<visible>Window.IsActive(tvrecordings)</visible>
 					</control>
 					<control type="image">
