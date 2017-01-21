@@ -147,7 +147,7 @@
 						<font>Med24Num</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffFFC24B</textcolor>
-						<label>$INFO[ListItem.ChannelName]</label>
+						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 					</control>
 					<control type="label">
 						<width>auto</width>
