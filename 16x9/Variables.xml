@@ -4264,6 +4264,7 @@
 		<value condition="String.EndsWith(VideoPlayer.Episode,s399)">$LOCALIZE[31146], $LOCALIZE[20359] 399</value>
 	</variable>
 	<variable name="PlayerTitleImage">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Cover]</value>
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Cover)">$INFO[VideoPlayer.Cover]</value>
 		<value condition="VideoPlayer.Content(livetv)">views/pvr_fallback.png</value>
 		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
@@ -4277,7 +4278,7 @@
 	</variable>
 	<variable name="PlayerBigLabel">
 		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Title)">[COLOR ff707070]$INFO[VideoPlayer.Channelnumber,,. ][/COLOR]$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>

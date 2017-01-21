@@ -1,5 +1,10 @@
 Changelog:
 
+3.5.4
+- Fixed missing player info osd, while the channel is going to be switched with up/down
+- Added channel number to video OSD
+- Adjusted player titles for music
+
 3.5.3
 - Banner texture adjustment
 - Fixed square image fallback
