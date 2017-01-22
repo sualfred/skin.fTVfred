@@ -815,4 +815,28 @@
 			</control>
 		</control>
 	</include>
+	<!-- Player HD Label -->
+	<include name="PlayerResolutionLabel">
+		<!--  HD label -->
+		<control type="label" id="1">
+			<left>24</left>
+			<top>-2</top>
+			<width>auto</width>
+			<height>34</height>
+			<font>Bold28</font>
+			<textcolor>ffebebeb</textcolor>
+			<label>[B]HD[/B]</label>
+			<visible>Integer.IsGreaterOrEqual(VideoPlayer.VideoResolution,720) | Integer.IsEqual(VideoPlayer.VideoResolution,4K)</visible>
+		</control>
+		<!--  Resolution label -->
+		<control type="label" id="1">
+			<left>2</left>
+			<top>-2</top>
+			<width>auto</width>
+			<height>34</height>
+			<font>Bold29</font>
+			<textcolor>ffebebeb</textcolor>
+			<label>$VAR[PlayerResolution]</label>
+		</control>
+	</include>
 </includes>

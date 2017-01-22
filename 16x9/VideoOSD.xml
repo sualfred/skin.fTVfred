@@ -118,27 +118,8 @@
 					<textcolor>ff696969</textcolor>
 					<label>$VAR[PlayerDuration]</label>
 				</control>
-				<!--  HD label -->
-				<control type="label">
-					<left>24</left>
-					<top>-2</top>
-					<width>auto</width>
-					<height>34</height>
-					<font>Bold28</font>
-					<textcolor>ffebebeb</textcolor>
-					<label>[B]HD[/B]</label>
-					<visible>Integer.IsGreater(VideoPlayer.VideoResolution,710)</visible>
-				</control>
-				<!--  Resolution label -->
-				<control type="label">
-					<left>2</left>
-					<top>-2</top>
-					<width>auto</width>
-					<height>34</height>
-					<font>Bold29</font>
-					<textcolor>ffebebeb</textcolor>
-					<label>$VAR[PlayerResolution]</label>
-				</control>
+				<!-- Player Resolution Label -->
+				<include>PlayerResolutionLabel</include>
 			</control>			
 			<!-- Options and Cast -->
 			<control type="group">

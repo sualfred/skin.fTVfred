@@ -21,10 +21,11 @@
 				<left>40</left>
 				<top>14</top>
 				<height>30</height>
-				<width>937</width>
+				<width>867</width>
 				<aligny>center</aligny>
 				<font>Bold30</font>
 				<label>1021</label>
+				<scroll>true</scroll>
 				<textcolor>ffdadada</textcolor>
 			</control>
 			<!-- Left group -->
