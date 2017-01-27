@@ -769,7 +769,7 @@
 					<font>Med40</font>
 					<textcolor>ffeaeaea</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
-					<label>$VAR[PlayerBigLabel]$VAR[PlayerEpisodeValue, ]</label>
+					<label fallback="195">$VAR[PlayerBigLabel]$VAR[PlayerEpisodeValue, ]</label>
 				</control>
 				<!--  Small label -->
 				<control id="99" type="label">
@@ -820,7 +820,7 @@
 		<!--  HD label -->
 		<control type="label" id="1">
 			<left>24</left>
-			<top>-2</top>
+			<top>-1</top>
 			<width>auto</width>
 			<height>34</height>
 			<font>Bold28</font>
@@ -831,12 +831,74 @@
 		<!--  Resolution label -->
 		<control type="label" id="1">
 			<left>2</left>
-			<top>-2</top>
+			<top>-1</top>
 			<width>auto</width>
 			<height>34</height>
 			<font>Bold29</font>
 			<textcolor>ffebebeb</textcolor>
 			<label>$VAR[PlayerResolution]</label>
+		</control>
+	</include>
+	<!-- Player Duration Labels -->
+	<include name="PlayerDurationLabels">
+		<control type="grouplist" id="1">
+			<visible>!Player.ShowInfo</visible>
+			<left>92</left>
+			<bottom>39</bottom>
+			<width>800</width>
+			<height>40</height>
+			<itemgap>4</itemgap>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>			
+			<!--  Current position -->
+			<control type="label" id="1">
+				<width>auto</width>
+				<height>34</height>
+				<font>Light27</font>
+				<textcolor>fff3f3f3</textcolor>
+				<label>$VAR[PlayerTime]</label>
+			</control>
+			<!--  Divider -->
+			<control type="label" id="1">
+				<width>auto</width>
+				<height>34</height>
+				<font>Light27</font>
+				<textcolor>ff696969</textcolor>
+				<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
+				<label>/</label>
+			</control>
+			<!--  Total length -->
+			<control type="label" id="1">
+				<width>auto</width>
+				<height>34</height>
+				<font>Light27</font>
+				<textcolor>ff696969</textcolor>
+				<label>$VAR[PlayerDuration]</label>
+			</control>
+			<!-- Player Resolution Label -->
+			<include>PlayerResolutionLabel</include>
+		</control>
+		<!-- Show Info Labels -->
+		<control type="label">
+			<left>92</left>
+			<bottom>45</bottom>
+			<width>800</width>
+			<height>34</height>
+			<font>Light27</font>
+			<textcolor>fff3f3f3</textcolor>
+			<label>[COLOR ff696969]$LOCALIZE[19126][/COLOR] $INFO[VideoPlayer.StartTime]</label>
+			<visible>Player.ShowInfo</visible>
+		</control>
+		<control type="label">
+			<right>92</right>
+			<bottom>45</bottom>
+			<width>800</width>
+			<height>34</height>
+			<font>Light27</font>
+			<textcolor>fff3f3f3</textcolor>
+			<align>right</align>
+			<label>[COLOR ff696969]$LOCALIZE[19127][/COLOR] $INFO[VideoPlayer.EndTime]</label>
+			<visible>Player.ShowInfo</visible>
 		</control>
 	</include>
 </includes>

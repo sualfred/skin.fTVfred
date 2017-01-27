@@ -53,44 +53,11 @@
 					<righttexture>-</righttexture>
 					<overlaytexture>-</overlaytexture>
 				</control>
-				<control id="99" type="grouplist">
-					<left>92</left>
-					<bottom>38</bottom>
-					<width>800</width>
-					<height>40</height>
-					<itemgap>4</itemgap>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<!--  Current position -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>34</height>
-						<font>Light27</font>
-						<textcolor>fff3f3f3</textcolor>
-						<label>$VAR[PlayerTime]</label>
-					</control>
-					<!--  Divider -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>34</height>
-						<font>Light27</font>
-						<textcolor>ff696969</textcolor>
-						<label>/</label>
-						<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
-					</control>
-					<!--  Total length -->
-					<control id="99" type="label">
-						<width>auto</width>
-						<height>34</height>
-						<font>Light27</font>
-						<textcolor>ff696969</textcolor>
-						<label>$VAR[PlayerDuration]</label>
-					</control>
-					<!-- Player Resolution Label -->
-					<include>PlayerResolutionLabel</include>
-				</control>
+				<!-- Duration Labels -->
+				<include>PlayerDurationLabels</include>
 				<!--Xray Icon-->
 				<control id="99" type="grouplist">
+					<visible>!Player.ShowInfo</visible>
 					<right>92</right>
 					<bottom>40</bottom>
 					<height>40</height>
