@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.fTVfred-krypton" version="3.5.4a" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
+<addon id="skin.fTVfred-krypton" version="3.5.5" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.toolbox" version="1.1.1"/>
@@ -29,10 +29,8 @@
         </assets>
 		<news>Changelog:
 
-[B]3.5.4[/B]
-- Fixed missing player info osd, while the channel is going to be switched with up/down
-- Added channel number to video OSD
-- Adjusted player titles for music
+[B]3.5.5[/B]
+- Improved player OSD labels while channels will be switched with ChannelUp and ChannelDown
 
 See changelog.txt for more details.</news>
 	</extension>

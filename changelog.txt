@@ -1,5 +1,8 @@
 Changelog:
 
+3.5.5
+- Improved player OSD labels while channels will be switched with ChannelUp and ChannelDown
+
 3.5.4
 - Fixed missing player info osd, while the channel is going to be switched with up/down
 - Added channel number to video OSD
