@@ -354,7 +354,13 @@
 			<param name="sortby" value="lastplayed"/>
 			<param name="sortorder" value="descending"/>
 		</include>
-		<include content="ParamFtVWidgetListTemplate" condition="!String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),plugin://plugin.video.youtube/channel) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),musicdb://artists/) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),addons://sources/) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),pvr://recordings) + !String.EndsWith(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),*?view=lastplayed)">
+		<include content="ParamFtVWidgetListTemplate" condition="String.EndsWith(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),RecentlyAddedMovies.xsp)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+			<param name="sortby" value="dateadded"/>
+			<param name="sortorder" value="descending"/>
+		</include>
+		<include content="ParamFtVWidgetListTemplate" condition="!String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),plugin://plugin.video.youtube/channel) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),musicdb://artists/) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),addons://sources/) + !String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),pvr://recordings) + !String.EndsWith(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),*?view=lastplayed) + !String.EndsWith(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),RecentlyAddedMovies.xsp)">
 			<param name="ID">$PARAM[ID]</param>
 			<param name="ROW">$PARAM[ROW]</param>
 		</include>
