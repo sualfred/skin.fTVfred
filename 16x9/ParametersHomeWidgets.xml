@@ -160,8 +160,9 @@
 							<param name="ID">$PARAM[ID]</param>
 						</include>
 						<control type="image">
+							<top>-1</top>
 							<width>1500</width>
-							<height>195</height>
+							<height>196</height>
 							<texture>views/OverlayNF.png</texture>
 							<visible>!Control.HasFocus(99) + !Control.HasFocus($PARAM[ID]9)</visible>
 							<animation easing="inout" effect="fade" end="100" start="0" time="220" tween="sine">VisibleChange</animation>
@@ -224,8 +225,9 @@
 							<param name="ID">$PARAM[ID]</param>
 						</include>
 						<control type="image">
+							<top>-1</top>
 							<width>1500</width>
-							<height>195</height>
+							<height>196</height>
 							<texture>views/OverlayNF.png</texture>
 							<visible>!Control.HasFocus(99) + !Control.HasFocus($PARAM[ID]9)</visible>
 							<animation effect="fade" end="0" start="100" time="0">Focus</animation>
