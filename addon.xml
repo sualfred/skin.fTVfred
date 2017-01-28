@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.fTVfred-krypton" version="3.5.6" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
+<addon id="skin.fTVfred-krypton" version="3.5.7" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.toolbox" version="1.1.1"/>
@@ -29,8 +29,8 @@
         </assets>
 		<news>Changelog:
 
-[B]3.5.6[/B]
-- Fixed the wrong sort direction of the recently added movies widget, when multiple movies have been added on the same day
+[B]3.5.7[/B]
+- Fixed banner deactivation
 
 See changelog.txt for more details.</news>
 	</extension>
