@@ -267,6 +267,18 @@
 									<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 									<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 								</control>
+								<control id="201" type="button">
+									<width min="200" max="320">auto</width>
+									<wrapmultiline>true</wrapmultiline>
+									<height>100</height>
+									<font>Med24</font>
+									<label>$LOCALIZE[36044]</label>
+									<textoffsetx>28</textoffsetx>
+									<textcolor>ffdadada</textcolor>
+									<focusedcolor>ff222222</focusedcolor>
+									<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+									<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+								</control>
 							</control>
 						</control>
 					</control>
