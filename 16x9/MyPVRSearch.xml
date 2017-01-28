@@ -261,7 +261,7 @@
 				<ondown condition="!Control.IsVisible(99)">noop</ondown>
 				<viewtype label="19069">list</viewtype>
 				<scrolltime tween="quadratic">300</scrolltime>
-				<include>ViewPVRSearchTimer</include>
+				<include>ViewPVRList</include>
 			</control>
 		</control>
 	</controls>

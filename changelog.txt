@@ -1,5 +1,8 @@
 Changelog:
 
+3.5.8
+- Fixed broken PVR search and timer window
+
 3.5.7
 - Fixed banner deactivation
 
