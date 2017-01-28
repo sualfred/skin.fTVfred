@@ -1,5 +1,8 @@
 Changelog:
 
+3.5.6
+- Fixed the wrong sort direction of the recently added movies widget, when multiple movies have been added on the same day
+
 3.5.5
 - Improved player OSD labels while channels will be switched with ChannelUp and ChannelDown
 
