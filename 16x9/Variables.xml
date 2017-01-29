@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="SettingsCount">
+		<value>9</value>
+	</variable>
 	<variable name="PVRButtonColor">
 		<value condition="ControlGroup(1000).HasFocus">ff8e8b90</value>
 		<value>ff505559</value>
@@ -2179,6 +2182,9 @@
 		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">4K</value>
 	</variable>
 	<variable name="MoreSettingsInfo">
+		<value condition="Control.HasFocus(8002)">$LOCALIZE[31355]</value>
+		<value condition="Control.HasFocus(8003)">$LOCALIZE[31356]</value>
+		<value condition="Control.HasFocus(8004)">$LOCALIZE[31357]</value>
 		<value condition="Control.HasFocus(9002)">$LOCALIZE[31056]</value>
 		<value condition="Control.HasFocus(9003)">$LOCALIZE[31124]</value>
 		<value condition="Control.HasFocus(9004)">$LOCALIZE[31127]</value>
@@ -2188,6 +2194,7 @@
 		<value>$INFO[Control.GetLabel(6)]</value>
 	</variable>
 	<variable name="SettingsCurrentItem">
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)">9</value>
 		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">8</value>
 		<value condition="Window.IsVisible(InterfaceSettings)">$NUMBER[1]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$NUMBER[2]</value>
@@ -2272,6 +2279,7 @@
 		<value condition="Container.Content(songs)">$LOCALIZE[179][CR]</value>
 	</variable>
 	<variable name="SettingsLabel-1">
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[31247]</value>
 		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[14036]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[31324]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[24001]</value>
@@ -2281,7 +2289,8 @@
 		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[13000]</value>
 	</variable>
 	<variable name="SettingsLabel0">
-		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[22082]</value>
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)">$LOCALIZE[22082]</value>
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[31247]</value>
 		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[31324]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[31310]</value>
@@ -2291,13 +2300,14 @@
 		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[14036]</value>
 	</variable>
 	<variable name="SettingsLabel1">
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">$LOCALIZE[22082]</value>
 		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[31310]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[14200]</value>
 		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[31247]</value>
 	</variable>
 	<variable name="SettingsLabel2">
 		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[31310]</value>
@@ -2305,28 +2315,32 @@
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[31247]</value>
+		<value condition="Window.IsVisible(servicesettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel3">
 		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[14200]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[31247]</value>
+		<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsLabel4">
 		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[19020]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[22082]</value>
+		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[31247]</value>
 	</variable>
 	<variable name="SettingsLabel5">
 		<value condition="Window.IsVisible(InterfaceSettings)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[14036]</value>
-		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[22082]</value>
-		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[14036]</value>
+		<value condition="Window.IsVisible(MediaSettings)">$LOCALIZE[31247]</value>
+		<value condition="Window.IsVisible(PlayerSettings)">$LOCALIZE[22082]</value>
 	</variable>
 	<variable name="SettingsIcon-1">
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_backup.png</value>
 		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">settings/icon_service.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_appearance.png</value>
 		<value condition="Window.IsVisible(MediaSettings)">settings/icon_addons.png</value>
@@ -2336,7 +2350,8 @@
 		<value condition="Window.IsVisible(servicesettings)">settings/icon_system.png</value>
 	</variable>
 	<variable name="SettingsIcon0">
-		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">settings/icon_more.png</value>
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)">settings/icon_more.png</value>
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">settings/icon_backup.png</value>
 		<value condition="Window.IsVisible(InterfaceSettings)">settings/icon_appearance.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_addons.png</value>
 		<value condition="Window.IsVisible(MediaSettings)">settings/icon_library.png</value>
@@ -2346,13 +2361,14 @@
 		<value condition="Window.IsVisible(servicesettings)">settings/icon_service.png</value>
 	</variable>
 	<variable name="SettingsIcon1">
+		<value condition="String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)">settings/icon_more.png</value>
 		<value condition="Window.IsVisible(InterfaceSettings)">settings/icon_addons.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_library.png</value>
 		<value condition="Window.IsVisible(MediaSettings)">settings/icon_player.png</value>
 		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(systemsettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(servicesettings)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(servicesettings)">settings/icon_backup.png</value>
 	</variable>
 	<variable name="SettingsIcon2">
 		<value condition="Window.IsVisible(InterfaceSettings)">settings/icon_library.png</value>
@@ -2360,26 +2376,29 @@
 		<value condition="Window.IsVisible(MediaSettings)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(pvrsettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(systemsettings)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(servicesettings)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(systemsettings)">settings/icon_backup.png</value>
 	</variable>
 	<variable name="SettingsIcon3">
 		<value condition="Window.IsVisible(InterfaceSettings)">settings/icon_player.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(MediaSettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(pvrsettings)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_backup.png</value>
+		<value condition="Window.IsVisible(systemsettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon4">
 		<value condition="Window.IsVisible(InterfaceSettings)">settings/icon_tv.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(MediaSettings)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_more.png</value>
+		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_backup.png</value>
+		<value condition="Window.IsVisible(pvrsettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="SettingsIcon5">
 		<value condition="Window.IsVisible(InterfaceSettings)">settings/icon_system.png</value>
 		<value condition="Window.IsVisible(addonbrowser)">settings/icon_service.png</value>
-		<value condition="Window.IsVisible(MediaSettings)">settings/icon_more.png</value>
-		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_service.png</value>
+		<value condition="Window.IsVisible(MediaSettings)">settings/icon_backup.png</value>
+		<value condition="Window.IsVisible(PlayerSettings)">settings/icon_more.png</value>
 	</variable>
 	<variable name="AiredDate_Day">
 		<value condition="String.StartsWith(ListItem.Premiered,01/)">1</value>

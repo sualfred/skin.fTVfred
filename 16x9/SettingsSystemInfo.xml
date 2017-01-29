@@ -29,7 +29,7 @@
 				<font>Med32</font>
 				<aligny>bottom</aligny>
 				<textcolor>ffdadada</textcolor>
-				<label>$NUMBER[10]</label>
+				<label>$NUMBER[9]</label>
 			</control>
 			<control type="label">
 				<top>14</top>
@@ -47,7 +47,7 @@
 				<font>Light32</font>
 				<aligny>bottom</aligny>
 				<textcolor>ff505050</textcolor>
-				<label>$NUMBER[10]</label>
+				<label>$VAR[SettingsCount]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -70,7 +70,7 @@
 					<height>32</height>
 					<font>Bold34</font>
 					<textcolor>ffdadada</textcolor>
-					<label>14036</label>
+					<label>$LOCALIZE[31247]</label>
 				</control>
 				<control type="image">
 					<left>-13</left>
@@ -78,7 +78,7 @@
 					<width>300</width>
 					<height>300</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>settings/icon_service.png</texture>
+					<texture>settings/icon_backup.png</texture>
 				</control>
 				<control type="image">
 					<left>-24</left>

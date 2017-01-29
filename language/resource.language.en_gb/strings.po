@@ -1048,6 +1048,11 @@ msgctxt "#31246"
 msgid "Similar TV shows (because you watched...)"
 msgstr "Similar TV shows (because you watched...)"
 
+#: /16x9/Variables.xml
+msgctxt "#31247"
+msgid "Backup"
+msgstr ""
+
 #: /16x9/Variables.xml:874
 msgctxt "#31248"
 msgid "[LIGHT]New and now included in[/LIGHT] Kodi[CR]"
@@ -1581,6 +1586,21 @@ msgstr ""
 #: /shortcuts/overrides.xml
 msgctxt "#31354"
 msgid "Recently watched"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31355"
+msgid "Creates a backup archive with all your set skin settings."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31356"
+msgid "Imports an existing backup of your skin settings."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31357"
+msgid "Resets all your set skin settings to default."
 msgstr ""
 
 msgctxt "#31500"
