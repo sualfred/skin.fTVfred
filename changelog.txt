@@ -1,5 +1,11 @@
 Changelog:
 
+3.5.9
+- Fixed wrong login screen element positions
+- Fixed some settings labels
+- Moved the backup feature to its own settings category item
+- Changed some unfocus animations
+
 3.5.8
 - Fixed broken PVR search and timer window
 

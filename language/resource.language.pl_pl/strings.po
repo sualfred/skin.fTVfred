@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-18 20:31+0000\n"
+"PO-Revision-Date: 2017-01-29 13:06+0000\n"
 "Last-Translator: Damian Teodorowicz <mogiel@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -1076,6 +1076,11 @@ msgctxt "#31246"
 msgid "Similar TV shows (because you watched...)"
 msgstr "Podobne seriale (ponieważ oglądałeś...)"
 
+#: /16x9/Variables.xml
+msgctxt "#31247"
+msgid "Backup"
+msgstr "Kopia zapasowa"
+
 #: /16x9/Variables.xml:874
 msgctxt "#31248"
 msgid "[LIGHT]New and now included in[/LIGHT] Kodi[CR]"
@@ -1620,6 +1625,21 @@ msgstr "sekunda"
 msgctxt "#31354"
 msgid "Recently watched"
 msgstr "Ostatnio oglądane"
+
+#: /16x9/Variables.xml
+msgctxt "#31355"
+msgid "Creates a backup archive with all your set skin settings."
+msgstr "Tworzy archiwum z kopią zapasową wszystkich ustawień skórki."
+
+#: /16x9/Variables.xml
+msgctxt "#31356"
+msgid "Imports an existing backup of your skin settings."
+msgstr "Importuje istniejacą kopię zapasową ustawień skórki."
+
+#: /16x9/Variables.xml
+msgctxt "#31357"
+msgid "Resets all your set skin settings to default."
+msgstr "Przywraca wszystkie ustawienia skórki do domyślnych."
 
 msgctxt "#31500"
 msgid "Widget Group 1"
