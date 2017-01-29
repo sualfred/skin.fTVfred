@@ -715,7 +715,7 @@
 						<onclick>SetProperty(Dialog.NumItems,7)</onclick>
 						<!-- Clear -->
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
-						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd])||Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label])||Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type]))</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label])||Skin.Reset($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type]))</onclick>
 						<!--Movies -->
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31242])</onclick>
 						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Label],$LOCALIZE[31242])||Skin.SetString($INFO[Window(home).Property(SubMenu),,-WidgetAd-Type],newmovie))</onclick>
