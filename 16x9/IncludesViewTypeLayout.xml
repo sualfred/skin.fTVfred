@@ -187,7 +187,7 @@
 					<height>480</height>
 					<texture>views/OverlayNF.png</texture>
 					<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 			</control>
 		</focusedlayout>
@@ -311,7 +311,7 @@
 					<height>480</height>
 					<texture>views/OverlayNF.png</texture>
 					<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 			</control>
 		</focusedlayout>
@@ -640,7 +640,7 @@
 						<height>480</height>
 						<texture>views/OverlayNF.png</texture>						
 						<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 				</control>
 			</control>
@@ -750,7 +750,7 @@
 						<height>480</height>
 						<texture>views/OverlayNF.png</texture>
 						<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-						<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 					</control>
 				</control>
 			</control>
@@ -957,7 +957,7 @@
 					<height>480</height>
 					<texture>views/OverlayNF.png</texture>
 					<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 			</control>
 		</focusedlayout>
@@ -1115,7 +1115,7 @@
 					<height>480</height>
 					<texture>views/OverlayNF.png</texture>
 					<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 			</control>
 		</focusedlayout>
@@ -1280,7 +1280,7 @@
 					<height>480</height>
 					<texture>views/OverlayNF.png</texture>
 					<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus($PARAM[ID])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 			</control>
 		</focusedlayout>
@@ -1926,8 +1926,8 @@
 					<width>480</width>
 					<height>480</height>
 					<texture>views/OverlayNF.png</texture>
-					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-					<animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
 				</control>
 			</control>
 		</focusedlayout>

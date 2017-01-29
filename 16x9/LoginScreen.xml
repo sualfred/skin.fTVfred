@@ -56,7 +56,7 @@
 			</control>
 		</control>
 		<control id="52" type="fixedlist">
-			<left>-77</left>
+			<left>-78</left>
 			<top>289</top>
 			<width>3000</width>
 			<height>497</height>
@@ -77,7 +77,6 @@
 			<itemlayout height="497" width="300">
 				<control type="group">
 					<animation center="134,240" condition="True" effect="zoom" end="85" start="85">Conditional</animation>
-					<animation condition="ControlGroup(9001).HasFocus" easing="inout" effect="slide" end="49,0" reversible="true" start="0,0" time="125" tween="sine">Conditional</animation>
 					<control type="image">
 						<left>-24</left>
 						<width>333</width>
@@ -121,7 +120,7 @@
 			</itemlayout>
 			<focusedlayout height="497" width="300">
 				<control type="group">
-					<animation center="134,240" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
+					<animation center="134,240" condition="Container(52).OnNext | Container(52).OnPrevious" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
 					<animation center="134,240" condition="Container(52).OnNext | Container(52).OnPrevious" easing="inout" effect="zoom" end="85" start="100" time="300" tween="sine">UnFocus</animation>
 					<control type="image">
 						<left>-24</left>
@@ -168,11 +167,11 @@
 		</control>
 		<!-- Lower group -->
 		<control type="group">
-			<left>196</left>
+			<left>186</left>
 			<top>782</top>
 			<include>VisibleDelayFadeAnimation</include>
 			<control id="1000" type="button">
-				<width>182</width>
+				<width min="140" max="300">auto</width>
 				<height>100</height>
 				<onup>52</onup>
 				<ondown>noop</ondown>

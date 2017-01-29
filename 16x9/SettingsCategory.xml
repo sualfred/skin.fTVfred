@@ -360,6 +360,7 @@
 					<texture>settings/back.png</texture>
 				</control>
 			</control>
+			<!-- Default -->
 			<control type="group">
 				<visible>!String.IsEqual(Window(settings).Property(SettingsCurrentItem),9) + !String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)</visible>
 				<animation reversible="false" type="WindowOpen">
@@ -400,6 +401,7 @@
 					<texture>common/shadow.png</texture>
 				</control>
 			</control>
+			<!-- Backup -->
 			<control type="group">
 				<visible>String.IsEqual(Window(settings).Property(SettingsCurrentItem),8)</visible>
 				<animation reversible="false" type="WindowOpen">
@@ -466,6 +468,7 @@
 					<texture>common/shadow.png</texture>
 				</control>
 			</control>
+			<!-- More -->
 			<control type="group">
 				<visible>String.IsEqual(Window(settings).Property(SettingsCurrentItem),9)</visible>
 				<animation condition="!Window.Previous(systeminfo) + !Window.Previous(profiles)" reversible="false" type="WindowOpen">
