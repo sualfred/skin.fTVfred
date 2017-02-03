@@ -1352,7 +1352,7 @@
 					<height>452</height>
 					<align>left</align>
 					<font>Reg36Spaced</font>
-					<pagecontrol>8</pagecontrol>
+					<pagecontrol>1004</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[ListItem.Label,[B],[/B][CR]]$VAR[DialogPlot,[LIGHT],[/LIGHT]]</label>
@@ -1380,7 +1380,7 @@
 					<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 				</control>
 				<!-- Scrollbar -->
-				<control id="8" type="scrollbar">
+				<control id="1004" type="scrollbar">
 					<left>1394</left>
 					<centertop>50%</centertop>
 					<width>8</width>
