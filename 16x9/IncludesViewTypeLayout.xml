@@ -246,12 +246,10 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus condition="!Container.Content(seasons)">ClearProperty(TVShowID,home)</onfocus>
-				<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowTitle,$INFO[ListItem.TVShowTitle],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.IMDBNumber],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowRating,$INFO[ListItem.Rating],home)</onfocus>
 				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowUserRating,$INFO[ListItem.UserRating],home)</onfocus>
-				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 				<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.audio.prime_music)">SetProperty(PrimeMusicLabel,$INFO[ListItem.Titel],home)</onfocus>
 			</control>
 			<control type="group">
@@ -519,8 +517,6 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>ClearProperty(TVShowID,home)</onfocus>
-				<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
-				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 			</control>
 			<control type="group">
 				<animation center="250,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious | !String.IsEmpty(Window(home).Property(WindowOpen))" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>
@@ -650,8 +646,6 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>ClearProperty(TVShowID,home)</onfocus>
-				<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
-				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 				<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.audio.prime_music)">SetProperty(PrimeMusicLabel,$INFO[ListItem.label],home)</onfocus>
 			</control>
 			<control type="group">
@@ -836,7 +830,6 @@
 				<texturenofocus>-</texturenofocus>
 				<onfocus>SetProperty(ContentEpisodes,1,home)</onfocus>
 				<onfocus condition="!String.IsEmpty(Window(home).Property(ButtonFocus))">ClearProperty(ButtonFocus,home)</onfocus>
-				<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 			</control>
 			<control type="group">
 				<animation center="316,288" reversible="false" condition="Container($PARAM[ID]).OnNext | Container($PARAM[ID]).OnPrevious | !String.IsEmpty(Window(home).Property(WindowOpen))" easing="inout" effect="zoom" end="100" start="85" time="300" tween="sine">Focus</animation>

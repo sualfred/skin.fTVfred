@@ -88,7 +88,7 @@
 					<height>28</height>
 					<font>Med20</font>
 					<textcolor>ffbcbcbc</textcolor>
-					<label>$INFO[Window(home).Property(PercentRemaining)]</label>
+					<label>$VAR[PercentRemaining]</label>
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="progress">
