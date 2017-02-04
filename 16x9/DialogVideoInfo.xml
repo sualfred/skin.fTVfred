@@ -14,7 +14,7 @@
 	<!--<onunload>SetFocus(50)</onunload>-->
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
-		<include condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)">IncludeDialogInfoDefault</include>
-		<include condition="![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)]">IncludeDialogInfoSpecial</include>
+		<include condition="!String.IsEmpty(ListItem.DBID)">IncludeDialogInfoDefault</include>
+		<include condition="String.IsEmpty(ListItem.DBID)">IncludeDialogInfoSpecial</include>
 	</controls>
 </window>

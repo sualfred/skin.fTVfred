@@ -2633,9 +2633,9 @@
 		<value condition="Control.IsVisible(11) + !String.IsEmpty(Container(11).ListItem.PlotOutline)">$INFO[Container(11).ListItem.EpisodeName,,[CR]]$INFO[Container(11).ListItem.PlotOutline]</value>
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.Plot)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.Plot]</value>
 		<value condition="Control.IsVisible(100) + !String.IsEmpty(Container(100).ListItem.PlotOutline)">$INFO[Container(100).ListItem.EpisodeName,,[CR]]$INFO[Container(100).ListItem.PlotOutline]</value>
-		<value condition="!String.IsEmpty(ListItem.Plot) + String.IsEqual(ListItem.DBtype,video)">$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[31147][CR][CR]]$INFO[ListItem.Plot]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.DBID)">$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[31147][CR][CR]]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.Plot]</value>
-		<value condition="!String.IsEmpty(ListItem.PlotOutline) + String.IsEqual(ListItem.DBtype,video)">$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[31147][CR][CR]]$INFO[ListItem.PlotOutline]</value>
+		<value condition="!String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.DBID)">$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[31147][CR][CR]]$INFO[ListItem.PlotOutline]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.EpisodeName,,[CR]]$INFO[ListItem.PlotOutline]</value>
 		<value>$LOCALIZE[195]</value>
 	</variable>
