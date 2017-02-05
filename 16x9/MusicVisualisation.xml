@@ -126,6 +126,13 @@
 				<top>836</top>
 				<width>154</width>
 				<height>154</height>
+				<texture>common/default_empty.png</texture>
+			</control>
+			<control type="image">
+				<left>198</left>
+				<top>836</top>
+				<width>154</width>
+				<height>154</height>
 				<texture fallback="common/missing_image_cover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio align="left" aligny="bottom">scale</aspectratio>
 			</control>

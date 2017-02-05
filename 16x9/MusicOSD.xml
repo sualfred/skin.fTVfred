@@ -45,47 +45,15 @@
 				<righttexture>-</righttexture>
 				<overlaytexture>-</overlaytexture>
 			</control>
-			<control type="grouplist">
-				<left>92</left>
-				<bottom>38</bottom>
-				<width>800</width>
-				<height>40</height>
-				<itemgap>4</itemgap>
-				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
-				<!--  Current position -->
-				<control type="label">
-					<width>auto</width>
-					<height>34</height>
-					<font>Light27</font>
-					<textcolor>fff3f3f3</textcolor>
-					<label>$VAR[PlayerTime]</label>
-				</control>
-				<!--  Divider -->
-				<control type="label">
-					<width>auto</width>
-					<height>34</height>
-					<font>Light27</font>
-					<textcolor>ff696969</textcolor>
-					<label>/</label>
-					<visible>!String.IsEmpty(Player.Time) + !String.IsEmpty(Player.Duration)</visible>
-				</control>
-				<!--  Total length -->
-				<control type="label">
-					<width>auto</width>
-					<height>34</height>
-					<font>Light27</font>
-					<textcolor>ff696969</textcolor>
-					<label>$VAR[PlayerDuration]</label>
-				</control>
-			</control>
+			<!-- Player Resolution Label -->
+			<include>PlayerDurationLabels</include>
 			<control id="300" type="grouplist">
 				<centerleft>50%</centerleft>
 				<bottom>26</bottom>
 				<width>800</width>
 				<height>64</height>
 				<onup condition="!Player.Forwarding + !Player.Rewinding">SetProperty(ShowOptions,1,home)</onup>
-				<onup condition="!Player.Forwarding + !Player.Rewinding">201</onup>
+				<onup condition="!Player.Forwarding + !Player.Rewinding">8</onup>
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>

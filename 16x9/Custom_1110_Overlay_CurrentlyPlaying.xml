@@ -53,6 +53,7 @@
 					<height>116</height>
 					<texture>dialogs/progress/$VAR[CurrentlyPlayingProgressCircle].png</texture>
 					<colordiffuse>ffdadada</colordiffuse>
+					<visible>![Player.IsInternetStream + Player.HasAudio]</visible>
 				</control>
 				<!-- Icon -->
 				<control type="image">
