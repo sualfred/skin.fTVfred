@@ -3,6 +3,7 @@
 	<menucontrol>1000</menucontrol>
 	<backgroundcolor>0xff12161b</backgroundcolor>
 	<defaultcontrol always="true">58</defaultcontrol>
+	<onunload>ClearProperty(HideNowPlaying,home)</onunload>
 	<views>58,59</views>
 	<controls>
 		<!-- Fanart -->
@@ -10,7 +11,7 @@
 		<!-- Heading / Current item / Total items -->
 		<control type="group">
 			<animation delay="400" effect="fade" end="100" start="0" time="200" condition="Control.IsVisible(59)">WindowOpen</animation>
-			<animation delay="200" effect="fade" end="100" start="0" time="200" condition="Control.IsVisible(58)">WindowOpen</animation>
+			<animation delay="300" effect="fade" end="100" start="0" time="200" condition="Control.IsVisible(58)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="88,34" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 			<control type="grouplist">
 				<left>110</left>
@@ -128,7 +129,7 @@
 		<!-- Time -->		
 		<control type="group">
 			<animation delay="400" effect="fade" end="100" start="0" time="200" condition="Control.IsVisible(59)">WindowOpen</animation>
-			<animation delay="200" effect="fade" end="100" start="0" time="200" condition="Control.IsVisible(58)">WindowOpen</animation>
+			<animation delay="300" effect="fade" end="100" start="0" time="200" condition="Control.IsVisible(58)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-10,34" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 			<control type="grouplist">
 				<right>110</right>

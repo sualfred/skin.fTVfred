@@ -2226,8 +2226,7 @@
 	</variable>
 	<variable name="WideImage">
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_wide.png</value>
-		<value condition="Window.IsVisible(tvchannels) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
-		<value condition="Window.IsVisible(tvchannels) + [!Skin.HasSetting(SkinHelper.EnablePVRThumbs) | String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.Fanart))]">$INFO[ListItem.Icon]</value>
+		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=fanart&amp;fallback=$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(videoplaylist) + String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(videoplaylist) + !String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(thumb)) + [!Skin.HasSetting(HideUnwatchedThumbs) | [Skin.HasSetting(HideUnwatchedThumbs) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)]]">$INFO[ListItem.Art(thumb)]</value>
@@ -2245,14 +2244,14 @@
 	</variable>
 	<variable name="PosterImage">
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_poster.png</value>
-		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Poster)]</value>
+		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=poster</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/movie_fallback.png</value>
 	</variable>
 	<variable name="SquareImage">
+		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=fanart&amp;fallback=$INFO[ListItem.Icon]</value>
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_square.png</value>
-		<value condition="Window.IsVisible(tvrecordings) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>views/square_fallback.png</value>
 	</variable>

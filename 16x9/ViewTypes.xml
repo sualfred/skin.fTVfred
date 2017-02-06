@@ -1132,7 +1132,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
 			<control type="group">
-				<animation delay="200" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<animation delay="300" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 				<!-- Separator -->
 				<control type="image">
 					<left>1311</left>
@@ -1286,16 +1286,24 @@
 				<include>HiddenControl</include>
 			</control>
 			<control id="58" type="panel">
+				<animation condition="Window.IsVisible(1102)" reversible="false" type="Conditional">
+					<effect easing="out" end="0,-30" start="0,0" time="60" tween="sine" type="slide" />
+					<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
+				</animation>
 				<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="120">Conditional</animation>
 				<left>92</left>
 				<top>248</top>
 				<width>1250</width>
 				<height>882</height>
+				<onfocus>ClearProperty(HideNowPlaying,home)</onfocus>
+				<onup>SetProperty(HideNowPlaying,1,home)</onup>
 				<onup>1001</onup>
+				<ondown>SetProperty(BounceDown,1,Home)</ondown>
 				<ondown>noop</ondown>
 				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">back</onleft>
 				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
 				<onleft>noop</onleft>
+				<onright condition="String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetProperty(BounceDown,1,Home)</onright>
 				<onright condition="!String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
 				<onright>noop</onright>
 				<defaultcontrol always="true">0</defaultcontrol>

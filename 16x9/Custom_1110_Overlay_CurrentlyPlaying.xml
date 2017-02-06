@@ -11,7 +11,7 @@
 		</control>
 		<!-- Main group -->
 		<control type="group">
-			<animation condition="Window.IsActive(volumebar) | Window.IsActive(shutdownmenu) | Window.IsActive(notification) | Window.IsActive(extendedprogressdialog) | [Window.IsActive(home) + !String.IsEmpty(Window(Home).Property(WidgetHasFocus))] | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsActive(script-skinshortcuts.xml) | Window.IsActive(addoninformation) | Window.IsActive(1105) | Window.IsActive(virtualkeyboard) | Window.IsActive(selectdialog) | Window.IsActive(busydialog) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(1149)" reversible="false" type="Conditional">
+			<animation condition="Window.IsActive(volumebar) | Window.IsActive(shutdownmenu) | Window.IsActive(notification) | Window.IsActive(extendedprogressdialog) | [Window.IsActive(home) + !String.IsEmpty(Window(Home).Property(WidgetHasFocus))] | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsActive(script-skinshortcuts.xml) | Window.IsActive(addoninformation) | Window.IsActive(1105) | Window.IsActive(virtualkeyboard) | Window.IsActive(selectdialog) | Window.IsActive(busydialog) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(1149) | !String.IsEmpty(Window(home).Property(HideNowPlaying))" reversible="false" type="Conditional">
 				<effect type="fade" start="100" end="0" time="0" />
 			</animation>
 			<right>12</right>
