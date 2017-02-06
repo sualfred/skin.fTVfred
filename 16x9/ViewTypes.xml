@@ -1136,9 +1136,9 @@
 				<!-- Separator -->
 				<control type="image">
 					<left>1311</left>
-					<top>80</top>
+					<top>230</top>
 					<width>8</width>
-					<height>1000</height>
+					<height>850</height>
 					<texture>views/line.png</texture>
 					<animation effect="slide" time="0" start="0,0" end="3,0" condition="Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
 				</control>
