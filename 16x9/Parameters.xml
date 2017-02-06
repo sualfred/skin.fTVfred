@@ -401,10 +401,11 @@
 	</include>
 	<!-- ViewType progress -->
 	<include name="ParamProgress">
-		<param name="OverlayWatched" default="true" />		
-		<definition>			
+		<param name="OverlayWatched" default="true" />
+		<param name="top" default="516" />
+		<definition>
 			<control type="progress">
-				<top>516</top>
+				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
 				<height>12</height>
 				<info>ListItem.PercentPlayed</info>
@@ -418,7 +419,7 @@
 			<control type="group">
 				<visible>$PARAM[OverlayWatched]</visible>
 				<control type="image">
-					<top>516</top>
+					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>12</height>
 					<texture border="2">views/ProgressBar.png</texture>

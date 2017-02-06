@@ -156,6 +156,7 @@
 		<control type="group">
 			<visible>[!Player.HasVideo | Skin.HasSetting(HideVideoBackground)] + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 			<animation condition="!Window.Previous(fullscreenvideo)" delay="800" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+			<animation condition="Window.IsActive(tvchannels) + ControlGroup(1000).HasFocus" effect="fade" end="0" start="100" time="120">Conditional</animation>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>

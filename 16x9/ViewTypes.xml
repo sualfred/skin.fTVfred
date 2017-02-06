@@ -1126,4 +1126,372 @@
 			<include>ViewMusicPlaylistLayout</include>
 		</control>
 	</include>
+
+	<!-- PVR Channels Panel -->
+	<include name="ViewPVRChannelsPanel">
+		<control type="group">
+			<visible>Control.IsVisible(58)</visible>
+			<control type="group">
+				<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<!-- Separator -->
+				<control type="image">
+					<left>1311</left>
+					<top>80</top>
+					<width>8</width>
+					<height>1000</height>
+					<texture>views/line.png</texture>
+					<animation effect="slide" time="0" start="0,0" end="3,0" condition="Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
+				</control>
+				<!-- Details -->
+				<control type="group">
+					<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="120">Conditional</animation>
+					<left>1354</left>
+					<top>266</top>
+					<!-- Small Details -->
+					<control type="grouplist">
+						<height>auto</height>
+						<width>500</width>
+						<itemgap>10</itemgap>
+						<orientation>vertical</orientation>
+						<usecontrolcoords>true</usecontrolcoords>
+						<!-- Thumb -->
+						<control type="group">
+							<height>355</height>
+							<control type="image">
+								<width>460</width>
+								<height>345</height>
+								<aspectratio>scale</aspectratio>
+								<texture background="true" fallback="views/episode_fallback.png">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.FanArt)]</texture>
+							</control>
+							<control type="image">
+								<top>105</top>
+								<width>460</width>
+								<height>240</height>
+								<texture border="2">views/season_overlay.png</texture>
+							</control>
+							<control type="label">
+								<top>290</top>
+								<width>460</width>
+								<height>28</height>
+								<textoffsetx>10</textoffsetx>
+								<font>Med20</font>
+								<textcolor>ffbcbcbc</textcolor>
+								<align>right</align>
+								<label>$INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+							</control>
+							<control type="label">
+								<top>290</top>
+								<width>460</width>
+								<height>28</height>
+								<textoffsetx>10</textoffsetx>
+								<font>Med20</font>
+								<textcolor>ff8e8b90</textcolor>
+								<label>$VAR[ProgressPercentRemaining]</label>
+							</control>
+							<control type="progress">
+								<top>333</top>
+								<width>460</width>
+								<height>12</height>
+								<info>ListItem.Progress</info>
+								<texturebg border="2">views/ProgressBack.png</texturebg>
+								<lefttexture>-</lefttexture>
+								<midtexture border="2">views/ProgressBar.png</midtexture>
+								<righttexture>-</righttexture>
+								<overlaytexture>-</overlaytexture>
+							</control>
+						</control>
+						<!-- Channel -->
+						<control type="label">
+							<width>460</width>
+							<height>24</height>
+							<font>Med24</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffFFC24B</textcolor>
+							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						</control>
+						<!-- Plot -->
+						<control type="group">
+							<height>270</height>
+							<control type="textbox">
+								<width>460</width>
+								<height>270</height>
+								<pagecontrol>96</pagecontrol>
+								<font>Light26Spaced</font>
+								<autoscroll>false</autoscroll>
+								<textcolor>ffb1b2b3</textcolor>
+								<label>[B]$INFO[ListItem.Title][/B] $INFO[ListItem.Plot]</label>
+							</control>
+							<control id="96" type="scrollbar">
+								<width>460</width>
+								<height>270</height>
+								<showonepage>false</showonepage>
+								<orientation>vertical</orientation>
+							</control>
+							<control type="image">
+								<top>242</top>
+								<left>460</left>
+								<width>37</width>
+								<height>23</height>
+								<texture>views/more_nf.png</texture>
+								<visible>Control.IsVisible(96) + !String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+						</control>
+					</control>
+					<control type="textbox">
+						<bottom>40</bottom>
+						<width>460</width>
+						<height>60</height>
+						<pagecontrol>584</pagecontrol>
+						<font>Light26Spaced</font>
+						<autoscroll>false</autoscroll>
+						<textcolor>ffb1b2b3</textcolor>
+						<label>[COLOR ff707070]$LOCALIZE[19031][/COLOR] $INFO[Container.ListItem.NextTitle]</label>
+					</control>
+				</control>
+			</control>
+			<!--Channels-->
+			<control id="581" type="button">
+				<onfocus>Control.Move(58,-1)</onfocus>
+				<onfocus>SetFocus(58)</onfocus>
+				<onfocus>Right</onfocus>
+				<onfocus>Right</onfocus>
+				<onfocus>Right</onfocus>
+				<onfocus>Right</onfocus>
+				<include>HiddenControl</include>
+			</control>
+			<control id="582" type="button">
+				<onfocus>SetFocus(58)</onfocus>
+				<onfocus>Left</onfocus>
+				<onfocus>Left</onfocus>
+				<onfocus>Left</onfocus>
+				<onfocus>Left</onfocus>
+				<onfocus>Control.Move(58,1)</onfocus>
+				<include>HiddenControl</include>
+			</control>
+			<control id="58" type="panel">
+				<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="120">Conditional</animation>
+				<left>92</left>
+				<top>248</top>
+				<width>1250</width>
+				<height>882</height>
+				<onup>1001</onup>
+				<ondown>noop</ondown>
+				<onleft condition="String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">back</onleft>
+				<onleft condition="!String.IsEmpty(Container(58).ListItemNoWrap(-1).Label)">SetFocus(581)</onleft>
+				<onleft>noop</onleft>
+				<onright condition="!String.IsEmpty(Container(58).ListItemNoWrap(1).Label)">SetFocus(582)</onright>
+				<onright>noop</onright>
+				<defaultcontrol always="true">0</defaultcontrol>
+				<orientation>vertical</orientation>
+				<viewtype label="31281">panel</viewtype>
+				<scrolltime easing="inout" tween="sine">200</scrolltime>
+				<itemlayout height="240" width="240">
+					<control type="group">
+						<width>240</width>
+						<height>240</height>
+						<animation center="120,120" easing="inout" effect="zoom" end="85" start="85" time="120" tween="linear" condition="true">Conditional</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>common/default_empty.png</texture>
+						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<top>190</top>
+							<width>240</width>
+							<height>22</height>
+							<font>Bold22</font>
+							<textoffsetx>10</textoffsetx>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEqual(ListItem.Label,..) + String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="240" width="240">
+					<control type="group">
+						<width>240</width>
+						<height>240</height>
+						<animation center="120,120" easing="inout" effect="zoom" end="100" start="85" time="120" tween="linear">Focus</animation>
+						<animation center="120,120" easing="inout" effect="zoom" end="85" start="100" time="120" tween="linear">UnFocus</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>common/default_empty.png</texture>
+						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<top>190</top>
+							<width>240</width>
+							<height>22</height>
+							<font>Bold22</font>
+							<textoffsetx>10</textoffsetx>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>88000000</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEqual(ListItem.Label,..) + String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+
+	<!-- PVR Channels List -->
+	<include name="ViewPVRChannelsList">
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<control type="group">
+				<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<!-- Lower group -->
+				<control type="group">
+					<left>196</left>
+					<top>767</top>
+					<include>VisibleDelayFadeAnimation</include>
+					<!-- Small Details -->
+					<control type="grouplist">
+						<top>110</top>
+						<height>26</height>
+						<itemgap>10</itemgap>
+						<orientation>horizontal</orientation>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffFFC24B</textcolor>
+							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						</control>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbebebe</textcolor>
+							<label>$INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+						</control>
+						<control type="label">
+							<width>auto</width>
+							<height>24</height>
+							<font>Med24Num</font>
+							<aligny>bottom</aligny>
+							<textcolor>ffbebebe</textcolor>
+							<label>$INFO[ListItem.Genre]</label>
+							<visible>!String.IsEqual(ListItem.Genre,$LOCALIZE[19499])</visible>
+						</control>
+					</control>
+					<!-- Details -->
+					<control type="textbox">
+						<top>143</top>
+						<width>1192</width>
+						<height>124</height>
+						<align>left</align>
+						<font>Reg30Spaced</font>
+						<pagecontrol>99</pagecontrol>
+						<autoscroll>false</autoscroll>
+						<textcolor>ffbcbcbc</textcolor>
+						<label>[B]$INFO[ListItem.Title][/B] $VAR[Plot]</label>
+					</control>
+					<control id="99" type="scrollbar">
+						<top>103</top>
+						<width>1192</width>
+						<height>126</height>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+					<!-- More button -->
+					<control id="3000" type="button">
+						<left>1194</left>
+						<top>232</top>
+						<width>37</width>
+						<height>23</height>
+						<onup>59</onup>
+						<ondown>noop</ondown>
+						<onleft>59</onleft>
+						<onright>59</onright>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</onclick>
+						<visible>Control.IsVisible(99)</visible>
+						<texturefocus>views/more_fo.png</texturefocus>
+						<texturenofocus>views/more_nf.png</texturenofocus>
+						<visible>!Window.IsVisible(textviewer)</visible>
+					</control>
+					<!-- More button -->
+					<control type="image">
+						<left>1194</left>
+						<top>192</top>
+						<width>37</width>
+						<height>23</height>
+						<texture>views/more_nf.png</texture>
+						<visible>Window.IsVisible(textviewer)</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<top>293</top>
+				<!-- Columns -->
+				<control type="group">
+					<left>198</left>
+					<width>1850</width>
+					<height>420</height>
+					<control type="label">
+						<left>0</left>
+						<width>340</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<textcolor>ffbebebe</textcolor>
+						<font>Bold20</font>
+						<label>$INFO[System.Date]</label>
+					</control>
+					<control type="label">
+						<left>350</left>
+						<width>1260</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<textcolor>ffbebebe</textcolor>
+						<font>Bold20</font>
+						<label>$LOCALIZE[31106]</label>
+					</control>
+					<control type="label">
+						<left>1230</left>
+						<width>1260</width>
+						<aligny>center</aligny>
+						<height>67</height>
+						<font>Bold20</font>
+						<textcolor>ffbebebe</textcolor>
+						<label>$LOCALIZE[19031]</label>
+					</control>
+				</control>
+				<!--Channels-->
+				<control type="list" id="59">    
+					<left>198</left>
+					<top>57</top>
+					<width>1850</width>
+					<height>500</height>
+					<onup>1001</onup>
+					<onleft>1001</onleft>
+					<onright condition="Control.IsVisible(99)">3000</onright>
+					<ondown condition="Control.IsVisible(99)">3000</ondown>
+					<ondown condition="!Control.IsVisible(99)">noop</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="quadratic">300</scrolltime>
+					<include>ViewPVRList</include>
+				</control>
+			</control>
+		</control>
+	</include>
+
 </includes>
