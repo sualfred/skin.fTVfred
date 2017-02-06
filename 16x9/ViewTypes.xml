@@ -1132,13 +1132,13 @@
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
 			<control type="group">
-				<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<animation delay="200" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 				<!-- Separator -->
 				<control type="image">
 					<left>1311</left>
-					<top>230</top>
+					<top>225</top>
 					<width>8</width>
-					<height>850</height>
+					<height>855</height>
 					<texture>views/line.png</texture>
 					<animation effect="slide" time="0" start="0,0" end="3,0" condition="Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
 				</control>
@@ -1156,32 +1156,29 @@
 						<usecontrolcoords>true</usecontrolcoords>
 						<!-- Thumb -->
 						<control type="group">
-							<height>355</height>
+							<height>345</height>
 							<control type="image">
-								<width>460</width>
+								<width>345</width>
 								<height>345</height>
 								<aspectratio>scale</aspectratio>
-								<texture background="true" fallback="views/episode_fallback.png">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.FanArt)]</texture>
+								<texture>common/default_empty.png</texture>
 							</control>
 							<control type="image">
-								<top>105</top>
-								<width>460</width>
-								<height>240</height>
+								<width>345</width>
+								<height>345</height>
+								<aspectratio>keep</aspectratio>
+								<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="image">
+								<bottom>0</bottom>
+								<width>345</width>
+								<height>345</height>
+								<aspectratio>stretch</aspectratio>
 								<texture border="2">views/season_overlay.png</texture>
 							</control>
 							<control type="label">
 								<top>290</top>
-								<width>460</width>
-								<height>28</height>
-								<textoffsetx>10</textoffsetx>
-								<font>Med20</font>
-								<textcolor>ffbcbcbc</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
-							</control>
-							<control type="label">
-								<top>290</top>
-								<width>460</width>
+								<width>345</width>
 								<height>28</height>
 								<textoffsetx>10</textoffsetx>
 								<font>Med20</font>
@@ -1189,8 +1186,8 @@
 								<label>$VAR[ProgressPercentRemaining]</label>
 							</control>
 							<control type="progress">
-								<top>333</top>
-								<width>460</width>
+								<bottom>0</bottom>
+								<width>345</width>
 								<height>12</height>
 								<info>ListItem.Progress</info>
 								<texturebg border="2">views/ProgressBack.png</texturebg>
@@ -1200,6 +1197,10 @@
 								<overlaytexture>-</overlaytexture>
 							</control>
 						</control>
+						<include content="Spacer">
+							<param name="height" value="4"/>
+							<param name="visible" value="true"/>
+						</include>
 						<!-- Channel -->
 						<control type="label">
 							<width>460</width>
@@ -1209,12 +1210,24 @@
 							<textcolor>ffFFC24B</textcolor>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						</control>
+						<control type="label">
+							<width>460</width>
+							<height>20</height>
+							<font>Med20</font>
+							<aligny>top</aligny>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[COLOR ff707070]$LOCALIZE[31534][/COLOR] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+						</control>
+						<include content="Spacer">
+							<param name="height" value="1"/>
+							<param name="visible" value="true"/>
+						</include>
 						<!-- Plot -->
 						<control type="group">
-							<height>270</height>
+							<height>240</height>
 							<control type="textbox">
 								<width>460</width>
-								<height>270</height>
+								<height>240</height>
 								<pagecontrol>96</pagecontrol>
 								<font>Light26Spaced</font>
 								<autoscroll>false</autoscroll>
@@ -1223,12 +1236,12 @@
 							</control>
 							<control id="96" type="scrollbar">
 								<width>460</width>
-								<height>270</height>
+								<height>240</height>
 								<showonepage>false</showonepage>
 								<orientation>vertical</orientation>
 							</control>
 							<control type="image">
-								<top>242</top>
+								<bottom>8</bottom>
 								<left>460</left>
 								<width>37</width>
 								<height>23</height>
@@ -1236,16 +1249,20 @@
 								<visible>Control.IsVisible(96) + !String.IsEmpty(ListItem.Plot)</visible>
 							</control>
 						</control>
-					</control>
-					<control type="textbox">
-						<bottom>40</bottom>
-						<width>460</width>
-						<height>60</height>
-						<pagecontrol>584</pagecontrol>
-						<font>Light26Spaced</font>
-						<autoscroll>false</autoscroll>
-						<textcolor>ffb1b2b3</textcolor>
-						<label>[COLOR ff707070]$LOCALIZE[19031][/COLOR] $INFO[Container.ListItem.NextTitle]</label>
+						<include content="Spacer">
+							<param name="height" value="1"/>
+							<param name="visible" value="true"/>
+						</include>
+						<!-- Next Title -->
+						<control type="textbox">
+							<width>460</width>
+							<height>65</height>
+							<pagecontrol>584</pagecontrol>
+							<font>Light26Spaced</font>
+							<autoscroll>false</autoscroll>
+							<textcolor>ffb1b2b3</textcolor>
+							<label>[COLOR ff707070]$LOCALIZE[19031][/COLOR] $INFO[Container.ListItem.NextTitle]</label>
+						</control>
 					</control>
 				</control>
 			</control>

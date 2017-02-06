@@ -1,5 +1,11 @@
 Changelog:
 
+3.6.1
+- Added new view type for MyPVRChannels
+
+3.6.0
+- Fixed some video info dialog issues
+
 3.5.9
 - Fixed wrong login screen element positions
 - Fixed some settings labels
