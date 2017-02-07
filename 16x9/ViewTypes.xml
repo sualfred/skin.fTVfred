@@ -1325,7 +1325,7 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<top>190</top>
@@ -1356,7 +1356,7 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="views/square_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<top>190</top>
