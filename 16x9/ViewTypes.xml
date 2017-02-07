@@ -1144,7 +1144,6 @@
 				</control>
 				<!-- Details -->
 				<control type="group">
-					<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="120">Conditional</animation>
 					<left>1354</left>
 					<top>266</top>
 					<!-- Small Details -->
@@ -1196,6 +1195,12 @@
 								<righttexture>-</righttexture>
 								<overlaytexture>-</overlaytexture>
 							</control>
+							<control type="image">
+								<width>345</width>
+								<height>345</height>
+								<texture>views/OverlayNF.png</texture>
+								<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
+							</control>
 						</control>
 						<include content="Spacer">
 							<param name="height" value="4"/>
@@ -1209,6 +1214,7 @@
 							<aligny>bottom</aligny>
 							<textcolor>ffFFC24B</textcolor>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						</control>
 						<control type="label">
 							<width>460</width>
@@ -1217,6 +1223,7 @@
 							<aligny>top</aligny>
 							<textcolor>ffbcbcbc</textcolor>
 							<label>[COLOR ff707070]$LOCALIZE[31534][/COLOR] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						</control>
 						<include content="Spacer">
 							<param name="height" value="1"/>
@@ -1224,6 +1231,7 @@
 						</include>
 						<!-- Plot -->
 						<control type="group">
+							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
 							<height>240</height>
 							<control type="textbox">
 								<width>460</width>
@@ -1262,6 +1270,7 @@
 							<autoscroll>false</autoscroll>
 							<textcolor>ffb1b2b3</textcolor>
 							<label>[COLOR ff707070]$LOCALIZE[19031][/COLOR] $INFO[Container.ListItem.NextTitle]</label>
+							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						</control>
 					</control>
 				</control>
@@ -1290,7 +1299,6 @@
 					<effect easing="out" end="0,-30" start="0,0" time="60" tween="sine" type="slide" />
 					<effect delay="80" easing="out" end="0,30" start="0,0" time="120" tween="sine" type="slide" />
 				</animation>
-				<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="120">Conditional</animation>
 				<left>92</left>
 				<top>248</top>
 				<width>1250</width>
@@ -1338,6 +1346,12 @@
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!String.IsEqual(ListItem.Label,..) + String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<texture>views/OverlayNF.png</texture>
+							<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="240" width="240">
@@ -1368,6 +1382,12 @@
 							<shadowcolor>88000000</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!String.IsEqual(ListItem.Label,..) + String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<texture>views/OverlayNF.png</texture>
+							<visible>!Control.HasFocus(58) + !Control.HasFocus(581) + !Control.HasFocus(582)</visible>
 						</control>
 					</control>
 				</focusedlayout>
