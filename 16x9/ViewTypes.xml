@@ -1132,7 +1132,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
 			<control type="group">
-				<animation delay="300" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
+				<animation delay="400" effect="fade" end="100" start="0" time="200">WindowOpen</animation>
 				<!-- Separator -->
 				<control type="image">
 					<left>1311</left>
