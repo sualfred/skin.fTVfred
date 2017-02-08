@@ -1153,6 +1153,28 @@
 						<itemgap>10</itemgap>
 						<orientation>vertical</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
+						<!-- Channel -->
+						<control type="label">
+							<width>460</width>
+							<height>24</height>
+							<font>Med28</font>
+							<textcolor>ffdadada</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
+						</control>
+						<control type="label">
+							<width>460</width>
+							<height>20</height>
+							<font>Med20</font>
+							<textcolor>ffbcbcbc</textcolor>
+							<label>[COLOR ff707070]$LOCALIZE[31534][/COLOR] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
+						</control>
+						<include content="Spacer">
+							<param name="height" value="15"/>
+							<param name="visible" value="true"/>
+						</include>
 						<!-- Thumb -->
 						<control type="group">
 							<height>345</height>
@@ -1203,30 +1225,7 @@
 							</control>
 						</control>
 						<include content="Spacer">
-							<param name="height" value="4"/>
-							<param name="visible" value="true"/>
-						</include>
-						<!-- Channel -->
-						<control type="label">
-							<width>460</width>
-							<height>24</height>
-							<font>Med24</font>
-							<aligny>bottom</aligny>
-							<textcolor>ffFFC24B</textcolor>
-							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
-							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
-						</control>
-						<control type="label">
-							<width>460</width>
-							<height>20</height>
-							<font>Med20</font>
-							<aligny>top</aligny>
-							<textcolor>ffbcbcbc</textcolor>
-							<label>[COLOR ff707070]$LOCALIZE[31534][/COLOR] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
-							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
-						</control>
-						<include content="Spacer">
-							<param name="height" value="1"/>
+							<param name="height" value="11"/>
 							<param name="visible" value="true"/>
 						</include>
 						<!-- Plot -->
