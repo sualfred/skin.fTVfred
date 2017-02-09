@@ -1165,14 +1165,14 @@
 						</control>
 						<control type="label">
 							<width>460</width>
-							<height>20</height>
-							<font>Med20</font>
-							<textcolor>ffbcbcbc</textcolor>
-							<label>[COLOR ff707070]$LOCALIZE[31534][/COLOR] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+							<height>26</height>
+							<font>Light26</font>
+							<textcolor>ff6a6c70</textcolor>
+							<label>$INFO[ListItem.Genre]</label>
 							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						</control>
 						<include content="Spacer">
-							<param name="height" value="15"/>
+							<param name="height" value="14"/>
 							<param name="visible" value="true"/>
 						</include>
 						<!-- Thumb -->
@@ -1198,12 +1198,23 @@
 								<texture border="2">views/season_overlay.png</texture>
 							</control>
 							<control type="label">
+								<top>262</top>
+								<width>345</width>
+								<height>28</height>
+								<textoffsetx>10</textoffsetx>
+								<font>Med20</font>
+								<textcolor>ffffffff</textcolor>
+								<shadowcolor>88000000</shadowcolor>
+								<label>$LOCALIZE[31534] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+							</control>
+							<control type="label">
 								<top>290</top>
 								<width>345</width>
 								<height>28</height>
 								<textoffsetx>10</textoffsetx>
 								<font>Med20</font>
 								<textcolor>ff8e8b90</textcolor>
+								<shadowcolor>88000000</shadowcolor>
 								<label>$VAR[ProgressPercentRemaining]</label>
 							</control>
 							<control type="progress">
