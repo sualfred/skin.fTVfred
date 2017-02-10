@@ -1188,7 +1188,7 @@
 								<width>345</width>
 								<height>345</height>
 								<aspectratio>keep</aspectratio>
-								<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+								<texture background="true">$VAR[PVRImage]</texture>
 							</control>
 							<control type="image">
 								<bottom>0</bottom>
@@ -1343,7 +1343,7 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$VAR[PVRImage]</texture>
 						</control>
 						<control type="label">
 							<top>190</top>
@@ -1380,7 +1380,7 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$VAR[PVRImage]</texture>
 						</control>
 						<control type="label">
 							<top>190</top>

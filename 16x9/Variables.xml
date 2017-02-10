@@ -2218,7 +2218,11 @@
 		<value condition="Control.IsVisible(58)">58</value>
 		<value>50</value>
 	</variable>
-	<variable name="PanelImage">
+	<variable name="PVRImage">		
+		<value condition="String.IsEmpty(ListItem.Icon) | String.IsEqual(ListItem.Icon,DefaultVideo.png)">views/pvr_fallback.png</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PanelImage">"
 		<value condition="String.IsEqual(ListItem.Label,..)">views/folder_back_square.png</value>
 		<value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
