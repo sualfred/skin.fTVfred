@@ -1195,7 +1195,8 @@
 								<width>345</width>
 								<height>345</height>
 								<aspectratio>stretch</aspectratio>
-								<texture border="2">views/season_overlay.png</texture>
+								<texture border="2">views/season_overlay.png</texture>,								
+								<visible>!String.IsEmpty(ListItem.EndTime)</visible>
 							</control>
 							<control type="label">
 								<top>262</top>
@@ -1205,7 +1206,7 @@
 								<font>Med20</font>
 								<textcolor>ffffffff</textcolor>
 								<shadowcolor>88000000</shadowcolor>
-								<label>$LOCALIZE[31534] $INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+								<label>$INFO[ListItem.StartTime,$LOCALIZE[31534] ,]$INFO[ListItem.EndTime, - ,]</label>
 							</control>
 							<control type="label">
 								<top>290</top>
@@ -1216,6 +1217,7 @@
 								<textcolor>ff8e8b90</textcolor>
 								<shadowcolor>88000000</shadowcolor>
 								<label>$VAR[ProgressPercentRemaining]</label>
+								<visible>!String.IsEmpty(ListItem.EndTime)</visible>
 							</control>
 							<control type="progress">
 								<bottom>0</bottom>
@@ -1226,7 +1228,8 @@
 								<lefttexture>-</lefttexture>
 								<midtexture border="2">views/ProgressBar.png</midtexture>
 								<righttexture>-</righttexture>
-								<overlaytexture>-</overlaytexture>
+								<overlaytexture>-</overlaytexture>								
+								<visible>!String.IsEmpty(ListItem.EndTime)</visible>
 							</control>
 							<control type="image">
 								<width>345</width>
@@ -1279,7 +1282,7 @@
 							<font>Light26Spaced</font>
 							<autoscroll>false</autoscroll>
 							<textcolor>ffb1b2b3</textcolor>
-							<label>[COLOR ff707070]$LOCALIZE[19031][/COLOR] $INFO[Container.ListItem.NextTitle]</label>
+							<label>$INFO[Container.ListItem.NextTitle,[COLOR ff707070]$LOCALIZE[19031][/COLOR] ]</label>
 							<animation condition="ControlGroup(1000).HasFocus" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						</control>
 					</control>
@@ -1437,7 +1440,7 @@
 							<font>Med24Num</font>
 							<aligny>bottom</aligny>
 							<textcolor>ffbebebe</textcolor>
-							<label>$INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+							<label>$INFO[ListItem.StartTime,,]$INFO[ListItem.EndTime, - ,]</label>
 						</control>
 						<control type="label">
 							<width>auto</width>

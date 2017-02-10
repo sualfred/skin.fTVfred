@@ -18,7 +18,7 @@
 			<control type="image">
 				<width>336</width>
 				<height>336</height>
-				<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+				<texture>$VAR[PVRImage]</texture>
 				<aspectratio aligny="center" align="center">keep</aspectratio>
 			</control>
 		</control>

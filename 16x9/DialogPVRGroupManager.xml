@@ -76,7 +76,14 @@
 					<control type="image">
 						<width>670</width>
 						<height>84</height>
+						<texture border="3">settings/button_no_focus.png</texture>
+						<visible>!Control.HasFocus(13)</visible>
+					</control>
+					<control type="image">
+						<width>670</width>
+						<height>84</height>
 						<texture border="3">settings/button_focus.png</texture>
+						<visible>Control.HasFocus(13)</visible>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -121,22 +128,31 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
-						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						<selectedcolor>ff505153</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="84" width="670">
 					<control type="image">
 						<width>670</width>
 						<height>84</height>
+						<texture border="3">settings/button_no_focus.png</texture>
+						<visible>!Control.HasFocus(11)</visible>
+					</control>
+					<control type="image">
+						<width>670</width>
+						<height>84</height>
 						<texture border="3">settings/button_focus.png</texture>
+						<visible>Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
 						<left>40</left>
 						<width>590</width>
 						<height>84</height>
 						<font>Light32</font>
-						<textcolor>ffffffff</textcolor>
-						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						<textcolor>ff505153</textcolor>
+						<selectedcolor>ff505153</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
 						<visible>!Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
@@ -145,7 +161,8 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ffffaf37</textcolor>
-						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						<selectedcolor>ffffaf37</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
 						<visible>Control.HasFocus(11)</visible>
 					</control>
 				</focusedlayout>
@@ -173,6 +190,7 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
+						<selectedcolor>ff505153</selectedcolor>
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
@@ -180,14 +198,22 @@
 					<control type="image">
 						<width>670</width>
 						<height>84</height>
+						<texture border="3">settings/button_no_focus.png</texture>
+						<visible>!Control.HasFocus(12)</visible>
+					</control>
+					<control type="image">
+						<width>670</width>
+						<height>84</height>
 						<texture border="3">settings/button_focus.png</texture>
+						<visible>Control.HasFocus(12)</visible>
 					</control>
 					<control type="label">
 						<left>40</left>
 						<width>590</width>
 						<height>84</height>
 						<font>Light32</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>ff505153</textcolor>
+						<selectedcolor>ff505153</selectedcolor>
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						<visible>!Control.HasFocus(12)</visible>
 					</control>
@@ -197,6 +223,7 @@
 						<height>84</height>
 						<font>Light32</font>
 						<textcolor>ffffaf37</textcolor>
+						<selectedcolor>ffffaf37</selectedcolor>
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						<visible>Control.HasFocus(12)</visible>
 					</control>

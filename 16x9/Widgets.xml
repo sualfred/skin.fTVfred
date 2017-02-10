@@ -96,7 +96,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$VAR[PVRImage]</texture>
 					</control>
 					<control type="image">
 						<left>-48</left>
@@ -122,7 +122,7 @@
 						<width>480</width>
 						<height>480</height>
 						<aspectratio align="center">keep</aspectratio>
-						<texture background="true" fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$VAR[PVRImage]</texture>
 					</control>
 					<control type="image">
 						<left>-48</left>

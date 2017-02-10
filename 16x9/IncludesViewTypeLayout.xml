@@ -1129,7 +1129,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture>$VAR[PVRImage]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -1180,7 +1180,7 @@
 					<width>480</width>
 					<height>480</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture>$VAR[PVRImage]</texture>
 				</control>
 				<control type="image">
 					<left>-48</left>
@@ -1300,7 +1300,7 @@
 					<left>-9</left>
 					<width>99</width>
 					<height>99</height>
-					<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture>$VAR[PVRImage]</texture>
 					<bordersize>10</bordersize>
 					<aspectratio aligny="center" align="left">keep</aspectratio>
 				</control>
@@ -1419,7 +1419,7 @@
 						<textcolor>ff99a2a6</textcolor>
 						<selectedcolor>ff99a2a6</selectedcolor>
 						<font>Med24</font>
-						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 					</control>
 					<control type="label">
 						<left>1229</left>
@@ -1439,7 +1439,7 @@
 						<font>Med24</font>
 						<textcolor>ff99a2a6</textcolor>
 						<selectedcolor>ff99a2a6</selectedcolor>
-						<label fallback="195">$INFO[ListItem.NextStartTime]$INFO[ListItem.NextEndTime, - ]</label>
+						<label>$INFO[ListItem.NextStartTime]$INFO[ListItem.NextEndTime, - ]</label>
 					</control>
 				</control>
 			</control>
@@ -1473,7 +1473,7 @@
 					<left>-9</left>
 					<width>99</width>
 					<height>99</height>
-					<texture fallback="views/pvr_fallback.png">$INFO[ListItem.Icon]</texture>
+					<texture>$VAR[PVRImage]</texture>
 					<bordersize>10</bordersize>
 					<aspectratio aligny="center" align="left">keep</aspectratio>
 				</control>
@@ -1627,7 +1627,7 @@
 						<textcolor>ff99a2a6</textcolor>
 						<selectedcolor>ffFFC24B</selectedcolor>
 						<font>Med24</font>
-						<label fallback="195">$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 						<visible>!Control.HasFocus(59)</visible>
 					</control>
 					<control type="label">
@@ -1639,7 +1639,7 @@
 						<selectedcolor>ffFFC24B</selectedcolor>
 						<font>Med24</font>
 						<scroll>false</scroll>
-						<label fallback="195">$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 						<visible>Control.HasFocus(59)</visible>
 					</control>
 					<control type="label">
@@ -1662,7 +1662,7 @@
 						<scroll>false</scroll>
 						<textcolor>ff99a2a6</textcolor>
 						<selectedcolor>ff99a2a6</selectedcolor>
-						<label fallback="195">$INFO[ListItem.NextStartTime]$INFO[ListItem.NextEndTime, - ]</label>
+						<label>$INFO[ListItem.NextStartTime]$INFO[ListItem.NextEndTime, - ]</label>
 					</control>
 				</control>
 				<control type="image">

@@ -155,7 +155,7 @@
 						<font>Med24Num</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
-						<label>$INFO[ListItem.StartTime,,,  •  ]$INFO[ListItem.EndTime, - ,]</label>
+						<label>$INFO[ListItem.StartTime,,]$INFO[ListItem.EndTime, - ,]</label>
 					</control>
 					<control type="label">
 						<width>auto</width>
