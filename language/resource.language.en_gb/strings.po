@@ -1603,6 +1603,21 @@ msgctxt "#31357"
 msgid "Resets all your set skin settings to default."
 msgstr ""
 
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31358"
+msgid "Add group"
+msgstr ""
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31359"
+msgid "Rename group"
+msgstr ""
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31360"
+msgid "Delete group"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

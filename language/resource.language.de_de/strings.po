@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-29 17:00+0000\n"
+"PO-Revision-Date: 2017-02-10 11:09+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1640,6 +1640,21 @@ msgstr "Importiert ein existierendes Backup der Skin Einstellungen."
 msgctxt "#31357"
 msgid "Resets all your set skin settings to default."
 msgstr "Setzt alle Skin Einstellungen auf Standard zurück."
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31358"
+msgid "Add group"
+msgstr "Gruppe hinzufügen"
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31359"
+msgid "Rename group"
+msgstr "Gruppe umbennnen"
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31360"
+msgid "Delete group"
+msgstr "Gruppe löschen"
 
 msgctxt "#31500"
 msgid "Widget Group 1"

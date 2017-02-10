@@ -145,12 +145,12 @@
 				<!-- Current channel logo -->
 				<control type="image" id="10">
 					<top>-84</top>
-					<right>20</right>
+					<right>23</right>
 					<height>84</height>
 					<width max="150">auto</width>
 					<aspectratio align="right">keep</aspectratio>
 					<bordersize>10</bordersize>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$VAR[PVRImage]</texture>
 				</control>
 				<!-- EPG activated -->
 				<control type="radiobutton" id="12">

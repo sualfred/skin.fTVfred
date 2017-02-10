@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- pvr channel manager -->
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">29</defaultcontrol>
+	<onload>SetProperty(HideNowPlaying,1,home)</onload>
+	<onunload>ClearProperty(HideNowPlaying,home)</onunload>
 	<controls>
 		<include>DialogBackgroundImage</include>
+		<!-- Hidden Controls -->
+		<control type="radiobutton" id="25">
+			<include>HiddenControl</include>
+			<radiowidth>-</radiowidth>
+			<radioheight>-</radioheight>
+			<radioposx>-</radioposx>
+			<textureradioonfocus>-</textureradioonfocus>
+			<textureradioonnofocus>-</textureradioonnofocus>
+			<textureradioondisabled>-</textureradioondisabled>
+			<textureradioofffocus>-</textureradioofffocus>
+			<textureradiooffnofocus>-</textureradiooffnofocus>
+			<textureradiooffdisabled>-</textureradiooffdisabled>
+			<label>Hide</label>
+			<label2>-</label2>
+			<onfocus>select</onfocus>
+			<onfocus>SetFocus(9002)</onfocus>
+		</control>
 		<!-- Main group -->
 		<control type="group">
-			<left>190</left>
+			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<width>1540</width>
-			<height>664</height>
+			<width>1744</width>
+			<height>901</height>
 			<include>DialogZoomAnimation</include>
 			<control type="image">
-				<width>1540</width>
-				<height>664</height>
-				<texture border="5,65,5,5">dialogs/dialog_back.png</texture>
+				<width>1744</width>
+				<height>901</height>
+				<texture>dialogs/pvr_groupmanager_back.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label">
@@ -28,7 +47,7 @@
 				<textcolor>ffdadada</textcolor>
 			</control>
 			<control type="label">
-				<left>553</left>
+				<left>488</left>
 				<top>14</top>
 				<height>30</height>
 				<width>1540</width>
@@ -38,7 +57,7 @@
 				<textcolor>ffdadada</textcolor>
 			</control>
 			<control type="label">
-				<left>1066</left>
+				<left>936</left>
 				<top>14</top>
 				<height>30</height>
 				<width>1540</width>
@@ -50,54 +69,55 @@
 			<!-- Left list -->
 			<control type="list" id="13">
 				<top>60</top>
-				<width>513</width>
-				<height>504</height>
-				<onleft>noop</onleft>
+				<width>448</width>
+				<height>840</height>
+				<onleft>close</onleft>
 				<onright>11</onright>
 				<onup>noop</onup>
-				<ondown>9001</ondown>
+				<ondown>noop</ondown>
 				<scrolltime>0</scrolltime>
-				<itemlayout height="84" width="670">
+				<itemlayout height="84" width="448">
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_no_focus.png</texture>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="84" width="670">
+				<focusedlayout height="84" width="448">
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_no_focus.png</texture>
 						<visible>!Control.HasFocus(13)</visible>
 					</control>
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_focus.png</texture>
 						<visible>Control.HasFocus(13)</visible>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>ff505153</textcolor>
+						<selectedcolor>ff505153</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(13)</visible>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ffffaf37</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -108,47 +128,47 @@
 			<!-- Middle list -->
 			<control type="list" id="11">
 				<top>60</top>
-				<left>513</left>
-				<width>513</width>
-				<height>504</height>
+				<left>448</left>
+				<width>448</width>
+				<height>840</height>
 				<onleft>13</onleft>
 				<onright>12</onright>
 				<onup>noop</onup>
-				<ondown>9001</ondown>
+				<ondown>noop</ondown>
 				<scrolltime>0</scrolltime>
-				<itemlayout height="84" width="670">
+				<itemlayout height="84" width="448">
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_no_focus.png</texture>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
 						<selectedcolor>ff505153</selectedcolor>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="84" width="670">
+				<focusedlayout height="84" width="448">
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_no_focus.png</texture>
 						<visible>!Control.HasFocus(11)</visible>
 					</control>
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_focus.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
 						<selectedcolor>ff505153</selectedcolor>
@@ -156,9 +176,9 @@
 						<visible>!Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ffffaf37</textcolor>
 						<selectedcolor>ffffaf37</selectedcolor>
@@ -169,58 +189,58 @@
 			</control>
 			<!-- Right list -->
 			<control type="list" id="12">
-				<left>1026</left>
+				<left>896</left>
 				<top>60</top>
-				<width>514</width>
-				<height>504</height>
+				<width>448</width>
+				<height>840</height>
 				<onleft>11</onleft>
-				<onright>noop</onright>
+				<onright>29</onright>
 				<onup>noop</onup>
-				<ondown>9001</ondown>
+				<ondown>noop</ondown>
 				<scrolltime>0</scrolltime>
-				<itemlayout height="84" width="670">
+				<itemlayout height="84" width="448">
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_no_focus.png</texture>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
 						<selectedcolor>ff505153</selectedcolor>
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="84" width="670">
+				<focusedlayout height="84" width="448">
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_no_focus.png</texture>
 						<visible>!Control.HasFocus(12)</visible>
 					</control>
 					<control type="image">
-						<width>670</width>
+						<width>448</width>
 						<height>84</height>
 						<texture border="3">settings/button_focus.png</texture>
 						<visible>Control.HasFocus(12)</visible>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ff505153</textcolor>
 						<selectedcolor>ff505153</selectedcolor>
-						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						<label>$INFO[Control.GetLabel2(24)]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						<visible>!Control.HasFocus(12)</visible>
 					</control>
 					<control type="label">
-						<left>40</left>
-						<width>590</width>
+						<width>448</width>
 						<height>84</height>
+						<textoffsetx>40</textoffsetx>
 						<font>Light32</font>
 						<textcolor>ffffaf37</textcolor>
 						<selectedcolor>ffffaf37</selectedcolor>
@@ -231,20 +251,69 @@
 			</control>
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">
-				<left>0</left>
+				<right>24</right>
 				<bottom>12</bottom>
-				<width>1540</width>
-				<height>76</height>
+				<width>351</width>
+				<height>380</height>
 				<itemgap>0</itemgap>
-				<onleft>noop</onleft>
-				<onright>noop</onright>
-				<onup>13</onup>
+				<onleft>12</onleft>
+				<onright>close</onright>
+				<onup>noop</onup>
 				<ondown>noop</ondown>
 				<align>center</align>
-				<orientation>horizontal</orientation>
+				<orientation>vertical</orientation>
+				<!-- Delete Button -->
+				<control type="button" id="28">
+					<width>351</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>13</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>$LOCALIZE[31360]</label>
+				</control>
+				<!-- Hide Button -->
+				<control type="button" id="9002" >
+					<width>351</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>13</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>$VAR[GroupManagerHideStatus]</label>
+					<onclick>SetFocus(25)</onclick>
+				</control>
+				<!-- Rename Button -->
+				<control type="button" id="27">
+					<width>351</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>13</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>$LOCALIZE[31359]</label>
+				</control>
+				<!-- Add Button -->
+				<control type="button" id="26">
+					<width>351</width>
+					<height>76</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Med24</font>
+					<onup>13</onup>
+					<textoffsetx>23</textoffsetx>
+					<textoffsety>27</textoffsety>
+					<label>$LOCALIZE[31358]</label>
+				</control>
 				<!-- OK Button -->
 				<control type="button" id="29">
-					<width>320</width>
+					<width>351</width>
 					<height>76</height>
 					<align>center</align>
 					<aligny>top</aligny>
@@ -254,55 +323,19 @@
 					<textoffsety>27</textoffsety>
 					<label>186</label>
 				</control>
-				<!-- Delete Button -->
-				<control type="button" id="28">
-					<width>320</width>
-					<height>76</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>Med24</font>
-					<onup>13</onup>
-					<textoffsetx>23</textoffsetx>
-					<textoffsety>27</textoffsety>
-					<label>$LOCALIZE[117] $LOCALIZE[19141]</label>
-				</control>
-				<!-- Rename Button -->
-				<control type="button" id="27">
-					<width>320</width>
-					<height>76</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>Med24</font>
-					<onup>13</onup>
-					<textoffsetx>23</textoffsetx>
-					<textoffsety>27</textoffsety>
-					<label>$LOCALIZE[118] $LOCALIZE[19141]</label>
-				</control>
-				<!-- Add Button -->
-				<control type="button" id="26">
-					<width>320</width>
-					<height>76</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>Med24</font>
-					<onup>13</onup>
-					<textoffsetx>23</textoffsetx>
-					<textoffsety>27</textoffsety>
-					<label>$LOCALIZE[15019] $LOCALIZE[19141]</label>
-				</control>
 			</control>			
 			<control type="image">
 				<top>60</top>
-				<left>513</left>
+				<left>448</left>
 				<width>40</width>
-				<height>504</height>
+				<height>840</height>
 				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 			<control type="image">
 				<top>60</top>
-				<left>1026</left>
+				<left>896</left>
 				<width>40</width>
-				<height>504</height>
+				<height>840</height>
 				<texture border="0,20,0,0">common/shadow.png</texture>
 			</control>
 		</control>
