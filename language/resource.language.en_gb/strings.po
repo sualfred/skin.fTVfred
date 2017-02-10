@@ -1618,6 +1618,11 @@ msgctxt "#31360"
 msgid "Delete group"
 msgstr ""
 
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31361"
+msgid "Ungrouped"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Widget Group 1"
 msgstr "Widget Group 1"

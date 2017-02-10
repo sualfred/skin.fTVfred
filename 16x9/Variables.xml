@@ -5,8 +5,8 @@
 		<value>$LOCALIZE[19289]: $LOCALIZE[351]</value>
 	</variable>
 	<variable name="TimersHideStatus">
-		<value condition="String.Contains(Control.GetLabel(8),*)">$LOCALIZE[19022]: $LOCALIZE[16041]</value>
-		<value>$LOCALIZE[19022]: $LOCALIZE[351]</value>
+		<value condition="String.Contains(Control.GetLabel(8),*)">$LOCALIZE[19077]: $LOCALIZE[16041]</value>
+		<value>$LOCALIZE[19077]: $LOCALIZE[351]</value>
 	</variable>
 	<variable name="SettingsCount">
 		<value>9</value>
