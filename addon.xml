@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.fTVfred-krypton" version="3.6.2a" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
+<addon id="skin.fTVfred-krypton" version="3.6.3" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.toolbox" version="1.1.1"/>
@@ -32,9 +32,10 @@
         </assets>
 		<news>Changelog:
 
-[B]3.6.2[/B]
-- Fixed broken recording thumbs
-- Small other improvements
+[B]3.6.3[/B]
+- Adjustet panel layout for addons
+- Reworked PVR group manager dialog
+- A lot of other PVR window and dialog adjustments and fixes
 
 See changelog.txt for more details.</news>
 	</extension>

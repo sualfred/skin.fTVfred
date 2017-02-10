@@ -107,7 +107,7 @@
 			</control>
 			<!-- Controls -->
 			<control type="grouplist" id="1000">
-				<left>196</left>
+				<left>198</left>
 				<top>212</top>
 				<height>40</height>
 				<itemgap>47</itemgap>

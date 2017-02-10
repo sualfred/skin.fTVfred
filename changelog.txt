@@ -1,5 +1,10 @@
 Changelog:
 
+3.6.3
+- Adjustet panel layout for addons
+- Reworked PVR group manager dialog
+- A lot of other PVR window and dialog adjustments and fixes
+
 3.6.2
 - Fixed broken recording thumbs
 - Small other improvements

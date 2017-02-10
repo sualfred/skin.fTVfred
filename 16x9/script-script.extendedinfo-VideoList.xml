@@ -289,9 +289,9 @@
 			<control type="image">
 				<visible>Integer.IsGreater(Container(500).NumItems,0)</visible>
 				<left>1313</left>
-				<top>80</top>
+				<top>225</top>
 				<width>8</width>
-				<height>1000</height>
+				<height>855</height>
 				<texture>views/line.png</texture>
 			</control>
 			<!-- Details -->

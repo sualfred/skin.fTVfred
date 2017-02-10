@@ -9,7 +9,7 @@
 		<!-- Fanart -->
 		<include>PVRFanart</include>
 		<!-- View -->
-		<control type="group">			
+		<control type="group">
 			<animation type="WindowOpen" condition="Control.IsVisible(58)">
 				<effect end="0,0" start="200,0" time="200" type="slide" />
 				<effect end="100" start="0" time="200" type="fade" />
@@ -70,7 +70,7 @@
 				</control>
 				<!-- Controls -->
 				<control type="grouplist" id="1000">
-					<left>108</left>
+					<left>110</left>
 					<top>178</top>
 					<height>40</height>
 					<itemgap>47</itemgap>
