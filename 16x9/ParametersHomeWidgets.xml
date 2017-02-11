@@ -153,7 +153,7 @@
 				<animation condition="Integer.IsGreater(Container($PARAM[ID]0).NumItems,2) + Container($PARAM[ID]0).Row(3) + Control.HasFocus($PARAM[ID]0)" easing="inout" effect="slide" end="0,-212" time="220" tween="sine">Conditional</animation>
 				<itemlayout height="370" width="2000">
 					<control type="group">
-						<visible>!String.IsEmpty(ListItem.Property(bannerArt))</visible>
+						<visible>String.IsEqual(ListItem.Label2,fTVbanner)</visible>
 						<top>126</top>
 						<left>33</left>
 						<include content="ParamHomeBannerLayout">
@@ -169,7 +169,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>String.IsEmpty(ListItem.Property(bannerArt))</visible>
+						<visible>!String.IsEqual(ListItem.Label2,fTVbanner)</visible>
 						<control type="group">
 							<left>33</left>
 							<control type="image">
@@ -215,7 +215,7 @@
 						<onfocus condition="!String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),wide) + !String.IsEqual(Container($PARAM[ID]0).ListItem.Property(WidgetStyle),poster)">ClearProperty(ForceViewType,Home)</onfocus>
 					</control>
 					<control type="group">
-						<visible>!String.IsEmpty(ListItem.Property(bannerArt))</visible>
+						<visible>String.IsEqual(ListItem.Label2,fTVbanner)</visible>
 						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="0" tween="sine" condition="Control.HasFocus($PARAM[ID]9)">Conditional</animation>
 						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine" condition="!Control.HasFocus($PARAM[ID]9)">Focus</animation>
 						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine" condition="!Control.HasFocus($PARAM[ID]9)">UnFocus</animation>
@@ -235,7 +235,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>String.IsEmpty(ListItem.Property(bannerArt))</visible>
+						<visible>!String.IsEqual(ListItem.Label2,fTVbanner)</visible>
 						<animation center="142,167" easing="inout" effect="zoom" end="132" start="100" time="220" tween="sine">Focus</animation>
 						<animation center="142,167" easing="inout" effect="zoom" end="100" start="132" time="220" tween="sine">UnFocus</animation>
 						<control type="group">
@@ -294,7 +294,7 @@
 				</focusedlayout>
 				<focusedlayout height="370" width="2000" condition="!Integer.IsGreater(Container($PARAM[ID]0).NumItems,1)">
 					<control type="group">
-						<visible>String.IsEmpty(ListItem.Property(bannerArt))</visible>
+						<visible>!String.IsEqual(ListItem.Label2,fTVbanner)</visible>
 						<animation center="142,167" condition="true" effect="zoom" end="132" start="100" time="0">Conditional</animation>
 						<control type="button">
 							<include>HiddenControl</include>
@@ -446,7 +446,8 @@
 	<include name="FtvWidget">		
 		<item>			
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Title]</label>
-			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<label2>fTVbanner</label2>
+			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))]</visible>
 			<property name="bannerType">$INFO[Skin.String($PARAM[ID]0-WidgetAd-Type)]</property>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)]</property>
@@ -460,7 +461,8 @@
 		</item>
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
-			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<label2>fTVbanner</label2>
+			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + !String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(tvshow.clearlogo)) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))]</visible>
 			<property name="bannerType">$INFO[Skin.String($PARAM[ID]0-WidgetAd-Type)]</property>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
@@ -473,7 +475,8 @@
 		</item>
 		<item>
 			<label>$INFO[Container($PARAM[ID]9).ListItem.Label]</label>
-			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-9)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-10)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-11)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-12))]</visible>
+			<label2>fTVbanner</label2>
+			<visible>!String.IsEmpty(Container($PARAM[ID]9).ListItem.Art(fanart)) + String.IsEmpty(Container($PARAM[ID]9).ListItem.FileNameAndPath) + [!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-2)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-3)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-4)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-5)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-6)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-7)) | !String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-8))]</visible>
 			<property name="bannerType">$INFO[Skin.String($PARAM[ID]0-WidgetAd-Type)]</property>
 			<property name="bannerArt">$INFO[Container($PARAM[ID]9).ListItem.Art(fanart)]</property>
 			<property name="bannerLogo">$INFO[Container($PARAM[ID]9).ListItem.Art(clearlogo)]</property>
