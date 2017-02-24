@@ -571,7 +571,7 @@
 	<variable name="XrayCast">
 		<value condition="VideoPlayer.Content(movies)">plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[VideoPlayer.DBID]&amp;downloadthumbs=true</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Cast)">plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[VideoPlayer.DBID]&amp;downloadthumbs=true</value>
-		<value condition="VideoPlayer.Content(episodes)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[VideoPlayer.DBID]&amp;downloadthumbs=true</value>
+		<value condition="VideoPlayer.Content(episodes)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[VideoPlayer.TvShowTitle]&amp;downloadthumbs=true</value>
 	</variable>
 	<variable name="FavouritesLayout">
 		<value condition="String.IsEqual(Skin.String(FavouritesLayout),$LOCALIZE[31203])">$LOCALIZE[31203]</value>
