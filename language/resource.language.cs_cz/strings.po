@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skin.ftv pvr mod\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-31 09:14+0000\n"
+"PO-Revision-Date: 2017-02-10 19:42+0000\n"
 "Last-Translator: sualfred <su4lfred@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/skinrefred/skinftv-pvr-mod/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -57,8 +57,8 @@ msgid "Artwork Downloader"
 msgstr "Stahovač uměleckých prací"
 
 msgctxt "#31104"
-msgid "Cinema Experience"
-msgstr "Zkušenosti s kinem"
+msgid "Start Cinemavision"
+msgstr ""
 
 msgctxt "#31000"
 msgid "Audio Options"
@@ -178,17 +178,23 @@ msgctxt "#31038"
 msgid "Select your scrapers preferred certification county."
 msgstr ""
 
-msgctxt "#31039"
-msgid "Enable debug grid.[CR]Useful when skinning."
-msgstr "Povolit debagovací mřížku.[CR]Užitečné při skinovavání."
-
 msgctxt "#31040"
 msgid "Enable debug info.[CR]Useful for bug reporting."
 msgstr "Povolit debagovací informace.[CR]Užitečné pro odesílání zpráv o chybách."
 
+#: /shortcuts/overrides.xml
+msgctxt "#31039"
+msgid "Unwatched Movies"
+msgstr ""
+
 msgctxt "#31025"
 msgid "Widget Path"
 msgstr "Cesta k widgetu"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31041"
+msgid "Unwatched TV Shows"
+msgstr ""
 
 msgctxt "#31026"
 msgid "Overview"
@@ -217,10 +223,6 @@ msgstr "Spustit ted"
 msgctxt "#31037"
 msgid "Rollback Addon"
 msgstr ""
-
-msgctxt "#31041"
-msgid "Debug grid"
-msgstr "Debug sít"
 
 msgctxt "#31042"
 msgid "Debug labels"
@@ -289,6 +291,11 @@ msgstr ""
 msgctxt "#31062"
 msgid "Choose Thumb"
 msgstr "Vybrat náhled"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31066"
+msgid "Enable Video Background"
+msgstr ""
 
 msgctxt "#31067"
 msgid "Choose Fanart"
@@ -442,10 +449,6 @@ msgstr ""
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
 msgstr "Skrýt varování o 'myši'"
-
-msgctxt "#31066"
-msgid "Cinema Exp."
-msgstr "Zkušenosti s kinem"
 
 msgctxt "#31105"
 msgid "Your Addons"
@@ -1010,8 +1013,8 @@ msgstr ""
 
 #: /16x9/DialogFullScreenInfo.xml:212
 msgctxt "#31234"
-msgid "View movie info"
-msgstr "Prohlédnout informace o filmu"
+msgid "View video info"
+msgstr ""
 
 #: /16x9/script-script.extendedinfo-DialogVideoInfo.xml:366
 msgctxt "#31235"
@@ -1050,33 +1053,33 @@ msgstr "Zobrazit informace o herci"
 
 #: /16x9/Custom_Home_Widgets.xml:720
 msgctxt "#31242"
-msgid "Newest Movie"
-msgstr "Nejnovější film"
+msgid "New movies"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:722
 msgctxt "#31243"
-msgid "Recommended Movie"
-msgstr "Doporučený film"
+msgid "Similar movies (because you watched...)"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:724
 msgctxt "#31244"
-msgid "Random Movie"
-msgstr "Náhodný film"
+msgid "Recommended movies"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:727
 msgctxt "#31245"
-msgid "Newest Show"
-msgstr "Nejnovější show"
+msgid "Recently added TV shows"
+msgstr ""
 
 #: /16x9/Custom_Home_Widgets.xml:730
 msgctxt "#31246"
-msgid "Recommended Show"
-msgstr "Doporučená show"
+msgid "Similar TV shows (because you watched...)"
+msgstr ""
 
-#: /16x9/Custom_Home_Widgets.xml:731
+#: /16x9/Variables.xml
 msgctxt "#31247"
-msgid "Random Show"
-msgstr "Náhodná show"
+msgid "Backup"
+msgstr ""
 
 #: /16x9/Variables.xml:874
 msgctxt "#31248"
@@ -1186,10 +1189,10 @@ msgctxt "#31268"
 msgid "There are no results for this widget"
 msgstr "Žádný výsledek pro tento widget"
 
-#: /shortcuts/overrides.xml:55
+#: /16x9/script-skinshortcuts.xml
 msgctxt "#31269"
-msgid "Genres (Plugin based)"
-msgstr "Žánry (založeny na pluginech)"
+msgid "Focus on startup"
+msgstr ""
 
 #: /16x9/DialogMusicInfo.xml:333
 msgctxt "#31270"
@@ -1421,7 +1424,7 @@ msgstr ""
 
 #: /16x9/IncludesDialogInfo.xml
 msgctxt "#31315"
-msgid "Press [B]DOWN[/B] to search online for the selected actor."
+msgid "Press [B]DOWN[/B] to search online for more information."
 msgstr ""
 
 #: /16x9/DialogMusicInfo.xml
@@ -1479,11 +1482,183 @@ msgctxt "#31326"
 msgid "Loading [I]Home[/I] ..."
 msgstr ""
 
-#: /shortcuts/overrides.xml
+#: /16x9/SkinSettings.xml
 msgctxt "#31327"
+msgid "Enable PVR Fanart"
+msgstr ""
+
+#: /16x9/MyPVRRecordings.xml
+msgctxt "#31328"
+msgid "View[CR]TV channels"
+msgstr ""
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31329"
+msgid "Unknown role"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31330"
+msgid "Hide 'update library' buttons"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31331"
 msgid ""
-"No PVR channels have been found yet. Please wait for the PVR clients to "
-"start up or check your PVR configuration."
+"Hides the 'update library' buttons in all libary windows. Useful if Emby is "
+"used as Kodi database replacement.[CR]Disabled by default."
+msgstr ""
+
+#: /16x9/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#31332"
+msgid "Press [B]SELECT[/B] to search online for more information."
+msgstr ""
+
+#: /16x9/MyVideoNav.xml
+msgctxt "#31333"
+msgid "Jump[CR]To Letter"
+msgstr ""
+
+#: /16x9/Parameters.xml
+msgctxt "#31334"
+msgid "Jump to letter"
+msgstr ""
+
+#: /16x9/Parameters.xml
+msgctxt "#31335"
+msgid "Select the desired initial letter"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31336"
+msgid "Downloads thumbnails and fanarts of your PVR items and recordings."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31337"
+msgid "Displays the currently playing video in the background."
+msgstr ""
+
+#: /16x9/DialogFullScreenInfo.xml
+msgctxt "#31338"
+msgid "View channel info"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31339"
+msgid "Enable Holiday Theme"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31340"
+msgid ""
+"Enable the holiday overlay theme. This will add falling snow for the holiday"
+" season all over the skin."
+msgstr ""
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31341"
+msgid "Interested?"
+msgstr ""
+
+#: /16x9/Custom_1114_VideoInfo.xml
+msgctxt "#31342"
+msgid "Press [B]DOWN[/B] to watch the item."
+msgstr ""
+
+#: /16x9/IncludesDialogInfo.xml
+msgctxt "#31343"
+msgid "discontinued show"
+msgstr ""
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31344"
+msgid "View recordings"
+msgstr ""
+
+#: /16x9/MyPVRGuide.xml
+msgctxt "#31345"
+msgid "Switch group"
+msgstr ""
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31346"
+msgid "View timers"
+msgstr ""
+
+#: /16x9/MyPVRChannels.xml
+msgctxt "#31347"
+msgid "View guide"
+msgstr ""
+
+#: /16x9/MyPVRTimers.xml
+msgctxt "#31348"
+msgid "Toggle disabled items"
+msgstr ""
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31349"
+msgid "More in progress shows"
+msgstr ""
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31350"
+msgid "Repeat last episode"
+msgstr ""
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31351"
+msgid "Starts in"
+msgstr ""
+
+#: /16x9/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31352"
+msgid "seconds"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31353"
+msgid "second"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31354"
+msgid "Recently watched"
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31355"
+msgid "Creates a backup archive with all your set skin settings."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31356"
+msgid "Imports an existing backup of your skin settings."
+msgstr ""
+
+#: /16x9/Variables.xml
+msgctxt "#31357"
+msgid "Resets all your set skin settings to default."
+msgstr ""
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31358"
+msgid "Add group"
+msgstr ""
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31359"
+msgid "Rename group"
+msgstr ""
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31360"
+msgid "Delete group"
+msgstr ""
+
+#: /16x9/DialogPVRGroupManager.xml
+msgctxt "#31361"
+msgid "Ungrouped"
 msgstr ""
 
 msgctxt "#31500"
