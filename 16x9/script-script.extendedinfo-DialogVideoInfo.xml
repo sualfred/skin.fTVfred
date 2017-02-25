@@ -21,7 +21,7 @@
 		<control id="1050" type="list" />
 		<control id="1150" type="list">
 			<onfocus>select</onfocus>
-			<onfocus>7000</onfocus>
+			<onfocus>SetFocus(7000)</onfocus>
 			<include>HiddenHomeList</include>
 		</control>
 		<control id="1250" type="list" />
