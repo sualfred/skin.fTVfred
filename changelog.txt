@@ -1,5 +1,8 @@
 Changelog:
 
+3.6.5
+- Fixed ExtendedInfo trailer loop issue
+
 3.6.4
 - Small video player cast fix
 
