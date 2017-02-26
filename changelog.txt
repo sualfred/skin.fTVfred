@@ -1,5 +1,8 @@
 Changelog:
 
+3.6.6
+- Redesigned virtual keyboard
+
 3.6.5
 - Fixed ExtendedInfo trailer loop issue
 
