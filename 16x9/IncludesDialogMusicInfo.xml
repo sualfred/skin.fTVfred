@@ -111,7 +111,7 @@
 			<!-- Heading -->
 			<control type="label">
 				<top>-7</top>
-				<width>1170</width>
+				<width>1370</width>
 				<height>48</height>
 				<font>Med48</font>
 				<scroll>true</scroll>

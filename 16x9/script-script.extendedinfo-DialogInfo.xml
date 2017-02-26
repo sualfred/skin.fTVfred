@@ -97,8 +97,8 @@
 				<top>99</top>
 				<!-- Heading -->
 				<control type="label">
-					<top>-12</top>
-					<width>1170</width>
+					<top>-9</top>
+					<width>1368</width>
 					<height>48</height>
 					<font>Bold46</font>
 					<scroll>true</scroll>
@@ -141,8 +141,7 @@
 						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR ff717171][B]$LOCALIZE[21887][/B][/COLOR]  [LIGHT]$INFO[Window.Property(Biography)][/LIGHT]</label>
-						<visible>!String.IsEmpty(Window.Property(Biography))</visible>
+						<label>[COLOR ff717171][B]$LOCALIZE[21887][/B][/COLOR]  [LIGHT]$VAR[ExtendedBiography][/LIGHT]</label>
 					</control>
 					<!-- More button -->
 					<control id="3000" type="button">

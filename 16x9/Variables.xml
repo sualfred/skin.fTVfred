@@ -119,6 +119,10 @@
 		<value condition="!ControlGroup(5).HasFocus">ff5b6064</value>
 		<value>ffffaf37</value>
 	</variable>
+	<variable name="ExtendedBiography">
+		<value condition="!String.IsEmpty(Window.Property(Biography))">$INFO[Window.Property(Biography)]</value>
+		<value>$LOCALIZE[19055]</value>
+	</variable>
 	<variable name="ExtendendMenuColor">
 		<value condition="ControlGroup(999).HasFocus">ff8e8b90</value>
 		<value>ff505559</value>
