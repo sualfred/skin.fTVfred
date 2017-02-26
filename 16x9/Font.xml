@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fonts>
 	<fontset id="Default" unicode="true">
+		<!-- Keyboard -->
+		<font>
+			<name>Keyboard</name>
+			<filename>Roboto-Medium.ttf</filename>
+			<linespacing>1.12</linespacing>
+			<size>30</size>
+		</font>
+		<font>
+			<name>FontAwesome</name>
+			<filename>fontawesome.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>FontAwesomeLight</name>
+			<filename>fontawesome.ttf</filename>
+			<style>lighten</style>
+			<size>30</size>
+		</font>
 		<!-- OSD -->
 		<font>
 			<name>OSD40</name>
@@ -452,6 +470,23 @@
 		</font>
 	</fontset>
 	<fontset id="Roboto" unicode="true">
+		<font>
+			<name>Keyboard</name>
+			<filename>Roboto-Medium.ttf</filename>
+			<linespacing>1.12</linespacing>
+			<size>30</size>
+		</font>
+		<font>
+			<name>FontAwesome</name>
+			<filename>fontawesome.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>FontAwesomeLight</name>
+			<filename>fontawesome.ttf</filename>
+			<style>lighten</style>
+			<size>30</size>
+		</font>
 		<!-- OSD -->
 		<font>
 			<name>OSD40</name>
@@ -878,6 +913,24 @@
 		</font>
 	</fontset>
 	<fontset id="Arial" unicode="true">
+		<font>
+			<name>Keyboard</name>
+			<filename>Arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<style>bold</style>
+			<size>30</size>
+		</font>
+		<font>
+			<name>FontAwesome</name>
+			<filename>fontawesome.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>FontAwesomeLight</name>
+			<filename>fontawesome.ttf</filename>
+			<style>lighten</style>
+			<size>30</size>
+		</font>
 		<!-- OSD -->
 		<font>
 			<name>OSD40</name>

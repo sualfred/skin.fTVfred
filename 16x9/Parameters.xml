@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Emty Keyboard Buttons -->
+	<include name="EmptyKeyboardButtons">
+		<control type="image">
+			<width>68</width>
+			<height>68</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texture border="2">dialogs/KeyboardButtonNF.png</texture>
+			<colordiffuse>66ffffff</colordiffuse>
+			<animation effect="fade" end="0" start="100" time="0" condition="Control.IsVisible($PARAM[ID])">Conditional</animation>
+		</control>
+	</include>
 	<!-- Jump to letter -->
 	<include name="JumpToLetter">
 		<param name="ID" default="6000" />

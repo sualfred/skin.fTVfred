@@ -3,579 +3,874 @@
 	<!-- virtualkeyboard -->
 	<defaultcontrol always="true">300</defaultcontrol>
 	<onunload>ClearProperty(DisableSuggestions,home)</onunload>
+	<animation type="WindowOpen">
+		<effect center="auto" tween="circle" easing="out" end="100" start="110" time="200" type="zoom" />
+		<effect easing="inout" end="100" start="0" time="200" tween="sine" type="fade" />
+	</animation>
+	<animation easing="inout" effect="fade" end="0" start="100" time="200" tween="sine">WindowClose</animation>
+	<zorder>99</zorder>
 	<controls>
+		<!-- Background -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>special://skin/extras/backgrounds/default.png</texture>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+		</control>
+		<!-- Dialog group -->
 		<control type="group">
-			<visible>!Window.IsVisible(playerprocessinfo)</visible>
-			<!-- Background -->
-			<include>DialogBackgroundImage</include>
-			<!-- Dialog group -->
+			<centerleft>50%</centerleft>
+			<width>1188</width>
+			<animation condition="Window.IsVisible(numericinput)" easing="inout" effect="fade" end="0" start="100" time="120" tween="sine">Conditional</animation>
+			<!-- Search field -->
 			<control type="group">
-				<top>-34</top>
-				<width>1920</width>
-				<height>740</height>
-				<include>KeyboardAnimation</include>
-				<!-- Background -->
-				<control type="image">
-					<centerleft>50%</centerleft>
-					<width>960</width>
-					<height>695</height>
-					<texture border="32">dialogs/DialogMessageBackground.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(DisableSuggestions)) | !Integer.IsGreater(Container(9091).NumItems,0)</visible>
+				<top>60</top>
+				<!-- Heading -->
+				<control id="311" type="label">
+					<width>1188</width>
+					<height>36</height>
+					<font>LightCap36</font>
+					<label>13406</label>
+					<textcolor>ffdadada</textcolor>
 				</control>
-				<control type="image">
-					<centerleft>50%</centerleft>
-					<width>960</width>
-					<height>1145</height>
-					<texture border="32">dialogs/DialogMessageBackground.png</texture>
-					<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions)) + Integer.IsGreater(Container(9091).NumItems,0)</visible>
+				<!-- Edit -->
+				<control id="312" type="edit">
+					<top>70</top>
+					<width>1188</width>
+					<height>48</height>
+					<ondown condition="Integer.IsLess(Container(9091).NumItems,1)">300</ondown>
+					<ondown condition="!Integer.IsLess(Container(9091).NumItems,1)">9091</ondown>
+					<font>Light39</font>
+					<textcolor>ffdadada</textcolor>
+					<focusedcolor>ffffc24b</focusedcolor>
+					<hinttext>[COLOR ff414141]$LOCALIZE[16028][/COLOR]</hinttext>
 				</control>
-				<!-- Control group -->
-				<control type="group">
-					<top>38</top>
-					<width>868</width>
-					<centerleft>50%</centerleft>
-					<!-- icon -->
-					<control type="group">
-						<top>10</top>
-						<left>0</left>
-						<width>116</width>
-						<height>116</height>
-						<!-- Icon back -->
-						<control type="image">
-							<width>116</width>
-							<height>116</height>
-							<texture>dialogs/progress/bg.png</texture>
-						</control>
-						<control type="image">
-							<width>116</width>
-							<height>116</height>
-							<texture>dialogs/progress/bg_circle.png</texture>
-						</control>
-						<!-- Icon -->
-						<control type="image">
-							<width>116</width>
-							<height>116</height>
-							<texture>dialogs/icons/abc.png</texture>
-						</control>
-					</control>
-					<!-- Heading -->
+				<!-- Edit Text line -->
+				<control type="image">
+					<top>126</top>
+					<width>1188</width>
+					<height>2</height>
+					<texture border="1">dialogs/KeyboardEditLine.png</texture>
+				</control>
+			</control>			
+			<!-- Auto Completion -->
+			<control type="list" id="9091">
+				<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions))</visible>
+				<top>205</top>
+				<width>1188</width>
+				<height>432</height>
+				<content limit="9">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).Index(1)]</content>
+				<onup>312</onup>
+				<ondown>300</ondown>
+				<onleft>100</onleft>
+				<onright>300</onright>
+				<orientation>vertical</orientation>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="45" width="1188">
 					<control type="label">
-						<left>132</left>
-						<top>24</top>
-						<width>736</width>
-						<height>54</height>
+						<width>1188</width>
+						<height>45</height>
 						<font>Light30</font>
-						<textcolor>fff4f4f4</textcolor>
-						<label>31523</label>
-					</control>
-					<control id="311" type="label">
-						<left>132</left>
-						<top>58</top>
-						<width>736</width>
-						<height>54</height>
-						<font>Reg27</font>
-						<textcolor>ff7f7f7f</textcolor>
-						<label>16028</label>
-					</control>
-					<!-- auto completion -->
-					<control type="list" id="9091">
-						<visible>String.IsEmpty(Window(Home).Property(DisableSuggestions))</visible>
-						<left>10</left>
-						<top>612</top>
-						<width>868</width>
-						<height>432</height>
-						<onup>312</onup>
-						<content limit="9">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).Index(1)]</content>
-						<onup>312</onup>
-						<ondown>noop</ondown>
-						<onleft>300</onleft>
-						<onright>300</onright>
-						<onback>noop</onback>
-						<orientation>vertical</orientation>
-						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<itemlayout height="48" width="846">
-							<control type="label">
-								<width>846</width>
-								<height>48</height>
-								<font>Light39</font>
-								<textcolor>ff808080</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						</itemlayout>
-						<focusedlayout height="48" width="846">
-							<control type="label">
-								<width>846</width>
-								<height>48</height>
-								<font>Light39</font>
-								<textcolor>ffffc24b</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>Control.HasFocus(9091)</visible>
-							</control>
-							<control type="label">
-								<width>846</width>
-								<height>48</height>
-								<font>Light39</font>
-								<textcolor>ff808080</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!Control.HasFocus(9091)</visible>
-							</control>
-						</focusedlayout>
-					</control>
-					<!-- Edit -->
-					<control id="312" type="edit">
-						<left>10</left>
-						<top>545</top>
-						<width>788</width>
-						<height>48</height>
-						<onup>4000</onup>
-						<onright>300</onright>
-						<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
-						<font>Light39</font>
+						<align>center</align>
 						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<hinttext>[COLOR ff414141]Joe Bloggs[/COLOR]</hinttext>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<!-- Edit Text line -->
-					<control type="image">
-						<top>515</top>
-						<centerleft>50%</centerleft>
-						<width>898</width>
-						<height>2</height>
-						<texture border="1">dialogs/KeyboardEditLine2.png</texture>
+				</itemlayout>
+				<focusedlayout height="45" width="1188">
+					<control type="label">
+						<width>1188</width>
+						<height>45</height>
+						<font>Light30</font>
+						<align>center</align>
+						<textcolor>ffffc24b</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(9091)</visible>
 					</control>
-					<!-- Keys -->
-					<control type="group">
-						<top>171</top>
-						<!-- Control buttons 1col -->
-						<control id="8000" type="grouplist">
-							<left>760</left>
-							<width>60</width>
-							<height>500</height>
-							<itemgap>36</itemgap>
-							<onleft>8000</onleft>
-							<onright>8000</onright>
-							<orientation>vertical</orientation>
-							<include content="KeyboardControlButtons">
-								<param name="name">inputtype</param>
-								<param name="ID">309</param>
-							</include>
-							<include content="KeyboardControlButtons">
-								<param name="name">symbols</param>
-								<param name="ID">304</param>
-							</include>
-							<include content="KeyboardControlButtons">
-								<param name="name">shift</param>
-								<param name="ID">302</param>
-							</include>
-							<include content="KeyboardControlButtons">
-								<param name="name">space</param>
-								<param name="ID">32</param>
-							</include>
+					<control type="label">
+						<width>1188</width>
+						<height>45</height>
+						<font>Light30</font>
+						<align>center</align>
+						<textcolor>ffdadada</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(9091)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Keys -->
+			<control type="group">
+				<height>388</height>
+				<bottom>60</bottom>
+				<!-- Keys right -->
+				<control type="group">
+					<left>960</left>
+					<control type="grouplist">
+						<height>388</height>
+						<width>228</width>
+						<orentation>vertical</orentation>
+						<itemgap>12</itemgap>
+						<include content="Spacer">
+							<param name="visible" value="true"/>
+							<param name="height" value="68"/>
+							<param name="width" value="228"/>
+						</include>
+						<include content="Spacer">
+							<param name="visible" value="true"/>
+							<param name="height" value="68"/>
+							<param name="width" value="228"/>
+						</include>
+						<!-- Caps lock on-->
+						<control type="image">
+							<width>228</width>
+							<height>68</height>
+							<texture border="3">dialogs/KeyboardButtonToggleOn.png</texture>
+							<visible>String.Contains(Control.GetLabel(303),*)</visible>
 						</control>
-						<!-- Control buttons 2col -->
-						<control id="8001" type="grouplist">
-							<left>820</left>
-							<width>60</width>
-							<height>500</height>
-							<itemgap>36</itemgap>
-							<onleft>8001</onleft>
-							<onright>8001</onright>
-							<orientation>vertical</orientation>
-							<include content="KeyboardControlButtons">
-								<param name="name">cancel</param>
-								<param name="ID">301</param>
-							</include>
-							<include content="KeyboardControlButtons">
-								<param name="name">ip</param>
-								<param name="ID">307</param>
-							</include>
-							<include content="KeyboardControlButtons">
-								<param name="name">capslock</param>
-								<param name="ID">303</param>
-							</include>
-							<include content="KeyboardControlButtons">
-								<param name="name">backspace</param>
-								<param name="ID">8</param>
-							</include>
+						<!-- Caps lock off-->
+						<control type="image">
+							<width>228</width>
+							<height>68</height>
+							<texture border="3">dialogs/KeyboardButtonToggleOff.png</texture>
+							<visible>!String.Contains(Control.GetLabel(303),*)</visible>
 						</control>
-						<!-- Control buttons edit field -->
-						<control id="6000" type="grouplist">
-							<top>376</top>
-							<width>868</width>
-							<height>44</height>
-							<itemgap>12</itemgap>
-							<onup>8</onup>
-							<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
-							<onleft>312</onleft>
-							<align>right</align>
-							<orientation>horizontal</orientation>
-							<control id="300" type="button">
-								<onup>8</onup>
-								<ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">9091</ondown>
-								<include content="BottomControlButtons">
-									<param name="name">enter</param>
-								</include>
-							</control>
+						<!-- Shift on -->
+						<control type="image">
+							<width>228</width>
+							<height>68</height>
+							<texture border="3">dialogs/KeyboardButtonToggleOn.png</texture>
+							<visible>String.Contains(Control.GetLabel(302),*)</visible>
 						</control>
-						<!-- Rows -->
-						<control type="group">
-							<!-- First row -->
-							<control id="1000" type="grouplist">
-								<width>856</width>
-								<height>48</height>
-								<itemgap>12</itemgap>
-								<onleft>noop</onleft>
-								<onright>noop</onright>
-								<align>left</align>
-								<orientation>horizontal</orientation>
-								<control id="100" type="button">
-									<!-- (0,0) key button -->
-									<ondown>120</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="101" type="button">
-									<!-- (0,1) key button -->
-									<ondown>121</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="102" type="button">
-									<!-- (0,2) key button -->
-									<ondown>122</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="103" type="button">
-									<!-- (0,3) key button -->
-									<ondown>123</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="104" type="button">
-									<!-- (0,4) key button -->
-									<ondown>124</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="105" type="button">
-									<!-- (0,5) key button -->
-									<ondown>125</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="106" type="button">
-									<!-- (0,6) key button -->
-									<ondown>126</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="107" type="button">
-									<!-- (0,7) key button -->
-									<ondown>127</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="108" type="button">
-									<!-- (0,8) key button -->
-									<ondown>128</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="109" type="button">
-									<!-- (0,9) key button -->
-									<ondown>129</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="110" type="button">
-									<!-- (0,10) key button -->
-									<ondown>130</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="111" type="button">
-									<!-- (0,11) key button -->
-									<ondown>131</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<!-- input lang -->
-								<control id="309" type="button">
-									<ondown>304</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-								<!-- close -->
-								<control id="301" type="button">
-									<ondown>307</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-							</control>
-							<!-- Second row -->
-							<control id="2000" type="grouplist">
-								<top>80</top>
-								<width>856</width>
-								<height>48</height>
-								<itemgap>12</itemgap>
-								<onleft>noop</onleft>
-								<onright>noop</onright>
-								<align>left</align>
-								<orientation>horizontal</orientation>
-								<control id="120" type="button">
-									<!-- (1,0) key button -->
-									<onup>100</onup>
-									<ondown>140</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="121" type="button">
-									<!-- (1,1) key button -->
-									<onup>101</onup>
-									<ondown>141</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="122" type="button">
-									<!-- (1,2) key button -->
-									<onup>102</onup>
-									<ondown>142</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="123" type="button">
-									<!-- (1,3) key button -->
-									<onup>103</onup>
-									<ondown>143</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="124" type="button">
-									<!-- (1,4) key button -->
-									<onup>104</onup>
-									<ondown>144</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="125" type="button">
-									<!-- (1,5) key button -->
-									<onup>105</onup>
-									<ondown>145</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="126" type="button">
-									<!-- (1,6) key button -->
-									<onup>106</onup>
-									<ondown>146</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="127" type="button">
-									<!-- (1,7) key button -->
-									<onup>107</onup>
-									<ondown>147</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="128" type="button">
-									<!-- (1,8) key button -->
-									<onup>108</onup>
-									<ondown>148</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="129" type="button">
-									<!-- (1,9) key button -->
-									<onup>109</onup>
-									<ondown>149</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="130" type="button">
-									<!-- (1,10) key button -->
-									<onup>110</onup>
-									<ondown>150</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="131" type="button">
-									<!-- (1,11) key button -->
-									<onup>111</onup>
-									<ondown>151</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<!-- special chars -->
-								<control id="304" type="button">
-									<onup>309</onup>
-									<ondown>302</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-								<!-- ip -->
-								<control id="307" type="button">
-									<onup>301</onup>
-									<ondown>303</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-							</control>
-							<!-- Third row -->
-							<control id="3000" type="grouplist">
-								<top>160</top>
-								<width>856</width>
-								<height>48</height>
-								<itemgap>12</itemgap>
-								<onleft>noop</onleft>
-								<onright>noop</onright>
-								<align>left</align>
-								<orientation>horizontal</orientation>
-								<control id="140" type="button">
-									<!-- (2,0) key button -->
-									<onup>120</onup>
-									<ondown>160</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="141" type="button">
-									<!-- (2,1) key button -->
-									<onup>121</onup>
-									<ondown>161</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="142" type="button">
-									<!-- (2,2) key button -->
-									<onup>122</onup>
-									<ondown>162</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="143" type="button">
-									<!-- (2,3) key button -->
-									<onup>123</onup>
-									<ondown>163</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="144" type="button">
-									<!-- (2,4) key button -->
-									<onup>124</onup>
-									<ondown>164</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="145" type="button">
-									<!-- (2,5) key button -->
-									<onup>125</onup>
-									<ondown>165</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="146" type="button">
-									<!-- (2,6) key button -->
-									<onup>126</onup>
-									<ondown>166</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="147" type="button">
-									<!-- (2,7) key button -->
-									<onup>127</onup>
-									<ondown>167</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="148" type="button">
-									<!-- (2,8) key button -->
-									<onup>128</onup>
-									<ondown>168</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="149" type="button">
-									<!-- (2,9) key button -->
-									<onup>129</onup>
-									<ondown>169</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="150" type="button">
-									<!-- (2,10) key button -->
-									<onup>130</onup>
-									<ondown>170</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="151" type="button">
-									<!-- (2,11) key button -->
-									<onup>131</onup>
-									<ondown>171</ondown>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<!-- shift -->
-								<control id="302" type="button">
-									<onup>304</onup>
-									<ondown>32</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-								<!-- capslock -->
-								<control id="303" type="button">
-									<onup>307</onup>
-									<ondown>8</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-							</control>
-							<!-- Forth row -->
-							<control id="4000" type="grouplist">
-								<top>240</top>
-								<width>856</width>
-								<height>48</height>
-								<itemgap>12</itemgap>
-								<onleft>noop</onleft>
-								<onright>noop</onright>
-								<ondown>312</ondown>
-								<align>left</align>
-								<orientation>horizontal</orientation>
-								<control id="160" type="button">
-									<!-- (3,0) key button -->
-									<onup>140</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="161" type="button">
-									<!-- (3,1) key button -->
-									<onup>141</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="162" type="button">
-									<!-- (3,2) key button -->
-									<onup>142</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="163" type="button">
-									<!-- (3,3) key button -->
-									<onup>143</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="164" type="button">
-									<!-- (3,4) key button -->
-									<onup>144</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="165" type="button">
-									<!-- (3,5) key button -->
-									<onup>145</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="166" type="button">
-									<!-- (3,6) key button -->
-									<onup>146</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="167" type="button">
-									<!-- (3,7) key button -->
-									<onup>147</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="168" type="button">
-									<!-- (3,8) key button -->
-									<onup>148</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="169" type="button">
-									<!-- (3,9) key button -->
-									<onup>149</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="170" type="button">
-									<!-- (3,10) key button -->
-									<onup>150</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<control id="171" type="button">
-									<!-- (3,11) key button -->
-									<onup>151</onup>
-									<include>SmallKeyboardButtons</include>
-								</control>
-								<!-- space -->
-								<control id="32" type="button">
-									<onup>302</onup>
-									<ondown>300</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-								<!-- backspace -->
-								<control id="8" type="button">
-									<onup>303</onup>
-									<ondown>300</ondown>
-									<include>HiddenKeyboardButtons</include>
-								</control>
-							</control>
+						<!-- Shift off -->
+						<control type="image">
+							<width>228</width>
+							<height>68</height>
+							<texture border="3">dialogs/KeyboardButtonToggleOff.png</texture>
+							<visible>!String.Contains(Control.GetLabel(302),*)</visible>
+						</control>
+					</control>
+					<control id="9000" type="grouplist">
+						<height>388</height>
+						<width>228</width>
+						<orentation>vertical</orentation>
+						<itemgap>12</itemgap>
+						<onup condition="Integer.IsLess(Container(9091).NumItems,1)">312</onup>
+						<onup condition="!Integer.IsLess(Container(9091).NumItems,1)">9091</onup>
+						<ondown>309</ondown>
+						<!-- Done -->
+						<control id="300" type="button">
+							<width>228</width>
+							<include>KeyboardButtons</include>
+							<label>20177</label>
+							<onfocus>Control.Move(9091,$INFO[Container(9091).CurrentItem,-])</onfocus>
+							<onfocus>Control.Move(9091,1)</onfocus>
+							<onleft condition="Control.IsVisible(111)">111</onleft>
+							<onleft condition="!Control.IsVisible(111) + Control.IsVisible(110)">110</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + Control.IsVisible(109)">109</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + Control.IsVisible(108)">108</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + Control.IsVisible(107)">107</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + Control.IsVisible(106)">106</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + !Control.IsVisible(106) + Control.IsVisible(105)">105</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + !Control.IsVisible(106) + !Control.IsVisible(105) + Control.IsVisible(104)">104</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + !Control.IsVisible(106) + !Control.IsVisible(105) + !Control.IsVisible(104) + Control.IsVisible(103)">103</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + !Control.IsVisible(106) + !Control.IsVisible(105) + !Control.IsVisible(104) + !Control.IsVisible(103) + Control.IsVisible(102)">102</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + !Control.IsVisible(106) + !Control.IsVisible(105) + !Control.IsVisible(104) + !Control.IsVisible(103) + !Control.IsVisible(102) + Control.IsVisible(101)">101</onleft>
+							<onleft condition="!Control.IsVisible(111) + !Control.IsVisible(110) + !Control.IsVisible(109) + !Control.IsVisible(108) + !Control.IsVisible(107) + !Control.IsVisible(106) + !Control.IsVisible(105) + !Control.IsVisible(104) + !Control.IsVisible(103) + !Control.IsVisible(102) + !Control.IsVisible(101) + Control.IsVisible(100)">100</onleft>
+						</control>
+						<!-- BACKSPACE -->
+						<control id="8" type="button">
+							<width>228</width>
+							<label>20181</label>
+							<include>KeyboardButtons</include>
+							<onleft condition="Control.IsVisible(131)">131</onleft>
+							<onleft condition="!Control.IsVisible(131) + Control.IsVisible(130)">130</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + Control.IsVisible(129)">129</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + Control.IsVisible(128)">128</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + Control.IsVisible(127)">127</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + Control.IsVisible(126)">126</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + !Control.IsVisible(126) + Control.IsVisible(125)">125</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + !Control.IsVisible(126) + !Control.IsVisible(125) + Control.IsVisible(124)">124</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + !Control.IsVisible(126) + !Control.IsVisible(125) + !Control.IsVisible(124) + Control.IsVisible(123)">123</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + !Control.IsVisible(126) + !Control.IsVisible(125) + !Control.IsVisible(124) + !Control.IsVisible(123) + Control.IsVisible(122)">122</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + !Control.IsVisible(126) + !Control.IsVisible(125) + !Control.IsVisible(124) + !Control.IsVisible(123) + !Control.IsVisible(122) + Control.IsVisible(121)">121</onleft>
+							<onleft condition="!Control.IsVisible(131) + !Control.IsVisible(130) + !Control.IsVisible(129) + !Control.IsVisible(128) + !Control.IsVisible(127) + !Control.IsVisible(126) + !Control.IsVisible(125) + !Control.IsVisible(124) + !Control.IsVisible(123) + !Control.IsVisible(122) + !Control.IsVisible(121) + Control.IsVisible(120)">120</onleft>
+						</control>
+						<!-- Caps lock -->
+						<control id="303" type="radiobutton">
+							<width>228</width>
+							<label>20179</label>
+							<texturenofocus>-</texturenofocus>
+							<textureradioonfocus>-</textureradioonfocus>
+							<textureradioonnofocus>-</textureradioonnofocus>
+							<textureradioofffocus>-</textureradioofffocus>
+							<textureradiooffnofocus>-</textureradiooffnofocus>
+							<include>KeyboardButtons</include>
+							<onleft condition="Control.IsVisible(151)">151</onleft>
+							<onleft condition="!Control.IsVisible(151) + Control.IsVisible(150)">150</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + Control.IsVisible(149)">149</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + Control.IsVisible(148)">148</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + Control.IsVisible(147)">147</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + Control.IsVisible(146)">146</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + !Control.IsVisible(146) + Control.IsVisible(145)">145</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + !Control.IsVisible(146) + !Control.IsVisible(145) + Control.IsVisible(144)">144</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + !Control.IsVisible(146) + !Control.IsVisible(145) + !Control.IsVisible(144) + Control.IsVisible(143)">143</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + !Control.IsVisible(146) + !Control.IsVisible(145) + !Control.IsVisible(144) + !Control.IsVisible(143) + Control.IsVisible(142)">142</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + !Control.IsVisible(146) + !Control.IsVisible(145) + !Control.IsVisible(144) + !Control.IsVisible(143) + !Control.IsVisible(142) + Control.IsVisible(141)">141</onleft>
+							<onleft condition="!Control.IsVisible(151) + !Control.IsVisible(150) + !Control.IsVisible(149) + !Control.IsVisible(148) + !Control.IsVisible(147) + !Control.IsVisible(146) + !Control.IsVisible(145) + !Control.IsVisible(144) + !Control.IsVisible(143) + !Control.IsVisible(142) + !Control.IsVisible(141) + Control.IsVisible(140)">140</onleft>
+						</control>
+						<!-- Shift -->
+						<control id="302" type="radiobutton">
+							<width>228</width>
+							<label>20178</label>
+							<texturenofocus>-</texturenofocus>
+							<textureradioonfocus>-</textureradioonfocus>
+							<textureradioonnofocus>-</textureradioonnofocus>
+							<textureradioofffocus>-</textureradioofffocus>
+							<textureradiooffnofocus>-</textureradiooffnofocus>
+							<include>KeyboardButtons</include>
+							<onleft condition="Control.IsVisible(171)">171</onleft>
+							<onleft condition="!Control.IsVisible(171) + Control.IsVisible(170)">170</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + Control.IsVisible(169)">169</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + Control.IsVisible(168)">168</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + Control.IsVisible(167)">167</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + Control.IsVisible(166)">166</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + !Control.IsVisible(166) + Control.IsVisible(165)">165</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + !Control.IsVisible(166) + !Control.IsVisible(165) + Control.IsVisible(164)">164</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + !Control.IsVisible(166) + !Control.IsVisible(165) + !Control.IsVisible(164) + Control.IsVisible(163)">163</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + !Control.IsVisible(166) + !Control.IsVisible(165) + !Control.IsVisible(164) + !Control.IsVisible(163) + Control.IsVisible(162)">162</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + !Control.IsVisible(166) + !Control.IsVisible(165) + !Control.IsVisible(164) + !Control.IsVisible(163) + !Control.IsVisible(162) + Control.IsVisible(161)">161</onleft>
+							<onleft condition="!Control.IsVisible(171) + !Control.IsVisible(170) + !Control.IsVisible(169) + !Control.IsVisible(168) + !Control.IsVisible(167) + !Control.IsVisible(166) + !Control.IsVisible(165) + !Control.IsVisible(164) + !Control.IsVisible(163) + !Control.IsVisible(162) + !Control.IsVisible(161) + Control.IsVisible(160)">160</onleft>
+						</control>
+						<!-- Cancel Button -->
+						<control id="301" type="button">
+							<width>228</width>
+							<include>KeyboardButtons</include>
+							<label>222</label>
+							<onleft>306</onleft>
 						</control>
 					</control>
 				</control>
+				<!-- Keys left -->
+				<control type="group">
+					<height>308</height>
+					<!-- First row -->
+					<control type="grouplist">
+						<width>1188</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onup condition="Integer.IsLess(Container(9091).NumItems,1)">312</onup>
+						<onup condition="!Integer.IsLess(Container(9091).NumItems,1)">9091</onup>
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<orientation>horizontal</orientation>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="100"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="101"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="102"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="103"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="104"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="105"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="106"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="107"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="108"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="109"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="110"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="111"/>
+						</include>
+					</control>
+					<control id="1000" type="grouplist">
+						<width>1188</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onup condition="Integer.IsLess(Container(9091).NumItems,1)">312</onup>
+						<onup condition="!Integer.IsLess(Container(9091).NumItems,1)">9091</onup>
+						<onleft>100</onleft>
+						<onright>300</onright>
+						<orientation>horizontal</orientation>
+						<control id="100" type="button">
+							<!-- (0,0) key button -->
+							<onfocus>Control.Move(9091,$INFO[Container(9091).CurrentItem,-])</onfocus>
+							<onfocus>Control.Move(9091,1)</onfocus>
+							<ondown>120</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="101" type="button">
+							<!-- (0,1) key button -->
+							<ondown>121</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="102" type="button">
+							<!-- (0,2) key button -->
+							<ondown>122</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="103" type="button">
+							<!-- (0,3) key button -->
+							<ondown>123</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="104" type="button">
+							<!-- (0,4) key button -->
+							<ondown>124</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="105" type="button">
+							<!-- (0,5) key button -->
+							<ondown>125</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="106" type="button">
+							<!-- (0,6) key button -->
+							<ondown>126</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="107" type="button">
+							<!-- (0,7) key button -->
+							<ondown>127</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="108" type="button">
+							<!-- (0,8) key button -->
+							<ondown>128</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="109" type="button">
+							<!-- (0,9) key button -->
+							<ondown>129</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="110" type="button">
+							<!-- (0,10) key button -->
+							<ondown>130</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="111" type="button">
+							<!-- (0,11) key button -->
+							<ondown>131</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+					</control>
+					<!-- Second row -->
+					<control type="grouplist">
+						<top>80</top>
+						<width>1288</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>2000</onleft>
+						<onright>2000</onright>
+						<orientation>horizontal</orientation>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="120"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="121"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="122"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="123"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="124"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="125"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="126"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="127"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="128"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="129"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="130"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="131"/>
+						</include>
+					</control>
+					<control id="2000" type="grouplist">
+						<top>80</top>
+						<width>1068</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>120</onleft>
+						<onright>8</onright>
+						<orientation>horizontal</orientation>
+						<control id="120" type="button">
+							<!-- (1,0) key button -->
+							<onup>100</onup>
+							<ondown>140</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="121" type="button">
+							<!-- (1,1) key button -->
+							<onup>101</onup>
+							<ondown>141</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="122" type="button">
+							<!-- (1,2) key button -->
+							<onup>102</onup>
+							<ondown>142</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="123" type="button">
+							<!-- (1,3) key button -->
+							<onup>103</onup>
+							<ondown>143</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="124" type="button">
+							<!-- (1,4) key button -->
+							<onup>104</onup>
+							<ondown>144</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="125" type="button">
+							<!-- (1,5) key button -->
+							<onup>105</onup>
+							<ondown>145</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="126" type="button">
+							<!-- (1,6) key button -->
+							<onup>106</onup>
+							<ondown>146</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="127" type="button">
+							<!-- (1,7) key button -->
+							<onup>107</onup>
+							<ondown>147</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="128" type="button">
+							<!-- (1,8) key button -->
+							<onup>108</onup>
+							<ondown>148</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="129" type="button">
+							<!-- (1,9) key button -->
+							<onup>109</onup>
+							<ondown>149</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="130" type="button">
+							<!-- (1,10) key button -->
+							<onup>110</onup>
+							<ondown>150</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="131" type="button">
+							<!-- (1,11) key button -->
+							<onup>111</onup>
+							<ondown>151</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+					</control>
+					<!-- Third row -->
+					<control type="grouplist">
+						<top>160</top>
+						<width>1188</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>3000</onleft>
+						<onright>3000</onright>
+						<orientation>horizontal</orientation>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="140"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="141"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="142"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="143"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="144"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="145"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="146"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="147"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="148"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="149"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="150"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="151"/>
+						</include>
+					</control>
+					<control id="3000" type="grouplist">
+						<top>160</top>
+						<width>1068</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>140</onleft>
+						<onright>303</onright>
+						<orientation>horizontal</orientation>
+						<control id="140" type="button">
+							<!-- (2,0) key button -->
+							<onup>120</onup>
+							<ondown>160</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="141" type="button">
+							<!-- (2,1) key button -->
+							<onup>121</onup>
+							<ondown>161</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="142" type="button">
+							<!-- (2,2) key button -->
+							<onup>122</onup>
+							<ondown>162</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="143" type="button">
+							<!-- (2,3) key button -->
+							<onup>123</onup>
+							<ondown>163</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="144" type="button">
+							<!-- (2,4) key button -->
+							<onup>124</onup>
+							<ondown>164</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="145" type="button">
+							<!-- (2,5) key button -->
+							<onup>125</onup>
+							<ondown>165</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="146" type="button">
+							<!-- (2,6) key button -->
+							<onup>126</onup>
+							<ondown>166</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="147" type="button">
+							<!-- (2,7) key button -->
+							<onup>127</onup>
+							<ondown>167</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="148" type="button">
+							<!-- (2,8) key button -->
+							<onup>128</onup>
+							<ondown>168</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="149" type="button">
+							<!-- (2,9) key button -->
+							<onup>129</onup>
+							<ondown>169</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="150" type="button">
+							<!-- (2,10) key button -->
+							<onup>130</onup>
+							<ondown>170</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="151" type="button">
+							<!-- (2,11) key button -->
+							<onup>131</onup>
+							<ondown>171</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+					</control>
+					<!-- Forth row -->
+					<control type="grouplist">
+						<top>240</top>
+						<width>1188</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>4000</onleft>
+						<onright>4000</onright>
+						<orientation>horizontal</orientation>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="160"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="161"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="162"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="163"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="164"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="165"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="166"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="167"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="168"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="169"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="170"/>
+						</include>
+						<include content="EmptyKeyboardButtons">
+							<param name="ID" value="171"/>
+						</include>
+					</control>
+					<control id="4000" type="grouplist">
+						<top>240</top>
+						<width>1068</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>160</onleft>
+						<onright>302</onright>
+						<orientation>horizontal</orientation>
+						<control id="160" type="button">
+							<!-- (3,0) key button -->
+							<onup>140</onup>
+							<ondown>304</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="161" type="button">
+							<!-- (3,1) key button -->
+							<onup>141</onup>
+							<ondown>307</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="162" type="button">
+							<!-- (3,2) key button -->
+							<onup>142</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="163" type="button">
+							<!-- (3,3) key button -->
+							<onup>143</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="164" type="button">
+							<!-- (3,4) key button -->
+							<onup>144</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="165" type="button">
+							<!-- (3,5) key button -->
+							<onup>145</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="166" type="button">
+							<!-- (3,6) key button -->
+							<onup>146</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="167" type="button">
+							<!-- (3,7) key button -->
+							<onup>147</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="168" type="button">
+							<!-- (3,8) key button -->
+							<onup>148</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="169" type="button">
+							<!-- (3,9) key button -->
+							<onup>149</onup>
+							<ondown>32</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="170" type="button">
+							<!-- (3,10) key button -->
+							<onup>150</onup>
+							<ondown>306</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+						<control id="171" type="button">
+							<!-- (3,11) key button -->
+							<onup>151</onup>
+							<ondown>306</ondown>
+							<include>KeyboardButtons</include>
+						</control>
+					</control>
+					<!-- Fifth row -->
+					<control type="grouplist">
+						<top>320</top>
+						<width>1188</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>5000</onleft>
+						<onright>5000</onright>
+						<orientation>horizontal</orientation>
+						<!-- Symbols on -->
+						<control type="image">
+							<width>68</width>
+							<height>68</height>
+							<texture border="3">dialogs/KeyboardButtonToggleOn.png</texture>
+							<visible>String.Contains(Control.GetLabel(304),*)</visible>
+						</control>
+						<!-- Symbols off -->
+						<control type="image">
+							<width>68</width>
+							<height>68</height>
+							<texture border="3">dialogs/KeyboardButtonToggleOff.png</texture>
+							<visible>!String.Contains(Control.GetLabel(304),*)</visible>
+						</control>
+					</control>
+					<control id="5000" type="grouplist">
+						<top>320</top>
+						<width>1188</width>
+						<height>68</height>
+						<itemgap>12</itemgap>
+						<onleft>309</onleft>
+						<onright>301</onright>
+						<orientation>horizontal</orientation>
+						<!-- Symbols -->
+						<control id="304" type="radiobutton">
+							<width>68</width>
+							<onup>160</onup>
+							<ondown>309</ondown>
+							<label>#$</label>
+							<texturenofocus>-</texturenofocus>
+							<textureradioonfocus>-</textureradioonfocus>
+							<textureradioonnofocus>-</textureradioonnofocus>
+							<textureradioofffocus>-</textureradioofffocus>
+							<textureradiooffnofocus>-</textureradiooffnofocus>
+							<include>KeyboardButtons</include>
+						</control>
+						<!-- IP address -->
+						<control id="307" type="button">
+							<width>68</width>
+							<onup>161</onup>
+							<ondown>309</ondown>
+							<include>KeyboardButtons</include>
+							<label>$LOCALIZE[31068]</label>
+						</control>
+						<!-- SPACE -->
+						<control id="32" type="button">
+							<onup>4000</onup>
+							<ondown>309</ondown>
+							<width>628</width>
+							<label>20182</label>
+							<include>KeyboardButtons</include>
+						</control>
+						<!-- Previous -->
+						<control id="305" type="button">
+							<onup>170</onup>
+							<ondown>309</ondown>
+							<label>&lt;</label>
+							<include>KeyboardButtons</include>
+						</control>
+						<!-- Next -->
+						<control id="306" type="button">
+							<onup>171</onup>
+							<ondown>309</ondown>
+							<label>&gt;</label>
+							<include>KeyboardButtons</include>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+		<!-- Layout -->
+		<control type="grouplist">
+			<animation condition="Window.IsVisible(numericinput)" easing="inout" effect="fade" end="0" start="100" time="120" tween="sine">Conditional</animation>
+			<bottom>60</bottom>
+			<left>60</left>
+			<height>40</height>
+			<itemgap>12</itemgap>
+			<onright>304</onright>
+			<orientation>horizontal</orientation>
+			<control type="label">
+				<bottom>60</bottom>
+				<left>60</left>
+				<width>auto</width>
+				<height>40</height>
+				<onup>5000</onup>
+				<font>FontAwesome</font>
+				<label>&#xf1ab;</label>
+				<textcolor>ff505559</textcolor>
+				<visible>!Control.HasFocus(309)</visible>
+			</control>
+			<control type="label">
+				<bottom>60</bottom>
+				<left>60</left>
+				<width>auto</width>
+				<height>40</height>
+				<onup>5000</onup>
+				<font>FontAwesome</font>
+				<label>&#xf1ab;</label>
+				<textcolor>ffffc24b</textcolor>
+				<visible>Control.HasFocus(309)</visible>
+			</control>
+			<control id="309" type="button">
+				<bottom>60</bottom>
+				<left>60</left>
+				<width>auto</width>
+				<height>40</height>
+				<onup>5000</onup>
+				<font>Light24</font>
+				<textcolor>ff505559</textcolor>
+				<focusedcolor>ffffc24b</focusedcolor>
+				<include>NoTextures</include>
 			</control>
 		</control>
 	</controls>

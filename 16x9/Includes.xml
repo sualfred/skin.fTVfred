@@ -663,9 +663,9 @@
 	</include>
 	<!-- Keyboard buttons -->
 	<include name="KeyboardButtons">
-		<width>78</width>
-		<height>78</height>
-		<font>Med40</font>
+		<width>68</width>
+		<height>68</height>
+		<font>Keyboard</font>
 		<align>center</align>
 		<aligny>center</aligny>
 		<textcolor>ffdadada</textcolor>
@@ -675,8 +675,8 @@
 	</include>
 	<!-- Numeric buttons -->
 	<include name="NumericButtons">
-		<width>168</width>
-		<height>168</height>
+		<width>148</width>
+		<height>148</height>
 		<font>Med40</font>
 		<align>center</align>
 		<aligny>center</aligny>
