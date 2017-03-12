@@ -316,7 +316,7 @@
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>dialogs/DialogBackground.png</texture>
-				<visible>ControlGroup(5000).HasFocus | Control.HasFocus(6000)</visible>
+				<visible>ControlGroup(5000).HasFocus</visible>
 				<animation effect="fade" end="100" start="0" time="120" tween="sine" easing="inout">Visible</animation>
 				<animation delay="100" effect="fade" end="0" start="100" time="200" tween="sine" easing="inout">Hidden</animation>
 			</control>
