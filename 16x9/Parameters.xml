@@ -59,23 +59,23 @@
 					</control>
 					<control id="311" type="label">
 						<left>6</left>
-						<top>340</top>
+						<top>379</top>
 						<width>708</width>
 						<height>36</height>
-						<font>LightCap36</font>
+						<font>Light36</font>
 						<label>$LOCALIZE[31334]</label>
 						<textcolor>ffdadada</textcolor>
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>395</top>
+						<top>434</top>
 						<width>708</width>
 						<height>2</height>
 						<texture border="1">dialogs/KeyboardEditLine.png</texture>
 					</control>
 					<control type="panel" id="$PARAM[ID]">
 						<left>6</left>
-						<top>506</top>
+						<top>545</top>
 						<width>720</width>
 						<onback>SetFocus(50)</onback>
 						<ondown>SetFocus(50)</ondown>

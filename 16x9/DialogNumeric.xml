@@ -26,7 +26,7 @@
 			<control id="1" type="label">
 				<width>788</width>
 				<height>36</height>
-				<font>LightCap36</font>
+				<font>Light36</font>
 				<textcolor>ffdadada</textcolor>
 			</control>
 			<!-- Edit -->

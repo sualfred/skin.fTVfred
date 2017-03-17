@@ -429,7 +429,7 @@
 						<label>31229</label>
 						<textcolor>ff505153</textcolor>
 						<focusedcolor>ffffaf37</focusedcolor>
-						<onclick>RunScript(script.skin.helper.skinbackup,action=backup,promptfilename=true)</onclick>
+						<onclick>RunScript(script.skin.helper.skinbackup,action=backup)</onclick>
 						<texturefocus border="3">settings/button_focus.png</texturefocus>
 						<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					</control>
