@@ -532,7 +532,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.skin.helper.service,action=textviewer,header='$ESCINFO[ListItem.Label]',message='$ESCVAR[Plot]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCVAR[Plot]')</onclick>
 						<visible>Control.IsVisible(96)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -646,7 +646,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
-						<onclick>RunScript(script.skin.helper.service,action=textviewer,header='$ESCINFO[ListItem.Title]',message='$ESCVAR[Plot]')</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Title]',text='$ESCVAR[Plot]')</onclick>
 						<visible>Control.IsVisible(98)</visible>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>

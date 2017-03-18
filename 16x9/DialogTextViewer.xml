@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- textviewer -->
-	<zorder>2</zorder>
+	<zorder>100</zorder>
 	<defaultcontrol always="true">3000</defaultcontrol>
 	<onunload condition="String.IsEqual(Window(home).Property(OpenTextViewer),1)">SetFocus(50)</onunload>
 	<onunload condition="String.IsEqual(Window(home).Property(OpenTextViewer),2)">SetFocus(100)</onunload>

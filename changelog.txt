@@ -1,5 +1,13 @@
 Changelog:
 
+3.6.8
+- Fixed textviewer
+- minor adjustments
+
+3.6.7
+- Redesigned Jump To Letter dialog
+- Minor changes
+
 3.6.6
 - Redesigned virtual keyboard
 
