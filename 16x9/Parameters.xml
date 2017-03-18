@@ -98,6 +98,13 @@
 								<width>68</width>
 								<height>68</height>
 								<texture border="3">common/button_nf.png</texture>
+								<visible>!String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
+							</control>
+							<control type="image">
+								<width>68</width>
+								<height>68</height>
+								<texture border="3">dialogs/KeyboardButtonToggleOn.png</texture>
+								<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 							</control>
 							<control type="textbox">
 								<width>68</width>
@@ -107,7 +114,7 @@
 								<aligny>center</aligny>
 								<textcolor>ffdadada</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>String.IsEmpty(ListItem.Property(NotAvailable)) + !String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
+								<visible>String.IsEmpty(ListItem.Property(NotAvailable))</visible>
 							</control>
 							<control type="textbox">
 								<width>68</width>
@@ -117,17 +124,7 @@
 								<aligny>center</aligny>
 								<textcolor>ff000000</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<visible>!String.IsEmpty(ListItem.Property(NotAvailable)) + !String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
-							</control>
-							<control type="textbox">
-								<width>68</width>
-								<height>68</height>
-								<font>Keyboard</font>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>ffffffff</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
+								<visible>!String.IsEmpty(ListItem.Property(NotAvailable))</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout height="80" width="80">
@@ -137,6 +134,13 @@
 									<width>68</width>
 									<height>68</height>
 									<texture border="3">common/button_nf.png</texture>
+									<visible>!String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
+								</control>
+								<control type="image">
+									<width>68</width>
+									<height>68</height>
+									<texture border="3">dialogs/KeyboardButtonToggleOn.png</texture>
+									<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 								</control>
 								<control type="textbox">
 									<width>68</width>
