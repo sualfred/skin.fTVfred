@@ -1,5 +1,9 @@
 Changelog:
 
+3.6.9
+- Fixed 4K label issues
+- Fixed lower button menu if a trailer is not available (workaround - Kodi bug)
+
 3.6.8
 - Fixed textviewer
 - minor adjustments
