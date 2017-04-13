@@ -465,7 +465,7 @@
 					</include>
 					<include>ListItemResolution</include>
 					<include content="Spacer">
-						<param name="visible" value="Integer.IsGreater(ListItem.VideoResolution,710)" />
+						<param name="visible" value="Integer.IsGreater(ListItem.VideoResolution,710) | String.IsEqual(ListItem.VideoResolution,4K)" />
 					</include>
 					<control type="image">
 						<top>2</top>

@@ -580,7 +580,7 @@
 			<font>Bold23</font>
 			<textcolor>ffbebebe</textcolor>
 			<label>[B]HD[/B] $VAR[ListItemResolution]</label>
-			<visible>Integer.IsGreater(ListItem.VideoResolution,710) | [Window.IsVisible(1114) + Integer.IsGreater(VideoPlayer.VideoResolution,710)]</visible>
+			<visible>Integer.IsGreater(ListItem.VideoResolution,710) | [Window.IsVisible(1114) + Integer.IsGreater(VideoPlayer.VideoResolution,710)] | String.IsEqual(ListItem.VideoResolution,4K)</visible>
 		</control>
 	</include>
 	<!-- TV Ratings -->
@@ -684,30 +684,6 @@
 		<focusedcolor>ff0c0c0c</focusedcolor>
 		<texturefocus border="2">dialogs/KeyboardButtonFO.png</texturefocus>
 		<texturenofocus border="2">dialogs/KeyboardButtonNF.png</texturenofocus>
-	</include>
-	<!-- ViewType Thumb Overlays -->
-	<include name="OverlayHD">
-		<control type="image">
-			<top>48</top>
-			<width>90</width>
-			<height>90</height>
-			<texture>views/OverlayHD.png</texture>
-			<visible>Integer.IsGreater(ListItem.VideoResolution,719) + !Integer.IsEqual(ListItem.VideoResolution,4K) + !ListItem.IsStereoscopic</visible>
-		</control>
-		<control type="image">
-			<top>48</top>
-			<width>90</width>
-			<height>90</height>
-			<texture>views/Overlay4K.png</texture>
-			<visible>Integer.IsEqual(ListItem.VideoResolution,4K) + !ListItem.IsStereoscopic</visible>
-		</control>
-		<control type="image">
-			<top>48</top>
-			<width>90</width>
-			<height>90</height>
-			<texture>views/Overlay3D.png</texture>
-			<visible>ListItem.IsStereoscopic</visible>
-		</control>
 	</include>
 	<include name="OverlayWatched">
 		<control type="image">
