@@ -1,5 +1,8 @@
 Changelog:
 
+3.7.0
+- Small trailer button fix
+
 3.6.9
 - Fixed 4K label issues
 - Fixed lower button menu if a trailer is not available (workaround - Kodi bug)

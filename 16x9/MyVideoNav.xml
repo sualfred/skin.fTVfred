@@ -306,7 +306,7 @@
 						<label>-</label>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
-						<visible>!Control.HasFocus(1002) + !Control.HasFocus(20) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005)</visible>
+						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(1006) + !Control.HasFocus(20)</visible>
 					</control>
 					<control id="1002" type="button">
 						<width min="104" max="224">auto</width>
@@ -339,7 +339,7 @@
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<enable>!String.IsEmpty(ListItem.Trailer)</enable>
+						<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
@@ -676,24 +676,7 @@
 						<label>-</label>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
-						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(16)</visible>
-					</control>
-					<control id="1003" type="button">
-						<width min="104" max="204">auto</width>
-						<wrapmultiline>true</wrapmultiline>
-						<height>100</height>
-						<onup>50</onup>
-						<ondown>3000</ondown>
-						<onclick condition="Player.HasMedia">PlayerControl(stop)</onclick>
-						<onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
-						<font>Med24</font>
-						<label>$LOCALIZE[31075]</label>
-						<textoffsetx>28</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<enable>!String.IsEmpty(ListItem.Trailer)</enable>
-						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<visible>!Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(16) + !Control.HasFocus(1006) + !Control.HasFocus(20)</visible>
 					</control>
 					<control id="1004" type="button">
 						<width min="104" max="204">auto</width>
