@@ -57,29 +57,11 @@
 						</control>
 						<control type="label">
 							<left>86</left>
-							<width>120</width>
+							<width>350</width>
 							<height>58</height>
 							<font>Light32</font>
 							<textcolor>ffffffff</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>226</left>
-							<width>70</width>
-							<height>58</height>
-							<font>Light32</font>
-							<textcolor>ffffffff</textcolor>
-							<label>[CC]</label>
-							<visible>ListItem.Property(hearingimp)</visible>
-						</control>
-						<control type="label">
-							<left>316</left>
-							<width>120</width>
-							<height>58</height>
-							<font>Light32</font>
-							<textcolor>ffffffff</textcolor>
-							<label>(SYNC)</label>
-							<visible>ListItem.Property(sync)</visible>
+							<label>$INFO[ListItem.Label]$VAR[SubtitlesSync, ]$VAR[SubtitlesHearingImp, ]</label>
 						</control>
 						<control type="label">
 							<left>456</left>
@@ -109,29 +91,11 @@
 								<visible>Control.HasFocus(120)</visible>
 								<control type="label">
 									<left>86</left>
-									<width>120</width>
+									<width>350</width>
 									<height>58</height>
 									<font>Light32</font>
 									<textcolor>ffffc04b</textcolor>
-									<label>$INFO[ListItem.Label]</label>
-								</control>
-								<control type="label">
-									<left>226</left>
-									<width>70</width>
-									<height>58</height>
-									<font>Light32</font>
-									<textcolor>ffffc04b</textcolor>
-									<label>[CC]</label>
-									<visible>ListItem.Property(hearingimp)</visible>
-								</control>
-								<control type="label">
-									<left>316</left>
-									<width>120</width>
-									<height>58</height>
-									<font>Light32</font>
-									<textcolor>ffffc04b</textcolor>
-									<label>(SYNC)</label>
-									<visible>ListItem.Property(sync)</visible>
+									<label>$INFO[ListItem.Label]$VAR[SubtitlesSync, ]$VAR[SubtitlesHearingImp, ]</label>
 								</control>
 								<control type="label">
 									<left>456</left>
@@ -146,29 +110,11 @@
 								<visible>!Control.HasFocus(120)</visible>
 								<control type="label">
 									<left>86</left>
-									<width>120</width>
+									<width>350</width>
 									<height>58</height>
 									<font>Light32</font>
 									<textcolor>88ffffff</textcolor>
-									<label>$INFO[ListItem.Label]</label>
-								</control>
-								<control type="label">
-									<left>226</left>
-									<width>70</width>
-									<height>58</height>
-									<font>Light32</font>
-									<textcolor>88ffffff</textcolor>
-									<label>[CC]</label>
-									<visible>ListItem.Property(hearingimp)</visible>
-								</control>
-								<control type="label">
-									<left>316</left>
-									<width>120</width>
-									<height>58</height>
-									<font>Light32</font>
-									<textcolor>88ffffff</textcolor>
-									<label>(SYNC)</label>
-									<visible>ListItem.Property(sync)</visible>
+									<label>$INFO[ListItem.Label]$VAR[SubtitlesSync, ]$VAR[SubtitlesHearingImp, ]</label>
 								</control>
 								<control type="label">
 									<left>456</left>

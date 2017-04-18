@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="SubtitlesHearingImp">
+		<value condition="ListItem.Property(hearingimp)">(cc)</value>
+	</variable>
+	<variable name="SubtitlesSync">
+		<value condition="ListItem.Property(sync)">(sync)</value>
+	</variable>
 	<variable name="GroupManagerHideStatus">
 		<value condition="String.Contains(Control.GetLabel(25),*)">$LOCALIZE[19289]: $LOCALIZE[16041]</value>
 		<value>$LOCALIZE[19289]: $LOCALIZE[351]</value>
