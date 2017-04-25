@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1116" type="dialog">
+	<zorder>9999999999999</zorder>
+	<visible>System.HasAddon(plugin.video.exodus) | System.HasAddon(plugin.video.xstream)</visible>
+	<controls>		
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>special://skin/extras/backgrounds/default.png</texture>
+			<colordiffuse>CFFFFFFF</colordiffuse>
+		</control>
+		<control type="group">
+			<control type="textbox">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>800</width>
+				<height>500</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Reg36Spaced</font>
+				<autoscroll>false</autoscroll>
+				<textcolor>ffdadada</textcolor>
+				<label>[COLOR red]Illegal streaming plugin found![/COLOR][CR]You - and plugins like Exodus, xStream, etc. - are destroying Kodi and its community. I made this skin for everyone, except for people like you. Please uninstall the piracy addons and this message will be gone.</label>			
+				<animation effect="zoom" start="100" end="160" center="auto" time="8000" pulse="true" condition="true" reversible="false">Conditional</animation>
+				<animation effect="slide" start="-100,-100" end="100,100" time="2000" pulse="true" condition="true" reversible="false">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>
