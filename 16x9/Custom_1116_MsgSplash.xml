@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1116" type="dialog">
 	<zorder>9999999999999</zorder>
-	<visible>System.HasAddon(plugin.video.exodus) | System.HasAddon(plugin.video.xstream)</visible>
+	<visible>System.HasAddon(plugin.video.exodus) | System.HasAddon(plugin.video.xstream) | System.HasAddon(plugin.video.genesis) | System.HasAddon(plugin.video.quasar) | System.HasAddon(plugin.video.123movies) | System.HasAddon(plugin.video.icefilms) | System.HasAddon(plugin.video.movie4k) | System.HasAddon(plugin.video.sportsdevil) | System.HasAddon(plugin.video.salts) | System.HasAddon(plugin.video.phstreams) | System.HasAddon(plugin.video.specto) | System.HasAddon(plugin.video.1channel) | System.HasAddon(plugin.video.zen) | System.HasAddon(plugin.video.bob) | System.HasAddon(plugin.video.ukturk) | System.HasAddon(plugin.video.goodfellas)</visible>
 	<controls>		
 		<control type="image">
 			<include>FullscreenDimensions</include>
