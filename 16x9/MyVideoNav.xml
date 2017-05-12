@@ -445,7 +445,7 @@
 					<include condition="String.IsEqual(Skin.String(RatingCountry),UK)">Rating_BBFC</include>
 					<include condition="String.IsEqual(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
 					<include content="Spacer">
-						<param name="visible" value="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,movie)] + !String.IsEmpty(ListItem.Mpaa) + !String.Contains(ListItem.Mpaa,nr) + !String.Contains(ListItem.Mpaa,not rated)" />
+						<param name="visible" value="[[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)] + $EXP[Rating_TV] + !$EXP[Rating_FSK] | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)] + $EXP[Rating_FSK] | String.IsEqual(ListItem.DBTYPE,movie)] + !String.IsEmpty(ListItem.Mpaa) + !String.Contains(ListItem.Mpaa,nr) + !String.Contains(ListItem.Mpaa,not rated)" />
 					</include>
 					<control type="image">
 						<top>3</top>
