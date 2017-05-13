@@ -3,6 +3,9 @@
 	<controls>
 		<control type="group">
 			<!-- Hidden Controls -->
+			<control type="radiobutton" id="201">
+				<include>HiddenControl</include>
+			</control>
 			<control type="radiobutton" id="202">
 				<include>HiddenControl</include>
 			</control>
@@ -267,7 +270,7 @@
 									<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 									<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 								</control>
-								<control id="201" type="button">
+								<control id="51" type="button">
 									<width min="200" max="320">auto</width>
 									<wrapmultiline>true</wrapmultiline>
 									<height>100</height>
@@ -276,6 +279,7 @@
 									<textoffsetx>28</textoffsetx>
 									<textcolor>ffdadada</textcolor>
 									<focusedcolor>ff222222</focusedcolor>
+									<onclick>ReplaceWindow(home)</onclick>
 									<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 									<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 								</control>
