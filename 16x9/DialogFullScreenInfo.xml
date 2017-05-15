@@ -20,8 +20,8 @@
 			<onup condition="[Integer.IsGreater(Container(100).NumItems,0) + !Player.Rewinding + !Player.Forwarding] | [VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)]">SetProperty(ShowXRay,true,home)</onup>
 			<onup condition="Integer.IsGreater(Container(100).NumItems,0) + !Player.Rewinding + !Player.Forwarding">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(100).ListItem.Label])</onup>
 			<onup condition="VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Plot)">ActivateWindow(1113)</onup>
-			<ondown condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding + !Player.IsInternetStream">SetProperty(ShowXRay,true,home)</ondown>
-			<ondown condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding + !Player.IsInternetStream">ActivateWindow(1114)</ondown>
+			<ondown condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding">SetProperty(ShowXRay,true,home)</ondown>
+			<ondown condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding">ActivateWindow(1114)</ondown>
 		</control>
 		<!--Fullscreen Info-->
 		<control type="group">
@@ -134,13 +134,13 @@
 					<font>Reg27</font>
 					<textcolor>fff3f3f3</textcolor>
 					<label>    $LOCALIZE[31234]</label>
-					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding + !Player.IsInternetStream</visible>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding</visible>
 				</control>
 				<control id="99" type="image">
 					<width>40</width>
 					<height>40</height>
 					<texture flipy="true">osd/x_ray.png</texture>
-					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding + !Player.IsInternetStream</visible>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Player.Rewinding + !Player.Forwarding</visible>
 				</control>
 				<control id="99" type="label">
 					<top>4</top>
