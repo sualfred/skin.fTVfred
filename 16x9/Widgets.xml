@@ -69,7 +69,7 @@
 		</include>
 		<!-- LiveTV Widget -->
 		<control type="list" id="301">
-			<visible>String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + !Control.IsVisible(91)</visible>
+			<visible>!$EXP[MsgSplash] + String.IsEqual(Container(99).ListItem.Property(ftvWidget),livetv) + !Control.IsVisible(91)</visible>
 			<include>HomeWidgetsAnimation</include>
 			<include>WindowHomeFadeAnimation</include>
 			<left>391</left>
@@ -146,7 +146,7 @@
 			<orientation>horizontal</orientation>
 			<include>WindowHomeFadeAnimation</include>
 			<include>HomeWidgetsAnimation</include>
-			<visible>String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather) + !Control.IsVisible(91)</visible>
+			<visible>!$EXP[MsgSplash] + String.IsEqual(Container(99).ListItem.Property(ftvWidget),weather) + !Control.IsVisible(91)</visible>
 			<itemlayout height="914" width="299">
 				<control type="image">
 					<width>299</width>

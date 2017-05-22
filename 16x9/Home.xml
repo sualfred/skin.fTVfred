@@ -402,8 +402,8 @@
 				<animation condition="String.IsEqual(Container(99).NumItems,1)" effect="slide" end="0,330" time="0">Conditional</animation>
 			</control>
 			<!-- Widgets -->
-			<include condition="$EXP[MsgSplash]">HomeWidgets</include>
-			<include condition="$EXP[MsgSplash]">EmptyMessages</include>
+			<include>HomeWidgets</include>
+			<include>EmptyMessages</include>
 		</control>
 		<!-- Loading Splash -->
 		<control type="group">
