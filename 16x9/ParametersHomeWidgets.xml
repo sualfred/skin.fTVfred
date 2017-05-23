@@ -124,7 +124,7 @@
 			<control id="$PARAM[ID]0" type="fixedlist">
 				<include>HomeWidgetsAnimation</include>
 				<include>HomeWidgetBounceAnimation</include>
-				<visible>!$EXP[MsgSplash] + [[String.IsEqual(Container(99).ListItem.Property(ftvWidget),$PARAM[widget]) + ![$EXP[NoContentMessage]] + !Control.IsVisible(91)] | [!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]]]</visible>
+				<visible>[String.IsEqual(Container(99).ListItem.Property(ftvWidget),$PARAM[widget]) + ![$EXP[NoContentMessage]] + !Control.IsVisible(91)] | [!String.IsEmpty(Window(home).Property(Preload)) + $EXP[WidgetsUpdate]]</visible>
 				<left>419</left>
 				<top>-253</top>
 				<width>2100</width>
@@ -595,19 +595,19 @@
 			<property name="Path">$INFO[Skin.String($PARAM[ListID]0-WidgetList-$PARAM[POS])]</property>
 			<onclick condition="!String.IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">$INFO[Skin.String($PARAM[ListID]0-WidgetAction-$PARAM[POS])]</onclick>
 			<onclick condition="String.IsEmpty(Container($PARAM[ID]).ListItemPosition(0).Label)">noop</onclick>
-			<visible>!$EXP[MsgSplash] + [!String.IsEqual(Container($PARAM[ID]).ListItemPosition(0).Label,..) | !String.IsEmpty(Container($PARAM[ID]).ListItemPosition(1).Label)]</visible>
+			<visible>!String.IsEqual(Container($PARAM[ID]).ListItemPosition(0).Label,..) | !String.IsEmpty(Container($PARAM[ID]).ListItemPosition(1).Label)</visible>
 		</item>
 		<item id="$PARAM[POS]">
 			<label>$INFO[Skin.String($PARAM[ListID]0-WidgetLabel-$PARAM[POS])]</label>
 			<property name="WidgetStyle">$INFO[Skin.String($PARAM[ListID]0-WidgetStyle-$PARAM[POS])]</property>
 			<onclick>noop</onclick>
-			<visible>!$EXP[MsgSplash] + [String.IsEqual(Container($PARAM[ID]).ListItemPosition(0).Label,..) + String.IsEmpty(Container($PARAM[ID]).ListItemPosition(1).Label)]</visible>
+			<visible>String.IsEqual(Container($PARAM[ID]).ListItemPosition(0).Label,..) + String.IsEmpty(Container($PARAM[ID]).ListItemPosition(1).Label)</visible>
 		</item>
 	</include>
 	<include name="LivetvWidget">
 		<item>
 			<label>$LOCALIZE[19019]</label>
-			<visible>!$EXP[MsgSplash] + [!String.IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)]</visible>
+			<visible>!String.IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)</visible>
 			<property name="WidgetStyle">$LOCALIZE[31161]</property>
 			<property name="Icon1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Icon]</property>
 			<property name="Icon2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Icon]</property>
@@ -624,7 +624,7 @@
 	<include name="FavouritesWidget">
 		<item>
 			<label>$LOCALIZE[10134]</label>
-			<visible>!$EXP[MsgSplash] + !String.IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)</visible>
+			<visible>!String.IsEmpty(Container($PARAM[ID]1).ListItemPosition(0).Label)</visible>
 			<property name="WidgetStyle">$INFO[Skin.String(FavouritesLayout)]</property>
 			<property name="Icon1">$INFO[Container($PARAM[ID]1).ListItemPosition(0).Icon]</property>
 			<property name="Icon2">$INFO[Container($PARAM[ID]1).ListItemPosition(1).Icon]</property>

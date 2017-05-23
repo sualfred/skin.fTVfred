@@ -46,7 +46,7 @@
 		<include>Viewtype58</include>
 		<control type="group">
 			<include>LabelsDelayFadeAnimation</include>
-			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation)) + !Control.IsVisible(58)</visible>
+			<visible>String.IsEmpty(Window(Home).Property(LabelsDelayFadeAnimation)) + !Control.IsVisible(58) + !$EXP[ViewTypeSrcCheck]</visible>
 			<!-- Heading / Current item / Total items -->
 			<control type="grouplist">
 				<left>198</left>
@@ -658,7 +658,7 @@
 				<left>196</left>
 				<top>807</top>
 				<include>VisibleDelayFadeAnimation</include>
-				<visible>!String.IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
+				<visible>!$EXP[ViewTypeSrcCheck] + [!String.IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]]</visible>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
 					<left>-10</left>
@@ -804,13 +804,13 @@
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>dialogs/DialogBackground.png</texture>
-				<visible>ControlGroup(5000).HasFocus</visible>
+				<visible>ControlGroup(5000).HasFocus + !$EXP[ViewTypeSrcCheck]</visible>
 				<animation effect="fade" end="100" start="0" time="120" tween="sine" easing="inout">Visible</animation>
 				<animation delay="100" effect="fade" end="0" start="100" time="200" tween="sine" easing="inout">Hidden</animation>
 			</control>
 			<!-- Controls -->
 			<control type="group">
-				<visible>ControlGroup(5000).HasFocus</visible>
+				<visible>ControlGroup(5000).HasFocus + !$EXP[ViewTypeSrcCheck]</visible>
 				<animation reversible="true" type="Visible">
 					<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
 					<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
@@ -1070,6 +1070,10 @@
 			</control>
 		</control>
 		<include content="JumpToLetter" />
-		<include>SortLetterOverlay</include>
+		<include>SortLetterOverlay</include>		
+		<control type="group">
+			<visible>!Window.IsVisible(1116) + $EXP[ViewTypeSrcCheck]</visible>
+			<include>MsgSplash</include>
+		</control>
 	</controls>
 </window>
