@@ -150,8 +150,8 @@
 						<width>480</width>
 						<height>35</height>
 						<onleft>Close</onleft>
-						<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
-						<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
+						<onright>9001</onright>
+						<onright>ClearProperty(Details,home)</onright>
 						<onfocus>ClearProperty(Similar,home)</onfocus>
 						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
 						<onfocus>SetProperty(Details,1,home)</onfocus>
@@ -167,7 +167,8 @@
 						<width>480</width>
 						<height>35</height>
 						<onleft>Close</onleft>
-						<onright>noop</onright>
+						<onright>9001</onright>
+						<onright>ClearProperty(ExtendedInfo,home)</onright>
 						<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
 						<onfocus>ClearProperty(Details,home)</onfocus>
 						<onfocus>ClearProperty(Similar,home)</onfocus>
