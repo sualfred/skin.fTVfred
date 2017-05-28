@@ -1,5 +1,9 @@
 Changelog:
 
+3.7.3
+- Removed the option to set the rating provider for movies and shows
+- Added ExtendedInfo Script button to the video info dialog
+
 3.7.2
 - Fixed fullscreen video video information for Emby and Plex users
 
