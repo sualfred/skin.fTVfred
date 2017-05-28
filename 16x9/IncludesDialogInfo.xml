@@ -110,7 +110,7 @@
 				<control type="grouplist" id="700">
 					<orientation>vertical</orientation>
 					<top>518</top>
-					<height>145</height>
+					<height>210</height>
 					<width>480</width>
 					<itemgap>20</itemgap>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
@@ -122,12 +122,13 @@
 						<onright>9001</onright>
 						<onfocus>ClearProperty(Details,home)</onfocus>
 						<onfocus>ClearProperty(Similar,home)</onfocus>
+						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
 						<font>Light35</font>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ffffc24b</focusedcolor>
 						<label>$LOCALIZE[31026]</label>
 						<include>NoTextures</include>
-						<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | !String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+						<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | !String.IsEmpty(Window(home).Property(Details)) | !String.IsEmpty(Window(home).Property(ExtendedInfo))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 					</control>
 					<control id="7001" type="button">
 						<width>480</width>
@@ -136,6 +137,7 @@
 						<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
 						<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
 						<onfocus>ClearProperty(Details,home)</onfocus>
+						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
 						<onfocus>SetProperty(Similar,1,home)</onfocus>
 						<font>Light35</font>
 						<textcolor>ffdadada</textcolor>
@@ -151,6 +153,7 @@
 						<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
 						<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
 						<onfocus>ClearProperty(Similar,home)</onfocus>
+						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
 						<onfocus>SetProperty(Details,1,home)</onfocus>
 						<font>Light35</font>
 						<textcolor>ffdadada</textcolor>
@@ -159,6 +162,23 @@
 						<include>NoTextures</include>
 						<animation condition="String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						<visible>!String.IsEmpty(ListItem.VideoResolution) | !String.IsEmpty(ListItem.AudioLanguage) | !String.IsEmpty(ListItem.FileName)</visible>
+					</control>
+					<control id="7003" type="button">
+						<width>480</width>
+						<height>35</height>
+						<onleft>Close</onleft>
+						<onright>noop</onright>
+						<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+						<onfocus>ClearProperty(Details,home)</onfocus>
+						<onfocus>ClearProperty(Similar,home)</onfocus>
+						<onfocus>SetProperty(ExtendedInfo,1,home)</onfocus>
+						<font>Light35</font>
+						<textcolor>ffdadada</textcolor>
+						<focusedcolor>ffffc24b</focusedcolor>
+						<label>$LOCALIZE[31286]</label>
+						<include>NoTextures</include>
+						<animation condition="String.IsEmpty(Window(home).Property(ExtendedInfo))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.DBID) + System.HasAddon(script.extendedinfo)</visible>
 					</control>
 				</control>
 			</control>
@@ -713,8 +733,8 @@
 						<effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide" />
 						<effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide" />
 					</animation>
-					<animation condition="String.IsEmpty(Window(home).Property(Similar))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
-					<animation condition="!String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="0" start="100" time="300">Conditional</animation>
+					<animation condition="String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
+					<animation condition="![String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))]" effect="fade" end="0" start="100" time="300">Conditional</animation>
 					<animation center="480,1022" condition="!Control.HasFocus(50)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 					<itemlayout height="576" width="300">
 						<control type="group">
@@ -869,8 +889,8 @@
 					<visible>String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details)) + !Control.HasFocus(50) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
 					<animation center="480,1022" condition="!Control.HasFocus(50)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
 					<animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional</animation>
-					<animation condition="String.IsEmpty(Window(home).Property(Similar))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
-					<animation condition="!String.IsEmpty(Window(home).Property(Similar))" effect="fade" end="0" start="100" time="300">Conditional</animation>
+					<animation condition="String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))" delay="300" effect="fade" end="100" start="0" time="300">Conditional</animation>
+					<animation condition="![String.IsEmpty(Window(home).Property(Similar)) + String.IsEmpty(Window(home).Property(Details))]" effect="fade" end="0" start="100" time="300">Conditional</animation>
 					<include content="InfoDialogCastList">
 						<param name="Left">0</param>
 						<param name="ID">50</param>

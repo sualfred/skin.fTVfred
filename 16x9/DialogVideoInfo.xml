@@ -10,6 +10,7 @@
 	<onunload>ClearProperty(ShowStatus,home)</onunload>
 	<onunload>ClearProperty(Similar,home)</onunload>
 	<onunload>ClearProperty(Details,home)</onunload>
+	<onunload>ClearProperty(ExtendedInfo,home)</onunload>
 	<onunload condition="!String.IsEmpty(Window(home).Property(InfoDialogCloseFocus))">SetFocus(9999)</onunload>
 	<!--<onunload>SetFocus(50)</onunload>-->
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
