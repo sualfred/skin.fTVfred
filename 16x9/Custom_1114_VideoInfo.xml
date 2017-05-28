@@ -200,15 +200,8 @@
 						<top>4</top>
 						<width>48</width>
 						<height>23</height>
-						<texture>$VAR[MovieRatingProvider]</texture>
-						<visible>!String.IsEmpty(VideoPlayer.Rating) + VideoPlayer.Content(movies)</visible>
-					</control>
-					<control type="image">
-						<top>4</top>
-						<width>48</width>
-						<height>23</height>
-						<texture>$VAR[TVShowRatingProvider]</texture>
-						<visible>!String.IsEmpty(VideoPlayer.Rating) + !VideoPlayer.Content(movies)</visible>
+						<texture>views/ratingbadge.png</texture>
+						<visible>!String.IsEmpty(VideoPlayer.Rating)</visible>
 					</control>
 					<control type="label">
 						<top>-1</top>

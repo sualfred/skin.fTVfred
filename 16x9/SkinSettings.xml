@@ -470,48 +470,6 @@
 					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(RatingCountry,Germany))</onclick>
 					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31135])</onclick> 
 				</control>
-				<control id="25" type="button">
-					<width>958</width>
-					<height>84</height>
-					<font>Light32</font>
-					<label>$LOCALIZE[31120]</label>
-					<label2>$VAR[MovieRatingProviderLabel]</label2>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<onclick>SetProperty(Dialog.NumItems,3)</onclick>
-					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[571] - IMDb)</onclick>
-					<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(MovieRatingProvider))</onclick>
-					<onclick>SetProperty(Dialog.2.Label,TMDb)</onclick>
-					<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(MovieRatingProvider,tmdb))</onclick>
-					<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[14224])</onclick>
-					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(MovieRatingProvider,other))</onclick>
-					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31120])</onclick> 
-				</control>
-				<control id="26" type="button">
-					<width>958</width>
-					<height>84</height>
-					<font>Light32</font>
-					<label>$LOCALIZE[31287]</label>
-					<label2>$VAR[TVShowRatingProviderLabel]</label2>
-					<textoffsetx>40</textoffsetx>
-					<textcolor>ff505153</textcolor>
-					<focusedcolor>ffffaf37</focusedcolor>
-					<texturefocus border="3">settings/button_focus.png</texturefocus>
-					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
-					<onclick>SetProperty(Dialog.NumItems,3)</onclick>
-					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[571] - TVDB)</onclick>
-					<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(TVShowRatingProvider))</onclick>
-					<onclick>SetProperty(Dialog.2.Label,TMDb)</onclick>
-					<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(TVShowRatingProvider,tmdb))</onclick>
-					<onclick>SetProperty(Dialog.3.Label,IMDb)</onclick>
-					<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(TVShowRatingProvider,imdb))</onclick>
-					<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[14224])</onclick>
-					<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(TVShowRatingProvider,other))</onclick>
-					<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31287])</onclick> 
-				</control>
 				<control id="18" type="radiobutton">
 					<width>958</width>
 					<height>84</height>

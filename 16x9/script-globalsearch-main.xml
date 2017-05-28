@@ -495,15 +495,8 @@
 									<top>3</top>
 									<width>48</width>
 									<height>23</height>
-									<texture>$VAR[MovieRatingProvider]</texture>
-									<visible>[Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Rating))] | [Control.IsVisible(211) + !String.IsEmpty(Container(211).ListItem.Property(Rating))]</visible>
-								</control>
-								<control type="image">
-									<top>3</top>
-									<width>48</width>
-									<height>23</height>
-									<texture>$VAR[TVShowRatingProvider]</texture>
-									<visible>[Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(Rating))] | [Control.IsVisible(141) + !String.IsEmpty(Container(141).ListItem.Property(Rating))]</visible>
+									<texture>views/ratingbadge.png</texture>
+									<visible>[Control.IsVisible(111) + !String.IsEmpty(Container(111).ListItem.Property(Rating))] | [Control.IsVisible(211) + !String.IsEmpty(Container(211).ListItem.Property(Rating))] | [Control.IsVisible(121) + !String.IsEmpty(Container(121).ListItem.Property(Rating))] | [Control.IsVisible(141) + !String.IsEmpty(Container(141).ListItem.Property(Rating))]</visible>
 								</control>
 								<control type="label">
 									<top>-8</top>

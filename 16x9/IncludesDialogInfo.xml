@@ -248,15 +248,8 @@
 						<top>4</top>
 						<width>48</width>
 						<height>23</height>
-						<texture>$VAR[MovieRatingProvider]</texture>
-						<visible>!String.IsEmpty(ListItem.Rating) + String.IsEqual(ListItem.DBType,movie)</visible>
-					</control>
-					<control type="image">
-						<top>4</top>
-						<width>48</width>
-						<height>23</height>
-						<texture>$VAR[TVShowRatingProvider]</texture>
-						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEqual(ListItem.DBType,movie)</visible>
+						<texture>views/ratingbadge.png</texture>
+						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
 					<control type="label">
 						<top>-1</top>

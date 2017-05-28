@@ -167,7 +167,7 @@
 					<top>2</top>
 					<width>48</width>
 					<height>23</height>
-					<texture>$VAR[TVShowRatingProvider]</texture>
+					<texture>views/ratingbadge.png</texture>
 					<visible>!String.IsEmpty(Window(home).Property(TVShowRating))</visible>
 				</control>
 				<control type="label">
@@ -211,7 +211,7 @@
 					<top>2</top>
 					<width>48</width>
 					<height>23</height>
-					<texture>$VAR[TVShowRatingProvider]</texture>
+					<texture>views/ratingbadge.png</texture>
 					<visible>!String.IsEmpty(ListItem.Rating)</visible>
 				</control>
 				<control type="label">
@@ -479,14 +479,14 @@
 						<top>3</top>
 						<width>48</width>
 						<height>23</height>
-						<texture>$VAR[MovieRatingProvider]</texture>
+						<texture>views/ratingbadge.png</texture>
 						<visible>!String.IsEmpty(ListItem.Rating) + !Container.Content(tvshows)</visible>
 					</control>
 					<control type="image">
 						<top>3</top>
 						<width>48</width>
 						<height>23</height>
-						<texture>$VAR[TVShowRatingProvider]</texture>
+						<texture>views/ratingbadge.png</texture>
 						<visible>!String.IsEmpty(ListItem.Rating) + Container.Content(tvshows)</visible>
 					</control>
 					<control type="label">
