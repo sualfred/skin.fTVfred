@@ -122,13 +122,12 @@
 						<onright>9001</onright>
 						<onfocus>ClearProperty(Details,home)</onfocus>
 						<onfocus>ClearProperty(Similar,home)</onfocus>
-						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
 						<font>Light35</font>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ffffc24b</focusedcolor>
 						<label>$LOCALIZE[31026]</label>
 						<include>NoTextures</include>
-						<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | !String.IsEmpty(Window(home).Property(Details)) | !String.IsEmpty(Window(home).Property(ExtendedInfo))" effect="fade" end="50" start="100" time="0">Conditional</animation>
+						<animation condition="!String.IsEmpty(Window(home).Property(Similar)) | !String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 					</control>
 					<control id="7001" type="button">
 						<width>480</width>
@@ -137,7 +136,6 @@
 						<onright condition="!String.IsEmpty(Container(5000).ListItem.Label)">5000</onright>
 						<onright condition="String.IsEmpty(Container(5000).ListItem.Label)">9001</onright>
 						<onfocus>ClearProperty(Details,home)</onfocus>
-						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
 						<onfocus>SetProperty(Similar,1,home)</onfocus>
 						<font>Light35</font>
 						<textcolor>ffdadada</textcolor>
@@ -152,8 +150,7 @@
 						<onleft>Close</onleft>
 						<onright>9001</onright>
 						<onright>ClearProperty(Details,home)</onright>
-						<onfocus>ClearProperty(Similar,home)</onfocus>
-						<onfocus>ClearProperty(ExtendedInfo,home)</onfocus>
+						<onfocus>ClearProperty(Similar,home)</onfocus>>
 						<onfocus>SetProperty(Details,1,home)</onfocus>
 						<font>Light35</font>
 						<textcolor>ffdadada</textcolor>
@@ -162,24 +159,6 @@
 						<include>NoTextures</include>
 						<animation condition="String.IsEmpty(Window(home).Property(Details))" effect="fade" end="50" start="100" time="0">Conditional</animation>
 						<visible>!String.IsEmpty(ListItem.VideoResolution) | !String.IsEmpty(ListItem.AudioLanguage) | !String.IsEmpty(ListItem.FileName)</visible>
-					</control>
-					<control id="7003" type="button">
-						<width>480</width>
-						<height>35</height>
-						<onleft>Close</onleft>
-						<onright>9001</onright>
-						<onright>ClearProperty(ExtendedInfo,home)</onright>
-						<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
-						<onfocus>ClearProperty(Details,home)</onfocus>
-						<onfocus>ClearProperty(Similar,home)</onfocus>
-						<onfocus>SetProperty(ExtendedInfo,1,home)</onfocus>
-						<font>Light35</font>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ffffc24b</focusedcolor>
-						<label>$LOCALIZE[31286]</label>
-						<include>NoTextures</include>
-						<animation condition="String.IsEmpty(Window(home).Property(ExtendedInfo))" effect="fade" end="50" start="100" time="0">Conditional</animation>
-						<visible>!String.IsEmpty(ListItem.DBID) + System.HasAddon(script.extendedinfo)</visible>
 					</control>
 				</control>
 			</control>
@@ -636,7 +615,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !Skin.HasSetting(EmbyHideUpdateButton)</visible>
 					</control>
-					<!-- Cinemavision Button -->
+					<!-- ExtendedINfo Button -->
 					<control id="21" type="button">
 						<width min="124" max="244">auto</width>
 						<wrapmultiline>true</wrapmultiline>
@@ -645,16 +624,15 @@
 						<onup condition="Control.IsVisible(96)">3002</onup>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 						<ondown condition="Control.IsVisible(50)">50</ondown>
-						<onclick>Dialog.Close(MovieInformation)</onclick>
-						<onclick>RunScript(script.cinemavision,movieid=$INFO[ListItem.DBID])</onclick>
+						<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
 						<font>Med24</font>
-						<label>31104</label>
+						<label>$LOCALIZE[31286]</label>
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>System.HasAddon(script.cinemavision) + String.IsEqual(ListItem.DBType,movie)</visible>
+						<visible>System.HasAddon(script.extendedinfo) + !String.IsEmpty(ListItem.DBID)</visible>
 					</control>
 				</control>
 				<!-- Dummy Button grouplist -->
