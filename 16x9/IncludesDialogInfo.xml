@@ -292,56 +292,6 @@
 					<include content="Spacer">
 						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))" />
 					</include>
-					<!-- Rotten Tomatoes -->
-					<control type="image">
-						<top>4</top>
-						<width>22</width>
-						<height>23</height>
-						<texture>views/rotten_fresh.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
-					</control>
-					<control type="image">
-						<top>4</top>
-						<width>24</width>
-						<height>23</height>
-						<texture>views/rotten_rotten.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
-					</control>
-					<control type="label">
-						<top>-1</top>
-						<width>auto</width>
-						<height>30</height>
-						<font>Bold26</font>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,%]</label>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
-					</control>
-					<include content="Spacer">
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))" />
-					</include>
-					<control type="image">
-						<top>4</top>
-						<width>17</width>
-						<height>23</height>
-						<texture>views/rotten_audience_high.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),59)</visible>
-					</control>
-					<control type="image">
-						<top>4</top>
-						<width>30</width>
-						<height>23</height>
-						<texture>views/rotten_audience_low.png</texture>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),59)</visible>
-					</control>
-					<control type="label">
-						<top>-1</top>
-						<width>auto</width>
-						<height>30</height>
-						<font>Bold26</font>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter),,%]</label>
-						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
-					</control>
 				</control>
 				<control type="grouplist">
 					<top>156</top>
