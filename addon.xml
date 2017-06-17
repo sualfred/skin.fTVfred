@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.fTVfred-krypton" version="3.7.3a" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
+<addon id="skin.fTVfred-krypton" version="3.7.4" name="fTV Fred Edition (Krypton)" provider-name="Sualfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.toolbox" version="1.1.1"/>
@@ -34,9 +34,8 @@
         </assets>
 		<news>Changelog:
 
-[B]3.7.3[/B]
-- Removed the option to set the rating provider for movies and shows
-- Added ExtendedInfo Script button to the video info dialog
+[B]3.7.4[/B]
+- Hide vote counter if integer is 0
 
 See changelog.txt for more details.</news>
 	</extension>

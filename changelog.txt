@@ -1,5 +1,8 @@
 Changelog:
 
+3.7.4
+- Hide vote counter if integer is 0
+
 3.7.3
 - Removed the option to set the rating provider for movies and shows
 - Added ExtendedInfo Script button to the video info dialog
