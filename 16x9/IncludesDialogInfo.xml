@@ -267,7 +267,7 @@
 						<font>Bold26</font>
 						<textcolor>ff717171</textcolor>
 						<label>[LIGHT]$INFO[ListItem.Votes,(,)][/LIGHT]</label>
-						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes)</visible>
+						<visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !Integer.IsEqual(ListItem.Votes,0)</visible>
 					</control>
 					<!-- Meta Critics -->
 					<include content="Spacer">
