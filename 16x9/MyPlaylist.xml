@@ -164,7 +164,7 @@
 					<control id="1001" type="button">
 						<width>0</width>
 						<height>0</height>
-						<label>-</label>
+						xxx.xxx.xxx
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(21) + !Control.HasFocus(22) + !Control.HasFocus(1004)</visible>
@@ -285,7 +285,7 @@
 				<control type="button" id="5001">
 					<width>-8</width>
 					<height>0</height>
-					<label>-</label>
+					xxx.xxx.xxx
 					<onfocus condition="Control.IsEnabled(3)">SetFocus(5004)</onfocus>
 					<onfocus condition="!Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(4)</onfocus>
 					<onfocus condition="!Control.IsEnabled(3) + !Control.IsEnabled(4) + Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onfocus>

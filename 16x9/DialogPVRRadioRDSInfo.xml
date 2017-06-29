@@ -134,7 +134,7 @@
 						<onup condition="Container(3001).HasNext | Container(3001).HasPrevious">SetFocus(3000)</onup>
 						<textoffsetx>23</textoffsetx>
 						<textoffsety>27</textoffsety>
-						<label>-</label>
+						xxx.xxx.xxx
 					</control>
 
 				</control>

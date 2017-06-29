@@ -244,7 +244,7 @@
 					<control id="1001" type="button">
 						<width>0</width>
 						<height>0</height>
-						<label>-</label>
+						xxx.xxx.xxx
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(21) + !Control.HasFocus(30) + !Control.HasFocus(20)</visible>
@@ -256,7 +256,7 @@
 						<onup>570</onup>
 						<ondown>3000</ondown>
 						<font>Med24</font>
-						<label>-</label>
+						xxx.xxx.xxx
 						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
@@ -385,7 +385,7 @@
 				<control type="button" id="5001">
 					<width>-8</width>
 					<height>0</height>
-					<label>-</label>
+					xxx.xxx.xxx
 					<onfocus>SetFocus(4)</onfocus>
 					<include>NoTextures</include>
 					<visible>!Control.HasFocus(4) + !Control.HasFocus(5013)</visible>

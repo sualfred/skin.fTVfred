@@ -360,7 +360,7 @@
 					<control id="9001" type="button">
 						<width>0</width>
 						<height>0</height>
-						<label>-</label>
+						xxx.xxx.xxx
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(6) + !Control.HasFocus(1002) + !Control.HasFocus(10) + !Control.HasFocus(12)</visible>

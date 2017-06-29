@@ -303,7 +303,7 @@
 					<control id="1001" type="button">
 						<width>0</width>
 						<height>0</height>
-						<label>-</label>
+						<label/>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(1006) + !Control.HasFocus(20)</visible>
@@ -673,7 +673,7 @@
 					<control id="1001" type="button">
 						<width>0</width>
 						<height>0</height>
-						<label>-</label>
+						xxx.xxx.xxx
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(16) + !Control.HasFocus(1006) + !Control.HasFocus(20)</visible>
@@ -836,7 +836,7 @@
 					<control type="button" id="5001">
 						<width>-8</width>
 						<height>0</height>
-						<label>-</label>
+						xxx.xxx.xxx
 						<onfocus condition="!String.IsEmpty(Container.PluginName)">SetFocus(5022)</onfocus>
 						<onfocus condition="String.IsEmpty(Container.PluginName) + Control.IsEnabled(3)">SetFocus(5004)</onfocus>
 						<onfocus condition="String.IsEmpty(Container.PluginName) + !Control.IsEnabled(3) + Control.IsEnabled(4)">SetFocus(14)</onfocus>

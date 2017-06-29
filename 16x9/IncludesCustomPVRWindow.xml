@@ -142,7 +142,7 @@
 					<control id="1001" type="button">
 						<width>0</width>
 						<height>0</height>
-						<label>-</label>
+						xxx.xxx.xxx
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
 						<visible>!Control.HasFocus(30)</visible>

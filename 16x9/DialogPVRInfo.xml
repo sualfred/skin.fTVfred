@@ -143,7 +143,7 @@
 			<control id="1001" type="button">
 				<width>0</width>
 				<height>0</height>
-				<label>-</label>
+				xxx.xxx.xxx
 				<onfocus>Right</onfocus>
 				<include>NoTextures</include>
 				<visible>!Control.HasFocus(5) + !Control.HasFocus(6) + !Control.HasFocus(9)</visible>
@@ -165,7 +165,7 @@
 				<width min="124" max="300">auto</width>
 				<height>116</height>
 				<font>Med24</font>
-				<label>-</label>
+				xxx.xxx.xxx
 				<textoffsetx>28</textoffsetx>
 				<textcolor>ffdadada</textcolor>
 				<focusedcolor>ff222222</focusedcolor>

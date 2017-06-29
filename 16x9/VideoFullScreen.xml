@@ -123,7 +123,7 @@
 					<font>Reg27</font>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
-					<label>-</label>
+					xxx.xxx.xxx
 				</control>
 				<!-- Row 2 label -->
 				<control id="11" type="label">
@@ -134,7 +134,7 @@
 					<font>Reg27</font>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
-					<label>-</label>
+					xxx.xxx.xxx
 				</control>
 				<!-- Row 3 label -->
 				<control id="12" type="label">
@@ -145,7 +145,7 @@
 					<font>Reg27</font>
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>ff000000</shadowcolor>
-					<label>-</label>
+					xxx.xxx.xxx
 				</control>
 			</control>
 		</control>

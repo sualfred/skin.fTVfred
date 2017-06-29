@@ -310,7 +310,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<font>invisible</font>
-				<label>-</label>
+				xxx.xxx.xxx
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
