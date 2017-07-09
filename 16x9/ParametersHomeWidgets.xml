@@ -339,6 +339,12 @@
 			<param name="ROW">$PARAM[ROW]</param>
 			<param name="sortby" value="artist"/>
 		</include>
+		<include content="ParamFtVWidgetListTemplate" condition="String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),musicdb://recentlyplayedalbums/)">
+			<param name="ID">$PARAM[ID]</param>
+			<param name="ROW">$PARAM[ROW]</param>
+			<param name="sortby" value="lastplayed"/>
+			<param name="sortorder" value="descending"/>
+		</include>
 		<include content="ParamFtVWidgetListTemplate" condition="String.Contains(Skin.String($PARAM[ID]0-WidgetList-$PARAM[ROW]),addons://sources/)">
 			<param name="ID">$PARAM[ID]</param>
 			<param name="ROW">$PARAM[ROW]</param>
